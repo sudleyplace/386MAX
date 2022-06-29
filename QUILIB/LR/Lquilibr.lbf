@@ -1,0 +1,106 @@
+ Lr\argstr.obj							&
+Lr\bcd_num.obj&
+&
+Lr\bioscrc.obj	&
+Lr\blist.obj		&
+Lr\bootdrv.obj&
+&
+Lr\box.obj		&
+Lr\button.obj&
+	&
+Lr\c_tload.obj&
+&
+Lr\chkabort.obj	&
+Lr\colors.obj&
+	&
+Lr\copyfile.obj&
+Lr\cpu.obj		&
+Lr\criterr.obj	&
+Lr\datestr.obj&
+&
+Lr\dcache.obj&
+	&
+Lr\dialog.obj&
+	&
+Lr\dmalloc.obj&
+&
+Lr\dpmi_crc.obj						&
+Lr\emsinfo.obj&
+&
+Lr\error.obj		&
+Lr\exename.obj	&
+Lr\extsize.obj&
+						&
+Lr\filediff.obj&
+Lr\filename.obj	&
+Lr\fldedit.obj	&
+Lr\gameport.obj						&
+Lr\helpback.obj						&
+Lr\input.obj	&
+Lr\inshelp.obj	&
+Lr\inst2324.obj	&
+Lr\int9hook.obj&
+Lr\intmsg.obj&
+				&
+Lr\juststr.obj&
+						&
+Lr\keybid.obj	&
+Lr\keyboard.obj				&
+Lr\launder.obj&
+&
+Lr\logo.obj					&
+Lr\mboot.obj	&
+Lr\mbootsel.obj	&
+Lr\mbparse.obj	&
+Lr\mca_pos.obj&
+&
+Lr\menu.obj		&
+Lr\message.obj	&
+Lr\mouse.obj	&
+Lr\myalloc.obj				&
+Lr\nomem.obj							&
+Lr\owner.obj							&
+Lr\pos_test.obj&
+Lr\prerror.obj	&
+&
+Lr\qhelp.obj	&
+Lr\qmaxpres.obj				&
+Lr\ramscan.obj&
+&
+Lr\readprof.obj				&
+Lr\saveadf.obj&
+&
+Lr\serial.obj&
+	&
+Lr\sleep.obj		&
+Lr\sstor.obj	&
+Lr\stacker.obj	&
+Lr\stackdlg.obj	&
+Lr\svga_inf.obj						&
+Lr\textcur.obj&
+&
+Lr\textwin.obj	&
+Lr\trim.obj		&
+Lr\trnbln.obj	&
+Lr\truename.obj				&
+Lr\ui.obj							&
+Lr\vcpi_crc.obj&
+Lr\vendinfo.obj	&
+Lr\video.obj		&
+Lr\videoid.obj&
+						&
+Lr\wait.obj	&
+Lr\windowfn.obj	&
+Lr\winsvrs.obj	&
+Lr\winver.obj	&
+Lr\wordset.obj	&
+Lr\wrapstr.obj&
+Lr\editwin.obj&
+Lr\fileedit.obj	&
+Lr\print.obj&
+Lr\cursor.obj&
+&
+Lr\cursor1.obj	&
+Lr\cursor2.obj	&
+Lr\option.obj
+;

@@ -1,0 +1,59 @@
+Build QLOGO data from source
+
+Fix file entry:
+
+* Build QLOGO data from source
+
+ Description:
+ 	Recent changes introduced an umlaut (u with two dots) into the
+	string displayed during the Q or ASQ logos.  To accommodate this
+	and simplify any future changes in these logos (none anticipated,
+	but this was mainly required for these apparently simple changes)
+	QLOGO.OVL is now built from MASM source.  Binary constants provide
+	a way to visually manipulate the characters to be downloaded.
+ Who: HENRY
+ When: 4 Mar 96.
+ SW/HW Environment: DOS (not under Windows), VGA.
+ Symptom: International characters display as graphics.
+ Temporary Workaround: None.
+ Test Procedure: Use the following alt- characters beside their non-
+ 	diacritical counterparts in branding the product:
+	Åu (129), Ña (132), éA (142), îo (148), ôO (153), öU (154),
+	§n (164), ‡ (224), · (225).  Verify that they all look OK both
+	in MAX shell (max /e) and in asq.  To freeze these screens bring
+	up SWAT and use F10 to view the underlying screen.
+ QA Testing Passed:
+ Version: Max 8.01 German, post-CeBit edition.
+
+New files:
+
+QUILIB\LOGOAVAI.TXT
+	Document characters used (and available) in the logo building.
+	Note that different characters must be used for each (the total
+	required is 170 between both logos, so we must define a different
+	mapping for each).
+
+QUILIB\QLOGO.ASM
+	Simple MASM source to build QLOGO.OVL data.
+
+QUILIB\QLOGO_Q.INC
+	Data statements for "Q" logo.
+
+QUILIB\QLOGOASQ.INC
+	Data statements for "ASQ" logo.
+
+QUILIB\QLOGOGEN.C
+	Source for quick and dirty program to generate .INC files from
+	QLOGO.OVL.
+
+
+Files affected:
+
+TEXT\TEXT.MAK
+	Remove implicit rules for copying .OVL files.  QLOGO.OVL should
+	eventually be deleted from all machines, but for now it can do
+	no harm as the newer one will always be newer.
+
+QUILIB\MAKEFILE
+	Add QLOGO.OVL build and copy to list of ALL targets.
+
