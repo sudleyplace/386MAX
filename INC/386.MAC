@@ -1,0 +1,871 @@
+.xcref LODSD,STOSD,MOVSD,CWDE,OSP,ASP,ASPNOP,PUSHFS,PUSHGS,SAV_FGS,SET_FGS
+.xcref POPFS,POPGS,REPP
+.xcref GET_CR,GET_DR,GET_TR,PUT_CR,PUT_DR,PUT_TR
+.xcref MOVZX,MOVSX,PUSHAD,POPAD,PUSHFD,POPFD,EPUSH,EPOP,JECXZ
+.xcref LSS,IRETD,POPFFD
+.xcref SEGCS,SEGDS,SEGES,SEGFS,SEGGS,SEGSS
+.xcref FIJMP,FICALL,SEGNUL
+.xcref NJA,NJAE,NJB,NJBE,NJC,NJE,NJZ,NJG,NJGE,NJL,NJLE,NJNA,NJNAE,NJNB,NJNBE
+.xcref NJNC,NJNE,NJNG,NJNGE,NJNL,NJNLE,NJNO,NJNP,NJNS,NJNZ,NJO,NJP,NJPE,NJPO,NJS
+.xcref BSF
+
+	 if1
+
+LODSD	 macro
+
+	 OSP
+	 lodsw
+
+	 endm			; LODSD
+
+STOSD	 macro
+
+	 OSP
+	 stosw
+
+	 endm			; STOSD
+
+MOVSD	 macro
+
+	 OSP
+	 movsw
+
+	 endm			; MOVSD
+
+CWDE	 macro
+
+	 OSP
+	 cbw
+
+	 endm			; CWDE
+
+OSP	 macro			; Operand size prefix
+	 db	 66h
+	 endm			; OSP
+
+ASP	 macro			; Address size prefix
+	 db	 67h
+	 endm			; ASP
+
+ASPNOP	 macro			; Address size prefix with NOP
+	 db	 67h,90h
+	 endm			; ASPNOP
+
+PUSHFS	 macro
+
+	 db	 00Fh,0A0h
+
+	 endm			; PUSHFS
+
+PUSHGS	 macro
+
+	 db	 00Fh,0A8h
+
+	 endm			; PUSHGS
+
+POPFS	 macro
+
+	 db	 00Fh,0A1h
+
+	 endm			; POPFS
+
+POPGS	 macro
+
+	 db	 00Fh,0A9h
+
+	 endm			; POPGS
+
+REPP	 macro
+
+	 db	 0F3h
+
+	 endm			; REPP
+
+SAV_FGS  macro	 MEM,SR
+	 local	 L1,L2
+L1:
+	 ifidn	 <SR>,<fs>
+	 mov	 MEM,sp
+	 else
+	 ifidn	 <SR>,<gs>
+	 mov	 MEM,bp
+	 else
+%OUT Invalid argument to SAV_FGS
+	 endif
+	 endif
+L2:
+	 org	 L1
+	 db	 8Ch
+	 org	 L2
+
+	 endm			; SAV_FGS
+
+SET_FGS  macro	 SR,MEM
+	 local	 L1,L2
+L1:
+	 ifidn	 <SR>,<fs>
+	 mov	 sp,MEM
+	 else
+	 ifidn	 <SR>,<gs>
+	 mov	 bp,MEM
+	 else
+%OUT Invalid argument to SET_FGS
+	 endif
+	 endif
+L2:
+	 org	 L1
+	 db	 8Eh
+	 org	 L2
+
+	 endm			; SET_FGS
+
+GET_CR	 macro	 REG,CRn
+	 local	 IND,FND
+
+IND	 =	 0
+FND	 =	 0
+
+	 irp	 XX,<ax,cx,dx,bx,sp,bp,si,di>
+	 ifidn	 <XX>,<REG>
+FND	 =	 1
+	 exitm
+	 else			; IFIDN
+IND	 =	 IND+1
+	 endif			; IFIDN
+	 endm			; IRP
+
+	 ife	 FND
+%OUT Invalid register argument to GET_CR
+	 endif			; IFE
+
+;;;;;;;; OSP
+	 db	 0Fh,20h,0C0h+CRn*8+IND
+
+	 endm			; GET_CR
+
+GET_DR	 macro	 REG,DRn
+	 local	 IND,FND
+
+IND	 =	 0
+FND	 =	 0
+
+	 irp	 XX,<ax,cx,dx,bx,sp,bp,si,di>
+	 ifidn	 <XX>,<REG>
+FND	 =	 1
+	 exitm
+	 else			; IFIDN
+IND	 =	 IND+1
+	 endif			; IFIDN
+	 endm			; IRP
+
+	 ife	 FND
+%OUT Invalid register argument to GET_DR
+	 endif			; IFE
+
+;;;;;;;; OSP
+	 db	 0Fh,21h,0C0h+DRn*8+IND
+
+	 endm			; GET_DR
+
+GET_TR	 macro	 REG,TRn
+	 local	 IND,FND
+
+IND	 =	 0
+FND	 =	 0
+
+	 irp	 XX,<ax,cx,dx,bx,sp,bp,si,di>
+	 ifidn	 <XX>,<REG>
+FND	 =	 1
+	 exitm
+	 else			; IFIDN
+IND	 =	 IND+1
+	 endif			; IFIDN
+	 endm			; IRP
+
+	 ife	 FND
+%OUT Invalid register argument to GET_TR
+	 endif			; IFE
+
+;;;;;;;; OSP
+	 db	 0Fh,24h,0C0h+TRn*8+IND
+
+	 endm			; GET_TR
+
+PUT_CR	 macro	 CRn,REG
+	 local	 IND,FND
+
+IND	 =	 0
+FND	 =	 0
+
+	 irp	 XX,<ax,cx,dx,bx,sp,bp,si,di>
+	 ifidn	 <XX>,<REG>
+FND	 =	 1
+	 exitm
+	 else			; IFIDN
+IND	 =	 IND+1
+	 endif			; IFIDN
+	 endm			; IRP
+
+	 ife	 FND
+%OUT Invalid register argument to PUT_CR
+	 endif			; IFE
+
+;;;;;;;; OSP
+	 db	 0Fh,22h,0C0h+CRn*8+IND
+
+	 endm			; PUT_CR
+
+PUT_DR	 macro	 DRn,REG
+	 local	 IND,FND
+
+IND	 =	 0
+FND	 =	 0
+
+	 irp	 XX,<ax,cx,dx,bx,sp,bp,si,di>
+	 ifidn	 <XX>,<REG>
+FND	 =	 1
+	 exitm
+	 else			; IFIDN
+IND	 =	 IND+1
+	 endif			; IFIDN
+	 endm			; IRP
+
+	 ife	 FND
+%OUT Invalid register argument to PUT_DR
+	 endif			; IFE
+
+;;;;;;;; OSP
+	 db	 0Fh,23h,0C0h+DRn*8+IND
+
+	 endm			; PUT_DR
+
+PUT_TR	 macro	 TRn,REG
+	 local	 IND,FND
+
+IND	 =	 0
+FND	 =	 0
+
+	 irp	 XX,<ax,cx,dx,bx,sp,bp,si,di>
+	 ifidn	 <XX>,<REG>
+FND	 =	 1
+	 exitm
+	 else			; IFIDN
+IND	 =	 IND+1
+	 endif			; IFIDN
+	 endm			; IRP
+
+	 ife	 FND
+%OUT Invalid register argument to PUT_TR
+	 endif			; IFE
+
+;;;;;;;; OSP
+	 db	 0Fh,26h,0C0h+TRn*8+IND
+
+	 endm			; PUT_TR
+
+MOVZX	 macro	 TGT,SRC
+	 local	 L1,L2
+
+	 db	 0Fh
+L1:
+	 lea	 TGT,SRC
+L2:
+	 org	 L1
+	 if	 (type SRC) eq 1
+	 db	 0B6h
+	 else			; IF
+	 db	 0B7h
+	 endif			; IF
+	 org	 L2
+
+	 endm			; MOVZX
+
+MOVSX	 macro	 TGT,SRC
+	 local	 L1,L2
+
+	 db	 0Fh
+L1:
+	 lea	 TGT,SRC
+L2:
+	 org	 L1
+	 if	 (type SRC) eq 1
+	 db	 0BEh
+	 else			; IF
+	 db	 0BFh
+	 endif			; IF
+	 org	 L2
+
+	 endm			; MOVSX
+
+PUSHAD	 macro
+
+	 db	 66h		; Operand size prefix
+	 pusha			; Push all registers
+
+	 endm			; PUSHAD
+
+POPAD	 macro
+
+	 db	 66h		; Operand size prefix
+	 popa			; Pop all registers
+
+	 endm			; POPAD
+
+PUSHFD	 macro
+
+	 db	 66h		; Operand size prefix
+	 pushf			; Push flags register
+
+	 endm			; PUSHFD
+
+POPFD	 macro
+
+	 db	 66h		; Operand size prefix
+	 popf			; Pop flags register
+
+	 endm			; POPFD
+
+EPUSH	 macro	 REGMEM
+
+	 irp	 XX,<REGMEM>
+	 db	 66h		; Operand size prefix
+	 push	 XX		; Push register/memory
+	 endm			; IRP
+
+	 endm			; EPUSH
+
+EPOP	 macro	 REGMEM
+
+	 irp	 XX,<REGMEM>
+	 db	 66h		; Operand size prefix
+	 pop	 XX		; Pop register/memory
+	 endm			; IRP
+
+	 endm			; EPOP
+
+JECXZ	 macro	 TARGET
+
+	 ASP			; Use ECX
+	 jcxz	 TARGET
+
+	 endm			; JECXZ
+
+LSS	 macro	 REG,REGMEM
+	 local	 L1,L2
+
+	 db	 0Fh		; Escape byte
+L1:
+	 lds	 REG,REGMEM
+L2:
+	 org	 L1		; Back up to LDS
+	 db	 0B2h		; Replace with LSS code
+	 org	 L2		; Restore IP
+
+	 endm			; LSS
+
+IRETD	 macro
+
+	 OSP			; Use EIP and EFL
+	 iret
+
+	 endm			; IRETD
+
+POPFFD	 macro
+	 local	 L1,L2
+
+	 jmp	 short L2
+L1:
+	 IRETD			; Popping EIP, CS, and EFL
+L2:
+	 push	 cs
+	 OSP			; Use EIP
+	 call	 L1
+
+	 endm			; POPFFD
+
+SEGCS	 macro
+	 db	 2Eh
+	 endm			; SEGCS
+
+SEGDS	 macro
+	 db	 3Eh
+	 endm			; SEGDS
+
+SEGES	 macro
+	 db	 26h
+	 endm			; SEGES
+
+SEGFS	 macro
+	 db	 64h
+	 endm			; SEGFS
+
+SEGGS	 macro
+	 db	 65h
+	 endm			; SEGGS
+
+SEGSS	 macro
+	 db	 36h
+	 endm			; SEGSS
+
+FIJMP	 macro	 LAB,SEL
+
+	 db	 0EAh		; Opcode for immediate far jump
+	 dw	 LAB,SEL	; ...to this label and selector
+
+	 endm			; FIJMP
+
+FICALL	 macro	 LAB,SEL
+
+	 db	 9Ah		; Opcode for immediate far call
+	 dw	 LAB,SEL	; ...to this label and selector
+
+	 endm			; FICALL
+
+SEGNUL	 macro	 SEGS
+
+	 push	 ax		; Save for a moment
+	 xor	 ax,ax		; Zero for dummy selector
+	 irp	 XX,<SEGS>
+	 mov	 XX,ax
+	 assume  XX:nothing	; Tell the assembler about it
+	 endm			; IRP
+	 pop	 ax		; Restore
+
+	 endm			; SEGNUL
+
+NJA	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jna	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,87h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJA
+
+NJAE	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jnae	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,83h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJAE
+
+NJB	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jnb	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,82h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJB
+
+NJBE	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jnbe	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,86h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJBE
+
+NJC	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jnc	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,82h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJC
+
+NJE	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jne	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,84h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJE
+
+NJZ	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jnz	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,84h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJZ
+
+NJG	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jng	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,8Fh
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJG
+
+NJGE	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jnge	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,8Dh
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJGE
+
+NJL	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jnl	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,8Ch
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJL
+
+NJLE	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jnle	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,8Eh
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJLE
+
+NJNA	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 ja	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,86h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJNA
+
+NJNAE	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jae	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,82h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJNAE
+
+NJNB	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jb	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,83h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJNB
+
+NJNBE	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jbe	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,87h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJNBE
+
+NJNC	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jc	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,83h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJNC
+
+NJNE	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 je	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,85h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJNE
+
+NJNG	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jg	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,8Eh
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJNG
+
+NJNGE	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jge	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,8Ch
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJNGE
+
+NJNL	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jl	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,8Dh
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJNL
+
+NJNLE	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jle	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,8Fh
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJNLE
+
+NJNO	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jo	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,81h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJNO
+
+NJNP	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jp	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,8Bh
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJNP
+
+NJNS	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 js	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,89h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJNS
+
+NJNZ	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jz	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,85h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJNZ
+
+NJO	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jno	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,80h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJO
+
+NJP	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jnp	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,8Ah
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJP
+
+NJPE	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jnp	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,8Ah
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJPE
+
+NJPO	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jp	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,8Bh
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJPO
+
+NJS	 macro	 LBL
+	 local	 L1
+
+	 if	 (.type LBL) and 80h ; Izit external?
+	 jns	 L1		; Jump around it with opposite condition
+	 jmp	 LBL
+L1:
+	 else
+	 db	 0Fh,88h
+	 dw	 PGROUP:LBL-($+2)
+	 endif			; IF .TYPE
+
+	 endm			; NJS
+
+BSF	 macro	 A1,A2
+	 local	 L1,L2
+
+L1:
+	 lsl	 A1,A2
+L2:
+	 org	 L1+1
+	 db	 0BCh
+	 org	 L2
+
+	 endm			; BSF
+
+
+
+	 endif			; IF1
+
