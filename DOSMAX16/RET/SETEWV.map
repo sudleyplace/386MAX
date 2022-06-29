@@ -1,0 +1,100 @@
+LINK : warning L4021: no stack segment
+
+ SETEWV
+
+ Start     Length     Name                   Class
+ 0001:0000 0018AH     _TEXT                  CODE
+ 0002:0000 00010H     NULL                   BEGDATA
+ 0002:0010 0002CH     _DATA                  DATA
+ 0002:003C 00000H     CDATA                  DATA
+ 0002:003C 00000H     CONST                  CONST
+ 0002:003C 00000H     _BSS                   BSS
+
+ Origin   Group
+ 0002:0   DGROUP
+
+  Address         Publics by Name
+
+ 0001:011E       BASE2BIN
+ 0002:002A       CON16
+ 0000:0000  Imp  GETCURRENTTASK       (KERNEL.36)
+ 0000:0000  Imp  INITAPP              (USER.5)
+ 0000:0000  Imp  INITTASK             (KERNEL.91)
+ 0001:0117       LOWERCASE
+ 0002:002C       NUMBERS_LO
+ 0002:0024       PMODNAME
+ 0002:0004       RSRVPTRS
+ 0001:0103       SKIPBLACK
+ 0001:00F3       SKIPWHITE
+ 0001:0155       STRCMPNI
+ 0000:0000  Imp  WAITEVENT            (KERNEL.30)
+ 0001:0078       WINMAIN
+ 0002:0028       WVERSION
+ 0002:001E       _ASEGHI
+ 0002:001C       _ASEGLO
+ 0002:003C       _edata
+ 0002:003C       _end
+ 0001:0012       _EXIT
+ 0002:0010       _STKHQQ
+ 0000:9876  Abs  __ACRTUSED
+ 0000:D6D6  Abs  __ADBDOSWP
+ 0000:D6D6  Abs  __ADBUSED
+ 0001:001E       __ASTART
+ 0002:001A       __CMDSHOW
+ 0002:003C       __edata
+ 0002:003C       __end
+ 0001:0012       __EXIT
+ 0000:9876  Abs  __FPTASKDATA
+ 0002:0014       __HINSTANCE
+ 0002:0012       __HPREVINSTANCE
+ 0002:0016       __LPSZCMDLINE
+ 0000:0000  Abs  __SIZEC
+ 0000:0000  Abs  __SIZED
+ 0001:0010       __WFLAGS
+ 0000:0000  Imp  __WINFLAGS           (KERNEL.178)
+ 0002:0022       ___ADBRTERR
+ 0002:0020       ___ADBSWPFLG
+
+  Address         Publics by Value
+
+ 0000:0000  Imp  GETCURRENTTASK       (KERNEL.36)
+ 0000:0000  Abs  __SIZEC
+ 0000:0000  Imp  INITAPP              (USER.5)
+ 0000:0000  Imp  INITTASK             (KERNEL.91)
+ 0000:0000  Imp  __WINFLAGS           (KERNEL.178)
+ 0000:0000  Abs  __SIZED
+ 0000:0000  Imp  WAITEVENT            (KERNEL.30)
+ 0000:9876  Abs  __ACRTUSED
+ 0000:9876  Abs  __FPTASKDATA
+ 0000:D6D6  Abs  __ADBUSED
+ 0000:D6D6  Abs  __ADBDOSWP
+ 0001:0010       __WFLAGS
+ 0001:0012       _EXIT
+ 0001:0012       __EXIT
+ 0001:001E       __ASTART
+ 0001:0078       WINMAIN
+ 0001:00F3       SKIPWHITE
+ 0001:0103       SKIPBLACK
+ 0001:0117       LOWERCASE
+ 0001:011E       BASE2BIN
+ 0001:0155       STRCMPNI
+ 0002:0004       RSRVPTRS
+ 0002:0010       _STKHQQ
+ 0002:0012       __HPREVINSTANCE
+ 0002:0014       __HINSTANCE
+ 0002:0016       __LPSZCMDLINE
+ 0002:001A       __CMDSHOW
+ 0002:001C       _ASEGLO
+ 0002:001E       _ASEGHI
+ 0002:0020       ___ADBSWPFLG
+ 0002:0022       ___ADBRTERR
+ 0002:0024       PMODNAME
+ 0002:0028       WVERSION
+ 0002:002A       CON16
+ 0002:002C       NUMBERS_LO
+ 0002:003C       _edata
+ 0002:003C       __edata
+ 0002:003C       _end
+ 0002:003C       __end
+
+Program entry point at 0001:001e

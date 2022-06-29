@@ -1,0 +1,5 @@
+/nod /noe /map /co RET\DOSMAX16.OBJ R:\MAX\lib\LIBENTRY.OBJ
+RET\DOSMAX16.DLL
+RET\DOSMAX16
+libw sdllcew pifmgr
+DOSMAX16.DEF

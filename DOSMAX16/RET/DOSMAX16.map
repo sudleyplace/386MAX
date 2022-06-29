@@ -1,0 +1,264 @@
+
+ DOSMAX16
+
+ Start     Length     Name                   Class
+ 0001:0000 00912H     _TEXT                  CODE
+ 0001:0912 00074H     INIT_TEXT              CODE
+ 0002:0000 00010H     NULL                   BEGDATA
+ 0002:0010 000B2H     _DATA                  DATA
+ 0002:00C2 0000EH     CDATA                  DATA
+ 0002:00D0 00000H     XIFB                   DATA
+ 0002:00D0 00000H     XIF                    DATA
+ 0002:00D0 00000H     XIFE                   DATA
+ 0002:00D0 00000H     XIB                    DATA
+ 0002:00D0 00000H     XI                     DATA
+ 0002:00D0 00000H     XIE                    DATA
+ 0002:00D0 00000H     XPB                    DATA
+ 0002:00D0 00000H     XP                     DATA
+ 0002:00D0 00000H     XPE                    DATA
+ 0002:00D0 00000H     XCB                    DATA
+ 0002:00D0 00000H     XC                     DATA
+ 0002:00D0 00000H     XCE                    DATA
+ 0002:00D0 00000H     XCFB                   DATA
+ 0002:00D0 00000H     XCFCRT                 DATA
+ 0002:00D0 00000H     XCF                    DATA
+ 0002:00D0 00000H     XCFE                   DATA
+ 0002:00D0 00000H     XIFCB                  DATA
+ 0002:00D0 00000H     XIFU                   DATA
+ 0002:00D0 00000H     XIFL                   DATA
+ 0002:00D0 00000H     XIFM                   DATA
+ 0002:00D0 00000H     XIFCE                  DATA
+ 0002:00D0 00000H     DBDATA                 DATA
+ 0002:00D0 00000H     CONST                  CONST
+ 0002:00D0 00008H     HDR                    MSG
+ 0002:00D8 000D4H     MSG                    MSG
+ 0002:01AC 00002H     PAD                    MSG
+ 0002:01AE 00001H     EPAD                   MSG
+ 0002:01B0 00002H     _BSS                   BSS
+ 0002:01B2 00000H     XOB                    BSS
+ 0002:01B2 00000H     XO                     BSS
+ 0002:01B2 00000H     XOE                    BSS
+ 0002:01B2 00000H     XOFB                   BSS
+ 0002:01B2 00000H     XOF                    BSS
+ 0002:01B2 00000H     XOFE                   BSS
+
+ Origin   Group
+ 0002:0   DGROUP
+
+ Address   Export                  Alias
+
+ 0001:0064 UT16Proc                UT16Proc
+ 0001:0048 WEP                     WEP
+ 0001:08FE ___ExportedStub         ___ExportedStub
+
+  Address         Publics by Name
+
+ 0000:0000  Imp  CLOSEPROPERTIES      (PIFMGR.9)
+ 0000:0000  Imp  DOS3CALL             (KERNEL.102)
+ 0000:0000  Imp  FATALAPPEXIT         (KERNEL.137)
+ 0000:0000  Imp  FATALEXIT            (KERNEL.1)
+ 0000:0000  Imp  GETDOSENVIRONMENT    (KERNEL.131)
+ 0000:0000  Imp  GETMODULEUSAGE       (KERNEL.48)
+ 0000:0000  Imp  GETPROPERTIES        (PIFMGR.3)
+ 0000:0000  Imp  GETVERSION           (KERNEL.3)
+ 0000:0000  Imp  GLOBALREALLOC        (KERNEL.16)
+ 0000:0000  Imp  GLOBALSIZE           (KERNEL.20)
+ 0000:0000  Imp  INITTASK             (KERNEL.91)
+ 0001:0954       LibEntry
+ 0001:0010       LIBMAIN
+ 0000:0000  Imp  LOCALALLOC           (KERNEL.5)
+ 0000:0000  Imp  LOCALFREE            (KERNEL.7)
+ 0000:0000  Imp  LocalInit            (KERNEL.4)
+ 0000:0000  Imp  LOCALREALLOC         (KERNEL.6)
+ 0000:0000  Imp  LOCALSIZE            (KERNEL.10)
+ 0000:0000  Imp  LOCKSEGMENT          (KERNEL.23)
+ 0000:0000  Imp  MESSAGEBOX           (USER.1)
+ 0000:0000  Imp  OPENPROPERTIES       (PIFMGR.2)
+ 0002:0004       rsrvptrs
+ 0000:0000  Imp  SETPROPERTIES        (PIFMGR.4)
+ 0000:0000  Imp  UNLOCKSEGMENT        (KERNEL.24)
+ 0001:0064       UT16Proc
+ 0001:0048       WEP
+ 0002:0075       _aseghi
+ 0002:0073       _aseglo
+ 0002:01B0       _edata
+ 0002:01B2       _end
+ 0002:008A       _errno
+ 0002:0066       _STKHQQ
+ 0000:0000  Imp  _wsprintf            (USER.420)
+ 0000:9876  Abs  __acrtmsg
+ 0000:9876  Abs  __acrtused
+ 0000:D6D6  Abs  __aDBdoswp
+ 0002:00BC       __adbgmsg
+ 0000:D6D6  Abs  __aDBused
+ 0002:007C       __aintdiv
+ 0002:00BE       __amblksiz
+ 0001:06BA       __amsg_exit
+ 0001:0432       __astart
+ 0001:052A       __cexit
+ 0002:00B9       __child
+ 0001:04F4       __cinit
+ 0001:06B2       __cintDIV
+ 0002:0095       __cpumode
+ 0001:057D       __ctermsub
+ 0001:0534       __c_exit
+ 0002:0072       __dllinit
+ 0002:0096       __doserrno
+ 0002:01B0       __edata
+ 0002:01B2       __end
+ 0002:00B2       __environ
+ 0002:00BB       __exitflag
+ 0002:0080       __fac
+ 0001:05C8       __FF_MSGBANNER
+ 0001:07EF       __findlast
+ 0002:00C4       __fpinit
+ 0000:9876  Abs  __fptaskdata
+ 0001:067E       __fptrap
+ 0001:0810       __GetDGROUP
+ 0001:06FA       __growseg
+ 0002:0068       __hModule
+ 0001:0789       __incseg
+ 0002:006E       __lpszCmdLine
+ 0001:0684       __myalloc
+ 0001:06B0       __nearstub
+ 0002:0098       __nfile
+ 0001:0874       __nfree
+ 0001:0820       __nmalloc
+ 0001:0648       __NMSG_TEXT
+ 0001:0673       __NMSG_WRITE
+ 0001:08EE       __nmsize
+ 0001:04BD       __nomain
+ 0001:088A       __nrealloc
+ 0002:0096       __oserr
+ 0002:009A       __osfile
+ 0002:0091       __osmajor
+ 0002:0090       __osminor
+ 0002:0094       __osmode
+ 0002:0090       __osver
+ 0002:0092       __osversion
+ 0002:00B4       __pgmptr
+ 0002:00C0       __pnhNearHeap
+ 0001:05DE       __setenvp
+ 0000:0000  Abs  __sizec
+ 0000:0000  Abs  __sized
+ 0001:04D6       __stubmain
+ 0002:008C       __umaskval
+ 0002:006A       __wDataSeg
+ 0001:03EE       __wflags
+ 0002:006C       __wHeapSize
+ 0000:0000  Imp  __WINFLAGS           (KERNEL.178)
+ 0002:008F       __winmajor
+ 0002:008E       __winminor
+ 0002:008E       __winver
+ 0002:0079       ___aDBrterr
+ 0002:0077       ___aDBswpflg
+ 0002:00AE       ___argc
+ 0002:00B0       ___argv
+ 0001:08FE       ___ExportedStub
+
+  Address         Publics by Value
+
+ 0000:0000  Imp  GETVERSION           (KERNEL.3)
+ 0000:0000  Imp  GETDOSENVIRONMENT    (KERNEL.131)
+ 0000:0000  Abs  __sizec
+ 0000:0000  Imp  LOCALALLOC           (KERNEL.5)
+ 0000:0000  Imp  MESSAGEBOX           (USER.1)
+ 0000:0000  Imp  FATALEXIT            (KERNEL.1)
+ 0000:0000  Imp  GLOBALREALLOC        (KERNEL.16)
+ 0000:0000  Imp  DOS3CALL             (KERNEL.102)
+ 0000:0000  Imp  SETPROPERTIES        (PIFMGR.4)
+ 0000:0000  Imp  GETPROPERTIES        (PIFMGR.3)
+ 0000:0000  Imp  __WINFLAGS           (KERNEL.178)
+ 0000:0000  Imp  LOCALREALLOC         (KERNEL.6)
+ 0000:0000  Imp  INITTASK             (KERNEL.91)
+ 0000:0000  Imp  LOCALFREE            (KERNEL.7)
+ 0000:0000  Imp  CLOSEPROPERTIES      (PIFMGR.9)
+ 0000:0000  Imp  LocalInit            (KERNEL.4)
+ 0000:0000  Imp  LOCKSEGMENT          (KERNEL.23)
+ 0000:0000  Imp  _wsprintf            (USER.420)
+ 0000:0000  Abs  __sized
+ 0000:0000  Imp  UNLOCKSEGMENT        (KERNEL.24)
+ 0000:0000  Imp  LOCALSIZE            (KERNEL.10)
+ 0000:0000  Imp  OPENPROPERTIES       (PIFMGR.2)
+ 0000:0000  Imp  FATALAPPEXIT         (KERNEL.137)
+ 0000:0000  Imp  GETMODULEUSAGE       (KERNEL.48)
+ 0000:0000  Imp  GLOBALSIZE           (KERNEL.20)
+ 0000:9876  Abs  __fptaskdata
+ 0000:9876  Abs  __acrtmsg
+ 0000:9876  Abs  __acrtused
+ 0000:D6D6  Abs  __aDBused
+ 0000:D6D6  Abs  __aDBdoswp
+ 0001:0010       LIBMAIN
+ 0001:0048       WEP
+ 0001:0064       UT16Proc
+ 0001:03EE       __wflags
+ 0001:0432       __astart
+ 0001:04BD       __nomain
+ 0001:04D6       __stubmain
+ 0001:04F4       __cinit
+ 0001:052A       __cexit
+ 0001:0534       __c_exit
+ 0001:057D       __ctermsub
+ 0001:05C8       __FF_MSGBANNER
+ 0001:05DE       __setenvp
+ 0001:0648       __NMSG_TEXT
+ 0001:0673       __NMSG_WRITE
+ 0001:067E       __fptrap
+ 0001:0684       __myalloc
+ 0001:06B0       __nearstub
+ 0001:06B2       __cintDIV
+ 0001:06BA       __amsg_exit
+ 0001:06FA       __growseg
+ 0001:0789       __incseg
+ 0001:07EF       __findlast
+ 0001:0810       __GetDGROUP
+ 0001:0820       __nmalloc
+ 0001:0874       __nfree
+ 0001:088A       __nrealloc
+ 0001:08EE       __nmsize
+ 0001:08FE       ___ExportedStub
+ 0001:0954       LibEntry
+ 0002:0004       rsrvptrs
+ 0002:0066       _STKHQQ
+ 0002:0068       __hModule
+ 0002:006A       __wDataSeg
+ 0002:006C       __wHeapSize
+ 0002:006E       __lpszCmdLine
+ 0002:0072       __dllinit
+ 0002:0073       _aseglo
+ 0002:0075       _aseghi
+ 0002:0077       ___aDBswpflg
+ 0002:0079       ___aDBrterr
+ 0002:007C       __aintdiv
+ 0002:0080       __fac
+ 0002:008A       _errno
+ 0002:008C       __umaskval
+ 0002:008E       __winver
+ 0002:008E       __winminor
+ 0002:008F       __winmajor
+ 0002:0090       __osminor
+ 0002:0090       __osver
+ 0002:0091       __osmajor
+ 0002:0092       __osversion
+ 0002:0094       __osmode
+ 0002:0095       __cpumode
+ 0002:0096       __doserrno
+ 0002:0096       __oserr
+ 0002:0098       __nfile
+ 0002:009A       __osfile
+ 0002:00AE       ___argc
+ 0002:00B0       ___argv
+ 0002:00B2       __environ
+ 0002:00B4       __pgmptr
+ 0002:00B9       __child
+ 0002:00BB       __exitflag
+ 0002:00BC       __adbgmsg
+ 0002:00BE       __amblksiz
+ 0002:00C0       __pnhNearHeap
+ 0002:00C4       __fpinit
+ 0002:01B0       __edata
+ 0002:01B0       _edata
+ 0002:01B2       _end
+ 0002:01B2       __end
+
+Program entry point at 0001:0954
