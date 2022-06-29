@@ -1,0 +1,11 @@
+		ret\VCPITEST.OBJ+
+ret\VCP_DBG.OBJ+
+ret\VCP_EPM.OBJ+
+ret\VCP_IBV.OBJ+
+ret\VCP_MEM.OBJ+
+ret\VCP_MISC.OBJ+
+ret\VCP_PHYS.OBJ+
+ret\VCP_ARGS.OBJ+
+ret\VERSION.OBJ
+		ret\VCPITEST.exe
+		ret\VCPITEST.map /map /line /nod ;

@@ -1,0 +1,86 @@
+#' $Header:   P:/PVCS/MISC/VCPITEST/MAKEFILE.__V   1.1   22 Feb 1994 12:31:24   HENRY  $
+#
+# Makefile for VCPITEST
+#
+
+O=ret\				# Object directory
+Q=$(MAXDIR)			# 386MAX source directory
+I=$(INCDIR)			# path for generic includes
+
+OLDINC=$(INCLUDE)		# Previous INCLUDE value
+ALLINC=$(O);$(I);$(INCLUDE);$(Q) # INCLUDE search path
+
+# if LST is defined in the environment or on the command line,
+# define a macro we can tack onto the end of each MASM line
+!IFDEF LST
+LSTMAC=,$(LST)\$(@B)
+!ELSE
+LSTMAC=
+!ENDIF
+
+AFLAGS=/mu /p /r /t /w1 /DLANG_$(LANG) # MASM options
+LFLAGS=/map /line /nod		# Linker options
+
+.asm{$(O)}.obj:
+	 @ff /, $(R)$(@B).asm > $(O)dirntry.tmp
+	 @copy $(I)semicol.txt+$(O)dirntry.tmp $(O)dirntry.inc >NUL
+	 set INCLUDE=$(ALLINC)
+	 masm $(@B) $(AFLAGS), $(O) $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+	 @ff $*/,/#
+
+
+ALL:		 $(O)VCPITEST.COM	$(BINDIR)VCPITEST.COM
+
+#ALL:: $(O)L2PTEST.COM
+
+$(BINDIR)VCPITEST.COM:	 $(O)VCPITEST.COM
+	xc/r $(O)vcpitest.com $(BINDIR).
+	xc/r $(O)vcpitest.ssf $(BINDIR).
+
+$(O)VCPITEST.OBJ:	 VCPITEST.ASM	VCP_TEST.INC	VCP_FLAG.INC	\
+			 $(Q)EMM2CALL.INC
+
+$(O)VCP_DBG.OBJ:	 VCP_DBG.ASM	VCP_TEST.INC	VCP_FLAG.INC	\
+			 $(Q)EMM2CALL.INC
+
+$(O)VCP_EPM.OBJ:	 VCP_EPM.ASM	VCP_TEST.INC	VCP_FLAG.INC	\
+			 $(Q)EMM2CALL.INC	\
+			 $(Q)QMAX_FIL.INC
+
+$(O)VCP_IBV.OBJ:	 VCP_IBV.ASM	VCP_TEST.INC	VCP_FLAG.INC	\
+			 $(Q)EMM2CALL.INC
+
+$(O)VCP_MEM.OBJ:	 VCP_MEM.ASM	VCP_TEST.INC	VCP_FLAG.INC	\
+			 $(Q)EMM2CALL.INC
+
+$(O)VCP_MISC.OBJ:	 VCP_MISC.ASM	VCP_FLAG.INC			\
+			 $(Q)QMAX_CTL.INC	\
+			 $(Q)QMAXINFO.INC
+
+$(O)VCP_ARGS.OBJ:	 VCP_ARGS.ASM			VCP_FLAG.INC
+
+$(O)VCP_PHYS.OBJ:	 VCP_PHYS.ASM	VCP_TEST.INC
+
+$(O)VCPITEST.COM: $(O)VCPITEST.OBJ	$(O)VCP_DBG.OBJ $(O)VCP_EPM.OBJ \
+		 $(O)VCP_IBV.OBJ	$(O)VCP_MEM.OBJ $(O)VCP_MISC.OBJ\
+		 $(O)VCP_PHYS.OBJ	$(O)VCP_ARGS.OBJ $(O)VERSION.OBJ
+	 link @<<$(O)vcpitest.lnk
+		$(**: =+^
+)
+		$*.exe
+		$*.map $(LFLAGS) ;
+<<KEEP
+	 ts $* /s /f_
+	 mapssf -t$* $*
+	 exe2bin $* $*.com
+	 del $*.exe
+	 @ff $*/,/#
+
+
+$(O)L2PTEST.OBJ:	 L2PTEST.ASM
+
+$(O)L2PTEST.COM:	 $(O)L2PTEST.OBJ
+
+

@@ -1,0 +1,37 @@
+Make VCPITEST work with EMS=0
+
+In order to test MEMLIMIT changes, I needed to get VCPITEST
+working using back door VCPI services.
+
+Files affected:
+
+GETBCRC.ASM	Updated copyright date.
+L2PTEST.ASM
+VCP_ARGS.ASM
+VCP_PHYS.ASM
+
+MAKEFILE	Update dependencies and use RET directory for output files.
+
+VCP_DBG.ASM	Use back door macro.
+VCP_IBV.ASM
+VCP_MEM.ASM
+
+VCP_EPM.ASM	Use back door except when we're checking for a VCPI
+		debugger (well, SWAT) in which case we need to install
+		a temporary Int 67h handler.
+
+VCP_FLAG.INC	Define flag to use back door only (in case it's an older
+		version of MAX with EMS=0).
+
+		Define macro to use back door if MAX is the VCPI host.
+
+VCP_MISC.ASM	Check for different VCPI host IOCTL names which might
+		be present when no EMS services are provided.  If MAX,
+		get PORT67 for back door VCPI services.
+
+VCP_TEST.INC	Add PVCS header.
+VERSION.ASM
+
+VCPITEST.ASM	Update copyright dates and use back door macro.
+
+
