@@ -1,0 +1,3 @@
+@echo off
+swatrun smbus
+

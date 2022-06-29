@@ -1,0 +1,7 @@
+		RET\XMSLIST.OBJ+
++
+RET\PRINTF.OBJ
+		RET\XMSLIST.exe
+		RET\XMSLIST.map
+		/map /line /nod
+		NUL.def

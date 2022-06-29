@@ -1,0 +1,19 @@
+XMSBLK	 -- Version 1.00 -- An XMS Block Allocator
+   (C) Copyright 2000 Qualitas, Inc.  All rights reserved.
+   
+This program allocates XMS memory such that the specified memory range
+is the only XMS memory available.
+
+Syntax:  XMSBLK xx - yy
+
+where xx and yy are decimal values with xx >= 1 MB and xx < yy.
+
+Either argument may be in units of kilobytes if followed by K, or in
+megabytes if followed by M, however both arguments must be on a
+kilobyte boundary.
+
+For example, to specify a range of 12 MB to 15 MB, use
+
+  12M - 15M
+
+The dash between the numbers is optional.

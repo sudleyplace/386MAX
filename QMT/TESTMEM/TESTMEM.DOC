@@ -1,0 +1,99 @@
+                  Testmem 0.11á By Craig Hart (C) 1997,8.
+
+
+ þ Freeware notice
+
+Ths program is freeware. Do what you like with it.. it's free for your use,
+without restriction. It is also unsupported... I do mantain a web page and try
+to fix bugs with my software, but I'm just a guy with a pc, not a commercial
+operation, so I don't make no guarantees. Having said that, I do try to work
+with people to make my software better for everyone. Read on for details of how
+you may contact me, obtain newer versions and try my many other diagnostic
+packages.
+
+
+ þ The Basics
+
+This is a program that tests your extended memory. It needs to be run from a
+plain DOS boot floppy - no memory managers or drivers loaded please. Testmem
+requires at least a 386 type CPU to run, and will refuse to run on any system
+that is not configured to it's liking. Testmem does not test base memory (The
+first 640k).
+
+To create a plain DOS boot floppy:
+
+format a: /s /u
+copy testmem.exe a:
+
+Boot from the floppy, then run Testmem.
+
+
+Alternately, if booting DOS 6.x, press F5 when you see  'Starting MS-DOS...' if
+booting Win95, press F8 and select 'Safe mode, command prompt only' when you
+see 'Starting windows 95...'. Testmem will not work under WinNT, OS/2, Linux,
+UNIX, etc.
+
+The screen testmem displays is fairly self-explanitory; if a bad memory
+location is found, Testmem will display a message in the middle of the screen
+with the bit pattern tried and the bad data returned so you can figure out
+which bit(s) are failing. If the error count never gets above 0 no matter how
+long you run testmem for, then your memory is probably OK. I recommend running
+testmem overnight, since memory problems are usually quite fickle and don't
+always show up immediately. No matter how many errors show up, Testmem keeps on
+going.
+
+Note: Some memory erros only show up when the computer's insides have reached
+operating temperature - something that requires the lid to be on, and the
+machine to be running for at least 30 minutes. Make sure you always setup any
+questionable machine in as near to possible it's normal operating environment
+so as to give yourself the best chance of finding the fault. Press any key to
+exit the program (response should be within 1-2 seconds; if not, you can safely
+assume the machine has crashed and reboot it).
+
+Testmem disables the CPU's internal cache before starting tests. This is
+primarily to cause the L2 Motherboard cache to disable so that it doesn't
+interfere with tests.. Therefore a faulty cache will NOT be detected by
+Testmem. This has the side-effect of making the program a lot slower than you
+might expect... this is normal, and another reason why it needs to be run for
+as long a period of time as is possible.
+
+Disabling the L2 cache makes Testmem more accurate - other memory testers fail
+to take this step (ie himem.sys) and therefore they sometimes miss bad memory,
+since the memory read is really a cache read, and thus not a good test of the
+memory itself. Remember, Testmem is a *MEMORY* tester, not a *CACHE* tester!
+
+
+
+ þ Notice
+
+This program is a beta test only of some routines I eventually hope to merge
+with my main diagnostics package. It is released for wide-beta testing and YOUR
+comment. Please email me or visit my web site to send your feedback and obtain
+the latest versions of all my software. I'd be very happy to hear of your
+experiences with Testmem - both good and bad.
+
+
+email:	chart@hyperlink.net.au
+web:	http://home.hyperlink.net.au/~chart
+
+
+
+What's new to version 0.11á:
+
+I now re-enable the caches when you exit the program... primarily because
+people complained about it, but also because it's good form to return a system
+to the user the way you found it. A20 is left enabled, however.
+
+I now use 'both' methods of enabling A20 - the "AT" method (via the keyboard
+controller) and the "PS/2" method (By setting bit 1 of port 92h) - this should
+make testmem operate on all the machines it formerly failed to (I hope).
+
+The actual test routines themselves are unchanged. I hope to re-write the test
+routines in protected mode as there is a definate speed advantage to doing so,
+but also because it seems that many memory faults are only able to be detected
+when the CPU is in 32-bit mode! I'm not quite sure exactly why - perhaps it is
+because 32-bit mode is the only mode that can really "push" the memory access
+speed towards the theoretical limits, whereas 16-bit mode seemingly can't.
+
+
+
