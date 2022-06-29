@@ -1,0 +1,24 @@
+ret\GDADRV.obj+
++
++
++
+ret\gdarid.obj+
++
++
++
+ret\miscfns.obj+
++
++
+ret\strfns.obj+
++
++
++
+ret\setupdde.obj
+ret\GOAHEAD.DRV
+ret\GDADRV /map
+libw+
+sdllcew+
+toolhelp+
+ddeml+
+slibcew 
+GDADRV.def
