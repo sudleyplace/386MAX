@@ -1,0 +1,180 @@
+   ..\qmax_vmm.asm (08 Jul 1998 13:03:26)
+           qmax_vmm.asm (07 Oct 2000 19:46:54)
+===================
+       6       6  |COMMENT|        Module Specifications
+       7       7  |
++              8  |Copyright:  (C) Copyright 1987-2000 Qualitas, Inc.  All rights reserved.
+-      8          |Copyright:  (C) Copyright 1987-98 Qualitas, Inc.  All rights reserved.
+       9       9  |
+      10      10  |Segmentation:  Group PGROUP:
+===================
+     537     537  |
+     538     538  |ALLOCMEM endp           ; End ALLOCMEM procedure
++            539  |endif               ; IF @OEM_XMS or @OEM_VCPI
++            540  |if @OEM_XMS or @OEM_VCPI
++            541  |    NPPROC  FindEntry -- Find Entry In Tables
++            542  |    assume  ds:PGROUP,es:nothing,fs:nothing,gs:nothing,ss:nothing
++            543  |COMMENT|
++            544  |
++            545  |Find entry EBX in the tables
++            546  |
++            547  |On entry:
++            548  |
++            549  |EBX =   entry to find
++            550  |
++            551  |On exit:
+> (  915)    552  |
++            553  |CF  =   0 if found
++            554  |    =   1 if not
++            555  |DS:ESI  ==> bucket which contains EBX
+> (  691)    556  |
++            557  ||
+> (  687)    558  |
++            559  |    REGSAVE <ecx,edi,es>    ; Save for a moment
+> (  685)    560  |
++            561  |    mov eax,ds      ; Get PGROUP data selector
++            562  |    mov es,eax      ; Address it
++            563  |    assume  es:PGROUP   ; Tell the assembler about it
+> (  682)    564  |
++            565  |    mov edi,PPHNDLFREE  ; DS:EDI ==> ptr to start of free chain
++            566  |    mov eax,ebx     ; Copy value to find
++            567  |    mov ecx,-1      ; We know it's there *FIXME*
++            568  |  repne scas    PGROUP:[edi].PL_NEXT ; Search for it
++            569  |    je  short @F    ; Jump if found (note CF=0)
+> (  679)    570  |
++            571  |    int 03h     ; *FIXME*
++            572  |    stc         ; Mark as not found
+> (  662)    573  |@@:
++            574  |    lea esi,[edi-(size PL_NEXT)] ; DS:ESI ==> bucket
+> (  665)    575  |
++            576  |    REGREST <es,edi,ecx>    ; Restore
++            577  |    assume  es:nothing  ; Tell the assembler about it
+> (  668)    578  |
++            579  |     ret            ; Return to caller
+> (  671)    580  |
++            581  |    assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+> (  674)    582  |
++            583  |FindEntry endp          ; End FindEntry procedure
+     539     584  |endif               ; IF @OEM_XMS or @OEM_VCPI
+     540     585  |if @OEM_XMS or @OEM_VCPI
+===================
+     659     704  |; If not, it must already be in the VMS chain (check that)
+     660     705  |
++            706  |    call    FindEntry   ; Find entry EBX in the tables
++            707  |                ; Return with DS:ESI ==> bucket which contains EBX
++            708  |    jnc short ALLOCMEM_SUB_FOUNDPL ; Jump if found
+-    661          |     mov     eax,PPHNDLFREE  ; DS:EAX ==> ptr to start of free chain
+<    662  (  573) |@@:
+-    663          |     mov     esi,eax    ; Copy to index register
+-    664          |     mov     eax,PGROUP:[esi].PL_NEXT ; Get next PL
+<    665  (  575) |
+-    666          |     cmp     eax,ebx    ; Izit a match?
+-    667          |     je  short ALLOCMEM_SUB_FOUNDPL ; Jump if so
+<    668  (  578) |
+-    669          |     cmp     eax,HP_LAST    ; Izit the end?
+-    670          |     jne     short @B   ; Jump if not
+<    671  (  580) |
+-    672          |; We didn't find this entry in the EMS free chain
+-    673          |; For debugging purposes, ensure that it's in the VMS chain
+<    674  (  582) |
+-    675          |     mov     eax,PPHNDLVMS  ; Get ptr to start of free chain
+-    676          |ALLOCMEM_SUB_NEXTVMS:
+-    677          |     mov     esi,eax    ; Copy last index
+-    678          |     mov     eax,PGROUP:[esi].PL_NEXT ; Get next PL
+<    679  (  570) |
+-    680          |     cmp     eax,ebx    ; Izit our baby?
+-    681          |     je  short ALLOCMEM_SUB_LOOPPL ; Jump if so
+<    682  (  564) |
+-    683          |     cmp     eax,HP_LAST    ; Check for end-of-the-chain
+-    684          |     jne     short ALLOCMEM_SUB_NEXTVMS ; Jump if not
+<    685  (  560) |
+-    686          |     int     03h        ; Call our debugger
+<    687  (  558) |
+-    688          |     popf           ; Restore
+-    689          |                ; (note interrupts might become enabled)
+-    690          |     stc            ; Indicate not enough memory
+<    691  (  556) |
+-    692          |     jmp     short ALLOCMEM_SUB_EXIT ; Join common exit code
+> (  913)    709  |
++            710  |    jmp short ALLOCMEM_SUB_LOOPPL ; Jump if not found (assumed in VMS chain)
+> (  909)    711  |
++            712  |;;;      mov     eax,PPHNDLFREE  ; DS:EAX ==> ptr to start of free chain
++            713  |;;; @@:
++            714  |;;;      mov     esi,eax        ; Copy to index register
++            715  |;;;      mov     eax,PGROUP:[esi].PL_NEXT ; Get next PL
++            716  |;;;
++            717  |;;;      cmp     eax,ebx        ; Izit a match?
++            718  |;;;      je      short ALLOCMEM_SUB_FOUNDPL ; Jump if so
++            719  |;;;
++            720  |;;;      cmp     eax,HP_LAST    ; Izit the end?
++            721  |;;;      jne     short @B       ; Jump if not
+> (  907)    722  |
++            723  |;;; ; We didn't find this entry in the EMS free chain
++            724  |;;; ; For debugging purposes, ensure that it's in the VMS chain
++            725  |;;;
++            726  |;;;      mov     eax,PPHNDLVMS  ; Get ptr to start of free chain
++            727  |;;; ALLOCMEM_SUB_NEXTVMS:
++            728  |;;;      mov     esi,eax        ; Copy last index
++            729  |;;;      mov     eax,PGROUP:[esi].PL_NEXT ; Get next PL
++            730  |;;;
++            731  |;;;      cmp     eax,ebx        ; Izit our baby?
++            732  |;;;      je      short ALLOCMEM_SUB_LOOPPL ; Jump if so
++            733  |;;;
++            734  |;;;      cmp     eax,HP_LAST    ; Check for end-of-the-chain
++            735  |;;;      jne     short ALLOCMEM_SUB_NEXTVMS ; Jump if not
++            736  |;;;
++            737  |;;;      int     03h        ; Call our debugger
++            738  |;;;
++            739  |;;;      popf           ; Restore
++            740  |;;;                 ; (note interrupts might become enabled)
++            741  |;;;      stc            ; Indicate not enough memory
++            742  |;;;
++            743  |;;;      jmp     short ALLOCMEM_SUB_EXIT ; Join common exit code
+     693     744  |
+     694     745  |
+===================
+     895     946  |; Delete entry BX from the VMS chain
+     896     947  |
++            948  |    call    FindEntry   ; Find entry EBX in the tables
++            949  |                ; Return with DS:ESI ==> bucket which contains EBX
++            950  |    jmp short DEALLOCMEM_COM ; Join common code
+-    897          |     mov     eax,PPHNDLVMS  ; Get ptr to start of VMS free chain
+-    898          |DEALLOCMEM_NEXTVMS:
+-    899          |     mov     esi,eax    ; Copy last index
+-    900          |     mov     eax,PGROUP:[esi].PL_NEXT ; Get next PL
+     901     951  |
+-    902          |     cmp     eax,ebx    ; Izit our baby?
+-    903          |     je  short DEALLOCMEM_COM ; Jump if so
+     904     952  |
++            953  |;;;      mov     eax,PPHNDLVMS  ; Get ptr to start of VMS free chain
++            954  |;;; DEALLOCMEM_NEXTVMS:
++            955  |;;;      mov     esi,eax        ; Copy last index
++            956  |;;;      mov     eax,PGROUP:[esi].PL_NEXT ; Get next PL
++            957  |;;;
++            958  |;;;      cmp     eax,ebx        ; Izit our baby?
++            959  |;;;      je      short DEALLOCMEM_COM ; Jump if so
++            960  |;;;
++            961  |;;;      cmp     eax,HP_LAST    ; Check for end-of-the-chain
++            962  |;;;      jne     short DEALLOCMEM_NEXTVMS ; Jump if not
++            963  |;;;
++            964  |;;;      int     03h        ; Call our debugger
++            965  |;;;
++            966  |;;;      popf           ; Restore
++            967  |;;;                 ; (note interrupts might become enabled)
++            968  |;;;      stc            ; Indicate we had a problem
++            969  |;;;
++            970  |;;;      jmp     short DEALLOCMEM_EXIT ; Join common error code
++            971  |;;;
+-    905          |     cmp     eax,HP_LAST    ; Check for end-of-the-chain
+-    906          |     jne     short DEALLOCMEM_NEXTVMS ; Jump if not
+<    907  (  722) |
+-    908          |     int     03h        ; Call our debugger
+<    909  (  711) |
+-    910          |     popf           ; Restore
+-    911          |                ; (note interrupts might become enabled)
+-    912          |     stc            ; Indicate we had a problem
+<    913  (  709) |
+-    914          |     jmp     short DEALLOCMEM_EXIT ; Join common error code
+<    915  (  552) |
+     916     972  |
+===================
