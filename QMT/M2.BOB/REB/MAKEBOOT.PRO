@@ -1,0 +1,10 @@
+extern	void main(int argc,char **argv );
+extern	int CopyFile(char *pzSource,char *pzDest);
+extern	void UnlinkAll(char *pazPath);
+extern	int Exist(char *pazFileName);
+extern	void ShowHelp(void );
+extern	void CreateAuto(char cDrive);
+extern	void CreateConfig(char cDrive);
+extern	void __far __interrupt CritErr(unsigned int _es,unsigned int _ds,unsigned int _di,unsigned int _si,unsigned int _bp,unsigned int _sp,unsigned int _bx,unsigned int _dx,unsigned int _cx,unsigned int _ax,unsigned int _ip,unsigned int _cs,unsigned int flags);
+extern	int QueryUser(char *pazInitMessage,char *pazRetryMessage,char *pazValidKey);
+extern	char _dos_getch(void );
