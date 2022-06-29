@@ -1,0 +1,15 @@
+Fix Bug If ExtraDOS Allocates All But One Para From Region
+
+When ExtraDOS allocates memory from a high DOS region and it would
+leave just one para, it fails to cover that one para with a MAC entry.
+
+The allocation is always from a region of sufficient size.  However
+the subtract to calculate the next MAC size is preceded by an INC CX
+for the next segment calculation, hence it is expected to underflow
+(JB) if it fits exactly and not to underflow if it leaves one or more
+para which need to be linked into the chain.
+
+HARP_DEV.ASM	Fix bug in comment.
+		Fix bug in subtraction.
+
+

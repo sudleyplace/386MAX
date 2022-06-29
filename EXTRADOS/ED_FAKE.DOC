@@ -1,0 +1,10 @@
+Fix Bug When Running Win95
+
+In an earlier TWT, I introduced a bug when running under Win95 where
+we updated the fields in the fake PSP when it wasn't allocated.  This
+time, I'm checking to see if it's been allocated before blasting away.
+
+HARP_INS.ASM	Check for FAKE_PSP allocated before writing into it
+		  (who can argue with that?).
+
+

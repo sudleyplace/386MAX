@@ -1,0 +1,9 @@
+		ret\EXTRADOS.OBJ	ret\HARP_MSC.OBJ	ret\HARP_INI.OBJ+
++
+ret\HARP_FCN.OBJ	ret\HARP_DEV.OBJ	ret\HARP_INS.OBJ+
++
+ret\GETSIZE.OBJ	ret\QMAX_MBT.OBJ	ret\VERSION.OBJ
+		ret\EXTRADOS.MAX
+		ret\EXTRADOS.map
+		/map /line /nod
+		NUL.def

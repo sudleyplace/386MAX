@@ -1,0 +1,136 @@
+#' $Header:   P:/PVCS/MAX/EXTRADOS/MAKEFILE.__V   1.5   15 Jun 1998 22:59:54   BOB  $
+#
+# Makefile for EXTRADOS.MAX
+#
+# Complete list of include files for this project:
+#
+#			$(R)HARP_DEV.ASM  $(R)HARPO.INC    $(R)SEGS.INC\
+#			$(R)HARP_CMD.INC  $(R)HARP_LCL.INC		\
+#			$(Q)EMM2CALL.INC  $(Q)LOAD_SEG.INC $(Q)QMAXINFO.INC\
+#			$(Q)QMAX_CTL.INC  $(Q)QMAX_CMD.INC
+#			$(L)LOAD_OPT.INC
+#
+
+!include $(MAXROOT)include\maxnames.mak
+
+PRODNAME=EXTRADOS		# Product file basename
+PRODEXT=MAX			# Product file extension
+OEM=ret 			# Default version
+
+.SUFFIXES: .$(PRODEXT) .MAP .SSF
+
+R=				# Source directory
+L=$(MAXROOT)386load\	# 386LOAD directory
+O=$(OEM)\			# Object and binary directory
+
+ALLINC=.;$(O);$(I);$(Q);$(L)	# INCLUDE search path
+OLDINC=$(INCLUDE)		# Save area for INCLUDE=
+
+ML5=masm
+
+M5FLAGS=/mu /p /r /t /w1 /Zd /DLANG_$(LANG)
+M6FLAGS=/c /Cu /nologo /Sp63 /W1 /DLANG_$(LANG) # MASM 6 options
+LFLAGS=/map /line /nod				# Linker options
+
+!IF "$(LST)" != ""
+M6FLAGS=$(M6FLAGS) /Fl$(LST)\$(@B)
+LSTMAC=,$(LST)\$(@B)
+!ELSE
+LSTMAC=
+!ENDIF
+
+{$(Q)}.asm{$(O)}.obj:
+	 set INCLUDE=$(ALLINC);$(INCLUDE)
+	 $(ML5) $(M5FLAGS) /D@HARPO $<, $* $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+
+{$(R)}.asm{$(O)}.obj:
+	 set INCLUDE=$(ALLINC);$(INCLUDE)
+	 ml6 $(M6FLAGS) /Fo$* $<
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+
+{$(R)}.map{$(O)}.ssf:
+		mapssf -t$* $<
+
+OBJS=	 $(O)$(PRODNAME).OBJ	$(O)HARP_MSC.OBJ	$(O)HARP_INI.OBJ \
+	 $(O)HARP_FCN.OBJ	$(O)HARP_DEV.OBJ	$(O)HARP_INS.OBJ \
+	 $(O)GETSIZE.OBJ	$(O)QMAX_MBT.OBJ	$(O)VERSION.OBJ
+
+ALL: DIR\
+	 $(O)$(PRODNAME).$(PRODEXT)\
+	 $(BD)$(PRODNAME).$(PRODEXT)
+
+DEL:
+	-rm $(O)*.*
+
+DIR:
+	vdir -c $(O)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\extrados\*
+VCSDIR = P:\PVCS\MAX\extrados\*
+ALIAS ALL P:\PVCS\MAX\extrados\*.*,p:\pvcs\max\extrados\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+DEPSCAN: makefile
+	depscan -s$(L)=$$(L) *.asm $(L)getsize.asm $(Q)qmax_mbt.asm >extddep.inc
+
+makefile: extddep.inc
+
+!include extddep.inc
+
+$(O)$(PRODNAME).$(PRODEXT):	 $(OBJS)	makefile
+	 $(LD) @<<$(O)$(PRODNAME).arf
+		$(OBJS: =+^
+)
+		$@
+		$*.map
+		$(LFLAGS)
+		NUL.def
+<<KEEP
+	 mapssf -t$* $*.map
+
+$(O)$(PRODNAME).OBJ:	HARPO.ASM	  $(HARPO_ADEP)
+	 set INCLUDE=$(ALLINC);$(INCLUDE)
+	 ml6 $(M6FLAGS) /Fo$* HARPO.ASM
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+
+$(O)HARP_MSC.OBJ:	$(R)HARP_MSC.ASM  $(HARP_MSC_ADEP)
+
+$(O)HARP_INS.OBJ:	$(R)HARP_INS.ASM  $(HARP_INS_ADEP)
+
+$(O)HARP_DEV.OBJ:	$(R)HARP_DEV.ASM  $(HARP_DEV_ADEP)
+
+$(O)HARP_FCN.OBJ:	$(R)HARP_FCN.ASM  $(HARP_FCN_ADEP)
+
+$(O)HARP_INI.OBJ:	$(R)HARP_INI.ASM  $(HARP_INI_ADEP)
+
+$(O)GETSIZE.OBJ:	$(L)GETSIZE.ASM   $(GETSIZE_ADEP)
+	 set INCLUDE=$(ALLINC)
+	 $(ML5) $(L)$(@B) $(M5FLAGS) /D@HARPO, $* $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+
+$(O)QMAX_MBT.OBJ:	$(Q)QMAX_MBT.ASM  $(QMAX_MBT_ADEP)
+
+#$(O)VERSION.OBJ: $(Q)VERSRET.ASM $(VERSRET_ADEP)
+#	 set INCLUDE=$(ALLINC);$(INCLUDE)
+#	 $(ML5) $(M5FLAGS) /D@HARPO $**, $* $(LSTMAC);
+#	 set INCLUDE=$(OLDINC)
+#	 @dispobj $*/w
+
+$(O)VERSION.OBJ: $(R)VERSION.ASM $(VERSION_ADEP)
+
+$(BD)$(PRODNAME).$(PRODEXT): $(O)$(PRODNAME).$(PRODEXT)
+	xc /r $(**R).$(PRODEXT) $*.*
+	xc /r $(**R).ssf	$*.*
+	xc /r $(**R).map	$*.*
+
+
