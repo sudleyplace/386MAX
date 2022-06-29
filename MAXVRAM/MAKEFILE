@@ -1,0 +1,53 @@
+#' $Header:   P:/PVCS/MEMLIMIT/MAKEFILE.__V   1.3   06 Feb 1992 11:29:20   BOBD  $
+#
+# Makefile for MAXVRAM utility
+#
+#
+# if LST is defined in the environment or on the command line,
+# define a macro we can tack onto the end of each MASM line
+
+OEM=ret 			# Default 3-letter OEM name
+PRODNAME=maxvram		# Product file basename
+
+I=$(INCDIR)			# path for generic includes
+O=$(OEM)\			# OEM-specific files
+R=				# Source directory
+
+!IFDEF LST
+LSTMAC=,$(LST)\$(@B)
+!ELSE
+LSTMAC=
+!ENDIF
+
+AFLAGS= 			# MASM options
+LFLAGS=/map /line /nod		# Linker options
+
+ALL : $(O)rvmxtsr.com  $(O)rvmxdev.sys
+
+$(O)rvmxtsr.OBJ: rvmxtsr.asm rvmx.asm makefile
+        masm $(R)$(@B) $(AFLAGS),$(O) $(LSTMAC);
+
+$(O)rvmxtsr.com: $*.obj
+        link $(LFLAGS) $*.obj,$*.exe,$*.map;
+        exe2bin $*.exe $*.com
+        del $*.exe
+	mapssf -t$* $*
+	ts $* /s /f_
+	@ff $*/,/#
+	xc /r	 $*.COM 	$(BINDIR)$(PRODNAME).*
+	xc /r	 $*.PSS 	$(PSSDIR)$(PRODNAME).*
+	xc /r	 $*.SSF 	$(PSSDIR)$(PRODNAME).*
+
+$(O)rvmxdev.OBJ: rvmxdev.asm rvmx.asm makefile
+        masm $(R)$(@B) $(AFLAGS),$(O) $(LSTMAC);
+
+$(O)rvmxdev.sys: $*.obj
+        link $(LFLAGS) $*.obj,$*.exe,$*.map;
+        exe2bin $*.exe $*.sys
+        del $*.exe
+	mapssf -t$* $*
+	ts $* /s /f_
+	@ff $*/,/#
+	xc /r	 $*.SYS 	$(BINDIR)$(PRODNAME).*
+	xc /r	 $*.PSS 	$(PSSDIR)$(PRODNAME).*
+	xc /r	 $*.SSF 	$(PSSDIR)$(PRODNAME).*

@@ -1,0 +1,80 @@
+# $Header:   P:/PVCS/MAX/MEMLIMIT/MAKEFILE.__V   1.3   30 May 1997 11:55:06   BOB  $
+#
+#' Makefile for MEMLIMIT utility
+#
+#
+
+!include $(MAXROOT)include\maxnames.mak
+
+OEM=ret 			# Default 3-letter OEM name
+PRODNAME=memlimit		# Product file basename
+
+O=$(OEM)\			# OEM-specific files
+R=				# Source directory
+
+OLDINC=$(INCLUDE)		# Old INCLUDE value
+ALLINC=$(O);$(I);$(Q);$(INCLUDE) # INCLUDE search path
+
+# if LST is defined in the environment or on the command line,
+# define a macro we can tack onto the end of each MASM line
+!IFDEF LST
+LSTMAC=,$(LST)\$(@B)
+!ELSE
+LSTMAC=
+!ENDIF
+
+AFLAGS=/DLANG_$(LANG)		# MASM options
+LFLAGS=/map /line /nod		# Linker options
+
+{$(R)}.asm{$(O)}.obj:
+	 set INCLUDE=$(ALLINC)
+	 masm $(R)$(@B) $(AFLAGS), $(O) $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+
+OBJS=	 $(O)$(PRODNAME).OBJ	$(O)VERSION.OBJ
+
+ALL:	 DIR	$(O)$(PRODNAME).EXE	$(BD)$(PRODNAME).EXE
+
+DEL:
+	-rm $(O)*.*
+
+DIR:
+	vdir -c $(O)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\memlimit\*
+VCSDIR = P:\PVCS\MAX\memlimit\*
+ALIAS ALL P:\PVCS\MAX\memlimit\*.*,p:\pvcs\max\memlimit\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+DEPSCAN: makefile
+	depscan *.asm >memldep.inc
+
+makefile: memldep.inc
+
+!include memldep.inc
+
+$(O)$(PRODNAME).EXE:	 $(OBJS)	makefile
+	 $(LD) @<<$(O)$(PRODNAME).arf
+		$(OBJS: =+^
+)
+		$*.exe
+		$*.map
+		$(LFLAGS)
+		NUL.def
+<<KEEP
+	 mapssf -t$* $*
+
+$(BD)$(PRODNAME).EXE: $(O)$(PRODNAME).EXE
+	 xc /r	 $(**R).EXE	$*.*
+	 xc /r	 $(**R).SSF	$*.*
+
+$(O)MEMLIMIT.OBJ: MEMLIMIT.ASM		$(MEMLIMIT_ADEP)
+
+$(O)VERSION.OBJ:  VERSION.ASM		$(VERSION_ADEP)
+
+
