@@ -1,0 +1,29 @@
+VCPITEST -- VCPI Test Program
+
+This primitive program tests each VCPI call to an EMS emulator at
+least once.
+
+The source module VCP_EPM.ASM contains code to exercise the VCPI
+debugger interface.  If one is present, the VCPITEST program calls the
+single-step interrupt handler (INT 01h).  At that point you can
+single-step through the code.
+
+
+Comments on Debugger
+--------------------
+
+The file 386SWAT.DOC describes the (internal tool) debugger.  Press
+F1 to see a help screen.  Briefly, press the Grey-plus to single-step,
+and the Grey-minus key to single-skip over the next instruction
+(typically a CALL or LOOP).  To continue running, press Esc.
+
+Please let me know whether it is worthwhile to continue to develop an
+interface between VCPI and a debugger such as this.
+
+Finally, this debugger is an internal tool used within Qualitas.
+Please don't distribute it any further.
+
+
+(C) Copyright 1989-91 Qualitas, Inc.  All rights reserved.
+
+

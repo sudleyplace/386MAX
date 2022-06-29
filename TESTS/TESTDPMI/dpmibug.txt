@@ -1,0 +1,51 @@
+When running the test programs after compiling `grep.exe' from the
+sources in `grp210s.zip' and `tar.exe' from the sources in
+`tar112s.zip', MAX 8 fails to provide DPMI services to run the test
+scripts.  These same tests run successfully in a DOS box under Windows
+3.11.  While I have not personally run these additional tests, they
+are reliably reported to run in a DOS box under Windows 95 and under
+DOS using the free DPMI server written by Charles W. Sandmann of Rice
+Institute.
+
+"make" is called from the top directory to change directory to the
+sub-directory "tests" and "make[1] is called to use the makefile in
+the subdirectory.  Within this makefile "make[2]" is invoked to reach
+a target within the same makefile.	This runs a shell (bash, the
+Bourne Again Shell) which runs a script to do the tests.  The to be
+tested programs, grep or tar, fail to load because the stub cannot get
+DPMI services to switch to protected mode.	The actual error message
+comes from the stub.  "Load failure:  Can't change mode"
+
+The problem is not available memory, per se, since the amounts of
+memory free at this point is comparable under MAX 8, and Windows 3.11.
+Some more subtle resource has been exhausted by MAX 8.
+
+All of the programs needed to display this behavior are freely available on:
+	http://www.simtel.net/pub/simtelnet/gnu/djgpp/ in
+		subdirectories v2 and v2gnu.
+The DPMI server of C.W. Sandmann is also there in subdirectory v2misc.
+
+I am using a 486dx/33 with 16 Mb ram, running MS-DOS 6.22 and Windows
+3.11.  This is the first instance in which MAX 8 has failed my
+expectations.  I have looked at your web pages.  Although the text on
+the patch m800801.exe did not offer any hope that my problem would
+have been corrected, I downloaded it and applied the patch.
+
+The same behavior was observed.
+
+Any ideas?	Do you need more details?  It's not that I want to run the
+tests.	Even with MAX 8 from DOS they will run if I change to the
+"tests" subdirectory.  The question is why MAX 8 cannot handle the
+level of nested program that the other DPMI servers manage.
+
+Regards
+Frank Donahoe
+
+
+BTW, the instructions in PATCH.DOC to run:
+
+> SETUP /W would lead to the patched files being overwritten from the
+floppy if one followed the screen display.
+
+
+

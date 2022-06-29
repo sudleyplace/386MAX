@@ -1,0 +1,398 @@
+MEMLIMIT  -- Version 1.19 -- A Memory Limiting Utility
+   (C) Copyright 1991-96 Qualitas, Inc.  All rights reserved.
+SWAPFILE disabled.
+
+R:\MAX\TESTS\TESTDPMI>
+R:\MAX\TESTS\TESTDPMI>test23
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+No handlers installed.
+様> Program should terminate <様
+^C
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>
+R:\MAX\TESTS\TESTDPMI>test23/v=0
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+VM handler will IRET/D
+様> Ctrl-Break should be ignored <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/v=1
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+VM handler will RETF/D  CF=0
+様> Ctrl-Break should be ignored <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/v=2
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+VM handler will RETF/D  CF=1
+様> Program should terminate <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/v=3
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+VM handler will CHAIN via JMPF
+様> Program should terminate <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/v=4
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+VM handler will CHAIN via CALLF
+様> Program should terminate <様
+^C
+VM handler called.
+VM CALLF return occurred.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>
+R:\MAX\TESTS\TESTDPMI>test23/p=0
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will IRET/D
+様> Ctrl-Break should be ignored <様
+^C
+PM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=1
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will RETF/D  CF=0
+様> Ctrl-Break should be ignored <様
+^C
+PM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=2
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will RETF/D  CF=1
+様> Program should terminate <様
+^C
+PM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=3
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will CHAIN via JMPF
+様> Program should terminate <様
+^C
+PM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=4
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will CHAIN via CALLF
+様> Program should terminate <様
+^C
+PM handler called.
+PM CALLF return occurred.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>
+R:\MAX\TESTS\TESTDPMI>test23/p=0/v=0
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will IRET/D -- VM handler will IRET/D
+様> Ctrl-Break should be ignored <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=0/v=1
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will IRET/D -- VM handler will RETF/D  CF=0
+様> Ctrl-Break should be ignored <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=0/v=2
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will IRET/D -- VM handler will RETF/D  CF=1
+様> Program should terminate <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=0/v=3
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will IRET/D -- VM handler will CHAIN via JMPF
+様> Ctrl-Break should be ignored <様
+^C
+VM handler called.
+PM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=0/v=4
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will IRET/D -- VM handler will CHAIN via CALLF
+様> Ctrl-Break should be ignored <様
+^C
+VM handler called.
+PM handler called.
+VM CALLF return occurred.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>
+R:\MAX\TESTS\TESTDPMI>test23/p=1/v=0
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will RETF/D  CF=0 -- VM handler will IRET/D
+様> Ctrl-Break should be ignored <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=1/v=1
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will RETF/D  CF=0 -- VM handler will RETF/D  CF=0
+様> Ctrl-Break should be ignored <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=1/v=2
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will RETF/D  CF=0 -- VM handler will RETF/D  CF=1
+様> Program should terminate <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=1/v=3
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will RETF/D  CF=0 -- VM handler will CHAIN via JMPF
+様> Ctrl-Break should be ignored <様
+^C
+VM handler called.
+PM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=1/v=4
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will RETF/D  CF=0 -- VM handler will CHAIN via CALLF
+様> Ctrl-Break should be ignored <様
+^C
+VM handler called.
+PM handler called.
+VM CALLF return occurred.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>
+R:\MAX\TESTS\TESTDPMI>test23/p=2/v=0
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will RETF/D  CF=1 -- VM handler will IRET/D
+様> Ctrl-Break should be ignored <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=2/v=1
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will RETF/D  CF=1 -- VM handler will RETF/D  CF=0
+様> Ctrl-Break should be ignored <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=2/v=2
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will RETF/D  CF=1 -- VM handler will RETF/D  CF=1
+様> Program should terminate <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=2/v=3
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will RETF/D  CF=1 -- VM handler will CHAIN via JMPF
+様> Program should terminate <様
+^C
+VM handler called.
+PM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=2/v=4
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will RETF/D  CF=1 -- VM handler will CHAIN via CALLF
+様> Program should terminate <様
+^C
+VM handler called.
+PM handler called.
+VM CALLF return occurred.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>
+R:\MAX\TESTS\TESTDPMI>test23/p=3/v=0
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will CHAIN via JMPF -- VM handler will IRET/D
+様> Ctrl-Break should be ignored <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=3/v=1
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will CHAIN via JMPF -- VM handler will RETF/D  CF=0
+様> Ctrl-Break should be ignored <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=3/v=2
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will CHAIN via JMPF -- VM handler will RETF/D  CF=1
+様> Program should terminate <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=3/v=3
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will CHAIN via JMPF -- VM handler will CHAIN via JMPF
+様> Program should terminate <様
+^C
+VM handler called.
+PM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=3/v=4
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will CHAIN via JMPF -- VM handler will CHAIN via CALLF
+様> Program should terminate <様
+^C
+VM handler called.
+PM handler called.
+VM CALLF return occurred.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>
+R:\MAX\TESTS\TESTDPMI>test23/p=4/v=0
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will CHAIN via CALLF -- VM handler will IRET/D
+様> Ctrl-Break should be ignored <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=4/v=1
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will CHAIN via CALLF -- VM handler will RETF/D  CF=0
+様> Ctrl-Break should be ignored <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=4/v=2
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will CHAIN via CALLF -- VM handler will RETF/D  CF=1
+様> Program should terminate <様
+^C
+VM handler called.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=4/v=3
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will CHAIN via CALLF -- VM handler will CHAIN via JMPF
+様> Program should terminate <様
+^C
+VM handler called.
+PM handler called.
+PM CALLF return occurred.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>test23/p=4/v=4
+TEST23   -- Version 2.01 -- A DPMI Ctrl-Break Test Program
+   (C) Copyright 1992-3 Qualitas, Inc.  All rights reserved.
+PM handler will CHAIN via CALLF -- VM handler will CHAIN via CALLF
+様> Program should terminate <様
+^C
+VM handler called.
+PM handler called.
+PM CALLF return occurred.
+VM CALLF return occurred.
+
+R:\MAX\TESTS\TESTDPMI>if errorlevel 1 pause
+
+R:\MAX\TESTS\TESTDPMI>
+R:\MAX\TESTS\TESTDPMI>memlimit swapfree
+MEMLIMIT  -- Version 1.19 -- A Memory Limiting Utility
+   (C) Copyright 1991-96 Qualitas, Inc.  All rights reserved.
+SWAPFILE limitations have been removed.
+
+R:\MAX\TESTS\TESTDPMI>
+

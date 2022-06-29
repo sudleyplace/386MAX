@@ -1,0 +1,268 @@
+
+Interrupt Handling
+------------------
+
+Interrupts come in several flavors (Hardware (HW), Special (SP),
+Software (SW), Fault/Exception (EX)) and can occur in one of several
+contexts (VM, MAX, DPMI).  A special interrupt is 1Ch, 23h, or 24h.
+In this analysis, we make the following assumptions:
+
+* VM   runs at PL3, IOPL 3;
+* MAX  runs at PL0, IOPL 0;
+* DPMI runs at PL3, IOPL 3 (note this means that we don't use the
+  I/O bit permission map and all I/O done by a DPMI client is valid;
+  however, PL0 instructions are still invalid);
+* All IDT entries have DPL 3, RPL 0 (note that for performance
+  reasons, we might change the IDT entry for INT 31h to have RPL 3).
+  Also, INT 31h is marked as a trap gate (instead of an interrupt gate
+  so IF is not changed over the interrupt.
+
+The notation of the letter F (for filler) used as a suffix to a
+segment/selector register name (e.g., CSF) indicates that the
+segment/selector register is in the low-order word of a dword with the
+upper word undefined.
+
+
+HW-VM
+SP-VM
+
+What happens:  A hardware or special interrupt which occurs in Virtual
+8086 Mode causes a mode switch from VM to PM using the SS|ESP of the
+PL0 stack in the current TSS.
+
+The PL0 stack:	contains (from top down) the caller's GSF, FSF, DSF,
+ESF, SSF, ESP, EFL, CSF, and EIP.  It is mapped by INTCOM_STR.
+
+How do we detect it:  This case is detected by checking ESP against
+PPL0STK_NRM (they should be equal).
+
+What do we do:	Our response is to give DPMI clients a crack at it and
+then reflect the interrupt to VM using the caller's SS:SP.
+
+
+SW-VM
+
+This case is identical to HW-VM except for our response.  Were we to
+need to distinguish it from HW-VM, we would need to set the IDT
+entry's DPL below 3 which would cause all software interrupts to
+signal a GP Fault (hardware interrupts ignore the IDT entry's DPL).
+This would be a poor performer.
+
+What do we do:	Our response is to reflect the interrupt to VM using
+the caller's SS:SP.
+
+
+EX-VM
+
+What happens:  An exception which occurs in Virtual 8086 Mode causes a
+mode switch from VM to PM using the SS|ESP of the PL0 stack in the
+current TSS.
+
+The PL0 stack:	contains (from top down) the caller's GSF, FSF, DSF,
+ESF, SSF, ESP, EFL, CSF, EIP, and an error code.  After a PUSHAD, the
+stack is mapped by INTXX_STR.
+
+How do we detect it:  This case is detected by checking ESP against
+PPL0STK_ERR (they should be equal).
+
+What do we do:	Our response is dependent upon the particular
+exception.  If it's a stack fault (INT 0Ch), if there's a DPMI client
+active, we terminate it; if not, we turn belly up.  If it's a page
+fault, we fix it up and continue execution.  If it's a GP fault, we
+attempt to emulate the instruction.  If we succeed, we continue
+execution; if we don't, and there's a DPMI client active, we terminate
+it; if not, we turn belly up.  All other faults are reflected to VM,
+although in practice there are no other faults which can occur in VM.
+A Double Fault (INT 08h), Invalid TSS Fault (INT 0Ah), and Segment Not
+Present Fault (INT 0Bh) are not possible in VM by construction.
+
+
+HW-DPMI
+
+What happens:  A hardware interrupt which occurs while a DPMI client
+is executing at PL3 causes a ring transition from PL3 to PL0 using the
+SS|ESP of the PL0 stack in the current TSS.
+
+The PL0 stack:	contains (from top down) the caller's SSF, ESP, EFL,
+CSF, and EIP.  It is mapped by INTDPI_STR.
+
+How do we detect it:  This case is detected by checking ESP against
+PPL0STK_DNRM (they should be equal).
+
+What do we do:	Our response is to give the DPMI client a crack at it
+and then reflect the interrupt to VM using the stack in the HPDA.
+
+
+SP-DPMI
+SW-DPMI
+
+This case is identical to HW-DPMI unless the IDT entry is at RPL 3, or
+the code selector referenced in the IDT for this interrupt is marked
+as conforming (we use neither of these possibilities).	Were this to
+be the case, there would be no ring transition.  The caller's PL3
+stack would be used and contains the caller's EFL, CSF, and EIP.  The
+CPL would remain the same.
+
+
+EX-DPMI
+
+What happens:  An exception which occurs while a DPMI client is
+executing at PL3 causes a ring transition from PL3 to PL0 using the
+SS|ESP of the PL0 stack in the current TSS.
+
+The PL0 stack:	contains (from top down) the caller's SSF, ESP, EFL,
+CSF, EIP, and an error code.  It is mapped by INTDPF_STR.
+
+How do we detect it:  This case is detected by checking ESP against
+PPL0STK_DERR (they should be equal).
+
+What do we do:	Our response is to give the DPMI client a crack at it.
+If the client fixes the problem, we re-execute the faulting
+instruction.  If not, our response is dependent upon the particular
+exception.  If it's a page fault (INT 0Eh), we fix it up and continue
+execution.  If it's a GP fault (INT 0Dh), we attempt to emulate the
+instruction.  If we succeed, we continue execution; if we don't, we
+terminate the DPMI client.  All other faults cause us to tertminate
+the DPMI client.
+
+
+HW-MAX
+SP-MAX
+SW-MAX
+EX-MAX
+
+What happens:  A hardware, special, or software interrupt or an
+exception which occurs in PM while MAX is running does not cause a
+mode or task switch.
+
+The PL0 stack:	has pushed onto it the caller's EFL, CSF, and EIP.  If
+the interrupt is a fault, there is also an error code on the PL0
+stack.
+
+How do we detect it:  During execution in MAX, the current ESP is
+always below PPL0STK_ERR because ESP starts out at PPL0STK_ERR and has
+the caller's EGP registers pushed onto it.  These three cases are
+detected by noting that ESP is below PPL0STK_ERR.  They are
+distinguished as follows:  By construction, no code in MAX which can
+run in PM has an EIP whose low-order word (IP) is below the maximum
+code selector (limited by (size XDTE_STR) which is currently at 180h).
+The four cases above have one of two distinct stack frames which
+differ only in whether or not an error code is present.
+
+       HW/SP/SW      Exception
+	 ...		EFL
+	 EFL		CSF
+	 CSF		EIP
+	 EIP		ERR <-- SS|ESP
+
+If we look up the stack at the word at [ESP+4] we see either CS or the
+low-order word of EIP.	If this value is less than (size XDTE_STR),
+then it must be CS and thus a hardware or software interrupt;
+otherwise, it must be the low-order word of EIP and thus an exception.
+
+Another technique we could use is to look at bit 1 of [ESP+8].	In the
+first three cases (HW/SP/SW), we're looking at EFL and bit 1 is always
+set by 386 and later processors.  In the last case (exception), we're
+looking at CS and bit 1 is the high-order bit of (mask $PL).  This bit
+is clear because the corresponding code selector has RPL 0 (= 00b) (it
+could also have RPL 1 (= 01b), although we don't use that).
+
+
+
+Stack Switching When DPMI Gets Called
+-------------------------------------
+
+HW-VM
+SP-VM
+HW-DPMI
+HW-MAX
+
+What happens:  These interrupts are presented to the DPMI client by
+allocating a portion of the Locked Protected Mode (LPM) stack.
+
+The PL3 stack:	is taken from the LPM pool and has pushed onto it
+(from top down) the PL3 caller's flags (with VM=IF=TF=0), and a
+pseudo-return CS and eIP (PMILPM) to PL3 code in MAX which invokes a
+call gate to PL0.
+
+The PL0 stack:	contains the return address suitable for an IRETD in
+case the DPMI client IRETs, below which is the previous TSS_ESP0 and
+TSS_SS0.  The new TSS_ESP0 and TSS_SS0 point to the old ones.
+
+DPMI client IRETs:  to our pseudo-return address (PMILPM), we gain
+control via a call gate to PL0, de-allocate our portion of the LPM
+stack, and IRETD to the address on the PL0 stack.
+
+DPMI client JMPF/CALLFs:  to our default handler (PMIDEFxx), we gain
+control via a call gate to PL0, de-allocate our portion of the LPM
+stack, and continue with our default action (reflect the interrupt to
+VM).  This means that in this case, the client cannot hold onto an
+interrupt via CALLF waiting for it to bottom out and return to it
+unless it expects another DPMI handler in the chain to IRET and it
+wants to gain control in that case.  Does that sound right????????
+
+
+EX-DPMI
+
+What happens:  This interrupt is presented to the DPMI client by
+allocating a portion of the LPM stack.
+
+The PL3 stack:	is taken from the LPM pool and has pushed onto it
+(from top down) the PL3 caller's SSF, eSP, eFL, CS, eIP, error code,
+and a pseudo-return CS and eIP (PMFLPM) to PL3 code in MAX which
+invokes a call gate to PL0.
+
+The PL0 stack:	contains the return address suitable for an IRETD in
+case the DPMI client IRETs, below which is the error code and the
+previous TSS_ESP0 and TSS_SS0.	The new TSS_ESP0 and TSS_SS0 point to
+the old ones.
+
+DPMI client IRETS:  to our pseudo-return address (PMFLPM), we gain
+control via a call gate to PL0 and assume that it has fixed the
+problem.  In that case, we copy the PL3 stack EIP, CS, EFL, ESP, and
+SS to the PL0 stack, de-allocate our portion of the LPM stack, strip
+off the error code from the PL0 stack, and IRETD to the address on the
+PL0 stack in order to re-execute the faulting instruction.
+
+DPMI client JMPF/CALLFs:  to our default handler (PMFDEFxx), we gain
+control via a call gate to PL0 and terminate the DPMI client.
+
+
+SP-DPMI
+SW-DPMI
+
+What happens:  These interrupts are presented to the DPMI client on
+its own application stack.
+
+The PL3 stack:	is the application stack and has pushed onto it (from
+top down) the PL3 caller's EFL, CS, and eIP.
+
+The PL0 stack:	contains the return address suitable for an IRETD in
+case the DPMI client IRETs.
+
+DPMI client IRETs:  to its own address and execution continues without
+our further intervention.
+
+DPMI client JMPF/CALLFs:  to our default handler (PMIDEFxx), we gain
+control via a call gate to PL0, take our default action (reflect the
+interrupt to VM), catch the return, and continue execution in the DPMI
+client with an IRET (at PL3) to the address on the PL3 stack.
+
+
+SW-VM
+EX-VM
+SP-MAX
+SW-MAX
+
+These interrupts are of no concern to DPMI clients in PM.  They are
+reflected to VM and processed there by the corresponding VM handlers.
+
+
+EX-MAX
+
+This interrupt is of no concern to DPMI clients, but it does represent
+a bug in our own code.	If SWAT is present, we call it; otherwise we
+terminate ourselves.
+
+
+

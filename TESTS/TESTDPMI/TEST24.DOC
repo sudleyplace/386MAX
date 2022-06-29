@@ -1,0 +1,177 @@
+TEST24	 -- Version 2.00 -- A DPMI Critical Error Test Program
+   (C) Copyright 1992 Qualitas, Inc.  All rights reserved.
+
+This program tests Critical Errror under a DPMI host.  The program
+syntax is as follows:
+
+Syntax:  TEST24 [options]
+
+where options consists one or more of
+
+/P=n where n=0 (IGNORE), 1 (RETRY), 2 (ABORT), 3 (FAIL), 4 (JMPF), 5 (CALLF)
+     for PM INT 24h setting
+/V=n where n=0 (IGNORE), 1 (RETRY), 2 (ABORT), 3 (FAIL), 4 (JMPF), 5 (CALLF)
+     for VM INT 24h setting
+/S   Enter PM as small (16-bit) DPMI client
+
+To install a PM handler only, use /P=n without /V=n, and vice versa.
+To install both handlers with the PM handler first, use /P=n /V=n.  To
+install the VM handler first, use /V=n /P=n.
+
+The /P= and /V= options are order-dependent:  in case it makes a
+difference in your host implementation, the interrupt handlers are
+installed in the same order as the /P= or /V= keywords are specified
+on the command line.  If your implementation is not order-dependent,
+and you are testing with both handlers installed, place the handler
+which is called first on the right.  For example, with 386MAX as the
+host, the PM handler is always called first even if there is a VM
+handler installed.  In this case, always use the form /V=n /P=n.
+
+All handlers are installed after the switch from VM to PM is made (and
+are done through DPMI calls).
+
+The different values for /P= and /V= are described as follows:
+
+0	 The handler tells DOS to IGNORE the error.
+
+1	 The handler tells DOS to RETRY the error.
+
+2	 The handler tells DOS to ABORT the program.
+
+3	 The handler tells DOS to FAIL the DOS call.
+
+4	 The handler CHAINs to the next handler in sequence via JMPF
+	   which should cause the host to ignore this handler.
+
+5	 The handler CHAINs to the next handler in sequence via CALLF
+	   which should cause the host to ignore this handler.	Note
+	   that if the CALLF handler is called first, it should
+	   continue execution following the CALLF; TEST24 tests to
+	   see that that happens.
+
+The first four values (0-3) cause the handler to make a decision.
+The last two values (4-5) do not.
+
+The program tests that the following rules are followed:
+
+R1.  If the PM handler only is installed, then the resulting actions
+for values /P=0 to 3 should be identical to the resulting actions were
+the VM handler only installed, and vice versa.	That is, it shouldn't
+matter whether the decision is made in PM or VM if it's the same
+decision.
+
+R2.  If both handlers are installed and the first handler called makes
+a decision (values 0-3), then the other handler is not called.
+
+R3.  If both handlers are installed and the first handler called does
+not make a decision (values 4-5), then the resulting actions are the
+same as if the second handler only were installed.  That is, chaining
+is equivalent to not being installed.
+
+
+Some questions occur for which the TEST24 program assumes specific
+answers but which may be different in your implementation:
+
+Q1.  If both handlers are installed, which one is called first?
+
+A1a.  The PM handler;
+A1b.  The VM handler (???);
+A1c.  The last one which was hooked (that is, the order in which INT
+	24h is hooked by PM and VM is significant);
+A1d.  The first one which was hooked (???).
+
+My reading of the DPMI spec says that such interrupts should be
+reflected to PM first, then VM.  Thus, 386MAX calls the PM handler
+first.	Your mileage may differ.
+
+
+Q2.  If no handlers are installed, what is the default action?
+
+A2a.  Take a specific action such as FAIL.
+A2b.  Pass the event on to the next handler in sequence which means
+      DOS then asks the time-honored question "Abort, Retry, Ignore,
+      or Fail?"
+
+The answer for 386MAX is to take the same action as DOS does for a VM
+program without DPMI, which is to pass the event on to the next
+handler in sequence.
+
+For reference, the settings and actions taken by 386MAX are as
+follows:
+
+Setting 	 Action
+----------------------------------------------------
+
+No handlers	 Chain
+
+/V=0		 Ignore     (same as /P=0 alone)
+   1		 Retry	    (same as /P=1 alone)
+   2		 Abort	    (same as /P=2 alone)
+   3		 Fail	    (same as /P=3 alone)
+   4		 Chain	    (same as if no handlers)
+   5		 Chain	    (same as if no handlers)
+
+/P=0		 Ignore     (same as /V=0 alone)
+   1		 Retry	    (same as /V=1 alone)
+   2		 Abort	    (same as /V=2 alone)
+   3		 Fail	    (same as /V=3 alone)
+   4		 Chain	    (same as if no handlers)
+   5		 Chain	    (same as if no handlers)
+
+/V=0  /P=0	 Ignore     (same as /P=0 alone)
+	 1	 Retry	    (same as /P=1 alone)
+	 2	 Abort	    (same as /P=2 alone)
+	 3	 Fail	    (same as /P=3 alone)
+	 4	 Ignore     (same as /V=0 alone)
+	 5	 Ignore     (same as /V=0 alone)
+
+/V=1  /P=0	 Ignore     (same as /P=0 alone)
+	 1	 Retry	    (same as /P=1 alone)
+	 2	 Abort	    (same as /P=2 alone)
+	 3	 Fail	    (same as /P=3 alone)
+	 4	 Retry	    (same as /V=1 alone)
+	 5	 Retry	    (same as /V=1 alone)
+
+/V=2  /P=0	 Ignore     (same as /P=0 alone)
+	 1	 Retry	    (same as /P=1 alone)
+	 2	 Abort	    (same as /P=2 alone)
+	 3	 Fail	    (same as /P=3 alone)
+	 4	 Abort	    (same as /V=2 alone)
+	 5	 Abort	    (same as /V=2 alone)
+
+/V=3  /P=0	 Ignore     (same as /P=0 alone)
+	 1	 Retry	    (same as /P=1 alone)
+	 2	 Abort	    (same as /P=2 alone)
+	 3	 Fail	    (same as /P=3 alone)
+	 4	 Fail	    (same as /V=3 alone)
+	 5	 Fail	    (same as /V=3 alone)
+
+/V=4  /P=0	 Ignore     (same as /P=0 alone)
+	 1	 Retry	    (same as /P=1 alone)
+	 2	 Abort	    (same as /P=2 alone)
+	 3	 Fail	    (same as /P=3 alone)
+	 4	 Chain	    (same as /V=4 alone)
+	 5	 Chain	    (same as /V=4 alone)
+
+/V=5  /P=0	 Ignore     (same as /P=0 alone)
+	 1	 Retry	    (same as /P=1 alone)
+	 2	 Abort	    (same as /P=2 alone)
+	 3	 Fail	    (same as /P=3 alone)
+	 4	 Chain	    (same as /V=5 alone)
+	 5	 Chain	    (same as /V=5 alone)
+
+
+Please get back to me with your comments on these rules, how your DPMI
+host interprets Critical Error, what your DPMI client expects, how we
+can ever get consistent behavior amongst the various hosts/clients,
+etc.
+
+Bob Smith
+Qualitas, Inc.
+7101 Wisconsin Ave, Suite 1386
+Bethesda, MD  20814-4805
+
+301-907-7420   Voice
+301-907-0905   FAX
+
+
