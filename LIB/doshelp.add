@@ -1,0 +1,17 @@
+386LOAD  A Qualitas 386MAX utility that loads memory resident software
+         into high DOS memory.
+386MAX   A Qualitas 386MAX utility that provides command-line access
+         to 386MAX.
+386UTIL  A Qualitas 386MAX utility that provides information about
+         this system's use of memory.
+ASQ      A Qualitas 386MAX utility that provides system analysis and a
+         memory management tutorial.
+MAX      The Qualitas 386MAX shell.
+MAXIMIZE The Qualitas 386MAX configuration optimization tool.
+ROMSRCH  A Qualitas 386MAX utility for finding additional high DOS memory
+         regions.
+STRIPMGR A Qualitas 386MAX utility for clearing references to memory
+         management software from system configuration files.
+SNAPSHOT A Qualitas 386MAX utility to record system configuration
+         information.
+

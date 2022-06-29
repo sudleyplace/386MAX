@@ -1,0 +1,19 @@
+OVERFLOW             ; ExtraDOS ==> DeadMan switch automatically applied.
+; Created by MAXIMIZE
+
+[386MAX]
+E=NOLOADHI          ; MAXIMIZE ==> Never move master environment high
+MODEL=2
+H=560,1      ; MAXIMIZE ==> Move IFS-H to region 1 for 560 bytes
+G=624,2      ; MAXIMIZE ==> Move IFS-G to region 2 for 624 bytes
+F=8528,2      ; MAXIMIZE ==> Move FILES to region 2 for 8528 bytes
+X=272,2      ; MAXIMIZE ==> Move FCBs to region 2 for 272 bytes
+L=2304,2      ; MAXIMIZE ==> Move LASTDRIVE to region 2 for 2304 bytes
+C=5712,1      ; MAXIMIZE ==> Move COMMAND.COM to region 1 for 5712 bytes
+
+[386MAX-NOSWAT]
+MODEL=2
+
+[386MAX-SWAT]
+MODEL=2
+
