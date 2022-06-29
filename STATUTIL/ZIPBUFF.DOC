@@ -1,0 +1,27 @@
+Increase ZIP extract buffer
+
+Fix file entry:
+
+* Increase ZIP extract buffer
+
+ Description:
+ 	When doing buffered reads from text files, there's a considerable
+	amount of overhead.  The buffer has increased from 512 bytes to
+	16K, which should speed things up a bit.
+ Who: HENRY
+ When: 18 Apr 96.
+ SW/HW Environment: All.
+ Symptom: Too slow.
+ Temporary Workaround: None.
+ Test Procedure: None.
+ QA Testing Passed:
+ Version: LSTUTIL.LIB version ?
+
+Files affected:
+
+STATUTIL\ZOPEN.CPP
+	Fix comments.
+
+INCLUDE\ZOPEN.H
+	Increase input buffer size.
+

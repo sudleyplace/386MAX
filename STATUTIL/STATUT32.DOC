@@ -1,0 +1,39 @@
+* Convert statutil library to 32bit version.
+
+ Description: Convert statutil library to 32bit version. The changes were
+     mainly to conditionally include the 32 bit headers, alias the large
+     model function names ( ie. _fstrcpy ) to the standard ( ie. strcpy ),
+     and remove __export for 32 bit compile. I have not changed the two time
+     modules TDUTIL and CTIMEDT yet. They need more extensive rework.
+     They are commented out in the makefile. Also, a few _far decls were 
+     changed to FAR.
+      
+ Who: PETERJ
+ When: 16 April, 1996
+ SW/HW Environment: Windows 95
+ Symptom: NAB
+ Temporary Workaround: NAB
+
+New files:
+
+INCLUDE\32alias.h           Aliases for large model (_f) functions.
+
+INCLUDE\dzip32.h            DynaZip 32 bit header.
+
+INCLUDE\dunzip32.h          DynaZip 32 bit header.
+
+STATUTIL\statut32.mak       32 bit makefile for MS C++ 4.0.
+
+Files affected:             All are conditional includes and aliases. 
+
+STATUTIL\GETDIR.CPP
+
+STATUTIL\SECURITY.C
+
+STATUTIL\STRSTK.C
+
+STATUTIL\GSTRING.CPP
+
+STATUTIL\ZOPEN.CPP
+
+INCLUDE\STATUTIL.H

@@ -1,0 +1,4 @@
+	/BATCH W16\ndL\LStuMFC.LIB
+	W16\ndL\splash.obj		W16\ndL\centdlg.obj&
+	W16\ndL\bluescr.obj&
+W16\ndL\ddx_ddv.obj, NUL;

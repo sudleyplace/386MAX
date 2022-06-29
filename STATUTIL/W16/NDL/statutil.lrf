@@ -1,0 +1,5 @@
+	/BATCH W16\ndL\LSTUtil.LIB
+	W16\ndL\getdir.obj		W16\ndL\dosdir.obj		W16\ndL\hash.obj&
+W16\ndL\access.obj		W16\ndL\security.obj	W16\ndL\gstring.obj&
+W16\ndL\strstk.obj		W16\ndL\istext.obj	W16\ndL\zopen.obj		W16\ndL\stkinfo.obj&
+	W16\ndL\drivetyp.obj	W16\ndL\filecopy.obj		W16\ndL\tdutil.obj		W16\ndL\ctimedt.obj, NUL;

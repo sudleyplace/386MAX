@@ -1,0 +1,41 @@
+   \statutil\zopen.mak (09 Apr 1996 03:35:14)
+           zopen.mak (30 May 1997 12:17:46)
+===================
++              1  |# $Header:   P:/PVCS/MAX/STATUTIL/ZOPEN.MAV   1.2   30 May 1997 12:17:46   BOB  $
+-      1          |# $Header:   P:/PVCS/MAX/STATUTIL/ZOPEN.MAV   1.1   09 Apr 1996 03:35:14   HENRY  $
+       2       2  |#
+       3       3  |# zopen.mak : Build CZopen testbed application
+===================
+       7       7  |WIN = 16                        # Version of Windows: 16, 32S, NT, 95
+       8       8  |DEBUG = 0
++              9  |BINDIR = $(MAXROOT)lib          # Where to copy .EXE and .DLL files
++             10  |BD=$(BINDIR)\               # Destination
+-      9          |BINDIR = $(MAXROOT)lib\         # Where to copy .EXE and .DLL files
+      10      11  |
+      11      12  |# Add our includes to include search path
+===================
+      19      20  |I = $(MAXROOT)include\          # MAX includes
+      20      21  |L = $(MAXROOT)lib\              # Catnip libraries
++             22  |MODEL=L                         # Memory model to use
+-     21          |MODEL=L                         # Memory model to use
+      22      23  |SYSTEM = w$(WIN)                # Four- or five-letter system abbreviation
+      23      24  |
+===================
+      62      63  |    SET MASM=
+      63      64  |
++             65  |ALL: $(BD)$(PROJ).exe
+-     64          |ALL: $(BINDIR)$(PROJ).exe
+      65      66  |
+      66      67  |DEL:
+===================
+      89      90  |OBJS=$(O)zopentst.obj
+      90      91  |
++             92  |$(BD)$(PROJ).EXE: $(O)$(PROJ).EXE
+-     91          |$(BINDIR)$(PROJ).EXE: $(O)$(PROJ).EXE
+      92      93  |    copy $? $@
+      93      94  |
+===================
+     112     113  |<<
+     113     114  |
++            115  |^Z|
+===================

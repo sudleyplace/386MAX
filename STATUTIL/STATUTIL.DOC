@@ -1,0 +1,111 @@
+Copy STATUTIL from Dispatch and add Zopen.cpp
+
+Fix file entry:
+
+* Copy STATUTIL from Dispatch and add Zopen.cpp
+
+ Description:
+ 	This project now lives under the p:\max hierarchy and is available
+	for use by MAX 8 or any other new projects we add.
+ Who: HENRY
+ When: 4 Apr 96.
+ SW/HW Environment: All.
+ Symptom: NAB
+ Temporary Workaround: NAB
+ Test Procedure: None.
+ QA Testing Passed:
+ Version: None (static link library for use with multiple products).
+
+New files:
+
+INCLUDE\CTIMEDT.H
+	Time/date class declaration.
+
+INCLUDE\DTIME.H
+	Basic date/time definitions.  Originally from CATSYM.H.
+
+INCLUDE\GSTRING.H
+	Handy but crude global string object.  Uses GlobalAlloc, _not_ _fmalloc().
+
+INCLUDE\STATUTIL.H
+	STATUTIL.H from Dispatch, with a few changes.  There are probably a
+	couple of little white lies in here (referencing some of these functions
+	will cause a link error) but we'll deal with those as needed.  These
+	should all be useful functions, but some may need to be divorced from
+	Dispatch-specific stuff in other modules.
+
+INCLUDE\ZOPEN.H
+	Zip / Unzip access class.  Missing from here is a way to register
+	a yield / message display callback, but for simple operations like
+	getting one file at a time it should not be a problem.
+
+	Also the AddToZip / GetFromZip could take multiple filespecs (separated
+	by space) but don't currently handle this properly.
+
+STATUTIL\ACCESS.CPP
+	A variant on _access() that handles localized filenames properly.
+
+STATUTIL\CTIMEDT.CPP
+	Implementation of time/date manipulation class.  Assignments
+	are all done using YYMMDDHHMMSS (LPDTIME).
+
+STATUTIL\GETDIR.CPP
+	Functions to assert trailing backslash and make temporary filenames.
+
+STATUTIL\GSTRING.CPP
+	Global string class implementation.
+
+STATUTIL\HASH.C
+	Hashing algorithm from CATSYM, using a large 16-bit prime to take
+	full advantage of the possible range of 16-bit values.
+
+STATUTIL\SECURITY.C
+	Weak encrypt / decrypt using static key.  Not good for anything
+	other than hiding the original value from your kid sister, but
+	that's as good as many products do for encryption.
+
+STATUTIL\STATUTIL.INC
+	Dependencies for STATUTIL (other than MASM).
+
+STATUTIL\STATUTIL.MAK
+	Project makefile.  Can be invoked without options to build
+	non-debug version (which still has Codeview symbols attached).
+
+STATUTIL\STKINFO.ASM
+	Stack usage reporting.
+
+STATUTIL\STRSTK.C
+	String stack push / pop functions.
+
+STATUTIL\TDUTIL.CPP
+	Formatting and scanning of date/time according to [intl] section
+	of WIN.INI.
+
+STATUTIL\ZOPEN.CPP
+	Zip access class implementation.
+
+STATUTIL\ZOPEN.MAK
+	Makefile for zopen testbed (zopentst.exe).
+
+STATUTIL\ZOPENTST.CPP
+STATUTIL\ZOPENTST.DEF
+	Simple program to exercise zopen.cpp (also provides some usage
+	examples).
+
+	Typically new examples are added as we find the inevitably long
+	list of things that don't work as advertised in the class.
+
+
+Files affected:
+
+MAX.MAK
+	Minor change to allow disk to be built off-line (i.e. on my laptop).
+	PACKAGE.EXE has also been checked in to the p:\max\tools project.
+
+INCLUDE\TEXTNAME.MAK
+	Add zip and unzip libraries and DLLs.
+	Note that we need to register DynaZip before we can distribute it,
+	and we need a separate list for non-MAX copying, so for now these
+	DLLs are in with the .LIB files (which never get archived, just
+	copied to the MAXROOT\lib directory).
+

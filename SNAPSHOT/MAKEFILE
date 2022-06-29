@@ -1,0 +1,123 @@
+#' $Header:   P:/PVCS/MAX/SNAPSHOT/MAKEFILE.__V   1.3   30 May 1997 12:15:58   BOB  $
+#
+# Makefile for SNAPSHOT
+#
+
+INCLUDE=$(MAXROOT)include;$(INCLUDE)
+
+!include <maxnames.mak>
+
+PROJ=snapshot			# Name of executable
+MODEL=S 			# Small model
+OEM=ret 			# Default version
+DISPOBJ=0			# Turn off dispobj
+BETA=0				# Needed to keep VERSDATA happy
+
+I=$(MAXROOT)inc\		# Standard MASM includes
+H=$(MAXROOT)include\	# UI include directory
+A=$(MAXROOT)lib\		# UI help engine library
+O=$(OEM)\				# Directory for .OBJ files
+#U=$(A) 				# Directory for quilib
+#E=$(A) 				# Directory for ASQ engine .OBJ files
+Q=$(MAXROOT)asq\		# Directory for ASQ versdata.asm
+OLDINC=$(INCLUDE)		# Old INCLUDE value
+ALLINC=$(O);$(H);$(I);$(Q);$(INCLUDE) # Search path for .C and .ASM translation
+
+!IF "$(MODEL)" == "S"   # Determine MASM model flag
+AMODEL=0
+!ELSE
+!IF "$(MODEL)" == "M"
+AMODEL=1
+!ELSE
+!IF "$(MODEL)" == "C"
+AMODEL=2
+!ELSE
+!IF "$(MODEL)" == "L"
+AMODEL=3
+!ELSE
+!ERROR Model must be S, M, C, or L
+!ENDIF
+!ENDIF
+!ENDIF
+!ENDIF
+
+# Define LSTMAC macro to be added to the END of MASM command lines.
+# Creates assembler listing in directory $(LST)
+!IFDEF LST
+LSTMAC=,$(LST)\$(@B)
+!ELSE
+LSTMAC=
+!ENDIF
+
+DEBUG = 0
+
+CC  = cl
+CFLAGS=/A$(MODEL) /DLANG_$(LANG) /W3 /BATCH /WX /Gs /Zd
+
+ASM=masm
+AFLAGS=/Zd /DMODEL=$(AMODEL) /DSNAPSHOT=1 /DBETA=$(BETA) /DLANG_$(LANG) /Mx /W2
+
+MAPFILE_D  = NUL
+MAPFILE_R  = $(O)$(PROJ).map
+
+LFLAGS=/NOI /BATCH /NOD /M /FAR /PACKC /LI /CPARMAX:0x500 /STACK:4096
+LINKER	= link
+LRF  = echo > NUL
+GLIBS=$(MODEL)libce oldnames	# .LIBs we don't know the path for
+DEF_FILE=NUL
+
+!IF $(DEBUG)
+CFLAGS=$(CFLAGS) /Z7 /Od
+LFLAGS=$(LFLAGS) /CO
+!ELSE
+CFLAGS=$(CFLAGS) /Zd /Oslgeia
+!ENDIF
+
+OBJS  = $(O)snapshot.obj
+
+ALL:	DIR		$(O)$(PROJ).exe 	$(BD)snapshot.exe
+
+DEL:
+	-rm $(O)*.*
+
+DIR:
+	vdir -c $(O)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\snapshot\*
+VCSDIR = P:\PVCS\MAX\snapshot\*
+ALIAS ALL P:\PVCS\MAX\snapshot\*.*,p:\pvcs\max\snapshot\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+$(O)snapshot.obj : snapshot.c	$(H)commfunc.h	$(H)asqvers.h	\
+		$(H)myalloc.h	$(H)commdef.h	$(H)hmem.h	\
+		$(H)emsinfo.h	$(H)c_tload.h	$(H)cpu.h	\
+		$(H)listlist.h	$(H)cputext.h
+	set INCLUDE=$(ALLINC)
+	$(CC) /c $(CFLAGS) /Fo$*.obj $(@B).c
+	set INCLUDE=$(OLDINC)
+
+$(O)$(PROJ).exe : $(OBJS)	makefile
+	$(LRF) @<<$(O)$(PROJ).lrf
+$(RT_OBJS: = +^
+) $(OBJS: = +^
+)
+$@
+$*
+$(GLIBS)
+$(DEF_FILE) $(LFLAGS)
+<<
+	@Set LIB=$(LIB)
+	$(LINKER) @$(O)$(PROJ).lrf
+	mapssf -t$* $*.map
+
+$(BD)snapshot.exe: $(O)$(PROJ).exe
+	xc /r $(**R).exe	$*.*
+	xc /r $(**R).map	$*.*
+	xc /r $(**R).ssf	$*.*
+
+

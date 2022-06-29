@@ -1,0 +1,47 @@
+.                 <DIR> Jun-15-98  6:27:34p      R:\MAX\STATUTIL               
+..                <DIR> Jun-15-98  6:27:34p      
+W16               <DIR> Jun-15-98  6:29:08p      
+ACCESS.CPP          678 Apr-04-96  4:24:26p R    
+BLUESCR.CPP       2,914 May-23-96  1:29:24p R    
+CENTDLG.CPP         762 May-23-96  1:30:28p R    
+CTIMEDT.CPP      12,855 May-23-96  1:30:32p R    
+DBGBRK.ASM        1,707 Sep-25-96 10:14:50a R    
+DDX_DDV.CPP       3,147 May-23-96  1:30:38p R    
+DOSDIR.CPP        3,958 Jul-30-96  2:54:36p R    
+DRIVETYP.CPP      8,692 May-23-96  1:31:08p R    
+E                 2,253 Jul-15-98  2:02:20p A    
+F                     0 Jul-15-98  2:02:22p A    
+FCOPYVER.CPP      3,283 May-23-96  1:32:30p R    
+FILECOPY.C        2,285 May-23-96  1:32:34p R    
+GETDIR.CPP        2,663 May-23-96  1:32:42p R    
+GSTRING.CPP       4,514 Apr-16-96 11:31:20a R    
+HASH.C              836 May-28-96  4:11:26p R    
+IOFMT.C           5,975 Dec-09-96  2:06:34p R    
+ISTEXT.CPP        1,493 Jun-21-96  3:31:34p R    
+MAKEFILE             26 Jun-15-98  6:29:00p A    
+MK16.BAT            146 Aug-13-96           A    
+MK32.BAT            146 Aug-13-96           A    
+MYEXECV.ASM      19,944 May-23-96  1:33:06p R    
+PVCS.CFG            148 Apr-02-96  4:53:58p      
+SECURITY.C        2,949 Apr-16-96 11:31:46a R    
+SEH.C             2,851 Sep-25-96 11:25:28a R    
+SPLASH.CPP        3,104 May-23-96  1:33:12p R    
+STATUT32.DOC      1,104 Apr-16-96 10:07:40a R    
+STATUTIL.DOC      3,433 Apr-04-96  2:44:34p R    
+STATUTIL.INC      1,072 Jun-02-97  1:13:38p AR   
+STATUTIL.MAK      6,225 Jun-02-97  2:53:32p AR   
+STATUTIL.ZIP     62,481 Mar-20-97 12:34:00p A    
+STKINFO.ASM       2,234 May-30-97 12:17:46p AR   
+STRSTK.C          4,489 Apr-16-96  2:25:26p R    
+TDUTIL.CPP       16,868 May-23-96  1:33:16p R    
+UDBIN2.BAT          429 Apr-02-96  4:54:02p R    
+UDLOCAL2.BAT      1,461 Jan-31-97 10:57:46a R    
+WINAPI.C         17,520 Sep-25-96  9:47:32a A    
+WINAPI.PRO          610 Jun-12-97  7:43:56p A    
+ZIPBUFF.DOC         571 Apr-16-96  4:47:26p R    
+ZOPEN.CPP        24,157 Jan-22-97  2:57:16p R    
+ZOPEN.MAK         2,473 May-30-97 12:17:46p AR   
+ZOPEN.OLD        18,850 Apr-18-96  7:37:30a A    
+ZOPENTST.CPP      3,918 Apr-09-96  3:35:22a R    
+ZOPENTST.DEF        503 Apr-04-96  4:27:48p R    
+    43 files     1 dir        255,727 data     1,409,024 disk   333,873,152 avl

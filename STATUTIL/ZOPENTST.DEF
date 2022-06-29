@@ -1,0 +1,18 @@
+; $Header:   P:/PVCS/MAX/STATUTIL/ZOPENTST.DEV   1.0   04 Apr 1996 16:27:48   HENRY  $
+;
+; dsmgr.def : Declares the module parameters for the application.
+;
+; Copyright (C) 1996 Qualitas, Inc.  All rights reserved
+; 
+
+NAME         DSMGR
+DESCRIPTION  'DSMGR Windows Application'
+EXETYPE      WINDOWS
+
+CODE         PRELOAD MOVEABLE DISCARDABLE
+DATA         PRELOAD MOVEABLE MULTIPLE
+
+HEAPSIZE     1024   ; initial heap size
+; Stack size is passed as argument to linker's /STACK option
+
+
