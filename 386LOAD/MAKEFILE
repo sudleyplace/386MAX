@@ -1,0 +1,348 @@
+#' $Header:   P:/PVCS/MAX/386LOAD/MAKEFILE.__V   1.7   30 May 1997 12:58:06   BOB  $
+#
+# makefile for 386load
+#
+
+!include $(MAXROOT)include\maxnames.mak
+
+SYSNAME=386LOAD 		# name of system to build
+SYSNOPT=386NOPT 		# name of system without optimization
+
+# There are no DEBUG / RETAIL distinctions, just beta / retail.
+# Currently BLUEMAX is not supported.
+
+OEMNAME=$(COREEXBASE)	# 3-letter name of OEM extension (BET, RET, BLB, BLU)
+NEWDIR=N
+OEMINC=$(OEMNAME)\		# path for OEM-specific includes
+OEM=$(OEMNAME)\ 		# path for OEM-specific .OBJ's
+COMNINC=			# path for non OEM-specific include
+BIN=$(OEM)			# path for executables
+SRC=.\				# path for general source
+OEMSRC=$(SRC)			# path for OEM-specific source
+L=$(MAXROOT)386load\	# Local project source directory
+M=P:\MAX\386LOAD\		# Main project source directory
+P=$(L);$(M)			# Search sequence for source
+PI=$(COMNINC);$(L);$(M) 	# Search sequence for includes
+Q1=BCF\ 			# 1st subdirectory for 386MAX .OBJs (only for newdir)
+Q2=COMN\			# 2nd subdirectory for 386MAX .OBJs
+
+# since so many objects depend on $(OEMINC)LOAD_OEM.INC,
+# we'll make it a macro...
+LOEM=$(OEMINC)LOAD_OEM.INC
+
+# Define all include directories IN THE ORDER THEY SHOULD BE SEARCHED.
+# Normally, we would look in the current directory unless explicitly
+# otherwise...
+OLDINC=$(I)
+ALLINC=.;$(OEMINC);$(I);$(L);$(M);$(Q)
+!IF "$(OEMINC)" != "$(COMNINC)" && "$(COMNINC)" != ""
+ALLINC=$(ALLINC);$(COMNINC)
+!ENDIF
+
+# define translators, linkers, and options
+LD=link
+LDFLAGS=
+ML=masm
+MFLAGS=/mu /p /r /t /w1 /Zd /DLANG_$(LANG)
+
+# if LST has been defined either in the environment or on the command line,
+# create an LSTMAC macro to be appended to masm command lines for .LST
+# file generation...
+!IFDEF LST
+LSTMAC=,$(LST)\ 	# Stick listing in $(LST) directory
+!ELSE
+LSTMAC=
+!ENDIF
+
+# rules for .OBJ's
+{$(Q)}.asm{$(OEM)}.obj:
+!IF "$(NEWDIR)" == "Y"
+	 if exist %|dpF$(Q1)$(@F) copy %|dpF$(Q1)$(@F) $(@D)\.
+	 if exist %|dpF$(Q2)$(@F) copy %|dpF$(Q2)$(@F) $(@D)\.
+!ELSE
+	 set INCLUDE=$(ALLINC);$(INCLUDE)
+	 $(ML) %s $(MFLAGS), $(OEM)$(@B) $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+!ENDIF
+
+{$(Q)}.asm{$(OEM)}.opt:
+!IF "$(NEWDIR)" == "Y"
+	 copy $(L)$(OEM)$(@F) $(@D)\.
+!ELSE
+	 set INCLUDE=$(ALLINC);$(INCLUDE)
+	 $(ML) %s $(MFLAGS) /dOPTIM, $(OEM)$(@B).opt $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*.opt/w
+!ENDIF
+
+{$(Q)}.asm{$(OEM)}.nrm:
+!IF "$(NEWDIR)" == "Y"
+	 copy $(L)$(OEM)$(@F) $(@D)\.
+!ELSE
+	 set INCLUDE=$(ALLINC);$(INCLUDE)
+	 masm %s $(MFLAGS), $(OEM)$(@B).nrm $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*.nrm/w
+!ENDIF
+
+{$(M)}.asm{$(OEM)}.obj:
+!IF "$(NEWDIR)" == "Y"
+	 copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	 set INCLUDE=$(ALLINC);$(INCLUDE)
+	 $(ML) %s $(MFLAGS), $(OEM)$(@B) $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+!ENDIF
+
+{$(L)}.asm{$(OEM)}.obj:
+!IF "$(NEWDIR)" == "Y"
+	 copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	 set INCLUDE=$(ALLINC);$(INCLUDE)
+	 $(ML) %s $(MFLAGS), $(OEM)$(@B) $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+!ENDIF
+
+{$(SRC)}.asm{$(OEM)}.obj:
+!IF "$(NEWDIR)" == "Y"
+	 copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	 set INCLUDE=$(ALLINC);$(INCLUDE)
+	 $(ML) %s $(MFLAGS), $(OEM)$(@B) $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+!ENDIF
+
+ALL:	 DIR \
+		 $(BIN)$(SYSNAME).SYS	$(BIN)$(SYSNAME).COM	$(BD)LSEG.COM \
+!IF "$(NEWDIR)" == "Y"
+		 NEWDIR 						 \
+!ENDIF
+		 $(BD)386load.sys   $(BD)386load.com
+
+
+DEL:
+	-rm $(OEM)*.*
+
+DIR:
+	vdir -c $(OEM)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\386load\*
+VCSDIR = P:\PVCS\MAX\386load\*
+ALIAS ALL P:\PVCS\MAX\386load\*.*,p:\pvcs\max\386load\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+!IF "$(NEWDIR)" == "Y"
+NEWDIR: 	  {$(P)}PVCS.CFG      {$(P)}PVCS.LST	  {$(P)}MAKEFILE     \
+		  {$(P)}UDLOCAL.BAT   {$(P)}UDNET.BAT	  {$(P)}UDBIN.BAT    \
+		  {$(P)}MK$(OEMNAME).BAT
+	$(COMSPEC) /c <<$(OEM)MAKEFILE.BAT
+	xc/r/a/n/t $(**: =^
+	xc/r/a/n/t )
+<<NOKEEP
+
+!ENDIF
+
+DEPSCAN: {$(P)}MAKEFILE
+	depscan -s$(OEM)=$$(OEM) -p{$$(PI)} *.asm $(Q)util_*.asm $(Q)versret.asm >loaddep.inc
+
+{$(P)}makefile: loaddep.inc
+
+# Note that the order of the two references to LOEM is important.
+# In the other order, the first dependent in the XC/R command block
+# is LOAD_OEM.ALL, not LOAD@xxx.OEM.  Thanks NMAKE.
+# Also note that this must occur before loaddep.inc, where additional
+# dependencies (in $(Q)) may be added.
+$(LOEM):	 {$(P)}LOAD@$(OEMNAME).OEM
+	 xc /r %|dpFLOAD@$(OEMNAME).OEM $(LOEM)
+
+!include loaddep.inc
+
+$(OEM)VERSBETA.OBJ:	 {$(P)}VERSBETA.ASM $(VERSBETA_ADEP)
+
+$(OEM)VERSRET.OBJ:	 $(Q)VERSRET.ASM $(VERSRET_ADEP)
+
+$(OEM)LOADCOM.OBJ:	 {$(P)}LOADCOM.ASM $(LOADCOM_ADEP)
+
+$(OEM)LOADCO2.OBJ:	 {$(P)}LOADCO2.ASM $(LOADCO2_ADEP)
+
+$(OEM)LOADMSGS.OBJ:	 {$(P)}LOADMSGS.ASM $(LOADMSGS_ADEP)
+
+$(OEM)UTIL_NUM.OBJ:	 $(Q)UTIL_NUM.ASM $(UTIL_NUM_ADEP)
+
+$(OEM)UTIL_USE.OBJ:	 $(Q)UTIL_USE.ASM $(UTIL_USE_ADEP)
+
+$(OEM)UTIL_WIN.OBJ:	 $(Q)UTIL_WIN.ASM $(UTIL_WIN_ADEP)
+
+$(OEM)DRVLOAD.OBJ:	 {$(P)}DRVLOAD.ASM $(DRVLOAD_ADEP)
+
+$(OEM)DRV_MSGS.OBJ:	 {$(P)}DRV_MSGS.ASM $(DRV_MSGS_ADEP)
+
+$(OEM)DRVCOM.OBJ:	 {$(P)}DRVCOM.ASM $(DRVCOM_ADEP)
+
+$(OEM)GETSIZE.OBJ:	 {$(P)}GETSIZE.ASM $(GETSIZE_ADEP)
+
+$(BIN)$(SYSNAME).SYS:	$(OEM)DRVLOAD.OBJ	\
+			$(OEM)DRVCOM.OBJ	\
+			$(OEM)LOADCOM.OBJ	\
+			$(OEM)GETSIZE.OBJ	\
+			$(OEM)LOADCO2.OBJ	\
+			$(OEM)DRV_MSGS.OBJ	\
+			$(OEM)LOADMSGS.OBJ	\
+			$(OEM)MACFNS.OBJ	\
+			$(OEM)UTIL_NUM.OBJ	\
+			$(OEM)UTIL_USE.OBJ	\
+			$(OEM)UTIL_WIN.OBJ	\
+			$(OEM)VERSBETA.OBJ	\
+			$(OEM)VERSRET.OBJ
+!IF "$(NEWDIR)" == "Y"
+	 copy $(L)$(OEM)$(@B).SYS   $(OEM).
+	 copy $(L)$(OEM)DRVLOAD.SSF $(OEM).
+	 copy $(L)$(OEM)DRVLOAD.MAP $(OEM).
+!ELSE
+	 $(LD) @<<$(OEM)DRVLOAD.ARF
+		$(**: =+^
+)
+		$*
+		$(OEM)drvload /map
+		/line
+
+<<KEEP
+	 copy $*.EXE $*.SYS
+	 del $*.EXE
+	 mapssf -t$(OEM)drvload    $(OEM)drvload
+!ENDIF
+
+$(BD)386load.sys: $(BIN)$(SYSNAME).sys
+!IF "$(NEWDIR)" != "Y"
+	 xc /r	 $(**R).SYS	   $*.*
+	 xc /r	 $(BIN)drvload.map $(BD).
+	 xc /r	 $(BIN)drvload.ssf $(BD).
+!ENDIF
+
+$(OEM)UTIL_DDD.OBJ:	 $(Q)UTIL_DDD.ASM $(UTIL_DDD_ADEP)
+
+$(OEM)MACFNS.OBJ:	 {$(P)}MACFNS.ASM $(MACFNS_ADEP)
+
+$(OEM)MAPLOAD.OBJ:	 {$(P)}MAPLOAD.ASM $(MAPLOAD_ADEP)
+
+$(OEM)UTIL_MA2.OBJ:	 $(Q)UTIL_MA2.ASM $(UTIL_MA2_ADEP)
+
+$(OEM)UTIL_MAC.OBJ:	 $(Q)UTIL_MAC.ASM $(UTIL_MAC_ADEP)
+
+$(OEM)UTIL_OPT.OPT:	 $(Q)UTIL_OPT.ASM $(UTIL_OPT_ADEP)
+
+$(OEM)UTIL_OPT.NRM:	 $(Q)UTIL_OPT.ASM $(UTIL_OPT_ADEP)
+
+$(OEM)UTIL_SUM.NRM:	 $(Q)UTIL_SUM.ASM $(UTIL_SUM_ADEP)
+
+$(OEM)UTIL_SUM.OPT:	 $(Q)UTIL_SUM.ASM $(UTIL_SUM_ADEP)
+
+$(OEM)TSRHIGH.OBJ:	 {$(P)}TSRHIGH.ASM $(TSRHIGH_ADEP)
+
+$(OEM)TSRLOAD.OBJ:	 {$(P)}TSRLOAD.ASM $(TSRLOAD_ADEP)
+
+$(OEM)TSR_MSGS.OBJ:	 {$(P)}TSR_MSGS.ASM $(TSR_MSGS_ADEP)
+
+$(OEM)UTIL_STR.OBJ:	 $(Q)UTIL_STR.ASM $(UTIL_STR_ADEP)
+
+$(OEM)TSRCOM.OBJ:	 {$(P)}TSRCOM.ASM $(TSRCOM_ADEP)
+
+TSROPT= 		$(OEM)TSRLOAD.OBJ	\
+			$(OEM)TSRCOM.OBJ	\
+			$(OEM)LOADCOM.OBJ	\
+			$(OEM)LOADCO2.OBJ	\
+			$(OEM)GETSIZE.OBJ	\
+			$(OEM)MACFNS.OBJ	\
+			$(OEM)TSRHIGH.OBJ	\
+			$(OEM)TSR_MSGS.OBJ	\
+			$(OEM)LOADMSGS.OBJ	\
+			$(OEM)UTIL_SUM.OPT	\
+			$(OEM)UTIL_DDD.OBJ	\
+			$(OEM)MAPLOAD.OBJ	\
+			$(OEM)UTIL_MA2.OBJ	\
+			$(OEM)UTIL_MAC.OBJ	\
+			$(OEM)UTIL_NUM.OBJ	\
+			$(OEM)UTIL_STR.OBJ	\
+			$(OEM)UTIL_OPT.OPT	\
+			$(OEM)UTIL_USE.OBJ	\
+			$(OEM)UTIL_WIN.OBJ	\
+			$(OEM)VERSBETA.OBJ	\
+			$(OEM)VERSRET.OBJ
+
+TSRNRM=$(TSROPT:.OPT=.NRM)
+
+$(BIN)$(SYSNAME).COM:	 $(TSROPT)	$(TSRNRM)
+!IF "$(NEWDIR)" == "Y"
+	 copy $(L)$(OEM)$(@B).COM   $(OEM).
+	 copy $(L)$(OEM)TSRLOAD.SSF $(OEM).
+	 copy $(L)$(OEM)TSRLOAD.MAP $(OEM).
+!ELSE
+#	 Create version with optimization
+	 $(LD) @<<$(OEM)TSRLOAD.ARF
+		$(TSROPT: =+^
+)
+		$*
+		$(OEM)tsrload /map
+		/line
+
+<<KEEP
+	 exe2bin $* $*.com
+	 del $*.exe
+	 mapssf -t$(OEM)tsrload 	$(OEM)tsrload
+#	 Create version without optimization code
+	 $(LD) @<<$(OEM)$(SYSNOPT).arf
+		$(TSRNRM: =+^
+)
+		$(BIN)$(SYSNOPT)
+		$(BIN)$(SYSNOPT)/map
+		/line
+
+<<KEEP
+	 exe2bin $(BIN)$(SYSNOPT) $(BIN)$(SYSNOPT).com
+	 del $(BIN)$(SYSNOPT).exe
+!ENDIF
+
+$(BD)386load.com: $(BIN)$(SYSNAME).COM
+!IF "$(NEWDIR)" != "Y"
+	 xc /r	 $(**R).COM	$*.*
+	 xc /r	 $(BIN)tsrload.map $(BD).
+	 xc /r	 $(BIN)tsrload.ssf $(BD).
+	 xc /r	 $(BIN)$(SYSNOPT).COM	$(BD).
+!ENDIF
+
+$(OEM)LSEG.OBJ: 	 {$(P)}LSEG.ASM $(LSEG_ADEP)
+
+$(BIN)LSEG.COM: 	 $(OEM)LSEG.OBJ
+!IF "$(NEWDIR)" == "Y"
+	 copy $(L)$(OEM)$(@B).COM   $(OEM).
+	 copy $(L)$(OEM)$(@B).MAP   $(OEM).
+!ELSE
+	 $(LD) @<<$(OEM)LSEG.arf
+		$(OEM)lseg
+		$*
+		$*/line
+		/map
+
+<<KEEP
+	 mapssf -t$* $*
+	 exe2bin $* $*.com
+	 del $*.exe
+!ENDIF
+
+$(BD)LSEG.COM: $(BIN)LSEG.COM
+!IF "$(NEWDIR)" != "Y"
+	 xc /r	 $(**R).COM	$*.*
+	 xc /r	 $(**R).SSF	$*.*
+!ENDIF
+
+
+

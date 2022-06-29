@@ -1,0 +1,33 @@
+;' $Header:   P:/PVCS/MAX/386LOAD/LOAD@BLU.OEV   1.1   25 Oct 1995 13:10:44   PETERJ  $
+
+; LOAD_OEM.BLU
+
+; These equates control how 386LOAD is assembled
+
+@OEM_TIMEMEM	 equ 1	; 1 = Allow TIMEMEM	     in utility program
+@OEM_ROMSCAN	 equ 1	; 1 = Allow ROMSCAN	     in utility program
+@OEM_MAPMEM	 equ 1	; 1 = Allow MAPMEM	     in utility program
+@OEM_MAPEMS	 equ 1	; 1 = Allow MAPEMS	     in utility program
+@OEM_MAPDEV	 equ 1	; 1 = Allow MAPDEV	     in utility program
+@OEM_INST	 equ 1	; 1 = INSTALL program supported
+@OEM_WIN3	 equ 1	; 1 = Supports Windows 3
+@OEM_FLEX	 equ 1	; 1 = Supports FLEXFRAME
+@OEM_BETA	 equ 0	; 1 = Assemble in beta version text
+@OEM_HARPO	 equ 1	; 1 = Enable subsegment optimization
+
+@OEM_SUBT_PS2	 equ 1
+
+	 include QMAX_OEM.ALL
+	 include LOAD_OEM.ALL
+
+@OEM_SYS	 equ @OEMSYS_RET
+@OEM_PTEXT 	 equ <'BLUEMAX'>        ; Product Text Title
+@OEM_BASE	 equ <'BLUEMAX'>        ; File name for base device
+@OEM_IOCTL	 equ <'386MAX'>         ; IOCTL name for @OEM_BASE
+@OEM_LOAD	 equ <'386LOAD'>        ; File name for 386LOAD
+@OEM_TEXT	 equ <'386LOAD'>        ; File text for 386LOAD
+@OEM_PROD	 equ @OEMPROD_LOAD	; Product identifier
+
+@DEBUG	 equ	 0		; 1 = debug statements enabled, 0 = disabled
+
+

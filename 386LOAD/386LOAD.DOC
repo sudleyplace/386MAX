@@ -1,0 +1,65 @@
+;' $Header$
+; 386LOAD.DOC Configuration File Documentation
+
+; The format is case-insensitive, free-form, one line per item.
+; Each line is defined as follows:
+
+; Flags Filename.Ext DATE [optional [optional2]]
+
+; where Flags must be one or more of
+; A = Force low load at all times (AUTOEXEC.BAT and children)
+; Bn = Apply rule #n where
+;      0 = Disallow split allocation; force all allocations for this
+;	   program to come out of the largest high DOS region if loading
+;	   itself high via 4B. (date ignored)
+;      1 = Close off low DOS when loading this program high via 386LOAD
+;      2 = Close high DOS when loading this device high via 386LOAD.SYS
+;      3 = If GETSIZE, hook INT 2Fh/4A11/FFFC and tell appropriate lies
+; C = Use COM file stack processing for EXE file; if [optional] is
+;     specified, it contains the minimum size of hole to skip in bytes
+; D = Use top of region as INT 12h value during init (Device Drivers only)
+; E = Force ENVSAVE
+; Fn = Apply fix #n when file is loaded:
+;      0 = kill test for >= A000 (Mitsumi CD-ROM drivers)
+; G = Force low load at all times (CONFIG.SYS only)
+; Hn = Add [optional] decimal value in bytes:
+;      0 = to initialization value
+;      1 = to resident value only when GETSIZE is in effect.  If [optional2]
+;      is specified, add it to initialization value when GETSIZE is in effect.
+;      2 = Ignore optional values, but force NETX rounding of initialization
+;      sizes (next 256 byte boundary + 256 bytes).
+; I = Force instancing
+; K = Disable stacks for this program
+; L = Force low load if busmaster present
+; Mn = Apply rule #n (date ignored) where
+;      0 = Lie to this program about start of high DOS
+;      1 = Return physical address for XMS Lock XMB calls
+;      2 = Don't provide XMS UMBs (use 5800 support instead)
+;      3 = Disable 5800 support when this program loads
+; N = Force NORETRY
+; P = Force recognition of PROTMAN$ driver
+; S = Force GETSIZE value; [optional] has the value
+;     and consists of decimal limit in bytes
+; T = TOPFILL limit for GETSIZE; [optional] has the value
+;     and consists of decimal limit in KB (e.g. 512)
+; Un = Enforce DPMI rule #n where
+;      1 = Enforce DPMI descriptor usage rules
+;      2 = Disallow Mouse Event Interrupts if in DOS and swapping is active
+;      3 = Zero demand-allocated pages
+;      4 = Limit lockable page count to 15MB
+;      5 = Lie about DPMI version # (say it's 0.90)
+;      6 = Skip swapfile for this DPMI client
+;      7 = Lie about availability of DPMI services to this client
+; X = Don't allow program to 4B00/4B01 into high DOS
+
+; Filename.ext consists of the entire filename, including the extension
+; and DATE, and is in the form YY/MM/DD or YY-MM-DD.  Use 00/00/00 if the
+; flags apply to all versions of the file.
+
+; Note that the A and G flags are used only by MAXIMIZE.  The M, I and X
+; flags are read in only when 386MAX.SYS initializes.  Dates specified
+; for the M and X flags are ignored.
+
+; See 386LOAD.CFG for the actual configuration data
+
+

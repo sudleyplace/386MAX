@@ -1,0 +1,44 @@
+Workaround Feature in DRVSPACE.SYS
+
+This program attempts to find a home in high DOS for DBLSPACE.BIN
+which is otherwise floating in the middle of low DOS.  Unfortunately,
+DRVSPACE.SYS behaves differently depending upon whether it's loaded in
+low or high DOS (it compares its CS against A000).
+
+When loaded in low DOS, it returns with an initialization size of 0 as
+it has determined that it can't do any better than the transient
+CONFIG.SYS processor can which is to relocate the DBLSPACE.BIN floater
+at the end of all device drivers.
+
+To get a proper initialization size at 386LOAD.SYS GETSIZE time, we
+hook a particular interrupt call which DRVSPACE.SYS makes down to
+DBLSPACE.BIN to get the latter's resident size.
+
+This call is INT 2Fh/4A11/FFFC.  The value in CX on entry contains the
+# paras in the caller's region and DBLSPACE.BIN checks to see if it
+can fit in this space.
+
+The value in DX is the starting para at which DBPSPACE.BIN can
+relocate itself.
+
+If we recognize this driver (via a new entry in the 386LOAD.CFG file),
+we hook INT 2Fh and look for the above call.  When we encounter this
+call, we setup CX and DX as if the caller had not checked to see in
+its CS was > A000.  On return, we compensate the CX returned by
+DBLSPACE.BIN so that the caller when it adds a couple of registers,
+gets the correct resident size for itself.
+
+386LOAD.DOC	Document new flag.  As far as I could tell, this file
+		  isn't checked in anywhere, so I'm doing it in
+		  386LOAD.
+
+386LOAD.CFG	Define entry for DRVSPACE.SYS
+
+DRVCOM.ASM	When calling any driver, see if we should hook INT
+		  2Fh, and unhook it afterwards.
+		Define routines to hook and unhook INT 2Fh as well as
+		  the INT 2Fh handler itself.
+
+LOADCOM.ASM	Parse B3 flag and set flag if found.
+
+

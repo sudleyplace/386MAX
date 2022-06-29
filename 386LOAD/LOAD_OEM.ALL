@@ -1,0 +1,9 @@
+;' $Header:   P:/PVCS/MAX/386LOAD/LOAD_OEM.ALV   1.0   05 Sep 1995 14:48:06   HENRY  $
+
+; @OEMPROD_xxx equates
+
+@OEMPROD_LOAD	 equ	0	; 386LOAD
+@OEMPROD_MOVE	 equ	1	; MOVE'EM
+@OEMPROD_SIMU	 equ	2	; SIMULOAD
+
+

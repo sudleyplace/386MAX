@@ -1,0 +1,34 @@
+Distinguish Between MS-DOS 7 and PC-DOS 7
+
+Previously, we ran into trouble on MS-DOS 7 systems where Win95
+changed the allowable minimum and maximum bytes-per-sector values, and
+thus our RAM disk wasn't recognized under Win95.  Because I didn't
+have a way to distinguish MS- and PC-DOS systems, I used the new
+values for both on the theory that therer are more MS-DOS than PC-DOS
+systems out there.  Now, I've found a way to tell them apart.
+
+A little known (to me, at least) feature of the DOS Get Version
+(AH=30h) call is that it takes a subfunction in AL which when AL=0,
+returns the DOS OEM number in BH.  Pleasantly, both IBM and Microsoft
+have entries in this table (found in Ralf Brown's interrupt list) and
+the entries are different (and appropriately polarized at 00 and FF,
+respectively).
+
+The only remaining issue is what to do with all of the other OEM
+numbers.  For these, I propose to check for IBM or not IBM only on the
+theory that if there are non-IBM DOS 7s out there, they are more
+likely to be based on the Microsoft code than the IBM code.
+
+At the same time, I converted MAKEFILE over to use the VERSRET.ASM
+from the 386MAX project so it now tracks that product's version
+number.  This is then one fewer file we need to remember to change for
+new versions.
+
+MAKEFILE	Use VERSRET.ASM from the 386MAX project for version #.
+
+DOSOEM.INC	New file with all of the known DOS OEM numbers.
+
+QDISK_IN.ASM	Save DOS OEM number.
+		Check for it.
+
+

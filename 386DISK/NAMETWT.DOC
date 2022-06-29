@@ -1,0 +1,57 @@
+*   Change names from 386Max to Qualitas Max.
+
+ Description: Changed names from 386Max to Qualitas Max where appropriate.
+     also changed current copyright dates to 19xx-95. 
+ Who: PETERJ
+ When: 25 Oct. 95
+ SW/HW Environment: All
+ Symptom:nab
+ Temporary Workaround:nab
+ Test Procedure:
+ QA Testing Passed:
+ Version: Beta Build 10 
+          386load 8.0.10.3,  Max 8.0.10.1,  MemLimit 1.19,   
+          QPopup  8.0.10.5,  Romsrch 8.0.10.2,  Xlat 104.0.0.5,   
+
+Files affected:     All are name changes.
+
+INCLUDE\LIBTEXT.H
+
+386DISK\QDSK@RET.OEM
+
+386DISK\QDISK_IN.ASM
+
+386LOAD\VERSBETA.ASM
+
+386LOAD\LOAD@BET.OEM
+
+386LOAD\LOAD@BLB.OEM
+
+386LOAD\LOAD@BLU.OEM
+
+386LOAD\LOAD@REB.OEM
+
+386LOAD\LOAD@RET.OEM
+
+386LOAD\LOADMSGS.ASM
+
+MAX\VERSBETA.ASM
+
+MAX\QSHTEXT.H
+
+MEMLIMIT\VERSION.ASM
+
+MEMLIMIT\MEMLIMIT.ASM
+
+QPOPUP\QPOPUP.RC
+
+QPOPUP\QPOPUP.VER
+
+ROMSRCH\PROBE.ASM
+
+ROMSRCH\VERSION.ASM
+
+XLAT\VERSION.ASM
+
+XLAT\XLAT.ASM
+

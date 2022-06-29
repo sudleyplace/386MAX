@@ -1,0 +1,101 @@
+#
+# Makefile for 386disk
+#
+#
+#' $Header:   P:/PVCS/MAX/386DISK/MAKEFILE.__V   1.7   30 May 1997 12:56:42   BOB  $
+#
+
+!include $(MAXROOT)include\maxnames.mak
+
+SYSNAME=386DISK 	# name part of file to build
+ASMOPT=/zd		# assembler options - these don't seem to get used
+OEM=RET 		# default OEM extension
+BIN=$(OEM)\		# where to put binaries
+BINDIR=$(MAXROOT)lib	# Default destination for binaries
+BD=$(BINDIR)\		# Destination
+O=$(OEM)\		# OEM-specific .OBJ's and temporary .INC's
+
+# default MASM /I arguments (include path)
+ALLINC=$(O) /I$(I) /I$(Q)
+
+# default MASM options
+MOPT=/I. /I$(ALLINC) $(ASMOPT) /DLANG_$(LANG) /mu/p/r/t/w1
+
+# Define macro LSTMAC so that we can tack it onto the end of ANY
+# masm command line, whether it is defined or empty.
+!IFDEF LST
+LSTMAC=,$(LST)\$(@B)
+!ELSE
+LSTMAC=
+!ENDIF
+
+!IF "$(LNKCMD)" == ""
+LD=link
+!ELSE
+LD=$(LNKCMD)
+!ENDIF
+
+# Define rules for assembling .ASM in current dir to .OBJ in OEM dir
+.asm{$(O)}.obj:
+	 masm $(@B) $(MOPT), $(O)$(@B) $(LSTMAC);
+	 @dispobj $*/w
+
+{$(Q)}.asm{$(O)}.obj:
+	 masm %s $(MOPT), $(O)$(@B) $(LSTMAC);
+
+# Everything that pertains to this project...
+ALL:	DIR		$(BIN)$(SYSNAME).SYS	$(BD)386disk.sys
+
+DEL:
+	-rm $(O)*.*
+
+DIR:
+	vdir -c $(O)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\386disk\*
+VCSDIR = P:\PVCS\MAX\386disk\*
+ALIAS ALL P:\PVCS\MAX\386disk\*.*,p:\pvcs\max\386disk\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+DEPSCAN: makefile
+	depscan -s$(O)=$$(O) *.asm $(Q)versret.asm >diskdep.inc
+
+makefile: diskdep.inc
+
+!include diskdep.inc
+
+$(BIN)$(SYSNAME).SYS:  \
+		$(O)QDISK.OBJ	$(O)QDISK_IN.OBJ	$(O)VERSRET.OBJ
+	 $(LD) @<<$(O)$(SYSNAME).ARF
+		$(O)qdisk+
+		$(O)qdisk_in+
+		$(O)versret
+		$*
+		$*
+		/line/map
+
+<<KEEP
+	mapssf -t$* $*
+	exe2bin $* $*.sys
+	del $*.exe
+
+$(BD)386disk.sys: $(BIN)$(SYSNAME).sys
+	xc /r	$(**R).SSF $*.*
+	xc /r	$(**R).SYS $*.*
+	xc /r	$(**R).MAP $*.*
+
+$(O)QDISK_IN.OBJ:	 QDISK_IN.ASM	$(QDISK_IN_ADEP)
+
+$(O)QDISK.OBJ:	 QDISK.ASM	$(QDISK_ADEP)
+
+$(O)QDSK_OEM.INC:	QDSK@$(OEM).OEM
+	 xc /a/n QDSK@$(OEM).oem $*.INC
+
+$(O)VERSRET.OBJ:	$(Q)VERSRET.ASM $(VERSRET_ADEP)
+
+
