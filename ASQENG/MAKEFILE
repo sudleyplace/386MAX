@@ -1,0 +1,168 @@
+#
+# Makefile for all models of Qualitas Interface Engine
+#
+# $Header:   P:/PVCS/MAX/ASQENG/MAKEFILE.__V   1.6   30 May 1997 14:58:40   BOB  $
+#
+
+!include $(MAXROOT)include\maxnames.mak
+
+DEBUG = 0
+MODEL=L 			# Default to large model
+U=$(MAXROOT)quilib\$(MODEL)r\	# Directory for .OBJ and .LIB files
+E=$(MODEL)r\			# Directory for our .OBJ files
+L=$(MAXROOT)lib\		# Where to copy .LIB files
+OLDINC=$(INCLUDE)		# Old INCLUDE value
+ALLINC=$(E);$(I);$(H);$(Q);$(INCLUDE) # Search path for .C and .ASM translation
+PROJ = $(MODEL)enginer		# Name of target
+DISPOBJ=0			# Turn off dispobj
+
+!IF "$(MODEL)" == "S"   # Determine MASM model flag
+AMODEL=0
+!ELSE
+!IF "$(MODEL)" == "M"
+AMODEL=1
+!ELSE
+!IF "$(MODEL)" == "C"
+AMODEL=2
+!ELSE
+!IF "$(MODEL)" == "L"
+AMODEL=3
+!ELSE
+!ERROR Model must be S, M, C, or L
+!ENDIF
+!ENDIF
+!ENDIF
+!ENDIF
+
+!IF "$(LST)" == ""
+LSTMAC=
+!ELSE
+LSTMAC=,$(LST)\$(@B)
+!ENDIF
+
+COPT=/Oslgec
+CFLAGS_G=/A$(MODEL) /DDOS_VERSION /DLANG_$(LANG) /Gs $(COPT) /W3 /Z7 /BATCH
+ASM=masm
+AFLAGS_G=/DMODEL=$(AMODEL) /DLANG_$(LANG) /Mx /T /Zd
+LINKER=$(LD)
+LFLAGS_G=/NOI /BATCH /FAR /PACKC
+
+!IF $(DEBUG)
+CFLAGS_G=$(CFLAGS_G) /DCVDBG
+LFLAGS_G=/CO $(LFLAGS_G)
+!ELSE
+LFLAGS_G=/EXE $(LFLAGS_G)
+!ENDIF
+
+LBF  = echo > NUL
+
+# Implicit translation rules
+.c{$(E)}.obj:
+	set INCLUDE=$(ALLINC)
+	$(CC) /c $(CFLAGS_G) /Fo$*.obj $<
+	set INCLUDE=$(OLDINC)
+
+.asm{$(E)}.obj:
+	set INCLUDE=$(ALLINC)
+	$(ASM) $(AFLAGS_G) $<, $*.obj $(LSTMAC);
+	set INCLUDE=$(OLDINC)
+!IF $(DISPOBJ)
+	@dispobj $*/w
+!ENDIF
+
+OBJS=	$(E)ADF.obj	 $(E)BIOSID.obj 	 $(E)CFG_INFO.obj	\
+	$(E)CPUTEXT.obj  $(E)ENGINE.obj 	 $(E)GLIST.obj		\
+	$(E)HDW_INFO.obj $(E)INFO.obj		 $(E)MAPINFO.obj	\
+			 $(E)MEM_INFO.obj	 $(E)MULTIME.obj	\
+	$(E)PROFILE.obj  $(E)QTAS.obj		 $(E)QTAS_MAC.obj	\
+	$(E)READSYS.obj  $(E)SYSBUF.obj 	 $(E)SYSINFO.obj	\
+	$(E)TESTMEM.obj  $(E)TIMER.obj		 $(E)WRITSYS.obj	\
+	$(E)XMSINFO.obj  $(E)FLEXROMS.obj	 $(E)BUSINFO.obj
+
+ALL:	DIR		$(OBJS) 	$(E)$(PROJ).lib 	$(L)$(PROJ).lib
+
+DEL:
+	-rm $(E)*.*
+
+DIR:
+	vdir -c $(E)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\asqeng\*
+VCSDIR = P:\PVCS\MAX\asqeng\*
+ALIAS ALL P:\PVCS\MAX\asqeng\*.*,p:\pvcs\max\asqeng\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+DEPSCAN: makefile
+	depscan *.c *.cpp *.asm >asqeng.inc
+
+makefile:	asqeng.inc $(H)makefile.inc
+
+!include asqeng.inc
+!INCLUDE $(H)makefile.inc
+
+$(L)$(PROJ).lib: $(E)$(PROJ).lib
+	xc /r $? $@
+
+$(E)ADF.obj:		 ADF.C		$(ADF_DEP)
+
+$(E)BIOSID.obj: 	 BIOSID.ASM	$(BIOSID_ADEP)
+
+$(E)BUSINFO.obj:	 BUSINFO.ASM	$(BUSINFO_ADEP)
+
+$(E)CFG_INFO.obj:	 CFG_INFO.C	$(CFG_INFO_DEP)
+
+$(E)CPUTEXT.obj:	 CPUTEXT.C	$(CPUTEXT_DEP)
+
+$(E)ENGINE.obj: 	 ENGINE.C	$(ENGINE_DEP)
+
+$(E)Flexroms.obj:	 flexroms.asm	$(FLEXROMS_ADEP)
+
+$(E)GLIST.obj:		 GLIST.C	$(GLIST_DEP)
+
+$(E)HDW_INFO.obj:	 HDW_INFO.C	$(HDW_INFO_DEP)
+
+$(E)INFO.obj:		 INFO.C 	$(INFO_DEP)
+
+$(E)MAPINFO.obj:	 MAPINFO.C	$(MAPINFO_DEP)
+
+$(E)MEM_INFO.obj:	 MEM_INFO.C	$(MEM_INFO_DEP)
+
+$(E)MULTIME.obj:	 MULTIME.ASM	$(MULTIME_ADEP)
+
+$(E)PROFILE.obj:	 PROFILE.C	$(PROFILE_DEP)
+
+$(E)QTAS.obj:		 QTAS.C 	$(QTAS_DEP)
+
+$(E)QTAS_MAC.obj:	 QTAS_MAC.ASM	$(QTAS_MAC_ADEP)
+
+$(E)READSYS.obj:	 READSYS.C	$(READSYS_DEP)
+
+$(E)SYSBUF.obj: 	 SYSBUF.C	$(SYSBUF_DEP)
+
+$(E)SYSINFO.obj:	 SYSINFO.C	$(SYSINFO_DEP)
+
+$(E)TESTMEM.obj:	 TESTMEM.ASM	$(TESTMEM_ADEP)
+
+$(E)TIMER.obj:		 TIMER.ASM	$(TIMER_ADEP)
+
+$(E)WRITSYS.obj:	 WRITSYS.C	$(WRITSYS_DEP)
+
+$(E)XMSINFO.obj:	 XMSINFO.ASM	$(XMSINFO_ADEP)
+
+
+$(E)$(PROJ).lib : $(OBJS)	makefile
+	$(LBF) @<<$(E)$(PROJ).lbf
+$(RT_OBJS: = &^
+) $(OBJS: = &^
+)
+;
+<<
+	if exist $(E)$(PROJ).lib del $(E)$(PROJ).lib
+	$(LIBUTIL) $(E)$(PROJ).lib @$(E)$(PROJ).lbf
+
+
