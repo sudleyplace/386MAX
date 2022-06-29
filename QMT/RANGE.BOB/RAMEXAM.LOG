@@ -1,0 +1,17 @@
+
+RAMexam was executed on 7/9/2001 at 5:15 PM with the following
+options: RANGE ADV HEX
+
+The following memory ranges were tested:
+
+048576K -1049600K (40000000-40100000)   1024K
+
+Dword mismatch at 40000000; expected 00000000, actual FFFFFFFF, 0 - Stuck-At Fault test.
+      1 memory error(s).
+
+     Test Times       #         Test Names
+------------------------------------------------
+17:15:07 to 17:15:07, 0 - Stuck-At Fault test.
+
+       Error Ranges       
+--------------------------
