@@ -1,0 +1,20 @@
+		ret\parser.obj	ret\cmds.obj	+
+ret\expand.obj+
+	+
+ret\eval.obj	ret\dircmds.obj+
++
+ret\filecmds.obj	+
+ret\syscmds.obj+
+ret\misc.obj	+
+ret\env.obj		+
+ret\batch.obj	ret\error.obj	+
+ret\screenio.obj	+
+ret\input.obj	ret\output.obj	+
+ret\lines.obj		+
+ret\_file.obj		ret\baterrs.obj+
+ret\batutil.obj+
++
+ret\exec.obj
+		ret\batproc
+		ret\batproc /map /line /nod /noe /st:4096 /cp:0x300
+		slibce oldnames ;

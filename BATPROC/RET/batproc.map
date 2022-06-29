@@ -1,0 +1,2120 @@
+Stack Allocation = 4096 bytes
+
+ Start  Stop   Length Name                   Class
+ 00000H 0C072H 0C073H _TEXT                  CODE
+ 0C080H 0C081H 00002H EMULATOR_TEXT          CODE
+ 0C082H 0C082H 00000H C_ETEXT                ENDCODE
+ 0C090H 0C090H 00000H EMULATOR_DATA          FAR_DATA
+ 0C090H 0DA17H 01988H _DATA                  DATA
+ 0DA18H 0DA19H 00002H XIQC                   DATA
+ 0DA1AH 0DA25H 0000CH DBDATA                 DATA
+ 0DA26H 0DA33H 0000EH CDATA                  DATA
+ 0DA34H 0DA34H 00000H XIFB                   DATA
+ 0DA34H 0DA34H 00000H XIF                    DATA
+ 0DA34H 0DA34H 00000H XIFE                   DATA
+ 0DA34H 0DA34H 00000H XIB                    DATA
+ 0DA34H 0DA34H 00000H XI                     DATA
+ 0DA34H 0DA34H 00000H XIE                    DATA
+ 0DA34H 0DA34H 00000H XPB                    DATA
+ 0DA34H 0DA34H 00000H XP                     DATA
+ 0DA34H 0DA34H 00000H XPE                    DATA
+ 0DA34H 0DA34H 00000H XCB                    DATA
+ 0DA34H 0DA34H 00000H XC                     DATA
+ 0DA34H 0DA34H 00000H XCE                    DATA
+ 0DA34H 0DA34H 00000H XCFB                   DATA
+ 0DA34H 0DA34H 00000H XCFCRT                 DATA
+ 0DA34H 0DA34H 00000H XCF                    DATA
+ 0DA34H 0DA34H 00000H XCFE                   DATA
+ 0DA34H 0DA34H 00000H XIFCB                  DATA
+ 0DA34H 0DA34H 00000H XIFU                   DATA
+ 0DA34H 0DA34H 00000H XIFL                   DATA
+ 0DA34H 0DA34H 00000H XIFM                   DATA
+ 0DA34H 0DA34H 00000H XIFCE                  DATA
+ 0DA34H 0DA34H 00000H CONST                  CONST
+ 0DA34H 0DA3BH 00008H HDR                    MSG
+ 0DA3CH 0DAECH 000B1H MSG                    MSG
+ 0DAEDH 0DAEEH 00002H PAD                    MSG
+ 0DAEFH 0DAEFH 00001H EPAD                   MSG
+ 0DAF0H 0E515H 00A26H _BSS                   BSS
+ 0E516H 0E516H 00000H XOB                    BSS
+ 0E516H 0E516H 00000H XO                     BSS
+ 0E516H 0E516H 00000H XOE                    BSS
+ 0E516H 0E516H 00000H XOFB                   BSS
+ 0E516H 0E516H 00000H XOF                    BSS
+ 0E516H 0E516H 00000H XOFE                   BSS
+ 0E520H 0E851H 00332H c_common               BSS
+ 0E860H 0F85FH 01000H STACK                  STACK
+
+ Origin   Group
+ 0C09:0   DGROUP
+ 0000:0   CGROUP
+
+  Address         Publics by Name
+
+ 0000:7196       ADDENV
+ 0000:1C70       ALIAS_EXPAND
+ 0000:A162       BP_DONE
+ 0000:628A       COLLAPSE_WHITESPACE
+ 0000:6A24       COMMA
+ 0000:06E8       COMMAND
+ 0000:6494       COPY_FILENAME
+ 0000:6912       DATE_FMT
+ 0000:9F34       DOSBEEP
+ 0000:60FC       DOSFREE
+ 0000:6124       DOSMALLOC
+ 0000:6182       DOSREALLOC
+ 0000:520E       DRIVE
+ 0000:186A       DUP_HANDLE
+ 0000:89E6       EGETS
+ 0000:733A       END_OF_ENV
+ 0000:7108       ENVGET
+ 0000:9D9B       ERRFIND
+ 0000:9D88       ERRMSGA
+ 0000:9D73       ERRMSGC
+ 0000:88A6       ERROR
+ 0000:281C       ESCAPE_CHARS
+ 0000:2C64       EVALUATE
+ 0000:A535       EXEC
+ 0000:6450       EXT_PART
+ 0000:62E6       FILECASE
+ 0000:17EE       FINDCMD
+ 0000:67A0       FIND_FILE
+ 0000:287E       FIRST_ARG
+ 0000:63EC       FNAME_PART
+ 0000:3658       FSTRCMP
+ 0000:6306       GCDIR
+ 0000:6368       GCDISK
+ 0000:5DA0       GDATE
+ 0000:698E       GETKEY
+ 0000:5530       GETLABEL
+ 0000:8D2E       GET_ATTRIBUTE
+ 0000:9DDC       GET_EXPANDED
+ 0000:9ED2       GET_XMS
+ 0000:5DE0       GTIME
+ 0000:8200       IFF_PARSING
+ 0000:3A00       INCLUDE_LIST
+ 0000:8C3C       INCR_COLUMN
+ 0C09:164D       INFO_CTL
+ 0000:12F2       INSERT_BATCH
+ 0000:6678       INSERT_PATH
+ 0000:A2AD       INT21
+ 0000:A2ED       INT21PSP
+ 0000:A2CF       INT27
+ 0000:A2F2       INT27PSP
+ 0000:6246       ISDELIM
+ 0000:674C       IS_DEV
+ 0000:66C6       IS_DIR
+ 0000:66A4       IS_FILE
+ 0000:1886       KILLPIPES
+ 0C09:16B6       LSEG_LIST
+ 0C09:16B4       LSEG_PARA
+ 0C09:1649       MAXHNDL
+ 0C09:164E       MAXINFO
+ 0C09:1637       MAXNAME
+ 0000:64AA       MKDIRNAME
+ 0000:64F0       MKFNAME
+ 0000:6AD8       MORE
+ 0C09:164B       MOVEM
+ 0C09:1640       MOVNAME
+ 0000:731A       NEXT_ENV
+ 0000:2890       NTHARG
+ 0000:A15A       OLDINT21
+ 0000:A15E       OLDINT27
+ 0000:1B72       OPEN_PIPE
+ 0000:0DDE       PARSE_LINE
+ 0000:6392       PATH_PART
+ 0000:A2ED       PSP_ENTRY
+ 0000:A093       QPRINT
+ 0000:93E6       QPUTC
+ 0000:93AC       QPUTS
+ 0000:93CA       QPUTSLF
+ 0000:9FEC       READ_CHAR
+ 0000:18B0       REDIR
+ 0000:2918       SCAN
+ 0000:9FAE       SCREEN
+ 0000:6C3C       SEARCHPATHS
+ 0000:8C86       SETCURSOR
+ 0000:6B5E       SET_COLORS
+ 0000:4E96       SHOW_ATTS
+ 0000:626C       SKIPSPACE
+ 0000:3B3C       SRCH_DIR
+ 0000:6A66       STRINS
+ 0000:61CC       SWITCH_ARG
+ 0000:1AC4       UNREDIR
+ 0000:8838       USAGE
+ 0000:1EB6       VAR_EXPAND
+ 0000:97F2       VERIFY_ROW_COL
+ 0000:9FC1       WINDOW
+ 0000:A017       WRITE_CHAR
+ 0000:69CA       YESNO
+ 0C09:0010       _alias_flag
+ 0C09:2494       _alias_list
+ 0C09:2492       _alias_size
+ 0000:A9EE       _atoi
+ 0000:A9F2       _atol
+ 0000:4CE8       _attrib
+ 0C09:001C       _AUTOSTART
+ 0C09:0FC4       _BACK_QUOTE
+ 0000:7358       _batch
+ 0000:03A4       _batchcli
+ 0C09:0012       _batecho
+ 0000:804E       _battext
+ 0000:80E4       _beep
+ 0C09:256E       _bframe
+ 0000:9DBA       _bios_key
+ 0C09:0004       _bn
+ 0000:0010       _break_handler
+ 0000:51EE       _bye
+ 0C09:250E       _b_name
+ 0000:7504       _call
+ 0000:523E       _cd
+ 0000:5308       _cdd
+ 0C09:255C       _cfgdos
+ 0000:5FF6       _chcp
+ 0000:05AE       _close_batch_file
+ 0000:8916       _cls
+ 0000:57A0       _color
+ 0C09:10D0       _colors
+ 0C09:0552       _commands
+ 0000:3D1C       _copy
+ 0C09:2512       _country_info
+ 0000:696A       _crlf
+ 0C09:0006       _ctrlc_flag
+ 0000:6076       _ctty
+ 0C09:0008       _ctty_flag
+ 0C09:2510       _cur_disk
+ 0C09:10AA       _dateformat
+ 0C09:1038       _daytbl
+ 0000:A34A       _deinit_tsr
+ 0000:4B34       _del
+ 0000:8132       _delay
+ 0C09:0FC6       _DELIMS
+ 0000:3D18       _describe
+ 0000:581C       _df
+ 0000:2CFC       _dir
+ 0000:5476       _dirs
+ 0000:60F0       _disk_reset
+ 0000:9480       _drawbox
+ 0000:93FE       _drawline
+ 0000:16F0       _dump_cmdinfo
+ 0000:75A4       _echo
+ 0C09:1A60       _edata
+ 0C09:001A       _else_flag
+ 0C09:27D0       _end
+ 0C09:0019       _endiff_flag
+ 0000:86CC       _endlocal
+ 0C09:249C       _env
+ 0C09:2490       _environment
+ 0C09:2534       _env_seg
+ 0C09:249A       _env_size
+ 0C09:17F4       _errno
+ 0C09:0002       _error_level
+ 0000:7020       _eset
+ 0000:5BFE       _except
+ 0C09:0FEC       _executables
+ 0000:A864       _exit
+ 0000:0F04       _external
+ 0C09:2502       _far_env
+ 0C09:0000       _flag_4dos
+ 0000:7636       _forcmd
+ 0C09:0014       _for_flag
+ 0C09:0DAA       _for_var
+ 0000:68EC       _getcountry
+ 0000:8CEC       _getcursor
+ 0000:05D6       _getline
+ 0000:9E0F       _get_cpu
+ 0000:9EB6       _get_extended
+ 0000:9E54       _get_ndp
+ 0000:9DCC       _get_switchar
+ 0000:A032       _get_video
+ 0000:5A20       _global
+ 0000:8180       _gosub
+ 0000:78BC       _gotocmd
+ 0000:287A       _hist
+ 0C09:27BE       _histlist
+ 0000:6976       _honk
+ 0C09:073C       _Hptr
+ 0000:79BC       _ifcmd
+ 0C09:0018       _iff_flag
+ 0C09:0016       _if_flag
+ 0000:17D4       _init_4dos_cmds
+ 0000:2CD4       _init_dir
+ 0000:14FA       _init_env
+ 0000:A2F7       _init_tsr
+ 0000:82E2       _inkey_input
+ 0000:0D82       _input_cmp
+ 0C09:24B0       _input_file
+ 0C09:2536       _input_files
+ 0C09:137C       _int_batproc_errors
+ 0C09:2498       _i_cmd_name
+ 0000:843E       _keystack
+ 0000:5D98       _list
+ 0000:84CA       _loadbtm
+ 0C09:2558       _loadhigh
+ 0000:5A1C       _log
+ 0C09:000A       _log_flag
+ 0000:AC7D       _longjmp
+ 0000:003C       _main
+ 0000:52CC       _md
+ 0000:ABEA       _memmove
+ 0000:579C       _memory
+ 0000:AC32       _memset
+ 0C09:1076       _montbl
+ 0000:4240       _mv
+ 0000:A231       _new_umbs
+ 0C09:2496       _nthptr
+ 0C09:0FBE       _NULLSTR
+ 0C09:0FB6       _OFF
+ 0C09:0FB2       _ON
+ 0000:0510       _open_batch_file
+ 0000:1698       _OurStrdup
+ 0C09:255A       _page_length
+ 0000:561C       _path
+ 0000:8784       _pause
+ 0000:53EE       _popd
+ 0000:A163       _previous_umb
+ 0C09:27C0       _prev_umb
+ 0000:0A98       _process_cmd
+ 0000:568C       _prompt
+ 0C09:24AE       _psp_master
+ 0000:5356       _pushd
+ 0000:9382       _qprintf
+ 0000:84CE       _quit
+ 0C09:0FC0       _QUOTES
+ 0000:5496       _rd
+ 0000:87C2       _remark
+ 0000:AE3A       _remove
+ 0000:4938       _ren
+ 0000:AE26       _rename
+ 0000:8516       _ret
+ 0000:8542       _scr
+ 0000:8C70       _screencols
+ 0000:8C4C       _screenrows
+ 0000:85A2       _scrput
+ 0000:5D94       _select
+ 0000:6DE0       _set
+ 0000:A395       _set24
+ 0000:569E       _setbreak
+ 0000:5E18       _setdate
+ 0000:5820       _setdos
+ 0000:8614       _setlocal
+ 0000:5F08       _settime
+ 0000:87C6       _shift
+ 0000:ACA4       _signal
+ 0C09:2506       _sortseq
+ 0000:936A       _sprintf
+ 0000:9092       _sscanf
+ 0C09:1982       _STKHQQ
+ 0000:A92E       _strcat
+ 0000:A9F6       _strchr
+ 0000:A96E       _strcpy
+ 0000:A9A0       _strlen
+ 0000:A9BC       _strncat
+ 0000:AA48       _strpbrk
+ 0000:AA20       _strrchr
+ 0000:AAA0       _strspn
+ 0000:AB8A       _strstr
+ 0000:AAFA       _strtok
+ 0000:5A18       _swap
+ 0000:50D4       _tee
+ 0000:5D9C       _timer
+ 0000:6AA4       _toupper
+ 0C09:000C       _tsrflag
+ 0000:4EE2       _type
+ 0C09:000E       _umbflag
+ 0000:6F72       _unset
+ 0000:51F2       _ver
+ 0C09:001B       _verbose
+ 0000:5720       _verify
+ 0C09:1010       _video_type
+ 0000:55DE       _volume
+ 0C09:0FBA       _WILD_FILE
+ 0000:5080       _y
+ 0C09:1980       __aaltstkovr
+ 0C09:17D8       __acfinfo
+ 0000:9876  Abs  __acrtmsg
+ 0000:9876  Abs  __acrtused
+ 0000:D6D6  Abs  __aDBdoswp
+ 0C09:194E       __adbgmsg
+ 0C09:17BA       __aexit_rtn
+ 0000:B6BA       __aFahdiff
+ 0000:1000  Abs  __AHINCR
+ 0000:000C  Abs  __AHSHIFT
+ 0C09:17E6       __aintdiv
+ 0000:BE84       __alloca
+ 0C09:197C       __amblksiz
+ 0000:A767       __amsg_exit
+ 0000:BFEA       __aNchkstk
+ 0000:B058       __aNldiv
+ 0000:B0F2       __aNlmul
+ 0000:B6E6       __aNlrem
+ 0000:B124       __aNlshl
+ 0000:B130       __aNlshr
+ 0000:B13C       __aNNaldiv
+ 0000:B15C       __aNNalmul
+ 0000:B17C       __aNNalrem
+ 0000:B19C       __aNNalshl
+ 0000:B15C       __aNNaulmul
+ 0000:B1B8       __aNuldiv
+ 0000:B0F2       __aNulmul
+ 0C09:17D2       __aseghi
+ 0C09:17D4       __aseglo
+ 0C09:17BC       __asizds
+ 0C09:197A       __asizeC
+ 0C09:197B       __asizeD
+ 0000:A696       __astart
+ 0C09:17B8       __atopsp
+ 0000:B666       __catox
+ 0000:5288       __CD
+ 0000:A873       __cexit
+ 0C09:1968       __cfltcvt_tab
+ 0000:00FF  Abs  __charmax
+ 0C09:197E       __chbuf
+ 0000:BFB5       __chdir
+ 0000:AE0A       __chdrive
+ 0C09:1825       __child
+ 0000:BFEA       __chkstk
+ 0000:A792       __cinit
+ 0000:A758       __cintDIV
+ 0000:B924       __close
+ 0000:C014       __cltoasub
+ 0C09:1801       __cpumode
+ 0C09:1932       __csigtab0
+ 0000:A8F2       __ctermsub
+ 0C09:182E       __ctype
+ 0C09:182E       __ctype_
+ 0000:BB71       __cXENIXtoDOSmode
+ 0000:C020       __cxtoa
+ 0000:A87D       __c_exit
+ 0000:A790       __dataseg
+ 0C09:1802       __doserrno
+ 0000:B5B2       __dosret0
+ 0000:B5C7       __dosretax
+ 0000:B5BA       __dosreturn
+ 0000:AE48       __dos_allocmem
+ 0000:AE60       __dos_close
+ 0000:AE75       __dos_creat
+ 0000:AE6E       __dos_creatnew
+ 0000:AEA3       __dos_findfirst
+ 0000:AE98       __dos_findnext
+ 0000:AFB4       __dos_freemem
+ 0000:AFC2       __dos_getdate
+ 0000:AF88       __dos_getdiskfree
+ 0000:AED6       __dos_getfileattr
+ 0000:AEEC       __dos_getftime
+ 0000:AFDC       __dos_gettime
+ 0000:AF06       __dos_keep
+ 0000:AF1A       __dos_open
+ 0000:AF32       __dos_read
+ 0000:AFF6       __dos_setblock
+ 0000:B010       __dos_setdate
+ 0000:AF62       __dos_setfileattr
+ 0000:AF74       __dos_setftime
+ 0000:B032       __dos_settime
+ 0000:AF39       __dos_write
+ 0000:BE24       __dup
+ 0000:BE5C       __dup2
+ 0C09:1A60       __edata
+ 0C08:0000       __EmDataSeg
+ 0C09:27D0       __end
+ 0C09:181E       __environ
+ 0000:A86B       __exit
+ 0C09:182D       __exitflag
+ 0C09:17EA       __fac
+ 0000:B608       __farstub
+ 0C09:17D6       __fDosExt
+ 0000:B324       __FF_MSGBANNER
+ 0000:B903       __findlast
+ 0000:B218       __fmemchr
+ 0000:B25A       __fmemmove
+ 0C09:1984       __fmode
+ 0C09:1998       __fpinit
+ 0000:B344       __fptrap
+ 0000:BDFC       __getch
+ 0000:BDF8       __getche
+ 0000:AE02       __getdrive
+ 0000:B826       __growseg
+ 0000:B8B2       __incseg
+ 0C09:1828       __intno
+ 0C09:14D6       __iob2
+ 0C09:1984       __iomode
+ 0000:BDBE       __isatty
+ 0000:BDD6       __kbhit
+ 0000:B944       __lseek
+ 0C09:1986       __lseekchk
+ 0000:BDAA       __ltoa
+ 0000:B5D4       __maperror
+ 0000:BFAE       __mkdir
+ 0000:B786       __myalloc
+ 0C09:1804       __nfile
+ 0000:B60A       __nfree
+ 0C09:17BE       __nheap_desc
+ 0000:B62B       __nmalloc
+ 0000:B552       __NMSG_TEXT
+ 0000:B57D       __NMSG_WRITE
+ 0000:60EC       __nullcheck
+ 0000:3634       __nxtrow
+ 0000:B9E0       __open
+ 0C09:1802       __oserr
+ 0C09:1806       __osfile
+ 0C09:17FD       __osmajor
+ 0C09:17FC       __osminor
+ 0C09:1800       __osmode
+ 0C09:17FC       __osver
+ 0C09:17FE       __osversion
+ 0C09:1827       __ovlflag
+ 0C09:1829       __ovlvec
+ 0000:363A       __page_break
+ 0C09:1820       __pgmptr
+ 0C09:1966       __pnhNearHeap
+ 0C09:17FA       __psp
+ 0C09:17F8       __pspadr
+ 0000:BB82       __read
+ 0000:BFC2       __rmdir
+ 0000:B7AA       __searchseg
+ 0000:B34A       __setargv
+ 0000:B4D4       __setenvp
+ 0000:AC60       __setjmp
+ 0000:AD41       __sigentry
+ 0C09:1978       __sigintoff
+ 0C09:1976       __sigintseg
+ 0000:B9C6       __sopen
+ 0000:C002       __stackavail
+ 0000:BEB6       __strcmpi
+ 0000:BEF8       __strdup
+ 0000:BEB6       __stricmp
+ 0000:BF72       __strlwr
+ 0000:BF1A       __strnicmp
+ 0000:BF90       __strupr
+ 0000:BDB4       __ultoa
+ 0C09:17F6       __umaskval
+ 0000:AE3A       __unlink
+ 0000:BC6C       __write
+ 0C09:1990       ___aDBexit
+ 0C09:198E       ___aDBrterr
+ 0C09:198C       ___aDBswpchk
+ 0C09:198A       ___aDBswpflg
+ 0C09:181A       ___argc
+ 0C09:181C       ___argv
+ 0C09:1988       ___qczrinit
+
+  Address         Publics by Value
+
+ 0000:000C  Abs  __AHSHIFT
+ 0000:0010       _break_handler
+ 0000:003C       _main
+ 0000:00FF  Abs  __charmax
+ 0000:03A4       _batchcli
+ 0000:0510       _open_batch_file
+ 0000:05AE       _close_batch_file
+ 0000:05D6       _getline
+ 0000:06E8       COMMAND
+ 0000:0A98       _process_cmd
+ 0000:0D82       _input_cmp
+ 0000:0DDE       PARSE_LINE
+ 0000:0F04       _external
+ 0000:1000  Abs  __AHINCR
+ 0000:12F2       INSERT_BATCH
+ 0000:14FA       _init_env
+ 0000:1698       _OurStrdup
+ 0000:16F0       _dump_cmdinfo
+ 0000:17D4       _init_4dos_cmds
+ 0000:17EE       FINDCMD
+ 0000:186A       DUP_HANDLE
+ 0000:1886       KILLPIPES
+ 0000:18B0       REDIR
+ 0000:1AC4       UNREDIR
+ 0000:1B72       OPEN_PIPE
+ 0000:1C70       ALIAS_EXPAND
+ 0000:1EB6       VAR_EXPAND
+ 0000:281C       ESCAPE_CHARS
+ 0000:287A       _hist
+ 0000:287E       FIRST_ARG
+ 0000:2890       NTHARG
+ 0000:2918       SCAN
+ 0000:2C64       EVALUATE
+ 0000:2CD4       _init_dir
+ 0000:2CFC       _dir
+ 0000:3634       __nxtrow
+ 0000:363A       __page_break
+ 0000:3658       FSTRCMP
+ 0000:3A00       INCLUDE_LIST
+ 0000:3B3C       SRCH_DIR
+ 0000:3D18       _describe
+ 0000:3D1C       _copy
+ 0000:4240       _mv
+ 0000:4938       _ren
+ 0000:4B34       _del
+ 0000:4CE8       _attrib
+ 0000:4E96       SHOW_ATTS
+ 0000:4EE2       _type
+ 0000:5080       _y
+ 0000:50D4       _tee
+ 0000:51EE       _bye
+ 0000:51F2       _ver
+ 0000:520E       DRIVE
+ 0000:523E       _cd
+ 0000:5288       __CD
+ 0000:52CC       _md
+ 0000:5308       _cdd
+ 0000:5356       _pushd
+ 0000:53EE       _popd
+ 0000:5476       _dirs
+ 0000:5496       _rd
+ 0000:5530       GETLABEL
+ 0000:55DE       _volume
+ 0000:561C       _path
+ 0000:568C       _prompt
+ 0000:569E       _setbreak
+ 0000:5720       _verify
+ 0000:579C       _memory
+ 0000:57A0       _color
+ 0000:581C       _df
+ 0000:5820       _setdos
+ 0000:5A18       _swap
+ 0000:5A1C       _log
+ 0000:5A20       _global
+ 0000:5BFE       _except
+ 0000:5D94       _select
+ 0000:5D98       _list
+ 0000:5D9C       _timer
+ 0000:5DA0       GDATE
+ 0000:5DE0       GTIME
+ 0000:5E18       _setdate
+ 0000:5F08       _settime
+ 0000:5FF6       _chcp
+ 0000:6076       _ctty
+ 0000:60EC       __nullcheck
+ 0000:60F0       _disk_reset
+ 0000:60FC       DOSFREE
+ 0000:6124       DOSMALLOC
+ 0000:6182       DOSREALLOC
+ 0000:61CC       SWITCH_ARG
+ 0000:6246       ISDELIM
+ 0000:626C       SKIPSPACE
+ 0000:628A       COLLAPSE_WHITESPACE
+ 0000:62E6       FILECASE
+ 0000:6306       GCDIR
+ 0000:6368       GCDISK
+ 0000:6392       PATH_PART
+ 0000:63EC       FNAME_PART
+ 0000:6450       EXT_PART
+ 0000:6494       COPY_FILENAME
+ 0000:64AA       MKDIRNAME
+ 0000:64F0       MKFNAME
+ 0000:6678       INSERT_PATH
+ 0000:66A4       IS_FILE
+ 0000:66C6       IS_DIR
+ 0000:674C       IS_DEV
+ 0000:67A0       FIND_FILE
+ 0000:68EC       _getcountry
+ 0000:6912       DATE_FMT
+ 0000:696A       _crlf
+ 0000:6976       _honk
+ 0000:698E       GETKEY
+ 0000:69CA       YESNO
+ 0000:6A24       COMMA
+ 0000:6A66       STRINS
+ 0000:6AA4       _toupper
+ 0000:6AD8       MORE
+ 0000:6B5E       SET_COLORS
+ 0000:6C3C       SEARCHPATHS
+ 0000:6DE0       _set
+ 0000:6F72       _unset
+ 0000:7020       _eset
+ 0000:7108       ENVGET
+ 0000:7196       ADDENV
+ 0000:731A       NEXT_ENV
+ 0000:733A       END_OF_ENV
+ 0000:7358       _batch
+ 0000:7504       _call
+ 0000:75A4       _echo
+ 0000:7636       _forcmd
+ 0000:78BC       _gotocmd
+ 0000:79BC       _ifcmd
+ 0000:804E       _battext
+ 0000:80E4       _beep
+ 0000:8132       _delay
+ 0000:8180       _gosub
+ 0000:8200       IFF_PARSING
+ 0000:82E2       _inkey_input
+ 0000:843E       _keystack
+ 0000:84CA       _loadbtm
+ 0000:84CE       _quit
+ 0000:8516       _ret
+ 0000:8542       _scr
+ 0000:85A2       _scrput
+ 0000:8614       _setlocal
+ 0000:86CC       _endlocal
+ 0000:8784       _pause
+ 0000:87C2       _remark
+ 0000:87C6       _shift
+ 0000:8838       USAGE
+ 0000:88A6       ERROR
+ 0000:8916       _cls
+ 0000:89E6       EGETS
+ 0000:8C3C       INCR_COLUMN
+ 0000:8C4C       _screenrows
+ 0000:8C70       _screencols
+ 0000:8C86       SETCURSOR
+ 0000:8CEC       _getcursor
+ 0000:8D2E       GET_ATTRIBUTE
+ 0000:9092       _sscanf
+ 0000:936A       _sprintf
+ 0000:9382       _qprintf
+ 0000:93AC       QPUTS
+ 0000:93CA       QPUTSLF
+ 0000:93E6       QPUTC
+ 0000:93FE       _drawline
+ 0000:9480       _drawbox
+ 0000:97F2       VERIFY_ROW_COL
+ 0000:9876  Abs  __acrtmsg
+ 0000:9876  Abs  __acrtused
+ 0000:9D73       ERRMSGC
+ 0000:9D88       ERRMSGA
+ 0000:9D9B       ERRFIND
+ 0000:9DBA       _bios_key
+ 0000:9DCC       _get_switchar
+ 0000:9DDC       GET_EXPANDED
+ 0000:9E0F       _get_cpu
+ 0000:9E54       _get_ndp
+ 0000:9EB6       _get_extended
+ 0000:9ED2       GET_XMS
+ 0000:9F34       DOSBEEP
+ 0000:9FAE       SCREEN
+ 0000:9FC1       WINDOW
+ 0000:9FEC       READ_CHAR
+ 0000:A017       WRITE_CHAR
+ 0000:A032       _get_video
+ 0000:A093       QPRINT
+ 0000:A15A       OLDINT21
+ 0000:A15E       OLDINT27
+ 0000:A162       BP_DONE
+ 0000:A163       _previous_umb
+ 0000:A231       _new_umbs
+ 0000:A2AD       INT21
+ 0000:A2CF       INT27
+ 0000:A2ED       INT21PSP
+ 0000:A2ED       PSP_ENTRY
+ 0000:A2F2       INT27PSP
+ 0000:A2F7       _init_tsr
+ 0000:A34A       _deinit_tsr
+ 0000:A395       _set24
+ 0000:A535       EXEC
+ 0000:A696       __astart
+ 0000:A758       __cintDIV
+ 0000:A767       __amsg_exit
+ 0000:A790       __dataseg
+ 0000:A792       __cinit
+ 0000:A864       _exit
+ 0000:A86B       __exit
+ 0000:A873       __cexit
+ 0000:A87D       __c_exit
+ 0000:A8F2       __ctermsub
+ 0000:A92E       _strcat
+ 0000:A96E       _strcpy
+ 0000:A9A0       _strlen
+ 0000:A9BC       _strncat
+ 0000:A9EE       _atoi
+ 0000:A9F2       _atol
+ 0000:A9F6       _strchr
+ 0000:AA20       _strrchr
+ 0000:AA48       _strpbrk
+ 0000:AAA0       _strspn
+ 0000:AAFA       _strtok
+ 0000:AB8A       _strstr
+ 0000:ABEA       _memmove
+ 0000:AC32       _memset
+ 0000:AC60       __setjmp
+ 0000:AC7D       _longjmp
+ 0000:ACA4       _signal
+ 0000:AD41       __sigentry
+ 0000:AE02       __getdrive
+ 0000:AE0A       __chdrive
+ 0000:AE26       _rename
+ 0000:AE3A       _remove
+ 0000:AE3A       __unlink
+ 0000:AE48       __dos_allocmem
+ 0000:AE60       __dos_close
+ 0000:AE6E       __dos_creatnew
+ 0000:AE75       __dos_creat
+ 0000:AE98       __dos_findnext
+ 0000:AEA3       __dos_findfirst
+ 0000:AED6       __dos_getfileattr
+ 0000:AEEC       __dos_getftime
+ 0000:AF06       __dos_keep
+ 0000:AF1A       __dos_open
+ 0000:AF32       __dos_read
+ 0000:AF39       __dos_write
+ 0000:AF62       __dos_setfileattr
+ 0000:AF74       __dos_setftime
+ 0000:AF88       __dos_getdiskfree
+ 0000:AFB4       __dos_freemem
+ 0000:AFC2       __dos_getdate
+ 0000:AFDC       __dos_gettime
+ 0000:AFF6       __dos_setblock
+ 0000:B010       __dos_setdate
+ 0000:B032       __dos_settime
+ 0000:B058       __aNldiv
+ 0000:B0F2       __aNlmul
+ 0000:B0F2       __aNulmul
+ 0000:B124       __aNlshl
+ 0000:B130       __aNlshr
+ 0000:B13C       __aNNaldiv
+ 0000:B15C       __aNNaulmul
+ 0000:B15C       __aNNalmul
+ 0000:B17C       __aNNalrem
+ 0000:B19C       __aNNalshl
+ 0000:B1B8       __aNuldiv
+ 0000:B218       __fmemchr
+ 0000:B25A       __fmemmove
+ 0000:B324       __FF_MSGBANNER
+ 0000:B344       __fptrap
+ 0000:B34A       __setargv
+ 0000:B4D4       __setenvp
+ 0000:B552       __NMSG_TEXT
+ 0000:B57D       __NMSG_WRITE
+ 0000:B5B2       __dosret0
+ 0000:B5BA       __dosreturn
+ 0000:B5C7       __dosretax
+ 0000:B5D4       __maperror
+ 0000:B608       __farstub
+ 0000:B60A       __nfree
+ 0000:B62B       __nmalloc
+ 0000:B666       __catox
+ 0000:B6BA       __aFahdiff
+ 0000:B6E6       __aNlrem
+ 0000:B786       __myalloc
+ 0000:B7AA       __searchseg
+ 0000:B826       __growseg
+ 0000:B8B2       __incseg
+ 0000:B903       __findlast
+ 0000:B924       __close
+ 0000:B944       __lseek
+ 0000:B9C6       __sopen
+ 0000:B9E0       __open
+ 0000:BB71       __cXENIXtoDOSmode
+ 0000:BB82       __read
+ 0000:BC6C       __write
+ 0000:BDAA       __ltoa
+ 0000:BDB4       __ultoa
+ 0000:BDBE       __isatty
+ 0000:BDD6       __kbhit
+ 0000:BDF8       __getche
+ 0000:BDFC       __getch
+ 0000:BE24       __dup
+ 0000:BE5C       __dup2
+ 0000:BE84       __alloca
+ 0000:BEB6       __strcmpi
+ 0000:BEB6       __stricmp
+ 0000:BEF8       __strdup
+ 0000:BF1A       __strnicmp
+ 0000:BF72       __strlwr
+ 0000:BF90       __strupr
+ 0000:BFAE       __mkdir
+ 0000:BFB5       __chdir
+ 0000:BFC2       __rmdir
+ 0000:BFEA       __chkstk
+ 0000:BFEA       __aNchkstk
+ 0000:C002       __stackavail
+ 0000:C014       __cltoasub
+ 0000:C020       __cxtoa
+ 0C08:0000       __EmDataSeg
+ 0C09:0000       _flag_4dos
+ 0C09:0002       _error_level
+ 0C09:0004       _bn
+ 0C09:0006       _ctrlc_flag
+ 0C09:0008       _ctty_flag
+ 0C09:000A       _log_flag
+ 0C09:000C       _tsrflag
+ 0C09:000E       _umbflag
+ 0C09:0010       _alias_flag
+ 0C09:0012       _batecho
+ 0C09:0014       _for_flag
+ 0C09:0016       _if_flag
+ 0C09:0018       _iff_flag
+ 0C09:0019       _endiff_flag
+ 0C09:001A       _else_flag
+ 0C09:001B       _verbose
+ 0C09:001C       _AUTOSTART
+ 0C09:0552       _commands
+ 0C09:073C       _Hptr
+ 0C09:0DAA       _for_var
+ 0C09:0FB2       _ON
+ 0C09:0FB6       _OFF
+ 0C09:0FBA       _WILD_FILE
+ 0C09:0FBE       _NULLSTR
+ 0C09:0FC0       _QUOTES
+ 0C09:0FC4       _BACK_QUOTE
+ 0C09:0FC6       _DELIMS
+ 0C09:0FEC       _executables
+ 0C09:1010       _video_type
+ 0C09:1038       _daytbl
+ 0C09:1076       _montbl
+ 0C09:10AA       _dateformat
+ 0C09:10D0       _colors
+ 0C09:137C       _int_batproc_errors
+ 0C09:14D6       __iob2
+ 0C09:1637       MAXNAME
+ 0C09:1640       MOVNAME
+ 0000:D6D6  Abs  __aDBdoswp
+ 0C09:1649       MAXHNDL
+ 0C09:164B       MOVEM
+ 0C09:164D       INFO_CTL
+ 0C09:164E       MAXINFO
+ 0C09:16B4       LSEG_PARA
+ 0C09:16B6       LSEG_LIST
+ 0C09:17B8       __atopsp
+ 0C09:17BA       __aexit_rtn
+ 0C09:17BC       __asizds
+ 0C09:17BE       __nheap_desc
+ 0C09:17D2       __aseghi
+ 0C09:17D4       __aseglo
+ 0C09:17D6       __fDosExt
+ 0C09:17D8       __acfinfo
+ 0C09:17E6       __aintdiv
+ 0C09:17EA       __fac
+ 0C09:17F4       _errno
+ 0C09:17F6       __umaskval
+ 0C09:17F8       __pspadr
+ 0C09:17FA       __psp
+ 0C09:17FC       __osminor
+ 0C09:17FC       __osver
+ 0C09:17FD       __osmajor
+ 0C09:17FE       __osversion
+ 0C09:1800       __osmode
+ 0C09:1801       __cpumode
+ 0C09:1802       __doserrno
+ 0C09:1802       __oserr
+ 0C09:1804       __nfile
+ 0C09:1806       __osfile
+ 0C09:181A       ___argc
+ 0C09:181C       ___argv
+ 0C09:181E       __environ
+ 0C09:1820       __pgmptr
+ 0C09:1825       __child
+ 0C09:1827       __ovlflag
+ 0C09:1828       __intno
+ 0C09:1829       __ovlvec
+ 0C09:182D       __exitflag
+ 0C09:182E       __ctype_
+ 0C09:182E       __ctype
+ 0C09:1932       __csigtab0
+ 0C09:194E       __adbgmsg
+ 0C09:1966       __pnhNearHeap
+ 0C09:1968       __cfltcvt_tab
+ 0C09:1976       __sigintseg
+ 0C09:1978       __sigintoff
+ 0C09:197A       __asizeC
+ 0C09:197B       __asizeD
+ 0C09:197C       __amblksiz
+ 0C09:197E       __chbuf
+ 0C09:1980       __aaltstkovr
+ 0C09:1982       _STKHQQ
+ 0C09:1984       __iomode
+ 0C09:1984       __fmode
+ 0C09:1986       __lseekchk
+ 0C09:1988       ___qczrinit
+ 0C09:198A       ___aDBswpflg
+ 0C09:198C       ___aDBswpchk
+ 0C09:198E       ___aDBrterr
+ 0C09:1990       ___aDBexit
+ 0C09:1998       __fpinit
+ 0C09:1A60       _edata
+ 0C09:1A60       __edata
+ 0C09:2490       _environment
+ 0C09:2492       _alias_size
+ 0C09:2494       _alias_list
+ 0C09:2496       _nthptr
+ 0C09:2498       _i_cmd_name
+ 0C09:249A       _env_size
+ 0C09:249C       _env
+ 0C09:24AE       _psp_master
+ 0C09:24B0       _input_file
+ 0C09:2502       _far_env
+ 0C09:2506       _sortseq
+ 0C09:250E       _b_name
+ 0C09:2510       _cur_disk
+ 0C09:2512       _country_info
+ 0C09:2534       _env_seg
+ 0C09:2536       _input_files
+ 0C09:2558       _loadhigh
+ 0C09:255A       _page_length
+ 0C09:255C       _cfgdos
+ 0C09:256E       _bframe
+ 0C09:27BE       _histlist
+ 0C09:27C0       _prev_umb
+ 0C09:27D0       __end
+ 0C09:27D0       _end
+
+Line numbers for ret\parser.obj(parser.c) segment _TEXT
+
+   102 0000:0010   103 0000:001e   104 0000:0024   105 0000:002a
+   106 0000:002d   107 0000:003b   114 0000:003c   124 0000:0042
+   127 0000:0050   129 0000:0056   135 0000:0059   136 0000:005c
+   137 0000:005f   138 0000:0061   139 0000:0064   141 0000:0066
+   142 0000:0069   143 0000:006c   144 0000:006e   145 0000:0071
+   151 0000:0073   154 0000:0079   157 0000:007c   159 0000:0082
+   160 0000:0087   161 0000:008c   164 0000:0092   165 0000:0098
+   166 0000:009d   168 0000:00a9   169 0000:00ac   172 0000:00af
+   173 0000:00ba   174 0000:00c4   184 0000:00c7   190 0000:00cd
+   191 0000:00d3   192 0000:00d9   202 0000:00e3   203 0000:0103
+   204 0000:010f   205 0000:0126   209 0000:0131   210 0000:0137
+   213 0000:013c   214 0000:014c   217 0000:0163   218 0000:016e
+   221 0000:017e   222 0000:019a   226 0000:01a8   228 0000:01af
+   229 0000:01c9   230 0000:01de   233 0000:01e5   234 0000:0201
+   236 0000:020a   239 0000:021b   242 0000:0222   245 0000:022e
+   246 0000:023b   247 0000:024d   248 0000:0258   251 0000:0268
+   253 0000:0282   254 0000:0295   255 0000:02a0   257 0000:02b0
+   258 0000:02c8   264 0000:02d2   267 0000:02f3   269 0000:0306
+   270 0000:0318   279 0000:0322   280 0000:0329   289 0000:0334
+   292 0000:0337   301 0000:033a   274 0000:0341   275 0000:034e
+   277 0000:0351   304 0000:0362   305 0000:0370   311 0000:0377
+   313 0000:0385   315 0000:038f   323 0000:0391   331 0000:0394
+   332 0000:039e   336 0000:03a4   340 0000:03a9   342 0000:03c2
+   345 0000:03c4   347 0000:03d2   350 0000:03e6   355 0000:03e9
+   357 0000:03f7   359 0000:03fb   365 0000:0406   366 0000:041b
+   367 0000:0423   374 0000:0432   376 0000:0435   379 0000:043d
+   380 0000:0442   369 0000:0446   371 0000:0450   372 0000:0453
+   381 0000:045c   383 0000:0473   384 0000:0476   392 0000:0480
+   394 0000:049b   395 0000:049c   396 0000:049d   397 0000:049e
+   398 0000:04a1   399 0000:04a4   400 0000:04a7   401 0000:04a9
+   402 0000:04aa   403 0000:04ac   407 0000:04ae   408 0000:04b4
+   409 0000:04c6   413 0000:04c8   417 0000:04d3   419 0000:04f0
+   421 0000:04f3   424 0000:04f7   428 0000:04f9   432 0000:0508
+   433 0000:050a   438 0000:0510   439 0000:0514   442 0000:0516
+   443 0000:051f   444 0000:0527   447 0000:052b   448 0000:0546
+   449 0000:0553   452 0000:0587   454 0000:05a5   455 0000:05a8
+   462 0000:05ae   463 0000:05be   464 0000:05c6   466 0000:05d5
+   471 0000:05d6   475 0000:05de   479 0000:05ef   483 0000:05fc
+   484 0000:061b   486 0000:0641   490 0000:0655   494 0000:065a
+   506 0000:065e   496 0000:066d   499 0000:0677   502 0000:067f
+   503 0000:0688   508 0000:0689   516 0000:0695   517 0000:06b4
+   518 0000:06bf   519 0000:06c3   520 0000:06c9   521 0000:06cb
+   523 0000:06e0   524 0000:06e2   530 0000:06e8   534 0000:06f3
+   536 0000:06f7   540 0000:06fc   543 0000:0713   551 0000:0721
+   552 0000:072f   555 0000:0732   556 0000:073e   559 0000:0752
+   561 0000:0759   562 0000:075c   563 0000:075e   564 0000:0761
+   565 0000:0763   566 0000:0766   567 0000:0769   577 0000:076b
+   579 0000:0784   582 0000:0792   583 0000:07a4   584 0000:07a9
+   587 0000:07ac   591 0000:07c0   592 0000:07cf   595 0000:07d2
+   596 0000:07d7   597 0000:07de   601 0000:07e2   602 0000:07f9
+   603 0000:0813   604 0000:0822   607 0000:0826   608 0000:0833
+   611 0000:0839   613 0000:083f   614 0000:0847   615 0000:084c
+   620 0000:084f   623 0000:085c   625 0000:0861   626 0000:0870
+   631 0000:0873   634 0000:0879   636 0000:0888   637 0000:0891
+   638 0000:0899   643 0000:089c   647 0000:08a5   649 0000:08ab
+   651 0000:08c1   652 0000:08c9   653 0000:08ca   658 0000:08cd
+   659 0000:08eb   665 0000:08f9   668 0000:0904   672 0000:0919
+   673 0000:091e   674 0000:0923   678 0000:0927   679 0000:092d
+   682 0000:0935   684 0000:093c   686 0000:0941   691 0000:0947
+   695 0000:0958   697 0000:0963   698 0000:096e   707 0000:098a
+   708 0000:098e   713 0000:098f   714 0000:09a6   721 0000:09b5
+   722 0000:09c4   725 0000:09d1   726 0000:09ea   730 0000:09f7
+   734 0000:09fb   735 0000:0a12   738 0000:0a26   739 0000:0a31
+   741 0000:0a34   747 0000:0a42   748 0000:0a5a   751 0000:0a67
+   753 0000:0a6e   755 0000:0a71   756 0000:0a77   759 0000:0a7a
+   760 0000:0a7f   762 0000:0a86   767 0000:0a8d   768 0000:0a90
+   772 0000:0a98   774 0000:0aa3   781 0000:0aa8   783 0000:0acb
+   786 0000:0ad3   787 0000:0adf   791 0000:0ae6   792 0000:0af1
+   793 0000:0aff   796 0000:0b1b   797 0000:0b22   798 0000:0b28
+   800 0000:0b2f   801 0000:0b53   803 0000:0b59   807 0000:0b6d
+   809 0000:0b87   812 0000:0b99   813 0000:0bab   817 0000:0bc4
+   820 0000:0be7   824 0000:0bf1   825 0000:0bf9   827 0000:0c00
+   828 0000:0c16   830 0000:0c18   832 0000:0c22   835 0000:0c2c
+   837 0000:0c33   838 0000:0c3a   839 0000:0c48   841 0000:0c6e
+   842 0000:0c83   843 0000:0c90   844 0000:0c9e   848 0000:0ca4
+   850 0000:0cab   851 0000:0ccf   856 0000:0ce2   857 0000:0d1e
+   869 0000:0d36   870 0000:0d3d   872 0000:0d47   861 0000:0d49
+   862 0000:0d50   874 0000:0d5a   879 0000:0d6b   881 0000:0d78
+   882 0000:0d7b   888 0000:0d82   891 0000:0d88   893 0000:0da5
+   896 0000:0daf   897 0000:0db6   900 0000:0dbf   902 0000:0dc6
+   907 0000:0dd9   911 0000:0dde   922 0000:0de9   924 0000:0def
+   927 0000:0df5   933 0000:0e08   934 0000:0e18   937 0000:0e1d
+   938 0000:0e26   939 0000:0e31   945 0000:0e3b   946 0000:0e3f
+   947 0000:0e44   948 0000:0e45   951 0000:0e4a   952 0000:0e53
+   953 0000:0e5e   959 0000:0e60   960 0000:0e64   961 0000:0e69
+   963 0000:0e6a   966 0000:0e6f   967 0000:0e7a   974 0000:0e7e
+   975 0000:0e9f   976 0000:0ea6   977 0000:0eb1   981 0000:0ebc
+   982 0000:0ebe   983 0000:0ec9   929 0000:0eda   931 0000:0ede
+   985 0000:0ee0   988 0000:0eec   989 0000:0efa   994 0000:0f04
+  1010 0000:0f10  1011 0000:0f17  1012 0000:0f1a  1013 0000:0f28
+  1015 0000:0f2d  1018 0000:0f3d  1020 0000:0f49  1033 0000:0f4e
+  1065 0000:0f61  1068 0000:0f71  1071 0000:0f79  1069 0000:0f8f
+  1073 0000:0f9f  1075 0000:0fa6  1077 0000:0faa  1061 0000:0fbe
+  1080 0000:0fc5  1087 0000:0fd2  1089 0000:0fdb  1090 0000:0fe6
+  1091 0000:0ff0  1092 0000:1000  1103 0000:1003  1105 0000:1009
+  1108 0000:1010  1109 0000:1024  1112 0000:1028  1115 0000:1037
+  1116 0000:1045  1119 0000:105c  1123 0000:106b  1125 0000:1079
+  1133 0000:107f  1135 0000:10c6  1136 0000:10cd  1137 0000:10d8
+  1138 0000:10df  1141 0000:10e2  1142 0000:1102  1100 0000:1110
+  1101 0000:111a  1041 0000:112d  1043 0000:1150  1047 0000:1159
+  1048 0000:1164  1049 0000:116a  1055 0000:1171  1057 0000:1186
+  1146 0000:1194  1149 0000:119f  1153 0000:11ab  1154 0000:11b2
+  1157 0000:11be  1158 0000:11c5  1160 0000:11cd  1161 0000:11d7
+  1164 0000:11e1  1165 0000:11f1  1166 0000:11fb  1170 0000:120a
+  1171 0000:1211  1173 0000:121b  1174 0000:1222  1177 0000:122c
+  1178 0000:1233  1185 0000:1245  1186 0000:1255  1193 0000:1267
+  1196 0000:12b2  1200 0000:12ba  1201 0000:12c1  1203 0000:12c6
+  1204 0000:12cd  1206 0000:12df  1211 0000:12e8  1212 0000:12eb
+  1218 0000:12f2  1220 0000:12f9  1229 0000:12fe  1230 0000:130b
+  1232 0000:1311  1235 0000:1319  1236 0000:1323  1238 0000:1330
+  1242 0000:134a  1243 0000:134f  1244 0000:1360  1246 0000:136d
+  1247 0000:1378  1248 0000:137d  1251 0000:1380  1252 0000:138c
+  1253 0000:1391  1257 0000:1394  1260 0000:13b2  1261 0000:13d9
+  1262 0000:13ef  1267 0000:13f2  1272 0000:141a  1273 0000:142f
+  1275 0000:1441  1278 0000:1455  1279 0000:1472  1280 0000:1491
+  1283 0000:14af  1288 0000:14e4  1293 0000:14e7  1295 0000:14f0
+  1296 0000:14f3  1301 0000:14fa  1310 0000:1501  1312 0000:1522
+  1316 0000:1528  1317 0000:152b  1318 0000:1536  1319 0000:1540
+  1321 0000:1544  1322 0000:1551  1323 0000:1561  1326 0000:1566
+  1330 0000:1581  1334 0000:1590  1337 0000:15a4  1340 0000:15b0
+  1344 0000:15cf  1346 0000:15d6  1349 0000:15dd  1351 0000:15df
+  1352 0000:15e2  1353 0000:15e4  1354 0000:15e6  1355 0000:15e9
+  1356 0000:15eb  1357 0000:15ee  1358 0000:15f1  1359 0000:15f4
+  1360 0000:15f7  1361 0000:15fa  1364 0000:15fd  1367 0000:160a
+  1369 0000:160c  1370 0000:160f  1371 0000:1611  1372 0000:1613
+  1373 0000:1616  1374 0000:1618  1375 0000:161c  1391 0000:161f
+  1393 0000:1638  1397 0000:1647  1400 0000:1651  1406 0000:1661
+  1410 0000:167a  1411 0000:168e  1413 0000:1692  1419 0000:1698
+  1429 0000:169e  1430 0000:16ae  1432 0000:16b6  1434 0000:16b8
+  1435 0000:16c0  1436 0000:16ce  1437 0000:16d4  1438 0000:16db
+  1442 0000:16df  1444 0000:16e8  1446 0000:16eb  1499 0000:16f0
+  1501 0000:16f7  1502 0000:1707  1503 0000:170e  1505 0000:1713
+  1507 0000:1718  1508 0000:1721  1512 0000:1729  1514 0000:1736
+  1517 0000:1743  1519 0000:1754  1522 0000:1766  1523 0000:1782
+  1524 0000:178d  1530 0000:178f  1532 0000:17b5  1534 0000:17bc
+  1538 0000:17cd
+
+Line numbers for ret\cmds.obj(cmds.c) segment _TEXT
+
+   141 0000:17d4   144 0000:17d5   145 0000:17d7   146 0000:17eb
+   151 0000:17ee   157 0000:17f9   158 0000:17ff   163 0000:1805
+   164 0000:1814   167 0000:1823   168 0000:182d   169 0000:184b
+   172 0000:185e   173 0000:1861
+
+Line numbers for ret\expand.obj(expand.c) segment _TEXT
+
+    42 0000:186a    43 0000:186d    44 0000:1878    45 0000:187f
+    50 0000:1886    51 0000:1889    52 0000:1892    53 0000:189a
+    54 0000:18a2    56 0000:18a9    62 0000:18b0    68 0000:18b9
+    69 0000:18bf    74 0000:18c6    75 0000:18db    76 0000:18e1
+    77 0000:18e6    80 0000:18eb    82 0000:18f5    85 0000:1900
+    87 0000:1905    89 0000:190a    90 0000:190f    94 0000:1910
+    96 0000:1915    97 0000:191b    98 0000:191c    99 0000:1921
+   100 0000:1923   105 0000:1928   106 0000:1945   109 0000:1950
+   110 0000:1955   111 0000:195a   123 0000:195b   126 0000:1971
+   128 0000:1984   131 0000:198e   133 0000:19a2   135 0000:19b9
+   136 0000:19c0   137 0000:19cb   117 0000:19cd   138 0000:19d8
+   140 0000:19dd   141 0000:19fb   143 0000:1a17   144 0000:1a1e
+   146 0000:1a30   147 0000:1a37   148 0000:1a45   152 0000:1a53
+   153 0000:1a5a   154 0000:1a68   158 0000:1a76   160 0000:1a7e
+   163 0000:1a81   164 0000:1a9b   166 0000:1aa2   167 0000:1aae
+   170 0000:1ab8   171 0000:1abb   177 0000:1ac4   181 0000:1ac9
+   182 0000:1ad1   183 0000:1ad9   186 0000:1ae0   187 0000:1ae9
+   188 0000:1af3   192 0000:1afb   193 0000:1b04   194 0000:1b0e
+   198 0000:1b16   200 0000:1b1f   203 0000:1b24   204 0000:1b28
+   205 0000:1b2e   207 0000:1b32   208 0000:1b49   209 0000:1b54
+   210 0000:1b56   211 0000:1b62   214 0000:1b69   219 0000:1b72
+   225 0000:1b77   226 0000:1b87   227 0000:1b92   228 0000:1b9d
+   230 0000:1b9f   231 0000:1bb1   232 0000:1bc3   233 0000:1bd8
+   236 0000:1bee   237 0000:1c06   239 0000:1c1e   240 0000:1c39
+   243 0000:1c46   246 0000:1c4f   247 0000:1c5d   249 0000:1c65
+   250 0000:1c67   257 0000:1c70   265 0000:1c7c   266 0000:1c83
+   269 0000:1c88   270 0000:1c8e   280 0000:1c97   281 0000:1cab
+   284 0000:1cae   288 0000:1cbf   289 0000:1cc6   291 0000:1cd3
+   292 0000:1cdf   295 0000:1ceb   297 0000:1d02   298 0000:1d0a
+   301 0000:1d0d   303 0000:1d16   306 0000:1d2c   344 0000:1d37
+   347 0000:1d41   309 0000:1d62   310 0000:1d73   311 0000:1d78
+   313 0000:1d7a   316 0000:1d85   317 0000:1d98   318 0000:1d9a
+   321 0000:1db0   322 0000:1dba   325 0000:1dbe   326 0000:1dc7
+   328 0000:1dcc   329 0000:1dd7   330 0000:1dde   333 0000:1de4
+   337 0000:1deb   338 0000:1e06   339 0000:1e0c   342 0000:1e14
+   343 0000:1e1e   353 0000:1e21   354 0000:1e28   355 0000:1e32
+   356 0000:1e41   357 0000:1e51   359 0000:1e57   360 0000:1e63
+   363 0000:1e66   364 0000:1e70   367 0000:1e7b   370 0000:1e84
+   371 0000:1e8a   272 0000:1e8e   275 0000:1e94   277 0000:1ea3
+   278 0000:1eab   372 0000:1eae   379 0000:1eb6   388 0000:1ebf
+   392 0000:1ec5   395 0000:1ecc   397 0000:1edb   398 0000:1ef8
+   401 0000:1efe   402 0000:1f09   406 0000:1f0e   408 0000:1f1e
+   409 0000:1f22   412 0000:1f24   418 0000:1f36   421 0000:1f48
+   424 0000:1f4d   431 0000:1f51   434 0000:1f63   435 0000:1f6e
+   433 0000:1f78   427 0000:1f7a   428 0000:1f96   437 0000:1fa6
+   440 0000:1fc0   441 0000:1fcb   442 0000:1fd1   446 0000:1fda
+   447 0000:1fea   448 0000:1ff0   451 0000:1ff8   453 0000:1ffc
+   455 0000:200e   456 0000:201b   457 0000:2023   462 0000:204a
+   463 0000:2057   464 0000:2063   466 0000:2078   467 0000:207e
+   469 0000:2093   470 0000:20a1   471 0000:20a2   475 0000:20ba
+   476 0000:20cd   478 0000:20d8   480 0000:20dc   484 0000:20f6
+   486 0000:2103   487 0000:210a   489 0000:2116   491 0000:211a
+   493 0000:213a   495 0000:214a   498 0000:2162   501 0000:2178
+   504 0000:2184   505 0000:219b   507 0000:21a3   509 0000:21ae
+   513 0000:21b0   510 0000:21bb   511 0000:21c0   516 0000:21d7
+   518 0000:21df   521 0000:21f4   530 0000:2217   532 0000:222d
+   535 0000:2231   537 0000:2269   538 0000:2278   539 0000:227e
+   540 0000:2291   542 0000:2295   544 0000:22a9   548 0000:22c2
+   552 0000:22db   554 0000:22ec   557 0000:22ee   560 0000:22f9
+   563 0000:22fc   566 0000:2301   568 0000:230c   571 0000:2319
+   577 0000:2335   578 0000:233b   579 0000:233c   581 0000:234a
+   583 0000:234b   595 0000:236f   600 0000:2397   601 0000:239c
+   605 0000:23a7   607 0000:23a9   610 0000:23c3   614 0000:23ce
+   617 0000:23d7   620 0000:23ec   621 0000:241a   624 0000:242c
+   628 0000:245f   631 0000:2464   632 0000:246b   633 0000:2472
+   634 0000:2481   635 0000:24a5   639 0000:24c7   642 0000:24dc
+   645 0000:24e5   647 0000:2513   648 0000:2537   654 0000:253b
+   660 0000:2556   662 0000:2569   663 0000:2578   664 0000:258a
+   665 0000:2597   666 0000:25d5   667 0000:25db   668 0000:25ed
+   669 0000:25fa   670 0000:2618   671 0000:262a   673 0000:2643
+   676 0000:265d   678 0000:267b   680 0000:2694   683 0000:26ad
+   686 0000:26c3   689 0000:26d9   690 0000:26e6   691 0000:26ee
+   693 0000:2700   694 0000:270d   695 0000:270f   697 0000:2721
+   699 0000:272e   703 0000:2741   704 0000:274b   705 0000:274f
+   707 0000:2760   710 0000:2775   713 0000:277e   714 0000:279e
+   715 0000:27a1   717 0000:27b2   719 0000:27c1   725 0000:27c3
+   727 0000:27ca   728 0000:27e3   729 0000:27e9   734 0000:27f1
+   738 0000:2811   739 0000:2814   744 0000:281c   748 0000:2823
+   749 0000:2832   752 0000:283d   754 0000:2843   755 0000:2846
+   757 0000:2848   758 0000:284b   760 0000:284d   761 0000:2850
+   763 0000:2852   764 0000:2855   766 0000:2857   767 0000:285a
+   770 0000:2873   776 0000:287a   777 0000:287c   782 0000:287e
+   783 0000:2881   784 0000:288a   790 0000:2890   795 0000:289b
+   797 0000:28a1   801 0000:28a9   803 0000:28b4   804 0000:28bd
+   807 0000:28c1   810 0000:28e3   813 0000:28e9   814 0000:28ff
+   816 0000:2904   817 0000:2906   818 0000:290f   826 0000:2918
+   829 0000:2922   831 0000:2929   833 0000:292c   836 0000:293e
+   837 0000:2943   839 0000:294b   840 0000:2952   841 0000:2959
+   842 0000:295a   843 0000:295f   844 0000:2969   854 0000:296e
+   855 0000:297d   856 0000:297e   858 0000:2980   860 0000:2986
+   861 0000:29ad   865 0000:29c1   866 0000:29c2   869 0000:29ca
+   870 0000:29cc
+
+Line numbers for ret\eval.obj(eval.c) segment _TEXT
+
+    45 0000:29d4    49 0000:29d5    55 0000:29d9    51 0000:29e1
+    52 0000:29ed    53 0000:29f2    57 0000:29f6    58 0000:29f8
+    62 0000:29fa    63 0000:29fb    65 0000:29fd    66 0000:2a02
+    69 0000:2a0e    71 0000:2a19    76 0000:2a29    72 0000:2a32
+    73 0000:2a43    74 0000:2a48    79 0000:2a58    80 0000:2a5d
+    83 0000:2a61    84 0000:2a66    88 0000:2a68    89 0000:2a6f
+    90 0000:2a73    91 0000:2a83    92 0000:2a8a    93 0000:2a9a
+    94 0000:2aa1    95 0000:2aaf    97 0000:2abb    98 0000:2ac5
+   100 0000:2ad3   101 0000:2ad8   102 0000:2ae6   103 0000:2ae8
+   105 0000:2af6   110 0000:2afc   112 0000:2b03   114 0000:2b0b
+   116 0000:2b12   117 0000:2b22   118 0000:2b2a   119 0000:2b2d
+   120 0000:2b35   121 0000:2b43   122 0000:2b4a   127 0000:2b50
+   129 0000:2b57   131 0000:2b5f   133 0000:2b66   134 0000:2b7d
+   135 0000:2b85   136 0000:2b88   137 0000:2b90   138 0000:2b9e
+   139 0000:2ba5   144 0000:2baa   145 0000:2bae   147 0000:2bb1
+   148 0000:2bc6   149 0000:2bce   152 0000:2bd1   154 0000:2bd8
+   156 0000:2bdc   157 0000:2be1   158 0000:2bed   163 0000:2bf2
+   165 0000:2bf5   167 0000:2c03   168 0000:2c06   169 0000:2c0d
+   170 0000:2c14   171 0000:2c21   174 0000:2c2a   175 0000:2c3a
+   178 0000:2c3d   179 0000:2c54   180 0000:2c5f   185 0000:2c64
+   187 0000:2c6f   189 0000:2c77   190 0000:2c85   192 0000:2c8c
+   193 0000:2c99   194 0000:2c9c   195 0000:2ca3   196 0000:2cb1
+   199 0000:2cb9   201 0000:2cca   202 0000:2ccc
+
+Line numbers for ret\dircmds.obj(dircmds.c) segment _TEXT
+
+    49 0000:2cd4    50 0000:2cdf    51 0000:2ce5    53 0000:2ceb
+    54 0000:2cee    59 0000:2cfa    64 0000:2cfc    69 0000:2d05
+    70 0000:2d08    71 0000:2d17    75 0000:2d20    78 0000:2d2d
+    79 0000:2d3e    82 0000:2d49    84 0000:2d52    89 0000:2d5e
+    92 0000:2d67    93 0000:2d6c    95 0000:2d6e    96 0000:2d73
+    98 0000:2d75    99 0000:2d7a   101 0000:2d7c   102 0000:2d81
+   104 0000:2d83   105 0000:2d88   107 0000:2d8a   108 0000:2d8f
+   110 0000:2d91   111 0000:2d94   113 0000:2d96   114 0000:2dad
+   115 0000:2db7   118 0000:2db9   119 0000:2dbf   122 0000:2dc1
+   123 0000:2dc6   125 0000:2dc8   126 0000:2dcd   128 0000:2dd0
+   129 0000:2dd5   132 0000:2dd8   133 0000:2de2   136 0000:2de5
+   137 0000:2dea   140 0000:2ded   142 0000:2e58   147 0000:2e5c
+   150 0000:2e68   154 0000:2e71   152 0000:2e88   161 0000:2e8f
+   163 0000:2eab   164 0000:2ebb   167 0000:2ebe   169 0000:2eca
+   170 0000:2ed5   172 0000:2ee5   176 0000:2ef4   178 0000:2f02
+   179 0000:2f06   183 0000:2f0c   186 0000:2f17   187 0000:2f1c
+   188 0000:2f21   189 0000:2f29   193 0000:2f2f   194 0000:2f3a
+   195 0000:2f43   199 0000:2f49   200 0000:2f56   201 0000:2f59
+   202 0000:2f61   203 0000:2f67   207 0000:2f6a   208 0000:2f7d
+   209 0000:2f88   210 0000:2fa8   214 0000:2fb4   215 0000:2fc1
+   218 0000:2fce   219 0000:2fd6   222 0000:2fde   225 0000:2ff5
+   227 0000:3000   228 0000:3007   229 0000:300d   230 0000:3010
+   231 0000:3027   234 0000:302a   266 0000:303a   269 0000:303c
+   273 0000:3085   274 0000:308f   238 0000:309d   241 0000:30a4
+   244 0000:30a9   247 0000:30af   248 0000:30cc   250 0000:30d2
+   254 0000:30e6   255 0000:30f7   258 0000:310f   259 0000:311c
+   260 0000:311f   261 0000:3123   264 0000:312a   278 0000:312d
+   281 0000:3154   289 0000:3165   295 0000:3188   297 0000:31b0
+   299 0000:31ba   300 0000:31c4   292 0000:31f1   283 0000:321c
+   286 0000:3222   288 0000:323d   301 0000:324e   302 0000:3294
+   303 0000:32da   304 0000:32e4   306 0000:3349   308 0000:3356
+   310 0000:33d2   316 0000:3415   317 0000:3423   318 0000:3426
+   319 0000:3429   320 0000:3434   322 0000:3437   323 0000:3441
+   325 0000:3444   326 0000:3451   331 0000:345f   332 0000:3473
+   333 0000:348e   334 0000:3491   335 0000:34a9   338 0000:34ac
+   340 0000:34b5   345 0000:34bd   348 0000:34c7   349 0000:34ce
+   350 0000:34d4   351 0000:34de   354 0000:34f4   355 0000:34ff
+   357 0000:350d   360 0000:3512   363 0000:3531   365 0000:3539
+   370 0000:353d   367 0000:3543   368 0000:356d   372 0000:357b
+   373 0000:3584   376 0000:358c   380 0000:35a3   383 0000:35bd
+   384 0000:35c9   385 0000:35dc   387 0000:35e8   388 0000:35eb
+   389 0000:35fa   390 0000:35fd   391 0000:3608   392 0000:3626
+   397 0000:3629   398 0000:362c   404 0000:3634   405 0000:3637
+   411 0000:363a   412 0000:3647   413 0000:364c   415 0000:3657
+   422 0000:3658   425 0000:365f   428 0000:3662   430 0000:367d
+   433 0000:368e   434 0000:36b4   437 0000:36c6   438 0000:36ec
+   440 0000:36fe   441 0000:370d   445 0000:3722   447 0000:3742
+   448 0000:3745   450 0000:3748   452 0000:3754   453 0000:3766
+   458 0000:376e   459 0000:3776   463 0000:3778   465 0000:378c
+   470 0000:3794   472 0000:3799   473 0000:37b0   478 0000:37d3
+   480 0000:37f0   481 0000:380d   485 0000:3821   489 0000:3835
+   492 0000:3844   475 0000:3877   495 0000:387e   497 0000:3899
+   467 0000:38a8   468 0000:38b0   499 0000:38b4   502 0000:38b8
+   503 0000:38d4   507 0000:38e9   508 0000:38f5   513 0000:38fe
+   520 0000:3905   532 0000:3910   533 0000:3915   534 0000:391e
+   535 0000:3936   536 0000:394b   537 0000:394e   526 0000:395f
+   527 0000:3989   529 0000:39ba   538 0000:39cc   524 0000:39d7
+   539 0000:39e8   522 0000:39f1   540 0000:39f9   547 0000:3a00
+   550 0000:3a0c   552 0000:3a12   557 0000:3a16   558 0000:3a27
+   561 0000:3a2a   562 0000:3a39   563 0000:3a48   568 0000:3a4b
+   569 0000:3a5c   570 0000:3a68   571 0000:3a6e   576 0000:3a71
+   577 0000:3a7d   578 0000:3a89   584 0000:3a8b   585 0000:3aa7
+   586 0000:3ab6   587 0000:3abd   590 0000:3ac5   591 0000:3ade
+   594 0000:3ae3   595 0000:3ae7   597 0000:3aeb   599 0000:3af4
+   600 0000:3afb   606 0000:3b08   608 0000:3b19   609 0000:3b20
+   613 0000:3b31   614 0000:3b33   625 0000:3b3c   631 0000:3b4a
+   632 0000:3b55   634 0000:3b78   645 0000:3b7d   646 0000:3b8f
+   637 0000:3b92   638 0000:3bab   639 0000:3bb5   640 0000:3bbf
+   650 0000:3bc4   651 0000:3bc9   652 0000:3bd1   656 0000:3bf7
+   657 0000:3c09   663 0000:3c16   664 0000:3c1c   665 0000:3c3d
+   666 0000:3c3f   667 0000:3c45   668 0000:3c4c   671 0000:3c71
+   672 0000:3c8f   673 0000:3ca9   676 0000:3cc4   677 0000:3cea
+   679 0000:3d0b   680 0000:3d0d   681 0000:3d10   687 0000:3d18
+   688 0000:3d1a
+
+Line numbers for ret\filecmds.obj(filecmds.c) segment _TEXT
+
+    42 0000:3d1c    46 0000:3d25    51 0000:3d34    55 0000:3d3e
+    60 0000:3d76    61 0000:3d7c    65 0000:3d81    67 0000:3d88
+    68 0000:3d8e    69 0000:3d93    72 0000:3d98    73 0000:3d9e
+    75 0000:3da3    76 0000:3da9    78 0000:3dae    79 0000:3db4
+    81 0000:3db9    83 0000:3dbf    84 0000:3dc4    89 0000:3dc9
+    92 0000:3dd5    93 0000:3ddc    94 0000:3df4    57 0000:3e09
+    58 0000:3e1b   100 0000:3e25   101 0000:3e4c   102 0000:3e5b
+   104 0000:3e67   107 0000:3e69   108 0000:3e70   111 0000:3e7a
+   114 0000:3e8a   116 0000:3e9f   119 0000:3eab   120 0000:3ecd
+   123 0000:3ed0   126 0000:3edb   129 0000:3ee1   131 0000:3eeb
+   132 0000:3eed   134 0000:3efb   137 0000:3f02   138 0000:3f04
+   139 0000:3f06   140 0000:3f0a   141 0000:3f0d   142 0000:3f0f
+   147 0000:3f11   148 0000:3f18   150 0000:3f26   151 0000:3f31
+   155 0000:3f3c   157 0000:3f48   160 0000:3f4c   161 0000:3f53
+   164 0000:3f58   165 0000:3f5f   166 0000:3f64   168 0000:3f75
+   177 0000:3f81   179 0000:3f8f   180 0000:3f9a   184 0000:3fa5
+   185 0000:3fc0   186 0000:3fd9   189 0000:3fdc   195 0000:3fe1
+   197 0000:3fed   201 0000:4008   204 0000:400d   205 0000:401b
+   192 0000:401e   193 0000:4025   279 0000:402a   170 0000:4041
+   171 0000:4049   173 0000:404f   174 0000:405d   175 0000:4062
+   207 0000:4065   214 0000:4075   216 0000:409d   217 0000:40a4
+   218 0000:40bd   220 0000:40c0   225 0000:40c5   227 0000:40d8
+   229 0000:40df   230 0000:40f7   233 0000:4107   237 0000:4111
+   239 0000:411f   242 0000:4146   243 0000:414d   246 0000:4154
+   247 0000:415b   248 0000:4167   255 0000:416a   258 0000:416d
+   261 0000:4192   262 0000:419d   263 0000:41a3   253 0000:41b4
+   266 0000:41b6   271 0000:41ba   272 0000:41cc   273 0000:41d3
+   274 0000:41d8   275 0000:41e1   276 0000:41ef   277 0000:41f9
+   278 0000:41ff   282 0000:4202   283 0000:420d   285 0000:4213
+   287 0000:421a   288 0000:421c   289 0000:4220   290 0000:4222
+   294 0000:4224   296 0000:4236   297 0000:423a   304 0000:4240
+   308 0000:424c   315 0000:425b   320 0000:4280   321 0000:4286
+   322 0000:428b   325 0000:4290   326 0000:4296   327 0000:429b
+   330 0000:42a0   331 0000:42a6   333 0000:42ab   334 0000:42b1
+   317 0000:42c3   318 0000:42d1   337 0000:42d7   338 0000:42de
+   339 0000:42ed   340 0000:42f9   343 0000:42fb   344 0000:4302
+   347 0000:430c   350 0000:4319   351 0000:432b   352 0000:4337
+   353 0000:433a   354 0000:433c   357 0000:434a   358 0000:4355
+   360 0000:4363   363 0000:4371   364 0000:437c   365 0000:4387
+   371 0000:438d   367 0000:43a3   369 0000:43a8   396 0000:43b7
+   384 0000:43da   385 0000:43df   389 0000:43ef   390 0000:4409
+   392 0000:440e   393 0000:441c   394 0000:4433   395 0000:443a
+   398 0000:444a   402 0000:444d   403 0000:4460   406 0000:446b
+   412 0000:447e   413 0000:44a3   415 0000:44a9   418 0000:44b2
+   419 0000:44bf   422 0000:44ce   423 0000:44d1   425 0000:44e0
+   426 0000:44e3   373 0000:44f4   374 0000:44fc   378 0000:450a
+   379 0000:4515   382 0000:4520   428 0000:452d   430 0000:4530
+   432 0000:4541   433 0000:4544   440 0000:454a   443 0000:4558
+   444 0000:4563   445 0000:456b   446 0000:4574   449 0000:457d
+   451 0000:4586   453 0000:4588   455 0000:458d   456 0000:4594
+   457 0000:45a4   458 0000:45ae   461 0000:45b6   462 0000:45c3
+   463 0000:45cb   464 0000:45cc   465 0000:45d3   467 0000:45e3
+   468 0000:45e9   469 0000:45eb   470 0000:45f1   471 0000:45fe
+   473 0000:4601   476 0000:4606   477 0000:460c   478 0000:4611
+   479 0000:4614   490 0000:461e   492 0000:462c   496 0000:4634
+   497 0000:4644   500 0000:4651   501 0000:4656   502 0000:4667
+   504 0000:4670   505 0000:467b   506 0000:4680   510 0000:4683
+   511 0000:469a   512 0000:46a4   517 0000:46a7   519 0000:46d4
+   520 0000:46df   521 0000:46e4   526 0000:46ec   527 0000:46f2
+   529 0000:46fd   532 0000:4703   535 0000:4708   536 0000:470e
+   537 0000:4711   540 0000:4713   541 0000:4716   542 0000:4719
+   543 0000:471b   544 0000:471d   545 0000:4720   546 0000:4723
+   547 0000:4726   554 0000:4728   555 0000:472d   556 0000:4731
+   557 0000:4738   558 0000:473c   559 0000:4744   560 0000:4747
+   561 0000:474f   563 0000:4752   569 0000:475b   570 0000:4761
+   581 0000:4775   587 0000:4795   590 0000:47b4   591 0000:47c1
+   592 0000:47d2   595 0000:47d5   597 0000:47e2   602 0000:47ea
+   604 0000:47ed   605 0000:480a   606 0000:4814   609 0000:4817
+   611 0000:481d   612 0000:483c   613 0000:4842   617 0000:4847
+   618 0000:484d   620 0000:4852   623 0000:485f   624 0000:4878
+   625 0000:4882   628 0000:4885   631 0000:488a   636 0000:48aa
+   638 0000:48b2   639 0000:48b8   642 0000:48bf   644 0000:48c8
+   646 0000:48d9   647 0000:48ee   651 0000:48fd   653 0000:4906
+   654 0000:490c   655 0000:4913   656 0000:4919   659 0000:4920
+   660 0000:4926   663 0000:492d   664 0000:4930   669 0000:4938
+   671 0000:4944   672 0000:494e   676 0000:4954   677 0000:495a
+   680 0000:4964   681 0000:497b   683 0000:4982   692 0000:4989
+   693 0000:4990   694 0000:4995   698 0000:499a   699 0000:49a1
+   700 0000:49a6   703 0000:49ab   704 0000:49b2   686 0000:49c9
+   688 0000:49d0   689 0000:49df   707 0000:49e5   709 0000:49f0
+   725 0000:49fe   728 0000:4a0a   729 0000:4a16   733 0000:4a23
+   735 0000:4a2d   736 0000:4a45   737 0000:4a4f   738 0000:4a5e
+   712 0000:4a84   715 0000:4a8b   719 0000:4a9d   720 0000:4abc
+   722 0000:4acd   740 0000:4aee   744 0000:4af1   746 0000:4b07
+   748 0000:4b24   751 0000:4b27   753 0000:4b2a   754 0000:4b2e
+   759 0000:4b34   762 0000:4b3d   763 0000:4b44   766 0000:4b50
+   767 0000:4b56   771 0000:4b60   776 0000:4b67   777 0000:4b6d
+   779 0000:4b72   780 0000:4b78   782 0000:4b7d   783 0000:4b83
+   784 0000:4b88   773 0000:4b9d   774 0000:4bac   787 0000:4bb2
+   822 0000:4bc0   825 0000:4bd3   826 0000:4be0   827 0000:4bef
+   817 0000:4c11   818 0000:4c18   819 0000:4c23   820 0000:4c30
+   828 0000:4c32   791 0000:4c4a   796 0000:4c56   799 0000:4c5f
+   800 0000:4c6b   802 0000:4c77   807 0000:4c86   808 0000:4c90
+   809 0000:4cb0   810 0000:4cc3   814 0000:4cd2   830 0000:4cda
+   832 0000:4cdd   833 0000:4ce0   840 0000:4ce8   842 0000:4cf4
+   858 0000:4cfe   859 0000:4d04   861 0000:4d0e   862 0000:4d13
+   864 0000:4d18   867 0000:4d1b   868 0000:4d29   870 0000:4d2f
+   871 0000:4d35   872 0000:4d39   875 0000:4d3c   878 0000:4d41
+   879 0000:4d4a   893 0000:4d66   881 0000:4d71   895 0000:4d7b
+   884 0000:4d7d   885 0000:4d87   887 0000:4d89   888 0000:4d93
+   890 0000:4d95   891 0000:4d9f   900 0000:4da6   901 0000:4daf
+   903 0000:4dcd   917 0000:4dd2   906 0000:4dd4   907 0000:4dd9
+   909 0000:4ddb   910 0000:4de0   912 0000:4de2   913 0000:4de7
+   921 0000:4de9   924 0000:4df0   928 0000:4df7   930 0000:4e0d
+   933 0000:4e36   934 0000:4e54   935 0000:4e60   937 0000:4e81
+   939 0000:4e8c   940 0000:4e8f   946 0000:4e96   949 0000:4e9d
+   950 0000:4eab   951 0000:4eb1   952 0000:4eb6   953 0000:4ebc
+   954 0000:4ec1   955 0000:4ec7   956 0000:4ecc   957 0000:4ed2
+   958 0000:4ed7   959 0000:4eda   964 0000:4ee2   970 0000:4eeb
+   974 0000:4ef9   975 0000:4eff   977 0000:4f09   979 0000:4f0c
+   985 0000:4f13   986 0000:4f19   987 0000:4f1f   990 0000:4f25
+   991 0000:4f2b   993 0000:4f31   994 0000:4f35   982 0000:4f4d
+   983 0000:4f5c   998 0000:4f62  1005 0000:4f67  1006 0000:4f82
+  1007 0000:4f92  1000 0000:4fac  1001 0000:4fb7  1002 0000:4fbf
+  1011 0000:4fc5  1013 0000:4fd3  1014 0000:5002  1015 0000:5009
+  1016 0000:501f  1017 0000:502b  1021 0000:5034  1023 0000:506a
+  1024 0000:5072  1027 0000:5075  1028 0000:5079  1036 0000:5080
+  1040 0000:5086  1041 0000:5094  1043 0000:50b9  1044 0000:50cf
+  1049 0000:50d4  1051 0000:50df  1054 0000:50e7  1055 0000:50ed
+  1057 0000:50f7  1058 0000:5102  1059 0000:5107  1061 0000:510a
+  1063 0000:510f  1069 0000:5116  1070 0000:511b  1071 0000:5120
+  1066 0000:513c  1067 0000:514b  1074 0000:5151  1075 0000:5174
+  1076 0000:5181  1080 0000:5183  1091 0000:519d  1081 0000:51a8
+  1082 0000:51b3  1083 0000:51bd  1092 0000:51cb  1093 0000:51db
+  1094 0000:51de  1096 0000:51e4  1097 0000:51e7
+
+Line numbers for ret\syscmds.obj(syscmds.c) segment _TEXT
+
+    37 0000:51ee    38 0000:51f1    44 0000:51f2    46 0000:520a
+    47 0000:520c    52 0000:520e    53 0000:5215    54 0000:522a
+    56 0000:5234    57 0000:5236    62 0000:523e    66 0000:5246
+    68 0000:5260    69 0000:526b    71 0000:5270    72 0000:5278
+    75 0000:527c    76 0000:5281    80 0000:5288    85 0000:5294
+    86 0000:529d    87 0000:52ab    89 0000:52b0    90 0000:52c4
+    95 0000:52cc    96 0000:52d4    98 0000:52d6    99 0000:52dc
+   102 0000:52e5   103 0000:52ee   104 0000:52f9   106 0000:5300
+   107 0000:5302   114 0000:5308   115 0000:530f   116 0000:5315
+   119 0000:531e   120 0000:533b   123 0000:5340   124 0000:5350
+   129 0000:5356   133 0000:5361   134 0000:536d   135 0000:5372
+   138 0000:537d   139 0000:5383   141 0000:5389   143 0000:538b
+   144 0000:53a1   145 0000:53a6   148 0000:53c0   152 0000:53cf
+   153 0000:53da   155 0000:53e5   156 0000:53e7   161 0000:53ee
+   165 0000:53f3   166 0000:53f9   168 0000:540d   169 0000:5412
+   171 0000:5414   175 0000:541d   176 0000:5431   177 0000:543d
+   180 0000:5441   183 0000:5462   185 0000:546d   186 0000:546f
+   192 0000:5476   193 0000:547d   195 0000:5488   197 0000:5493
+   198 0000:5495   205 0000:5496   207 0000:54a2   211 0000:54a7
+   212 0000:54ad   216 0000:54b6   222 0000:54c0   224 0000:54c3
+   225 0000:54cf   226 0000:54de   219 0000:54f9   220 0000:5507
+   228 0000:5509   229 0000:5514   230 0000:5520   232 0000:5527
+   233 0000:552a   238 0000:5530   241 0000:5538   242 0000:5542
+   244 0000:5547   246 0000:5560   247 0000:5562   252 0000:556a
+   264 0000:5575   265 0000:557f   271 0000:5583   272 0000:5595
+   275 0000:55a3   276 0000:55a5   277 0000:55a8   279 0000:55aa
+   280 0000:55ac   281 0000:55af   282 0000:55b1   283 0000:55b3
+   286 0000:55b5   288 0000:55d3   289 0000:55d6   294 0000:55de
+   295 0000:55e6   298 0000:55e8   299 0000:55ee   300 0000:55f7
+   303 0000:55fa   304 0000:55fc   305 0000:5605   306 0000:5608
+   307 0000:560a   308 0000:560d   310 0000:5614   311 0000:5616
+   316 0000:561c   320 0000:5627   321 0000:562d   322 0000:564b
+   326 0000:564f   327 0000:5660   328 0000:5666   329 0000:5670
+   332 0000:5678   333 0000:5685   338 0000:568c   339 0000:568f
+   340 0000:569a   345 0000:569e   346 0000:56a9   348 0000:56ae
+   349 0000:56b1   350 0000:56b3   352 0000:56b5   353 0000:56d4
+   354 0000:56d6   355 0000:56d8   356 0000:56e0   357 0000:56e3
+   358 0000:56f4   359 0000:56f5   360 0000:5708   362 0000:5711
+   363 0000:5714   364 0000:5716   368 0000:5718   369 0000:571a
+   374 0000:5720   375 0000:572b   377 0000:5730   378 0000:5732
+   379 0000:5734   380 0000:5736   382 0000:5738   383 0000:5757
+   384 0000:5759   385 0000:575b   386 0000:576c   387 0000:576f
+   388 0000:5782   390 0000:578b   391 0000:578d   392 0000:578f
+   393 0000:5791   397 0000:5793   398 0000:5795   408 0000:579c
+   409 0000:579e   414 0000:57a0   416 0000:57aa   419 0000:57af
+   420 0000:57ba   421 0000:57c0   423 0000:57c9   425 0000:5815
+   426 0000:5817   432 0000:581c   433 0000:581e   438 0000:5820
+   443 0000:582b   448 0000:5834   449 0000:588a   456 0000:588d
+   457 0000:58a9   458 0000:58af   459 0000:58b5   461 0000:58c1
+   462 0000:58c7   463 0000:58d5   464 0000:58de   465 0000:58e3
+   466 0000:58ec   467 0000:58f1   468 0000:58fa   469 0000:5902
+   471 0000:590b   472 0000:591d   474 0000:5927   475 0000:5940
+   477 0000:5949   478 0000:5957   480 0000:5960   481 0000:596e
+   483 0000:5977   484 0000:5985   485 0000:598d   486 0000:5995
+   488 0000:599d   490 0000:59b0   491 0000:59b6   493 0000:59be
+   494 0000:59cc   495 0000:59d4   496 0000:59e2   498 0000:59ea
+   503 0000:59f8   504 0000:59fb   505 0000:59fd   507 0000:59ff
+   510 0000:5a05   513 0000:5a0f   514 0000:5a11   520 0000:5a18
+   521 0000:5a1a   527 0000:5a1c   528 0000:5a1e   533 0000:5a20
+   537 0000:5a2c   540 0000:5a32   541 0000:5a3c   543 0000:5a42
+   544 0000:5a4d   547 0000:5a59   548 0000:5a60   551 0000:5a69
+   553 0000:5a78   554 0000:5a7f   557 0000:5a83   560 0000:5aad
+   561 0000:5ab8   562 0000:5abd   564 0000:5ac5   565 0000:5ac9
+   570 0000:5ad0   572 0000:5adb   575 0000:5ae0   578 0000:5ae8
+   579 0000:5aee   581 0000:5b01   582 0000:5b09   585 0000:5b14
+   586 0000:5b2c   587 0000:5b32   589 0000:5b37   590 0000:5b42
+   591 0000:5b4b   595 0000:5b51   598 0000:5b59   599 0000:5b71
+   601 0000:5b76   604 0000:5b7e   607 0000:5b8c   617 0000:5b90
+   609 0000:5b96   610 0000:5bbd   612 0000:5bca   613 0000:5bd5
+   615 0000:5bda   619 0000:5be0   620 0000:5be9   623 0000:5bf1
+   624 0000:5bf4   629 0000:5bfe   633 0000:5c07   636 0000:5c0d
+   637 0000:5c40   640 0000:5c4a   643 0000:5c4d   644 0000:5c6c
+   646 0000:5c72   650 0000:5c80   662 0000:5c87   653 0000:5ca1
+   656 0000:5cb9   658 0000:5cd4   659 0000:5cd8   663 0000:5ce1
+   652 0000:5cfc   665 0000:5d01   666 0000:5d08   668 0000:5d13
+   669 0000:5d1e   673 0000:5d24   676 0000:5d2b   677 0000:5d30
+   680 0000:5d44   682 0000:5d5c   683 0000:5d76   684 0000:5d79
+   686 0000:5d8a   687 0000:5d8e   693 0000:5d94   694 0000:5d96
+   700 0000:5d98   701 0000:5d9a   707 0000:5d9c   708 0000:5d9e
+   715 0000:5da0   720 0000:5da6   721 0000:5dae   723 0000:5dd8
+   724 0000:5ddb   729 0000:5de0   733 0000:5de6   736 0000:5dee
+   737 0000:5df1   739 0000:5e11   740 0000:5e14   747 0000:5e18
+   755 0000:5e1e   757 0000:5e21   759 0000:5e27   772 0000:5e3b
+   773 0000:5e46   781 0000:5e53   764 0000:5e60   768 0000:5e76
+   769 0000:5e8e   770 0000:5ea0   775 0000:5ea4   784 0000:5ebe
+   785 0000:5ec9   786 0000:5ecf   787 0000:5ed5   788 0000:5edb
+   789 0000:5ee7   778 0000:5ee9   791 0000:5ef6   792 0000:5f01
+   795 0000:5f04   800 0000:5f08   805 0000:5f0e   807 0000:5f14
+   821 0000:5f28   822 0000:5f33   825 0000:5f4d   826 0000:5f67
+   827 0000:5f74   828 0000:5f78   812 0000:5f7a   816 0000:5f90
+   817 0000:5f9b   818 0000:5fb0   820 0000:5fb2   829 0000:5fbf
+   832 0000:5fc3   833 0000:5fc9   834 0000:5fcf   835 0000:5fd5
+   836 0000:5fd9   839 0000:5fe5   840 0000:5ff0   843 0000:5ff2
+   848 0000:5ff6   849 0000:5ffb   852 0000:5ffd   853 0000:600b
+   855 0000:6017   858 0000:601d   859 0000:6020   860 0000:6022
+   861 0000:6024   862 0000:6026   864 0000:6028   866 0000:602a
+   867 0000:602e   869 0000:6034   870 0000:6043   871 0000:6045
+   873 0000:6051   874 0000:6054   875 0000:6056   876 0000:6058
+   877 0000:605a   879 0000:605c   881 0000:605e   882 0000:6062
+   886 0000:606e   887 0000:6070   892 0000:6076   897 0000:607e
+   898 0000:6084   900 0000:608d   901 0000:60a3   904 0000:60ae
+   907 0000:60c1   908 0000:60c8   909 0000:60d5   911 0000:60e3
+   912 0000:60e5
+
+Line numbers for ret\misc.obj(misc.c) segment _TEXT
+
+    31 0000:60ec    32 0000:60ee    37 0000:60f0    39 0000:60f3
+    40 0000:60f5    42 0000:60f7    47 0000:60fc    50 0000:6100
+    51 0000:6115    52 0000:611c    57 0000:6124    63 0000:612f
+    65 0000:6147    68 0000:614a    69 0000:6164    70 0000:6169
+    71 0000:616b    74 0000:6173    75 0000:617a    80 0000:6182
+    86 0000:6188    87 0000:61ae    88 0000:61b7    91 0000:61bf
+    92 0000:61c5    98 0000:61cc    99 0000:61da   102 0000:61df
+   104 0000:61eb   110 0000:61f2   111 0000:6201   106 0000:6212
+   107 0000:622d   108 0000:6235   114 0000:623a   115 0000:623d
+   120 0000:6246   121 0000:6249   122 0000:6268   127 0000:626c
+   128 0000:6273   129 0000:6275   131 0000:6281   132 0000:6283
+   137 0000:628a   141 0000:628e   143 0000:6291   144 0000:62a8
+   148 0000:62aa   149 0000:62af   150 0000:62ba   152 0000:62c6
+   153 0000:62c7   154 0000:62d2   162 0000:62e6   163 0000:62ed
+   164 0000:62ff   169 0000:6306   174 0000:630d   176 0000:6328
+   179 0000:632d   180 0000:632e   181 0000:6330   182 0000:6333
+   183 0000:6336   184 0000:6338   185 0000:633a   187 0000:633c
+   188 0000:633f   191 0000:6340   193 0000:6346   194 0000:634b
+   195 0000:6355   198 0000:6359   199 0000:6360   204 0000:6368
+   207 0000:636f   208 0000:6379   210 0000:6387   211 0000:638a
+   216 0000:6392   219 0000:6399   222 0000:63a8   225 0000:63b7
+   226 0000:63c2   228 0000:63c7   229 0000:63d6   232 0000:63dc
+   234 0000:63e3   235 0000:63e5   240 0000:63ec   244 0000:63f4
+   245 0000:63ff   248 0000:6401   252 0000:6410   253 0000:6412
+   249 0000:6418   250 0000:6422   251 0000:6425   256 0000:6427
+   258 0000:643a   259 0000:6448   264 0000:6450   268 0000:6457
+   269 0000:6477   271 0000:647b   273 0000:648a   274 0000:648d
+   279 0000:6494   280 0000:6497   281 0000:64a4   287 0000:64aa
+   288 0000:64b5   289 0000:64d0   291 0000:64db   292 0000:64e7
+   297 0000:64f0   301 0000:64fb   302 0000:6502   306 0000:6507
+   310 0000:652a   315 0000:6531   319 0000:653c   322 0000:654d
+   323 0000:6558   326 0000:655a   327 0000:6564   328 0000:6567
+   332 0000:656a   335 0000:656c   336 0000:6578   339 0000:6583
+   340 0000:658e   342 0000:659f   345 0000:65a9   346 0000:65ba
+   347 0000:65c6   348 0000:65c9   352 0000:65ca   355 0000:65d9
+   356 0000:65ec   357 0000:65ef   359 0000:65f2   362 0000:6603
+   363 0000:6623   364 0000:6631   365 0000:664a   369 0000:664e
+   370 0000:6650   375 0000:6658   377 0000:666a   378 0000:6670
+   383 0000:6678   386 0000:6680   387 0000:668a   388 0000:6696
+   389 0000:669b   394 0000:66a4   397 0000:66aa   398 0000:66bf
+   403 0000:66c6   410 0000:66cd   411 0000:66e4   417 0000:66e8
+   418 0000:66ff   421 0000:6704   425 0000:6713   426 0000:6725
+   430 0000:6728   431 0000:673e   440 0000:674c   446 0000:6751
+   447 0000:676a   449 0000:676d   452 0000:676f   454 0000:678a
+   455 0000:6791   459 0000:6796   460 0000:6798   470 0000:67a0
+   471 0000:67a5   477 0000:67a8   478 0000:67ce   479 0000:67db
+   480 0000:67e2   482 0000:67e6   485 0000:67e9   487 0000:67fe
+   488 0000:6803   490 0000:6808   492 0000:6818   493 0000:681e
+   502 0000:6826   507 0000:6834   508 0000:6836   510 0000:683c
+   512 0000:683f   516 0000:6844   519 0000:684f   526 0000:6856
+   527 0000:6857   529 0000:685a   521 0000:686f   522 0000:6889
+   523 0000:688c   524 0000:688f   525 0000:6894   534 0000:689b
+   536 0000:68a0   537 0000:68a1   541 0000:68c2   542 0000:68c3
+   543 0000:68c4   544 0000:68d0   547 0000:68d1   549 0000:68d9
+   553 0000:68e3   558 0000:68ec   561 0000:68ef   562 0000:68f2
+   563 0000:68f6   567 0000:68f8   568 0000:68ff   569 0000:6904
+   570 0000:6909   572 0000:690e   577 0000:6912   581 0000:691a
+   583 0000:691d   586 0000:6924   587 0000:6927   588 0000:692a
+   590 0000:692c   593 0000:6935   594 0000:6937   595 0000:693a
+   596 0000:6940   599 0000:6943   601 0000:695f   602 0000:6962
+   608 0000:696a   609 0000:6974   616 0000:6976   617 0000:6978
+   619 0000:6982   620 0000:698d   625 0000:698e   631 0000:6996
+   632 0000:69b6   634 0000:69bf   635 0000:69c1   640 0000:69ca
+   643 0000:69d2   649 0000:69e1   650 0000:69f6   651 0000:69fe
+   653 0000:6a08   656 0000:6a12   657 0000:6a15   658 0000:6a17
+   660 0000:6a1a   661 0000:6a1c   667 0000:6a24   671 0000:6a28
+   673 0000:6a3c   674 0000:6a4b   676 0000:6a5c   677 0000:6a5f
+   682 0000:6a66   686 0000:6a6e   688 0000:6a7b   690 0000:6a8e
+   693 0000:6a99   694 0000:6a9b   699 0000:6aa4   700 0000:6aab
+   701 0000:6ab5   704 0000:6aba   706 0000:6ac7   707 0000:6ac9
+   708 0000:6acd   709 0000:6acf   713 0000:6ad1   714 0000:6ad3
+   719 0000:6ad8   723 0000:6ae0   725 0000:6ae5   727 0000:6af1
+   730 0000:6af6   732 0000:6b00   733 0000:6b11   734 0000:6b24
+   735 0000:6b27   736 0000:6b2a   738 0000:6b2f   741 0000:6b34
+   742 0000:6b49   743 0000:6b4e   744 0000:6b51   745 0000:6b53
+   746 0000:6b56   753 0000:6b5e   755 0000:6b66   756 0000:6b68
+   758 0000:6b71   761 0000:6b73   762 0000:6b77   763 0000:6b7a
+   764 0000:6bb0   765 0000:6bb4   768 0000:6bb8   770 0000:6bba
+   773 0000:6bbc   774 0000:6bdd   777 0000:6be4   778 0000:6c09
+   780 0000:6c0c   783 0000:6c12   784 0000:6c1e   786 0000:6c2d
+   787 0000:6c33
+
+Line numbers for ret\env.obj(env.c) segment _TEXT
+
+    24 0000:6c3c    29 0000:6c44    32 0000:6c46    35 0000:6c53
+    36 0000:6c5e    37 0000:6c6a    38 0000:6c6e    41 0000:6c71
+    47 0000:6c79    48 0000:6c80    50 0000:6c8d    82 0000:6c94
+    84 0000:6ca2    55 0000:6cb4    62 0000:6cbf    63 0000:6cd1
+    65 0000:6ce3    66 0000:6cf4    69 0000:6d05    72 0000:6d20
+    74 0000:6d2c    75 0000:6d3e    76 0000:6d4f    87 0000:6d55
+    89 0000:6d5c    90 0000:6d71    92 0000:6d76    93 0000:6d82
+    96 0000:6d8d    99 0000:6d8f   101 0000:6d91   105 0000:6d9e
+   106 0000:6da0   109 0000:6dab   113 0000:6db0   114 0000:6dbf
+   115 0000:6dc9   116 0000:6dd3   117 0000:6dd6   122 0000:6de0
+   128 0000:6dec   130 0000:6df2   131 0000:6e04   133 0000:6e09
+   134 0000:6e0f   138 0000:6e16   139 0000:6e19   140 0000:6e2b
+   142 0000:6e31   144 0000:6e3b   146 0000:6e58   147 0000:6e6f
+   149 0000:6e77   150 0000:6e82   152 0000:6e88   156 0000:6ea1
+   158 0000:6eb5   160 0000:6ec1   162 0000:6ec8   163 0000:6ed0
+   165 0000:6ed3   168 0000:6eda   169 0000:6ee1   170 0000:6ee7
+   171 0000:6ee9   175 0000:6eec   178 0000:6ef1   179 0000:6ef7
+   181 0000:6f09   185 0000:6f22   187 0000:6f3e   188 0000:6f4d
+   190 0000:6f55   195 0000:6f61   196 0000:6f6a   203 0000:6f72
+   207 0000:6f7d   209 0000:6f85   210 0000:6f8b   212 0000:6f95
+   213 0000:6fa7   215 0000:6fac   217 0000:6fae   220 0000:6fbe
+   221 0000:6fd9   224 0000:6fdb   225 0000:6fe9   228 0000:6ffe
+   229 0000:700d   230 0000:7010   232 0000:7017   233 0000:701a
+   238 0000:7020   241 0000:702c   243 0000:7036   244 0000:703f
+   249 0000:7049   252 0000:7059   253 0000:706a   254 0000:7077
+   256 0000:7079   260 0000:707f   261 0000:708e   263 0000:70a1
+   266 0000:70ad   267 0000:70c7   269 0000:70dc   270 0000:70ec
+   271 0000:70f2   273 0000:70fc   274 0000:7100   281 0000:7108
+   285 0000:7110   307 0000:713c   289 0000:7147   290 0000:714a
+   295 0000:714f   296 0000:715a   297 0000:715b   298 0000:7160
+   299 0000:7161   303 0000:7164   304 0000:7179   309 0000:718b
+   310 0000:718d   315 0000:7196   324 0000:719e   325 0000:71b3
+   327 0000:71c4   328 0000:71c6   332 0000:71dc   333 0000:71e1
+   334 0000:71e2   335 0000:71ed   337 0000:71ff   338 0000:7207
+   342 0000:7208   344 0000:720e   347 0000:721a   351 0000:7229
+   354 0000:7232   357 0000:7242   360 0000:7252   362 0000:7257
+   363 0000:726e   371 0000:7270   372 0000:728f   375 0000:729b
+   376 0000:72a1   378 0000:72b5   381 0000:72bf   387 0000:72c6
+   391 0000:72d9   392 0000:72e5   396 0000:72ee   397 0000:72f4
+   399 0000:730e   400 0000:7310   405 0000:731a   408 0000:7322
+   409 0000:732d   411 0000:732e   412 0000:7332   417 0000:733a
+   420 0000:733e   423 0000:734e   424 0000:7350
+
+Line numbers for ret\batch.obj(batch.c) segment _TEXT
+
+    46 0000:7358    51 0000:7366    52 0000:736d    55 0000:737a
+    58 0000:7388    61 0000:73a4    64 0000:73ab    65 0000:73b2
+    66 0000:73b5    67 0000:73b7    75 0000:73bc    79 0000:73d9
+    80 0000:73fe    81 0000:7402    83 0000:7408    86 0000:740d
+    90 0000:7436    92 0000:744f    93 0000:7450    97 0000:7489
+   100 0000:748d   103 0000:749d   104 0000:74a4   105 0000:74aa
+   106 0000:74b0   110 0000:74b6   113 0000:74c1   116 0000:74d0
+   118 0000:74d7   119 0000:74dc   120 0000:74e1   123 0000:74e4
+   124 0000:74ea   125 0000:74f0   126 0000:74f6   127 0000:74f8
+   129 0000:74fb   130 0000:74fd   136 0000:7504   137 0000:750b
+   138 0000:7510   140 0000:7519   141 0000:751e   142 0000:7527
+   145 0000:752c   150 0000:7532   154 0000:7534   156 0000:7545
+   157 0000:7549   159 0000:7566   163 0000:7577   164 0000:758a
+   168 0000:7594   171 0000:759c   172 0000:75a0   178 0000:75a4
+   181 0000:75ab   182 0000:75b1   183 0000:75d8   185 0000:75eb
+   186 0000:75f9   188 0000:760c   189 0000:761a   191 0000:761c
+   194 0000:762f   195 0000:7631   200 0000:7636   206 0000:763f
+   210 0000:7645   213 0000:7654   215 0000:7694   219 0000:769e
+   221 0000:76a7   222 0000:76c5   224 0000:76d9   229 0000:76e2
+   230 0000:76f0   232 0000:76fd   233 0000:770a   234 0000:7716
+   235 0000:771b   239 0000:7721   240 0000:7738   243 0000:773d
+   247 0000:7743   248 0000:7749   249 0000:7754   245 0000:7755
+   252 0000:7768   255 0000:7785   260 0000:77a1   262 0000:77bc
+   264 0000:77d9   267 0000:77ed   268 0000:77ff   269 0000:7805
+   274 0000:7808   275 0000:7817   277 0000:782d   281 0000:7832
+   282 0000:7836   283 0000:7839   284 0000:783b   285 0000:783e
+   289 0000:7841   290 0000:7850   293 0000:785a   295 0000:7881
+   297 0000:7894   298 0000:78a0   299 0000:78a7   301 0000:78b1
+   302 0000:78b5   308 0000:78bc   310 0000:78bf   312 0000:78cc
+   315 0000:78d7   316 0000:78da   321 0000:78de   327 0000:78ea
+   330 0000:78fb   331 0000:78fd   334 0000:7903   335 0000:791e
+   338 0000:7926   339 0000:792b   342 0000:792c   343 0000:7935
+   352 0000:793a   353 0000:7958   349 0000:797c   355 0000:799c
+   357 0000:799f   358 0000:79b2   363 0000:79bc   376 0000:79c7
+   377 0000:79d8   381 0000:79e0   382 0000:79fa   386 0000:79ff
+   388 0000:7a0e   390 0000:7a14   394 0000:7a29   399 0000:7a2e
+   400 0000:7a46   401 0000:7a4c   404 0000:7a54   405 0000:7a62
+   408 0000:7a6e   410 0000:7a7d   411 0000:7a8a   413 0000:7a8f
+   415 0000:7aa8   419 0000:7aca   424 0000:7aee   425 0000:7af0
+   430 0000:7afe   431 0000:7b33   433 0000:7b40   436 0000:7b48
+   441 0000:7b51   442 0000:7b55   443 0000:7b5c   444 0000:7b60
+   445 0000:7b67   446 0000:7b6b   447 0000:7b72   448 0000:7b76
+   449 0000:7b7d   450 0000:7b81   451 0000:7b88   454 0000:7b8c
+   438 0000:7b92   439 0000:7b97   440 0000:7b9c   453 0000:7b9e
+   456 0000:7ba5   465 0000:7bbf   466 0000:7bd5   467 0000:7bda
+   468 0000:7bdc   472 0000:7bde   474 0000:7bf4   476 0000:7bf6
+   481 0000:7c07   484 0000:7c0e   485 0000:7c10   487 0000:7c16
+   488 0000:7c19   497 0000:7c21   500 0000:7c49   501 0000:7c51
+   503 0000:7c5a   507 0000:7c5f   509 0000:7c81   512 0000:7c83
+   513 0000:7c8e   516 0000:7c91   517 0000:7cb3   518 0000:7cb5
+   519 0000:7cbf   525 0000:7cc9   526 0000:7cd2   547 0000:7cec
+   548 0000:7cfb   550 0000:7d0e   554 0000:7d18   555 0000:7d27
+   560 0000:7d4d   561 0000:7d6d   563 0000:7d8c   564 0000:7d9d
+   566 0000:7da3   569 0000:7dc5   571 0000:7dd3   574 0000:7df2
+   575 0000:7df5   577 0000:7dfc   580 0000:7e1b   584 0000:7e36
+   585 0000:7e45   587 0000:7e6c   589 0000:7e97   594 0000:7ea7
+   595 0000:7eae   598 0000:7ee1   601 0000:7ef2   602 0000:7f03
+   604 0000:7f25   607 0000:7f47   609 0000:7f73   611 0000:7f92
+   613 0000:7fd3   620 0000:7fe3   625 0000:7fe9   629 0000:800b
+   630 0000:800f   631 0000:8014   633 0000:8018   639 0000:801f
+   642 0000:8028   643 0000:802e   646 0000:8032   647 0000:8038
+   648 0000:8041   651 0000:8047   658 0000:804e   663 0000:8056
+   664 0000:8061   671 0000:8066   672 0000:8072   673 0000:8090
+   668 0000:80b2   675 0000:80c9   677 0000:80cc   678 0000:80de
+   683 0000:80e4   684 0000:80e9   687 0000:80ef   688 0000:80f8
+   689 0000:8105   690 0000:810e   692 0000:811b   694 0000:8120
+   696 0000:8129   697 0000:812b   702 0000:8132   704 0000:8138
+   706 0000:8142   707 0000:8148   710 0000:8158   712 0000:8179
+   713 0000:817b   718 0000:8180   722 0000:8187   725 0000:819e
+   727 0000:81ad   728 0000:81ba   729 0000:81c4   730 0000:81d9
+   731 0000:81eb   734 0000:81f9   735 0000:81fb   741 0000:8200
+   743 0000:8207   744 0000:820e   747 0000:8213   748 0000:8219
+   749 0000:821f   752 0000:822b   755 0000:823a   756 0000:8241
+   757 0000:8245   758 0000:824a   759 0000:824c   760 0000:8250
+   766 0000:8265   767 0000:826c   769 0000:8270   772 0000:8297
+   775 0000:829e   776 0000:82ad   779 0000:82b1   780 0000:82b6
+   782 0000:82cb   783 0000:82cd   787 0000:82d2   788 0000:82db
+   794 0000:82e2   801 0000:82ee   802 0000:82fb   804 0000:8305
+   805 0000:8309   808 0000:8319   809 0000:8336   811 0000:833c
+   812 0000:8345   814 0000:8355   815 0000:8357   818 0000:8363
+   819 0000:8368   822 0000:8371   824 0000:8378   829 0000:8388
+   830 0000:8392   831 0000:8397   832 0000:839a   834 0000:839f
+   835 0000:83a9   826 0000:83b3   839 0000:83ba   840 0000:83cc
+   841 0000:83d6   842 0000:83d9   844 0000:8404   846 0000:842c
+   847 0000:8437   852 0000:843e   854 0000:8446   856 0000:844b
+   857 0000:8451   860 0000:845a   861 0000:8472   863 0000:8478
+   864 0000:8488   867 0000:848b   869 0000:8496   870 0000:8499
+   871 0000:849c   872 0000:849e   873 0000:84a0   874 0000:84a2
+   875 0000:84a4   877 0000:84a6   880 0000:84a9   882 0000:84b0
+   883 0000:84c3   889 0000:84ca   890 0000:84cc   895 0000:84ce
+   898 0000:84d9   899 0000:84f6   902 0000:850d   903 0000:8510
+   910 0000:8516   911 0000:8526   913 0000:8531   917 0000:8541
+   922 0000:8542   926 0000:854c   927 0000:8579   929 0000:8582
+   931 0000:858b   932 0000:8591   934 0000:859b   935 0000:859d
+   941 0000:85a2   943 0000:85ac   946 0000:85b1   947 0000:85de
+   949 0000:85eb   950 0000:85f6   952 0000:85ff   954 0000:860d
+   955 0000:860f   960 0000:8614   965 0000:861b   966 0000:862e
+   969 0000:863b   970 0000:8645   971 0000:869e   973 0000:86a3
+   975 0000:86c4   976 0000:86c6   981 0000:86cc   986 0000:86cd
+   987 0000:86e0   989 0000:86ec   992 0000:86fa   993 0000:8710
+   995 0000:8722   998 0000:8733   999 0000:8759  1000 0000:876d
+  1002 0000:8780  1003 0000:8782  1010 0000:8784  1011 0000:878a
+  1014 0000:87a2  1015 0000:87a4  1017 0000:87b2  1018 0000:87b9
+  1020 0000:87bc  1021 0000:87be  1027 0000:87c2  1028 0000:87c4
+  1033 0000:87c6  1036 0000:87ce  1037 0000:87d3  1040 0000:87df
+  1041 0000:8803  1051 0000:882f  1052 0000:8831
+
+Line numbers for ret\error.obj(error.c) segment _TEXT
+
+    14 0000:8838    17 0000:883f    19 0000:8851    25 0000:8858
+    28 0000:8863    29 0000:886a    32 0000:8873    33 0000:887d
+    21 0000:8883    22 0000:8888    34 0000:8891    36 0000:889b
+    37 0000:889e    42 0000:88a6    46 0000:88b4    47 0000:88ba
+    48 0000:88c4    49 0000:88de    50 0000:88e0    53 0000:88ed
+    54 0000:88f1    55 0000:8900    57 0000:890a    58 0000:890d
+
+Line numbers for ret\screenio.obj(screenio.c) segment _TEXT
+
+    35 0000:8916    36 0000:8920    37 0000:892a    38 0000:8934
+    42 0000:893e    46 0000:8964    47 0000:8977    51 0000:897c
+    55 0000:8987    56 0000:8988    57 0000:898a    58 0000:898c
+    59 0000:898f    60 0000:8991    61 0000:8992    66 0000:8995
+    70 0000:899b    71 0000:89a0    73 0000:89a5    74 0000:89b3
+    75 0000:89b9    80 0000:89c2    83 0000:89d8    86 0000:89df
+    87 0000:89e1    96 0000:89e6   104 0000:89f1   111 0000:89f7
+   114 0000:8a02   117 0000:8a05   119 0000:8a0b   120 0000:8a11
+   125 0000:8a17   129 0000:8a1b   132 0000:8a2e   135 0000:8a34
+   136 0000:8a3f   138 0000:8a42   142 0000:8a52   143 0000:8a5a
+   145 0000:8a5d   146 0000:8a65   147 0000:8a6b   149 0000:8a6c
+   150 0000:8a74   151 0000:8a79   153 0000:8a7a   154 0000:8a82
+   156 0000:8a86   158 0000:8a93   160 0000:8aa0   161 0000:8aa5
+   163 0000:8aae   166 0000:8aaf   167 0000:8ab7   168 0000:8abb
+   169 0000:8ac6   170 0000:8aca   173 0000:8ace   176 0000:8ad1
+   177 0000:8aef   179 0000:8af2   182 0000:8af5   183 0000:8afb
+   186 0000:8b0d   187 0000:8b12   188 0000:8b16   189 0000:8b1a
+   192 0000:8b24   195 0000:8b2f   196 0000:8b32   201 0000:8b3a
+   206 0000:8b42   207 0000:8b48   208 0000:8b4d   209 0000:8b53
+   212 0000:8b59   213 0000:8b5f   216 0000:8b6f   217 0000:8b79
+   220 0000:8b83   221 0000:8b8b   222 0000:8b94   226 0000:8b9a
+   229 0000:8b9f   230 0000:8bb0   235 0000:8bb8   238 0000:8bbd
+   243 0000:8bcd   245 0000:8bd5   247 0000:8bd7   249 0000:8bdd
+   250 0000:8be2   251 0000:8be4   252 0000:8be6   255 0000:8be8
+   256 0000:8bfb   258 0000:8bff   259 0000:8c0a   264 0000:8c12
+   267 0000:8c19   270 0000:8c1b   272 0000:8c25   273 0000:8c2f
+   274 0000:8c35   279 0000:8c3c   281 0000:8c43   282 0000:8c45
+   289 0000:8c4c   290 0000:8c53   293 0000:8c58   294 0000:8c6f
+   299 0000:8c70   304 0000:8c71   305 0000:8c7e   307 0000:8c81
+   308 0000:8c83   313 0000:8c86   317 0000:8c8c   321 0000:8c92
+   322 0000:8c98   324 0000:8c9d   328 0000:8cb0   329 0000:8ccd
+   330 0000:8cd1   331 0000:8cd5   335 0000:8cd9   336 0000:8cdc
+   337 0000:8cdf   338 0000:8ce2   339 0000:8ce3   340 0000:8ce5
+   343 0000:8ce6   348 0000:8cec   352 0000:8cf2   353 0000:8cf5
+   354 0000:8cf8   355 0000:8cf9   356 0000:8cfb   357 0000:8cfc
+   358 0000:8cff   359 0000:8d02   360 0000:8d05   363 0000:8d08
+   364 0000:8d10   367 0000:8d16   368 0000:8d1d   369 0000:8d23
+   372 0000:8d29   377 0000:8d2e   381 0000:8d3c   382 0000:8d3e
+   383 0000:8d40   384 0000:8d41   385 0000:8d43   386 0000:8d44
+   388 0000:8d47   392 0000:8d4e   393 0000:8d57   394 0000:8d60
+   395 0000:8d64   398 0000:8d68   399 0000:8d73
+
+Line numbers for ret\input.obj(input.c) segment _TEXT
+
+    32 0000:8d7c    36 0000:8d8b    40 0000:8d91    42 0000:8d95
+    44 0000:8d9d    47 0000:8da5    49 0000:8dbf    50 0000:8dc5
+    51 0000:8dc6    55 0000:8dcb    56 0000:8dd6    57 0000:8ded
+    59 0000:8def    62 0000:8df5   164 0000:8e25   165 0000:8e30
+    65 0000:8e37    66 0000:8e3c    67 0000:8e3d    70 0000:8e3f
+    75 0000:8e46    76 0000:8e4a    77 0000:8e50    78 0000:8e54
+    81 0000:8e55    82 0000:8e6b    83 0000:8e72    88 0000:8e85
+    89 0000:8e92    90 0000:8e98    92 0000:8e9f    95 0000:8ea5
+    96 0000:8eac    97 0000:8eb3    98 0000:8ec7    99 0000:8ec9
+   102 0000:8eda   110 0000:8eec   111 0000:8ef3   112 0000:8f00
+   104 0000:8f11   105 0000:8f18   114 0000:8f27   115 0000:8f31
+   116 0000:8f39   117 0000:8f41   127 0000:8f44   128 0000:8f4f
+   129 0000:8f53   132 0000:8f54   133 0000:8f73   135 0000:8fa9
+   136 0000:8fb0   140 0000:8fbd   141 0000:8fc2   143 0000:8fd2
+   145 0000:8fdc   146 0000:8fe3   147 0000:8fea   148 0000:9002
+   149 0000:9004   150 0000:901a   151 0000:901c   152 0000:9023
+   153 0000:9033   154 0000:9035   158 0000:9044   159 0000:9059
+   168 0000:905d   170 0000:905e   173 0000:906c   174 0000:9072
+   176 0000:9078   178 0000:9085   186 0000:9092   190 0000:9098
+   191 0000:90a5
+
+Line numbers for ret\output.obj(output.c) segment _TEXT
+
+    39 0000:90aa    45 0000:90b2    47 0000:90b9    50 0000:90c7
+    48 0000:90d4    52 0000:90d9    53 0000:90e3    55 0000:90eb
+    56 0000:90f0    58 0000:9105    59 0000:910a    61 0000:9118
+    62 0000:911d    66 0000:9126    68 0000:9131    72 0000:9135
+    73 0000:913f    74 0000:9140    79 0000:9144    80 0000:914d
+    82 0000:914e    84 0000:9153    85 0000:9157    86 0000:9162
+    88 0000:9164    92 0000:9179    93 0000:917f    94 0000:9181
+    96 0000:9186    97 0000:9189   102 0000:9192   108 0000:919c
+   110 0000:91a2   136 0000:91a4   137 0000:91a8   139 0000:91ab
+   140 0000:91af   142 0000:91b2   143 0000:91f2   113 0000:91fb
+   116 0000:9203   117 0000:920b   118 0000:9210   119 0000:9215
+   120 0000:9219   123 0000:921f   124 0000:9232   127 0000:9235
+   128 0000:923d   129 0000:9240   131 0000:924f   134 0000:9253
+   160 0000:928a   146 0000:928f   149 0000:92e3   152 0000:931b
+   153 0000:932c   155 0000:932f   163 0000:9357   165 0000:935d
+   166 0000:9363   171 0000:936a   175 0000:9370   176 0000:937d
+   181 0000:9382   188 0000:9389   189 0000:93a8   194 0000:93ac
+   195 0000:93b3   196 0000:93c3   201 0000:93ca   202 0000:93d1
+   203 0000:93d8   204 0000:93df   209 0000:93e6   210 0000:93e9
+   211 0000:93f7
+
+Line numbers for ret\lines.obj(lines.c) segment _TEXT
+
+   149 0000:93fe   151 0000:9408   153 0000:940d   154 0000:942f
+   156 0000:943a   157 0000:947a   162 0000:9480   164 0000:948b
+   167 0000:9499   169 0000:94bf   171 0000:94cc   177 0000:94d0
+   173 0000:94db   174 0000:94fd   180 0000:9506   181 0000:950c
+   182 0000:9511   183 0000:951f   185 0000:9524   186 0000:9544
+   188 0000:954e   189 0000:9554   191 0000:9569   192 0000:9583
+   194 0000:959d   195 0000:95a3   196 0000:95a8   197 0000:95b0
+   199 0000:95b5   200 0000:95d0   202 0000:95eb   203 0000:95ed
+   208 0000:95f4   212 0000:95fc   213 0000:9609   215 0000:960f
+   216 0000:9615   218 0000:961c   226 0000:9630   227 0000:9636
+   228 0000:9639   229 0000:9642   230 0000:9651   231 0000:9654
+   233 0000:9663   235 0000:9666   237 0000:96a7   239 0000:96b6
+   241 0000:96c0   242 0000:96c4   243 0000:96db   244 0000:96e2
+   248 0000:96e6   250 0000:96f4   251 0000:96f8   252 0000:970e
+   253 0000:9715   257 0000:9719   259 0000:9723   260 0000:9727
+   261 0000:973e   262 0000:9745   266 0000:9749   268 0000:9757
+   269 0000:975b   270 0000:9771   271 0000:9778   276 0000:977c
+   278 0000:9787   280 0000:9794   281 0000:979a   282 0000:97a5
+   284 0000:97a7   287 0000:97b2   222 0000:97b8   289 0000:97c4
+   290 0000:97c6   296 0000:97ce   301 0000:97d2   302 0000:97eb
+   307 0000:97f2   308 0000:97f5   309 0000:980d
+
+Line numbers for ret\baterrs.obj(baterrs.ASM) segment _TEXT
+
+   130 0000:9d73   134 0000:9d76   135 0000:9d78   136 0000:9d7b
+   137 0000:9d7e   138 0000:9d80   139 0000:9d82   140 0000:9d84
+   157 0000:9d88   158 0000:9d8a   159 0000:9d8c   160 0000:9d90
+   161 0000:9d93   162 0000:9d95   163 0000:9d99   166 0000:9d9a
+   184 0000:9d9b   186 0000:9d9c   187 0000:9d9e   188 0000:9da1
+   189 0000:9da3   190 0000:9da5   191 0000:9da7   192 0000:9da9
+   193 0000:9dab   194 0000:9dad   195 0000:9db0   197 0000:9db2
+   198 0000:9db3   200 0000:9db5   201 0000:9db6   203 0000:9db7
+   204 0000:9db8
+
+Line numbers for ret\batutil.obj(batutil.ASM) segment _TEXT
+
+    49 0000:9dba    50 0000:9dbc    51 0000:9dbe    52 0000:9dc0
+    53 0000:9dc2    54 0000:9dc4    55 0000:9dc6    56 0000:9dc8
+    58 0000:9dcb    69 0000:9dcc    70 0000:9dcf    71 0000:9dd1
+    72 0000:9dd3    73 0000:9dd5    75 0000:9dd7    76 0000:9dd9
+    77 0000:9ddb    92 0000:9ddc    96 0000:9ddf    97 0000:9de1
+    98 0000:9de3    99 0000:9de7   100 0000:9deb   101 0000:9dee
+   102 0000:9df1   103 0000:9df2   104 0000:9df4   105 0000:9df6
+   106 0000:9dfa   107 0000:9dfc   108 0000:9dfe   109 0000:9e01
+   110 0000:9e03   111 0000:9e05   113 0000:9e07   115 0000:9e09
+   116 0000:9e0b   133 0000:9e0f   134 0000:9e10   135 0000:9e12
+   136 0000:9e13   137 0000:9e14   138 0000:9e15   139 0000:9e16
+   140 0000:9e19   141 0000:9e1c   143 0000:9e1e   144 0000:9e21
+   145 0000:9e22   146 0000:9e23   147 0000:9e24   148 0000:9e25
+   149 0000:9e28   150 0000:9e2a   151 0000:9e2d   154 0000:9e2f
+   155 0000:9e32   158 0000:9e34   159 0000:9e37   161 0000:9e39
+   162 0000:9e3b   163 0000:9e3d   164 0000:9e40   167 0000:9e42
+   168 0000:9e44   169 0000:9e46   170 0000:9e48   171 0000:9e4a
+   172 0000:9e4d   175 0000:9e4f   177 0000:9e52   178 0000:9e53
+   195 0000:9e54   196 0000:9e56   197 0000:9e5b   198 0000:9e5f
+   199 0000:9e63   200 0000:9e66   201 0000:9e68   202 0000:9e6a
+   206 0000:9e6c   207 0000:9e72   208 0000:9e77   209 0000:9e7a
+   210 0000:9e7f   211 0000:9e85   212 0000:9e87   213 0000:9e8a
+   215 0000:9e8c   216 0000:9e8f   217 0000:9e92   218 0000:9e95
+   219 0000:9e98   220 0000:9e9b   221 0000:9e9e   222 0000:9ea1
+   223 0000:9ea6   224 0000:9ea7   225 0000:9eaa   226 0000:9eab
+   227 0000:9ead   228 0000:9eb0   230 0000:9eb2   232 0000:9eb5
+   244 0000:9eb6   245 0000:9ebb   246 0000:9ebd   247 0000:9ec0
+   248 0000:9ec3   249 0000:9ec5   250 0000:9ec8   251 0000:9eca
+   252 0000:9ecd   254 0000:9ecf   256 0000:9ed1   270 0000:9ed2
+   274 0000:9ed5   275 0000:9eda   276 0000:9edc   277 0000:9edf
+   278 0000:9ee2   280 0000:9ee4   281 0000:9ee6   282 0000:9eea
+   283 0000:9eec   284 0000:9eee   286 0000:9ef0   287 0000:9ef3
+   288 0000:9ef5   289 0000:9ef7   291 0000:9ef9   292 0000:9efb
+   294 0000:9efd   295 0000:9f00   296 0000:9f02   297 0000:9f06
+   299 0000:9f0a   300 0000:9f0c   301 0000:9f0f   303 0000:9f13
+   304 0000:9f15   305 0000:9f17   306 0000:9f1a   308 0000:9f1c
+   309 0000:9f1d   310 0000:9f1f   311 0000:9f23   313 0000:9f24
+   314 0000:9f27   316 0000:9f29   317 0000:9f2b   319 0000:9f2f
+   335 0000:9f34   340 0000:9f37   341 0000:9f38   342 0000:9f3b
+   343 0000:9f3d   344 0000:9f40   345 0000:9f43   347 0000:9f45
+   348 0000:9f48   349 0000:9f4b   350 0000:9f4d   351 0000:9f4e
+   352 0000:9f50   353 0000:9f52   354 0000:9f54   355 0000:9f55
+   356 0000:9f57   357 0000:9f59   358 0000:9f5b   359 0000:9f5d
+   363 0000:9f5f   365 0000:9f64   366 0000:9f69   369 0000:9f6b
+   370 0000:9f70   371 0000:9f73   373 0000:9f75   374 0000:9f77
+   375 0000:9f79   376 0000:9f7b   378 0000:9f7d   379 0000:9f7e
+   380 0000:9f82   381 0000:9f84   382 0000:9f86   383 0000:9f88
+   384 0000:9f8a   385 0000:9f8c   386 0000:9f8e   387 0000:9f90
+   389 0000:9f92   390 0000:9f96   393 0000:9f98   394 0000:9f9b
+   396 0000:9f9d   397 0000:9fa0   400 0000:9fa2   401 0000:9fa4
+   402 0000:9fa6   403 0000:9fa8   405 0000:9faa   420 0000:9fae
+   425 0000:9fb1   426 0000:9fb3   427 0000:9fb5   428 0000:9fb8
+   429 0000:9fbb   430 0000:9fbd   449 0000:9fc1   458 0000:9fc4
+   459 0000:9fc7   460 0000:9fca   461 0000:9fcd   462 0000:9fd0
+   464 0000:9fd3   465 0000:9fd7   466 0000:9fd9   467 0000:9fdc
+   468 0000:9fdf   470 0000:9fe1   471 0000:9fe3   473 0000:9fe6
+   475 0000:9fe8   491 0000:9fec   496 0000:9fef   497 0000:9ff0
+   498 0000:9ff3   499 0000:9ff6   501 0000:9ff9   502 0000:9ffd
+   503 0000:9fff   505 0000:a001   506 0000:a002   507 0000:a004
+   508 0000:a006   510 0000:a007   511 0000:a008   512 0000:a00a
+   514 0000:a00c   515 0000:a00f   516 0000:a010   517 0000:a012
+   518 0000:a013   534 0000:a017   541 0000:a01a   542 0000:a01b
+   543 0000:a01e   544 0000:a021   546 0000:a024   547 0000:a027
+   548 0000:a02a   549 0000:a02d   550 0000:a02e   576 0000:a032
+   577 0000:a033   578 0000:a036   579 0000:a038   580 0000:a03a
+   581 0000:a03c   582 0000:a03f   583 0000:a041   584 0000:a044
+   585 0000:a046   586 0000:a048   587 0000:a04a   588 0000:a04c
+   591 0000:a04e   592 0000:a050   593 0000:a052   594 0000:a054
+   595 0000:a057   597 0000:a059   598 0000:a05a   599 0000:a05d
+   601 0000:a05f   602 0000:a063   605 0000:a064   606 0000:a067
+   607 0000:a069   608 0000:a06c   610 0000:a06e   611 0000:a071
+   613 0000:a073   614 0000:a076   616 0000:a078   617 0000:a07b
+   619 0000:a07d   620 0000:a080   623 0000:a082   624 0000:a084
+   625 0000:a086   626 0000:a088   627 0000:a08a   628 0000:a08c
+   630 0000:a08e   632 0000:a091   633 0000:a092   650 0000:a093
+   657 0000:a096   659 0000:a098   660 0000:a09b   661 0000:a09e
+   662 0000:a0a1   663 0000:a0a4   664 0000:a0a9   667 0000:a0ac
+   668 0000:a0ad   669 0000:a0af   670 0000:a0b1   671 0000:a0b4
+   672 0000:a0b7   674 0000:a0b9   675 0000:a0bb   694 0000:a0bf
+   695 0000:a0c6   696 0000:a0cd   697 0000:a0d4   698 0000:a0d6
+   699 0000:a0d8   700 0000:a0dc   701 0000:a0e0   703 0000:a0e2
+   704 0000:a0e4   705 0000:a0e6   706 0000:a0e8   707 0000:a0ed
+   708 0000:a0ee   709 0000:a0f1   710 0000:a0f7   711 0000:a0f9
+   712 0000:a0fd   713 0000:a100   714 0000:a104   716 0000:a107
+   717 0000:a109   719 0000:a10b   720 0000:a10c   721 0000:a10e
+   741 0000:a10f   742 0000:a112   743 0000:a114   744 0000:a116
+   745 0000:a11b   746 0000:a11e   747 0000:a121   748 0000:a123
+   750 0000:a125   751 0000:a12a   752 0000:a12f   753 0000:a131
+   754 0000:a136   755 0000:a138   756 0000:a13d   757 0000:a13f
+   758 0000:a141   760 0000:a143   761 0000:a144   762 0000:a146
+   763 0000:a148   765 0000:a149   766 0000:a14a   767 0000:a14c
+   768 0000:a14e   770 0000:a150   771 0000:a151   773 0000:a152
+   774 0000:a157   775 0000:a159
+
+Line numbers for ret\exec.obj(exec.ASM) segment _TEXT
+
+   198 0000:a163   200 0000:a167   201 0000:a16d   202 0000:a173
+   206 0000:a179   207 0000:a17b   208 0000:a183   211 0000:a185
+   213 0000:a18a   214 0000:a18c   215 0000:a194   218 0000:a196
+   219 0000:a199   223 0000:a19b   224 0000:a19d   225 0000:a1a1
+   227 0000:a1a3   228 0000:a1a7   230 0000:a1a9   231 0000:a1ab
+   232 0000:a1af   233 0000:a1b2   234 0000:a1b7   236 0000:a1b9
+   238 0000:a1bc   239 0000:a1c1   241 0000:a1c9   242 0000:a1cb
+   243 0000:a1cf   244 0000:a1d4   246 0000:a1d6   248 0000:a1da
+   249 0000:a1de   251 0000:a1e0   252 0000:a1e3   254 0000:a1e5
+   257 0000:a1e7   258 0000:a1ed   260 0000:a1ef   261 0000:a1f3
+   262 0000:a1f6   263 0000:a1fc   264 0000:a1fd   267 0000:a1ff
+   269 0000:a201   270 0000:a206   273 0000:a208   276 0000:a20a
+   277 0000:a20b   278 0000:a20f   279 0000:a212   281 0000:a214
+   282 0000:a218   284 0000:a21e   286 0000:a21f   287 0000:a220
+   288 0000:a222   289 0000:a226   290 0000:a227   292 0000:a229
+   295 0000:a22c   298 0000:a230   316 0000:a231   319 0000:a233
+   320 0000:a234   323 0000:a235   324 0000:a239   325 0000:a23a
+   326 0000:a23d   327 0000:a240   328 0000:a242   330 0000:a244
+   332 0000:a245   333 0000:a249   335 0000:a24b   336 0000:a24e
+   338 0000:a250   339 0000:a253   341 0000:a255   344 0000:a257
+   346 0000:a25c   347 0000:a262   349 0000:a264   350 0000:a265
+   353 0000:a266   354 0000:a26a   356 0000:a26c   357 0000:a26d
+   358 0000:a26f   359 0000:a270   362 0000:a272   363 0000:a273
+   364 0000:a274   365 0000:a276   367 0000:a27b   368 0000:a27c
+   372 0000:a27e   373 0000:a282   376 0000:a284   377 0000:a285
+   380 0000:a286   381 0000:a287   383 0000:a288   384 0000:a28b
+   387 0000:a28d   389 0000:a291   390 0000:a294   392 0000:a296
+   393 0000:a298   395 0000:a29a   398 0000:a29c   399 0000:a2a1
+   402 0000:a2a3   403 0000:a2a6   406 0000:a2a8   408 0000:a2aa
+   410 0000:a2ac   432 0000:a2ad   433 0000:a2b3   434 0000:a2b5
+   435 0000:a2b8   436 0000:a2ba   437 0000:a2bc   439 0000:a2c1
+   440 0000:a2c7   443 0000:a2c9   444 0000:a2ce   462 0000:a2cf
+   463 0000:a2d0   464 0000:a2d6   465 0000:a2d8   466 0000:a2da
+   468 0000:a2df   469 0000:a2e5   472 0000:a2e7   473 0000:a2ec
+   608 0000:a2f7   609 0000:a2f8   610 0000:a2f9   611 0000:a2fa
+   612 0000:a2fe   613 0000:a301   616 0000:a303   619 0000:a307
+   620 0000:a30b   621 0000:a30e   622 0000:a310   623 0000:a311
+   625 0000:a313   626 0000:a315   628 0000:a319   629 0000:a31d
+   631 0000:a321   632 0000:a323   634 0000:a327   635 0000:a32b
+   637 0000:a32f   638 0000:a330   640 0000:a332   641 0000:a335
+   642 0000:a337   644 0000:a33b   646 0000:a33d   647 0000:a340
+   648 0000:a342   649 0000:a346   686 0000:a347   687 0000:a348
+   690 0000:a349   708 0000:a34a   710 0000:a350   712 0000:a351
+   713 0000:a352   716 0000:a353   717 0000:a357   719 0000:a35b
+   720 0000:a35d   722 0000:a361   725 0000:a366   727 0000:a36b
+   728 0000:a36c   729 0000:a370   730 0000:a374   732 0000:a379
+   733 0000:a37d   738 0000:a381   740 0000:a382   743 0000:a383
+   762 0000:a384   763 0000:a385   764 0000:a387   767 0000:a38c
+   769 0000:a391   772 0000:a393   773 0000:a394   791 0000:a395
+   792 0000:a39a   793 0000:a39e   795 0000:a3a1   796 0000:a3a3
+   799 0000:a3a7   800 0000:a3ab   802 0000:a3af   803 0000:a3b0
+   806 0000:a3b4   807 0000:a3b8   808 0000:a3ba   809 0000:a3be
+   812 0000:a3bf   823 0000:a3c0   825 0000:a3c1   827 0000:a3c4
+   828 0000:a3c6   830 0000:a3c9   831 0000:a3cf   832 0000:a3d0
+   835 0000:a3d5   836 0000:a3d9   841 0000:a3de   842 0000:a3e2
+   843 0000:a3e7   844 0000:a3e9   845 0000:a3ec   846 0000:a3ee
+   849 0000:a3f1   851 0000:a3f4   856 0000:a3f6   857 0000:a3fb
+   858 0000:a3fe   859 0000:a400   861 0000:a404   862 0000:a406
+   868 0000:a409   869 0000:a40a   870 0000:a40d   875 0000:a40f
+   878 0000:a411   879 0000:a417   881 0000:a419   882 0000:a41e
+   883 0000:a421   885 0000:a423   891 0000:a426   892 0000:a428
+   893 0000:a429   896 0000:a42d   899 0000:a42f   900 0000:a432
+   901 0000:a436   902 0000:a439   903 0000:a43b   906 0000:a43d
+   907 0000:a440   908 0000:a444   909 0000:a447   913 0000:a449
+   917 0000:a44c   921 0000:a44f   922 0000:a453   923 0000:a456
+   924 0000:a45b   925 0000:a45d   926 0000:a461   928 0000:a464
+   929 0000:a468   931 0000:a46b   932 0000:a46e   933 0000:a470
+   935 0000:a472   936 0000:a474   937 0000:a476   938 0000:a478
+   939 0000:a47a   940 0000:a47c   942 0000:a47e   943 0000:a480
+   944 0000:a482   945 0000:a484   946 0000:a486   947 0000:a488
+   948 0000:a48a   949 0000:a48d   950 0000:a48f   954 0000:a492
+   955 0000:a495   956 0000:a497   957 0000:a499   959 0000:a49b
+   960 0000:a49e   961 0000:a4a0   962 0000:a4a2   964 0000:a4a4
+   965 0000:a4a7   966 0000:a4a9   967 0000:a4ad   968 0000:a4b0
+   969 0000:a4b5   970 0000:a4b7   971 0000:a4b9   973 0000:a4bb
+   974 0000:a4c0   975 0000:a4c2   976 0000:a4c5   978 0000:a4c7
+   980 0000:a4cb   981 0000:a4ce   983 0000:a4d0   988 0000:a4d2
+   989 0000:a4d5   990 0000:a4d9   991 0000:a4dc   992 0000:a4e4
+   993 0000:a4e7   994 0000:a4e8   998 0000:a4e9   999 0000:a4ed
+  1000 0000:a4f0  1003 0000:a4f3  1004 0000:a4f8  1005 0000:a4f9
+  1006 0000:a4fa  1007 0000:a4fb  1008 0000:a4fc  1009 0000:a4fd
+  1010 0000:a4fe  1011 0000:a4ff  1012 0000:a500  1013 0000:a501
+  1015 0000:a503  1016 0000:a506  1017 0000:a507  1018 0000:a509
+  1019 0000:a50d  1020 0000:a50e  1022 0000:a50f  1023 0000:a510
+  1024 0000:a511  1025 0000:a512  1042 0000:a515  1043 0000:a517
+  1044 0000:a519  1045 0000:a51c  1046 0000:a51f  1047 0000:a521
+  1064 0000:a522  1065 0000:a524  1066 0000:a525  1067 0000:a527
+  1069 0000:a529  1070 0000:a52a  1071 0000:a52c  1072 0000:a52e
+  1073 0000:a530  1075 0000:a532  1076 0000:a534  1112 0000:a535
+  1130 0000:a53c  1132 0000:a53e  1137 0000:a542  1138 0000:a547
+  1140 0000:a549  1141 0000:a54c  1142 0000:a54e  1143 0000:a550
+  1145 0000:a553  1146 0000:a556  1147 0000:a558  1149 0000:a55b
+  1150 0000:a55e  1151 0000:a561  1153 0000:a563  1154 0000:a566
+  1155 0000:a569  1161 0000:a56b  1162 0000:a56d  1163 0000:a571
+  1164 0000:a575  1165 0000:a579  1166 0000:a57a  1167 0000:a57e
+  1168 0000:a581  1169 0000:a583  1170 0000:a587  1175 0000:a588
+  1176 0000:a58b  1177 0000:a58e  1178 0000:a590  1179 0000:a593
+  1180 0000:a596  1181 0000:a599  1182 0000:a59c  1188 0000:a59f
+  1189 0000:a5a0  1190 0000:a5a2  1191 0000:a5a5  1192 0000:a5a8
+  1193 0000:a5aa  1195 0000:a5ae  1196 0000:a5af  1197 0000:a5b1
+  1198 0000:a5b3  1199 0000:a5b5  1200 0000:a5b7  1201 0000:a5b9
+  1202 0000:a5bb  1204 0000:a5bd  1205 0000:a5c0  1206 0000:a5c3
+  1207 0000:a5c5  1213 0000:a5c9  1214 0000:a5ca  1215 0000:a5cd
+  1216 0000:a5cf  1217 0000:a5d4  1218 0000:a5d8  1219 0000:a5dd
+  1220 0000:a5e1  1221 0000:a5e6  1223 0000:a5e7  1224 0000:a5e9
+  1225 0000:a5ed  1227 0000:a5ef  1228 0000:a5f4  1229 0000:a5f5
+  1230 0000:a5f9  1231 0000:a5fd  1232 0000:a600  1233 0000:a603
+  1234 0000:a608  1235 0000:a60a  1236 0000:a60b  1242 0000:a60f
+  1243 0000:a614  1244 0000:a619  1245 0000:a61a  1246 0000:a61e
+  1247 0000:a622  1248 0000:a623  1249 0000:a624  1250 0000:a625
+  1251 0000:a626  1253 0000:a627  1254 0000:a62b  1255 0000:a62f
+  1257 0000:a634  1258 0000:a636  1259 0000:a63a  1261 0000:a63c
+  1262 0000:a640  1264 0000:a644  1265 0000:a646  1267 0000:a64a
+  1272 0000:a64b  1273 0000:a650  1275 0000:a652  1276 0000:a658
+  1277 0000:a65b  1278 0000:a65e  1280 0000:a660  1281 0000:a663
+  1282 0000:a666  1285 0000:a668  1286 0000:a669  1290 0000:a66a
+  1291 0000:a66c  1292 0000:a66f  1293 0000:a671  1294 0000:a674
+  1296 0000:a676  1297 0000:a67a  1298 0000:a67d  1299 0000:a67f
+  1300 0000:a684  1302 0000:a686  1303 0000:a689  1305 0000:a68b
+  1307 0000:a68d  1309 0000:a68f
+
+Program entry point at 0000:A696

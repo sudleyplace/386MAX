@@ -1,0 +1,146 @@
+#
+# Makefile for BATPROC.EXE
+#
+#' $Header:   P:/PVCS/MAX/BATPROC/MAKEFILE.__V   1.4   30 May 1997 12:30:04   BOB  $
+#
+
+!include $(MAXROOT)include\maxnames.mak
+
+OEM=ret 		# default OEM
+DISPOBJ=0		# Dispobj /w will spew out mountains of warnings
+O=$(OEM)\		# define include directory for OEM-specifics
+#M=$(MAXROOT)move\	# include directory for MOVEINFO.INC
+L=$(MAXROOT)quilib\ # Library source directory
+BIN=$(OEM)\		# OEM binaries
+MODEL=S
+HEAPMAXPARAS=0x300	# Maximum heap allocation in paras
+OLDINC=$(INCLUDE)	# Save previous INCLUDE value
+ALLINC=.;$(O);$(H)
+BPDBG=0 		# Set to 1 to generate BATPROC.LOG
+
+# compiler options
+CFLAGS=/c /A$(MODEL) /J /DCOMPAT_4DOS=1 /DBPDBG=$(BPDBG) /DLANG_$(LANG) /Os /G0 /Gs /W3 /Zp1 /Zd
+AFLAGS=/DLANG_$(LANG) /mu /p /r /t /w1 /Zd
+
+# if LST has been defined either in the environment or on the command line,
+# create an LSTMAC macro to be appended to masm command lines for .LST
+# file generation...
+!IFDEF LST
+LSTMAC=,$(LST)\ 	# Stick listing in $(LST) directory
+!ELSE
+LSTMAC=
+!ENDIF
+
+# Rules for .c.obj -- built-in rules won't work since they are in
+# different directories
+{$(L)}.c{$(O)}.obj:
+	 set include=$(ALLINC);$(OLDINC)
+	 $(CC) $(CFLAGS) /DBATPROC /Fo$(O)$(@B).obj $<
+	 set include=$(OLDINC)
+
+.c{$(O)}.obj:
+	 set include=$(ALLINC);$(OLDINC)
+	 $(CC) $(CFLAGS) /Fo$(O)$(@B).obj $<
+	 set include=$(OLDINC)
+
+# MASM rules
+.asm{$(O)}.obj:
+	 set INCLUDE=.;$(O);$(I);$(Q);$(INCLUDE)
+	 masm $(@B) $(AFLAGS), $(O)$(@B) $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+!IF $(DISPOBJ)
+	 @dispobj $*/w
+!ENDIF
+
+OBJS=		$(O)parser.obj	$(O)cmds.obj	 $(O)expand.obj 	\
+		$(O)eval.obj	$(O)dircmds.obj  $(O)filecmds.obj	\
+		$(O)syscmds.obj $(O)misc.obj	 $(O)env.obj		\
+		$(O)batch.obj	$(O)error.obj	 $(O)screenio.obj	\
+		$(O)input.obj	$(O)output.obj	 $(O)lines.obj		\
+		$(O)_file.obj
+
+#LOBJS= 	$(O)mbparse.obj
+
+AOBJS=		$(O)baterrs.obj $(O)batutil.obj  $(O)exec.obj
+
+ALL:		DIR		$(BIN)BATPROC.EXE	$(BD)BATPROC.EXE
+
+DEL:
+	-rm $(O)*.*
+
+DIR:
+	vdir -c $(O)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\batproc\*
+VCSDIR = P:\PVCS\MAX\batproc\*
+ALIAS ALL P:\PVCS\MAX\batproc\*.*,p:\pvcs\max\batproc\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+DEPSCAN: makefile
+	depscan *.c *.asm >batpdep.inc
+
+makefile: batpdep.inc
+
+!include batpdep.inc
+
+$(O)parser.obj: parser.c $(PARSER_DEP)
+
+$(O)cmds.obj:	cmds.c $(CMDS_DEP)
+
+$(O)expand.obj: expand.c $(EXPAND_DEP)
+
+$(O)eval.obj:	eval.c $(EVAL_DEP)
+
+$(O)dircmds.obj: dircmds.c $(DIRCMDS_DEP)
+
+$(O)filecmds.obj: filecmds.c $(FILECMDS_DEP)
+
+$(O)syscmds.obj: syscmds.c $(SYSCMDS_DEP)
+
+$(O)misc.obj:	misc.c $(MISC_DEP)
+
+$(O)env.obj:	env.c $(ENV_DEP)
+
+$(O)batch.obj:	batch.c $(BATCH_DEP)
+
+$(O)error.obj:	error.c $(ERROR_DEP)
+
+$(O)screenio.obj: screenio.c $(SCREENIO_DEP)
+
+$(O)lines.obj:	lines.c $(LINES_DEP)
+
+$(O)input.obj:	input.c $(INPUT_DEP)
+
+$(O)output.obj: output.c $(OUTPUT_DEP)
+
+$(O)_file.obj:	_file.c $(_FILE_DEP)
+
+$(O)batutil.obj: batutil.asm $(BATUTIL_ADEP)
+
+$(O)exec.obj:	exec.asm $(EXEC_ADEP)
+
+$(O)baterrs.obj: baterrs.asm $(BATERRS_ADEP)
+
+$(BIN)batproc.exe:	$(OBJS) 	$(AOBJS)	makefile
+	@Set LIB=$(LIB)
+	$(LD) @<<$(O)batlink
+		$(OBJS: =+^
+)		$(AOBJS: =+^
+)
+		$*
+		$* /map /line /nod /noe /st:4096 /cp:$(HEAPMAXPARAS)
+		slibce oldnames ;
+<<KEEP
+		mapssf -t$* $*.map
+
+$(BD)batproc.exe: $(BIN)batproc.exe
+	 xc /r	 $(**R).EXE	$*.*
+	 xc /r	 $(**R).SSF	$*.*
+	 xc /r	 $(**R).MAP	$*.*
+
+
