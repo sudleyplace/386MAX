@@ -1,0 +1,10 @@
+extern	void process_exec(void );
+extern	int adp_cmp(struct PATCH_CMP *adpp);
+extern	void adp_entry(void );
+extern	unsigned char request_block(void );
+extern	void create_pos_mask(void );
+extern	void fill_pos_array(void );
+extern	int call_adp(unsigned char func);
+extern	void adp_config(void );
+extern	void exec_pos(struct _device *D);
+extern	unsigned char selected_choice(struct _adf_choice *A);

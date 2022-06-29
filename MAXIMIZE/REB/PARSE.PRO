@@ -1,0 +1,15 @@
+extern	void parsecfg(char *maxline,struct _dsptext *dt);
+extern	void newpro(struct _dsptext *dt);
+extern	void parsepro(struct _dsptext *dt,char *proname);
+extern	void parse(struct _dsptext *dt,char *str,char *dlim,struct _parse_t *stu,int cfgpro);
+extern	void process_BCF(char *bcf_filename);
+extern	void do_probe(void );
+extern	unsigned long map_segment(unsigned int base,unsigned long start,unsigned long end);
+extern	void do_vgaswap(void );
+extern	void add_maxcfg(char *keyword,char *comment);
+extern	void del_maxcfg(char *keyword);
+extern	void add2harpopro(int appendmode,char *fmt,...);
+extern	int read_harpopro(void );
+extern	int close_harpopro(int save);
+extern	struct _cheret check_harpenv(void );
+extern	void do_harpo(int bStripExtraDOS);

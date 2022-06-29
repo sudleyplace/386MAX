@@ -1,0 +1,16 @@
+extern	int IsResident(char *devpath);
+extern	int MBCallback(struct _ConfigLine *cfg);
+extern	void fixup_loaders(void );
+extern	char *pszTempFile(char *pszPre);
+extern	int readconfig(int *drive);
+extern	int iswhite(char c);
+extern	char *skipwhite(char *p);
+extern	char *skipblack(char *p);
+extern	char *scanopts(struct _dsptext *s,int index);
+extern	void fndevice(struct _dsptext *s,struct _iobuf *lcfg);
+static	void fn386max(struct _dsptext *s,char *fext,char *pdrv,char *pdir);
+extern	void dofilechk(void );
+extern	int chkforfiles(char *path,int firstpass);
+extern	int fndfile(char *p,int firstpass);
+extern	void strip_endcrlf(char *buff);
+extern	void set_nlead(struct _dsptext *s,char *pathname);

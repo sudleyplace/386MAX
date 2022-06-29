@@ -1,0 +1,31 @@
+	 reb\BROWSE.OBJ		reb\CHKRAM.OBJ		reb\COPYFILE.OBJ+
+	 reb\INS_ADF.OBJ+
+	 comn\INS_ADP.obj+
+	 reb\INS_EMS.obj+
+	 +
+	 reb\INS_EXE.obj+
+	 reb\INS_MAP.obj+
+	 reb\INS_MCA.obj+
+	 +
+	 reb\INS_OPT.obj+
+	 comn\INS_POS.obj+
+	 reb\P1BROWSE.obj							+
+	 reb\LINKLIST.obj	reb\MAXIMIZE.obj	reb\MAXSUB.obj	+
+	 reb\MXPRINT.obj+
+	 	reb\P3UPDATE.obj			+
+	 reb\PARSE.obj		reb\PASS1.obj		reb\PASS2.obj	+
+	 reb\PASS3.obj		reb\PROCCFG1.obj	reb\PROFILE.obj+
+	 +
+	 reb\READCNFG.obj	reb\READMXMZ.obj	reb\REBOOT.obj	+
+	 reb\REORDER.obj+
+	 	reb\SCREENS.obj+
+	 	reb\UTIL.obj	+
+	 comn\UTIL_MAC.obj	reb\UTIL_OPT.opt	comn\UTIL_USE.obj+
+	 reb\WRCONFIG.obj	reb\WRFILES3.obj			+
+	 reb\VERSDATA.obj	reb\VERSRET.obj+
+	 	reb\VERSBETA.OBJ+
+	 comn\ZZTAIL.obj
+	 reb\MAX
+	 reb\MAX /STACK:8192 /SEG:300 /NOD /NOI /M /LINE /PACKC /FAR /ONERR:NOEXE
+	 R:\MAX\lib\LQUILIBR.lib LLIBCE LHELP.lib
+

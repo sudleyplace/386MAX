@@ -1,0 +1,10 @@
+extern	void pass3(void );
+extern	int save_psumfit(struct _sumfit __far *psumfit);
+extern	struct _sumfit __far *rest_psumfit(void );
+extern	char *getdev(char *s);
+extern	void map_sumfit(struct _sumfit __far *psumfit,int cfgmark);
+extern	int link_sumfit(struct _dsptext *t,struct _sumfit __far *psumfit);
+extern	void dump_sumfit(char *fname,char *mode,char *tag,struct _sumfit __far *psumfit);
+extern	void dump_lseg(char *fname,char *mode,char *tag);
+extern	void dump_lsegflag(struct _iobuf *fp,struct _lsegflag flag);
+extern	void dump_maxout(char *fname,char *mode,char *tag);

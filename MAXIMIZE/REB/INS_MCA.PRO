@@ -1,0 +1,10 @@
+extern	int process_MCA(void );
+extern	void set_sysrom(void );
+extern	int check_refabios(void );
+extern	int scan_adapters(void );
+extern	void resolve_ramrom(void );
+extern	int device_association(struct _prsl_t *L);
+extern	void associate(struct _device *D,int which_mem,struct _prsl_t *L);
+extern	void construct_choice_pos(void );
+extern	void activate_choice(void );
+extern	void add_ram(void );

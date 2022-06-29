@@ -1,0 +1,13 @@
+extern	void readmxmz(void );
+extern	int check_lcfg(char *pfname,struct _iobuf *lcfg,char flag);
+extern	int check_busm(char *pfnam,struct _iobuf *lcfg);
+extern	int resprog(char *flags);
+extern	int umbprog(char *flags);
+extern	int remprog(char *flags);
+extern	void readmout(void );
+extern	char *findwhite(char *inp);
+extern	void prsmxoutl(char *p,int rangelines);
+extern	struct _batfile *bldspst(char *p,char *fnam);
+extern	char *gflestr(char *p,int cnt);
+extern	int which(char *filename,char *my_path,struct _find_t *finfo);
+extern	int check_file(char *fullpath,struct _find_t *finfo);
