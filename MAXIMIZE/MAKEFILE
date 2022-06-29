@@ -1,0 +1,447 @@
+#
+#	Makefile for all versions of MAXIMIZE (386MAX, BlueMAX, and Move'em)
+#
+#' $Header:   P:/PVCS/MAX/MAXIMIZE/MAKEFILE.__V   1.11   02 Jun 1997 13:50:06   BOB  $
+#
+
+.SUFFIXES: .c .h .pro .asm .inc .obj .opt
+
+!include $(MAXROOT)include\maxnames.mak
+
+DEBUG=0
+PROFLAGS=/DPROTO
+# if LST is defined in the environment or on the command line,
+# define a macro we can tack onto the end of each MASM line
+!IFDEF LST
+LSTMAC=,$(LST)\$(@B)
+!ELSE
+LSTMAC=
+!ENDIF
+
+SYSNAME=$(COREPROD)
+!IF "$(COREPROD)" == "386MAX"
+SYSNAME=MAX		# name of system to build
+OEM=reb 		# 3-letter OEM version extension
+ASYS=0			# For 386MAX 0, BlueMAX 1, Move'EM 2
+!ELSE
+OEM=blb
+ASYS=1
+!ENDIF
+NEWDIR=N		# Y to copy .OBJ files to a new directory
+BIN=$(OEM)\		# directory for OEM binaries, .MAP's, .SSF
+MODEL=L 		# Memory model used
+DISPOBJ=0		# Dispobj /w will spew out mountains of warnings
+
+!IF "$(MODEL)" == "M"   # Determine MASM model flag
+AMODEL=MEDIUM
+!ELSE
+!IF "$(MODEL)" == "C"
+AMODEL=COMPACT
+!ELSE
+!IF "$(MODEL)" == "L"
+AMODEL=LARGE
+!ELSE
+!ERROR Model must be M, C, or L
+!ENDIF
+!ENDIF
+!ENDIF
+
+# These names are all one-letter macros; a bit cryptic, but it allows
+# us to keep the positional dependency scheme.
+O=$(OEM)\			# directory for OEM-specific Obj's and inc's
+U=$(MAXROOT)lib\		# UI library
+A=$(U)					# UI help engine library
+M=$(MAXROOT)move\		# MAXIMIZE directory (with POS info)
+X=$(MAXROOT)maximize\	# Maximize directory
+G=comn\ 		# directory for Generic obj's
+S=			# directory for OEM-specific Source
+R=			# directory for generic souRce
+N=P:\MAX\MAXIMIZE\	# Project source directory on Network
+P=$(X);$(N)		# Search sequence for source
+!IF "$(ERRPATH)" == ""
+ERRPATH=c:\386max\	# Path for ERROUT.COM
+!else
+ERRPATH=$(ERRPATH)	# Path for ERROUT.COM
+!endif
+
+# Specify a default include path for all source files
+OLDINC=$(INCLUDE)
+ALLINC=.;$(O);$(H);$(X);$(OLDINC) # Include path for C files
+ASMINC=$(O);$(H);$(X);$(I);$(Q);$(M);$(OLDINC) # Include path for MASM
+
+# define default options for compiler/assembler
+OLDMASM=$(MASM) 	# Save previously defined MASM= (if any)
+COPT=/Oslegc
+CFLAGS=/A$(MODEL) /Gs $(COPT) /W2 /WX /DSYSTEM=$(SYSNAME) /DREORDER /DLANG_$(LANG)
+PFLAGS=/DPROTO /DCVDBG /DSYSTEM=$(SYSNAME) /DREORDER /DLANG_$(LANG)
+AFLAGS=/Mx /P /R /T /W1 /DMODEL=$(AMODEL) /DASYS=$(ASYS) /DBETA=$(BETA) /DLANG_$(LANG)
+LFLAGS=/STACK:8192 /SEG:300 /NOD /NOI /M /LINE /PACKC /FAR /ONERR:NOEXE
+GLIBS=$(MODEL)LIBCE $(MODEL)HELP.lib	# Libraries we don't know the path for
+LIBS=$(U)$(MODEL)QUILIBR.lib
+CVFLAGS=/Zd
+
+!IF "$(DEBUG)" == "1"
+CFLAGS=$(CFLAGS) /DCVDBG
+LFLAGS=$(LFLAGS) /CO
+CVFLAGS=/Zd
+!ENDIF	# DEBUG == 1
+
+AFLAGS=$(AFLAGS) $(CVFLAGS)
+
+!IF $(ASYS) != 2
+386OBJS=$(O)INS_ADF.OBJ $(G)INS_ADP.obj $(O)INS_EMS.obj \
+	$(O)INS_EXE.obj $(O)INS_MAP.obj $(O)INS_MCA.obj \
+	$(O)INS_OPT.obj $(G)INS_POS.obj $(O)P1BROWSE.obj
+386PROS=$(O)ins_adf.pro   $(O)ins_ems.pro   $(O)ins_exe.pro   $(O)ins_map.pro \
+	$(O)ins_mca.pro   $(O)ins_opt.pro   $(O)p1browse.pro
+CFLAGS=$(CFLAGS) /G2
+!ELSE
+386OBJS=
+386PROS=
+CFLAGS=$(CFLAGS) /G0
+AFLAGS=$(AFLAGS) /DNOHARPO
+!ENDIF
+
+OBJS=	$(O)BROWSE.OBJ		$(O)CHKRAM.OBJ		$(O)COPYFILE.OBJ\
+	$(386OBJS)							\
+	$(O)LINKLIST.obj	$(O)MAXIMIZE.obj	$(O)MAXSUB.obj	\
+	$(O)MXPRINT.obj 	$(O)P3UPDATE.obj			\
+	$(O)PARSE.obj		$(O)PASS1.obj		$(O)PASS2.obj	\
+	$(O)PASS3.obj		$(O)PROCCFG1.obj	$(O)PROFILE.obj \
+	$(O)READCNFG.obj	$(O)READMXMZ.obj	$(O)REBOOT.obj	\
+	$(O)REORDER.obj 	$(O)SCREENS.obj 	$(O)UTIL.obj	\
+	$(G)UTIL_MAC.obj	$(O)UTIL_OPT.opt	$(G)UTIL_USE.obj\
+	$(O)WRCONFIG.obj	$(O)WRFILES3.obj			\
+	$(O)VERSDATA.obj	$(O)VERSRET.obj 	$(O)VERSBETA.OBJ\
+	$(G)ZZTAIL.obj
+
+PROS=	$(O)browse.pro		$(O)chkram.pro		$(O)copyfile.pro\
+	$(386PROS)							\
+	$(O)linklist.pro	$(O)maximize.pro			\
+	$(O)p3update.pro	$(O)parse.pro		$(O)pass1.pro	\
+	$(O)pass2.pro		$(O)pass3.pro		$(O)proccfg1.pro\
+	$(O)profile.pro 	$(O)readcnfg.pro	$(O)readmxmz.pro\
+	$(O)reboot.pro		$(O)reorder.pro 	$(O)screens.pro \
+	$(O)util.pro		$(O)wrconfig.pro	$(O)wrfiles3.pro
+
+# NOTE:  You must specify the rule for the secondary source directory
+#	 before the corresponding rule for the current directory.
+#	 NMAKE apparently uses the last rule which matches.
+
+# Rule for .pro files -- they are never included in dependencies,
+# so we don't care about the order in which they get updated.
+# It's up to the programmer to ensure that calls to a function with
+# a changed header are properly modified.
+
+# .pro rules for secondary source directory
+{$(X)}.c{$(O)}.pro:
+!IF "$(NEWDIR)" == "Y"
+	 copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	 @set INCLUDE=$(ALLINC)
+	 $(CC) /EP $(PFLAGS) $< > $*.tmp
+	 @set INCLUDE=$(OLDINC)
+	 $(CC) /Zg /Tc$*.tmp > $*.tm2
+	 @xc /r $*.tm2 $*.pro
+	 @rm $*.tm?
+!ENDIF
+
+# .pro rules for current source directory
+{$(R)}.c{$(O)}.pro:
+!IF "$(NEWDIR)" != "Y"
+	 @set INCLUDE=$(ALLINC)
+	 $(CC) /EP $(PFLAGS) $< > $*.tmp
+	 @set INCLUDE=$(OLDINC)
+	 $(CC) /Zg /Tc$*.tmp > $*.tm2
+	 @xc /r $*.tm2 $*.pro
+	 @rm $*.tm?
+!ENDIF
+
+# Generic .ASM to .OBJ - secondary source directory
+{$(X)}.asm{$(G)}.obj:
+!IF "$(NEWDIR)" == "Y"
+	 copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	 set INCLUDE=$(ASMINC)
+	 set MASM=$(AFLAGS)
+	 masm %s, $(@D)\ $(LSTMAC);
+	 set MASM=$(OLDMASM)
+	 set INCLUDE=$(OLDINC)
+!IF $(DISPOBJ)
+	 @dispobj $*/w
+!ENDIF
+!ENDIF
+
+# Generic .ASM to .OBJ - current source directory
+{$(R)}.asm{$(G)}.obj:
+!IF "$(NEWDIR)" != "Y"
+	 set INCLUDE=$(ASMINC)
+	 set MASM=$(AFLAGS)
+	 masm %s, $(@D)\ $(LSTMAC);
+	 set MASM=$(OLDMASM)
+	 set INCLUDE=$(OLDINC)
+!IF $(DISPOBJ)
+	 @dispobj $*/w
+!ENDIF
+!ENDIF
+
+# OEM specific .ASM to .OBJ - secondary source directory
+{$(X)}.asm{$(O)}.obj:
+!IF "$(NEWDIR)" == "Y"
+	 copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	 set INCLUDE=$(ASMINC)
+	 set MASM=$(AFLAGS)
+	 masm %s, $(@D)\ $(LSTMAC);
+	 set MASM=$(OLDMASM)
+	 set INCLUDE=$(OLDINC)
+!IF $(DISPOBJ)
+	 @dispobj $*/w
+!ENDIF
+!ENDIF
+
+# OEM specific .ASM to .OBJ - current source directory
+{$(R)}.asm{$(O)}.obj:
+!IF "$(NEWDIR)" != "Y"
+	 set INCLUDE=$(ASMINC)
+	 set MASM=$(AFLAGS)
+	 masm %s, $(@D)\ $(LSTMAC);
+	 set MASM=$(OLDMASM)
+	 set INCLUDE=$(OLDINC)
+!IF $(DISPOBJ)
+	 @dispobj $*/w
+!ENDIF
+!ENDIF
+
+# Generic .ASM to .OBJ - 386MAX directory
+{$(Q)}.asm{$(G)}.obj:
+!IF "$(NEWDIR)" != "Y"
+	 set INCLUDE=$(ASMINC)
+	 set MASM=$(AFLAGS)
+	 masm %s, $(@D)\ $(LSTMAC);
+	 set MASM=$(OLDMASM)
+	 set INCLUDE=$(OLDINC)
+!IF $(DISPOBJ)
+	 @dispobj $*/w
+!ENDIF
+!ENDIF
+
+# OEM specific .ASM to .OBJ with optimization enabled - 386MAX directory
+{$(Q)}.asm{$(O)}.opt:
+!IF "$(NEWDIR)" != "Y"
+	 set INCLUDE=$(ASMINC)
+	 set MASM=$(AFLAGS) /dOPTIM
+	 masm %s, $(@R).opt $(LSTMAC);
+	 set MASM=$(OLDMASM)
+	 set INCLUDE=$(OLDINC)
+!IF $(DISPOBJ)
+	 @dispobj $*.opt/w
+!ENDIF
+!ENDIF
+
+# OEM specific .C to .OBJ - secondary source directory
+{$(X)}.c{$(O)}.obj:
+!IF "$(NEWDIR)" == "Y"
+	 copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	 set INCLUDE=$(ALLINC)
+	 $(CC) /c $(CFLAGS) $(CVFLAGS) /Fo$(@D)\$(@F) %s
+	 set INCLUDE=$(OLDINC)
+!ENDIF
+
+# OEM specific .C to .OBJ - current source directory
+{$(R)}.c{$(O)}.obj:
+!IF "$(NEWDIR)" != "Y"
+	 set INCLUDE=$(ALLINC)
+	 $(CC) /c $(CFLAGS) $(CVFLAGS) /Fo$(@D)\$(@F) %s
+	 set INCLUDE=$(OLDINC)
+!ENDIF
+
+# Generic .C to .OBJ - secondary source directory
+{$(X)}.c{$(G)}.obj:
+!IF "$(NEWDIR)" == "Y"
+	 copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	 set INCLUDE=$(ALLINC)
+	 $(CC) /c $(CFLAGS) $(CVFLAGS) /Fo$(@D)\$(@F) %s
+	 set INCLUDE=$(OLDINC)
+!ENDIF
+
+# Generic .C to .OBJ - current source directory
+{$(R)}.c{$(G)}.obj:
+!IF "$(NEWDIR)" != "Y"
+	 set INCLUDE=$(ALLINC)
+	 $(CC) /c $(CFLAGS) $(CVFLAGS) /Fo$(@D)\$(@F) %s
+	 set INCLUDE=$(OLDINC)
+!ENDIF
+
+# Ensure that library gets built first.
+# Include a target for all C-based .pro files -- all .ASM based .pro files
+# are kept in version control and copied by udlocal.
+
+ALL:	 DIR		\
+		 $(PROS)		\
+		 $(BIN)$(SYSNAME).EXE	\
+!IF "$(NEWDIR)" == "Y"
+		 NEWDIR 		\
+!ENDIF
+		 $(BD)maximize.exe
+
+
+DEL:
+	-rm $(O)*.* $(G)*.*
+
+DIR:
+	vdir -c $(O) $(G)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\maximize\*
+VCSDIR = P:\PVCS\MAX\maximize\*
+ALIAS ALL P:\PVCS\MAX\maximize\*.*,p:\pvcs\max\maximize\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+!IF "$(NEWDIR)" == "Y"
+NEWDIR: 	  {$(P)}PVCS.CFG      {$(P)}MAKEFILE
+	$(COMSPEC) /c <<$(O)MAKEFILE.BAT
+	xc/r/a/n/t $(**: =^
+	xc/r/a/n/t )
+<<NOKEEP
+
+!ENDIF
+
+DEPSCAN: {$(P)}makefile
+	depscan -p{$$(P)} *.asm $(Q)util_opt.asm $(Q)util_use.asm *.c *.cpp *.rc >maximize.inc
+
+{$(P)}makefile: maximize.inc $(H)makefile.inc
+
+# Get Depscan-generated dependencies
+!include maximize.inc
+!include $(H)makefile.inc
+
+$(BIN)$(SYSNAME).EXE: \
+		$(OBJS)    $(LIBS)	makefile
+!IF "$(NEWDIR)" == "Y"
+	 copy $*.EXE $(O).
+	 copy $*.SSF $(O).
+	 copy $*.MAP $(O).
+!ELSE
+	 @Set LIB=$(LIB)
+	 $(LD) @<<$(O)$(SYSNAME).arf
+	 $(OBJS: =+^
+	 )
+	 $*
+	 $* $(LFLAGS)
+	 $(LIBS: =^+
+	 ) $(GLIBS)
+
+<<KEEP
+	 mapssf -t$* $*.map
+!ENDIF
+
+$(BD)maximize.exe: $(BIN)$(SYSNAME).EXE
+!IF "$(NEWDIR)" != "Y"
+	 xc /r	 $(**R).exe	$*.*
+	 xc /r	 $(**R).ssf	$*.*
+	 xc /r	 $(**R).map	$*.*
+!ENDIF
+
+$(O)BROWSE.obj:  {$(P)}BROWSE.C 	$(BROWSE_DEP)
+
+$(O)CHKRAM.OBJ:  {$(P)}CHKRAM.C 	$(CHKRAM_DEP)
+
+$(O)COPYFILE.OBJ: {$(P)}COPYFILE.C	$(COPYFILE_DEP)
+
+!IF $(ASYS) != 2
+$(O)INS_ADF.OBJ: {$(P)}INS_ADF.C	$(INS_ADF_DEP)
+
+$(G)INS_ADP.OBJ: {$(P)}INS_ADP.ASM	$(INS_ADP_ADEP)
+
+$(O)INS_EMS.OBJ: {$(P)}INS_EMS.C	$(INS_EMS_DEP)
+
+$(O)INS_EXE.OBJ: {$(P)}INS_EXE.C	$(INS_EXE_DEP)
+
+$(O)INS_MAP.OBJ: {$(P)}INS_MAP.C	$(INS_MAP_DEP)
+
+$(O)INS_MCA.OBJ: {$(P)}INS_MCA.C	$(INS_MCA_DEP)
+
+$(O)INS_OPT.OBJ: {$(P)}INS_OPT.C	$(INS_OPT_DEP)
+
+$(G)INS_POS.OBJ: {$(P)}INS_POS.ASM	$(INS_POS_ADEP)
+!ENDIF
+
+$(O)LINKLIST.OBJ: {$(P)}LINKLIST.C	$(LINKLIST_DEP)
+
+$(O)MAXIMIZE.OBJ: {$(P)}MAXIMIZE.C	$(MAXIMIZE_DEP)
+
+$(O)MAXSUB.OBJ:  {$(P)}MAXSUB.ASM	$(MAXSUB_ADEP) \
+!IF $(ASYS) == 2
+		 $(M)MOVEINFO.INC
+!ENDIF
+
+!IF $(ASYS) != 2
+$(O)P1BROWSE.OBJ: {$(P)}P1BROWSE.C	$(P1BROWSE_DEP)
+!ENDIF
+
+$(O)P3UPDATE.OBJ: {$(P)}P3UPDATE.C	$(P3UPDATE_DEP)
+
+$(O)PARSE.OBJ:	 {$(P)}PARSE.C		$(PARSE_DEP)
+
+$(O)PASS1.OBJ:	 {$(P)}PASS1.C		$(PASS1_DEP)
+
+$(O)PASS2.OBJ:	 {$(P)}PASS2.C		$(PASS2_DEP)
+
+$(O)PASS3.OBJ:	 {$(P)}PASS3.C		$(PASS3_DEP)
+
+!IF $(ASYS) != 2
+$(O)PROCCFG1.OBJ: {$(P)}PROCCFG1.C	$(PROCCFG1_DEP)
+!ENDIF
+
+$(O)PROFILE.OBJ: {$(P)}PROFILE.C	$(PROFILE_DEP)
+
+$(O)READCNFG.OBJ: {$(P)}READCNFG.C	$(READCNFG_DEP)
+
+$(O)READMXMZ.OBJ: {$(P)}READMXMZ.C	$(READMXMZ_DEP)
+
+$(O)REBOOT.OBJ:  {$(P)}REBOOT.C 	$(REBOOT_DEP)
+
+$(O)REORDER.OBJ: {$(P)}REORDER.C	$(REORDER_DEP)
+
+$(O)SCREENS.OBJ: {$(P)}SCREENS.C	$(SCREENS_DEP)
+
+$(O)UTIL.OBJ:	 {$(P)}UTIL.C		$(UTIL_DEP)
+
+$(O)UTIL_OPT.OPT: $(Q)UTIL_OPT.ASM	$(UTIL_OPT_ADEP)
+
+$(G)UTIL_USE.OBJ: $(Q)UTIL_USE.ASM	$(UTIL_USE_ADEP)
+
+$(O)VERSDATA.OBJ: {$(P)}VERSDATA.ASM	$(VERSDATA_ADEP)
+
+$(O)VERSBETA.OBJ: {$(P)}VERSBETA.ASM	$(VERSBETA_ADEP)
+
+!IF "$(NEWDIR)" == "Y"
+$(O)VERSRET.OBJ: $(X)$(O)VERSRET.OBJ
+	 xc /r/a/n $** $(O)
+!ELSE
+!IF $(ASYS) == 2
+$(O)VERSRET.OBJ: $(M)VERSION.ASM
+!ELSE
+$(O)VERSRET.OBJ: $(Q)VERSRET.ASM	$(VERSRET_ADEP)
+!ENDIF
+	 set INCLUDE=$(ASMINC)
+	 set MASM=$(AFLAGS)
+	 masm $**, $(O)$(@B) $(LSTMAC);
+	 set MASM=$(OLDMASM)
+	 set INCLUDE=$(OLDINC)
+!ENDIF
+
+$(O)WRCONFIG.OBJ: {$(P)}WRCONFIG.C	$(WRCONFIG_DEP)
+
+$(O)WRFILES3.OBJ: {$(P)}WRFILES3.C	$(WRFILES3_DEP)
+
+$(G)ZZTAIL.OBJ:  {$(P)}ZZTAIL.ASM	$(ZZTAIL_ADEP)
+
+

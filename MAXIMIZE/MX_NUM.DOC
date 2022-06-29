@@ -1,0 +1,25 @@
+Fix Near/Far Bug In Maximize
+
+For some reason, the variables of UTIL_OPT.ASM which are referenced by
+the C code in MAXIMIZE were declared as near, even though they are
+far.  The MS-LINKer made a misguided attempt to make the error work,
+failed miserably, and then compounded this mistake by ignoring the
+problem.
+
+The net effect of this problem is (at least for one of the variables,
+BESTSIZE) that MAXIMIZE reports the number of bytes moved high as a
+random number (it once reported 920K going high on my system at home).
+There might be other bugs fixed by this change, but I haven't
+investigated.
+
+At the same time, I noticed that a couple of variables in INTHELP.H
+weren't declared extern in a non-OWNER module, which caused the
+compiler to treat them as COMDEF records.  As there is a PUBDEF record
+for these variables, the linker should signal an error, but of course
+once again it ignored the problem.
+
+INTHELP.H	Precede variables with GLOBAL.
+
+MAXVAR.H	Declare variables from UTIL_OPT.ASM as far.
+
+

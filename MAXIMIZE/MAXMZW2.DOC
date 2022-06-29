@@ -1,0 +1,149 @@
+Fixes to DOS Maximize in support of WinMaxim
+
+Fix file entry:
+
+* Fixes to DOS Maximize in support of WinMaxim
+
+ Description:
+ 	Quite a number of bugs and features have been implemented
+	with respect to running Maximize starting from Windows.
+	1. Express and Custom are now used, with /E and /U the
+	   enabling command line options.
+	2. Force settings selected in WinMaxim to control
+	   Maximize's behaviour more fully (no dialogs).
+	3. Fix placement of Winmaxim statement in autoexec
+	   for final reboot.
+	4. Modify CONFIG.SYS to boot into the selected MultiConfig
+	   section for final reboot.
+	5. In WinMaxim, if enabling ROMSRCH when it has already
+	   been run, turn on "Remove ROMSRCH" by default (it can
+	   still be turned back off).
+ Who: HENRY
+ When: 26 Oct 95.
+ SW/HW Environment: WinMaxim (starting Maximize from Windows or
+ 	Win95)
+ Symptom: See MaxMzW2.DOC for details.
+ Temporary Workaround: None.
+ Test Procedure: Test Custom and Express Maximize, from DOS and
+ 	from WinMaxim, in Windows and Win95 environments.
+ QA Testing Passed:
+ Version: WinMaxim 8.0.16.003; Maximize 8.0.5
+
+New files:
+
+MAXIMIZE\MAXIMIZE.INC
+	DEPSCAN-generated dependency list
+
+Files affected:
+
+MAXIMIZE\MAKEFILE
+	Use Depscan-generated dependency list.
+
+MAXIMIZE\MAX_SYS.H
+	Change product name to Qualitas Max
+
+MAXIMIZE\MAXIMIZE.C
+	Override all other switches via Maximize.ini if started from Windows.
+
+	Add new BREAK=n to MAXIMIZE.CFG (BREAK=* generates an int 1 earlier
+	unconditionally on all phases).
+
+	Rename /Q and /F switches to /E and /U (to match Express and Custom)
+
+MAXIMIZE\MAXTEXT.H
+	Make redundancy message global.  We now use it as a marker for
+	lines to be removed from CONFIG.SYS.  This also removes previously
+	"marked redundant" lines.
+
+MAXIMIZE\MAXVAR.H
+	Add flag bits for BREAK=
+
+MAXIMIZE\PARSE.C
+	If VGASWAP was requested from WinMaxim but xlat/t said "no way",
+	change the default setting to off.
+
+	Add option to strip ExtraDOS from CONFIG.SYS (if turned off in
+	WinMaxim, we assert whatever state is passed to us, unless
+	DRDos is in the picture).
+
+MAXIMIZE\PASS1.C
+	Check for stripping of VGASWAP and USE=F000-FFFF statements.
+	Note that stripping BIOS USE statements when re-running
+	ROMSRCH is handled in the WinMaxim custom dialog by automatically
+	turning on the "Remove ROMSRCH" checkbox.
+
+MAXIMIZE\PASS2.C
+	Add default args to profile write (no stripping).
+
+MAXIMIZE\PASS3.C
+	Don't say anything about reordering if running Express Maximize
+	from Windows.
+
+MAXIMIZE\PROCCFG1.C
+	Add code to strip VGASWAP and USE= statements in the F000-FFFF
+	area.
+
+MAXIMIZE\REBOOT.C
+	Rename /Q and /F options to /E and /U
+
+MAXIMIZE\SCREENS.C
+	Don't wait for progress completed if from Windows.
+
+	Don't display "completed" screen if from Windows.
+
+	Handle case (in placing WinMaxim) where there is no shell program
+	existing in AUTOEXEC.BAT and we need to place it at the end.
+
+	Use WinMaxim.EXE /summary to find WIN.COM and load it, passing
+	the free low DOS figure along as well.
+
+	Add 4 lines to top of CONFIG.SYS to force selection of the
+	selected MultiConfig section on the fourth boot.
+
+	Don't ask about ROMSRCH if running from Windows.  We still
+	put up the dialog telling them to put a floppy in.
+
+	Don't ask about VGASWAP either.
+
+MAXIMIZE\UTIL.C
+	Add code to read and write INI file entries, a la the Windows
+	functions.
+
+MAXIMIZE\VERSBETA.ASM
+	Bump ver to 5.
+
+MAXIMIZE\VERSDATA.ASM
+	Change Quick and Full...
+
+MAXIMIZE\WRCONFIG.C
+	Filter out lines marked with "redundant" message.
+
+MAXIMIZE\WRFILES3.C
+	Add default args (no stripping).
+
+WINMXMZ\CVERSION.H
+	Bump ver to 3.
+
+WINMXMZ\MXDLGS.CPP
+WINMXMZ\MXDLGS.H
+	If USE= statements in ROM exist and "Run ROMSRCH" is turned on,
+	also turn on the "Remove ROMSRCH" flag to show we'll do that
+	first (before rebooting in Phase 1).  The user can still turn
+	it off manually.
+
+WINMXMZ\SUMMARY.CPP
+	Remove lines from start of CONFIG.SYS as well.
+
+	Save removal requests in [Last request] section (sounds morbid,
+	doesn't it?)
+
+WINMXMZ\WINMXMZ.CPP
+	Use /E and /U options for Express and Custom Maximize.
+
+WINMXMZ\WINMXMZ.RC
+	Change control orders to sane values.
+
+	Rename "Disable ROMSRCH" to "Remove ROMSRCH" (still not accurate,
+	but better than saying "Remove USE=F000-FFFF")
+
+

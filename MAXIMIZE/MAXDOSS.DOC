@@ -1,0 +1,110 @@
+Allow Maximize to process DOSSTART.BAT for Win95
+
+Fix file entry:
+
+* Allow Maximize to process DOSSTART.BAT for Win95
+
+ Description:
+	When exiting Win95, one has the option of "restarting
+	computer in MS-DOS mode."  This is Microsoft doublespeak
+	for exiting Windows.  However, before returning to the
+	DOS prompt (oh, joy!) DOSSTART.BAT (living in the Windows
+	directory) is executed.  Win95 SETUP would have put
+	programs it removed from AUTOEXEC (having superseded
+	their functionality with VxDs) into DOSSTART.BAT.
+
+	One can now check a box in Win95 Winmaxim.exe to
+	do optimization on AUTOEXEC.BAT plus DOSSTART.BAT.
+	To enable this, the command line syntax for BATPROC
+	has been extended to take multiple batch files (not
+	just AUTOEXEC) and Maximize now takes a new /O option
+	with one or more batch file paths as arguments.
+ Who: HENRY
+ When: 23 Jan 96
+ SW/HW Environment: Win95, though the /O option to Maximize
+ 	works in any DOS / Windows version.
+ Symptom: It is not possible to load programs in DOSSTART.BAT
+ 	high without doing it manually.
+ Temporary Workaround: Put 386load getsize prog= in front of
+	lines in DOSSTART.BAT, reboot, exit Win95 to DOS, 386util/sid,
+	... in other words, load high manually.
+ Test Procedure: On a Win95 system, verify that one or more
+ 	resident programs are loaded low in DOSSTART.BAT.  Run
+	Winmaxim, select Custom, and check the box to Maximize
+	DOSStart.  Verify that programs in DOSSTART are listed
+	at the end of Maximize as loaded high or left low.
+	Rename DOSSTART.BAT and re-run Winmaxim.  In the Custom
+	Options dialog, verify that the Maximize DOSStart check
+	box is greyed out.
+ QA Testing Passed:
+ Version: Winmaxim 8.01.2.009, Maximize 8.01.010, Batproc 1.63
+
+Files affected:
+
+BATPROC\MESSAGE.H
+	Update command line help.
+	Update copyright year.
+	Bump ver to 1.63.
+
+BATPROC\PARSER.C
+	Instead of taking just one batch file as arg, take a comma-separated
+	(but no spaces) list of batch file paths.  This could easily leave
+	us with insufficient command line, but a simple workaround for now
+	is to use filenames only and ensure that each series of batch files
+	leaves one in the right drive:directory.
+
+MAXIMIZE\MAXIMIZE.C
+	Process /O switch.  Save list of additional batch files to pass
+	to BATPROC verbatim.
+
+MAXIMIZE\MAXVAR.H
+	Add global to hold list of additional batch files.  Note that
+	as we pass this list verbatim to Batproc, which will in turn
+	put everything into MAXIMIZE.OUT, there's nothing else we have
+	to do.
+
+MAXIMIZE\REBOOT.C
+	Pass list of batch files on to Batproc.
+	Pass /O option and args on to next pass of Maximize.
+
+MAXIMIZE\VERSBETA.ASM
+	Bump version to 10.
+
+MAXIMIZE\VERSDATA.ASM
+	Update copyright year.
+	Add commented-out help documentation for all undocumented
+	Maximize switches.  This documents them for our benefit.
+
+WINMXMZ\CVERSION.H
+	Bump version to 9.
+
+WINMXMZ\MESSAGES.H
+	Add name for INI file DOSStart default.
+
+WINMXMZ\MXDLGS.CPP
+WINMXMZ\MXDLGS.H
+	Change CCustomOpts class to handle two different dialog resources.
+	This may create some wrinkles in using AppStudio's Class Wizard.
+
+	Add DOSStart option and enabled flag (depending on whether file
+	is present) to CCustomOpts class.
+
+WINMXMZ\WINMXMZ.CPP
+	Initialize Custom Options dialog class with appropriate resource
+	ID.
+
+	Get DOSStart default setting (if Win95).
+
+	Test for existence of DOSSTART.BAT before invoking dialog.
+	This tells us whether to enable the option checkbox or not.
+
+	Save DOSStart option setting in INI file for next time.
+
+	Pass /O c:\win95\dosstart.bat on to Maximize.
+
+WINMXMZ\WINMXMZ.RC
+WINMXMZ\RESOURCE.H
+	Relocate some & accelerators which weren't visible.
+
+	Add dialog for Win95 with DOSStart option.
+
