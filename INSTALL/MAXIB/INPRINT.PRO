@@ -1,0 +1,12 @@
+extern	int doPrintCallback(struct _textwin *pWin,int type,int which,int helpNum);
+extern	void killPrinting(void );
+extern	void sayPage(void );
+extern	void sayPrinting(void );
+extern	int dumpLine(char *line,int type);
+extern	int myPrint(char out);
+extern	int doHeader(int type);
+extern	int printHelp(int context,int followLinks,int type);
+extern	int printAllHelp(int context,int type);
+extern	int printEditor(int type);
+extern	int printWindow(struct _textwin *pWin,int type,int which);
+extern	int printTitle(char *title,int type);

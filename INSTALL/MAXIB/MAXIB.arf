@@ -1,0 +1,26 @@
+		MAXIB\drve.obj		+
+		MAXIB\files.obj		+
+		MAXIB\inprint.obj+
+		MAXIB\install.obj+
+			+
+		MAXIB\misc.obj		+
+		MAXIB\scrn.obj+
+		MAXIB\security.obj	+
+		MAXIB\serialno.obj	+
+		MAXIB\pd_sub.obj+
+		MAXIB\versdata.obj	+
+		comn\versret.obj	+
+		R:\MAX\text\crc32.obj+
+		comn\multime.obj+
+			+
+		comn\versbeta.obj	+
+		+
+		MAXIB\ins_pos.obj+
+			+
+		MAXIB\mxz_adf.obj	+
+		comn\zztail.obj
+		MAXIB\MAXIB.exe  /NOD /NOI /st:8192 /map /line /far /seg:300 /ONERR:NOEXE /PackF /PackC:64000
+		MAXIB\MAXIB.map
+		R:\MAX\lib\Lquilibr.lib+
+		Llibce.lib oldnames.lib Lhelp.lib implode.lib verL.lib
+		NUL

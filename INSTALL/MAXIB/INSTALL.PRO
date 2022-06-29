@@ -1,0 +1,18 @@
+extern	void main(int argc,char **argv );
+extern	void startup_init(int argc,char **argv );
+extern	void do_delete(char **List );
+extern	void setOptions(int argc,char **argv );
+extern	void return_to_dos(int rc);
+extern	void __cdecl abortprep(int flag);
+extern	void breakpt(int callswat);
+static	void __near clobber_lf(char *buff);
+extern	void add_stripdelta(char *pszPath,char *pszMatch,char *pszReplace,unsigned long dLine);
+extern	struct tagSaveTab *setSaveTab(void );
+extern	void parse_restore(void );
+extern	void create_restore(char *dir);
+extern	struct tagFileDelta *get_filedelta(char *pszPath);
+extern	int ext_exists(char *addname,struct tagFileDelta *pExcept);
+extern	char *get_outname(struct tagFileDelta *pF);
+extern	char *get_inname(struct tagFileDelta *pF);
+extern	int edit_batsub(struct _iobuf *output,char *line,long streampos);
+extern	void edit_batfiles(void );

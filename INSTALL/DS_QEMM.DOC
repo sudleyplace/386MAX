@@ -1,0 +1,17 @@
+Workaround Stealth Bug In QEMM
+
+When the user runs our DOS setup program on a system which has an
+ABIOS, we make some calls to see which adapters are installed (we're
+checking for a Kingston memory board).	Alas, their stealth doesn't
+properly emulate the ABIOS, so the system crashes.
+
+The workaround is to check for QEMM and skip the POS initialization,
+meaning we'll take our lumps if there is a Kingston memory board in
+the system.
+
+PD_SUB.ASM	Define routine to determine QEMM presence.
+
+MXZ_ADF.C	Before calling posinit(), ensure QEMM is not in the
+		  system.
+
+

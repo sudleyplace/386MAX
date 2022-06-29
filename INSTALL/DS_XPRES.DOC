@@ -1,0 +1,24 @@
+Fix Bug When Calculating CRC
+
+When we calculate a 128 KB CRC in a system in which 386MAX is not
+present, we use a routine which depends upon the base address of the
+system ROM being set to E000.  Alas, this isn't done as yet, now it
+is.
+
+Also, if the BCF file isn't found, don't whine about it.
+
+And finally, if there's no EMS handler (INT 67h = 0:0), install a
+temporary handler in case the memory manager picks off the VCPI INT
+67h calls from the PM IDT.
+
+DRVE.C		Ensure the source BCF file exists and is readable
+		  before calling copy() which will complain if the
+		  file doesn't exist.
+
+MISC.C		Call MAXPRES() before calculating the CRC so set
+		  various variables.
+
+VCPI_CRC.ASM	In GETBCRC(), if the INT 67h address is 0:0, install a
+		  temporary handler.
+
+

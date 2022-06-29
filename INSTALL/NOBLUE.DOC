@@ -1,0 +1,50 @@
+Merge BlueMAX Into Qualitas MAX
+
+The DOS setup program needs to include BlueMAX capabilities as part of
+Qualitas MAX instead of as a separate compile-time option.  For the
+most part, this means ensuring that REDUIT is set to 1, and copying
+the appropriate BCF file to the hard disk.
+
+Also, because the BCF files are present on Disk #2 in unpackaged form,
+we no longer copy them all to the hard disk (and then optionally
+delete all but the one we're going to use).
+
+If the current memory manager is not 386MAX, we need to use the VCPI
+form of entering PM in order to calculate the BIOS CRC.
+
+Finally, we fix a bug where we do not properly calculate whether or
+not there's a valid previous installation.  The proper way is to
+ensure that we have one file from either a valid 386MAX or BlueMAX
+installation for each of three categories (the device driver, the
+386UTIL.COM, and 386LOAD.COM).	Previously, we had the inner and outer
+loops reversed.  Along with this, we mistakenly copy a previous
+installation's serial # as the new serial #, and if the new serial #
+displays on two line, the checksum becomes invalid and the user is
+told to run the install program again (which, of course, perpetuates
+the same mistake).
+
+COMMON.H	Remove BlueMAX definitions and #if REDUIT as there's
+		  no other choice.
+
+COMPILE.H	#define REDUIT to be 1 for 386MAX.
+
+INSTEXT.H	Define message text to display when copying BCF file.
+
+DRVE.C		Delete REDUIT-specific code which deletes extra BCF
+		  files.
+		Define DO_BCFEXTRACT() to extract (really copy) the
+		  appropriate BCF file to the destination
+		  subdirectory.
+
+INSTALL.C	Call DO_BCFEXTRACT at appropriate time.
+
+MISC.C		In CALC_CRCINFO(), use algorithm in VCPI_CRC.ASM if
+		  not in real mode and 386MAX not present.
+
+SECURITY.C	Fix bug checking for valid previous installation.
+		Fix bug where we copy the previous serial # as the new
+		  serial # and clobber the leading byte if the new
+		  serial # is in a two-line format thus invalidating
+		  the checksum.
+
+

@@ -1,0 +1,30 @@
+Move Registration Screen To Conform to US & German Versions
+
+The edit fields for the registration screen in the US and German
+versions are tricky to place on the screen because the text is
+different enough for the screens to have a different # lines.  The
+problem really is that the row numbers of the edit fields are
+calculated negatively, that is from the bottom.  By changing the row
+numbers for the "Name" and "Company Name" fields to be positive (from
+the top), both versions can be accommodated.
+
+At the same time, I centered the serial number edit field on the
+screen, and moved some text to the left to display better.
+
+Install
+-------
+INSTEXT.H	Count row numbers from the top for "Name" and "Company
+		  Name" edit fields.
+		Center "Serial Number" field (by moving it one to the
+		  left).
+
+DosHelp
+-------
+IN_L_HLP.RUS	Move "Serial Number" text one to the left to match
+		  above edit field centering.
+
+IN_L_HLP.RGR	Move "Name" text one to the left to line up better.
+		Move "Serial Number" text two to the left to match
+		  above edit field centering.
+
+
