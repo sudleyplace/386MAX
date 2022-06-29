@@ -1,0 +1,51 @@
+# Configuration for grep
+#
+# Alain Magloire <alainm@rcsm.ee.mcgill.ca>
+#
+dnl Process this file with autoconf to produce a configure script
+AC_INIT(src/grep.c)
+AC_DEFINE(GREP)
+AC_PREREQ(2.12)
+
+dnl Automake stuff.
+AM_INIT_AUTOMAKE(grep, 2.1)
+AM_CONFIG_HEADER(config.h)
+
+dnl Checks for programs.
+AC_PROG_AWK
+AC_PROG_CC
+AC_PROG_INSTALL
+AC_PROG_RANLIB
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+AC_ISC_POSIX
+AC_TYPE_SIZE_T
+AC_C_CONST
+
+dnl Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS(string.h stdlib.h sys/param.h memory.h unistd.h)
+AC_HEADER_STAT
+
+dnl Checks for library functions.
+AC_FUNC_ALLOCA
+AC_FUNC_MMAP
+dnl getpagesize is checked for by AC_FUNC_MMAP.
+AC_CHECK_FUNCS(strerror valloc)
+AC_REPLACE_FUNCS(memchr)
+
+dnl I18N
+ALL_LINGUAS="de es fr ko nl no pl sl sv"
+AM_GNU_GETTEXT
+AC_DEFINE_UNQUOTED(PACKAGE, "$PACKAGE")
+AC_DEFINE_UNQUOTED(VERSION, "$VERSION")
+AC_LINK_FILES($nls_cv_header_libgt, $nls_cv_header_intl)
+
+dnl some folks ask for this, that's fine by me
+dnl hope they know what they're doing ... 
+AC_ARG_WITH(included-regex,
+  [  --without-included-regex         don't compile regex],
+	USE_REGEX=$withval, USE_REGEX=yes)
+test "$USE_REGEX" = "yes" && LIBOBJS="$LIBOBJS regex.o"
+
+AC_OUTPUT(Makefile src/Makefile tests/Makefile po/Makefile.in intl/Makefile, [sed -e "/POTFILES =/r po/POTFILES" po/Makefile.in > po/Makefile; echo timestamp > stamp-h])

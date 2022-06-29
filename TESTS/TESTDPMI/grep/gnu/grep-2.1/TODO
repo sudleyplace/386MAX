@@ -1,0 +1,38 @@
+Write Texinfo documentation for grep.  The manual page would be a good
+place to start, but Info documents are also supposed to contain a
+tutorial and examples.
+
+Fix the DFA matcher to never use exponential space.  (Fortunately, these
+cases are rare.)
+
+Improve the performance of the regex backtracking matcher.  This matcher
+is agonizingly slow, and is responsible for grep sometimes being slower
+than Unix grep when backreferences are used.
+
+Provide support for the Posix [= =] and [. .] constructs.  This is
+difficult because it requires locale-dependent details of the character
+set and collating sequence, but Posix does not standardize any method
+for accessing this information!
+
+##
+Provide some sort of Hilight ... hmm
+
+Have different binaries for fgrep, egrep and grep.
+It needs a complete rewrite of the main and how the matcher
+is call; it should not depend on the name of the program.
+
+Port to Win NT/95 see Delorie or cygnus win32 project
+
+Merge all the modifs that are scattering around in the
+various Linux distribution.
+
+Some test in tests/spencer2.tests should have failed !!!
+Need to fiter out some bugs in regex.[ch].
+
+Threads for grep ?
+
+Grep does 32 bits arithmetic, it needs to move to 64.
+
+Clean up, to many #ifdef's !!
+
+Better and faster !!
