@@ -1,0 +1,648 @@
+
+MACROS:
+
+       MAXINC = Q:\
+	   O2 = $(MAXROOT)lib\
+   winbootdir = C:\W
+	    B = $(MAXROOT)lib\
+       LSTMAC =
+     CORECODE = X
+      INCLUDE = $(MSVC16)INCLUDE;$(INCLUDE)
+		$(MAXROOT)include;$(MAXROOT)inc;$(MSVC)include;$(MSVC)mfc\include;.
+		H:\;I:\;M:\INCLUDE
+   PCTSR_ADEP =
+	    E = .
+      RAMDEMO = 0
+       MAXDIR = Q:\
+	   BC = bc
+	   BD = $(MAXROOT)lib\
+	  B2R = $(MAXROOT)tools\bin2rc
+	   CC = $(MSVC)bin\cl
+		cl
+ MEM_CAL_ADEP =  {$(P)}MEM_COM.MAC {$(P)}MEM_SEGS.INC
+	    H = $(MAXROOT)include\
+       KEDITW = NODIRCASE
+       NEWDIR = N
+	    I = $(MAXROOT)inc\
+       I01DIR = S:\INT1\
+	  AS6 = $(MAXROOT)tools\ml6
+      COMSPEC = C:\COMMAND.COM
+       FULLRE = 1
+ MEM_CMD_ADEP =  {$(P)}MEM_SCRN.INC {$(P)}MEM_SEGS.INC {$(P)}MEM_CM2.INC
+	  BCF = $(MAXROOT)text\
+    DISKLABEL = QMAX8
+    MAKEFLAGS = LNP
+	PCTSR = 1
+	    M = P:\MAX\QMT\
+      BLASTER = A220 I7 D1 T2
+ MEM_FCN_ADEP =  {$(P)}MEM_SEGS.INC {$(P)}MEM_CM2.INC {$(P)}MEM_CNT.INC {$(P)}MEM_GL3.INC
+	    O = $(OEM)\
+      COPYCMD = /Y
+ MEM_LID_ADEP =  {$(P)}MEM_LID.MAC {$(P)}MEM_SEGS.INC {$(P)}MEM_GL3.INC {$(P)}MEM_CNT.INC
+	    P = $(E);$(R);$(M)
+	   LD = $(MSVC)bin\link
+	TOOLS = $(MAXROOT)tools\
+	    Q = $(MAXROOT)386max\
+  VXCLASSPATH = T:\VXtreme\client\applets
+     SNDSCAPE = C:\W
+ MEM_IDN_ADEP =  {$(P)}MEM_SCRN.INC {$(P)}MEM_SEGS.INC $(Q)QMAX_IDN.INC
+	    R = $(RXMDIR)
+     MAKEBOOT = 1
+      BLETTER = B
+	   AS = $(MAXROOT)tools\masm
+		ml
+VERSBETA_ADEP =
+      LIBUTIL = $(MSVC)bin\lib
+      QLNKDIR = R:\QLINK\
+	   RC = $(MSVC)bin\rc
+		rc
+     PRODNAME = RAMEXAM
+       RXMDIR = R:\MAX\QMT\
+	  LIB = $(MSVC)lib;$(MSVC)mfc\lib;$(MAXROOT)lib
+		M:\LIB
+    E820_ADEP =
+       SWTINC = S:\
+ MEM_UID_ADEP =  {$(P)}MEM_UID.MAC {$(P)}MEM_SEGS.INC {$(P)}MEM_GL3.INC {$(P)}MEM_CNT.INC
+ MEM_EPM_ADEP =  {$(P)}MEM_SEGS.INC $(Q)EMM2CALL.INC $(Q)QMAX_CTL.INC $(Q)QMAX_VCP.INC {$(P)}MEM_CM2.INC {$(P)}MEM_GL3.INC {$(P)}MEM_CNT.INC {$(P)}MEM_TSR.INC $(Q)QMAXINFO.INC
+ MEM_LIN_ADEP =  {$(P)}MEM_LIN.MAC {$(P)}MEM_SEGS.INC {$(P)}MEM_GL3.INC {$(P)}MEM_CNT.INC
+ MEM_A20_ADEP =  {$(P)}MEM_SEGS.INC {$(P)}MEM_GL3.INC
+      COREEXT = MAX
+     COREBITS = 1
+MEM_MAIN_ADEP =  {$(P)}MEM_CC.INC {$(P)}MEM_SCRN.INC {$(P)}MEM_SEGS.INC {$(P)}MEM_CM2.INC {$(P)}MEM_CNT.INC {$(P)}MEM_GL3.INC
+      CATROOT = R:\
+	 BETA = 1
+MEM_HTX2_ADEP =
+       SWTDIR = S:\
+ MEM_FMT_ADEP =  {$(P)}MEM_SEGS.INC
+MEM_FALT_ADEP =  {$(P)}MEM_CC.INC {$(P)}MEM_SCRN.INC {$(P)}MEM_COM.MAC {$(P)}MEM_SEGS.INC {$(P)}MEM_GL3.INC {$(P)}MEM_CNT.INC {$(P)}MEM_TSR.INC
+     COREPROD = 386MAX
+       SYSDIR = R:\LIB\
+       MSVC32 = N:\
+	 MAKE = NMAKER
+ VERSION_ADEP =
+ MEM_KEY_ADEP =  {$(P)}MEM_SEGS.INC
+MEM_HELP_ADEP =  {$(P)}MEM_SCRN.INC {$(P)}MEM_SEGS.INC {$(P)}MEM_GL3.INC
+       WINVXD = R:\MAX\VXD\
+       MSVC16 = M:\
+	  OEM = RE$(BLETTER)
+   COREEXBASE = BET
+	 LANG = US
+       PROMPT = $p$g
+ MEM_UIN_ADEP =  {$(P)}MEM_UIN.MAC {$(P)}MEM_SEGS.INC {$(P)}MEM_GL3.INC {$(P)}MEM_CNT.INC
+MEM_MISC_ADEP =  {$(P)}MEM_SEGS.INC
+    CLASSPATH = T:\VXtreme\client\applets;
+	  CPP = $(CC)
+		cl
+       WWWDIR = T:\FOLKWEB\DATA\
+ MEM_USF_ADEP =  {$(P)}MEM_USF.MAC {$(P)}MEM_SEGS.INC {$(P)}MEM_GL3.INC {$(P)}MEM_CNT.INC
+ MEM_UTF_ADEP =  {$(P)}MEM_UTF.MAC {$(P)}MEM_SEGS.INC {$(P)}MEM_GL3.INC {$(P)}MEM_CNT.INC
+MEM_TIME_ADEP =  {$(P)}MEM_SCRN.INC {$(P)}MEM_SEGS.INC {$(P)}MEM_GL3.INC
+      VERSION = 803
+	  NET = p:\max\
+	 HDIR = H:\
+	  FOR = fl
+      MAXROOT = R:\MAX\
+	NMAKE = NMAKER
+      SRCROOT = R:\
+MEM_SCRN_ADEP =  {$(P)}MEM_SCRN.INC {$(P)}MEM_SEGS.INC
+       DDKINC = N:\DDK\INC32\
+	 PATH = $(MSVC)bin;$(PATH)
+		C:\BIN;W:\;W:\COMMAND;R:\MAX\LIB;R:\LIB;M:\BIN
+	 OBJS = $(O)MEM_MAIN.OBJ	 $(O)MEM_CMD.OBJ	 $(O)MEM_EPM.OBJ	 $(O)MEM_FALT.OBJ	 $(O)MEM_FCN.OBJ	 $(O)MEM_KEY.OBJ	 $(O)MEM_MISC.OBJ	 $(O)MEM_SCRN.OBJ	 $(O)MEM_SYS.OBJ	 $(O)MEM_TIME.OBJ
+       AFLAGS = $(AFLAGS) /D@PCTSR
+		/DLANG_$(LANG) /T /DOEM=$(OEM)
+	  WIN = 16
+	COBOL = cobol
+       CFLAGS = /Gs /W3 /DSYSTEM=$(SYSNAME) /DREORDER /DLANG_$(LANG)
+	 CVER = 700
+       TWTEXT = BOB
+      MSINPUT = C:\Program Files\Microsoft Hardware
+MEM_MSGS_ADEP =  {$(P)}MEM_SCRN.INC {$(P)}MEM_SEGS.INC $(Q)VERSBETA.INC
+      SWATVXD = R:\SWATVXD\
+	  TMP = W:\TEMP
+	CCOMP = $(CC)
+       ALLINC = $(E);$(O);$(R);$(I);$(Q);$(INCLUDE)
+       EMBDIR = R:\EMBLER\
+	  CXX = cl
+	 INIT = C:\BIN
+       PASCAL = pl
+ MEM_SYS_ADEP =  {$(P)}MEM_SEGS.INC {$(P)}MEM_GL3.INC {$(P)}MEM_CNT.INC {$(P)}MEM_TSR.INC
+	 TEMP = W:\TEMP
+       CONFIG = 386MAX-SWAT
+       BINDIR = $(MAXROOT)lib\
+		R:\LIB\
+       LFLAGS = /map /line /nod
+       OLDINC = $(INCLUDE)
+	VCSID = BOB
+	 MSVC = $(MSVC16)
+		M:\
+       INCDIR = I:\
+       LNKCMD = QLINK
+	   I2 = $(MAXROOT)INC\
+      CMDLINE = NMAKER /nologo /f makefile FULLRE=1 BETA=1 PCTSR=1 /n /p
+       SDKINC = M:\DDK\INCLUDE\
+       PFLAGS = /Zg /DPROTO /DCVDBG /DSYSTEM=$(SYSNAME) /DREORDER /DLANG_$(LANG)
+      MAKEDIR = R:\MAX\QMT\M2.BOB
+      DEPSCAN = $(DEPSCAN) >$(O)qmtdep.inc
+		$(DEPSCAN) *.c
+		$(DEPSCAN) *.asm $(R)*.asm *.a$(LANG)
+		$(DEPSCAN) -t$(O)=$$(O)
+		$(DEPSCAN) -p{$$(P)}
+		-r$(MAXROOT)
+MEM_HTXT_ADEP =  {$(P)}MEM_SCRN.INC {$(P)}MEM_SEGS.INC
+	QLINK = /W:EXTMAT
+
+
+INFERENCE RULES:
+
+.obj.lib:
+	commands:	 lib @$*.arf
+
+.obj.sys:
+	commands:	 if exist VERSION.ASM incvers VERSION.ASM
+			 if exist VERSION.ASM masm VERSION; >NUL
+			 lnksys $*
+
+.obj.com:
+	commands:	 if exist VERSION.ASM incvers VERSION.ASM
+			 if exist VERSION.ASM masm VERSION; >NUL
+			 lnkcom $*
+
+.obj.exe:
+	commands:	 if exist VERSION.ASM incvers VERSION.ASM
+			 if exist VERSION.ASM masm VERSION; >NUL
+			 lnkexe $*
+
+{.}.asm{REB\}.obj:
+	commands:	set INCLUDE=$(ALLINC)
+			masm %s $(AFLAGS), $(O) $(LSTMAC);
+			set INCLUDE=$(OLDINC)
+			@ff $*/,/#
+
+{R:\MAX\QMT\}.asm{REB\}.obj:
+	commands:	set INCLUDE=$(ALLINC)
+			masm %s $(AFLAGS), $(O) $(LSTMAC);
+			set INCLUDE=$(OLDINC)
+			@ff $*/,/#
+
+{R:\MAX\386max\}.asm{REB\}.obj:
+	commands:	set INCLUDE=$(ALLINC)
+			masm %s $(AFLAGS), $(O) $(LSTMAC);
+			set INCLUDE=$(OLDINC)
+			@ff $*/,/#
+
+.asm.obj:
+	commands:	 a $* $(ASMOPT)
+
+.asm.exe:
+	commands:	$(AS) $(AFLAGS) $*.asm
+
+.c.obj:
+	commands:	 $(CC)	  $(PROFLAGS) /c /Zg $*.C >$*.PRO
+			 $(CCOMP) $(CFLAGS)	     $*.C
+			 REM  DONE
+
+.c.exe:
+	commands:	$(CC) $(CFLAGS) $*.c
+
+.cpp.exe:
+	commands:	$(CPP) $(CPPFLAGS) $*.cpp
+
+.cpp.obj:
+	commands:	$(CPP) $(CPPFLAGS) /c $*.cpp
+
+.cxx.exe:
+	commands:	$(CXX) $(CXXFLAGS) $*.cxx
+
+.cxx.obj:
+	commands:	$(CXX) $(CXXFLAGS) /c $*.cxx
+
+.bas.obj:
+	commands:	$(BC) $(BFLAGS) $*.bas;
+
+.cbl.exe:
+	commands:	$(COBOL) $(COBFLAGS) $*.cbl, $*.exe;
+
+.cbl.obj:
+	commands:	$(COBOL) $(COBFLAGS) $*.cbl;
+
+.for.exe:
+	commands:	$(FOR) $(FFLAGS) $*.for
+
+.for.obj:
+	commands:	$(FOR) /c $(FFLAGS) $*.for
+
+.pas.exe:
+	commands:	$(PASCAL) $(PFLAGS) $*.pas
+
+.pas.obj:
+	commands:	$(PASCAL) /c $(PFLAGS) $*.pas
+
+.rc.res:
+	commands:	$(RC) $(RFLAGS) /r $*
+
+.y.c:
+	commands:	 pcyacc $(YFLAGS) $*.y
+
+.map.ssf:
+	commands:	mapssf -t$* $*
+
+.com.map:
+	commands:
+.SUFFIXES: .exe .obj .asm .c .cpp .cxx .bas .cbl .for .pas .res .rc .h .y .lib .ssf .map .com .aus .agr .ob2 .ssf .pro
+
+TARGETS:
+
+R:\MAX\lib\RAMEXAM.SSF:
+	flags:	-n
+	dependents:	REB\RAMEXAM.SSF
+	commands:	xc /r $(**R).ssf   $*.*
+			xc /r $(**R).map   $*.*
+
+MEM_LID.MAC:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_COM.MAC
+	commands:
+
+REB\MAKEBOOT.EXE:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MAKEBOOT.C REB\MAKEBOOT.PRO
+
+	commands:	$(CC) /AS $(CFLAGS) /I$(O) /I$(E) /Fm$* /Fo$* /Fe$* %s
+			mapssf -t$* $*
+
+REB\VERSBETA.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}VERSBETA.ASM
+	commands:
+
+REB\MEM_A20.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_A20.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_GL3.INC
+	commands:
+
+MEM_UID.MAC:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_COM.MAC
+	commands:
+
+MEM_LIN.MAC:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_COM.MAC
+	commands:
+
+REB\MEM_MAIN.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_MAIN.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CC.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SCRN.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CM2.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CNT.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_GL3.INC
+	commands:
+
+REB\MEM_HTX3.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_HTX2.AUS R:\MAX\QMT\WRAPPER.COM
+
+	commands:	set INCLUDE=$(ALLINC)
+			masm %s $(AFLAGS), $(O)$(@B).OB2 ;
+			set INCLUDE=$(OLDINC)
+			$(LNKCMD) @<<$(O)MEM_HTX2.ARF
+	$(O)mem_htx3.ob2
+	$(O)mem_htx2
+	$(O)mem_htx2
+	$(LFLAGS) /tiny;
+<<KEEP
+			$(R)wrapper.com $(O)mem_htx2.COM $(O)MEM_HTX2.AS2
+			set INCLUDE=$(ALLINC)
+			masm $(O)MEM_HTX2.AS2 $(AFLAGS), $(O)MEM_HTX3.OBJ $(LSTMAC);
+			set INCLUDE=$(OLDINC)
+
+REB\MEM_FALT.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_FALT.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CC.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SCRN.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_COM.MAC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_GL3.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CNT.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_TSR.INC
+
+	commands:
+
+REB\MEM_HELP.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_HELP.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SCRN.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_GL3.INC
+
+	commands:
+
+REB\MAKEBOOT.PRO:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MAKEBOOT.C
+	commands:	$(CC) $(PFLAGS) /I$(E) %s > $(O)makeboot.tmp
+			xc /m/r $(O)makeboot.tmp $(O)makeboot.pro
+
+R:\MAX\QMT\WRAPPER.COM:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}WRAPPER.C
+	commands:	$(CC) /AT $(CFLAGS) /Fm$* %s
+			mapssf -t$* $*
+
+REB\MEM_MISC.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_MISC.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC
+
+	commands:
+
+MEM_UIN.MAC:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_COM.MAC
+	commands:
+
+REB\MEM_TIME.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_TIME.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SCRN.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_GL3.INC
+
+	commands:
+
+MEM_USF.MAC:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_COM.MAC
+	commands:
+
+MEM_UTF.MAC:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_COM.MAC
+	commands:
+
+REB\MEM_SCRN.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SCRN.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SCRN.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC
+	commands:
+
+REB\MEM_MSGS.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_MSGS.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SCRN.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC R:\MAX\386max\VERSBETA.INC
+
+	commands:
+
+pvcs.cfg:
+	flags:	-n
+	dependents:
+	commands:	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\qmt\*
+VCSDIR = P:\PVCS\MAX\qmt\*
+ALIAS ALL P:\PVCS\MAX\qmt\*.*,p:\pvcs\max\qmt\udlocal2.bav
+<<KEEP
+
+R:\MAX\lib\MAKEBOOT.EXE:
+	flags:	-n
+	dependents:	REB\MAKEBOOT.EXE
+	commands:	xc /r $(O)MAKEBOOT.EXE	$(BINDIR)MAKEBOOT.EXE
+
+REB\MEM_HTXT.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_HTXT.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SCRN.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC
+	commands:
+
+{.;R:\MAX\QMT\;P:\MAX\QMT\}MAKEFILE:
+	flags:	-n
+	dependents:	REB\qmtdep.inc
+	commands:
+
+REB\MEM_CAL.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CAL.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_COM.MAC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC
+	commands:
+
+REB\RAMEXAM.MAP:
+	flags:	-n
+	dependents:	REB\RAMEXAM.EXE
+	commands:
+
+REB\MEM_CMD.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CMD.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SCRN.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CM2.INC
+
+	commands:
+
+REB\RAMEXAM.EXE:
+	flags:	-n
+	dependents:	REB\MEM_MAIN.OBJ REB\MEM_CMD.OBJ REB\MEM_EPM.OBJ
+			REB\MEM_FALT.OBJ REB\MEM_FCN.OBJ REB\MEM_KEY.OBJ
+			REB\MEM_MISC.OBJ REB\MEM_SCRN.OBJ REB\MEM_SYS.OBJ
+			REB\MEM_TIME.OBJ REB\MEM_FMT.OBJ REB\MEM_HELP.OBJ
+			REB\MEM_HTXT.OBJ REB\MEM_CAL.OBJ REB\MEM_MSGS.OBJ
+			REB\MEM_USF.OBJ REB\MEM_UTF.OBJ REB\MEM_UIN.OBJ
+			REB\MEM_UID.OBJ REB\MEM_LIN.OBJ REB\MEM_LID.OBJ
+			REB\VERSION.OBJ REB\VERSBETA.OBJ REB\MEM_A20.OBJ
+			REB\MEM_HTX3.OBJ REB\MEM_IDN.OBJ {.;R:\MAX\QMT\;P:\MAX\QMT\}MAKEFILE
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}RAMEXAM.WSG
+	commands:	$(LNKCMD) @<<$(O)$(PRODNAME).ARF
+		$(OBJS: =+^
+)
+		$*
+		$*
+		$(LFLAGS) ;
+<<KEEP
+
+REB\MEM_FCN.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_FCN.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CM2.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CNT.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_GL3.INC
+	commands:
+
+REB\MEM_LID.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_LID.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_LID.MAC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_GL3.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CNT.INC
+	commands:
+
+DEL:
+	flags:	-n
+	dependents:
+	commands:	-rm $(O)*.*
+
+REB\MEM_IDN.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_IDN.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SCRN.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC R:\MAX\386max\QMAX_IDN.INC
+
+	commands:
+
+ALL:
+	flags:	-n
+	dependents:	DIR R:\MAX\lib\RAMEXAM.EXE R:\MAX\lib\RAMEXAM.SSF
+			R:\MAX\lib\MAKEBOOT.EXE
+	commands:
+
+REB\RAMEXAM.SSF:
+	flags:	-n
+	dependents:	REB\RAMEXAM.MAP
+	commands:	mapssf -w$(PRODNAME) -t$* $*
+
+REB\MEM_UID.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_UID.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_UID.MAC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_GL3.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CNT.INC
+	commands:
+
+REB\MEM_EPM.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_EPM.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC
+			R:\MAX\386max\EMM2CALL.INC R:\MAX\386max\QMAX_CTL.INC
+			R:\MAX\386max\QMAX_VCP.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CM2.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_GL3.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CNT.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_TSR.INC R:\MAX\386max\QMAXINFO.INC
+
+	commands:
+
+REB\MEM_LIN.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_LIN.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_LIN.MAC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_GL3.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CNT.INC
+	commands:
+
+DIR:
+	flags:	-n
+	dependents:
+	commands:	vdir -c $(O)
+
+GET:
+	flags:	-n
+	dependents:	pvcs.cfg
+	commands:	$(GETCMD) $(MAKEDIR)
+
+REB\MEM_FMT.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_FMT.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC
+
+	commands:
+
+REB\VERSION.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}VERSION.ASM
+	commands:
+
+REB\MEM_KEY.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_KEY.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC
+
+	commands:
+
+REB\MEM_UIN.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_UIN.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_UIN.MAC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_GL3.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CNT.INC
+	commands:
+
+REB\VERSRET.OBJ:
+	flags:	-n
+	dependents:	R:\MAX\386max\VERSRET.ASM
+	commands:
+
+REB\MEM_USF.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_USF.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_USF.MAC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_GL3.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CNT.INC
+	commands:
+
+REB\MEM_UTF.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_UTF.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_UTF.MAC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_GL3.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CNT.INC
+	commands:
+
+R:\MAX\lib\RAMEXAM.EXE:
+	flags:	-n
+	dependents:	REB\RAMEXAM.EXE
+	commands:	xc /r $(O)$(PRODNAME).EXE  $(BINDIR)$(PRODNAME).EXE
+
+REB\MEM_SYS.OBJ:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SYS.ASM {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_SEGS.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_GL3.INC {.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_CNT.INC
+			{.;R:\MAX\QMT\;P:\MAX\QMT\}MEM_TSR.INC
+	commands:
+
+DEPSCAN:
+	flags:	-n
+	dependents:	{.;R:\MAX\QMT\;P:\MAX\QMT\}MAKEFILE
+	commands:	-rm $(O)makeboot.pro
+			depscan $(DEPSCAN)
+
+
+	vdir -c REB\
+	set INCLUDE=.;REB\;R:\MAX\QMT\;R:\MAX\inc\;R:\MAX\386max\;M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	masm .\MEM_MAIN.asm /DLANG_US /T /DOEM=REB /D@PCTSR, REB\ ;
+	set INCLUDE=M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	ff REB\MEM_MAIN/,/#
+	set INCLUDE=.;REB\;R:\MAX\QMT\;R:\MAX\inc\;R:\MAX\386max\;M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	masm .\MEM_EPM.asm /DLANG_US /T /DOEM=REB /D@PCTSR, REB\ ;
+	set INCLUDE=M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	ff REB\MEM_EPM/,/#
+	set INCLUDE=.;REB\;R:\MAX\QMT\;R:\MAX\inc\;R:\MAX\386max\;M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	masm .\MEM_FALT.asm /DLANG_US /T /DOEM=REB /D@PCTSR, REB\ ;
+	set INCLUDE=M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	ff REB\MEM_FALT/,/#
+	set INCLUDE=.;REB\;R:\MAX\QMT\;R:\MAX\inc\;R:\MAX\386max\;M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	masm .\MEM_FCN.asm /DLANG_US /T /DOEM=REB /D@PCTSR, REB\ ;
+	set INCLUDE=M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	ff REB\MEM_FCN/,/#
+	set INCLUDE=.;REB\;R:\MAX\QMT\;R:\MAX\inc\;R:\MAX\386max\;M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	masm .\MEM_SYS.asm /DLANG_US /T /DOEM=REB /D@PCTSR, REB\ ;
+	set INCLUDE=M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	ff REB\MEM_SYS/,/#
+	set INCLUDE=.;REB\;R:\MAX\QMT\;R:\MAX\inc\;R:\MAX\386max\;M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	masm .\MEM_TIME.asm /DLANG_US /T /DOEM=REB /D@PCTSR, REB\ ;
+	set INCLUDE=M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	ff REB\MEM_TIME/,/#
+	set INCLUDE=.;REB\;R:\MAX\QMT\;R:\MAX\inc\;R:\MAX\386max\;M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	masm .\MEM_HELP.asm /DLANG_US /T /DOEM=REB /D@PCTSR, REB\ ;
+	set INCLUDE=M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	ff REB\MEM_HELP/,/#
+	set INCLUDE=.;REB\;R:\MAX\QMT\;R:\MAX\inc\;R:\MAX\386max\;M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	masm .\MEM_USF.asm /DLANG_US /T /DOEM=REB /D@PCTSR, REB\ ;
+	set INCLUDE=M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	ff REB\MEM_USF/,/#
+	set INCLUDE=.;REB\;R:\MAX\QMT\;R:\MAX\inc\;R:\MAX\386max\;M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	masm .\MEM_UTF.asm /DLANG_US /T /DOEM=REB /D@PCTSR, REB\ ;
+	set INCLUDE=M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	ff REB\MEM_UTF/,/#
+	set INCLUDE=.;REB\;R:\MAX\QMT\;R:\MAX\inc\;R:\MAX\386max\;M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	masm .\MEM_UIN.asm /DLANG_US /T /DOEM=REB /D@PCTSR, REB\ ;
+	set INCLUDE=M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	ff REB\MEM_UIN/,/#
+	set INCLUDE=.;REB\;R:\MAX\QMT\;R:\MAX\inc\;R:\MAX\386max\;M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	masm .\MEM_UID.asm /DLANG_US /T /DOEM=REB /D@PCTSR, REB\ ;
+	set INCLUDE=M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	ff REB\MEM_UID/,/#
+	set INCLUDE=.;REB\;R:\MAX\QMT\;R:\MAX\inc\;R:\MAX\386max\;M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	masm .\MEM_LIN.asm /DLANG_US /T /DOEM=REB /D@PCTSR, REB\ ;
+	set INCLUDE=M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	ff REB\MEM_LIN/,/#
+	set INCLUDE=.;REB\;R:\MAX\QMT\;R:\MAX\inc\;R:\MAX\386max\;M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	masm .\MEM_LID.asm /DLANG_US /T /DOEM=REB /D@PCTSR, REB\ ;
+	set INCLUDE=M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	ff REB\MEM_LID/,/#
+	set INCLUDE=.;REB\;R:\MAX\QMT\;R:\MAX\inc\;R:\MAX\386max\;M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	masm R:\MAX\QMT\MEM_A20.asm /DLANG_US /T /DOEM=REB /D@PCTSR, REB\ ;
+	set INCLUDE=M:\INCLUDE;R:\MAX\include;R:\MAX\inc;M:\include;M:\mfc\include;.
+	ff REB\MEM_A20/,/#
+	QLINK @REB\RAMEXAM.ARF
+	xc /r REB\RAMEXAM.EXE  R:\MAX\lib\RAMEXAM.EXE
+	mapssf -wRAMEXAM -tREB\RAMEXAM REB\RAMEXAM
+	xc /r REB\RAMEXAM.ssf	R:\MAX\lib\RAMEXAM.*
+	xc /r REB\RAMEXAM.map	R:\MAX\lib\RAMEXAM.*
+
