@@ -1,0 +1,1207 @@
+{\rtf1\ansi \deff11\deflang1033{\fonttbl{\f0\froman\fcharset0\fprq2 Tms Rmn;}{\f1\froman\fcharset2\fprq2 Symbol;}{\f2\fswiss\fcharset0\fprq2 Helv;}{\f3\fmodern\fcharset0\fprq1 Courier;}
+{\f4\froman\fcharset0\fprq2 Times New Roman;}{\f5\fswiss\fcharset0\fprq2 Arial;}{\f6\froman\fcharset0\fprq2 MS Serif;}{\f7\fswiss\fcharset0\fprq2 MS Sans Serif;}{\f8\froman\fcharset0\fprq2 Times;}{\f9\fswiss\fcharset0\fprq2 Helvetica;}
+{\f10\fswiss\fcharset0\fprq2 System;}{\f11\fmodern\fcharset0\fprq1 Courier New;}{\f12\fmodern\fcharset0\fprq1 LinePrinter;}{\f13\froman\fcharset0\fprq2 CG Times;}{\f14\fswiss\fcharset0\fprq2 Univers;}{\f15\fswiss\fcharset0\fprq2 Univers Condensed;}
+{\f16\fswiss\fcharset0\fprq2 Antique Olive;}{\f17\froman\fcharset0\fprq2 Garamond;}{\f18\fswiss\fcharset0\fprq2 CG Omega;}{\f19\fswiss\fcharset0\fprq2 Albertus Medium;}{\f20\fswiss\fcharset0\fprq2 Albertus Extra Bold;}
+{\f21\froman\fcharset0\fprq2 Clarendon Condensed;}{\f22\fscript\fcharset0\fprq2 Coronet;}{\f23\fmodern\fcharset0\fprq1 Letter Gothic;}{\f24\fscript\fcharset0\fprq2 Marigold;}{\f25\fnil\fcharset2\fprq2 Wingdings;}{\f26\fnil\fcharset2\fprq2 Marlett;}
+{\f27\froman\fcharset0\fprq2 Book Antiqua;}{\f28\fnil\fcharset2\fprq2 Monotype Sorts;}{\f29\fswiss\fcharset0\fprq2 Arial Narrow;}{\f30\froman\fcharset0\fprq2 Bookman Old Style;}{\f31\fswiss\fcharset0\fprq2 Century Gothic;}
+{\f32\fscript\fcharset0\fprq2 Monotype Corsiva;}{\f33\froman\fcharset0\fprq2 Century Schoolbook;}{\f34\froman\fcharset2\fprq2 MT Extra;}{\f35\fmodern\fcharset2\fprq1 MS LineDraw;}{\f36\fdecor\fcharset0\fprq2 Algerian;}
+{\f37\fswiss\fcharset0\fprq2 Arial Rounded MT Bold;}{\f38\fdecor\fcharset0\fprq2 Braggadocio;}{\f39\fswiss\fcharset0\fprq2 Britannic Bold;}{\f40\fscript\fcharset0\fprq2 Brush Script MT;}{\f41\fdecor\fcharset0\fprq2 Colonna MT;}
+{\f42\fdecor\fcharset0\fprq2 Desdemona;}{\f43\froman\fcharset0\fprq2 Footlight MT Light;}{\f44\fswiss\fcharset0\fprq2 Impact;}{\f45\fdecor\fcharset0\fprq2 Kino MT;}{\f46\froman\fcharset0\fprq2 Wide Latin;}
+{\f47\fscript\fcharset0\fprq2 Matura MT Script Capitals;}{\f48\fdecor\fcharset0\fprq2 Playbill;}{\f49\fscript\fcharset0\fprq2 Comic Sans MS;}{\f50\fswiss\fcharset0\fprq2 Arial Black;}{\f51\fswiss\fcharset0\fprq2 Verdana;}
+{\f52\fnil\fcharset0\fprq2 MICRSSK;}{\f53\fswiss\fcharset0\fprq2 Monstroula;}{\f54\fswiss\fcharset0\fprq2 Tahoma;}{\f55\fmodern\fcharset255\fprq2 Modern;}{\f56\fswiss\fcharset0\fprq1 MS Dialog;}{\f57\froman\fcharset0\fprq2 New York;}
+{\f58\fswiss\fcharset0\fprq2 Geneva;}{\f59\fswiss\fcharset0\fprq2 TektoMM_240 RG 564 NO;}{\f60\fswiss\fcharset0\fprq2 TektoMM;}{\f61\fswiss\fcharset0\fprq2 Anna;}{\f62\fswiss\fcharset0\fprq2 Poppl-Laudatio Regular;}{\f63\fswiss\fcharset0\fprq2 Boulevard;}
+{\f64\froman\fcharset0\fprq2 Roman;}{\f65\froman\fcharset0\fprq2 Boton Regular;}{\f66\froman\fcharset0\fprq2 Baskerville BE Regular;}{\f67\fdecor\fcharset0\fprq2 Giddyup Thangs;}{\f68\fswiss\fcharset0\fprq2 Giddyup;}
+{\f69\fswiss\fcharset0\fprq2 TektoMM_100 LT 250 CN;}{\f70\fswiss\fcharset0\fprq2 TektoMM_100 LT 564 NO;}{\f71\fswiss\fcharset0\fprq2 TektoMM_100 LT 850 EX;}{\f72\fswiss\fcharset0\fprq2 TektoMM_240 RG 250 CN;}
+{\f73\fswiss\fcharset0\fprq2 TektoMM_240 RG 850 EX;}{\f74\fswiss\fcharset0\fprq2 TektoMM_503 BD 250 CN;}{\f75\fswiss\fcharset0\fprq2 TektoMM_503 BD 488 NO;}{\f76\fswiss\fcharset0\fprq2 TektoMM_503 BD 850 EX;}{\f77\fswiss\fcharset0\fprq2 Optima;}
+{\f78\fswiss\fcharset0\fprq2 StoneSans;}{\f79\fswiss\fcharset0\fprq2 StoneSansSemibold;}{\f80\fdecor\fcharset2\fprq2 ZapfDingbats;}{\f81\fswiss\fcharset0\fprq2 Haettenschweiler;}{\f82\fswiss\fcharset0\fprq2 News Gothic MT;}
+{\f83\fscript\fcharset0\fprq2 Lucida Handwriting;}{\f84\fswiss\fcharset0\fprq2 Lucida Sans;}{\f85\fswiss\fcharset0\fprq2 Lucida Sans Unicode;}{\f86\fmodern\fcharset0\fprq1 OCR A Extended;}{\f87\froman\fcharset0\fprq2 Calisto MT;}
+{\f88\fswiss\fcharset0\fprq2 Abadi MT Condensed Light;}{\f89\fswiss\fcharset0\fprq2 Copperplate Gothic Bold;}{\f90\fswiss\fcharset0\fprq2 Copperplate Gothic Light;}{\f91\fmodern\fcharset0\fprq1 Lucida Console;}{\f92\froman\fcharset0\fprq2 LotusWP Int A;}
+{\f93\froman\fcharset0\fprq2 LotusWP Int B;}{\f94\fmodern\fcharset2\fprq1 LotusWP Box;}{\f95\froman\fcharset0\fprq2 LotusWP Type;}{\f96\froman\fcharset0\fprq2 LotusWP Icon;}{\f97\froman\fcharset2\fprq2 Math A;}{\f98\fnil\fcharset2\fprq2 Math B;}
+{\f99\fnil\fcharset2\fprq2 Math C;}{\f100\fnil\fcharset0\fprq2 Lotus Postal Barcode;}{\f101\froman\fcharset0\fprq2 Baskerville;}{\f102\fnil\fcharset0\fprq2 Binner Gothic;}{\f103\froman\fcharset0\fprq2 Centaur;}{\f104\fswiss\fcharset0\fprq2 Gill Sans;}
+{\f105\fnil\fcharset0\fprq2 Gill Sans Condensed;}{\f106\fswiss\fcharset0\fprq2 Gill Sans Ultra Bold;}{\f107\fswiss\fcharset0\fprq2 News Gothic;}{\f108\froman\fcharset0\fprq2 Nimrod;}{\f109\froman\fcharset0\fprq2 Onyx;}
+{\f110\fnil\fcharset2\fprq2 Botanical;}{\f111\froman\fcharset0\fprq2 Rockwell;}{\f112\froman\fcharset0\fprq2 Rockwell Condensed;}{\f113\froman\fcharset0\fprq2 Rockwell Light;}{\f114\fnil\fcharset0\fprq2 Snowy;}{\f115\fnil\fcharset0\fprq2 Code 128;}
+{\f116\fswiss\fcharset0\fprq2 Aardvark;}{\f117\fswiss\fcharset0\fprq2 Adelaide;}{\f118\fswiss\fcharset2\fprq2 Alefbet;}{\f119\fswiss\fcharset0\fprq2 Algiers;}{\f120\fswiss\fcharset0\fprq2 Alto;}{\f121\fswiss\fcharset0\fprq2 Amherst;}
+{\f122\fswiss\fcharset0\fprq2 Amy;}{\f123\fswiss\fcharset0\fprq2 Arabia;}{\f124\fswiss\fcharset0\fprq2 Architecture;}{\f125\fswiss\fcharset0\fprq2 Avalon;}{\f126\fswiss\fcharset0\fprq2 Bahamas;}{\f127\fswiss\fcharset0\fprq2 BahamasHeavy;}
+{\f128\fswiss\fcharset0\fprq2 BahamasLight;}{\f129\fswiss\fcharset0\fprq2 BallroomTango;}{\f130\fswiss\fcharset0\fprq2 Banff;}{\f131\fswiss\fcharset0\fprq2 Bangkok;}{\f132\fswiss\fcharset0\fprq2 Bard;}{\f133\fswiss\fcharset0\fprq2 Bassoon;}
+{\f134\fswiss\fcharset0\fprq2 Bedrock;}{\f135\fnil\fcharset0\fprq2 Beehive;}{\f136\fswiss\fcharset0\fprq2 BigTop;}{\f137\fswiss\fcharset0\fprq2 Bodnoff;}{\f138\fswiss\fcharset0\fprq2 Bosanova;}{\f139\fswiss\fcharset0\fprq2 Bravo;}
+{\f140\fswiss\fcharset0\fprq2 BravoEngraved;}{\f141\fswiss\fcharset0\fprq2 Briquet;}{\f142\fswiss\fcharset0\fprq2 Brisk;}{\f143\fswiss\fcharset0\fprq2 Brochure;}{\f144\fswiss\fcharset0\fprq2 Brooklyn;}{\f145\fswiss\fcharset0\fprq2 Busker;}
+{\f146\fswiss\fcharset0\fprq2 Campaign;}{\f147\fswiss\fcharset0\fprq2 Cancun;}{\f148\fnil\fcharset0\fprq2 Carino;}{\f149\fswiss\fcharset0\fprq2 Carleton;}{\f150\fswiss\fcharset0\fprq2 Casablanca;}{\f151\fswiss\fcharset0\fprq2 CasablancaAntique;}
+{\f152\fswiss\fcharset0\fprq2 CasperOpenFace;}{\f153\fswiss\fcharset0\fprq2 Castanet;}{\f154\fswiss\fcharset0\fprq2 CenturionOld;}{\f155\fswiss\fcharset0\fprq2 Chalk;}{\f156\fswiss\fcharset0\fprq2 Charlesworth;}
+{\f157\fswiss\fcharset2\fprq2 CommonBullets;}{\f158\fswiss\fcharset0\fprq2 CopperPot;}{\f159\fswiss\fcharset0\fprq2 Cosmic;}{\f160\fswiss\fcharset0\fprq2 CosmicTwo;}{\f161\fswiss\fcharset0\fprq2 Cottage;}{\f162\fswiss\fcharset0\fprq2 Crescent;}
+{\f163\fswiss\fcharset0\fprq2 Cupertino;}{\f164\fswiss\fcharset0\fprq2 Czar;}{\f165\fswiss\fcharset0\fprq2 Dauphin;}{\f166\fswiss\fcharset0\fprq2 DawnCastle;}{\f167\fswiss\fcharset2\fprq2 Dixieland;}{\f168\fswiss\fcharset0\fprq2 Eklektic;}
+{\f169\fswiss\fcharset0\fprq2 Envision;}{\f170\fswiss\fcharset0\fprq2 Erie;}{\f171\fswiss\fcharset0\fprq2 ErieBlack;}{\f172\fswiss\fcharset0\fprq2 ErieContour;}{\f173\fswiss\fcharset0\fprq2 ErieLight;}{\f174\fswiss\fcharset0\fprq2 Euromode;}
+{\f175\fswiss\fcharset0\fprq2 Expo;}{\f176\fswiss\fcharset0\fprq2 Florence;}{\f177\fswiss\fcharset0\fprq2 France;}{\f178\fswiss\fcharset0\fprq2 Frankenstein;}{\f179\fswiss\fcharset0\fprq2 FrankfurtGothic;}
+{\f180\fswiss\fcharset0\fprq2 FrankfurtGothicHeavy;}{\f181\fswiss\fcharset0\fprq2 FrankHighlight;}{\f182\fswiss\fcharset0\fprq2 Freeport;}{\f183\fswiss\fcharset0\fprq2 Fujiyama;}{\f184\fswiss\fcharset0\fprq2 Fujiyama2;}
+{\f185\fswiss\fcharset0\fprq2 FujiyamaBlack;}{\f186\fswiss\fcharset0\fprq2 FujiyamaExtraBold;}{\f187\fswiss\fcharset0\fprq2 FujiyamaLight;}{\f188\fswiss\fcharset0\fprq2 Galleria;}{\f189\fswiss\fcharset0\fprq2 Gatineau;}
+{\f190\fswiss\fcharset2\fprq2 GeographicSymbols;}{\f191\fswiss\fcharset0\fprq2 GilbertUltraBold;}{\f192\fswiss\fcharset0\fprq2 Glacier;}{\f193\fswiss\fcharset0\fprq2 GoldenOldStyle;}{\f194\fswiss\fcharset0\fprq2 GoldMine;}
+{\f195\fswiss\fcharset2\fprq2 GreekMathSymbols;}{\f196\fnil\fcharset0\fprq2 Griffon;}{\f197\fswiss\fcharset0\fprq2 GriffonShadow;}{\f198\fswiss\fcharset0\fprq2 Harpoon;}{\f199\fswiss\fcharset0\fprq2 Heidelberg;}{\f200\fswiss\fcharset0\fprq2 Hollow;}
+{\f201\fswiss\fcharset0\fprq2 HomewardBound;}{\f202\fswiss\fcharset0\fprq2 Indiana;}{\f203\fswiss\fcharset0\fprq2 IndianaSolid;}{\f204\fswiss\fcharset0\fprq2 Ireland;}{\f205\fswiss\fcharset0\fprq2 Jupiter;}{\f206\fswiss\fcharset0\fprq2 KabanaBold;}
+{\f207\fswiss\fcharset0\fprq2 KabanaBook;}{\f208\fswiss\fcharset0\fprq2 Kastler;}{\f209\fswiss\fcharset0\fprq2 Keypunch;}{\f210\fswiss\fcharset2\fprq2 Keystroke;}{\f211\fswiss\fcharset0\fprq2 Kids;}{\f212\fswiss\fcharset0\fprq2 Koala;}
+{\f213\fswiss\fcharset0\fprq2 Korinthia;}{\f214\fswiss\fcharset0\fprq2 Lincoln;}{\f215\fswiss\fcharset0\fprq2 Linus;}{\f216\fswiss\fcharset0\fprq2 LiquidCrystal;}{\f217\fswiss\fcharset0\fprq2 Lithograph;}{\f218\fswiss\fcharset0\fprq2 LithographLight;}
+{\f219\fswiss\fcharset0\fprq2 Memorandum;}{\f220\fswiss\fcharset0\fprq2 Merlin;}{\f221\fswiss\fcharset0\fprq2 Monospaced;}{\f222\fswiss\fcharset0\fprq2 Motor;}{\f223\fswiss\fcharset2\fprq2 MusicalSymbols;}{\f224\fswiss\fcharset0\fprq2 Mystical;}
+{\f225\fswiss\fcharset0\fprq2 Nebraska;}{\f226\fswiss\fcharset0\fprq2 NewBrunswick;}{\f227\fswiss\fcharset0\fprq2 Newfoundland;}{\f228\fswiss\fcharset0\fprq2 NewOrder;}{\f229\fnil\fcharset0\fprq2 NewOrderEngraved;}{\f230\fswiss\fcharset0\fprq2 Nuance;}
+{\f231\fswiss\fcharset0\fprq2 Ottawa;}{\f232\fswiss\fcharset0\fprq2 Palette;}{\f233\fswiss\fcharset0\fprq2 PalmSprings;}{\f234\fswiss\fcharset0\fprq2 Paradise;}{\f235\fswiss\fcharset0\fprq2 Paragon;}{\f236\fswiss\fcharset0\fprq2 Penguin;}
+{\f237\fswiss\fcharset0\fprq2 PenguinLight;}{\f238\fswiss\fcharset0\fprq2 Pepper;}{\f239\fswiss\fcharset0\fprq2 Pipeline;}{\f240\fswiss\fcharset0\fprq2 Playwright;}{\f241\fswiss\fcharset0\fprq2 Posse;}{\f242\fswiss\fcharset0\fprq2 PowerLine;}
+{\f243\fswiss\fcharset0\fprq2 President;}{\f244\fswiss\fcharset0\fprq2 ProseAntique;}{\f245\fswiss\fcharset0\fprq2 Quantum;}{\f246\fswiss\fcharset0\fprq2 Renfrew;}{\f247\fswiss\fcharset0\fprq2 Scott;}{\f248\fswiss\fcharset0\fprq2 Scribe;}
+{\f249\fswiss\fcharset0\fprq2 Shogun;}{\f250\fswiss\fcharset0\fprq2 Southern;}{\f251\fswiss\fcharset0\fprq2 Stamp;}{\f252\fswiss\fcharset0\fprq2 Surreal;}{\f253\fswiss\fcharset0\fprq2 Switzerland;}{\f254\fswiss\fcharset0\fprq2 SwitzerlandBlack;}
+{\f255\fswiss\fcharset0\fprq2 SwitzerlandCondBlack;}{\f256\fnil\fcharset0\fprq2 SwitzerlandCondensed;}{\f257\fswiss\fcharset0\fprq2 SwitzerlandCondLight;}{\f258\fswiss\fcharset0\fprq2 SwitzerlandInserat;}{\f259\fswiss\fcharset0\fprq2 SwitzerlandLight;}
+{\f260\fswiss\fcharset0\fprq2 SwitzerlandNarrow;}{\f261\fswiss\fcharset0\fprq2 Technical;}{\f262\fswiss\fcharset0\fprq2 ThunderBay;}{\f263\fswiss\fcharset0\fprq2 Timpani;}{\f264\fswiss\fcharset0\fprq2 TimpaniHeavy;}{\f265\fswiss\fcharset0\fprq2 Toronto;}
+{\f266\fswiss\fcharset0\fprq2 Trafalgar;}{\f267\fswiss\fcharset0\fprq2 Umbrella;}{\f268\fswiss\fcharset0\fprq2 Unicorn;}{\f269\fswiss\fcharset0\fprq2 Uptown;}{\f270\fswiss\fcharset0\fprq2 USABlack;}{\f271\fswiss\fcharset0\fprq2 USALight;}
+{\f272\fswiss\fcharset0\fprq2 Viking;}{\f273\fswiss\fcharset0\fprq2 Vivienne;}{\f274\fswiss\fcharset0\fprq2 Vogue;}{\f275\fswiss\fcharset0\fprq2 ZurichCalligraphic;}{\f276\fswiss\fcharset0\fprq2 AvantGarde;}{\f277\froman\fcharset0\fprq2 Bookman;}
+{\f278\fswiss\fcharset0\fprq2 Helvetica-Narrow;}{\f279\froman\fcharset0\fprq2 NewCenturySchlbk;}{\f280\froman\fcharset0\fprq2 Palatino;}{\f281\froman\fcharset0\fprq2 ZapfChancery;}{\f282\froman\fcharset0\fprq0 CG Times (W1);}
+{\f283\fswiss\fcharset0\fprq0 Univers (W1);}{\f284\fmodern\fcharset0\fprq0 pica;}{\f285\fmodern\fcharset0\fprq0 elite;}{\f286\fmodern\fcharset0\fprq0 prestige;}{\f287\fswiss\fcharset0\fprq2 LetterGothic;}{\f288\fmodern\fcharset0\fprq0 gothicPS;}
+{\f289\fmodern\fcharset0\fprq0 cubicPS;}{\f290\fmodern\fcharset0\fprq0 avantegarde;}{\f291\fmodern\fcharset0\fprq0 spartan;}{\f292\fmodern\fcharset0\fprq0 metro;}{\f293\fmodern\fcharset0\fprq0 presentation;}{\f294\fmodern\fcharset0\fprq0 APL;}
+{\f295\fmodern\fcharset0\fprq0 OCRA;}{\f296\fmodern\fcharset0\fprq0 OCRB;}{\f297\froman\fcharset0\fprq0 boldPS;}{\f298\froman\fcharset0\fprq0 emperorPS;}{\f299\froman\fcharset0\fprq0 madaleine;}{\f300\froman\fcharset0\fprq0 zapf humanist;}
+{\f301\froman\fcharset0\fprq0 classic;}{\f302\froman\fcharset0\fprq0 roman f;}{\f303\froman\fcharset0\fprq0 roman g;}{\f304\froman\fcharset0\fprq0 roman h;}{\f305\froman\fcharset0\fprq0 timesroman;}{\f306\froman\fcharset0\fprq0 century;}
+{\f307\froman\fcharset0\fprq0 souvenir;}{\f308\froman\fcharset0\fprq0 caledonia;}{\f309\froman\fcharset0\fprq0 bodini;}{\f310\froman\fcharset0\fprq0 university;}{\f311\fscript\fcharset255\fprq2 Script;}{\f312\fscript\fcharset0\fprq0 scriptPS;}
+{\f313\fscript\fcharset0\fprq0 script c;}{\f314\fscript\fcharset0\fprq0 script d;}{\f315\fscript\fcharset0\fprq0 commercial script;}{\f316\fscript\fcharset0\fprq0 park avenue;}{\f317\fscript\fcharset0\fprq0 script h;}{\f318\fscript\fcharset0\fprq0 greek;}
+{\f319\froman\fcharset0\fprq0 kana;}{\f320\froman\fcharset0\fprq0 hebrew;}{\f321\froman\fcharset0\fprq0 roman s;}{\f322\froman\fcharset0\fprq0 russian;}{\f323\froman\fcharset0\fprq0 roman u;}{\f324\froman\fcharset0\fprq0 roman v;}
+{\f325\froman\fcharset0\fprq0 roman w;}{\f326\fdecor\fcharset0\fprq0 narrator;}{\f327\fdecor\fcharset0\fprq0 emphasis;}{\f328\fdecor\fcharset0\fprq0 zapf chancery;}{\f329\fdecor\fcharset0\fprq0 decor d;}{\f330\fdecor\fcharset0\fprq0 old english;}
+{\f331\fdecor\fcharset0\fprq0 decor f;}{\f332\fdecor\fcharset0\fprq0 decor g;}{\f333\fdecor\fcharset0\fprq0 cooper black;}{\f334\fnil\fcharset0\fprq0 linedraw;}{\f335\fnil\fcharset0\fprq0 math7;}{\f336\fnil\fcharset0\fprq0 math8;}
+{\f337\fnil\fcharset0\fprq0 bar3of9;}{\f338\fnil\fcharset0\fprq0 EAN;}{\f339\fnil\fcharset0\fprq0 pcline;}{\f340\fnil\fcharset0\fprq0 tech h;}{\f341\fnil\fcharset0\fprq0 winlinedraw;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;
+\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;
+\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\f11 \snext0 Normal;}{\*\cs10 \additive Default Paragraph Font;}{\s15 \f11\fs28\cf6 \sbasedon0\snext15 Context;}}{\info{\title asq help system, tutorial topics}
+{\author Klaus Albrecht}{\operator Klaus Albrecht}{\creatim\yr1992\mo5\dy3\hr14\min33}{\revtim\yr1996\mo2\dy15\hr20\min59}{\printim\yr1992\mo5\dy18\hr11\min55}{\version1}{\edmins1}{\nofpages0}{\nofwords0}{\nofchars0}{\vern49203}}\margl1440\margr1008 
+\facingp\widowctrl\ftnbj\aenddoc\ftnrestart\hyphhotz425\noextrasprl\prcolbl\cvmme\sprsspbf\brkfrm\swpbdr\hyphcaps0 \fet0\sectd \linex0\headery709\footery709\colsx709\endnhere {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2
+\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6
+\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang
+{\pntxtb (}{\pntxta )}}\pard\plain \f11 {\cf2 ASQ Tutorial Topics
+\par by Stan Leszynski
+\par These notes are not a live context
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 68
+\par Context strings begin with >>
+\par Center the title of each block
+\par First line is @ plus P (print) or N (noprint) plus stop markers for Prev/Next
+\par }\pard {\cf2 MSWord file use:
+\par  Set Printer to Generic/Text only on File:
+\par  Set View to Page mode to see wrapping
+\par  Default tabs 0
+\par  Left margin 0
+\par  Right margin 1.7"
+\par  Top margin 0
+\par  Bottom margin 0
+\par For indented lines or to get desired wrapping, use hard returns
+\par Text highlighting:
+\par  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text
+\par  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text
+\par  use }{\ul\cf2 UNDERLINE}{\cf2  for context jump= red text
+\par  use }{\b\i\cf2 BOLD ITALICS}{\cf2  for bullets= yellow text
+\par }\pard \fi-288\li288\ri-2700 
+\par \pard {\fs28\cf6 >>H.Contents
+\par }@P H.Contents H.T_Hdw_BIOS
+\par {\i                          ASQ Lernhilfe-Themen
+\par }
+\par Die in Rot dargestellten ASQ Lernhilfe-Themen sind Hypertext-
+\par Verbindungen. Sie erm\rdblquote glichen Ihnen den direkten Zugang zu anderen Themen. Bl\'84ttern Sie im Text nach oben oder nach unten, um das gew\'81nschte Thema anzuw\'84hlen. Benutzen Sie die {\b rechte }oder {\b linke }
+Pfeiltaste, um das Thema hervorzuheben und dr\'81cken Sie dann die {\b Eingabetaste.} Die Auswahl mit der Maus erfolgt durch Anwahl und Doppelklick.
+\par 
+\par       - Mit diesen Themen k\rdblquote nnen Sie mehr {\ul \'81ber ASQ}{\v H.Default} lernen -
+\par                          {\ul Willkommen bei ASQ!}{\v H.T_Welcome}
+\par                       {\ul Vertrieb und Warenzeichen}{\v H.T_Register}
+\par                            {\ul ASQ-Funktionen}{\v H.T_Features}
+\par                             {\ul ASQ einsetzen}{\v H.T_Using}
+\par                        {\ul Befehlszeilen-Optionen}{\v H.T_Command}
+\par                         {\ul Snapshot-Information}{\v H.T_Snapshot}
+\par       - Diese Themen bieten Hinweise zur {\b Systemverbesserung} -
+\par                     {\ul Qualitas Produkt-Information}{\v H.Products}
+\par                      {\ul Feinabstimmung des Systems}{\v H.Tuning}
+\par       - Diese Themen erl\'84utern die einzelnen {\b Speicherkonzeptionen} -
+\par                  {\ul Einf\'81hrung in die Speicher-Lernhilfe}{\v H.T_Mem_Lsn_01}
+\par                             {\ul RAM-Speicher}{\v H.T_Mem_RAM}
+\par                             {\ul ROM-Speicher}{\v H.T_Mem_ROM}
+\par                           {\ul Extended Memory}{\v H.T_Mem_Ext}
+\par                        {\ul Expanded (EMS) Memory}{\v H.T_Mem_Exp}
+\par                             {\ul XMS-Speicher}{\v H.T_Mem_XMS}
+\par                          {\ul VCPI, DPMI und VDS}{\v H.T_VCPI}
+\par                           {\ul Speicher-Regionen}{\v H.T_Mem_Lsn_02}
+\par                            {\ul LoDOS-Speicher}{\v H.T_Mem_Low}
+\par                            {\ul HiDOS-Speicher}{\v H.T_Mem_Hi}
+\par                     {\ul Memory Management Konzeption}{\v H.T_Mem_Lsn_03}
+\par                            {\ul Speicherl\rdblquote cher}{\v H.T_Mem_Holes}
+\par                         {\ul Speicherzugriffszeit}{\v H.T_Mem_Tim}
+\par                              {\ul Interrupts}{\v H.T_Mem_Int}
+\par - Diese Themen erl\'84utern die Konzeptionen zur {\b Systemkonfiguration} -
+\par                 {\ul Einf\'81hrung in die Konfig.-Lernhilfe}{\v H.T_Cfg_Lsn_01}
+\par                          {\ul Konfig.-\'9abersicht}{\v H.T_Cfg_Sum}
+\par                           {\ul CONFIG.SYS Datei}{\v H.T_Cfg_CFG}
+\par                          {\ul AUTOEXEC.BAT Datei}{\v H.T_Cfg_AUT}
+\par                         {\ul Maximize PROfildatei}{\v H.T_Cfg_PRO}
+\par                           {\ul ExtraDOS PROfil}{\v H.T_Cfg_EPro}
+\par                           {\ul SYSTEM.INI Datei}{\v H.T_Cfg_SYSINI}
+\par                          {\ul Qualitas Produkte}{\v H.T_Cfg_Qualit}
+\par                               {\ul Windows}{\v H.T_Cfg_Window}
+\par                             {\ul CMOS-Detail}{\v H.T_Cfg_CMO}
+\par    - Diese Themen erl\'84utern die Konzeptionen zur {\b Ausstattung} -
+\par              {\ul Einf\'81hrung in die Ausstattungs-Lernhilfe}{\v H.T_Hdw_Lsn_01}
+\par                        {\ul Maschinen-Ausstattung}{\v H.T_Hdw_Sum}
+\par                             {\ul Komponenten}{\v H.T_Hdw_Sum_C}
+\par                           {\ul CPU (Prozessor)}{\v H.T_Hdw_Sum_P}
+\par                            {\ul Eingabe-Ger\'84t}{\v H.T_Hdw_Sum_I}
+\par                        {\ul Installierter Speicher}{\v H.T_Hdw_Sum_M}
+\par                                 {\ul Bus}{\v H.T_Hdw_Sum_B}
+\par                               {\ul Adapter}{\v H.T_Hdw_Sum_A}
+\par                             {\ul Bildschirm}{\v H.T_Hdw_Vid}
+\par                              {\ul Laufwerke}{\v H.T_Hdw_Drv}
+\par                    {\ul Kommunikations-Schnittstellen}{\v H.T_Hdw_Por}
+\par                             {\ul BIOS-Detail}{\v H.T_Hdw_BIOS}
+\par       - Diese Themen bieten {\b verwandte Informationen }-
+\par                      {\ul ASQ Stichwort-Verzeichnis}{\v H.Index}
+\par                         {\ul ASQ Glossar-Themen}{\v As_G_Hlp.Hlp!H.Contents}
+\par                          {\ul ASQ Hilfe-Themen}{\v As_H_Hlp.Hlp!H.Contents}
+\par 
+\par Mit der Schaltfl\'84che {\b n\'84chste }k\rdblquote nnen Sie die Themen-Liste der Reihe nach durchbl\'84ttern.
+\par 
+\par {\fs28\cf6 >>H.Default
+\par }@N H.Default H.T_Snapshot
+\par                               {\i \'9aber ASQ}
+\par 
+\par Diese Lektion umfa\'e1t mehrere Themen. W\'84hlen Sie ein Thema oder lesen Sie allen Themen in der Folge; dazu w\'84hlen Sie die Schalt-
+\par fl\'84che {\b n\'84chste }Info:
+\par 
+\par  {\ul Willkommen bei ASQ!}{\v H.T_Welcome}
+\par  {\ul Vertrieb und Warenzeichen}{\v H.T_Register}
+\par  {\ul ASQ-Funktionen}{\v H.T_Features}
+\par  {\ul ASQ einsetzen}{\v H.T_Using}
+\par  {\ul Befehlszeilen-Optionen}{\v H.T_Command}
+\par  {\ul Snapshot-Information}{\v H.T_Snapshot}
+\par 
+\par {\fs28\cf6 >>H.T_Welcome
+\par }@P H.Default H.T_Snapshot
+\par                          {\i Willkommen bei ASQ!}
+\par 
+\par ASQ ist ein Systemanalyse-Programm mit Lernhilfe zum Thema Memory Management. Das Programm ASQ ...
+\par 
+\par   * analysiert Ihr Computersystem
+\par   * zeigt n\'81tzliche Informationen \'81ber die Systemkonfiguration an
+\par   * unterrichtet Sie in Sachen Memory Management, Hardware sowie
+\par     in anderen Computer-Themen.
+\par 
+\par ASQ zeigt Ihnen, wie Ihr Computer seine Speicherbereiche nutzt. Es unterrichtet Sie auch im{\b  Memory Management} -  eine leistungsstarke Methode, mit deren Hilfe es m\rdblquote glich wurde, die DOS-Speichergrenze zu \'81
+berwinden und umfangreichen Anwendungsprogrammen den ben\rdblquote tigten Speicher zur Verf\'81gung zu stellen. ASQ zeigt Ihnen, wie der Systemspeicher durch Memory Management effektiver genutzt werden kann, was letztendlich zu einer h\rdblquote 
+heren Produktivit\'84t Ihres Systems f\'81hren kann.
+\par 
+\par {\fs28\cf6 >>H.T_Register
+\par }@P H.Default H.T_Snapshot
+\par                       {\i Vertrieb und Warenzeichen}
+\par 
+\par {\b Vertrieb}
+\par 
+\par Das ASQ-Programm ist ein wesentlicher Bestandteil der Qualitas Produkte. ASQ unterliegt dem Qualitas Incorporated Copyright und ist keine sogenannte "Public Domain" Software (d.h. keine frei kopierbare Software). Im Gegensatz zu fr\'81
+heren ASQ-Ausgaben ist diese Version {\b keine} Shareware und darf deshalb nicht von anderen Anwendern genutzt werden.
+\par 
+\par   (C) Copyright 1987-96 Qualitas, Inc.  Alle Rechte vorbehalten.
+\par 
+\par {\b Warenzeichen}
+\par 
+\par Qualitas, Qualitas MAX, BlueMAX, MOVE'EM, ROMsearch, QCache, SmartMemory und VGAswap sind Warenzeichen von Qualitas, Inc.
+\par 
+\par Alle anderen Firmen- und Produktnamen sind eingetragene Warenzeichen bzw. Warenzeichen der entsprechenden Hersteller.
+\par 
+\par                            {\b Qualitas, Inc.}
+\par                      {\b 8601 Georgia Avenue, Suite 908}
+\par                      {\b Silver Spring, Maryland  20910
+\par }
+\par {\fs28\cf6 >>H.T_Features
+\par }@P H.Default H.T_Snapshot
+\par                             {\i ASQ-Funktionen}
+\par 
+\par ASQ enth\'84lt:
+\par 
+\par   * 20 Themen zur Systemanalyse:
+\par       Speicher-\'9abersicht  EMS Gebrauch        CMOS-Detail
+\par       LoDOS-Speicher      XMS-Speicher        Maschinen-Ausstattung
+\par       HiDOS-Speicher      Zugriffszeit        Bildschirm
+\par       ROM Scan            Konfig.-\'9abersicht   Treiber
+\par       Interrupts          CONFIG.SYS Datei    Anschl\'81sse
+\par       Extended Memory     AUTOEXEC.BAT Datei  BIOS-Detail
+\par       Expanded Memory     MAX PROfildatei     Qualitas Information
+\par       ExtraDOS Profil     SYSTEM.INI          Windows Information
+\par   * Online-Hilfe f\'81r Men\'81-Elemente und verwandte Themenbereiche
+\par   * {\ul Stichwort-Verzeichnis}{\v As_H_Hlp.Hlp!H.Index} f\'81r direkten Zugang zu anderen Hilfe-
+\par     Bildschirmen
+\par   * Online-{\ul Lernhilfe-Lektionen}{\v H.Contents} f\'81r Men\'81-Themen und 
+\par     verwandte Themenbereiche
+\par   * {\ul Glossar}{\v As_G_Hlp.Hlp!H.Contents} f\'81r Begriffe und Abk\'81rzungen im Bereich des
+\par     Memory Management
+\par   * {\ul Druckroutinen}{\v As_H_Hlp.Hlp!H.U_Print}, um jeden Diagnose-Bildschirm, Hilfe-Bildschirm
+\par     und jede Lernhilfe-Lektion ausdrucken zu k\rdblquote nnen
+\par   * Snapshot-Option zum speichern der aktuellen Systemkonfiguration
+\par   * Instrument zur System-Feinabstimmung, das Empfehlungen zur
+\par     Optimierung der Systemkonfiguration gibt.
+\par 
+\par {\fs28\cf6 >>H.T_Using
+\par }@P H.Default H.T_Snapshot
+\par \pard \li1                             {\i ASQ einsetzen}
+\par \pard 
+\par ASQ ist sowohl ein Lernhilfe-Programm als auch ein Analyse-
+\par Programm. Sie ziehen den gr\rdblquote \'e1ten Nutzten aus ASQ, wenn Sie in folgenden Schritten vorgehen:
+\par 
+\par   * Lesen Sie zuerst die Abschnitte {\b \'81ber ASQ}.
+\par   * Lesen Sie die Hilfe-Informationen
+\par     im Kapitel {\ul Einf\'81hrung in das Lernhilfe-System}{\v As_H_Hlp.Hlp!H.U_Tutor}.
+\par   * Erfahren Sie mehr \'81ber den Einsatz von Tastatur und Maus im
+\par     Kapitel {\ul Einf\'81hrung in das Men\'81system}{\v As_H_Hlp.Hlp!H.Default}.
+\par   * Lesen Sie die {\ul Glossar-Themen}{\v As_G_Hlp.Hlp!H.Contents}, um mit der
+\par     ASQ-Begriffswert vertraut zu werden.
+\par   * Studieren Sie in der Lernhilfe die Lektionen \'81ber den
+\par     Computerspeicher, die Konfiguration und die Ausstattung.
+\par     (Vgl. {\ul Lernhilfe-Themen}{\v H.Contents}).
+\par   * Befassen Sie sich mit der Hard- und Software Ihres Computers
+\par     unter Anwendung der ASQ-Men\'81s.
+\par 
+\par {\fs28\cf6 >>H.T_Command
+\par }@P H.Default H.T_Snapshot
+\par                         {\i Befehlszeilen-Optionen}
+\par 
+\par Bei Aufruf von ASQ aus der DOS-Ebene stehen Ihnen folgende Befehlszeilen-Optionen zur Verf\'81gung:
+\par 
+\par   * {\b ASQ /?} - zeigt die ASQ Hilfe-Information
+\par   * {\b ASQ /B} - ASQ l\'84uft im Monochrom-Modus (SW)
+\par   * {\b ASQ /C} - ASQ l\'84uft in Farbe. Setzen Sie diese Option,
+\par              wenn ASQ Ihr System als Monochrom-Anzeige behandelt.
+\par   * {\b ASQ /F Laufwerk:} - liest CONFIG.SYS und AUTOEXEC.BAT vom
+\par              angegebenen Laufwerk.
+\par   * {\b ASQ /G [Dateiname][,L][,H]} - Sichert eine Speicher- 
+\par     Momentaufnahme in eine Datei. Wird kein Dateiname angegeben,
+\par     speichert ASQ unter MEMIMAGE.ASQ. Der Schalter L speichert
+\par     nur LoDOS-Speicher (0:0 bis zum Beginn von ASQ), w\'84hrend
+\par     Schalter H nur HiDOS-Speicher festh\'84lt (A000:0 bis 10000:0).
+\par     Standard ist der Gesamtspeicherbereich (0:0 bis 10000:0).
+\par     Setzen Sie diese Option, wenn Sie gemeinsam mit dem
+\par     Technischen Kundendienst von Qualitas einen Fehler beseitigen.
+\par   * {\b ASQ /L [Dateiname]} - startet ASQ und l\'84dt eine gespeicherte
+\par     Snapshot-Datei. Ohne angegebenene Dateinamen nimmt ASQ
+\par     den Namen SNAPSHOT.ASQ.
+\par   * {\b ASQ /S [Dateiname] [/D "Beschreibung"] -} startet ASQ und
+\par     speichert die Systemkonfiguration in eine Snapshot-Datei.
+\par     Verwenden Sie die Erweiterung .ASQ wenn Sie m\rdblquote chten, da\'e1 die
+\par     Datei im ASQ Snapshot-Lademen\'81 erscheint. Wenn Sie keinen
+\par     Dateinamen angeben, speichert ASQ unter SNAPSHOT.ASQ. Der
+\par     Schalter /D f\'81gt eine Dateibeschreibung an (setzen Sie die
+\par     Beschreibung in Anf\'81hrungszeichen).
+\par   * {\b ASQ /V} - startet ASQ ohne grafisches Begr\'81\'e1ungs-Logo.
+\par   * {\b ASQ /X} - automatischer Ausstieg aus ASQ, nur nach /G oder /S.
+\par 
+\par Sie k\rdblquote nnen mehrere Schalter angeben. Trennen Sie die Befehlszeilen-
+\par Optionen mit Leerzeichen, z.B. {\b ASQ /L MEINSNAP.ASQ /B}.
+\par 
+\par {\fs28\cf6 >>H.T_Snapshot
+\par }@P H.Default H.T_Snapshot
+\par                         {\i Snapshot-Information
+\par }
+\par Die ASQ Snapshot-Datei speichert alle Informationen \'81ber Ihre aktuelle Hard- und Software-Konfiguration. \'9aber ASQ k\rdblquote 
+nnen diese Dateien jederzeit geladen und eingesehen werden, auch auf einem anderen System. ASQ legt diese Snapshot-Dateien in einem nicht editierbaren ASCII-Format mit der Standarderweiterung {\b .ASQ} an.
+\par Das Anlegen einer SnapShot-Datei hat {\b keine} Auswirkung auf den aktuellen Betriebsmodus von ASQ.
+\par 
+\par Beim Abspeichern einer SnapShot-Datei k\rdblquote nnen Sie einen Kommentar{\b  }f\'81r eine sp\'84tere Bezugnahme angeben. Durch den Einsatz von Kommentaren und entsprechenden Dateinamen k\rdblquote nnen Sie einen Katalog{\b  }Ihrer System-"Schnappsch\'81
+sse" anlegen. Sie k\rdblquote nnen somit "Schnappsch\'81sse" vor, w\'84hrend und nach einer Ver\'84nderung Ihrer System-Hardware sammeln. Es ist auch m\rdblquote glich, Informationen \'81ber Systeme anderer Anwender zu sammeln. Wenn Sie m\rdblquote 
+chten, da\'e1 ein anderer - zum Beispiel der Technische Kundendienst von Qualitas - Ihr System \'81berpr\'81ft, kann ein entsprechender "Schnappschu\'e1" sehr hilfreich sein.
+\par 
+\par Wir empfehlen Ihnen einen "Schnappschu\'e1" vor und nach der Installation  neuer Software auf Ihrem System vorzunehmen. Ein Vergleich dieser SnapShot-Dateien hilft Ihnen m\rdblquote glicherweise beim Auffinden des Fehlers und dessen Ursache.
+\par \pard \qj 
+\par \pard Beim Laden einer Snapshot-Datei zeigt ASQ die gespeicherte System-
+\par Konfiguration an. Jede Anzeige in ASQ sowie jeder Bericht spiegelt folglich den Status des Systems in der Snapshot-Datei wieder und nicht den Systemstatus unter ASQ.
+\par 
+\par Das Info-Men\'81 aus der Snapshot-Funktion zeigt Informationen der aktuell geladenen SnapShot-Datei (falls vorhanden) an, einschlie\'e1lich Erstellungsdatum und -zeit sowie SnapShot-Kommentar.
+\par 
+\par Snapshot-Dateien sollten von {\b keinem} anderen Programm au\'e1er ASQ angezeigt oder ver\'84ndert werden.
+\par 
+\par {\fs28\cf6 >>H.Products
+\par }@P H.Products H.Tuning
+\par This topic is assembled by code
+\par 
+\par {\fs28\cf6 >>H.Tuning
+\par }@P H.Products H.Tuning
+\par This topic is assembled by code
+\par 
+\par {\fs28\cf6 >>H.T_Mem_Lsn_01
+\par }@P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                 {\i Einf\'81hrung in die Speicher-Lernhilfe
+\par }
+\par Computer-Speicher ist in folgenden Bereichen verf\'81gbar:
+\par 
+\par   *  Ein {\b Speicherbereich} f\'81r Anweisungen. Diese regeln die
+\par      Kommunikation mit Hardware-Einheiten und Software-Programmen.
+\par   *  Ein {\b Arbeitsbereich} zur Ausf\'81hrung von Software-Programmen
+\par      und Bearbeitung der Daten.
+\par 
+\par {\b Speichertypen und Spezifikationen}
+\par 
+\par Es gibt zwei grundlegende Typen des Computerspeichers:
+\par 
+\par   * {\b RAM} - Random Access Memory (Schreib/Lese-Speicher)
+\par   * {\b ROM} - Read Only Memory (Festwertspeicher)
+\par 
+\par Das Betriebssystem DOS wurde urspr\'81nglich dazu entwickelt, den Zugriff auf einen Adre\'e1raum von einem Megabyte in einem 8088 PC zu erm\rdblquote glichen. Aus Kompatibilit\'84tsgr\'81
+nden ist diese "DOS-Grenze" in den aktuellen DOS-Versionen erhalten geblieben, selbst wenn die 80286/386/486/++ Prozessoren viel mehr Speicher nutzen k\rdblquote nnten.  Es gibt jedoch einige Memory Management Methoden, um \'81
+ber die 1 MB Grenze hinauszugehen:
+\par 
+\par   * Extended Memory
+\par   * Expanded (EMS) Memory
+\par   * DPMI-Speicher
+\par   * VCPI-Speicher
+\par   * XMS-Speicher
+\par 
+\par {\fs28\cf6 >>H.T_Mem_RAM
+\par }@P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                              {\i RAM-Speicher
+\par }
+\par Der RAM-Speicher ({\b Random Access Memory}) stellt DOS und der Anwendungs-Software tempor\'84re "Arbeitsbereiche" zur Verf\'81gung. Die meisten Daten und Programme bleiben auf der Platte, bis sie zur Ausf\'81hrung ben\rdblquote 
+tigt werden. Dann wandern sie in den RAM-Speicher.
+\par 
+\par Der Computer kann Informationen in den RAM-Speicher schreiben oder von dort herauslesen. Er kann die Daten manipulieren - auch im RAM-Speicher - und sie in eine Plattendatei \'81bertragen. Der RAM-Speicher ist ein {\b unbest\'84ndiger}
+ Speicher, der Informationen wie elektrische Ladungen speichert. Der Inhalt des RAM-Speichers wird mit dem Ausschalten des Systems gel\rdblquote scht.
+\par 
+\par Der RAM-Speicher wird in {\b Kilobyte} oder {\b KB} (1024 Byte) gemessen. Die Standard-Systemkonfiguration hat 640 KB RAM f\'81r den konventionellen DOS Arbeitsbereich.
+\par 
+\par {\fs28\cf6 >>H.T_Mem_ROM
+\par }@P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                              {\i ROM-Speicher
+\par }
+\par Der ROM-Speicher ({\b Read Only Memory}) dient der permanenten Datenspeiche
+rung. Schreibt ein Hersteller Software und Daten in einen ROM-Chip, so bleiben diese dort konstant erhalten. Der Inhalt des ROM-Speichers geht mit dem Abschalten des Systems nicht verloren. Der ROM-Speicher belegt normalerweise einen Teil der oberen 384 K
+B im DOS-Megabyte und reduziert somit den zur Verf\'81gung stehenden HiDOS-Speicher.
+\par 
+\par Das Betriebssystem und die Hardware-Einheiten nutzen diese ROM-Anweisungen zur Steuerung der Systemmittel. Alle Personal Computer sind mit einem ROM {\b BIOS} (Basic Input/Output System) ausgestattet. Es ist normalerweise in 64 KB ROM (128 KB ROM f\'81
+r Mikrokanal- Systeme) kodiert.  Ein erweiterter ROM-Speicher kann von 64 KB bis zu 300 KB beanspruchen - f\'81r den Bildschirmbereich, Festplatten sowie Netzwerkadapter.
+\par 
+\par Informationen aus dem ROM-Speicher zu lesen dauert wesentlich l\'84nger als Informationen aus dem RAM-Speicher zu lesen. Das Kopieren der ROM-Routinen in schnelles RAM f\'81hrt zu einer Verbesserung der Systemleistung. Dieser Vorgang wird als {\b 
+Shadowing} ("ROM Caching") bezeichnet. Einige Systeme verf\'81gen direkt \'81ber  diese Funktion, jedoch ist sie auf jedem 80386/486 System, das mit der entsprechenden Memory Management Software ausgestattet ist, ausf\'81hrbar. 
+\par 
+\par {\fs28\cf6 >>H.T_Mem_Ext
+\par }@P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                            {\i Extended Memory
+\par }
+\par Der Speicher {\b oberhalb 1 MB} wird als Extended Memory bezeichnet. DOS kann im Standardmodus nicht auf diesen Speicher zugreifen. Mit Einf\'81hrung der 80286 Systeme wurde ein Verfahren implementiert, das \'81ber den Interrupt 15 mit Routinen im ROM
+ BIOS Datenbl\rdblquote cke zwischen DOS Speicher und Extended Memory kopieren kann.Computer, die mit einem 80286/386/486/++ Prozessor ausgestattet sind, k\rdblquote 
+nnen Extended Memory in einem besonderen Betriebsmodus (Protected Mode) direkt adressieren. Dieser Betriebsmodus wird von einigen DOS Betriebssystemen und neueren DOS Anwendungsprogrammen benutzt.
+\par 
+\par Dieses Verfahren ist jedoch nicht sehr effizient und es bietet der Anwendung keine Informationen \'81ber die benutzten und freien Speicherbl\rdblquote cke. Aus diesem Grund hat diese Technik Einschr\'84
+nkungen hinsichtlich der Koexistenz und Datenkommunikation mehrerer Programme im Speicher. Zur L\rdblquote sung dieser Probleme wurden zwei neuere Verfahren entwickelt: {\b Expanded Memory} und {\b XMS} Speicher.
+\par 
+\par {\fs28\cf6 >>H.T_Mem_Exp
+\par }@P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                         {\i Expanded (EMS) Memory}
+\par 
+\par Die Lotus-Intel-Microsoft ({\b LIM}) Expanded Memory Spezifikation ({\b EMS}) ist ein Industrie-Standard, der EMS-gest\'81tzten DOS-Anwendungen Extended Memory zur Verf\'81gung stellt. Durch die EMS-Methode der {\b Speicherbank-Umschaltung}
+ wird Extended Memory im ersten Megabyte abgebildet, und zwar jeweils nur eine {\b Speicher-Seite (16 KB)}. Damit stehen den Anwendungsprogrammen zur tempor\'84ren Datenspeicherung bis zu 32 MB Expanded Memory zur Verf\'81gung.
+\par 
+\par Die EMS-Methode basiert auf der Tatsache, da\'e1 physische Adressen (tats\'84chlich vorhandener Speicher) und logische Adressen (wie auf Speicheradressen zugegriffen wird) nicht identisch sein m\'81
+ssen. Mit einer speziellen EMS-Hardware (und 80386/486/++ Prozessoren) ist es m\rdblquote glich, logische Adressen zu ver\'84ndern. Dabei wird eine EMS-
+\par Speicherseite dem DOS-Programm zur Verf\'81gung gestellt, ohne den Inhalt dieses Speichers auf andere Adressen zu kopieren.
+\par 
+\par Die EMS-Seiten werden in einem Zwischenspeicher, dem EMS-{\b Seiten-
+\par Rahmen}, abgebildet. Dieser beansprucht normalerweise 64 KB im HiDOS-Speicherbereich. In einer Multitasking-Umgebung kann EMS zur Ein/Auslagerung ganzer Programme in den DOS-Adre\'e1
+bereich genutzt werden. In diesem Fall kann der Seiten-Rahmen wesentlich gr\rdblquote \'e1er als 64 KB sein und auch Adressen unterhalb 640 KB verwenden.{\b 
+\par 
+\par EMS contra Extended Memory}
+\par 
+\par Es folgt eine \'9abersicht der wesentlichen Unterschiede zwischen Expanded Memory und Extended Memory:
+\par 
+\par   {\b Expanded Memory-----------  Extended Memory--------------}
+\par   ben\rdblquote tigt Memory Manager     kein Manager
+\par   ben\rdblquote tigt Seitenrahmen       kein Seitenrahmen
+\par   DOS-Zugriff m\rdblquote glich         kein DOS-Zugriff m\rdblquote glich
+\par   kopiert nicht nach/aus RAM  kopiert nach/aus DOS RAM
+\par   verf\'81gbar f\'81r 8088/86       nicht verf\'81gbar f\'81r 8088/86
+\par 
+\par Einige Anwendungsprogramme nutzen ausschlie\'e1lich Expanded Memory, andere Extended Memory. Einige Programme sind wiederum in der Lage auf beide zuzugreifen, je nachdem welcher Speicher gerade verf\'81gbar ist.
+\par 
+\par {\fs28\cf6 >>H.T_Mem_XMS
+\par }@P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                              {\i XMS Speicher}
+\par 
+\par Die von Microsoft entwickelte {\b Extended Memory Spezifikation} (XMS) erm\rdblquote glicht es den Programmen Speicher oberhalb 640 KB anzufordern. Dieser Speicher ist nur f\'81r XMS-f\'84hige Software zug\'84nglich.
+\par Der XMS-Speicher setzt sich aus drei Quellen zusammen:
+\par 
+\par   * {\b UMBs} - Upper Memory Blocks - der aus dem 384 KB HiDOS-Bereich
+\par     zur\'81ckgewonnene Speicher.
+\par   * {\b HMA} - die High Memory Area, eine 64 KB Region, die bei 1024 KB
+\par     (1 MB) beginnt. Die XMS-f\'84hige Software nutzt diese Region,
+\par     indem sie die "A20 Leitung" (eine CPU-Schaltung) deaktiviert
+\par     und auf dieses Speichersegment zugreift.
+\par     Die HMA kann nur von jeweils einem XMS-f\'84higen Programm genutzt
+\par     werden.
+\par   * {\b EMBs} - Extended Bemory Blocks. XMS verbessert den BIOS-Service
+\par     (Interrupt 15), indem es den Programmnamen und die Adressen der
+\par     EMBs zentral verwaltet. So kann der XMS-Speicher bei Freigabe 
+\par     durch ein Programm erneut durch ein anderes genutzt werden.
+\par 
+\par Die Art und Weise, wie ein 80286 Chip die Adressierung eines 8086 Chips emuliert, ist Grundlage f\'81r die High Memory Area.  Der 80386 Chip \'81bernimmt diese Funktion aus Gr\'81nden der Kompatibilit\'84t. \'9aber die A20 Adre\'e1
+leitung auf den 80286/80386/80486 und Pentium Prozessoren wird diese Funktion ein- oder ausgeschaltet.
+\par 
+\par {\b EMS contra XMS}
+\par 
+\par Es folgt eine \'9abersicht der wesentlichen Unterschiede zwischen Expanded Memory und Extended Memory (XMS):
+\par 
+\par   {\b Expanded Memory-----------  XMS Speicher---------------}
+\par   ben\rdblquote tigt Memory Manager     ben\rdblquote tigt Memory Manager
+\par   ben\rdblquote tigt Seitenrahmen       kein Seitenrahmen
+\par   DOS-Zugriff m\rdblquote glich         kein DOS-Zugriff m\rdblquote glich
+\par   kopiert nicht nach/aus RAM  kopiert nach/aus DOS RAM
+\par   verf\'81gbar f\'81r 8088/86       nicht verf\'81gbar f\'81r 8088/86
+\par 
+\par 
+\par {\fs28\cf6 >>H.T_VCPI
+\par }@P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                           {\i VCPI, DPMI und VDS}
+\par 
+\par {\b VCPI}
+\par 
+\par Ein Gro\'e1teil der Leistungsf\'84higkeit der 80386/486/++ Prozessoren ist auf die integrierten {\b Memory Page Tables (Speicherseiten-Tabellen) }zur\'81ckzuf\'81
+hren; diese erlauben es den Prozessoren, die logischen Adressen im Speicher zu manipulieren. Es k\rdblquote nnen jeweils zwei Programme gleichzeitig auf die Seitentabelle zugreifen, voraus-
+\par gesetzt, sie \'81berlagern sich nicht. Die VCPI-Spezifikation erm\rdblquote glicht es Protected Mode-Programmen, sich einen Prozessor und EMS-Speicher zu teilen, ohne miteinander in Konflikt zu geraten.
+\par 
+\par Programme, die VCPI nutzen, installieren gew\rdblquote hnlich einen EMS Memory Manager und einen {\b DOS-Extender}. DOS Extender \'81bernehmen die Aufgaben des Betriebssystems f\'81r Speicher oberhalb einem Megabyte.
+\par 
+\par {\b DPMI}
+\par 
+\par Die DOS Protected Mode Interface (DPMI)-Spezifikation ist der VCPI-Spezifikation \'84hnlich. Sie stellt Protected Mode-Programmen DOS- und BIOS-Dienste zur Verf\'81gung und erm\rdblquote glicht ihnen mit Real Mode-
+\par Programmen zu kommunizieren.
+\par 
+\par {\b VDS}
+\par 
+\par Die Virtual DMA Services Spezifikation ({\b VDS}) bietet Programmen, die mit einer 80386 oder sp\'84teren CPU-Version ablaufen, einen direkten Speicherzugriff (Direct Memory Access = {\b DMA}
+). DMA verbessert die Systemleistung, da Daten ohne Hilfe der CPU aus und in den Speicher transferiert werden. DMA setzt einen Hardware-Controller voraus, der weis, wo die Information gespeichert ist. Auf einem 80386 C
+hip, mit Trennung von logischen und physischen Adressen, braucht der Controller Unterst\'81tzung, um DMA-Transfers durchzuf\'81hren. VCPI bietet diese Unterst\'81tzung, indem es die DMA-Adre\'e1anforderungen akurat \'81bersetzt.
+\par 
+\par {\fs28\cf6 >>H.T_Mem_Lsn_02
+\par }@P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                           {\i Speicher-Regionen
+\par }
+\par Die Speicher-Regionen lassen sich in drei wesentliche Guppen unterteilen:
+\par 
+\par   * {\b LoDOS}    - Speicher von 0 bis 640 KB
+\par   * {\b HiDOS}    - Speicher von 640 KB bis 1 MB
+\par   {\b *} {\b Extended} - Speicher oberhalb 1 MB
+\par 
+\par Die folgende Tabelle zeigt die Speicher-Regionen in einem typischen System:
+\par 
+\par    {\b Adresse--}  {\b genutzt durch---}  {\b KB------}  {\b Region--}
+\par        1024+  Extended + XMS    64-4 GB   Extended 
+\par    960-1024   System ROM        64        HiDOS
+\par    896- 960   EMS-Seitenrahmen  64
+\par    768- 896   versch.Adressen  128
+\par    640- 768   Video RAM/ROM    128
+\par      0- 640   LoDOS-Speicher + 640        LoDOS
+\par               DOS +
+\par               Ger\'84tetreiber
+\par               TSR-Programme
+\par 
+\par {\fs28\cf6 >>H.T_Mem_Low
+\par }@P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                            {\i LoDOS-Speicher}
+\par 
+\par Die {\b ersten 640 KB} Speicher werden als {\b LoDOS-Speicher }bezeichnet. Neben den Anwendungsprogrammen sind hier auch DOS-Systemkomponenten gespeichert. Der LoDOS-Speicher kann zudem auch Ger\'84tetreiber enthalten. Sie haben zudem die M\rdblquote 
+glichkeit, speicherresidente Programme, wie z.B  Tastatur-Erweiterungen, Notizblock etc. aufzunehmen. Nachfolgende Tabelle zeigt Ihnen die Belegung des LoDOS-Speichers:
+\par 
+\par    {\b Adresse} {\b  genutzt durch-------}  {\b  KB-}  {\b Region-}
+\par      0-640  LoDOS-Speicher +       640  LoDOS
+\par             DOS +
+\par             BIOS Daten +
+\par             Interrupts +
+\par             Ger\'84tetreiber +
+\par             TSR-Programmme +
+\par             Anwendungsprogramme +
+\par             Anwendungsdaten
+\par 
+\par {\b \'9aberf\'81llter LoDOS-Speicher}
+\par 
+\par Der LoDOS-Speicherbereich ist ein \'81berf\'81llter Speicherbereich im Computer. Nachdem DOS, die Ger\'84tetreiber und speicher-residente Programme (TSRs) geladen sind, bleiben m\rdblquote glicherweise nur noch 400 bis 600 KB in dieser Region f\'81
+r Anwendungsprogramme \'81brig. Dieser Betrag ist jedoch f\'81r einige Anwendungen unzureichend. Und die Anwendungsprogramme, die gestartet werden k\rdblquote nnen, weisen m\rdblquote glicherweise nicht die Effizienz auf, die Sie bei einem gr\rdblquote 
+\'e1en Speichervolumen h\'84tten.
+\par 
+\par {\b Netzwerke}
+\par 
+\par Der LoDOS-Speicher ist f\'81r einen Computer, der an ein Netzwerk angeschlossen ist, besonders wichtig. Denn Netzwerk-Treiber k\rdblquote 
+nnen 100 KB oder mehr LoDOS-Speicher in Anspruch nehmen. Es gibt Netzwerksyste, denen weniger als 500 KB LoDOS-Speicher f\'81r Anwen-
+\par dungen zur Verf\'81gung steht.
+\par 
+\par {\fs28\cf6 >>H.T_Mem_Hi
+\par }@P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                            {\i HiDOS-Speicher}
+\par 
+\par Der 384 KB gro\'e1e Adre\'e1raum {\b oberhalb 640 KB} wird als HiDOS-Speicher bezeichnet. Er ist f\'81r Systemfunktionen reserviert, wie z.B. f\'81r den Bildschirm, f\'81r das Arbeiten im Netz und f\'81
+r ROM Routinen. Normalerweise haben Anwendungsprogramme keinen Zugriff auf diesen Bereich. Die folgenden Tabelle zeigt die grunds\'84tzliche Gliederung des HiDOS-Speichers:
+\par 
+\par    {\b Adresse-}  {\b genutzt durch----}  {\b KB-}  {\b Region--}
+\par    960-1024  System ROM BIOS     64  HiDOS
+\par    896- 960  EMS-Seiten-Rahmen   64
+\par    768- 896  versch. Adressen +
+\par              Adapterkarten      128
+\par    640- 768  Video RAM/ROM      128
+\par 
+\par Auch in Systemen mit vielen Adapterkarten bleibt normalerweise immer Platz im HiDOS-Speicherbereich \'81brig. Durch die Verlagerung{\b  residenter Programme}
+ (wie z.B. Netzwerk-Software und Pop-Up Dienstprogramme) aus dem LoDOS-Speicher in den HiDOS-Speicher k\rdblquote nnen Sie wertvolle Speicherkapazit\'84t f\'81r Ihre Anwendungsprogramme zur\'81ckgewinnen.
+\par 
+\par {\fs28\cf6 >>H.T_Mem_Lsn_03
+\par }@P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                      {\i Memory Management Konzeption
+\par }
+\par {\b CPU}
+\par 
+\par Jeder CPU ({\b Central Processing Unit}/Zentraleinheit, Prozessor) sind hinsichtlich des verf\'81gbaren Speichers Grenzen gesetzt. Die Intel 8088 CPU, welche IBM f\'81
+r den Original PC im Jahre 1981 entwickelte, kann nur auf ein Megabyte Speicher zugreifen. Als Microsoft ein Betriebssystem (DOS) f\'81r dieses System schrieb, hatte man sich an dieser Speichergrenze orientiert.
+\par 
+\par Alle nachfolgenden Prozessoren haben diese Ein-Megabyte-Grenze grunds\'84tzlich (und theoretisch) {\b \'81berwunden}, DOS \'81bernimmt sie jedoch aus Gr\'81nden der Kompatibilit\'84t. Gl\'81cklicherweise existieren f\'81
+r die modernen DOS-Anwender von heute einige Hard- und Software-
+\par Standards, mit denen es m\rdblquote glich ist, diese Ein-Megabyte-Grenze zu \'81berwinden.
+\par 
+\par Die Intel 80286/386/486/++ CPUs der heute am Markt angebotenen PCs verf\'81gen \'81ber Adressierungsm\rdblquote glichkeiten, die weit \'81ber die F\'84higkeiten des 8088 Chip hinausgehen. Sie \'81berwinden die Ein-
+\par Megabyte-Grenze, indem sie zwischen den beiden Betriebsmodi umschalten: {\b Protected Mode }und {\b Real Mode}.
+\par 
+\par {\b Dem Real Mode sind Grenzen gesetzt}
+\par 
+\par Im Protected Mode haben CPUs Zugriff auf Speicher {\b \'81ber einem Megabyte}. Unter DOS m\'81ssen sie jedoch im Real Mode arbeiten. Dieser Betriebsmodus emuliert die 8088/86 CPU, f\'81r die DOS urspr\'81
+nglich geschrieben wurde. Da 8088/86 Chips nur auf ein Megabyte zugreifen konnten, wird diese DOS-Grenze von neueren CPU-Versionen im Real Mode \'81bernommen.
+\par 
+\par {\b Grenzen, die zu \'81berwinden sind}:
+\par 
+\par Die 80386 Chips (sowie neuere CPUs) bieten spezielle Funktionen, mit deren Hilfe die DOS-Grenze und der Real Mode \'81berwunden wird. Memory Management-Programme wie Qualitas MAX und BlueMAX nutzen diese Eigenschaften f\'81
+r den Zugriff auf Speicherbereiche, die DOS-Programmen normalerweise nicht zur Verf\'81gung stehen. Diese Memory Manager nutzen auch Software-Standards wie {\b EMS} und {\b XMS}, um Bereiche oberhalb 1 MB anzusprechen. Au\'e1erdem bieten sie Unterst\'81
+tzung f\'81r Anwendungsprogramme, die zwischen Real Mode und Protected Mode {\b umschalten}.
+\par 
+\par {\b Speicher-residente Programme (TSRs)})
+\par 
+\par Speicher-residente Programme (Terminate and Stay Resident ={\b  TSR}) sind resident im Speicher vorhanden, w\'84hrend andere Applikationen ablaufen. Sie ruhen im Speicher, bis sie \'81ber einen bestimmten Tastenschl\'81
+ssel aktiviert werden. Zu den speicher-residenten Programmen z\'84hlen im allgemeinen:
+\par 
+\par   * {\b Pop-Up Dienstprogramme } - einschlie\'e1lich Rechner, Notizbl\rdblquote cke
+\par     und Adre\'e1b\'81cher
+\par   * {\b Dienstprogramme zur System-Optimierung} - einschlie\'e1lich
+\par     Platten-Cache und Memory Manager
+\par   * {\b Netzwerk-Treiber} - residente Programme, mit denen einzelne
+\par     Systeme als Netzwerkstationen eingesetzt werden k\rdblquote nnen
+\par 
+\par {\fs28\cf6 >>H.T_Mem_Holes
+\par }@P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                             {\i Speicherl\rdblquote cher}
+\par 
+\par Auf 80386/486/++ Computern (und auch auf einigen 80286 Systemen), gibt es {\b ungenutzte} Adre\'e1regionen zwischen 640 KB und 1 MB (der HiDOS-Bereich). Memory Manager k\rdblquote 
+nnen Extended Memory-Bereiche oberhalb 1 MB auf andere Adressen abbilden, soda\'e1 diese "L\rdblquote cher" aufgef\'81llt werden. Sie k\rdblquote nnen auch Ger\'84tetreiber und speicher-residente Programme aus dem LoDOS-Bereich in die neuen Adre\'e1
+regionen des HiDOS verlagern. Mit dieser Methode werden wertvolle Speicher-
+\par bereiche innerhalb der ersten 640 KB gewonnen und Anwenungs-
+\par programmen zur Verf\'81gung gestellt.
+\par 
+\par {\b Wo sind die "Speicherl\rdblquote cher"?}
+\par 
+\par Der 384 KB HiDOS-Speicherbereich ist f\'81r die Bildschirmanzeige, ROM und Adapterkarten reserviert. Viele Systeme nutzen weniger als die {\b H\'84lfte} dieses reservierten Bereichs. Die verbleibenden u
+ngenutzten Speicher-Adressen erscheinen als "Speicherl\rdblquote cher". Anzahl und Adresse dieser "Speicherl\rdblquote cher" sind von den Adapterkarten der jeweiligen Systeme abh\'84ngig.
+\par 
+\par Die {\b ersten 128 KB} werden von Bildschirm-Adaptern genutzt. Normalerweise steht immer ein gewisser Adre\'e1raum in der Bildschirmregion zur Verf\'81gung, abh\'84ngig vom Typ der Adapterkarte (MDA, CGA, EGA oder VGA) und vom Hersteller.
+\par 
+\par Oberhalb der Bildschirmregion befindet sich der {\b RAM/ROM-Bereich}. Adapterkarten f\'81r die Netzwerk-Schnittstelle und andere Adapter greifen auf diesen Bereich zu, um mit ihren Ger\'84
+tetreibern unterhalb 640 KB zu kommunizieren. In dieser Region sind fast immer Speicherpl\'84tze verf\'81gbar, die tats\'84chlichen Werte sind jedoch auch hier in hohem Ma\'e1e von der Hardware-Konfiguration abh\'84ngig.
+\par 
+\par {\b L\rdblquote cher im ROM}
+\par 
+\par In der oberen H\'84lfte des HiDOS-Speicherbereichs - in dem Adre\'e1raum, der vom System BIOS ROM belegt ist - befinden sich potentielle Speicherl\rdblquote cher. Auf vielen Systemen werden die f\'81r ROM reservierten Speicher-Adressen nicht genutzt. A
+ndere ROM-Bereiche stehen erst zur Verf\'81gung, wenn der Boot-Vorgang des Systems abgeschlossen ist.
+\par 
+\par Ein "intelligenter" Memory Manager kann diese L\rdblquote cher im ROM ausfindig machen, die {\b ungenutzten BIOS Adressen} zur\'81ckgewinnen und sie als zus\'84tzlichen HiDOS-Speicher zur Verf\'81gung stellen. Dieser Vorgang hat {\b keine}
+ Auswirkungen auf das System-ROM.
+\par 
+\par Zu den verf\'81gbaren BIOS-Bereichen geh\rdblquote ren: POST (Power On Self Test = Einschalt-Selbsttest), der ROM BASIC-Interpreter, das erweiterte OS/2 BIOS und F\'81
+llbereiche. Auf PS/2 Systemen mit einem 128 KB BIOS kann das Qualitas BlueMAX-Programm bis zu {\b 80 KB} als HiDOS-Speicher zur\'81ckgewinnen.
+\par 
+\par Neben der Memory Management Software mu\'e1 auch der Anwender mu\'e1 dazu beitragen, die Speicherl\rdblquote cher ausfindig zu machen. Dieser Vorgang kann zahlreiche Tests erfordern, besonders f\'81
+r differenzierte Systeme. Qualitas Produkte wie ASQ unterst\'81tzen Sie jedoch bei Ihrer Aufgabe und automatisieren viele dieser Vorg\'84nge.
+\par 
+\par {\b Speicherl\rdblquote cher umsetzen}
+\par 
+\par Die 80386/486/++ CPUs k\rdblquote nnen physische Adressen in logische Adressen \'81bersetzen. Anschlie\'e1end stellen sie diese den Anwendungsprogrammen zur Verf\'81gung. F\'81
+r ein Anwendungsprogramm erscheint die Adresse als reale Adresse - der Unterschied ist nicht erkennbar. Die Memory Manager nutzen diese Methode der {\b Adre\'e1umsetzung (Abbildung, engl. Remapping genannt)}, um die L\rdblquote 
+cher im HiDOS-Speicher aufzuf\'81llen. Entdeckt ein Memory Manager ungenutzte Adressen in der HiDOS-Region, bildet er auf diese "leeren" Adressen solche des physischen Speichers (tats\'84chlich vorhandene RAM Chips) ab.
+\par 
+\par Der HiDOS-Speicher ist oft in drei oder mehr "L\rdblquote cher" verschiedener Gr\rdblquote \'e1e fragmentiert. Ein guter {\b Memory Manager} wird Sie dabei unterst\'81tzen, diese Speicher-Ressourcen wirkungsvoll zu nutzen.
+\par 
+\par {\b Probleme beim Systemstart}
+\par 
+\par Einige speicherresidente Programme beanspruchen w\'84hrend ihrer Initialisierung {\b mehr} Speicher als sp\'84ter im residenten Betrieb.
+\par Zum Beispiel k\rdblquote nnte aus einem Werbeslogan f\'81r residente Software hervorgehen, da\'e1 ein Programm nur 4 KB Speicher erfordert. Dies ist m\rdblquote glicherweise nur die residente Gr\rdblquote \'e1
+e. Wird das Programm zum ersten Mal geladen, kann es 10-50 KB oder sogar mehr Speicher beanspruchen. Aus diesem Grund kann ein speicher-residentes Programm, das einwandfrei im konventionellen Speicher abl\'84uft, f\'81r den HiDOS-Speicher zu gro\'e1
+ sein. Das Qualitas Maximize-Programm arbeitet mit der {\b FlexFrame}-Technologie, um einer Software in der Initialisierungsphase zus\'84tzlichen HiDOS-Speicher zur Verf\'81gung zu stellen. Viele Programme w\'84ren ohne FlexFrame nicht in der Lage, a
+uf HiDOS-Speicherbereiche zuzugreifen.
+\par 
+\par Maximize trifft weitere wichtige Entscheidungen beim Ladevorgang residenter Software. Zum einen kann die Lade-Reihenfolge f\'81r den verf\'81gbaren Speicherbetrag ausschlaggebend sein. Maximize optimiert die Lade-Reihenfolge, soda\'e1
+ der HiDOS-Speicherbereich effizient genutzt wird. 
+\par 
+\par {\b Andere Probleme}
+\par 
+\par Ein bekanntes Problem sind Programme, die nicht im HiDOS-Speicher gestartet werden k\rdblquote nnen oder einer bestimmten Lade-Reihenfolge unterliegen. Dieses Problem wird von Fall zu Fal
+l anders gehandhabt. Einige Anwendungsprogramme setzen zudem Speicher voraus, der f\'81r einen bestimmten Industrie-Standard konfiguriert wurde. Es existieren eine ganze Menge dieser Standards und ein guter Memory Managers sollte m\rdblquote 
+glichst viele Varianten unterst\'81tzen. Qualitas MAX unterst\'81tzt EMS, XMS, VCPI, DPMI und VDS, um sowohl heutigen als auch zuk\'81nftigen Anspr\'81chen gerecht zu werden. 
+\par 
+\par Letztendlich stellt die Hardware gewisse Anspr\'81che. Der Speicher auf \'84lteren Systemen mu\'e1 m\rdblquote glicherweise physisch als Expanded- oder Extended Memory konfiguriert sein. Rechner neueren Datums verf\'81gen \'81
+ber Memory Management Software, die diese Aufgabe \'81bernimmt.
+\par 
+\par {\b Wie hoch ist der Speichergewinn?}
+\par 
+\par Wie gro\'e1 ein Speicherbetrag ist, den ein Memory Manager gewinnen kann, h\'84
+ngt von vielen Faktoren ab. Neben Hardware und Software besteht auch ein Unterschied zwischen den einzelen Techniken des Memory Managements. Ist ein Memory Manager beispielsweise in der Lage, die {\b effizienteste Lade-Reihenfolge} f\'81
+r eine Programmgruppe zu ermitteln, so resultiert das aller Voraussicht nach in einem signifikanten Speichergewinn. Die Produkte von Qualitas sind so konzipiert, da\'e1 sie alle m\rdblquote glichen Lade-Reihenfolgen durchtesten, um dann diejenige auszuw
+\'84hlen, die zum gr\rdblquote \'e1ten Speichergewinn f\'81hrt. Mit der Anzahl Programme und Treiber wird der Optimierungs-
+\par proze\'e1 umfangreicher.
+\par 
+\par Abh\'84ngig vom System kann durch Memory Management bis zu {\b 200 KB} zus\'84tzlicher LoDOS-Speicher gewonnen werden. Dieser zus\'84tzliche Speicherraum bietet Ihnen die M\rdblquote glichkeit, eine 
+Anwendung zu starten, der vorher zu wenig Speicher zur Verf\'81gung stand.
+\par 
+\par {\fs28\cf6 >>H.T_Mem_Tim
+\par }@P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                        {\i Speicher-Zugriffszeit
+\par }
+\par Die Geschwindigkeit der Speicherchips beeinflu\'e1t die Leistungs-
+\par f\'84higkeit des Computersystems. Die zum Lesen der Daten bzw. zum Schreiben der Informationen ben\rdblquote tigte Zeit  wird in {\b Nanosekonden} (ns) gemessen; dies sind Milliardenbruchteile einer Sekunde. Die Me\'e1
+ergebnisse werden als Speicher-Zugriffszeit bezeichnet.
+\par 
+\par In einigen Rechnern \'81bertr\'84gt der Prozessor die Daten m\rdblquote glicher-
+\par weise schneller als sie der jeweilige Chip aufnehmen kann. Um dies auszugleichen, m\'81ssen die Prozessoren gegebenenfalls eine Pause, {\b Wartezustand (Wait State) }genannt, einlegen.
+\par 
+\par Ein einziger PC kann \'81ber mehrere verschiedenen Speichertypen verf\'81gen. Dies ist besonders bei den \'84
+lteren Rechnern der PC, XT und AT-Klasse der Fall, die mit einem schnelleren 80386 oder 80486 Prozessor aktualisiert wurden. Das Hardware-Upgrade verf\'81gt normalerweise \'81ber einen schnellern Speicher als der urspr\'81
+ngliche RAM-Speicher. In diesem Fall kann ein guter Memory Manager den Speicher so reorganisieren, da\'e1 am h\'84ufigsten auf den schnelleren RAM-Speicher zugegriffen wird.
+\par 
+\par Schnellere Speicherchips f\'81hren zu einer Steigerung der Systemleistung. Ein zus\'84tzlicher Faktor, der zur Systemleistung beitr\'84gt ist die Breite des {\b Datenweges (Bus)}. Diese Hardware-
+\par Begrenzung legt die gr\rdblquote \'e1te Dateneinheit fest, die zu einem bestimmten Zeitpunkt durch die Hardware gelangen kann. Die Datenwegbreite variiert zwischen 8 Bit in einem 8088 System und
+\par 32 Bit in einem 80386/80486 System.
+\par 
+\par {\fs28\cf6 >>H.T_Mem_Int
+\par }@P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                               {\i Interrupts}
+\par 
+\par Interrupts (Programm-Unterbrechungsstellen, Unterbrechungs-
+\par Vektoren) sind ein wichtiger Bestandteil des Computerspeichers. Sie bestehen aus Speicher-Adressen, die das Betriebssystem, die Ein/Ausgabe-Gere\'84te und die Software-Programme nutzen, um Informationen \'81
+ber den Status wichtiger Betriebsmittel und System-
+\par Zust\'84nde {\b auszutauschen}. 
+\par 
+\par Die Tastatur ist beispielsweise ein Betriebsmittel, das durch Interrupts gesteuert wird. Programmierer k\rdblquote nnen sich \'81ber den Zustand der Tastatur informieren, indem sie den Status der entsprechenden Interrupts abfragen. 
+\par 
+\par {\fs28\cf6 >>H.T_Cfg_Lsn_01
+\par }@P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par              {\i Einf\'81hrung in die Konfigurations-Lernhilfe}
+\par 
+\par Bei der System-Konfiguration des Computers sind viele Faktoren zu ber\'81cksichtigen. Zu diesen geh\rdblquote ren unter anderem:
+\par 
+\par   * Programme, die {\b automatisch} bei jedem Systemstart ablaufen. 
+\par     Zu diesen Programmen z\'84hlen auch speicher-residente
+\par     Dienstprogramme sowie Ger\'84tetreiber, die f\'81r eine
+\par     Hardware-Konfiguration zust\'84ndig sind.
+\par   * {\b Parameter} f\'81r das Betriebssystem. Die Parameter bleiben 
+\par     erhalten, w\'84hrend unterschiedliche Anwendungsprogramme
+\par     gestartet und wieder beendet werden.
+\par     Anwendungsprogramme k\rdblquote nnen die Werte dieser Parameter lesen.
+\par 
+\par In der n\'84chsten Lektion werden die zahlreichen Faktoren er\rdblquote rtert, die f\'81r eine System-Konfiguration eines Computers von besonderer Bedeutung sind.
+\par 
+\par {\fs28\cf6 >>H.T_Cfg_Sum
+\par }@P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                          {\i Konfigurations-\'9abersicht}
+\par 
+\par {\b Betriebssystem}
+\par 
+\par Das Betriebssystem ist das erste Programm, das beim Systemstart abl\'84uft. Das Betriebssystem ist ein {\b Mittler} zwischen den Hardware-
+\par Ger\'84ten und der jeweiligen Anwendungs-Software.
+\par 
+\par {\b DOS}
+\par 
+\par DOS ({\b Disk Operating System}) ist ein weit verbreitetes Betriebs-
+\par system f\'81r IBM-kompatible Personal Computer. Die Hersteller der Computer-Hardware bieten oft DOS-Varianten an, die speziell auf ihre Systeme abgestimmt sind. Diese DOS-Varianten sind f\'81r den Anwender normalerweise nicht erkennbar 
+\par 
+\par {\b DOS einstellen}
+\par 
+\par Beim Laden von DOS, werden automatisch Speicherpl\'84tze f\'81r die Konfigurations-Einstellungen reserviert. Diese Einstellungen steuern zahlreiche Systemfunktionen. Dazu geh\rdblquote ren Plattenlaufwerke, Bildschirmanzeige und andere Hardware-Ger\'84
+te. Es gibt zahllose Wege, einen Computer zu konfigurieren. Es ist zum Beispiel m\rdblquote glich, die Zahl der Plattendateien, auf die ein Programm zugreifen kann, festzulegen. Einige System-Einstellungen werden jedoch durch die W\'81
+nsche des Anwenders und nicht von der Hardware definiert. Dazu geh\rdblquote rt beispielsweise der DOS-Prompt. 
+\par 
+\par Sie k\rdblquote nnen Ihren Computer mit Befehlen in den Systemdateien CONFIG.SYS und AUTOEXEC.BAT konfigurieren. Viele Anwendungs-
+\par programme ver\'84ndern eine oder beide Systemdateien automatisch w\'84hrend der Programm-Installation. Sie sollten daher von den Systemdateien regelm\'84\'e1ig Sicherunkskopien anfertigen. Diese Sicherungskopien erleichtern die R\'81ckkehr zu einer fr\'81
+heren
+\par System-Konfiguration, beispielsweise zur Fehlerbehebung.
+\par 
+\par Wenn Sie von Ihrem System H\rdblquote chstleistung erwarten, dann sollten Sie die Systemdateien CONFIG.SYS und AUTOEXEC.BAT {\b kennen} und ihre {\b Optionen verstehen}. In den n\'84chsten Lektionen werden Ihnen diese Dateien vorgestellt.
+\par 
+\par {\fs28\cf6 >>H.T_Cfg_CFG
+\par }@P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                         {\i Die Datei CONFIG.SYS}
+\par 
+\par Nachdem DOS geladen wurde, liest der Computer die Datei CONFIG.SYS im {\b Stammverzeichnis} des Boot-Laufwerks. Das System f\'81hrt die Anweisungen dieser Datei aus. Dabei werden die Ger\'84tetreiber und der Bereich f\'81r {\b Umgebungs}
+-Variablen festgelegt. Zu den wichtigsten Befehlen der CONFIG.SYS Datei geh\rdblquote ren:
+\par 
+\par   * {\b DEVICE} - installiert Ger\'84tetreiber im Speicher (s.u.)
+\par   * {\b FILES} -  legt die Anzahl der Dateien fest, die DOS gleichzeitig
+\par     er\rdblquote ffnen kann. Falls keine anderen Angaben in der CONFIG.SYS
+\par     Datei vorliegen, lautet die Voreinstellung f\'81r FILES 8
+\par   * {\b BUFFERS} - legt die Zahl der 512-Byte Speicherpuffer fest, die
+\par     zur Beschleunigung von Ein-/Ausgabe-Aktionen verwendet werden.
+\par   * {\b LASTDRIVE} - bestimmt den letzten g\'81ltigen Laufwerksbuchstaben
+\par   * {\b BREAK} - legt Wirkung der STRG+Pause Tastenkombination fest
+\par   * {\b STACKS} - definiert Menge und Gr\rdblquote \'e1e der Speicherbereiche, die
+\par     tempor\'84re Informationen speichern. Wenn nicht anders angegeben,
+\par     gilt die Voreinstellung 9 "Stacks"(Stapel) zu je 128 Byte
+\par   * {\b SHELL} - gibt den Befehls-Prozessor an. Dieser interpretiert
+\par     den am DOS-Prompt eingegebenen Befehl.
+\par 
+\par {\b Treiber}
+\par 
+\par Die CONFIG.SYS Datei veranla\'e1t DOS, bestimmte Ger\'84tetreiber zu laden. Diese Treiber bleiben als anwenungsspezifische {\b Erweiterungen} zu DOS im Speicher. Sie f\'81
+hren grundlegende Hardware-Funktionen aus. Sie stellen z.B. den Verbindungsaufbau zu einem lokalen Netzwerk her. Viele Hardware- und Software-Produkte werden zusammen mit anwendungsspezifischen Treiberdateien geliefert. Sie tragen gew\rdblquote 
+hnlich die Erweiterung .SYS.
+\par 
+\par {\b CONFIG.SYS ver\'84ndern} 
+\par 
+\par Die Installation neuer Hardware und Software macht oft eine Ver\'84nderung in der Datei CONFIG.SYS erforderlich. Diese Ver\'84nderungen werden {\b erst} beim Neustart des Computers aktiv.
+\par 
+\par Die Datei CONFIG.SYS kann mit jedem Standard-Texteditor oder dem MAX Editor von Qualitas ver\'84ndert werden.
+\par 
+\par {\fs28\cf6 >>H.T_Cfg_AUT
+\par }@P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                       {\i Die Datei AUTOEXEC.BAT
+\par }
+\par Nachdem DOS geladen und CONFIG.SYS ausgef\'81hrt wurde, sucht das System nach der Datei AUTOEXEC.BAT und startet diese (falls vorhanden). Wie jede andere{\b  Stapeldatei} enth\'84lt AUTOEXEC.BAT einen
+ Text mit mehreren DOS-Befehlen, die der Reihe nach ablaufen. Zu den wichtigsten Befehlen geh\rdblquote ren:
+\par 
+\par   * {\b COMSPEC} - informiert DOS, wo sich der COMMAND.COM Befehls-
+\par     interpreter befindet (normalerweise im Stammverzeichnis des 
+\par     Boot-Laufwerks)
+\par \pard \li1   * {\b PROMPT} - \'84ndert die Anzeige des DOS-Prompts
+\par \pard   * {\b PATH} - veranla\'e1t den DOS-Befehlsinterpreter nach ausf\'81hrbaren 
+\par     Dateien zu suchen, die sich nicht im aktuellen Verzeichnis
+\par     befinden
+\par   * {\b SET} - legt die Umgebungsvariblen f\'81r DOS und andere
+\par     Anwendungsprogramme an. Wird SET am DOS-Prompt eingegeben,
+\par     erfolgt eine Anzeige aller vorhandenen Umgebungsvariablen
+\par   * {\b CALL} - veranla\'e1t AUTOEXEC.BAT (oder jede andere Stapeldatei)
+\par     weitere Stapeldateien aufzurufen. DOS-Versionen vor Version 3.3
+\par     unterst\'81tzen CALL nicht.
+\par    
+\par 
+\par {\b Residente Programme}
+\par 
+\par AUTOEXEC.BAT kann speicherresidente Software beim Systemstart automatisch laden. Diese {\b TSR}-Programme (Terminate and Stay Resident = TSR) bleiben resident im Speicher, bis das System neu gestartet wird. Zu den TSRs geh\rdblquote 
+ren die meisten Steuerprogramme f\'81r die Maus, Men\'81programme, Netzwerk-Software und andere Dienstprogramme.
+\par 
+\par {\b AUTOEXEC.BAT ver\'84ndern}
+\par 
+\par M\rdblquote glicherweise m\'81ssen Sie in Ihrer AUTOEXEC.BAT Datei Ver\'84nderungen vornehmen, wenn Sie neue Hardware oder Software-Applikationen installieren. Viele Programme nehmen diese Ver\'84
+nderungen im Verlauf ihrer Installation automatisch vor. Nachdem die AUTOEXEC.BAT Datei ver\'84ndert wurde, ist ein {\b Neustart} des Systems durchzuf\'81hren, soda\'e1 die Ver\'84nderungen aktiv werden. 
+\par 
+\par Die AUTOEXEC.BAT Datei kann mit jedem Standard-Texteditor oder dem MAX Editor von Qualitas ver\'84ndert werden.
+\par 
+\par {\fs28\cf6 >>H.T_Cfg_PRO
+\par }@P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                           {\i Maximize PROfildatei
+\par }
+\par Bei der Installation eines Qualitas Produktes wird automatisch eine {\b Profildatei }angelegt. Die Datei, die entweder {\b 386MAX.PRO}, {\b BLUEMAX.PRO} oder {\b MOVE'EM.PRO} hei\'e1t, enth\'84
+lt Befehle, die das entsrechende Qualitas Produkt steuern. Die Profildatei kann grunds\'84tzlich mit jedem Texteditor ver\'84ndert werden; die MAX Oberfl\'84che verf\'81gt \'81ber einen speziellen Editor, der die Arbeit mit den Profildateien erleichtert.
+
+\par 
+\par Die Qualitas MAX Dokumentation enth\'84lt eine Beschreibung der Befehle f\'81r die Profildatei.
+\par 
+\par \pard\plain \s15 \f11\fs28\cf6 >>H.T_Cfg_EPro
+\par \pard\plain \f11 @P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                           {\i ExtraDOS PROfile
+\par }
+\par Mit dem Ablauf des Maximize-Vorganges wird ein ExtraDOS Profil angelegt. Diese Datei - ExtraDOS.PRO - enth\'84lt Anweisungen, wie DOS-Teilsegmente in den Speicher zu laden sind. DOS-Teilsegmente sind FILES, BUFFERS, FCBs, LASTDRIVE 
+und STACKS. Teilsegmente werden mit einem DEVICE= Eintrag in CONFIG.SYS geladen. Die Referenz auf die Profildatei wird mit der PRO= Option eingetragen.
+\par 
+\par F\'81r bestimmte DOS-Versionen kann auch COMMAND.COM hochgeladen werden. Maximize erkennt, ob dies m\rdblquote glich ist, und f\'81gt einen entsprechende zum Laden des COMMAND.COM in HiDOS hinzu.
+\par 
+\par \pard\plain \s15 \f11\fs28\cf6 {\fs24\cf0 Referenzen f\'81r ExtraDOS m\'81ssen als letzer aktiver Treiber in CONFIG.SYS eingetragen werden.
+\par 
+\par }>>H.T_Cfg_SYSINI
+\par \pard\plain \f11 @P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                        {\i Die Datei SYSTEM.INI 
+\par }
+\par Die Datei SYSTEM.INI wird angezeigt, wenn Windows in der Pfad-Anweisung zu finden ist. SYSTEM.INI enth\'84lt Informationen, die Windows w\'84hrend der Startphase ben\rdblquote tigt, z.B. besondere Hardware-Treiber.
+\par 
+\par SETUP f\'81gt den Eintr\'84gen in SYSTEM.INI die Optionen SystemROMBreakPoint=FALSE und VCPIWarning=FALSE hinzu. Damit wird die Kompatibilit\'84t zwischen Qualitas Produkten und Windows sichergestellt. Die Eintr\'84
+ge sind belanglos, wenn Qualitas Produkte im System nicht aktiv sind.
+\par 
+\par \pard\plain \s15 \f11\fs28\cf6 >>H.T_Cfg_Qualit
+\par \pard\plain \f11 @P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                           {\i Qualitas Produkte
+\par }
+\par Dieser Bildschirm bietet Informationen \'81ber Versionsnummer, Dateiname, Datum/Uhrzeit und Dateigr\rdblquote \'e1e der Qualitas Produkte.
+\par 
+\par Die Namen der residenten Programme werden mit folgenden weiteren Informationen gelistet:
+\par 
+\par   * Programm-Initialisierungsgr\rdblquote \'e1e
+\par   * Residente Programmgr\rdblquote \'e1e
+\par   * Umgebung (Environment) des Programmes, soweit zutreffend
+\par   * Speicher-Region, in die das Programm geladen wurde
+\par   * Gruppen-Information, soweit zutreffend
+\par   * UMB-Belegung f\'81r Programme, die selbst\'84ndig UMBs belegen
+\par   * Kennzeichen (Flags)
+\par 
+\par Programme, die von Maximize in HiDOS geladen wurden, werden mit der optimalen Lade-Reihenfolge und der Information \'81ber die insgesamt ins HiDOS verlagerte Speichermenge gelistet.
+\par 
+\par Diese Information ist vorwiegend zur Fehleranalyse bestimmt; die Daten werden in den ASQ Snapshot aufgenommen.
+\par 
+\par \pard\plain \s15 \f11\fs28\cf6 >>H.T_Cfg_Window
+\par \pard\plain \f11 @P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                                {\i Windows
+\par }
+\par Wenn Windows in der Pfad-Anweisung gefunden wird, zeigt das System hier den Pfad zu Windows auf der Festplatte (oder im Netzwerk) sowie die Windows Versionsnummer. Windows-spezifische Treiber und Dateien werden f\'81r Ma\'e1
+nahmen zur Fehleranalyse gelistet.
+\par 
+\par Diese Information ist vorwiegend zur Fehleranalyse bestimmt; die Daten werden in den ASQ Snapshot aufgenommen.
+\par 
+\par {\fs28\cf6 >>H.T_Cfg_CMO
+\par }@P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                              {\i CMOS-Detail
+\par }
+\par 80286/386/486 Rechner verf\'81gen \'81ber einen {\b CMOS} (Complementary Metal Oxide Semiconductor)-Speicherbereich, in dem folgende Informationen \'81ber die Systemkonfiguration gespeichert sind: 
+\par 
+\par   * Datum und Zeit
+\par   * Anzahl und Typ der Festplatten
+\par   * Anzahl und Typ der Diskettenlaufwerke
+\par   * Gesamtspeicher unterhalb 1 MB
+\par   * Gesamtbetrag Extended Memory.
+\par 
+\par Eine Batterie sch\'81tzt diese Information. Die Daten bleiben beim Ausschalten des Systems im CMOS-Speicher erhalten und werden bei jedoem Neustart wieder hergestellt. Jedes System verf\'81gt \'81ber ein Setup-Programm, mit dem man die CMOS-Daten ab\'84
+ndern kann.
+\par 
+\par {\fs28\cf6 >>H.T_Hdw_Lsn_01
+\par }@P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                {\i Einf\'81hrung in die Maschinen-Ausstattung
+\par }
+\par Die Leistung moderner Personal Computer Systeme wird mit jeder neuen Modell-Serie gesteigert. Der Hardware-Preisverfall und die gleichzeitig steigenden Anforderungen der Software-Produkte f\'81hren f\'81r ein durchschnittliches System zu einer {\b 
+Verdoppelung} des Durchsatzes (Gesamtproduktivit\'84t) gegen\'81ber dem Vorjahr.
+\par 
+\par Einer der Faktoren, der zum Erfolg der IBM-kompatiblen PCs beigetragen hat, ist die{\b  offene Architektur. }Diese K
+onstruktionsweise erleichtert Ihnen den Einbau auswechselbarer Komponenten des Industrie-Standards. Wenn Sie beispielsweise eine bessere Anzeigequalit\'84t w\'81nschen, dann stecken Sie in den PC einfach eine Adapterkarte mit h\rdblquote herer Aufl
+\rdblquote sung und mehr Farben.
+\par 
+\par Die offene Architektur hat zu der Vielfalt der heutigen Hardware-Optionen beigetragen. Doch die Hardware-Basiskomponenten haben sich \'81ber die Jahre nicht ver\'84ndert. Jedes System ben\rdblquote tigt:
+\par 
+\par   * eine Systemeinheit, die CPU (Zentraleinheit, Prozessor)
+\par   * Speicherchips als "Arbeitsspeicher"
+\par   * eine Tastatur zur Kommunikation zwischen Mensch und Computer
+\par   * ein Festplattenlaufwerk zur Datenspeicherung
+\par   * ein Diskettenlaufwerk f\'81r den Datentransfer
+\par   * einen Bildschirmadapter und Monitor
+\par   * Kommunikations-Schnittstellen f\'81r Modem und Drucker
+\par 
+\par {\fs28\cf6 >>H.T_Hdw_Sum
+\par }@N H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                         {\i Maschinen-Ausstattung
+\par }
+\par F\'81r diese Lektion stehen verschiedene Themen zur Auswahl. W\'84hlen Sie ein Thema aus oder lesen Sie alle Themen der Reihe nach, indem Sie die Schaltft\'84che {\b n\'84chste }Info w\'84hlen_
+\par 
+\par  {\ul Komponenten}{\v H.T_Hdw_Sum_C}
+\par  {\ul CPU (Prozessor)}{\v H.T_Hdw_Sum_P}
+\par  {\ul Eingabe-Ger\'84te}{\v H.T_Hdw_Sum_I}
+\par  {\ul Installierter Speicher}{\v H.T_Hdw_Sum_M}
+\par  {\ul Bus}{\v H.T_Hdw_Sum_B}
+\par  {\ul Adapter}{\v H.T_Hdw_Sum_A}
+\par 
+\par {\fs28\cf6 >>H.T_Hdw_Sum_C
+\par }@P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                              {\i Komponenten }
+\par 
+\par Die Leistungsf\'84higkeit Ihres Computers h\'84ngt teilweise von den physischen Komponenten des Systems und deren Eigenschaften ab:
+\par 
+\par   {\b Ausstattung--------- Eigenschaften------------}
+\par   CPU                  Geschwindigkeit, Adre\'e1geschwindigkeit
+\par   Festplatte(n)        Geschwindigkeit, Kapazit\'84t
+\par   Diskettenlaufwerk(e) Geschwindigkeit, Kapazit\'84t
+\par   Bildschirm-Adapter   Geschwindigkeit, Aufl\rdblquote sung, Speicher
+\par   Monitor              Aufl\rdblquote sung
+\par   Speicher             Geschwindigkeit
+\par   Anschl\'81sse           Kapazit\'84t und Typ
+\par   Netzwerkadapter      Geschwindigkeit
+\par 
+\par {\fs28\cf6 >>H.T_Hdw_Sum_P
+\par }@P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                            {\i CPU (Prozessor)}
+\par 
+\par Die wichtigste Komponente der Computer-Thnologie ist die {\b Central Processing Unit}
+ (CPU, Zentraleinheit, Prozessor). Die CPU ist das "Gehirn" des Computers. Sie vollzieht Rechenaufgaben, verarbeitet Informationen und steuert die Hardware- und Software-Ressourcen des Computers. Aus diesem Grund sind die wesentlichsten Eigenschaften des 
+Systems sowie dessen Zuverl\'84ssigkeit f\'81r gew\rdblquote hnlich von der CPU abh\'84ngig. Zu den CPUs neueren Datums geh\rdblquote ren die Intel 80486, 80386 und 80286 CPU. Die urspr\'81nglichen IBM PCs (un
+d kompatiblen Systeme) verwendeten einen 8088 bzw. 8086 Prozessor.
+\par 
+\par Die Geschwindigkeit der CPU wird in {\b Megahertz} (Millionen Zyklen pro Sekunde) gemessen. Sie ist ein entscheidender Faktor f\'81r die Leistungsf\'84higkeit des Systems. Mathematische Koprozessoren (wie z.B. 80287 oder 80387) k\rdblquote 
+nnen die Geschwindigkeit der Anwendungs-
+\par programme steigern, wenn umfangreiche mathematische Aufgaben zu bew\'84ltigen sind.
+\par 
+\par {\fs28\cf6 >>H.T_Hdw_Sum_I
+\par }@P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                            {\i Eingabe-Ger\'84te}
+\par 
+\par {\b Tastatur}
+\par 
+\par Der Anwender kann \'81ber die Tastatur Daten in den Computer eingeben. Es gibt verschiedene allgemein gebr\'84uchliche Tastaturversionen mit unterschiedlichen F\'84
+higkeiten und Tastenbelegungen. Die Tastatur der IBM AT-Klasse war die erste, die weitere Funktionen realisierte. Damit kann der Computer weitere Einstellungen steuern:
+\par 
+\par   * Feststelltaste
+\par   * Num-Feststelltaste
+\par   * Rollen-Feststelltaste
+\par   * Wiederholungszeit bei gedr\'81ckten Tasten
+\par 
+\par {\b Maus}
+\par 
+\par Die Maus ist ein "Zeige-Ger\'84t". Je nach Bewegung der Maus durch den Anwender bewegt sich auch der Bilschirm-(Maus-)Cursor. Die Vorteile liegen in der einh\'84
+ndigen Cursor-Bedienung und Programmsteuerung. Die Maus-Anwendung gewinnt zunehmend an Popularit\'84t; sie wird von vieler Grafik-Software vorausgesetzt.
+\par 
+\par Die Maus ist mit einer seriellen Schnittstelle am PC oder \'81ber eine Adapterkarte mit dem PC-Bus verbunden. Abh\'84ngig von der Software-
+\par Anwendung ben\rdblquote tigt eine Maus m\rdblquote glicherweise residente {\b Treiber-
+\par }Software.
+\par 
+\par Die Maus nutzt eine Vielzahl von Technologien, um Bewegungen sensorisch aufzunehmen. Eine bew\'84hrte Technologie nutzt einen Gummiball in einer Plasikschale mit Sensoren, die jede Ballbewegung aufnehmen und sie in eine Cursor-Bewegung umsetzen.
+\par 
+\par {\fs28\cf6 >>H.T_Hdw_Sum_M
+\par }@P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                        {\i Installierter Speicher}
+\par 
+\par Das System speichert seine Daten in {\b RAM}-Chips (Random Access Memory = Direktzugriffsspeicher) auf der Systemplatine oder einer Adapter-
+\par karte. Dieser physische RAM-Speicher kann als eine Vielzahl von unterschiedlichen logischen {\ul Speichertypen}{\v H.T_Mem_Lsn_01} eingerichtet sein. 80386/486 Rechner k\rdblquote 
+nnen diesen Speichertypen RAM-Speicher zuweisen. Qualitas MAX und BlueMAX unterst\'81tzen diese F\'84higkeit.
+\par 
+\par {\fs28\cf6 >>H.T_Hdw_Sum_B
+\par }@P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                                  {\i Bus}
+\par 
+\par Die CPU, der Speicher und die Ein-/Ausgabe-Ger\'84te kommunizieren miteinander \'81ber den Datenbus. Im Gegensatz zu den meisten anderen Systemkomponenten ist der Bus ein permanenter Bestandteil der {\b System-Grundplatine (Motherboard).}
+\par 
+\par Ein Bus ist mit einer mehrspurigen Autobahn zu vergleichen. Verschiedene Spuren sind f\'81r den Informationsflu\'e1 verf\'81gbar. Jede Spur enth\'84lt dabei ein bin\'84res Datenbit. Je breiter dieser Datenbus ist, desto so mehr Daten k\rdblquote 
+nnen vom Computer aufgenommen und verarbeitet werden. Die Gr\rdblquote \'e1e des Datenbusses ist damit ein entscheidender Faktor f\'81r Geschwindigkeit und Leistungsf\'84higkeit des Systems. Nach Einf\'81
+hrung des IBM PC mit seiner 8088 CPU und seinem 8-Bit Bus hat Intel den Bus eines jeden folgenden Mikroprozessors {\b erweitert}. Es gibt drei Gruppen der Busarchitektur:
+\par 
+\par   * Der klassische AT-Bus (oder {\b ISA =} Industry Standard
+\par     Architecture) verf\'81gt \'81ber einen 16-Bit Datenkanal.
+\par     Es k\rdblquote nnen nur ISA-Adapterkarten verwendet werden.
+\par   * Der Mikrokanal-Bus ({\b MC = Micro Channel}) wurde mit der
+\par     IBM PS/2 Produktreihe eingef\'81hrt. Bus und Adapter erhielten
+\par     mehr "Intelligenz"; die Konfiguration ist vereinfacht und
+\par     mehrere Prozessoren in einem PS/2 System sind unterst\'81tzt.
+\par     Mittlerweile bieten auch andere Hersteller MC-Systeme an.
+\par     Alle erfordern jedoch MC-Adapterkarten.
+\par   * Das {\b EISA}-Design (Extended Industry Standard Architecture)
+\par     verf\'81gt \'81ber einen "intelligenten" Datenbus, der sowohl ISA als
+\par     auch EISA Adapter akzeptiert.
+\par 
+\par {\fs28\cf6 >>H.T_Hdw_Sum_A
+\par }@P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                                {\i Adapter}
+\par 
+\par Adapter sind Karten im Steckplatz des PC-Bus. Sie erm\rdblquote glichen die Kommunikation zwischen den externen Ger\'84ten und dem Computer.
+\par Zu den Ger\'84ten, die Adapter benutzen, geh\rdblquote ren:
+\par 
+\par   * Monitore
+\par \pard \li1   * Scanner (Abtaster)
+\par \pard   * externe Plattenlaufwerke.
+\par 
+\par Au\'e1erdem kommunizieren die meisten Netzwerk-PCs mit dem {\b Netzwerk} \'81ber Adapterkarten. 
+\par 
+\par Viele Adapter verf\'81gen \'81ber RAM- oder ROM-Adressen im HiDOS-Speicherbereich zwischen 640 KB und einem Megabyte. Es ist oft m\rdblquote glich, die speziellen Speicheradressen \'81ber die Software oder Schaltern auf der Karte auszuw\'84hlen. Durch {
+\b Neuordnung} dieser Adapter-RAM und ROM Bereiche k\rdblquote nnen die Anwender einen zus\'84tzlichen Speicherbetrag im HiDOS zur\'81ckgewinnen. Dieser Speicher steht f\'81r residente Software zur Verf\'81gung.
+\par 
+\par {\fs28\cf6 >>H.T_Hdw_Vid
+\par }@P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                                 {\i Video
+\par }
+\par Die Bilschirmanzeige hat sich seit den fr\'81hen Monochrom-PC-Systemen stark ver\'84ndert.Der aktuelle Standard f\'81r Farbe, Grafik und Textausgabe wird {\b VGA} genannt. Im VGA-Standard sind verschiedene Anzeigemodi m\rdblquote glich, soda\'e1
+ die Kompatibilit\'84t mit \'84lterer Software gegeben ist. Diese Modi verdoppeln die drei fr\'81hreren Anzeige-
+\par standards:
+\par 
+\par   * {\b MDA} (Monochrom)
+\par   * {\b CGA} (Farbgrafik)
+\par   * {\b EGA} (erweiterte Grafik)
+\par 
+\par Das Bildschirmsystem besteht aus zwei Komponenten, dem Bildschirm-
+\par {\b adapter} und dem {\b Monitor}. Der Bildschirm-Adapter ist entwerder eine Steckkarte oder Bestandteil der System-Grundplatine. Der Adapter (nicht der Monitor) bestimmt Aufl\rdblquote sung, Farbe und jede andere Charakteristik des Anzeigestandards. 
+
+\par 
+\par {\b Bildschirm-Speicher und HiDOS-Speicher}
+\par 
+\par Die Bildschirmadapter nutzen folgende Regionen in den oberen 384 KB des DOS-Megabyte:
+\par 
+\par   * {\b MDA} nutzt 64 KB von Adresse B000-C000
+\par   * {\b CGA} nutzt 32 KB von Adresse B800-C000
+\par   * {\b EGA} nutzt 96 KB von Adresse A000-B000 und B800-C000
+\par   * {\b VGA} nutzt 96 KB von Adresse A000-B000 und B800-C000
+\par 
+\par {\b EGA}-Systeme nutzen zus\'84tzliche 16 KB des Video-ROM bei Adresse C000. VGA-Systeme verf\'81gen \'81ber 32 KB ROM (nicht PS/2 Systeme).
+\par 
+\par Die Memory Management Software kann ungenutzte Adressen im Bildschirmbereich erkennen und sie als HiDOS-Speicher {\b zur Verf\'81gung stellen}.
+\par 
+\par {\fs28\cf6 >>H.T_Hdw_Drv
+\par }@P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                                {\i Laufwerke
+\par }
+\par {\b Festplatten-Laufwerke}
+\par 
+\par Festplatten-Laufwerke (auch als nicht auswechselbare Platten oder Festplatten bezeichnet) sind ein {\b Speichermedium} f\'81r Daten und Programme. Es gibt sie in unterschiedlicher Geschwindigkeit, physischer Gr\rdblquote \'e1e und Kapazit\'84
+t. Die Kapazit\'84t einer Festplatte h\'84ngt von der Zahl und Dichte der Magnetplatten ab, aber auch von der Aufteilung in Zylinder und Sektoren auf der Platte. Die Kapazit\'84t der Festplatten reicht von 20 MB bis \'81ber 1200 MB. Die Geschwindigkeit h
+\'84ngt von der Rotationsgeschwindigkeit und der Anzahl der Schreib/Lese-K\rdblquote pfe ab. Die heute \'81blichen Festlatten-
+\par Laufwerke besitzen eine Kennung (ID-Nummer), anhand derer das Betriebssystem das Laufwerk erkennen kann. Die PC-Festplatten sind in folgende Kategorien einzuteilen:
+\par 
+\par   * ESDI
+\par   * IDE
+\par   * MFM
+\par   * RLL
+\par   * SCSI
+\par 
+\par Abgesehen von der CPU ist die Festplatte der wichtigste Faktor f\'81r die {\b Leistungsf\'84higkeit} des Systems. Aus diesem Grund k\rdblquote nnen sich Platten-Caches und Dienstprogramme f\'81r die Platten-Organisation wesentlich auf die Geschw
+indigkeit des Systems auswirken.
+\par 
+\par {\b Auswechselbare Platten}
+\par 
+\par {\b Disketten} (Floppy Disks) sind kleine, auswechselbare Magnet-
+\par Speichereinheiten. Sie dienen als Sicherunskopien und zum Datenaustausch zwischen verschiedenen Systemen. Diskettenlaufwerke gibt es in unterschiedlicher Gr\rdblquote \'e1e und Speicherkapazit\'84t. Dazu geh\rdblquote ren diese allgemein \'81
+blichen Formate:
+\par 
+\par   * 5-1/4" mit  360 KB Speicherkapazit\'84t
+\par   * 5-1/4" mit  1,2 MB Speicherkapazit\'84t
+\par   * 3-1/2" mit  720 KB Speicherkapazit\'84t
+\par   * 3-1/2" mit 1,44 MB Speicherkapazit\'84t
+\par   * 3-1/2" mit 2,88 MB Speicherkapazit\'84t
+\par 
+\par Normalerweise k\rdblquote nnen Diskettenlaufwerke einer bestimmten physischen Gr\rdblquote \'e1e und Speicherkapazit\'84t andere Disketten derselben Gr\rdblquote \'e1e und gleichwertiger oder geringerer Kapazit\'84t lesen und schreiben.
+\par 
+\par Einige auswechselbare Laufwerke, die keine Floppy Disk-Technologie einsetzen, verf\'81gen \'81ber eine gr\rdblquote \'e1ere Speicherkapazit\'84t als die oben bezeichneten Laufwerke.
+\par 
+\par {\fs28\cf6 >>H.T_Hdw_Por
+\par }@P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                    {\i Kommunikations-Schnittstellen
+\par }
+\par {\b Peripherieger\'84te} kommunizieren mit dem Computer \'81ber Ein-/
+\par Ausgabe-Schnittstellen. Parallele Anschl\'81sse verbinden den Computer mit Druckern und den Ausgabe-Ger\'84ten. Ein Computer verf\'81gt normalerweise \'81ber ein oder zwei {\b parallele} Anschl\'81sse, die als  LPT1 und LPT2 bezeichnet werden.
+\par 
+\par Serielle Anschl\'81sse verbinden den Computer mit:
+\par 
+\par   * {\b Eingabe-Ger\'84te} - Maus, Lichtstift, Scanner
+\par   * {\b Ausgabe-Ger\'84te} - Drucker, Plotter
+\par   * {\b Kommunikations-Einheiten} - Modem, anderer Computer
+\par 
+\par Ein Computer verf\'81gt \'81ber maximal vier serielle Anschl\'81sse, die als COM1 - COM4 bezeichnet werden.
+\par 
+\par {\fs28\cf6 >>H.T_Hdw_BIOS
+\par }@P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                              {\i BIOS-Detail
+\par }
+\par Das {\b BIOS} (Basis Input/Output System) ist ein systemeigenes Programm, mit dem der Computer gestartet wird. Es enth\'84lt grundlegende Systemroutinen, die:
+\par 
+\par   * den PC beim Systemstart testen
+\par   * Text anzeigen
+\par   * auf eine Platte schreiben bzw. von dieser lesen
+\par   * \'81ber die Systemkonfiguration berichten
+\par   * Unterst\'81tzung f\'81r weitere Hardware bieten.
+\par 
+\par BIOS-Routinen \'81berwachen die {\b systemnahen} Ein-/Ausgabe-Funktionen der Computer-Hardware. Da das BIOS auf einem {\b ROM}
+-Chip (Read Only Memory = Festwertspeicher) vorliegt, gehen diese wichtigen Routinen beim Abschalten des Systems nicht verloren. Jedes System verf\'81gt heutzutage \'81ber ein ROM BIOS. Es gibt verschiedene BIOS-Versionen auf dem Markt; alle f\'81
+hren jedoch dieselben grundlegenden Aufgaben aus.
+\par 
+\par Das ROM BIOS belegt auf den meisten Rechnern die {\b oberen} 64 KB des HiDOS-Speichers bzw. die oberen 128 KB auf PS/2 und anderen Mikrokanal-Systemen. Die PS/2 Systeme enthalten "erweiterte" ABIOS-
+\par Routinen f\'81r das OS/2-Betriebssystem.
+\par 
+\par {\fs28\cf6 >>H.Index
+\par }@P H.Index H.Index
+\par                       {\i ASQ Stichwort-Verzeichnis
+\par }
+\par Verwenden sie die{\b  rechte/linke} Pfeiltaste, um ein Thema auszuw\'84hlen. Dr\'81cken Sie anschlie\'e1end die Eingabetaste.
+\par 
+\par {\b Stichwort----------------   Hilfe-Thema------------------------}
+\par {\ul 386MAX.PRO Datei}{\v H.T_Cfg_PRO}           Maximize PROfildatei
+\par {\ul Abstimmung der Leistung}{\v H.Tuning}    Feinabstimmung des Systems
+\par {\ul Adapter-Speicher}{\v H.T_Hdw_Sum_A}           Adapter
+\par {\ul Adapterkarten-Bereich}{\v H.T_Mem_Holes}      Speicherl\rdblquote cher
+\par {\ul Adre\'e1umsetzung}{\v H.T_Mem_Holes}             Speicherl\rdblquote cher
+\par {\ul ASQ Einf\'81hrung}{\v H.T_Welcome}             Willkommen bei ASQ!
+\par {\ul ASQ Funktionen}{\v H.T_Features}             ASQ Funktionen
+\par {\ul ASQ Funktionen einsetzen}{\v H.T_Using}   ASQ einsetzen
+\par {\ul ASQ Registrierung}{\v H.T_Register}          Registrierung und Vertrieb{\ul 
+\par ASQ Themen}{\v H.Default}                 \'9aber ASQ
+\par {\ul ASQ Vertrieb}{\v H.T_Register}               Registrierung und Vertrieb{\ul 
+\par Ausstattungs-Themen}{\v H.T_Hdw_Sum}        Maschinen-Ausstattung
+\par {\ul AUTOEXEC.BAT Datei}{\v H.T_Cfg_AUT}         Datei AUTOEXEC.BAT
+\par {\ul AUTOEXEC.BAT bearbeiten}{\v H.T_Cfg_AUT}    Datei AUTOEXEC.BAT
+\par {\ul Betriebs-Konfiguration}{\v H.T_Cfg_Lsn_01}     Einf\'81hrung in die Konfig.-Lernhilfe
+\par {\ul Betriebssystem}{\v H.T_Cfg_Sum}             Konfig.-\'9abersicht
+\par {\ul Bildschirm-Speicher}{\v H.T_Hdw_Vid}        Bildschirm
+\par {\ul BIOS}{\v H.T_Hdw_BIOS}                       BIOS-Detail
+\par {\ul BLUEMAX.PRO Datei}{\v H.T_Cfg_PRO}          Maximize PROfildatei
+\par {\ul BlueMAX Produkt}{\v H.Products}            Qualitas Produkt-Information
+\par {\ul BREAK Befehl}{\v H.T_Cfg_CFG}               Datei CONFIG.SYS
+\par {\ul BUFFERS Befehl}{\v H.T_Cfg_CFG}             Datei CONFIG.SYS
+\par {\ul BUFFERS Einstellung}{\v H.Tuning}        Feinabstimmung des Systems
+\par {\ul Bus}{\v H.T_Hdw_Sum_B}                        Bus
+\par {\ul CALL Befehl}{\v H.T_Cfg_AUT}                Datei AUTOEXEC.BAT
+\par {\ul CMOS}{\v H.T_Cfg_CMO}                       CMOS-Detail
+\par {\ul COMSPEC, Befehl}{\v H.T_Cfg_AUT}            Datei AUTOEXEC.BAT
+\par {\ul CONFIG.SYS Datei}{\v H.T_Cfg_CFG}           CONFIG.SYS Datei
+\par {\ul CONFIG.SYS bearbeiten}{\v H.T_Cfg_CFG}      CONFIG.SYS Datei
+\par {\ul CPU}{\v H.T_Hdw_Sum_P}                        CPU (Prozessor)
+\par {\ul DEVICE Befehl}{\v H.T_Cfg_CFG}              Datei CONFIG.SYS
+\par {\ul Diskettenlaufwerke}{\v H.T_Hdw_Drv}         Laufwerke
+\par {\ul DOS}{\v H.T_Cfg_Sum}                        Konfig.-\'9abersicht
+\par {\ul DOS-Konfiguration}{\v H.T_Cfg_Sum}          Konfig.-\'9abersicht
+\par {\ul DOS-Schalter}{\v H.T_Command}               Befehlszeilen-Optionen
+\par {\ul DPMI}{\v H.T_VCPI}                       VCPI, DPMI und VDS
+\par {\ul EISA Bus}{\v H.T_Hdw_Sum_B}                   Bus
+\par {\ul EMBs}{\v H.T_Mem_XMS}                       XMS-Speicher
+\par {\ul EMS-Speicher}{\v H.T_Mem_Exp}               Expanded (EMS) Memory
+\par {\ul EMS gegen Extended Memory}{\v H.T_Mem_Exp}  Expanded (EMS) Memory
+\par {\ul EMS gegen XMS-Speicher}{\v H.T_Mem_XMS}     XMS-Speicher
+\par {\ul Expanded Memory}{\v H.T_Mem_Exp}            Expanded (EMS) Memory
+\par {\ul Extended Memory}{\v H.T_Mem_Ext}            Extended Memory
+\par {\ul ExtraDOS.PRO Datei}{\v\ul H.T_Cfg_EPro}         ExtraDOS Profil{\ul 
+\par Festplattenlaufwerke}{\v H.T_Hdw_Drv}       Laufwerke
+\par {\ul FILES Befehl}{\v H.T_Cfg_CFG}               Datei CONFIG.SYS
+\par {\ul FILES Einstellung}{\v H.Tuning}          Feinabstimmung des Systems
+\par {\ul FlexFrame-Technologie}{\v H.T_Mem_Holes}      Speicherl\rdblquote cher
+\par {\ul Ger\'84tetreiber}{\v H.T_Cfg_CFG}              Datei CONFIG.SYS
+\par {\ul HiDOS-Speicher}{\v H.T_Mem_Hi}             HiDOS-Speicher
+\par {\ul HMA}{\v H.T_Mem_XMS}                        XMS-Speicher
+\par {\ul Interrupts}{\v H.T_Mem_Int}                 Interrupts
+\par {\ul ISA Bus}{\v H.T_Hdw_Sum_B}                    Bus
+\par {\ul KB (Kilobyte)}{\v H.T_Mem_RAM}              RAM-Speicher
+\par {\ul Komponenten}{\v H.T_Hdw_Sum_C}                Komponenten
+\par {\ul LASTDRIVE, Befehl}{\v H.T_Cfg_CFG}          Datei CONFIG.SYS
+\par {\ul LIM-Speicher}{\v H.T_Mem_Exp}               Expanded (EMS) Memory
+\par {\ul LoDOS-Speicher}{\v H.T_Mem_Low}             LoDOS-Speicher
+\par {\ul Maus}{\v H.T_Hdw_Sum_I}                       Eingabe-Ger\'84t
+\par {\ul MC-Bus}{\v H.T_Hdw_Sum_B}                     Bus
+\par {\ul Megahertz}{\v H.T_Hdw_Sum_P}                  CPU (Prozessor)
+\par {\ul Memory Management Tips}{\v H.Tuning}     Feinabstimmung des Systems
+\par {\ul Modus umschalten}{\v H.T_Mem_Lsn_03}           Memory Management Konzeption
+\par {\ul MOVE'EM.PRO Datei}{\v H.T_Cfg_PRO}          Maximize PROfildatei
+\par {\ul Nanosekunden (ns)}{\v H.T_Mem_Tim}          Speicher-Zugriffszeit
+\par {\ul Netzwerke u.LoDOS-Speicher}{\v H.T_Mem_Low} LoDOS-Speicher
+\par {\ul Offene Architektur}{\v H.T_Hdw_Lsn_01}         Ausstattungs-\'9abersicht 
+\par {\ul Paralleler Anschlu\'e1}{\v H.T_Hdw_Por}        Kommunikations-Schnittstellen
+\par {\ul PATH Befehl}{\v H.T_Cfg_AUT}                Datei AUTOEXEC.BAT
+\par {\ul POST}{\v H.T_Mem_Holes}                       Speicherl\rdblquote cher
+\par {\ul PROMPT Befehl}{\v H.T_Cfg_AUT}              Datei AUTOEXEC.BAT
+\par {\ul Qualitas Information}{\v\ul H.T_Cfg_Qualit}       Qualitas Produkte{\ul 
+\par Qualitas MAX Produkt}{\v H.Products}       Qualitas Produkt-Information
+\par {\ul Qualitas Produkte}{\v H.Products}          Qualitas Produkt-Information
+\par {\ul Qualitas Warenzeichen}{\v H.T_Register}      Registrierung und Vertrieb
+\par {\ul RAM-Speicher}{\v H.T_Mem_RAM}               RAM-Speicher
+\par {\ul Real Mode}{\v H.T_Mem_Lsn_03}                  Memory Management Konzeption
+\par {\ul Seiten-Rahmen}{\v H.T_Mem_Exp}              Expanded (EMS) Memory
+\par {\ul Serieller Anschlu\'e1}{\v H.T_Hdw_Por}         Kommunikations-Schnittstellen
+\par {\ul SET Befehl}{\v H.T_Cfg_AUT}                 Datei AUTOEXEC.BAT
+\par {\ul SHELL Befehl}{\v H.T_Cfg_CFG}               Datei CONFIG.SYS
+\par {\ul Snapshot Datei-Information}{\v H.T_Snapshot} Snapshot-Information
+\par {\ul Speicher-Zugriffszeit}{\v H.T_Mem_Tim}      Speicher-Zugriffszeit
+\par {\ul Speicherbank-Umschaltung}{\v H.T_Mem_Exp}   Expanded (EMS) Memory
+\par {\ul Speicherl\rdblquote cher}{\v H.T_Mem_Holes}             Speicherl\rdblquote cher
+\par {\ul Speicherregionen}{\v H.T_Mem_Lsn_02}           Speicherregionen{\ul 
+\par Speichertypen}{\v H.T_Mem_Lsn_01}              Einf\'81hrung in die Speicher-Lernhilfe
+\par {\ul STACKS Befehl}{\v H.T_Cfg_CFG}              Datei CONFIG.SYS
+\par {\ul SYSTEM.INI}{\v\ul H.T_Cfg_Window}                 SYSTEM.INI{\ul 
+\par Tastatur}{\v H.T_Hdw_Sum_I}                   Eingabe-Ger\'84t
+\par {\ul ROM BIOS}{\v H.T_Mem_ROM}                   ROM-Speicher
+\par {\ul ROM-Speicher}{\v H.T_Mem_ROM}               ROM-Speicher
+\par {\ul Themen}{\v\ul H.Contents}                     ASQ Lernhilfe-Themen{\ul 
+\par TSR-Initialisierung}{\v H.T_Mem_Holes}        Speicherl\rdblquote cher
+\par {\ul TSR-Programme}{\v H.T_Mem_Lsn_03}              Memory Management Konzeption
+\par {\ul UMBs}{\v H.T_Mem_XMS}                       XMS-Speicher
+\par {\ul VCPI}{\v H.T_VCPI}                       VCPI, DPMI und VDS
+\par {\ul VDS}{\v H.T_VCPI}                        VCPI, DPMI und VDS
+\par {\ul Video}{\v H.T_Hdw_Vid}                      Bildschirm
+\par {\ul Vorteile Memory Management}{\v H.T_Mem_Holes} Speicherl\rdblquote cher
+\par {\ul XMS-Speicher}{\v H.T_Mem_XMS}               XMS-Speicher
+\par 
+\par }

@@ -1,0 +1,53 @@
+* Doshelp German translations.
+
+ Description: The German text (RTF) files for MAX 8.01
+    Apparently these were saved in Word 6 RTF format which adds a few
+    new attributes that the old helpmake.exe does not understand. So
+    I used HMAKEL.exe to strip them out. Also added the .?GR translations
+    to the \text dir.
+
+ Who: PETERJ
+ When: 23 Feb. 1996
+ SW/HW Environment: DOS
+ Symptom: NAB
+ Temporary Workaround: NAB
+ Test Procedure:
+ QA Testing Passed:
+ Version: 8.01.012 build
+
+New files:
+
+DOSHELP\AS_G_HLP.RGR
+DOSHELP\AS_H_HLP.RGR
+DOSHELP\AS_L_HLP.RGR
+DOSHELP\AS_Q_HLP.RGR
+DOSHELP\AS_T_HLP.RGR
+DOSHELP\IN_H_HLP.RGR
+DOSHELP\IN_L_HLP.RGR
+DOSHELP\IN_M_HLP.RGR
+DOSHELP\IN_Q_HLP.RGR
+DOSHELP\IN_S_HLP.RGR
+DOSHELP\MX_H_HLP.RGR
+DOSHELP\MX_L_HLP.RGR
+DOSHELP\MX_M_HLP.RGR
+DOSHELP\MX_Q_HLP.RGR
+DOSHELP\MX_S_HLP.RGR
+DOSHELP\QI_H_HLP.RGR
+DOSHELP\QI_L_HLP.RGR
+DOSHELP\QI_M_HLP.RGR
+DOSHELP\QI_Q_HLP.RGR
+DOSHELP\QI_S_HLP.RGR
+DOSHELP\QS_H_HLP.RGR
+DOSHELP\QS_O_HLP.RGR
+DOSHELP\QS_Q_HLP.RGR
+
+TEXT\ROLDMAX.BGR
+TEXT\386LOAD.CGR
+TEXT\REORDER.CGR
+TEXT\PACKING.XGR
+TEXT\README.XGR
+
+Files affected:
+
+HMAKEL.C                Strip /fracwidth, /widctlpar, /slmult, /otblrul
+

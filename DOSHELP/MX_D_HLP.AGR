@@ -1,0 +1,43 @@
+.comment file Mx_D_Hlp.Asc
+.comment ascii source for maximize static displays
+.comment line width max 76, compile at 76 wide
+.comment \b = hi cyan, \b\i = hi yellow
+.comment \i = inverse (blue on white)
+.context M_D_Complete
+.comment maximize complete screen background
+
+ \b\iaus dem LoDOS\b\i			 \b\iin das HiDOS\b\i
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿		ÚÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+		      \bÄÄÄÄÄÄÄÄÂÄÄ¯\b		  ³
+			      \b³\b ³  VIDEO	  ³
+			      \bÃÄÄ¯\b		  ³
+			      \b³\b ³SEITEN-RAHMEN³
+			      \bÀÄÄ¯\b		  ³
+				³  ROM	      ³
+				ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+.context M_D_Progress
+.comment Maximize/reorder progress screen
+.comment DO NOT make any changes here which will affect placement of data
+.comment WITHOUT making corequisite changes to show_progress() in screens.c.
+.comment First line below this comment is #2.  Columns are numbered from 1.
+.comment |    .    |	.    |	  .    |    .	 |    .    |	.    |	  .
+.comment 10...5....20...5....30...5....40...5....50...5....60...5....70...5.
+.comment	   _______Kombinationen erkannt     __Zeit__   Byte verlagert
+
+
+
+       \b\i% Komplett:\b\i \i°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°\i
+		   \b\i0	  25	       50	    75	       100\b\i
+    (Anm.: Der Verlauf ist nicht linear; er kann schrittweise erfolgen)
+
+		   \b\i          Anzahl Kombinationen\b\i   \b\i  Zeit	\b\i   \b\iByte \b\i
+
+  \b\igesamt\b\i
+
+  \b\igeprft\b\i
+
+  \b\ibisher ideal\b\i
+
+
+  Abbrechen mit Strg-Untbr.
+.comment end

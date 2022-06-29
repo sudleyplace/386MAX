@@ -1,0 +1,240 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times;}{\f1\froman Symbol;}{\f2\fswiss Helvetica;}{\f3\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;
+\red192\green192\blue192;}{\stylesheet{\f3\lang1033 \snext0 Normal;}}{\info{\title asq help system, learn special topics}{\author Klaus Albrecht}{\operator Klaus Albrecht}{\creatim\yr1992\mo5\dy3\hr14\min17}{\revtim\yr1996\mo2\dy15\hr20\min58}
+{\printim\yr1992\mo5\dy18\hr11\min51}{\version1}{\edmins0}{\nofpages0}{\nofwords0}{\nofchars0}{\vern16417}}\paperw12240\paperh15840\margl1440\margr1008\margt1440\margb1440\gutter0 \facingp\widowctrl\ftnbj\ftnrestart\hyphhotz425 \sectd 
+\linex0\headery709\footery709\colsx709\endnhere \pard\plain \f3\lang1033 {\cf2 ASQ Learn Menu Misc. Topics
+\par }{\cf2 by Stan Leszynski
+\par }{\cf2 No index or browsing, just random weird topics
+\par }{\cf2 These notes are not a live conte}{\cf2 xt
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 68
+\par }{\cf2 Context strings begin with >>
+\par }{\cf2 Center the title of each block
+\par }{\cf2 First line is @ plus P (print) or N (noprint) plus stop markers for Prev/Next, not all topics qualify for this treatment
+\par }\pard {\cf2 MSWord file use:
+\par }{\cf2  Set Printer to Generic/Text only on File:
+\par }{\cf2  Set View to Page mode to see wrapping
+\par }{\cf2  Default tabs 0
+\par }{\cf2  Left margin 0
+\par }{\cf2  Right margin 1.7"
+\par }{\cf2  Top margin 0
+\par }{\cf2  Bottom margin 0
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns
+\par }{\cf2 Text highlighting:
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text}{\cf2 
+\par }{\cf2  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text
+\par }{\cf2  use }{\i\cf2 UNDERLINE}{\cf2  for context jump= red text
+\par }{\cf2  use }{\b\i\cf2 BOLD ITALICS}{\cf2  for bullets= yellow text
+\par }\pard \fi-288\li288\ri-2700 
+\par \pard {\fs28\cf6 >>H.L_Abt_Q
+\par }@P H.Products H.Tuning
+\par                    {\i Qualitas Produkt-Information}
+\par 
+\par Qualitas bietet {\b Memory Management Software} f\'81r die Optimierung und Leistungssteigerung Ihres Systems. Diese Produkte laufen auf:
+\par 
+\par   * Computern mit 80386, 80486 und Pentium Prozessoren
+\par   * IBM PS/2 Systemen mit 80386, 80486 und Pentium Prozessoren
+\par   * einigen Computern mit 80286 Prozessoren.
+\par 
+\par Die Produkte sind ebenso auf SX Varianten der 80386/486 Prozessoren lauff\'84hig.
+\par 
+\par {\b ASQ empfiehlt}
+\par 
+\par ASQ hat einen #PROC___# in diesem System gefunden. Sollte Ihr System derzeit noch \'81ber keinen Memory Manager verf\'81gen, empfiehlt ASQ die Installation des Programmes {\b #RECPROD#} von Qualitas. #RECPROD# wird Ihnen dazu verhelfen, das "\'8eu\'e1
+erste" aus Ihrem Computer herauszuholen. Folgende Abschnitte beschreiben #RECPROD# sowie andere Produkte von Qualitas.
+\par 
+\par {\fs28\cf6 >>H.L_Abt_386
+\par }@P H.Products H.Tuning
+\par {\b Qualit}{\b as MAX}
+\par 
+\par Qualitas MAX ist ein Memory Management-Programm f\'81r {\b 80386, 80486 und Pentium} Computer, das ...
+\par 
+\par   * Pop-Up Utilities, Netzwerk-Treiber und andere speicherresidente
+\par     Programme aus dem konventionellen Speicher in ungenutzte
+\par     Speicherbereiche oberhalb 640 KB verlagert
+\par   * einen schnellen, modernen EMS-Manager zur Verf\'81gung stellt
+\par   * LIM 4.0 EMS, XMS 2.0, VCPI 1.0, DPMI 1.0 und Virtual
+\par     DMA Services 1.0. unterst\'81tzt
+\par   * langsame ROM-Routinen in schnelles RAM kopiert und so die
+\par     Leistung Ihres Systems steigert
+\par   * die Umplazierung und Auslagerung von EMS-Speicheradressen
+\par     m\rdblquote glich macht, um so den Anforderungen Ihres
+\par     Anwendungsprogrammes gerecht zu werden
+\par   * Ihr System automatisch analysiert und konfiguriert, um ein 
+\par     H\rdblquote chstma\'e1 an Effizienz und Performance zu erreichen
+\par   * Mikrokanal-Adapter automatisch analysiert und
+\par     vorkonfiguriert, um maximalen HiDOS-Speicher zu gewinnen.
+\par \pard \ri-2700 
+\par \pard {\fs28\cf6 >>H.L_Abt_MAX
+\par }@P H.Products H.Tuning
+\par {\b BlueMAX}
+\par 
+\par BlueMAX ist ein Memory Management Programm f\'81r {\b IBM PS/2 80386 and 80486} Computer, das ...
+\par 
+\par   * Pop-Up Utilities, Netzwerk-Treiber und andere speicherresidente 
+\par     Programme aus dem konventionellen Speicher in ungenutzte
+\par     Speicherbereiche oberhalb 640 KB verlagert
+\par   * einen schnellen, modernen EMS-Manager zur Verf\'81gung stellt
+\par   * LIM 4.0 EMS, XMS 2.0, VCPI 1.0, DPMI 1.0 und Virtual
+\par     DMA Services 1.0. unterst\'81tzt
+\par   * langsame ROM-Routinen in schnelles RAM kopiert und so die
+\par     Leistung Ihres Systems steigert
+\par   * die Umplazierung und Auslagerung von EMS-Speicheradressen
+\par     m\rdblquote glich macht, um so den Anforderungen Ihres
+\par     Anwendungsprogrammes gerecht zu werden
+\par   * Ihr System automatisch analysiert und konfiguriert, um ein 
+\par     H\rdblquote chstma\'e1 an Effizienz und Performance zu erreichen
+\par   * Mikrokanal-Adapter automatisch analysiert und
+\par     vorkonfiguriert, um maximalen HiDOS-Speicher zu gewinnen.
+\par 
+\par {\fs28\cf6 >>H.L_Abt_MOVE
+\par }@P H.Products H.Tuning
+\par {\b 80286 Support}
+\par 
+\par Qualitas MAX und BlueMAX bieten Unterst\'81tzung f\'81r {\b 80286} Computer, die mit einem NEAT CHIPSet ausgestattet sind. Zudem unterst\'81tzen sie jeden Computer mit einer EMS 4.0 Hardware-Speicherkarte; diese mu\'e1
+ hardwareseitig dem EMS 4.0 Standard in vollen Umfang entsprechen.
+\par 
+\par Die 80286 Unterst\'81tzung ...
+\par 
+\par   * f\'81llt LoDOS-Speicher mit EMS-Speicherbereichen bis 640 KB auf.
+\par \pard   * erweitert den LoDOS-Speicher auf 704 KB bzw. 736 KB f\'81r Systeme,
+\par     die \'81ber einen Monochrom- bzw. CGA-Bildschirmadapter verf\'81gen.
+\par   * verlagert Pop-Up Utilities, Netzwerk-Treiber und andere
+\par     speicher-residente Programme vom konventionellen Speicher in
+\par     ungenutzte Speicherbereiche oberhalb 640 KB.
+\par \pard \ri-2700 
+\par \pard {\fs28\cf6 >>H.L_Tun_Int
+\par }@P H.Products H.Tuning
+\par                         {\i System-Feinabstimmung}
+\par 
+\par ASQ hat die Umgebung (Environment, System-Parameter) und die Einstellungen des Systems analysiert und {\b schl\'84gt }folgende Verbesserungen {\b vor}. (Hinweis: Dies sind allgemeine Vorschl\'84
+ge. Folgen Sie stets den speziellen Empfehlungen Ihres Software- oder Hardware-Lieferanten.)
+\par \pard \ri-2700 
+\par \pard {\fs28\cf6 >>H.L_Tun_Mem
+\par }@P H.Products H.Tuning
+\par {\b Memory Manage}{\b ment}
+\par 
+\par Dieses System l\'84dt momentan speicherresidente Programme und/oder Einheiten-Treiber in den LoDOS-Speicher.
+\par 
+\par Ein Qualitas Produkt f\'81r das Memory Management ist in der Lage, einige bzw. alle dieser Programme in den HiDOS-Speicher zu laden. Durch die Verlagerung der Programme k\rdblquote nnten Sie m\rdblquote glicherweise bis zu {\b #TSR# KB }
+konventionellen Speicher gewinnen. Dies ist von folgenden Faktoren abh\'84ngig:
+\par 
+\par   * Hardware-Bustyp
+\par   * Bildschirm-Adapter
+\par   * Fragmentierung des HiDOS-Speichers
+\par   * Eigenschaften der speicher-residenten Software.
+\par 
+\par (Der gesch\'84tzte Speichergewinn entspricht der Summe der residenten Programmgr\rdblquote \'e1en und Ger\'84tetreiber, die gr\rdblquote \'e1er als 512 Byte sind.)
+\par 
+\par {\fs28\cf6 >>H.L_Tun_Ver
+\par }@P H.Products H.Tuning
+\par {\b DOS-Version}
+\par 
+\par Dieses System arbeitet mit DOS. Die Version ist {\b #DOSVER#}.
+\par 
+\par Einige DOS-Versionen vor DOS 3.30 k\rdblquote nnen m\rdblquote glicherweise nicht mit den Anwendungsprogrammen neueren Datums kooperieren. Insbesondere unterst\'81tzen die Versionen vor DOS 3.10 keine Netzwerke.
+\par 
+\par DOS 3.30 ist die \'84lteste heute noch {\b empfohlene} DOS-Version. DOS 4.x verf\'81gt \'81ber einige Funktionen, die Sie m\rdblquote glicherweise nicht nutzen k\rdblquote nnen, die aber LoDOS-Speicher beanspruchen. DOS 5.x hat die begrenzte F\'84
+higkeit, Programme in den HiDOS-Speicher zu laden; es verf\'81gt jedoch nicht \'81ber die Funktion der Speicheranalyse und Speicher-Optimierung wie sie mit den Qualitas Produkten realisiert sind.
+\par 
+\par {\fs28\cf6 >>H.L_Tun_FILLow
+\par }@P H.Products H.Tuning
+\par {\b FILES}
+\par 
+\par Die Systemdatei CONFIG.SYS hat die Einstellung {\b FILES=#FILES#}.
+\par 
+\par Diese Einstellung legt die maximale Anzahl Dateien fest, die DOS gleichzeitig {\b ge\rdblquote ffnet halten} kann. Als Voreinstellung gilt der Wert 8. Da DOS davon bereits drei Dateinummern beansprucht und viele Anwendungsprogramme mehr als die \'81
+brigen f\'81nf erfordern, liegt die allgemein \'81bliche Einstellung bei FILES=20. Dies reicht f\'81r die meisten Programme aus. Eine Ausnahme bildet Multitasking- und Netzwerk-Software. Deren Parametereinstellung erfordert in der Regel einen wesentlich h
+\rdblquote heren Wert.
+\par 
+\par Da jede Datei nach den ersten acht einen Platzbedarf von {\b 48 Byte} LoDOS-Speicher hat, sollten Sie nicht mehr Dateien reservieren, als f\'81r Ihre Software notwendig ist.
+\par 
+\par {\fs28\cf6 >>H.L_Tun_FILMed
+\par }@P H.Products H.Tuning
+\par {\b FILES}
+\par 
+\par Die Systemdatei CONFIG.SYS hat die Einstellung {\b FILES=#FILES#}.
+\par 
+\par Diese Einstellung legt die maximale Anzahl Dateien fest, die DOS gleichzeitig {\b offen halten} kann. Als Voreinstellung gilt der Wert 8. Da DOS bereits drei Dateinummern beansprucht und viele Anwendungsprogramme mehr als die \'81brigen f\'81
+nf erfordern, liegt die allgemein \'81bliche Einstellung bei FILES=20. Dies reicht f\'81r die meisten Programme aus. Der \'81bliche Wert f\'81r den Parameter FILES liegt zwischen 20 und 30. Dies reicht f\'81
+r die meisten Programme aus. Eine Ausnahme bildet Multitasking- und Netzwerk-Software, deren Parametereinstellung in der Regel einen h\rdblquote heren Wert erfordert.
+\par 
+\par Da jede Datei nach den ersten acht einen Platzbedarf von {\b 48 Byte} LoDOS-Speicher hat, sollten Sie nicht mehr Dateien reservieren, als f\'81r Ihre Software notwendig ist.
+\par 
+\par {\fs28\cf6 >>H.L_Tun_FILHi
+\par }@P H.Products H.Tuning
+\par {\b FILES}
+\par 
+\par Die Systemdatei CONFIG.SYS hat die Einstellung {\b FILES=#FILES#}.
+\par 
+\par Diese Einstellung legt die maximale Anzahl Dateien fest, die DOS gleichzeitig {\b offen halten} kann. Als Voreinstellung gilt der Wert 8. DOS beansprucht bereits drei Dateinummern und die restlichen f\'81nf sind f\'81
+r viele Anwendungsprogramme unzureichend. Die allgemein \'81bliche Einstellung f\'81r den Parameter FILES liegt zwischen 20 und 30. Dies gen\'81gt f\'81r die meisten Programme, ausgenommen Multitasking- und Netzwerk-Software. Deren Parame
+ter-Einstellung geht \'81ber die normalen Anforderungen hinaus. Dadurch wird m\rdblquote glicherweise mehr Speicher beansprucht, der ansonsten Anwendungsprogrammen zur Verf\'81gung gestellt werden k\rdblquote nnte.
+\par 
+\par Da jede Datei nach den ersten acht einen Platzbedarf von {\b 48 Byte} LoDOS-Speicher hat, sollten Sie nicht mehr Dateien reservieren, als f\'81r Ihre Software notwendig ist.
+\par 
+\par {\fs28\cf6 >>H.L_Tun_BUF
+\par }@P H.Products H.Tuning
+\par {\b BUFFERS}
+\par 
+\par Ihre Systemdatei CONFIG.SYS hat die Einstellung {\b BUFFERS=#B_#} oder nutzt die DOS-Voreinstellung.
+\par 
+\par Mit dieser Einstellung wird die Anzahl {\b Puffer} f\'81r die Platten-
+\par zugriffe festgelegt. DOS legt die Puffer-Bereiche beim Systemstart an. Die Voreinstellung f\'81r diesen Parameter ist zwei.
+\par 
+\par Es gibt keinen optimalen Wert f\'81r die Anzahl Puffer, da jedes Anwendungsprogramm unterschiedlich auf die Platte zugreift. Eine hohe Puffergr\rdblquote \'e1e f\'81hrt normalerweise zu einer h\rdblquote heren Effizienz f\'81r Datenbank-Programme. F\'81
+r Textverarbeitungsprogramme ist dies jedoch nicht von gro\'e1er Bedeutung. Der {\b allgemein \'81bliche} Wert f\'81r diesen Parameter liegt zwischen 10 und 20.
+\par 
+\par Jeder Puffer belegt {\b 528 Byte} LoDOS-Speicher, so da\'e1 bei einer Einstellung von BUFFERS=20 etwa 10 KB belegt werden. Sie k\rdblquote nnten die Anzahl der Puffer auf das Mindestma\'e1 herabsetzten, das Ihre Software f\'81r dieses System voraussetzt.
+
+\par 
+\par Ein {\b Platten-Cache (Disk Cache)} bietet \'84hnliche Vorz\'81ge wie der Parameter BUFFERS. Er reserviert Speicherbereiche f\'81r die tempor\'84re Speicherung von ein- und ausgehenden Plattendaten. Ist Ihr System mit einem Disk Cache Einheiten-Treiber 
+ausgestattet, braucht es nicht so viele Puffer (Werte zwischen 4 und 10 sind normalerweise ausreichend). Ein Platten-Cache nimmt jedoch auch Speicher in Anspruch.
+\par 
+\par {\fs28\cf6 >>H.L_Tun_FCB
+\par }@P H.Products H.Tuning
+\par {\b FCBs (File Control Blocks=Dateisteuerbl\rdblquote cke)}
+\par 
+\par Die Systemdatei CONFIG.SYS hat die Einstellung {\b FCBs=#FX#,#FY#}.
+\par 
+\par Einige \'84ltere Programmversionen setzen eine Einstellung f\'81r diesen Parameter voraus, die meisten Anwendungsprogramme neueren Datums jedoch nicht. Sie sollten den Parameter FCBs {\b nur} setzen, fall
+s Ihr Anwendungsprogramm dies erfordert. Dabei werden die Werte im allgemeinen vom Anwendungsprogramm selbst bestimmt.
+\par 
+\par {\fs28\cf6 >>H.L_Tun_ENV
+\par }@P H.Products H.Tuning
+\par {\b ENVIRONMENT (Umgebungsbereich)}
+\par 
+\par Die DOS-Umgebungsgr\rdblquote \'e1e (Environment) f\'81r dieses System betr\'84gt {\b #ES__#} Byte; davon sind {\b #EU__#} Byte genutzt.
+\par 
+\par \pard Die {\b SHELL=} Anweisung in der CONFIG.SYS Datei legt die Gr\rdblquote \'e1e der DOS-Umgebung (das sog. Environment) fest. Die DOS-Umgebung wird im LoDOS-Speicher eingerichtet. Sie reserviert Platz f\'81r PATH-, PROMPT- und CO
+MSPEC-Einstellungen sowie f\'81r Variablen der Anwendungs-
+\par programme. Da jedes Byte der DOS-Umgebung nicht mehr f\'81r Anwendungs-
+\par Software zur Verf\'81gung steht, sollte der Wert f\'81r die DOS-Umgebung so niedrig wie m\rdblquote glich gehalten werden. Die Vorgabe f\'81r die DOS-Umgebung ist 160 Byte.
+\par 
+\par {\fs28\cf6 >>H.L_Tun_STA
+\par }@P H.Products H.Tuning
+\par {\b STACKS}
+\par 
+\par Dieses System hat in der CONFIG.SYS Datei die Einstellung {\b STACKS=#SX#,#SY#} oder nutzt den DOS-Standard.
+\par 
+\par Bei einer Standardeinstellung von STACKS=9,128 wird 1 KB LoDOS-Speicher genutzt; ausgenommen sind PC- und XT-Computer ohne STACKS. Abgesehen von wenigen Ausnahmef\'84llen f\'81hrt der Befehl {\b STACKS=0,0}
+ in der CONFIG.SYS Datei zur Wiederherstellung dieses Kilobyte, ohne da\'e1 sich dies auf die Systemleistung auswirkt.
+\par 
+\par {\fs28\cf6 >>H.L_Tun_FAS
+\par }@P H.Products H.Tuning
+\par {\b FASTOPEN}
+\par 
+\par Dieses System nutzt das DOS-Programm {\b FASTOPEN} - ein residentes Programm, das normalerweise in der AUTOEXEC.BAT Datei geladen wird. Anwendungsprogramme, die sehr viele Dateien \rdblquote ffnen oder schlie\'e1en, laufen mit FASTOPEN m\rdblquote 
+glicherweise effizienter ab. Netzwerkprogramme k\rdblquote nnen FASTOPEN nicht nutzen.
+\par 
+\par Da FASTOPEN ca. {\b 1,5 KB} sowie pro Datei 40 Byte beansprucht, sollten Sie gegebenenfalls die Zahl der f\'81r FASTOPEN definierten Dateien auf ein Minimum Ihrer Software-Voraussetzungen reduzieren. 
+\par 
+\par {\fs28\cf6 >>H.L_Tun_PRI
+\par }@P H.Products H.Tuning
+\par {\b PRINT}
+\par 
+\par Das System nutzt das DOS-Programm {\b PRINT} - ein residentes Programm, das im Hintergrund die Druckausgabe steuert, w\'84hrend der Computer weitere Aufgaben ausf\'81hren kann.
+\par 
+\par Das Programm PRINT beansprucht mehr als {\b 5 KB} LoDOS-Speicher und liegt resident im Speicher. Dabei ist es gleichg\'81ltig, ob gedruckt wird oder nicht. Daher sollten Sie das Programm, wenn es nicht h\'84ufig genutzt wird, aus dem Speicher entfernen.
+
+\par 
+\par }

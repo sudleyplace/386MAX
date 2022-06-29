@@ -1,0 +1,101 @@
+.comment file Qs_D_Hlp.Asc 16:56 09/23/91
+.comment ascii source for qshell dummy data disp
+.comment line width max 51, compile at 51 wide
+.comment \b = hi cyan, \b\i = hi yellow
+.comment \i = inverse (blue on white)
+.context Q_D_ASQ
+.comment qshell data window display for ASQ>ASQ
+
+
+
+                               ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+        ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿       ³ \b\iMemory:\b\i        ³
+        ³ \i           \i  ³       ³  ÷÷ ÷÷ ÷÷ ÷÷÷÷ ³
+        ³ \i    ASQ    \i  ³ \bÄÄÄÄ¯\b ³  ÷÷÷÷÷ ÷÷ ÷÷÷÷ ³
+        ³ \i           \i o³       ³ \b\iConfiguration:\b\i ³
+        ³ \i           \i o³       ³  ÷÷÷÷ ÷÷÷ ÷÷÷÷ ³
+        ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ       ³  ÷÷÷÷ ÷÷÷÷ ÷÷÷ ³
+   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿  ³ \b\iEquipment:\b\i     ³
+   ³ ÄÄğğÄÄ                 ³  ³  ÷÷÷÷÷÷ ÷÷÷÷÷÷ ³
+   ³  ÄğğÄ              o o ³  ³  ÷÷÷ ÷÷÷÷÷ ÷÷÷ ³
+   ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ  ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+.context Q_D_Exit
+.comment qshell data window display for File>Exit
+
+
+
+                    ÚÄÄÄÄÄÄÄÄÄÄ¿
+                    ³          ³
+                    ³   \b\iEXIT\b\i   º
+                    ³          ³
+                    ³o         ³
+                    ³          ³
+                    ³          ³
+                    ³          º
+                    ³          ³
+                    ÀÄÄÄÄÄÄÄÄÄÄÙ
+.context Q_D_Help   
+.comment qshell data window display for Help>all
+    ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+    ³ \b\iMaximize\b\i      ³
+    ³--ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+    ³  ³ \b\iASQ\b\i           ³                ³
+    ³  ³--ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+    ³  ³  ³ \b\iEditor\b\i        ³                ³
+    ³  ³  ³---------------ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+    ³  ³  ³                                   ³
+    ³  ³  ³            \bÜÜÜÜÜÜÜ\b                ³
+    ³  ³  ³            \bÛ     Û\b                ³
+    ³  ³  ³            \b      Û\b                ³
+    ÀÄÄ³  ³            \b   Ûßßß\b                ³
+       ³  ³            \b   Û   \b                ³
+       ÀÄÄ³            \b   ß   \b                ³
+          ³            \b   ß   \b                ³
+          ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+.context Q_D_Max
+.comment qshell data window disp for Maximize>all
+
+
+
+          \b\iLow DOS                 High DOS\b\i
+     ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿      ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+     ³ DOS            ³      ³ VIDEO          ³
+     ³ \b\iNETWORK SHELL \b\i \bÄÄÄÄÄÄÄ¯\b \b\iNETWORK SHELL \b\i ³
+     ³ \b\iDRIVER xxx.sys\b\i \bÄÄÄÄÄÄÄ¯\b \b\iDRIVER xxx.sys\b\i ³
+     ³ \b\iTSR yyy.com   \b\i \bÄÄÄÄÄÄÄ¯\b \b\iTSR yyy.com   \b\i ³
+     ³ AVAILABLE      ³      ³ AVAILABLE      ³
+     ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ      ³ PAGE FRAME     ³
+                             ³ SYSTEM ROM     ³
+                             ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+.context Q_D_Other
+.comment qshell data display for File>Other file
+
+
+
+           ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+           º           \b\iEditor\b\i           º
+           º                            º
+           º ÷÷÷÷÷÷÷ ÷÷ ÷÷÷÷ ÷ ÷÷ ÷÷ ÷÷ º
+           º ÷ ÷÷÷÷÷÷ ÷÷÷÷÷ ÷÷÷÷÷÷ ÷÷÷÷ º
+           º ÷÷÷÷÷ ÷÷÷÷÷÷÷÷÷÷÷÷ ÷÷÷÷÷÷÷ º
+           º ÷ ÷÷÷÷÷ ÷÷÷÷÷÷ ÷÷÷÷÷ ÷÷÷÷÷ º
+           º ÷÷÷ ÷÷÷÷÷ ÷÷÷÷÷÷ ÷÷÷÷÷ ÷÷÷ º
+           º ÷÷÷\b_\b                       º
+           º                            º
+           ÈÍ\i Edit \iÍ\i Save \iÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+.context Q_D_Update
+.comment qshell data window display for File>Update
+
+
+
+                      ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+                      ³ \i           \i  ³
+                      ³ \i  Insert   \i  ³
+                      ³ \i   Disk    \i o³
+                      ³ \i           \i o³
+                      ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+         \b\iÚÄÄÄ¿\b\i   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+         \b\i³ o ³\b\i\bÄÄ¯\b³ ÄÄğğÄÄ                 ³
+         \b\iÀÄÄÄÙ\b\i   ³  ÄğğÄ              o o ³
+                 ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+.comment end

@@ -1,0 +1,121 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times New Roman;}{\f1\froman Symbol;}{\f2\fswiss Arial;}{\f3\fmodern Courier;}{\f4\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;
+\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;
+\red127\green127\blue0;\red127\green127\blue127;\red192\green192\blue192;}{\stylesheet{\s252\li360 \b\f4\lang1033 \sbasedon0\snext255 heading 3;}{\s255\li720 \f4\lang1033 \sbasedon0\snext255 Normal Indent;}{\f4\lang1033 \snext0 Normal;}{\s2\fi-288\li576 
+\f4\lang1033 \sbasedon0\snext2 Outdent4;}{\s3 \f4\fs28\cf6\lang1033 \sbasedon0\snext3 Context;}{\s4\fi-1584\li1872 \f4\lang1033 \sbasedon0\snext4 Outdent13;}{\s5\li288 \f4\lang1033 \sbasedon0\snext5 Indent2;}}{\info{\title max messge system, medium msgs.}
+{\author Henry Groover}{\operator Henry A. Groover}{\creatim\yr1991\mo9\dy4\hr16\min8}{\revtim\yr1995\mo10\dy25\hr13\min13}{\printim\yr1992\mo6\dy16\hr12\min43}{\version38}{\edmins232}{\nofpages2}{\nofwords66117}{\nofchars69159}{\vern16417}}
+\paperw12240\paperh15840\margl1440\margr3456\margt1440\margb1440\gutter0 \deftab0\widowctrl\ftnbj\revprop0 \sectd \linex0\endnhere \pard\plain \f4\lang1033 {\cf2 Maximize Message Text, Medium Messages
+\par }{\cf2 by Stan Leszynski}{\cf2 
+\par }\pard \fi-288\li270\ri-2700 {\cf2 These notes are not a live context}{\cf2 
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 51}{\cf2 
+\par }{\cf2 Context strings begin with >>}{\cf2 
+\par }{\cf2 Use ## to surround replaceable parameters, tag _ at end of parameter to reserve spaces for attribute if ## block not big enough to properly wrap}{\cf2 
+\par }\pard {\cf2 MSWord file use:}{\cf2 
+\par }{\cf2  Set Printer to Generic/Text only on File:}{\cf2 
+\par }{\cf2  Set View to Page mode to see wrapping}{\cf2 
+\par }{\cf2  Default tabs 0}{\cf2 
+\par }{\cf2  Left margin 1}{\cf2 
+\par }{\cf2  Right margin 2.4"}{\cf2 
+\par }{\cf2  }{\cf2 Top margin 1}{\cf2 
+\par }{\cf2  Bottom margin 1}{\cf2 
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns}{\cf2 
+\par }{\cf2 Text highlighting:}{\cf2 
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= yellow text}{\cf2 
+\par }
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M.Adapter
+\par \pard\plain \f4\lang1033 On this screen, Maximize allows you to toggle an adapter's load action if it is appropriate to {\b relocate} the adapter's RAM or ROM.
+\par 
+\par Select the {\b Help} button for more information on toggling adapters.
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M.ErrAdap
+\par \pard\plain \f4\lang1033 An error occurred while processing a MicroChannel adapter:
+\par #ARG1#
+\par #ARG2#
+\par 
+\par #ARG3#
+\par #ARG4#
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M.FeelLucky
+\par \pard\plain \f4\lang1033 Currently Maximize can load #ARG1___# bytes into high DOS memory. A maximum of #ARG2__# additional bytes may be moved into high DOS.
+\par 
+\par Maximize may load more high by changing the loading order of resident software. This is known as reordering.
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M.FeelLucky2
+\par \pard\plain \f4\lang1033 You may choose whether or not to reorder.
+\par 
+\par If you select YES you will need to identify programs which {\b must} load in a specific order.  If you select NO, Maximize will configure the system based upon the current configuration.
+\par 
+\par {\b Are you able to identify sequence }{\b dependent programs?}
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M.Group
+\par \pard\plain \f4\lang1033 On this screen, Maximize displays the natural load order for high DOS program loading and allows you to {\b group}
+ programs and device drivers together for sequenced loading.  Place programs that require sequential loading in groups.
+\par 
+\par Select the {\b Help} button for more information on grouping.
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M.IntroPS2
+\par \pard\plain \f4\lang1033 Maximize has identified this system as a {\b Micro Channel} machine.
+\par 
+\par To help you configure adapter cards, Maximize will require a working copy of this computer's {\b Reference Disket}{\b te}.
+\par 
+\par Select the {\b Help} button for more Micro Channel information.
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M.MultBatch
+\par \pard\plain \f4\lang1033 
+Maximize was unable to move all your device drivers and memory resident programs into high DOS.  Although Maximize can suggest a load order that may allow more programs to be loaded high, it cannot do so because not all of the programs being loaded are in
+ a single batch file. A maximum of #ARG2__# additional bytes could be moved into high DOS.
+\par 
+\par To do reordering, you must rearrange your AUTOEXEC.BAT and any batch files that it calls so that the programs to be loaded high appear in the same batch file.
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M.PreToggle
+\par \pard\plain \f4\lang1033 On this screen, Maximize identifies device drivers and memory resident programs that are candidates for {\b high DOS} memory loading.  Maximize suggests a load action and allows you to toggle the action.
+\par 
+\par Select the {\b Help} button for more information on toggling program loading.
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M.Quick
+\par \pard\plain \f4\lang1033 Maximize can be run in two modes:
+\par 
+\par   {\b *} Express Maximize uses default parameters to
+\par     Maximize the system.  Select {\b Yes} to run
+\par     Express Maximize.
+\par   {\b *} Custom Maximize asks you to choose loading
+\par     locations and orders for items that Maximize
+\par     will attempt to relocate. Select {\b No} to run
+\par     Custom Maximize.
+\par 
+\par {\b Would you like to use Maximize defaults and the Express Maximize option?}{\b 
+\par }\pard\plain \s3 \f4\fs28\cf6\lang1033 >>M.ReqFile
+\par \pard\plain \f4\lang1033 Required files could not be located. {\b Please enter a drive and path where they can be found, or abort now:}{\b 
+\par }\pard\plain \s3 \f4\fs28\cf6\lang1033 >>M.ROMSrch1
+\par \pard\plain \f4\lang1033 ROM Search Technology allows #PRODNAME# to 
+\par recover areas within the system ROM as additional high DOS memory.
+\par 
+\par Some systems (especially laptop computers) use special key combinations to activate programs that reside in system ROM.  Select the {\b Help} button for more information on such systems before proceeding.
+\par 
+\par Please place a floppy disk in any disk drive so ROM Search can detect floppy drive services.
+\par 
+\par {\b Perform ROM Search now?}{\b 
+\par }\pard\plain \s3 \f4\fs28\cf6\lang1033 >>M.ROMSrch2
+\par \pard\plain \f4\lang1033 ROM Search has completed processing.  Please remove the floppy disk from the disk drive.
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M.Single
+\par \pard\plain \f4\lang1033 {\b You have created a single-item group.}
+\par 
+\par Single-item groups are not meaningful to Maximize.  Please correct the group by adding other items to it or by ungrouping the single item.
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M.VGASwap
+\par \pard\plain \f4\lang1033 Maximize has determined that your system will support VGAswap.  This feature can increase contiguous high DOS memory by relocating the VGA BIOS.  Select the {\b Help} button for more information on VGAswap.
+\par 
+\par {\b Would you like to enable VGAswap?}{\b 
+\par }\pard\plain \s3 \f4\fs28\cf6\lang1033 >>M.BootSwap_A
+\par \pard\plain \f4\lang1033 You have requested drive swapping environment support.  Maximize needs to ask a few questions.  If a drive designation is not applicable, leave it blank by pressing the space bar.
+\par 
+\par {\b Disk compression/swapping detected:} #ARG3____#
+\par {\b Boot drive:} #ARG1#
+\par {\b Actual boot drive:}{\b 
+\par }{\b Drive to copy CONFIG.SYS and AUTOEXEC to:}{\b 
+\par }{\b 
+\par }{\b #PRODNAME# directory:}{\b 
+\par }#ARG2#
+\par {\b Drive to use for #PRODNAME# in CONFIG.SYS:}{\b 
+\par }{\b Drive to copy essential #PRODNAME# files to:}{\b 
+\par }{\b Alternate drive for essential #PRODNAME# files:}{\b 
+\par }\pard\plain \s3 \f4\fs28\cf6\lang1033 >>M.BootSwap
+\par \pard\plain \f4\lang1033 #PRODNAME# is currently installed in
+\par #ARG2#
+\par 
+\par Is #ARG4_# compressed?
+\par 
+\par This drive may also be a swapped drive.  What is the drive designation of #ARG4_# at boot time (If this drive did not exist at boot time, leave this space blank)?
+\par 
+\par {\f3 Your boot drive is #ARG1#:.  The previous drive designation for drive #ARG1#: is#ARG3#}{\f3 
+\par }}

@@ -1,0 +1,72 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times;}{\f1\froman Symbol;}{\f2\fswiss Helvetica;}{\f3\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;
+\red192\green192\blue192;}{\stylesheet{\f3\lang1033 \snext0 Normal;}{\s1\fi-288\li576 \f3\lang1033 \sbasedon0\snext1 Outdent4;}{\s2 \f3\fs28\cf6\lang1033 \sbasedon0\snext2 Context;}{\s3\fi-1584\li1872 \f3\lang1033 \sbasedon0\snext3 Outdent13;}{\s4\li288 
+\f3\lang1033 \sbasedon0\snext4 Indent2;}{\s5 \f3\fs16\cf2\lang1033 \sbasedon0\snext5 Comment;}}{\info{\title install messge system, large msgs.}{\author Klaus Albrecht}{\operator Klaus Albrecht}{\creatim\yr1994\mo2\dy13\hr21\min24}
+{\revtim\yr1996\mo2\dy15\hr21\min4}{\version1}{\edmins0}{\nofpages0}{\nofwords0}{\nofchars0}{\vern16417}}\paperw12240\paperh15840\margl1440\margr1008\margt1417\margb1134\gutter0 \deftab0\widowctrl\ftnbj\hyphhotz0 \sectd 
+\linex0\headery709\footery709\colsx709\endnhere \pard\plain \s5 \f3\fs16\cf2\lang1033 QMTSetup Message Text, Large Messages
+\par These notes are not a live context
+\par Line width 68
+\par Context strings begin with >>
+\par Use ## to surround replaceable parameters, tag _ at end of parameter to reserve spaces for attribute if ## block not big enough to properly wrap
+\par MSWord file use:
+\par  Set Printer to Generic/Text only on File:
+\par  Set View to Page mode to see wrapping
+\par  Default tabs 0
+\par  Left margin 0
+\par  Right margin 1.7"
+\par  Top margin 0
+\par  Bottom margin 0
+\par For indented lines or to get desired wrapping, use hard returns
+\par Text highlighting:
+\par  use BOLD for accenting= yellow text
+\par \pard\plain \f3\lang1033 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>L.ConfigSysN
+\par \pard\plain \f3\lang1033 Die #FLENME___# Installation erfordert bestimmte \'8enderungen in den Start-Dateien Ihres Computers. Eine Sicherungskopie dieser Dateien wird im #FLENME___# Verzeichnis abgelegt. Wenn Sie diese \'8enderungen nicht w\'81nschen, m
+\'81ssen Sie die Installation nun abbrechen.
+\par 
+\par Zus\'84tzlich enth\'84lt #FLENME__# aktuelle On-line Informationen zu ausgew\'84hlten Themen.
+\par 
+\par 
+\par    Dr\'81cken Sie Alt+L zum {\b L}esen der Neuerungen und Online-Hinweise.
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>L.Copyright
+\par \pard\plain \f3\lang1033 {\b Bitte beachten Sie, da\'e1 diese Software jeweils nur auf einem System installiert und gestartet werden darf. }
+\par 
+\par Fertigen Sie keine Kopien von irgendeiner Qualitas Dokumentation oder den Programmdisketten an; ausgenommen ist nat\'81rlich eine Sicherungskopie der Software. F\'81r den Einsatz dieses Programmes auf mehr als einer Maschine zu einer Zeit ben\rdblquote 
+tigen Sie eine Lizenz f\'81r jede Maschine.
+\par 
+\par Es gelten weitere Einschr\'84nkungen f\'81r den Gebrauch dieser Software, die Sie bitte den Lizenzvereinbarungen am Anfang des {\b Handbuches }entnehmen.
+\par 
+\par   (C) Copyright 1987-96 Qualitas, Inc.  Alle Rechte vorbehalten.
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>L.NoFreeDisk
+\par \pard\plain \f3\lang1033 Auf dem Laufwerk #ARG3# ist nicht gen\'81gend Speicherplatz vorhanden, um die #FLENME# Programme zu installieren.
+\par 
+\par   {\b #ARG1# Byte} werden (ungef\'84hr) ben\rdblquote tigt,
+\par   {\b #ARG2# Byte} sind verf\'81gbar.
+\par 
+\par {\b Sie m\'81ssen den angegebenen Speicherplatz bereitstellen und #PROGNAME# erneut starten.
+\par }
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>L.NoFreeDisk2
+\par \pard\plain \f3\lang1033 Auf dem Laufwerk #ARG3# ist nicht gen\'81gend Speicherplatz vorhanden, um die #FLENME# Programme zu installieren.
+\par 
+\par   {\b #ARG1# Byte} werden (ungef\'84hr) ben\rdblquote tigt,
+\par   {\b #ARG2# Byte} sind verf\'81gbar.
+\par 
+\par {\b Sie k\rdblquote nnen ein anderes Zielverzeichni}{\b s angeben oder #PROGNAME# zun\'84chst verlassen, zus\'84tzlichen Plattenspeicher verf\'81gbar machen und danach #PROGNAME# erneut aufrufen.}
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>L.Userinfo
+\par \pard\plain \f3\lang1033 {\b Bitte geben Sie die Daten zur Produkt-Registrierung an.}
+\par 
+\par #PROGNAME# schreibt diese Informationen auf die Vertriebs-Diskette. Geben Sie den Namen der Person oder der Firma an, die bei Qualitas registriert werden soll.
+\par 
+\par {\b          Name
+\par }
+\par Geben Sie die 11-stellige Seriennummer an (zu finden auf der Innenseite des Handbuches)
+\par 
+\par {\b               Seriennummer
+\par }\pard\plain \s2 \f3\fs28\cf6\lang1033 >>L.Confirm
+\par \pard\plain \f3\lang1033 Sind diese Informationen korrekt?
+\par 
+\par {\b Name:}          #ARG1#
+\par 
+\par {\b Seriennummer: } #ARG2#
+\par 
+\par }

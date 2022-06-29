@@ -1,0 +1,9 @@
+Move .OUT Files To Separate Directory
+
+To reduce clutter in the source directory, all of the files with an
+extension of OUT are moved to their own separate directory,
+unimaginatively called OUT.
+
+MAXHELP.MAK	Move .OUT files to OUT\.
+
+

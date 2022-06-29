@@ -1,0 +1,643 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times New Roman;}{\f1\froman Symbol;}{\f2\fswiss Arial;}{\f3\froman CG Times (W1);}{\f4\fswiss Univers (W1);}{\f5\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;
+\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;
+\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;\red192\green192\blue192;}{\stylesheet{\f5\lang1033 \snext0 Normal;}{\s2\fi-288\li576 \f5\lang1033 \sbasedon0\snext2 Outdent4;}{\s3 \f5\fs28\cf6\lang1033 \sbasedon0\snext3 Context;}{
+\s4\fi-1584\li1872 \f5\lang1033 \sbasedon0\snext4 Outdent13;}{\s5\li288 \f5\lang1033 \sbasedon0\snext5 Indent2;}}{\info{\title qshell help system, help topics}{\author Stan Leszynski}{\operator Victoria L. Borton}{\creatim\yr1991\mo5\dy11\hr13\min14}
+{\revtim\yr1993\mo5\dy18\hr13\min42}{\printim\yr1993\mo5\dy11\hr18\min22}{\version83}{\edmins1932}{\nofpages16}{\nofwords70455}{\nofchars32770}{\vern16417}}\paperw12240\paperh15840\margl1440\margr1008\margt1440\margb1440\gutter0 \deftab0\widowctrl\ftnbj 
+\sectd \linex0\endnhere \pard\plain \f5\lang1033 {\cf2 QShell (MAX Shell) General Help
+\par }{\cf2 by Stan Leszynski}{\cf2 
+\par }{\cf2 These notes are not a live context}{\cf2 
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 68}{\cf2 
+\par }{\cf2 Context strings begin with >>}{\cf2 
+\par }{\cf2 Center the title of each block}{\cf2 
+\par }{\cf2 First line is @ plus P (print) or N (noprint) plus stop markers for Prev/Next}{\cf2 
+\par }\pard {\cf2 MSWord file use:}{\cf2 
+\par }{\cf2  Set Printer to Generic/Text only on File:}{\cf2 
+\par }{\cf2  Set View to Page mode to see wrapping}{\cf2 
+\par }{\cf2  Default tabs 0}{\cf2 
+\par }{\cf2  Left margin 0}{\cf2 
+\par }{\cf2  Right margin 1.7"}{\cf2 
+\par }{\cf2  Top margin 0}{\cf2 
+\par }{\cf2  Bottom margin 0}{\cf2 
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns}{\cf2 
+\par }{\cf2 Text highlighting:}{\cf2 
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text}{\cf2 
+\par }{\cf2  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text}{\cf2 
+\par }{\cf2  use }{\ul\cf2 UNDERLINE}{\cf2  for context jump= red text}{\cf2 
+\par }{\cf2  use }{\b\i\cf2 BOLD ITALICS}{\cf2  for bullets= yellow text}{\cf2 
+\par }\pard \fi-288\li288\ri-2700 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.Contents
+\par \pard\plain \f5\lang1033 @P H.Contents H.Info_Time
+\par                           {\i MAX Help Topics}{\i 
+\par }
+\par Help system topics displayed in red are context jumps that allow you to move directly to another help topic.  Scroll up and down through the text to find a desired topic, then use the {\b Right} or{\b  Left }
+arrow key to highlight a context jump topic and press {\b Enter}.
+\par 
+\par      - These topics help you understand and use the {\b MAX shell} -
+\par                        {\ul Using the Menu System}{\v H.Default}
+\par                        {\ul Using the Help System}{\v H.U_Help}
+\par                          {\ul Using a Dialog Box}{\v H.U_Dial}
+\par                        {\ul Using the Print System}{\v H.U_Print}
+\par                           {\ul Using the Editor}{\v H.U_Editor}
+\par            - These topics explain how to use the {\b editor} -
+\par                            {\ul Editor Basics}{\v H.E_Basics}
+\par                       {\ul Editor Block Operations}{\v H.E_Block}
+\par                       {\ul Using the Option Editor}{\v H.E_Option}
+\par                       {\ul Editor Special Features}{\v H.E_Spec}
+\par        - This topic explains how to load a {\b product update} -
+\par                         {\ul Updating the Product}{\v H.U_Update}
+\par               - These topics help you understand {\b ASQ} -
+\par                             {\ul What is ASQ?}{\v H.ASQ}
+\par                        {\ul Memory Summary Display}{\v H.Mem_Sum}
+\par                    {\ul Configuration Summary Display}{\v H.Cfg_Sum}
+\par                      {\ul Equipment Summary Display}{\v H.Hdw_Sum}
+\par            - These topics help you understand {\b Maximize} -
+\par                            {\ul Express}{\ul  Maximize}{\v H.Max_Quick}
+\par                            {\ul Custom}{\ul  Maximize}{\v H.Max_Full}
+\par        - These topics help you understand the {\b INFO Displays} -
+\par                      {\ul Overview of Memory Display}{\v H.Info_Mem}
+\par                         {\ul EMS Memory Display}{\v H.Info_EMS}
+\par                      {\ul Resident Programs Display}{\v H.Info_Res}
+\par                       {\ul Device Drivers Display}{\v H.Info_Dev}
+\par                         {\ul Load Sizes Display}{\v H.Info_Load}
+\par                         {\ul Memory Scan Display}{\v H.Info_ROM}
+\par                         {\ul Time Memory Display}{\v H.Info_Time}
+\par               - This topic provides an {\b index} to HELP -
+\par                           {\ul MAX Help Index}{\v H.Index}
+\par 
+\par You can browse sequentially through all topics on the list above by using the {\b Next} button now.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.Default
+\par \pard\plain \f5\lang1033 @P H.Default H.U_Editor
+\par                         {\i Using the Menu System}
+\par 
+\par The menu system consists of a bar menu at the top of the screen with menu titles that refer to associated pulldown menus.
+\par 
+\par These keys maneuver on the bar menu:
+\par 
+\par   * {\b Alt-Highlighted Letter} - Display the pulldown menu associated
+\par     with the menu option containing the highlighted letter.
+\par   * {\b Right, Left} - Move to a new bar menu option and display the
+\par     associated pulldown menu.{\b 
+\par }  * {\b Tab, Shift-Tab} - Move to a new bar menu option and display the
+\par     associated pulldown menu.{\b 
+\par }  * {\b Esc} - Jump to the Exit option.
+\par \pard \fi-288\li288 
+\par These keys maneuver on the pulldown menus:
+\par \pard 
+\par   * {\b Enter} - Execute the highlighted option.
+\par   * {\b Highlighted Letter} - Execute the menu option containing the
+\par     highlighted letter.
+\par   * {\b Up, Down} - Move the highlight to a new pulldown menu selection.
+\par   * {\b Esc} - Jump to the Exit option.
+\par 
+\par The {\b data display window} behind the pulldown menus shows some of the data associated with the current menu option.  If you are moving very quickly through the menu options, the data display window may not be refreshed until cursor movement stops.
+
+\par 
+\par To work with menus using a {\b mouse}
+, drag the highlight across the bar menu and up or down through the pulldown menus.  Then click the left button once on a highlighted option to select the option, or double-click the left button on a non-highlighted option.
+\par \pard \ri-2700 
+\par \pard {\b Buttons} are used in MAX to denote important keystrokes available during a function and to allow mouse users to execute the keystrokes.  A button is a small shadowed bo
+x at the bottom of the screen, data display window, or dialog box.  The key to press to select the button's function is highlighted in the button text, or mouse users can click on the button.  Buttons that appear inside a dialog box can also be selected u
+sing the Tab and Enter keys (see {\ul Using a Dialog Box}{\v H.U_Dial} for more information).
+\par 
+\par These buttons are available throughout the menu system:
+\par 
+\par   * {\b Esc} - Return to the menu system (from a data display) or jump to
+\par     the Exit option (from a menu).
+\par   * {\b Help F1} - Display associated help information.
+\par   * {\b Print F2} - Display the {\ul Print Dialog Box}{\v H.U_Print}, where available.
+\par 
+\par \pard \fi-1\li1 Not all function key buttons are available for each menu option.  Buttons that are active have a {\b highlighted} key designation on them; inactive buttons have low intensity text.
+\par \pard 
+\par When {\b Enter} is pressed on a data display menu option, the menu disappears and the display window becomes active.  In some cases the window may be widened to show more data.  If the data is deeper or wider than th
+e display window, scroll bars will be shown at the window borders.
+\par 
+\par Use these keys to move in the displayed data:
+\par 
+\par   * {\b Ctrl-End} - Display the last screen of data.
+\par   * {\b Ctrl-Home} - Display the first screen of data.
+\par   * {\b Home} - Scroll the data to display the first column.
+\par   * {\b End} - Scroll the data to display the last column.
+\par   * {\b PgUp, PgDn} - Move up and down through the data one screen at a
+\par     time.
+\par   * {\b Up, Down, Right, Left} - Scroll the data by rows and columns
+\par     within the window.
+\par 
+\par When using a {\b mouse}
+ in the data display windows, clicking inside the scroll bars on one side of the scroll position marker simulates PgUp and PgDn.  Clicking on arrows simulate Up, Down, Right, or Left.  Single-clicking on triangles simulate PgUp or PgDn, and double-clickin
+g on triangles simulate Ctrl-Home or Ctrl-End.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.U_Help
+\par \pard\plain \f5\lang1033 @P H.Default H.U_Editor
+\par                         {\i Using the Help System}{\i 
+\par }
+\par The Help system consists of information arranged in topics for MAX menus and features.
+\par 
+\par During a MAX activity, if the {\b Help button}
+ at the bottom of the screen is active, pressing the help function key or clicking the mouse on the button will display the help associated with the activity.  Help information that is larger than the display window can be scrolled using PgDn, PgUp, Ctrl-
+Home, Ctrl-End, the arrow keys, or the scroll bars in conjunction with the mouse.
+\par 
+\par When the Help system is displayed, these options are available:
+\par 
+\par   * {\b Topics} - Displays the topics list for the Help system.  Topics
+\par     are listed in the order that they are traversed when browsing
+\par     the Help system with the Next button.
+\par   * {\b Index} - Displays the subject index for the Help system.  Topics
+\par     are listed in alphabetical order by their primary subject(s). 
+\par   * {\b Next} - Move to the next help topic in the current browse list
+\par     (see below).
+\par   * {\b Back} - Move sequentially backwards through previously viewed
+\par     topics.  Each time Back is chosen, a previously viewed screen is
+\par     shown, until the original topic chosen with the Help button is
+\par     reached or the limit of 20 backtracks is attained.
+\par 
+\par When a help topic is chosen with the Help button and displayed, a {\b browse list}
+ for the topic becomes active.  The browse list links the topic to other related topics.  To walk the browse list and view related topics, select Next.  Once the Help system is activated, the browse list is reset only when Topics or Index are chosen, or w
+hen a new topic is chosen through a context jump (see below).  Browsing to a related topic does not reset the browse list.  The browse list for the Topics list includes every help topic in the system.
+\par 
+\par Help system text displayed in red is a {\b context jump}
+ that allows you to jump directly to a related help topic.  To select a context jump topic, use the Right or Left arrow key to move to (highlight) the topic then press Enter.  With a mouse, click on the topic to highlight it, or double-click on a highligh
+ted or non-highlighted topic to jump.  To reverse a context jump, choose the Back button to return to the topic that you jumped from.
+\par 
+\par Help information can be printed using the {\ul Print System}{\v H.U_Print}.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.U_Dial
+\par \pard\plain \f5\lang1033 @P H.Default H.U_Editor
+\par                          {\i Using a Dialog Box}{\i 
+\par }
+\par Dialog boxes appear on top of the current screen information and contain some or all of the following elements.
+\par 
+\par {\b Message Text}{\b 
+\par }
+\par Dialog box messages provide current {\b status} information or {\b prompts} for an action required by the user.
+\par 
+\par {\b Subwindows}
+\par 
+\par If the dialog box contains more than one work area or display area, each area will be in a subwindow with a separate title.  The title is highlighted in bold white if the subwindow is active.  To activate a subwindow:
+\par 
+\par   * Use the {\b Tab} and {\b Shift-Tab} keys to move between subwindows; or
+\par   * Use the {\b Alt} key with the highlighted letter in the subwindow
+\par     title; or
+\par   * {\b Click} anywhere in the subwindow with the mouse.
+\par 
+\par {\b Field Editor}
+\par 
+\par A field editor provides an area for {\b text entry}.  Use the Left and Right arrow keys, Backspace, and alphanumeric keys to complete the required entry.  If text values longer than the field editor are allowed, the text will scroll.
+\par 
+\par {\b Checkboxes}
+\par 
+\par A checkbox is an option that is either {\b on or off} as indicated by a check mark enclosed in brackets [].  Within one subwindow, multiple checkboxes can be selected.  To toggle checkboxes on and off, move to the checkbox and press the {\b Spacebar}
+ to toggle, or click in the checkbox with the mouse.
+\par 
+\par To move to a checkbox, tab to the subwindow then use the {\b Up} and {\b Down} arrow keys, or use the {\b Alt} key in conjunction with the highlighted letter in the checkbox description.  Moving to a checkbox with the arrow keys does {\b not}
+ toggle the checkbox; moving with the Alt key or the mouse toggles the checkbox.
+\par \pard \fi-1\li1 
+\par {\b Radio Buttons}
+\par 
+\par \pard A radio button, enclosed in parentheses (), is either {\b on or off} as indicated by a dot.  Only one radio button in a subwindow can be selected at one time.  Move to the radio button and press the {\b Spacebar}
+ to toggle, or click in the radio button with the mouse.
+\par 
+\par To move to a radio button, tab to the subwindow, then use the {\b Up} and {\b Down} arrow keys, or use the {\b Alt} key in conjunction with the highlighted letter in the button description.  Moving to a radio button with the arrow keys does {\b not}
+ toggle the option; moving with the Alt key or the mouse toggles the option.
+\par 
+\par {\b Buttons}
+\par 
+\par Action buttons at the bottom of the dialog box display important available keystrokes.  The key to press to select the button's function is highlighted in the button; press the key alone or in conjunction with the Alt key.  Mouse users can click on the bu
+tton itself.
+\par 
+\par Most dialog boxes contain an {\b OK} button which executes the dialog box feature, and a {\b Cancel}
+ button which cancels the dialog box with no action.  To select the OK button, press O, Alt-O, or the Enter key.  To select the Cancel button, press C, Alt-C, or the Esc key.
+\par 
+\par When a dialog box is opened, one button is shown as the {\b default} button by enclosing the button name in brackets; this button is chosen when Enter is pressed.  In addition to moving the subwindow highlight, the {\b Tab} and {\b Shift-Tab}
+ keys also allow you to highlight a button other than the default button and then press Enter to select it.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.U_Print
+\par \pard\plain \f5\lang1033 @P H.Default H.U_Editor
+\par                        {\i Using the Print System}{\i 
+\par }
+\par The MAX Print system allows for printing of data displays and help text.
+\par 
+\par The first subwindow on the print dialog box describes which {\b options} are currently available for printing.  Each option has a checkbox, so multiple options can be selected for printing.
+\par 
+\par The second subwindow on the print dialog box lists the output {\b destinations}.  Each destination has a radio button, so only one destination can be selected.
+\par 
+\par When printing to a {\b file}, MAX suggests an output filename or you can enter a valid file specification in the field editor.
+\par 
+\par Use the {\b Tab} key to move between the subwindows and the field editor.  The filename field editor cannot be accessed if the output destination is the printer.
+\par 
+\par When printing {\b All help topics}, the Help Topics list provides the list of topics that will be printed and their print order.
+\par 
+\par Other information relevant to using the print dialog box can be found in {\ul Using a Dialog Box}{\v H.U_Dial}.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.U_Editor
+\par \pard\plain \f5\lang1033 @P H.U_Editor H.E_Spec
+\par                           {\i Using the Editor}
+\par 
+\par The MAX editor allows for editing of CONFIG.SYS, AUTOEXEC.BAT, and other ASCII {\b text files}
+.  Text can be entered, altered, moved, deleted, and saved.  Features useful when configuring Qualitas memory management products are also included in the Option Editor.
+\par 
+\par There are several topics for this subject.  Select a topic or use the {\b Next} button to view each Using the Editor topic in sequence:
+\par 
+\par  {\ul Editor Basics}{\v H.E_Basics}           - Navigation in the editor
+\par  {\ul Editor Block Operations}{\v H.E_Block} - Marking and moving text blocks
+\par  {\ul Using the Option Editor}{\v H.E_Option} - Special PROfile editing options
+\par  {\ul Editor Special Features}{\v H.E_Spec} - Special technical support features
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.E_Basics
+\par \pard\plain \f5\lang1033 @P H.U_Editor H.E_Spec
+\par                             {\i Editor Basics}
+\par 
+\par \pard \fi-1\li1 {\b Buttons}
+\par 
+\par These buttons are available in the editor:
+\par \pard 
+\par \pard \li1    * {\b Save F7} - Saves the current file to disk.  This button is not
+\par \pard     active if no changes have been made since the file was loaded or
+\par     last saved.
+\par   * {\b Option F8} - The Option Editor is a dialog box that helps you
+\par     build option statements for Qualitas product PROfile files.  See
+\par     the topic {\ul Using the Option Editor}{\v H.E_Option}.
+\par 
+\par {\b Editor Screen}
+\par 
+\par The editor displays the current {\b filename} in the center of the edit window.  At the upper right of the edit window, a row/column counter is displayed.  The first number is the current line position of the cursor, the seco
+nd number is the total number of lines in the file, and the third number is the current column position.
+\par 
+\par The editor is {\b 256}
+ characters wide (loading files with lines wider than 256 characters may result in some data loss).  The maximum number of lines in a file is limited by memory and varies by system.  On most systems, the limit is at least several thousand lines.
+\par 
+\par When a file is loaded, the cursor begins in {\b insert} mode.  To switch to overtype mode, press the Ins key; the cursor changes from an underline to a block character.  To change back, press the Ins key again.
+\par 
+\par {\b Using the Keyboard}
+\par 
+\par Use the following keys to move within the text (keys denoted with
+\par {\b [E]} are available only in Edit mode):
+\par 
+\par   * {\b Backspace} - Delete the character to the left of the cursor or
+\par     delete the highlighted block [E].
+\par   * {\b Ctrl-Down }- Scroll the text up one line with the cursor fixed.
+\par   * {\b Ctrl-End} - Jump to the bottom of the file.
+\par   * {\b Ctrl-Home} - Jump to the top of the file.
+\par   * {\b Ctrl-Left }- Jump to the beginning of the previous word.
+\par   * {\b Ctrl-PgDn} - Jump right one screen (74 columns).
+\par   * {\b Ctrl-PgUp} - Jump left one screen (74 columns).
+\par   * {\b Ctrl-Right }- Jump to the beginning of the next word.
+\par   * {\b Ctrl-Up }- Scroll the text down one line with the cursor fixed.
+\par   * {\b Del} - Delete the character at the cursor or delete the high-
+\par     lighted block [E].
+\par   * {\b Down }- Move the cursor down one line.
+\par   * {\b End} - Jump to the end of the line.
+\par   * {\b Enter} - Move to column 1 of the next line in overtype mode;
+\par     break text at the cursor and move it to a new line in insert
+\par     mode [E].
+\par \pard \fi-1\li1   * {\b Esc} - Exit the editor; if changes have been made you are asked
+\par     to save or discard them.
+\par \pard   * {\b Home} - Jump to the beginning of the line.
+\par   * {\b Ins} - Toggle insert/overtype mode (the default is insert) [E].
+\par   * {\b Left }- Move the cursor one character left.
+\par   * {\b PgDn} - Jump down one screen.
+\par   * {\b PgUp} - Jump up one screen.
+\par   * {\b Right }- Move the cursor one character right.
+\par   * {\b Up }- Move the cursor up one line.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.E_Block
+\par \pard\plain \f5\lang1033 @P H.U_Editor H.E_Spec
+\par                        {\i Editor Block Operations}
+\par 
+\par In addition to inserting and overtyping individual characters, the editor can delete, move, and copy {\b marked blocks}
+ of text containing several words, lines, or screens of text.  A block is highlighted using the Shift key in conjunction with other keys:
+\par 
+\par   * {\b Shift-Ctrl-End} - Expand block highlight to the end of the file.
+\par   * {\b Shift-Ctrl-Home} - Expand block highlight to the beginning of the
+\par     file.
+\par   * {\b Shift-Ctrl-Left }- Expand block highlight to the beginning of the
+\par     previous word.
+\par   * {\b Shift-Ctrl-Right }- Expand block highlight to the beginning of
+\par     the next word.
+\par   * {\b Shift-Down }- Expand block highlight down one line.
+\par   * {\b Shift-End} - Expand block highlight to the end of the line.
+\par   * {\b Shift-Home} - Expand block highlight to the beginning of the
+\par     line.
+\par   * {\b Shift-Left }- Expand block highlight one character left.
+\par   * {\b Shift-PgDn} - Expand block highlight downward by one screen (18
+\par     lines).
+\par   * {\b Shift-PgUp} - Expand block highlight upward by one screen (18
+\par     lines).
+\par   * {\b Shift-Right }- Expand block highlight one character right.
+\par   * {\b Shift-Up }- Expand block highlight up one line.
+\par 
+\par Use these keys to work with highlighted, copied, or deleted blocks:
+\par 
+\par   * {\b Alt-Backspace} - If possible, restore the last block deleted with
+\par     Backspace or Del to its previous location.
+\par   * {\b Backspace} - Permanently delete the highlighted block.
+\par   * {\b Ctrl-Ins} - Copy the highlighted block to an invisible clipboard,
+\par     from which it can be pasted into one or more locations in the
+\par     file.
+\par   * {\b Del} - Permanently delete the highlighted block.
+\par   * {\b Shift-Del} - Delete the highlighted block and move it to an
+\par     invisible clipboard, from which it can be pasted into one or
+\par     more locations in the file.
+\par   * {\b Shift-Ins} - Paste the last block copied or moved from the file
+\par     to the clipboard into the file at the cursor position.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.E_Option
+\par \pard\plain \f5\lang1033 @P H.U_Editor H.E_Spec
+\par                        {\i Using the Option Editor}
+\par 
+\par The Option Editor is a dialog box that helps you interactively build option statements for Qualitas product {\b PROfile}
+ files.  The Option Editor provides a list of PROfile options, a description of the use of each option, and a field editor to modify the option text to your system's needs.
+\par 
+\par With the Option Editor dialog box showing, place the menu highlight on an option on the Options list, then move to the field editor (with the Tab key, Alt key, or mouse click) and replace any placeholders ({\b xxx} or {\b nnn}) in 
+the command syntax with the information for your configuration.  Pressing Enter at the field editor closes the dialog box and places the created option line in the file at the cursor location.
+\par 
+\par For more information on PROfile options available in the Option Editor, see the {\b User Guide}.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.E_Spec
+\par \pard\plain \f5\lang1033 @P H.U_Editor H.E_Spec
+\par                        {\i Editor Special Features}
+\par 
+\par The editor has several {\b special function keys}
+ that are not assigned to visible buttons.  These features are intended for use when troubleshooting a problematic configuration with the assistance of Qualitas technical support and are not useful in normal text file editing.  These options are described
+ very briefly below:
+\par 
+\par   * {\b Shift-F3} - Add REM to the beginning of a batch file line.
+\par   * {\b Shift-F4} - Remove REM from the beginning of a batch file line.
+\par   * {\b Shift-F5} - Add 386LOAD and GETSIZE statements to a CONFIG.SYS
+\par     file DEVICE= line.
+\par   * {\b Shift-F}{\b 6} - Remove 386LOAD and GETSIZE statements from a
+\par     CONFIG.SYS file DEVICE= line.
+\par   * {\b Shift-F7} - Add 386LOAD and GETSIZE statements to a batch file
+\par     line.
+\par   * {\b Shift-F8} - Remove 386LOAD and GETSIZE statements from a batch
+\par     file line.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.U_Update
+\par \pard\plain \f5\lang1033 @P H.U_Update H.U_Update
+\par                         {\i Updating the Product}
+\par 
+\par Use this option to update a Qualitas MAX or BlueMAX installation from a product update disk provided by Qualitas to registered users.  This option will request you to insert the update disk in a floppy disk drive.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.ASQ
+\par \pard\plain \f5\lang1033 @P H.ASQ H.ASQ
+\par                             {\i What is ASQ?}
+\par 
+\par ASQ is a system analysis and memory management tool.  ASQ provides:
+\par 
+\par   * analysis of your computer system
+\par   * information displays about its configuration
+\par   * training lessons on memory management, system configuration, and
+\par     hardware concepts
+\par 
+\par ASQ shows how your computer's memory resources are currently being used, and introduces the concepts of {\b memory management}
+.  Memory management is necessary in today's powerful personal computers to work around the limitations imposed by DOS and to provide complex application programs with the memory they need.
+\par 
+\par How you set up and configure your computer's memory with Qualitas products has a {\b dramatic}
+ impact on its effectiveness.  ASQ will help you understand your system better and provides learning tools to explain memory management concepts in detail.  ASQ is included with Qualitas products at no charge.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.Mem_Sum
+\par \pard\plain \f5\lang1033 @P H.Mem_Sum H.Hdw_Sum
+\par                        {\i Memory Summary Display}{\i 
+\par }
+\par A {\b memory usage} summary is shown, organized sequentially by loaded order.
+\par 
+\par The name of the memory {\b user} is shown at the left, then the size used in kilobytes.  Some users may be individual programs, while other users may be system drivers, video memory, or EMS page frame.
+\par 
+\par The data displayed here is taken from {\b ASQ}.  For additional help and a tutorial on the Memory Summary Display, see ASQ.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.Cfg_Sum
+\par \pard\plain \f5\lang1033 @P H.Mem_Sum H.Hdw_Sum
+\par                     {\i Configuration Summary Display}{\i 
+\par }
+\par The configuration summary shows DOS {\b environment settings} from the environment itself (where possible) or from CONFIG.SYS.
+\par 
+\par The data displayed includes information on the DOS version, settings in the environment, and environment sizing.  DOS environment settings set with AUTOEXEC.BAT or from the DOS prompt are also shown.  These are the same commands that would be displayed wi
+th the DOS SET command.
+\par 
+\par The configuration presentation is completed with the display of the number of open File Control Blocks, and a list of the currently open files managed by DOS.
+\par 
+\par For more information on the items in this display, see the computer's DOS operating system manual.
+\par 
+\par The data displayed here is taken from {\b ASQ}.  For additional help and a tutorial on the Configuration Summary, see ASQ.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.Hdw_Sum
+\par \pard\plain \f5\lang1033 @P H.Mem_Sum H.Hdw_Sum
+\par                       {\i Equipment Summary Display}{\i 
+\par }
+\par {\b Hardware device} summary information is shown, including information on the computer type, memory, driver, processor, ports, keyboard, and BIOS.
+\par 
+\par The data displayed here is taken from {\b ASQ}.  For additional help and a tutorial on the Hardware Summary Display, see ASQ.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.Max_Quick
+\par \pard\plain \f5\lang1033 @P H.Max_Quick H.Max_Full
+\par                            {\i Express}{\i  Maximize}
+\par 
+\par Express Maximize uses {\b default} parameters and program logic to maximize system memory usage.  The Maximize program loads each TSR and device driver sequentially into high DOS memory until all programs are moved or all available memory is used.
+\par 
+\par Express Maximize is primarily for users who are {\b new} to Maximize and would like Maximize to make its best effort at relocating software.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.Max_Full
+\par \pard\plain \f5\lang1033 @P H.Max_Quick H.Max_Full
+\par                             {\i Custom}{\i  Maximize}
+\par 
+\par Custom Maximize displays toggle screens with all TSRs and device drivers available for toggling; you must {\b choose} whether or not to load each item high.
+\par 
+\par For users who are familiar with the features of Maximize, Custom Maximize opens the {\b full potential} of the Maximize product to custom tailor the system's memory for maximum efficiency.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.Info_Mem
+\par \pard\plain \f5\lang1033 @P H.Info_Mem H.Info_Time
+\par                      {\i Overview of Memory Display}
+\par 
+\par This memory usage display shows how {\b Qualitas drivers} have arranged the first megabyte of address space and allocated extended memory.
+\par 
+\par The items on the display include:
+\par 
+\par   {\b Prompt-------------------  What is Displayed----------------------}
+\par   New top of DOS memory      The upper limit of low DOS memory after
+\par                              Qualitas MAX/BlueMAX backfilling.
+\par   Added low DOS memory       The amount of memory Qualitas MAX/BlueMAX
+\par                              backfilled.
+\par   Added high DOS memory      The amount of memory Qualitas MAX/BlueMAX
+\par                              added above conventional memory.
+\par   Available extended memory  The amount of memory above 1 MB not
+\par                              converted from extended memory to
+\par                              another use.
+\par   Available shared memory    The amount of memory available as
+\par                              SmartMemory.
+\par   Program storage            The amount of extended memory used for
+\par                              Qualitas MAX/BlueMAX program storage.
+\par   ROM mapping region         The size of the ROM mapping region and
+\par                              the addresses of ROMs cached with fast
+\par                              memory.
+\par   High DOS memory            The amount of high DOS remapped with
+\par                              extended memory.
+\par   Low DOS memory             The amount of low DOS remapped with
+\par                              extended memory.
+\par   Available shared memory    The amount of memory available as
+\par                              SmartMemory.
+\par   Remaining extended memory  The amount of extended memory not
+\par                              converted to EMS.
+\par   Total extended memory      The original amount of extended memory.
+\par   The current state is ...   The state of Qualitas MAX/BlueMAX, either ON,
+\par                              OFF, or AUTO.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.Info_EMS
+\par \pard\plain \f5\lang1033 @P H.Info_Mem H.Info_Time
+\par                          {\i EMS Memory Display}
+\par 
+\par This display shows how Qualitas MAX/BlueMAX has allocated EMS memory and how it is currently used.  The items on the display include:
+\par 
+\par   {\b Prompt------  What is Displayed-----------------------------------}
+\par   Handle        The unique identification number, called a handle,
+\par                 assigned by Qualitas MAX/BlueMAX.
+\par                 The Avail shared handle indicates the amount of
+\par                 memory available as SmartMemory.
+\par   Memory        Lists the amount of memory allocated to each active
+\par                 handle.
+\par   Name          The handle's name, if any.
+\par   Total         The total amount of EMS memory.
+\par   EMS Page Map  A pictorial look at the first megabyte, showing the
+\par                 use of each EMS page.  ROM and RAM addresses in high
+\par                 DOS are also shown.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.Info_Res
+\par \pard\plain \f5\lang1033 @P H.Info_Mem H.Info_Time
+\par                      {\i Resident Programs Display}
+\par 
+\par This display shows information about the {\b resident programs} in low and high DOS.  The items on the display include:
+\par 
+\par   {\b Prompt-------------------  What is Displayed----------------------}
+\par   Name                       The name of the program or driver
+\par                              loaded by DOS or 386LOAD.  If RAM or
+\par                              ROM appear in the name list, the
+\par                              addresses and lengths indicated are in
+\par                              use by buffer RAM or BIOS ROM and may
+\par                              be fragmenting high DOS memory.
+\par   Hex Start and Hex End      The starting and ending hexadecimal
+\par                              addresses of the program.
+\par   Hex Owner                  The hex address of the controlling
+\par                              program of the listed memory block.
+\par   Decimal Length             The byte size of the resident program.
+\par                              The decimal length of the region marked
+\par                              Available in low DOS should equal the
+\par                              value from the DOS CHKDSK command.
+\par   Text or Interrupt Numbers  Any text or interrupt numbers hooked by
+\par                              the listed program.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.Info_Dev
+\par \pard\plain \f5\lang1033 @P H.Info_Mem H.Info_Time
+\par                        {\i Device Drivers Display}
+\par 
+\par This display shows all {\b device drivers} currently loaded into low DOS memory.  The items on the display include:
+\par 
+\par   {\b Prompt-----------  What is Displayed------------------------------}
+\par   Name               The device driver name, which may not be the
+\par                      same as the file loaded with the DEVICE=
+\par                      command in CONFIG.SYS.
+\par   Hex Start          The hex starting address of the driver.
+\par   Decimal Length     The driver length.  Drivers nested in a group
+\par                      do not have individual lengths here; their
+\par                      lengths are included in that of the first
+\par                      driver in the list.
+\par   Interrupt Numbers  All interrupt numbers for which the device
+\par                      driver is the current owner.
+\par 
+\par When a driver has been relocated by 386LOAD into high DOS, the residual header shows in low DOS and the portion moved to high DOS shows on the Resident Programs Display screen.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.Info_Load
+\par \pard\plain \f5\lang1033 @P H.Info_Mem H.Info_Time
+\par                          {\i Load Sizes Display}
+\par 
+\par This option evaluates all programs loaded by 386LOAD into high or low DOS and provides a summary screen of their load sizes.  The items on the display include:
+\par 
+\par   {\b Prompt----------  What is}{\b  Displayed-------------------------------}
+\par   Device or         The name of the memory resident program, if
+\par     Program Name    available.
+\par   Initial           The initialization size required to load the
+\par                     program high.
+\par   Resident          The memory required for resident operation.
+\par   Allow FlexFrame?  Whether or not 386LOAD should release the EMS
+\par                     page frame during loading of this program.
+\par   Suggested Action  Suggestions for more efficient program loading.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.Info_ROM
+\par \pard\plain \f5\lang1033 @P H.Info_Mem H.Info_Time
+\par                         {\i Memory Scan Display}
+\par 
+\par This option lists all memory address ranges throughout the system by usage type.  The items on the display include:
+\par 
+\par   {\b Prompt--  What is Displayed---------------------------------------}
+\par   Type      The type of memory address range by usage.
+\par   Handle    The identification number of an applications using
+\par             certain types of memory.
+\par   Address   The hexadecimal starting and ending addresses of the
+\par     Range   area.  Areas where High DOS memory overlaps RAM or ROM
+\par             are identified by check marks.
+\par   Size      The size in kilobytes.
+\par   Name      The text (if available) that identifies the program
+\par             that allocated the memory.
+\par 
+\par The lower section of this display summarizes the use and function of high DOS address space and extended memory.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.Info_Time
+\par \pard\plain \f5\lang1033 @P H.Info_Mem H.Info_Time
+\par                          {\i Time Memory Display}
+\par 
+\par Different regions of memory sometimes operate at different speeds due to hardware access method (access width) and chip speed.  This display summarizes the results of a {\b memory timing} pass.
+\par 
+\par Each row in the table refers to a {\b contiguous block}
+ of memory having common timing characteristics.  The hex starting address, decimal start and end address (in KB), the length (in KB), and average access time in microseconds are listed for each block.  Also, a ratio of the speed of each block to the fast
+est block is provided.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>H.Index
+\par \pard\plain \f5\lang1033 @P H.Index H.Index
+\par                            {\i MAX Help Index}{\i 
+\par }
+\par Use the {\b Right/Left} arrow keys to select a subject, then press Enter.
+\par 
+\par {\b Subject--------------------  Help Topic----------------------------}
+\par {\ul 386UTIL LIST}{\v H.Info_Mem}                 Overview Display
+\par {\ul 386UTIL MAPDEV}{\v H.Info_Dev}               Device Drivers Display
+\par {\ul 386UTIL MAPMEM}{\v H.Info_Res}               Resident Programs Display
+\par {\ul 386UTIL MAPEMS}{\v H.Info_EMS}               EMS Memory Display
+\par {\ul 386UTIL RAMSCAN}{\v H.Info_ROM}              Memory Scan Display
+\par {\ul 386UTIL SUMMARY}{\v H.Info_Load}              Load Sizes Display
+\par {\ul 386UTIL TIMEMEM}{\v H.Info_Time}              Time Memory Display
+\par {\ul ASQ features}{\v H.ASQ}                 What is ASQ?
+\par {\ul Browsing help}{\v H.U_Help}                Using the Help System
+\par {\ul Checkboxes}{\v H.U_Dial}                   Using a Dialog Box
+\par {\ul Configuration analysis}{\v H.Cfg_Sum}       Configuration Summary Display
+\par {\ul Data display keys}{\v H.Default}            Using the Menu System
+\par {\ul Device drivers}{\v H.Info_Dev}               Device Drivers Display
+\par {\ul Dialog box buttons}{\v H.U_Dial}           Using a Dialog Box
+\par {\ul Editor block marking keys}{\v H.E_Block}    Editor Block Operations
+\par {\ul Editor block operations}{\v H.E_Block}      Editor Block Operations
+\par {\ul Editor buttons}{\v H.E_Basics}               Editor Basics
+\par {\ul Editor keys}{\v H.E_Basics}                  Editor Basics
+\par {\ul Editor screen}{\v H.E_Basics}                Editor Basics
+\par {\ul Editor special keys}{\v H.E_Spec}          Editor Special Features
+\par {\ul Editor topics}{\v H.U_Editor}                Using the Editor
+\par {\ul EMS memory}{\v H.Info_EMS}                   EMS Memory Display
+\par {\ul Equipment analysis}{\v H.Hdw_Sum}           Equipment Summary Display
+\par {\ul Field editor}{\v H.U_Dial}                 Using a Dialog Box
+\par {\ul Help context jumps}{\v H.U_Help}           Using the Help System
+\par {\ul Help system buttons}{\v H.U_Help}          Using the Help System
+\par {\ul Maximize - }{\ul custom}{\v H.Max_Full}              Custom Maximize
+\par {\ul Maximize - }{\ul express}{\v H.Max_Quick}             Express Maximize
+\par {\ul Memory analysis}{\v H.Mem_Sum}              Memory Summary Display
+\par {\ul Memory overview}{\v H.Info_Mem}              Overview of Memory Display
+\par {\ul Memory timing}{\v H.Info_Time}                Time Memory Display
+\par {\ul Menu keys}{\v H.Default}                    Using the Menu System
+\par {\ul Menu system buttons}{\v H.Default}          Using the Menu System
+\par {\ul Message text}{\v H.U_Dial}                 Using a Dialog Box
+\par {\ul Option Editor dialog box}{\v H.E_Option}     Using the Option Editor
+\par {\ul Print dialog box}{\v H.U_Print}             Using the Print System
+\par {\ul Program load sizes}{\v H.Info_Load}           Load Sizes Display
+\par {\ul Radio buttons}{\v H.U_Dial}                Using a Dialog Box
+\par {\ul Resident programs}{\v H.Info_Res}            Resident Programs Display
+\par {\ul ROM locations}{\v H.Info_ROM}                Memory Scan Display
+\par {\ul Subwindows}{\v H.U_Dial}                   Using a Dialog Box
+\par {\ul Topics}{\v H.Contents}                       MAX Help Topics
+\par {\ul Updating}{\v H.U_Update}                     Updating the Product
+\par 
+\par }

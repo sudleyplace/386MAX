@@ -1,0 +1,1019 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times;}{\f1\froman Symbol;}{\f2\fswiss Helvetica;}{\f3\fmodern Courier;}{\f4\froman Times New Roman;}{\f5\fswiss Arial;}{\f6\froman MS Serif;}{\f7\fswiss MS Sans Serif;}
+{\f8\froman Times;}{\f9\fswiss Helvetica;}{\f10\fswiss System;}{\f11\fmodern Courier New;}{\f12\fnil Wingdings;}{\f13\fswiss Aardvark;}{\f14\fswiss ProseAntique;}{\f15\fswiss Arabia;}{\f16\fswiss Avalon;}{\f17\fswiss Bahamas;}{\f18\fswiss Banff;}
+{\f19\fswiss Bangkok;}{\f20\fswiss Bodnoff;}{\f21\fswiss Brooklyn;}{\f22\fswiss NewBrunswick;}{\f23\fswiss Casablanca;}{\f24\fswiss DawnCastle;}{\f25\fswiss CommonBullets;}{\f26\fswiss Cottage;}{\f27\fswiss Cupertino;}{\f28\fswiss Dixieland;}
+{\f29\fswiss ErieLight;}{\f30\fswiss Erie;}{\f31\fswiss France;}{\f32\fswiss FrankfurtGothicHeavy;}{\f33\fswiss FrankfurtGothic;}{\f34\fswiss Freeport;}{\f35\fswiss Frankenstein;}{\f36\fswiss Fujiyama2;}{\f37\fswiss FujiyamaLight;}{\f38\fswiss Fujiyama;}
+{\f39\fswiss Gatineau;}{\f40\fswiss HomewardBound;}{\f41\fswiss Ireland;}{\f42\fswiss Jupiter;}{\f43\fswiss Koala;}{\f44\fswiss Lincoln;}{\f45\fswiss Linus;}{\f46\fswiss Memorandum;}{\f47\fswiss Monospaced;}{\f48\fswiss Motor;}
+{\f49\fswiss MusicalSymbols;}{\f50\fswiss Mystical;}{\f51\fswiss Nebraska;}{\f52\fswiss Ottawa;}{\f53\fswiss PalmSprings;}{\f54\fswiss Paradise;}{\f55\fswiss Paragon;}{\f56\fswiss Penguin;}{\f57\fswiss Posse;}{\f58\fswiss President;}{\f59\fswiss Quantum;}
+{\f60\fswiss Renfrew;}{\f61\fswiss Southern;}{\f62\fswiss Stamp;}{\f63\fswiss SwitzerlandBlack;}{\f64\fswiss GreekMathSymbols;}{\f65\fswiss Technical;}{\f66\fswiss Timpani;}{\f67\fswiss TimpaniHeavy;}{\f68\fswiss Toronto;}{\f69\fswiss Umbrella;}
+{\f70\fswiss Unicorn;}{\f71\fswiss USABlack;}{\f72\fswiss Vogue;}{\f73\fswiss ZurichCalligraphic;}{\f74\fnil LotusWPSet;}{\f75\fswiss LotusLineDraw;}{\f76\fswiss Arial Black;}{\f77\fswiss Arial Condensed Bold;}{\f78\fswiss Arial Narrow;}
+{\f79\froman Bodoni Black;}{\f80\froman Bodoni Book;}{\f81\fnil Botanical;}{\f82\fnil Monotype Sorts;}{\f83\fscript New Berolina;}{\f84\fdecor Old Style Bold Outline;}{\f85\fscript Palace Script;}{\f86\froman Photina;}{\f87\froman Rockwell;}
+{\f88\froman Rockwell Light;}{\f89\fscript Brush Script;}{\f90\fswiss Gill Sans;}{\f91\fmodern Letter Gothic;}{\f92\fswiss News Gothic;}{\f93\froman Perpetua;}{\f94\froman Photina Casual Black;}{\f95\fnil WP Greek Helve;}{\f96\fnil WP OverflowSet;}
+{\f97\fnil WP Greek Courier;}{\f98\fscript Ribbon131 Bd BT;}{\f99\froman Humanst521 Lt BT;}{\f100\froman GeoSlab703 Lt BT;}{\f101\fswiss Swis721 BlkEx BT;}{\f102\fswiss Humanst521 Cn BT;}{\f103\fdecor Onyx BT;}{\f104\fdecor CaslonOpnface BT;}
+{\f105\fswiss EngraversGothic BT;}{\f106\fscript ShelleyVolante BT;}{\f107\froman BernhardMod BT;}{\f108\fscript Brush738 BT;}{\f109\fscript Blackletter686 BT;}{\f110\froman Arrus BT;}{\f111\froman Arrus Blk BT;}{\f112\fscript OzHandicraft BT;}
+{\f113\fswiss AvantGarde Bk BT;}{\f114\fswiss AvantGarde Md BT;}{\f115\fdecor Algerian;}{\f116\fswiss Arial Rounded MT Bold;}{\f117\fdecor Bauhaus 93;}{\f118\froman Bookman Old Style;}{\f119\fdecor Braggadocio;}{\f120\fswiss Britannic Bold;}
+{\f121\fscript Brush Script MT;}{\f122\fdecor Colonna MT;}{\f123\fdecor Desdemona;}{\f124\froman Footlight MT Light;}{\f125\fswiss Century Gothic;}{\f126\fscript Gradl;}{\f127\fswiss Impact;}{\f128\fdecor Kino MT;}{\f129\froman Wide Latin;}
+{\f130\fscript Matura MT Script Capitals;}{\f131\fscript Mistral;}{\f132\fdecor Playbill;}{\f133\fdecor Stencil;}{\f134\fscript Vivaldi;}{\f135\fswiss WP Phonetic;}{\f136\fnil WP MathExtendedB;}{\f137\fnil WP BoxDrawing;}{\f138\fnil WP IconicSymbolsB;}
+{\f139\fnil WP MathExtendedA;}{\f140\froman WP CyrillicA;}{\f141\fnil WP Japanese;}{\f142\fnil WP MathB;}{\f143\fnil WP IconicSymbolsA;}{\f144\fnil WP Arabic Sihafa;}{\f145\fnil WP MultinationalA Roman;}{\f146\fnil WP CyrillicB;}
+{\f147\fnil WP MultinationalB Roman;}{\f148\fnil WP MathA;}{\f149\fnil WP ArabicScript Sihafa;}{\f150\fnil WP Greek Century;}{\f151\fnil WP TypographicSymbols;}{\f152\fnil WP Hebrew David;}{\f153\fnil Arial MT Black;}{\f154\fscript Benguiat Frisky ATT;}
+{\f155\froman Poster Bodoni ATT;}{\f156\fswiss Gill Sans MT Shadow;}{\f157\froman Goudy Old Style ATT;}{\f158\fscript Graphite Light ATT;}{\f159\fscript Graphite Light Narrow ATT;}{\f160\fscript Lucida Casual;}{\f161\fnil Milestones;}
+{\f162\fscript Phyllis ATT;}{\f163\fscript Signet Roundhand ATT;}{\f164\fmodern MS LineDraw;}{\f165\fswiss Expert-Rounded;}{\f166\fswiss AvantGarde;}{\f167\froman Bookman;}{\f168\fswiss Helvetica-Narrow;}{\f169\froman NewCenturySchlbk;}
+{\f170\froman Palatino;}{\f171\fscript ZapfChancery;}{\f172\fdecor ZapfDingbats;}{\f173\fmodern Modern;}{\f174\fscript Script;}{\f175\froman Roman;}{\f176\fswiss MS Dialog;}{\f177\froman New York;}{\f178\fswiss Geneva;}
+{\f179\fswiss TektoMM_240 RG 564 NO;}{\f180\fswiss TektoMM;}{\f181\fswiss Anna;}{\f182\fswiss Poppl-Laudatio Regular;}{\f183\fswiss Boulevard;}{\f184\froman Boton Regular;}{\f185\froman Baskerville BE Regular;}{\f186\fdecor Giddyup Thangs;}
+{\f187\fswiss Giddyup;}{\f188\fswiss TektoMM_100 LT 250 CN;}{\f189\fswiss TektoMM_100 LT 564 NO;}{\f190\fswiss TektoMM_100 LT 850 EX;}{\f191\fswiss TektoMM_240 RG 250 CN;}{\f192\fswiss TektoMM_240 RG 850 EX;}{\f193\fswiss TektoMM_503 BD 250 CN;}
+{\f194\fswiss TektoMM_503 BD 488 NO;}{\f195\fswiss TektoMM_503 BD 850 EX;}{\f196\fswiss Optima;}{\f197\fswiss StoneSans;}{\f198\fswiss StoneSansSemibold;}{\f199\fnil Marlett;}{\f200\froman Book Antiqua;}{\f201\froman Century Schoolbook;}
+{\f202\fswiss Haettenschweiler;}{\f203\froman Garamond;}{\f204\fswiss News Gothic MT;}{\f205\fscript Lucida Handwriting;}{\f206\fswiss Lucida Sans;}{\f207\fswiss Lucida Sans Unicode;}{\f208\fmodern OCR A Extended;}{\f209\froman Calisto MT;}
+{\f210\fswiss Abadi MT Condensed Light;}{\f211\fswiss Copperplate Gothic Bold;}{\f212\fswiss Copperplate Gothic Light;}{\f213\fscript Comic Sans MS;}{\f214\fmodern Lucida Console;}{\f215\froman LotusWP Int A;}{\f216\froman LotusWP Int B;}
+{\f217\fmodern LotusWP Box;}{\f218\froman LotusWP Type;}{\f219\froman LotusWP Icon;}{\f220\froman Math A;}{\f221\fnil Math B;}{\f222\fnil Math C;}{\f223\fnil Lotus Postal Barcode;}{\f224\froman Baskerville;}{\f225\fnil Binner Gothic;}
+{\f226\froman Centaur;}{\f227\fnil Gill Sans Condensed;}{\f228\fswiss Gill Sans Ultra Bold;}{\f229\froman Nimrod;}{\f230\froman Onyx;}{\f231\froman Rockwell Condensed;}{\f232\fnil Snowy;}{\f233\fnil Code 128;}{\f234\fswiss Univers;}
+{\f235\fswiss Univers Condensed;}{\f236\fswiss Albertus Extra Bold;}{\f237\fswiss Albertus Medium;}{\f238\fswiss Antique Olive;}{\f239\fswiss CG Omega;}{\f240\froman CG Times;}{\f241\froman Clarendon Condensed;}{\f242\fswiss Adelaide;}
+{\f243\fswiss Alefbet;}{\f244\fswiss Algiers;}{\f245\fswiss Alto;}{\f246\fswiss Amherst;}{\f247\fswiss Amy;}{\f248\fswiss Architecture;}{\f249\fswiss BahamasHeavy;}{\f250\fswiss BahamasLight;}{\f251\fswiss BallroomTango;}{\f252\fswiss Bard;}
+{\f253\fswiss Bassoon;}{\f254\fswiss Bedrock;}{\f255\fnil Beehive;}{\f256\froman Tms Rmn;}{\f257\froman Symbol;}{\f258\fswiss Helv;}{\f259\fmodern Courier;}{\f260\froman Times New Roman;}{\f261\fswiss Arial;}{\f262\froman MS Serif;}
+{\f263\fswiss MS Sans Serif;}{\f264\fmodern Courier New;}{\f265\fnil Wingdings;}{\f266\fswiss Aardvark;}{\f267\fswiss ProseAntique;}{\f268\fswiss Arabia;}{\f269\fswiss Avalon;}{\f270\fswiss Bahamas;}{\f271\fswiss Banff;}{\f272\fswiss Bangkok;}
+{\f273\fswiss Bodnoff;}{\f274\fswiss Brooklyn;}{\f275\fswiss NewBrunswick;}{\f276\fswiss Casablanca;}{\f277\fswiss DawnCastle;}{\f278\fswiss CommonBullets;}{\f279\fswiss Cottage;}{\f280\fswiss Cupertino;}{\f281\fswiss Dixieland;}{\f282\fswiss ErieLight;}
+{\f283\fswiss Erie;}{\f284\fswiss France;}{\f285\fswiss FrankfurtGothicHeavy;}{\f286\fswiss FrankfurtGothic;}{\f287\fswiss Freeport;}{\f288\fswiss Frankenstein;}{\f289\fswiss Fujiyama2;}{\f290\fswiss FujiyamaLight;}{\f291\fswiss Fujiyama;}
+{\f292\fswiss Gatineau;}{\f293\fswiss HomewardBound;}{\f294\fswiss Ireland;}{\f295\fswiss Jupiter;}{\f296\fswiss Koala;}{\f297\fswiss Lincoln;}{\f298\fswiss Linus;}{\f299\fswiss Memorandum;}{\f300\fswiss Monospaced;}{\f301\fswiss Motor;}
+{\f302\fswiss MusicalSymbols;}{\f303\fswiss Mystical;}{\f304\fswiss Nebraska;}{\f305\fswiss Ottawa;}{\f306\fswiss PalmSprings;}{\f307\fswiss Paradise;}{\f308\fswiss Paragon;}{\f309\fswiss Penguin;}{\f310\fswiss Posse;}{\f311\fswiss President;}
+{\f312\fswiss Quantum;}{\f313\fswiss Renfrew;}{\f314\fswiss Southern;}{\f315\fswiss Stamp;}{\f316\fswiss SwitzerlandBlack;}{\f317\fswiss GreekMathSymbols;}{\f318\fswiss Technical;}{\f319\fswiss Timpani;}{\f320\fswiss TimpaniHeavy;}{\f321\fswiss Toronto;}
+{\f322\fswiss Umbrella;}{\f323\fswiss Unicorn;}{\f324\fswiss USABlack;}{\f325\fswiss Vogue;}{\f326\fswiss ZurichCalligraphic;}{\f327\fnil LotusWPSet;}{\f328\fswiss LotusLineDraw;}{\f329\fswiss Arial Black;}{\f330\fswiss Arial Condensed Bold;}
+{\f331\fswiss Arial Narrow;}{\f332\froman Bodoni Black;}{\f333\froman Bodoni Book;}{\f334\fnil Botanical;}{\f335\fnil Monotype Sorts;}{\f336\fscript New Berolina;}{\f337\fdecor Old Style Bold Outline;}{\f338\fscript Palace Script;}{\f339\froman Photina;}
+{\f340\froman Rockwell;}{\f341\froman Rockwell Light;}{\f342\fscript Brush Script;}{\f343\fswiss Gill Sans;}{\f344\fmodern Letter Gothic;}{\f345\fswiss News Gothic;}{\f346\froman Perpetua;}{\f347\froman Photina Casual Black;}{\f348\fnil WP Greek Helve;}
+{\f349\fnil WP OverflowSet;}{\f350\fnil WP Greek Courier;}{\f351\fscript Ribbon131 Bd BT;}{\f352\froman Humanst521 Lt BT;}{\f353\froman GeoSlab703 Lt BT;}{\f354\fswiss Swis721 BlkEx BT;}{\f355\fswiss Humanst521 Cn BT;}{\f356\fdecor Onyx BT;}
+{\f357\fdecor CaslonOpnface BT;}{\f358\fswiss EngraversGothic BT;}{\f359\fscript ShelleyVolante BT;}{\f360\froman BernhardMod BT;}{\f361\fscript Brush738 BT;}{\f362\fscript Blackletter686 BT;}{\f363\froman Arrus BT;}{\f364\froman Arrus Blk BT;}
+{\f365\fscript OzHandicraft BT;}{\f366\fswiss AvantGarde Bk BT;}{\f367\fswiss AvantGarde Md BT;}{\f368\fdecor Algerian;}{\f369\fswiss Arial Rounded MT Bold;}{\f370\fdecor Bauhaus 93;}{\f371\froman Bookman Old Style;}{\f372\fdecor Braggadocio;}
+{\f373\fswiss Britannic Bold;}{\f374\fscript Brush Script MT;}{\f375\fdecor Colonna MT;}{\f376\fdecor Desdemona;}{\f377\froman Footlight MT Light;}{\f378\fswiss Century Gothic;}{\f379\fscript Gradl;}{\f380\fswiss Impact;}{\f381\fdecor Kino MT;}
+{\f382\froman Wide Latin;}{\f383\fscript Matura MT Script Capitals;}{\f384\fscript Mistral;}{\f385\fdecor Playbill;}{\f386\fdecor Stencil;}{\f387\fscript Vivaldi;}{\f388\fswiss WP Phonetic;}{\f389\fnil WP MathExtendedB;}{\f390\fnil WP BoxDrawing;}
+{\f391\fnil WP IconicSymbolsB;}{\f392\fnil WP MathExtendedA;}{\f393\froman WP CyrillicA;}{\f394\fnil WP Japanese;}{\f395\fnil WP MathB;}{\f396\fnil WP IconicSymbolsA;}{\f397\fnil WP Arabic Sihafa;}{\f398\fnil WP MultinationalA Roman;}
+{\f399\fnil WP CyrillicB;}{\f400\fnil WP MultinationalB Roman;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;
+\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;\red192\green192\blue192;}{\stylesheet{\f11\lang1033 \snext0 Normal;}{\s1 \f11\fs28\cf6\lang1033 
+\sbasedon0\snext1 Context;}}{\info{\title asq help system, help topics}{\author Klaus Albrecht}{\operator Klaus Albrecht}{\creatim\yr1992\mo5\dy3\hr14\min16}{\revtim\yr1996\mo2\dy15\hr20\min57}{\printim\yr1992\mo5\dy18\hr11\min47}{\version1}{\edmins1}
+{\nofpages0}{\nofwords0}{\nofchars0}{\vern16417}}\paperw12240\paperh15840\margl1440\margr1080\margt1440\margb1440\gutter0 \facingp\widowctrl\ftnbj\ftnrestart\hyphhotz425 \sectd \linex0\headery709\footery709\colsx709\endnhere \pard\plain \f11\lang1033 {
+\cf2 ASQ General Help
+\par }{\cf2 by Stan Leszynski
+\par }{\cf2 These notes are not a live context
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 68
+\par }{\cf2 Context strings begin with >>
+\par }{\cf2 Center th}{\cf2 e title of each block
+\par }{\cf2 First line is @ plus P (print) or N (noprint) plus stop markers for Prev/Next
+\par }\pard {\cf2 MSWord file use: 
+\par }{\cf2  Set Printer to Generic/Text only on File:
+\par }{\cf2  Set View to Page mode to see wrapping 
+\par }{\cf2  Default tabs 0
+\par }{\cf2  Left margin 0
+\par }{\cf2  Right margin 1.7"
+\par }{\cf2  Top margin 0
+\par }{\cf2  Bottom margin 0
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns
+\par }{\cf2 Text highlighting:
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text
+\par }{\cf2  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text
+\par }{\cf2  use }{\ul\cf2 UNDERLINE}{\cf2  for context jump= red text
+\par }{\cf2  use }{\b\i\cf2 BOLD }{\b\i\cf2 ITALICS}{\cf2  for bullets= yellow text
+\par }\pard \fi-288\li288\ri-2700 
+\par \pard {\fs28\cf6 >>H.Contents
+\par }@P H.Contents H.Hdw_BIOS
+\par                            {\i ASQ Hilfe-Themen
+\par }
+\par Die in Rot dargestellten Themen sind Hypertext-Verbindungen.
+\par Sie erm\rdblquote glichen Ihnen den direkten Zugang zu anderen Themen. Bl\'84ttern Sie im Text nach oben oder nach unten und w\'84hlen Sie das gew\'81nschte Thema. Benutzen Sie die {\b rechte} oder {\b linke }Pfeiltaste, um
+\par das Thema hervorzuheben und dr\'81cken Sie dann die{\b  Eingabetaste}. Mit der Maus k\rdblquote nnen Sie das gew\'81nschte Thema anw\'84hlen und durch Doppelklick aufrufen.
+\par 
+\par   - Diese Themen helfen, {\b ASQ} besser zu verstehen und einzusetzen -
+\par                     {\ul Einf\'81hrung in das Men\'81-System}{\v H.Default}
+\par                     {\ul Einf\'81hrung in das Hilfe-System}{\v H.U_Help}
+\par                     {\ul Umgang mit dem Glossar-System}{\v H.U_Gloss}
+\par                   {\ul Einf\'81hrung in das Lernhilfe-System}{\v H.U_Tutor}
+\par                      {\ul Umgang mit einem Dialogfeld}{\v H.U_Dial}
+\par                       {\ul Umgang mit dem Drucksystem}{\v H.U_Print}
+\par - Diese Themen erl\'84utern, wie Sie ASQ {\b "Schnappsch\'81sse"} erstellen -
+\par                          {\ul SnapShot-Datei laden}{\v H.Snp_Load}
+\par                   {\ul In eine SnapShot-Datei speichern}{\v H.Snp_Save}
+\par                {\ul Information der SnapShot-Datei anzeigen}{\v H.Snp_Info}
+\par                       {\ul SnapShot-Information l\rdblquote schen}{\v H.Snp_Clear}
+\par     - Diese Themen erl\'84utern Bildschirme zur {\b Speicher-Analyse} -
+\par                           {\ul Speicher-\'9abersicht}{\v H.Mem_Sum}
+\par                       {\ul LoDOS Speicher-Information}{\v H.Mem_Low}
+\par                       {\ul HiDOS Speicher-Information}{\v H.Mem_Hi}
+\par                          {\ul ROM Scan-Information}{\v H.Mem_ROM}
+\par                          {\ul Interrupt-Information}{\v H.Mem_Int}
+\par                       {\ul Extended Memory-Information}{\v H.Mem_Ext}
+\par                       {\ul Expanded Memory-Information}{\v H.Mem_Exp}
+\par                          {\ul EMS-Speicherbelegung}{\v H.Mem_EMS}
+\par                          {\ul XMS-Speicherbelegung}{\v H.Mem_XMS}
+\par                        {\ul Speicher-Geschwindigkeit}{\v H.Mem_Tim}
+\par  - Diese Themen erl\'84utern Bildschirme zur {\b Konfigurations-Analyse} -
+\par                       {\ul Konfigurations-\'9abersicht}{\v H.Cfg_Sum}
+\par                     {\ul Anzeige der Datei CONFIG.SYS}{\v H.Cfg_CFG}
+\par                    {\ul Anzeige der Datei AUTOEXEC.BAT}{\v H.Cfg_AUT}
+\par                        {\ul Anzeige der .PRO Datei}{\v H.Cfg_PRO}
+\par                     {\ul Anzeige der Datei EXTRADOS.PRO}{\v H.Cfg_EPro}
+\par                      {\ul Anzeige der Datei SYSTEM.INI}{\v H.Cfg_SYSINI}
+\par                       {\ul Datei-Betrachter anwenden}{\v H.U_Browse}
+\par                     {\ul Qualitas Produkt-Information}{\v H.Cfg_Qualitas}
+\par                   {\ul Anzeige von Windows-Informationen}{\v H.Cfg_Windows}
+\par  - Diese Themen erl\'84utern Bildschirme zur {\b Maschinen-Ausstattung} -
+\par                        {\ul CMOS Detail-Information}{\v H.Cfg_CMO}
+\par                         {\ul Maschinen-Ausstattung}{\v H.Hdw_Sum}
+\par                        {\ul Bildschirm-Information}{\v H.Hdw_Vid}
+\par                         {\ul Laufwerks-Information}{\v H.Hdw_Drv}
+\par                     {\ul Kommunikations-Schnittstelle}{\v H.Hdw_Por}
+\par                        {\ul BIOS Detail-Information}{\v H.Hdw_BIOS}
+\par        - Diese Themen bieten {\b verwandte Informationen }-
+\par                      {\ul ASQ Stichwort-Verzeichnis}{\v H.Index}
+\par                         {\ul ASQ Glossar-Themen}{\v As_G_Hlp.Hlp!H.Contents}
+\par                        {\ul ASQ Lernhilfe-Themen}{\v As_T_Hlp.Hlp!H.Contents}
+\par 
+\par Mit der Schaltfl\'84che{\b  n\'84chste} Info k\rdblquote nnen Sie die Themen der Reihe nach durchbl\'84ttern.
+\par 
+\par {\fs28\cf6 >>H.Default
+\par }@P H.Default H.U_Print
+\par                       {\i Einf\'81hrung in das Men\'81-System}
+\par 
+\par Die Funktionen dieses Systems werden \'81ber eine Men\'81leiste am oberen Bildschirmrand gesteuert. Die Optionen dieser Leiste rufen Pulldown-Men\'81s auf.
+\par 
+\par F\'81r die Men\'81leiste gelten folgende Funktionstasten:
+\par 
+\par   * {\b ALT+he}{\b rvorgehobener Buchstabe} - zeigt das Pulldown-Men\'81 zur
+\par     Option des hervorgeobenen Buchstabens
+\par   * {\b Rechts, Links} - w\'84hlt eine neue Option an und blendet deren
+\par     Pullldown-Men\'81 ein{\b 
+\par }  * {\b TAB, Umschalttaste+TAB} - w\'84hlt eine neue Funktion an
+\par     und blendet deren Pulldown-Men\'81 ein{\b 
+\par }  * {\b ESC} - springt zur Option "Beenden"
+\par \pard \fi-288\li288 
+\par F\'81r die Pulldown-Men\'81s gelten folgende Funktionstasten:
+\par \pard 
+\par   * {\b Eingabetaste} - f\'81hrt hervorgehobene Funktion aus
+\par   * {\b Hervorgehobener Buchstabe} - f\'81hrt die Men\'81-Option aus,
+\par     welche den hervorgehobenen Buchstaben enth\'84lt
+\par   * {\b Nach-Oben, Nach-Unten} - stellt eine neue Men\'81-Auswahl
+\par     hervorgehoben dar
+\par   * {\b Esc} - springt zur Option "Beenden"
+\par 
+\par Das{\b  Datenfenster} nimmt den gr\rdblquote \'e1ten Teil des Bildschirms ein. Es zeigt den Inhalt der aktuellen Men\'81-Option. Falls Sie die Men\'81-Optionen sehr schnell durchbl\'84ttern, kann die Datenanzeige m\rdblquote 
+glicherweise mit Ihrem Tempo nicht Schritt halten. Ist der Cursor nicht mehr in Bewegung, wird das aktuelle Fenster angezeigt.
+\par 
+\par Wenn Sie mit der {\b Maus} arbeiten, ziehen Sie den Leuchtbalken durch die Men\'81leiste bzw. nach oben oder nach unten durch die Pulldown-
+\par Men\'81s. Die Auswahl einer hervorgehobenen aktiven Option erfolgt durch einmaliges Anklicken mit der linken Maustaste bzw. durch Doppelklicken auf einer nicht hervorgehobenen Option.
+\par \pard \ri-2700 
+\par \pard Im ASQ-Programm dienen {\b Schaltfl\'84chen }dazu, \'81ber Tastendruck wichtige Funktionen auszuf\'81hren. Eine Schaltfl\'84che ist ein kleines schattiertes Feld im unteren Bildschirmbereich, ein Datenfenster oder ein Dialogfeld. Jede Schaltfl\'84
+che enth\'84lt einen Text, der die zugrundeliegende Funktion beschreibt. Ein Buchstabe dieses Textes wird immer hervorgehoben dargestellt. Dr\'81cken Sie auf der Tastatur die entsprechende Taste, um die Funktion der Schaltfl\'84che auszuf\'81
+hren. Mit der Maus w\'84hlen Sie die Schaltfl\'84che am Bildschirm an und klicken diese an. Mit der TAB-Taste oder der Eingabetaste k\rdblquote nnen Sie die Schaltfl\'84chen innerhalb eines Dialogfeldes ausw\'84hlen. (Vgl. {\ul Umgang mit einem Dialogfeld
+}{\v H.U_Dial})
+\par 
+\par Das Men\'81system enth\'84lt folgende Schaltfl\'84chen:
+\par 
+\par   * {\b ESC} - kehrt zum Men\'81system zur\'81ck (von einer Datenanzeige)
+\par     oder springt zur Option "Beenden" (aus einem Men\'81)
+\par   * {\b Hilfe F1} - zeigt aktuelle Hilfe-Information an
+\par   * {\b Druck F2} - zeigt das {\ul Druck-Dialogfeld}{\v H.U_Print} an, falls verf\'81gbar
+\par   * {\b Lerne F3} - zeigt die {\ul Lernhilfe}{\v H.U_Tutor} f\'81r die hervorgehobene Option,
+\par     falls eine vorhanden ist
+\par 
+\par \pard \fi-1\li1 Nicht jede Men\'81-Option enth\'84lt Schaltfl\'84chen, die mit Funktions-
+\par tasten ausgew\'84hlt werden. Aktive Schaltfl\'84chen verf\'81gen \'81ber einen {\b hervorgehobenen} Buchstaben. Der Text nicht aktiver Schaltfl\'84chen ist nur sehr schwach dargestellt.
+\par \pard 
+\par Bei Optionen, die Datenfenster aufrufen, wird mit der{\b  Eingabetaste},
+\par das Men\'81 ausgeblendet und das Fenster aktiv. In einigen F\'84llen wird das Fenster vergr\rdblquote \'e1ert, um mehr Daten anzuzeigen. F\'81r Informa-
+\par tionen, deren Volumen gr\rdblquote \'e1er (l\'84nger oder breiter) als das Fenster ist, sind an den R\'84ndern Bildlaufleisten verf\'81gbar.
+\par 
+\par Mit diesen Tastenkombinationen bewegen Sie sich innerhalb eines Datenfensters:
+\par 
+\par   * {\b STRG+Ende} - zeigt den letzten Daten-Bildschirm an
+\par   * {\b STRG+POS1} - zeigt den ersten Daten-Bildschirm an
+\par   * {\b STRG+Bild-Nach-Unten} - zeigt den n\'84chsten Daten-Bildschirm auf
+\par     der rechten Seite an (nur mit Datei-Betrachter)
+\par   * {\b STRG+Bild-Nach-Oben }- zeigt den n\'84chsten Datenbildschirm
+\par     auf der linken Seite an (nur mit Datei-Betrachter)
+\par   * {\b POS1} - bl\'84ttert zur ersten Spalte
+\par   * {\b Ende} - bl\'84ttert zur letzten Spalte
+\par   * {\b Bild-Nach-Oben, Bild-Nach-Unten} - bl\'84ttert seitenweise
+\par     nach oben oder nach unten.
+\par   * {\b Nach-Oben,}{\b  Nach-Unten, Nach-Rechts, Nach-Links} - bl\'84ttert
+\par     reihen- und spaltenweise durch die Daten
+\par 
+\par Innerhalb eines Datenfensters sind zwei weitere Schaltfl\'84chen verf\'81gbar: {\b vorher F7} und {\b n\'84chste F8}. Diese Schaltfl\'84chen erzeugen eine Reihe von Bildschirmen, und zwar in der Reihenfolge der Optionen. Das hat den Vorteil, da\'e1
+ Sie nicht nach jeder Bildschirmseite zum Men\'81 zur\'81ckkehren m\'81ssen.
+\par 
+\par Wenn Sie mit der {\b Maus} arbeiten, k\rdblquote nnen Sie die Bild-Nach-Oben- und Bild-Nach-Unten-Tasten, STRG+Bild-Nach-Oben und STRG+Bild-Nach-
+\par Unten simulieren, indem Sie innerhalb der Bildlaufleisten klicken. Das Anklicken eines Pfeils simuliert "Nach-Oben/Unten/Rechts/
+\par Links". Das einmalige Anklicken eines Dreiecks simuliert die Tasten Bild-Nach-Oben, Bild-Nach-Unten, STRG+Bild-Nach-Oben und STRG+Bild-
+\par Nach-Unten. Ein Doppel-Klicken auf ein Dreieck simuliert STRG+POS1 und STRG+Ende.
+\par 
+\par {\fs28\cf6 >>H.U_Help
+\par }@P H.Default H.U_Print
+\par                       {\i Einf\'81hrung in das Hilfe-System
+\par }
+\par Das Hilfesystem enth\'84lt aktuelle Informationen \'81ber ASQ-Men\'81s und deren Funktionen.
+\par 
+\par Bei aktiver{\b  Schaltfl\'84che "Hilfe"} am unteren Rand des ASQ-
+\par Bildschirms f\'81hrt ein Druck auf die entsprechende Funktionstaste zur Anzeige des Hilfetexts f\'81r die aktuelle Aktivit\'84t. Mit der Maus k\rdblquote nnen Sie die Schaltfl\'84che direkt anklicken. Ist die Hilfe-
+\par Information gr\rdblquote \'e1er als das Fenster, dann k\rdblquote nnen Sie mit den Tasten Bild-Nach-Unten, Bild-Nach-Oben, STRG+POS1, STRG+Ende und den Pfeiltasten im Text bl\'84ttern. Mit der Maus k\rdblquote 
+nnen Sie sich anhand der Bildlaufleisten durch den Text bewegen.
+\par 
+\par Bei aktivem Hilfesystem sind folgende Optionen auf Schaltfl\'84chen verf\'81gbar:
+\par 
+\par   * {\b Themen} - zeigt eine Liste der Hilfe-Themen an. Die Themen
+\par     erscheinen in der Reihenfolge, in der Sie beim Bl\'84ttern
+\par     durch das Hilfesystem mit der Schaltfl\'84che "n\'84chste" auftreten.
+\par   * {\b Stichwort} - Zeigt das Stichwort-Verzeichnis f\'81r das Hilfesystem
+\par     Die Themen erscheinen in alphabetischer Reihenfolge ihrer
+\par     prim\'84ren Bedeutung.
+\par   * {\b n\'84chste} - Springt zum n\'84chsten Thema der aktuellen
+\par     Bl\'84tter-Liste (s.u.).
+\par   * {\b vorher} - Springt zu vorangegangenen Themen zur\'81ck.
+\par     Bei Auswahl von "vorher" erscheint der Bildschirm,
+\par     der dem aktuellen voranging. Dieser Vorgang ist nach
+\par     20 Bildschirmen beendet bzw. dann, wenn der urspr\'81nglich
+\par     ausgew\'84hlte Bildschirm wieder angezeigt ist.
+\par 
+\par Bei der Auswahl eines Hilfe-Themas wird eine {\b Bl\'84tter-Liste} aktiv. Die Bl\'84tter-Liste verbindet das Thema mit verwandten Themen-
+\par bereichen. Mit "n\'84chste" bewegen Sie sich durch die Bl\'84tter-Liste. Die Bl\'84tter-Liste bleibt so lange aktiv, bis Sie Themen, Stichwort oder ein neues Thema \'81ber die Hypertext-Verbindung ausw\'84hlen (s.u.). In der Bl\'84
+tter-Liste der Themen ist jedes Element des Hilfesystems enthalten.
+\par 
+\par Der in Rot dargestellte Hilfetext ist eine Hypertext-Verbindung, mit der Sie ein verwandtes Thema direkt anspringen k\rdblquote nnen. Sie w\'84hlen ein Thema aus, indem Sie das Thema mit der rechten oder linken Pfeiltaste hervorheben und anschlie\'e1
+end die Eingabetaste dr\'81cken. Oder mit der Maus, indem Sie das Thema anklicken, um es hervorzuheben. Alternativ k\rdblquote nnen Sie auch auf ein hervorgehobenes oder nicht hervorgehobenes Thema doppelklicken, um zu springen. Mit der Schaltfl\'84
+che "vorher" kehren Sie wieder auf das urspr\'81ngliche Thema (Ihrem Ausgangspunkt) zur\'81ck.
+\par 
+\par \'9aber das {\ul Druck-System}{\v H.U_Print} k\rdblquote nnen Sie Hilfe-Informationen ausdrucken.
+\par 
+\par {\fs28\cf6 >>H.U_Gloss
+\par }@P H.Default H.U_Print
+\par                      {\i Umgang mit dem Glossar-System
+\par }
+\par \pard Das Glossar-System enth\'84lt kurze {\b Definitionen} zu h\'84ufig verwendeten Begriffen des Memory Management. Sie k\rdblquote nnen einen Begriff aus der Themen-Liste ausw\'84hlen oder mit der Schaltfl\'84che "n\'84chste" (d.h. n\'84
+chste Information) durch die einzelnen Themen bl\'84ttern.
+\par 
+\par {\fs28\cf6 >>H.U_Tutor
+\par }@P H.Default H.U_Print
+\par                   {\i Einf\'81hrung in das Lernhilfe-System
+\par }
+\par Das Lernhilfe-System enth\'84lt {\b Lektionen }\'81ber ASQ sowie \'81ber die Memory Management Konzeption. Bei aktiver {\b Schaltfl\'84che "Lernhilfe"}
+ am unteren Rand des ASQ-Bildschirms erscheint auf Druck der entsprechenden Funktionstaste eine Lektion der Lernhilfe f\'81r die aktuelle Aktivit\'84t. Mit der Maus k\rdblquote nnen Sie die Schaltfl\'84che direkt anklicken. Ist eine Lernhilfe-Lektion gr
+\rdblquote \'e1er als das Fenster, dann k\rdblquote nnen Sie anhand der Tasten Bild-Nach-Unten, Bild-Nach-Oben, STRG+POS1, STRG+Ende oder den Pfeiltasten durch das Fenster bl\'84ttern. Mit der Maus benutzen Sie die Bildlaufleisten.
+\par \pard \fi-1\li1 
+\par \pard Bei aktivem Lernhilfe-System sind folgende Optionen verf\'81gbar:
+\par 
+\par   * {\b Themen} - zeigt eine Liste der Themen f\'81r das Lernhilfe-System.
+\par     Die Themen erscheinen in der Reihenfolge, in der Sie beim
+\par     Bl\'84ttern durch das Lernhilfe-System mit der Schaltfl\'84che
+\par     "n\'84chste" auftreten.
+\par   * {\b Stichwort} - zeigt das Stichwort-Verzeichnis f\'81r das Lernhilfe-
+\par     System. Die Themen erscheinen in alphabetischer Reihenfolge
+\par     ihrer prim\'84ren Bedeutung
+\par   * {\b n\'84chste} - springt auf das n\'84chste Thema der Lernhilfe
+\par     in der aktuellen Bl\'84tter-Liste (s.u.)
+\par   * {\b vorher} - springt auf vorangegangene Themen zur\'81ck.
+\par     Bei Auswahl von "vorher" erscheint der Bildschirm,
+\par     der dem aktuellen voranging. Dieser Vorgang ist nach
+\par     20 Bildschirmen beendet bzw. dann, wenn der urspr\'81nglich
+\par     ausgew\'84hlte Bildschirm wieder angezeigt ist
+\par 
+\par Mit Auswahl eines Hilfe-Themas wird eine {\b Bl\'84tter-Liste} aktiv. Die Bl\'84tter-Liste verbindet das Thema mit verwandten Themenbereichen. Mit "n\'84chste" bewegen Sie sich durch die Bl\'84tter-Liste. Die Bl\'84
+tter-Liste bleibt so lange aktiv, bis Sie Themen, Stichwort oder ein neues Thema \'81ber die Hypertext-Verbindung ausw\'84hlen (s.u.). In der Bl\'84tter-Liste der Themen ist jedes Element des Hilfesystems enthalten.
+\par 
+\par Der in Rot dargestellte Hilfetext ist eine Hypertext-Verbindung, mit der Sie ein verwandtes Thema direkt anspringen k\rdblquote nnen. Sie w\'84hlen ein Thema aus, indem Sie das Thema mit der rechten oder linken Pfeiltaste hervorheben und anschlie\'e1
+end die Eingabetaste dr\'81cken. Oder mit der Maus, indem Sie das Thema anklicken, um es hervorzuheben. Alternativ k\rdblquote nnen Sie auch auf ein hervorgehobenes oder nicht hervorgehobenes Thema doppelklicken, um zu springen. Mit der Schaltfl\'84
+che "vorher" kehren Sie wieder zum urspr\'81nglichen Thema (Ihrem Ausgangspunkt) zur\'81ck.
+\par 
+\par \'9aber das {\ul Druck-System}{\v H.U_Print} k\rdblquote nnen Sie Lernhilfe-Themen ausdrucken.
+\par 
+\par {\fs28\cf6 >>H.U_Dial
+\par }@P H.Default H.U_Print
+\par                     {\i Umgang mit einem Dialogfeld
+\par }
+\par Dialogfelder werden mit einem Hinweis auf den Typ der Information angezeigt. Sie enthalten f\'81r gew\rdblquote hnlich einige bzw. alle nach-
+\par folgenden Elemente.
+\par 
+\par {\b Text-Meldungen
+\par }
+\par Diese Meldungen zeigen aktuelle Status-Informationen oder die Aufforderung zu einer notwendigen Aktion.
+\par 
+\par {\b Unterfenster}
+\par 
+\par Ist in einem Dialogfeld mehr als einen Arbeits- oder Anzeigebereich enthalten, dann nimmt jeder Bereich ein eigenes Unterfenster mit einem separaten Namen ein. Ist das Unterfenster aktiv, dann ist der Name hervorgehoben. So aktivieren Sie ein Unterfenster
+:
+\par 
+\par   * Sie k\rdblquote nnen mit der {\b TAB-Taste} und der {\b Umschalttaste+TAB
+\par }{\b  }   zwischen den Unterfenstern springen oder
+\par   * die {\b ALT-Taste }zusammen mit dem hervorgehobenen Buchstaben
+\par     im Namen des Unterfensters dr\'81cken oder
+\par   * irgendeinen Bereich innerhalb des Unterfensters mit der Maus
+\par     {\b anklicken.}
+\par 
+\par {\b Feld-Editor}
+\par 
+\par Ein Feld-Editor stellt einen Bereich f\'81r die Texteingabe zur Verf\'81gung. Mit der linken und rechten Pfeiltaste, der R\'81cktaste und den alphanumerischen Tasten bearbeiten Sie den Feldeintrag. Wenn das aktuelle Feld eine Texteingabe annimmt, die gr
+\rdblquote \'e1er als das Textfeld ist, dann erfolgt ein Bildlauf im Text.
+\par 
+\par {\b Kontrollk\'84stchen}
+\par 
+\par Ein Kontrollk\'84stchen ist eine Option, die entweder ein- oder ausgeschaltet ist. Eine Markierung in Klammern gibt den Status der Option an. In einem Unterfenster k\rdblquote nnen mehrere Felder markiert werden.
+\par 
+\par Sie bewegen sich in einem Kontrollk\'84stchen, indem Sie mit der
+\par TAB-Taste in das Unterfenster springen und mit den Tasten
+\par Pfeil-Nach-Oben und Pfeil-Nach-Unten das entsprechende Feld ansteuern. Alternativ k\rdblquote nnen Sie die ALT-Taste zusammen mit dem hervorgehobenen Buchstaben im Namen des Kontrollk\'84stchens dr\'81
+cken. Mit der Leertaste wird eine Option ein- oder ausgeschaltet. Ein Ansteuern des Kontrollk\'84stchens mit den Pfeiltasten aktiviert die Option nicht, ein Ansteuern mit der ALT-Taste jedoch schon. Die Auswahl eines Kontrollk\'84
+stchens mit der Maus erfogt \'81ber das Anzeigen und Anklicken.
+\par \pard \fi-1\li1 {\b 
+\par }{\b Optionsschalter
+\par }
+\par \pard Ein Optionsschalter ist eine Option, die entweder ein- oder ausgeschaltet ist. Eine Markierung in Klammern gibt den Status der Option an. Es kann nur jeweils ein Optionsschalter ausgew\'84hlt werden.
+\par 
+\par Sie bewegen sich auf einen Optionsschalter, indem Sie mit der TAB-Taste in das Unterfenster springen und mit den Tasten Nach-Oben und
+\par Nach-Unten das entsprechende Symbol ansteuern. Alternativ k\rdblquote nnen Sie die ALT-Taste zusammen mit dem hervorgehobenen Buchstaben im Namen des Optionsschalters dr\'81
+cken. Mit der Leertaste wird ein Optionsschalter ein- oder ausgeschaltet. Ein Ansteuern des Optionsschalters mit den Pfeiltasten aktiviert die Option nicht, ein Ansteuern mit der ALT-Taste schon. Wenn Sie mit der Maus arbeiten, dann w\'84
+hlen Sie den Optionsschalter an und klicken dann mit der linken Maustaste.
+\par 
+\par {\b Schaltfl\'84chen}
+\par 
+\par Aktions-Schaltfl\'84chen am unteren Rand eines Dialogfeldes zeigen wichtige Funktionstasten an. Die Taste, mit der die Funktion einer Schaltfl\'84che ausgew\'84hlt werden kann, ist in der Schaltfl\'84che hervorgehoben dargestellt. Dr\'81
+cken Sie die Taste allein oder mit der ALT-Taste. Die Auswahl mit der Maus erfolgt durch direktes Anklicken.
+\par 
+\par Die meisten Dialogfelder verf\'81gen \'81ber die Schaltfl\'84che{\b  Fertig}, mit der die Funktion des Feldes ausgef\'81hrt wird und \'81ber die Schaltfl\'84che {\b Abbruch,} mit der die Aktion abgebrochen und das Feld ausgeblendet wird. F\'81
+r die Auswahl der Schaltfl\'84che "Fertig" dr\'81cken Sie die Taste "F", ALT+F oder die Eingabetaste. Die Schaltfl\'84che "Abbruch" wird \'81ber "A", ALT+A oder die Eingabetaste ausgew\'84hlt.
+\par 
+\par Mit einem Dialogfeld wird eine Schaltfl\'84che in doppelten Klammern angezeigt. Diese Schaltfl\'84che gilt als {\b Voreinstellung}. Diese Schaltfl\'84che wird mit der Eingabetaste ausgew\'84hlt. Mit den Tasten {\b TAB} und {\b Umschalttaste+TAB}
+ kann eine andere Schaltfl\'84che als die aktuelle hervorgehoben und aktiviert werden.
+\par 
+\par {\fs28\cf6 >>H.U}{\fs28\cf6 _Print
+\par }@P H.Default H.U_Print
+\par                       {\i Umgang mit dem Drucksystem
+\par }
+\par \'9aber das ASQ-Drucksystem k\rdblquote nnen die Daten der Bildschirme, die Lektionen der Lernhilfe, die Definitionen des Glossars und der Hilfetext ausgedruckt werden.
+\par 
+\par Im ersten Unterfenster des Dialogfeldes "Druck" werden die verf\'81g-
+\par baren {\b Druck-Optionen} beschrieben. Jede Option verf\'81gt \'81ber ein Kontrollk\'84stchen, soda\'e1 mehr als eine Option ausgew\'84hlt werden kann.
+\par 
+\par Das zweite Unterfenster des Dialogfelds "Druck" enth\'84lt eine Liste der Ausgabeziele. Jedes Ziel verf\'81gt \'81ber einen Optionsschalter, soda\'e1 jeweils nur eines ausgew\'84hlt werden kann.
+\par 
+\par Wird die Druckausgabe in eine Datei geschrieben, dann schl\'84gt ASQ einen Namen f\'81r die Druckausgabe vor. Sie k\rdblquote nnen jede g\'81ltige Dateispezifikation eingeben.
+\par 
+\par Mit der {\b TAB}-Taste bewegen Sie sich zwischen Unterfenstern. F\'81r das Ausgabeziel "Drucker" k\rdblquote nnen Sie keinen Dateinamen angeben.
+\par 
+\par \pard Wenn Sie {\b alle Hilfe-Themen }drucken, gibt die Liste der Hilfe-Themen die Themen sowie deren Druckreihenfolge an.
+\par 
+\par Weitere Informationen erhalten Sie in der Erl\'84uterung zum Thema
+\par {\ul Umgang mit einem Dialogfeld}{\v H.U_Dial}.
+\par 
+\par {\fs28\cf6 >>H.Snp_Load
+\par }@P H.Snp_Load H.Snp_Clear
+\par                         {\i SnapShot-Datei laden
+\par }
+\par Die {\b SnapShot}-Datei speichert alle Informationen \'81ber Ihre aktuelle Hard- und Software-Konfiguration. \'9aber ASQ k\rdblquote 
+nnen diese Dateien jederzeit geladen und eingesehen werden, auch auf einem anderen System. ASQ legt diese Snapshot-Dateien in einem nicht editierbaren ASCII-Format mit der Standarderweiterung .ASQ an.
+\par 
+\par Eine SnapShot-Datei enth\'84lt eine Momentaufnahme (Schnappschu\'e1) einer fr\'81heren Systemkonfiguration. Wird diese unter ASQ geladen, dann spiegeln alle nachfolgenden ASQ-Bildschirme den Zustand des Systems zum Zeitpunkt der Momentaufnahme wieder und 
+{\b nicht }den aktuellen Zustand des Systems, auf dem ASQ abl\'84uft. Nachdem ein "Schnappschu\'e1" in das ASQ-Programm geladen wurde, erscheint sein Dateiname auf jeder Druckausgabe sowie in der Men\'81-Option {\ul Information der SnapShot-Datei anzeigen
+}{\v H.Snp_Info}.
+\par 
+\par Wird eine Snapshot-Datei geladen, dann zeigt ASQ ein Men\'81 der SnapShot-Dateien im aktuellen Verzeichnis an. Einen Kommentar zur Datei k\rdblquote nnen Sie diesen \'81ber die Schaltfl\'84che {\b Beschreibung} einsehen. W\'84hlen Sie die Option {\b 
+andere Datei}, um eine Datei von einem anderen Laufwerk oder Verzeichnis aus zu laden und geben Sie im Dialogfeld die Dateispezifikation ein. Diese Technik ist sehr hilfreich, wenn die Anzahl der Dateien in einem Verzeichnis zu gro\'e1 f\'81r ein Men\'81
+ ist.
+\par 
+\par N\'84here Informationen \'81ber das Dialogfeld der SnapShot-Dateiangabe erhalten Sie unter {\ul Umgang mit einem Dialogfeld}{\v H.U_Dial}.
+\par 
+\par Sie k\rdblquote nnen beim Start von ASQ automatisch eine SnapShot-Datei laden, indem Sie am DOS-Prompt {\b ASQ /L dateiname} eingeben. Bei Angabe des Parameters {\b /L} ohne Dateinamen l\'84dt ASQ die Datei SNAPSHOT.ASQ, falls diese vorhanden ist.
+\par 
+\par Snapshot-Dateien sollten von {\b keinem} anderen Programm au\'e1er ASQ angezeigt oder ver\'84ndert werden.
+\par 
+\par {\fs28\cf6 >>H.Snp_Save
+\par }@P H.Snp_Load H.Snp_Clear
+\par                   {\i In eine Snapshot-Datei speichern
+\par }
+\par Die {\b SnapShot}-Datei speichert alle Informationen \'81ber Ihre aktuelle Hard- und Software-Konfiguration. \'9aber ASQ k\rdblquote 
+nnen diese Dateien jederzeit geladen und eingesehen werden, auch auf einem anderen System. ASQ legt diese Snapshot-Dateien in einem nicht editierbaren ASCI
+I-Format mit der Standarderweiterung .ASQ an. Das Anlegen einer SnapShot-Datei hat keine Auswirkung auf den aktuellen Betriebsmodus von ASQ.
+\par 
+\par Beim Abspeichern einer SnapShot-Datei k\rdblquote nnen Sie einen {\b Kommentar }f\'81r eine sp\'84tere Bezugnahme einf\'81gen. Durch den Einsatz von Kommentaren und entsprechenden Dateinamen k\rdblquote nnen Sie einen {\b Katalog }Ihrer System-"Schnappsch
+\'81sse" anlegen. Sie k\rdblquote nnen somit "Schnappsch\'81sse" vor, w\'84hrend und nach einer Ver\'84nderung Ihrer System-Hardware sammeln. Es ist auch m\rdblquote glich, Informationen \'81
+ber Systeme anderer Anwender zu sammeln. Soll ein Anderer, zum Beispiel der Technische Kundendienst von Qualitas, Ihr System \'81berpr\'81fen dann kann ein entsprechender "Schnappschu\'e1" sehr hilfreich sein. Wir empfehlen Ihnen einen "Schnappschu\'e1
+" vor und nach der {\b Installation }neuer Software auf Ihrem System vorzunehmen. Ein Vergleich dieser SnapShot-Dateien kann Ihnen helfen, Fehler zu finden und deren Ursache zu erkennen.
+\par 
+\par Bevor Sie \'81ber ASQ eine SnapShot-Datei anlegen, sollten Sie die Option{\b  Leeren }aus dem Dateimen\'81 ausw\'84hlen. Diese Option l\rdblquote scht jede SnapShot-Information aus dem Speicher und macht Platz f\'81
+r eine neue Analyse Ihres Systems. Wenn Sie einen "Schnappschu\'e1" erstellen und diesen ohne die Option {\b Leeren} speichern, basiert diese Moment-
+\par aufnahme auf einen fr\'81heren "Schnappschu\'e1" und nicht auf der aktuellen Systemkonfiguration. Das kann jedoch sehr hilfreich sein, wenn Sie eine \'8enderung im Dateinamen oder im Kommentar der Snapshot-Datei vornehmen wollen.
+\par 
+\par Es ist auch m\rdblquote glich eine SnapShot.Datei anzulegen, ohne ASQ zu starten. Tippen Sie dazu am DOS-Prompt {\b SNAPSHOT [dateiname] [/D beschreibung]}. Ohne Angaben zum Dateinamen erh\'84
+lt die Datei automatisch den Namen SNAPSHOT.ASQ. Mit der Option /D nehmen Sie eine Beschreibung (Kommentar) in die SnapShot-Datei auf.
+\par 
+\par Snapshot-Dateien sollten von {\b keinem} anderen Programm au\'e1er ASQ angezeigt oder ver\'84ndert werden.
+\par 
+\par Weitere Informationen \'81ber das Dialogfeld der SnapShot-Dateiangabe erhalten Sie unter {\ul Umgang mit einem Dialogfeld}{\v H.U_Dial}.
+\par 
+\par {\fs28\cf6 >>H.Snp_Info
+\par }@P H.Snp_Load H.Snp_Clear
+\par                 {\i Information der Snapshot-Datei anzeigen
+\par }
+\par Das Info-Men\'81 der Snapshot-Funktion zeigt Informationen der derzeit {\b geladenen} SnapShot-Datei (falls vorhanden), einschlie\'e1lich Erstellungsdatum und -zeit sowie SnapShot-Kommentar.
+\par 
+\par {\fs28\cf6 >>H.Snp_Clear
+\par }@P H.Snp_Load H.Snp_Clear
+\par                      {\i SnapShot-Information l\rdblquote schen
+\par }
+\par Mit der Option "Leeren" wird die SnapShot-Information aus dem Speicher entfernt. Es entsteht somit Platz f\'81r eine neue Analyse Ihres Systems mit ASQ.
+\par 
+\par Diese Option l\rdblquote scht jedoch {\b nicht }die SnapShot-Datei auf der Festplatte.
+\par 
+\par {\fs28\cf6 >>H.Mem_Sum
+\par }@P H.Mem_Sum H.Mem_Tim
+\par                           {\i Speicher-\'9abersicht
+\par }
+\par Es wird eine \'9abersicht der {\b Speicherbelegung} angezeigt. Diese enth\'84lt Programme und andere Speicherelemente, die in der Lade-
+\par Reihenfolge gelistet werden.
+\par 
+\par Links befindet sich der{\b  Name} des residenten Programmes im Speicher, daneben erscheint die Gr\rdblquote \'e1e des Programmes in Kilobyte. In der \'9a
+bersicht sind nicht nur Programme enthalten, sondern auch Einheiten-Treiber, der Video-Speicherbereich und der EMS-Seiten-
+\par Rahmen.
+\par 
+\par In der {\b Lernhilfe }sind weitere Informationen zu diesem Thema enthalten.
+\par 
+\par {\fs28\cf6 >>H.Mem_Low
+\par }@P H.Mem_Sum H.Mem_Tim
+\par                     {\i LoDOS Speicher-Information
+\par }
+\par Diese Anzeige gibt eine \'9abersicht \'81ber den genutzten {\b LoDOS}-
+\par Speicher, der nach Anfangsadressen organisiert ist.
+\par 
+\par Links befindet sich der Name des residenten Programmes/Treibers, gefolgt von
+\par   
+\par   * {\b Anfangsadresse}
+\par   * {\b L\'84nge }in Byte
+\par   * Umgebungsvariablen des Programmes oder einer anderen 
+\par     Zeichenfolge (falls vorhanden), welche den {\b Namen }des
+\par     residenten Programmes/Treibers bezeichen.
+\par     Bezeichnet der Name einen Einheiten-Treiber, dann werden
+\par     in der \'9abersicht alle ihm zugeschriebenen Bits (Bin\'84rzeichen)
+\par     angezeigt.
+\par 
+\par In der {\b Lernhilfe }sind weitere Informationen zu diesem Thema enthalten.
+\par 
+\par {\fs28\cf6 >>H.Mem_Hi
+\par }@P H.Mem_Sum H.Mem_Tim
+\par                     {\i HiDOS Speicher-Information
+\par }
+\par Diese Anzeige gibt eine \'9abersicht \'81ber den genutzten {\b HiDOS}-
+\par Speicher, der nach Anfangsadressen organisiert ist.
+\par 
+\par Links befindet sich der Name des residenten Programmes/Treibers, gefolgt von
+\par   
+\par   * {\b Anfangsadresse}
+\par   * {\b L\'84nge }in Byte
+\par   * Umgebungsvariablen des Programmes oder einer anderen
+\par     Zeichenfolge (falls vorhanden), welche den {\b Namen }des residenten
+\par     Programmes/Treibers bezeichen.
+\par     Bezeichnet der Name einen Einheiten-Treiber, dann werden
+\par     in der \'9abersicht alle ihm zugeschriebenen Bits (Bin\'84rzeichen)
+\par     angezeigt.
+\par \pard 
+\par In der {\b Lernhilfe }sind weitere Informationen zu diesem Thema enthalten.
+\par 
+\par {\fs28\cf6 >>H.Mem_ROM
+\par }@P H.Mem_Sum H.Mem_Tim
+\par                        {\i ROM Scan-Information
+\par }
+\par Diese \'9abersicht zeigt die Adressen der ROMs im Speicher im Verh\'84ltnis zu den anderen Speichertypen im HiDOS-Bereich.
+\par 
+\par   * {\b RAM}-Speicher (physische RAMs auf Adapterkarten)
+\par   * {\b HiDOS}-Speicher, genutzt
+\par   * {\b EMS} (Expanded Memory)
+\par   * {\b unbenutzte }(nicht zugeordnete) Speicherbereiche
+\par 
+\par Dieser Bildschirm gibt die Adressen jedes einzelnen Speichertyps an sowie deren Gr\rdblquote \'e1e in Kilobyte. Angaben in Klammern {\b []} markieren \'81berschneidende Speicherbereiche.
+\par 
+\par {\b HINWEIS:} Bei inaktiver Karte k\rdblquote nnen ROM und RAM auf bestimmten Adapterkarten (insbesondere bei lokalen Netzwerken) nicht erkannt werden. Das Diagramm enth\'84lt m\rdblquote glicherweise keine korrekten Angaben \'81ber
+ ROM und/oder RAM auf diesen Karten.
+\par 
+\par Die {\b Lernhilfe }enth\'84lt weitere Informationen zu diesem Thema.
+\par 
+\par {\fs28\cf6 >>H.Mem_Int
+\par }@P H.Mem_Sum H.Mem_Tim
+\par                        {\i Interrupt-Information
+\par }
+\par Die {\b Interrupt-Information} verf\'81gt \'81ber zwei Anzeige-Formate:
+\par 
+\par In der ersten Anzeige wird am linken Bildschirmrand der {\b Name }
+des durch die Interrupts (Unterbrechungsvektoren) gesteuerten Programmes angegeben, gefolgt von seinen Anfangsadressen und seinen Interrupt-Nummern. Die Elemente der Liste sind nach Adressen geordnet.
+\par 
+\par Die zweite Anzeige enth\'84lt die Information in {\b aufsteigender }Folge der Interrupt-Nummern mit folgenden Daten:
+\par 
+\par   * {\b Titel (Bezeichnung)} des Interrupts
+\par   * {\b Interrupt-Nummer}
+\par   * {\b Name }des durch den Interrupt gesteuerten Programmes
+\par   * {\b Adresse }des Programmes.
+\par 
+\par Unbenutzte Interrupts sind {\b reserviert}. Sie bieten Platz f\'81r zuk\'81nftige Erweiterungen in der Hardware oder im Betriebssystem.
+\par 
+\par Die {\b Lernhilfe }enth\'84lt weitere Informationen zu diesem Thema.
+\par 
+\par {\fs28\cf6 >>H.Mem_Ext
+\par }@P H.Mem_Sum H.Mem_Tim
+\par                     {\i Extended Memory-Information
+\par }
+\par Dieser Bildschirm zeigt das Extended Memory einschlie\'e1lich der verf\'81gbaren und genutzten Speicherbereiche. Die Speicherbl\rdblquote cke erscheinen in folgender Reihenfolge: 
+\par 
+\par   * {\b Anfangsadressen }
+\par   * {\b Gesamtgr\rdblquote \'e1e} in Kilobyte.
+\par 
+\par Die {\b Lernhilfe }enth\'84lt weitere Informationen zu diesem Thema.
+\par 
+\par {\fs28\cf6 >>H.Mem_Exp
+\par }@P H.Mem_Sum H.Mem_Tim
+\par                {\i Expanded (EMS) Memory-Information 
+\par }
+\par Dieser Bildschirm enth\'84lt Informationen \'81ber das Expanded Memory:
+\par 
+\par   {\b Information------------     Be}{\b schreibung-----------------------}
+\par   EMS-Version                 LIM-Version des EMS-Treibers, 
+\par                               falls installiert
+\par   Windows Version             Windows-Versionsnummer,
+\par                               falls Windows aktiv ist
+\par   VCPI-Version                Zahlenwert der VCPI-Version
+\par   Rahmen                      Adresse des EMS-Seiten-Rahmens
+\par   Abbildb. phys. Seiten       Anzahl EMS-Seiten
+\par   EMS-Handles                 Anzahl EMS-Handles (Einheiten)
+\par   AMRS                        Anzahl 'Alternate Map Register Sets'
+\par 
+\par Als n\'84chstes folgt eine Gr\rdblquote \'e1enangabe sowie eine Beschreibung jedes installierten {\b EMS-Handle} (Einheitennummer).
+\par 
+\par Die {\b Lernhilfe }enth\'84lt weitere Informationen zu diesem Thema.
+\par 
+\par {\fs28\cf6 >>H.Mem_EMS
+\par }@P H.Mem_Sum H.Mem_Tim
+\par                         {\i EMS-Speicherbelegung
+\par }
+\par Eine Grafik zeigt die {\b EMS-Belegung} innerhalb des ersten Speicher-
+\par Megabyte mit Angabe der abbildbaren EMS-Seiten.
+\par 
+\par Die Symbole in der grafischen Leiste bezeichnen:
+\par 
+\par   * {\b nicht genutzte} Speicherbereiche f\'81r die EMS-Zuweisung
+\par   * von {\b DOS} beanspruchte Speicherbereiche
+\par   * die Adresse des {\b EMS-Seiten-Rahmen}
+\par   * den vom {\b Bildschirm-Adapter} genutzten Speicher
+\par   * Speicher, der vom {\b System-ROM} genutzt wird und
+\par   * reservierte {\b RAM}-Speicherbereiche.
+\par 
+\par Unterhalb der grafischen Leiste werden die abgebildeten {\b EMS-Seiten} mit deren Adressen gelistet.
+\par 
+\par Die {\b Lernhilfe }enth\'84lt weitere Informationen zu diesem Thema.
+\par 
+\par {\fs28\cf6 >>H.Mem_XMS
+\par }@P H.Mem_Sum H.Mem_Tim
+\par                       {\i XMS-Speicherbelegung
+\par }
+\par Dieser Bildschirm enth\'84lt Informationen \'81ber den XMS-Speicher.
+\par 
+\par   {\b Information-------------     Beschreibung-------------------}
+\par   Version                      XMS-Version
+\par   Treiber                      Versionsnummer der XMS-Treibers
+\par   Gesamtbetrag UMBs            Gesamtbetrag der durch XMS
+\par \pard   (UMBs=Upper Memory Blocks)   zugewiesenen UMBs
+\par   Gr\rdblquote \'e1ter verf\'81gbarer UMB-     gr\rdblquote \'e1ter zusammenh\'84ngender UMB-
+\par   Bereich                      Speicherblock
+\par   Gesamtbetrag Extended        Gesamtbetrag der durch XMS
+\par   Memory (EMB)                 zugewiesenen Extended Memoy-Bl\rdblquote cke
+\par   Gr\rdblquote \'e1ter verf\'81gbarer          gr\rdblquote \'e1ter zusammenh\'84ngender EMB- 
+\par   EMB-Bereich                  Speicherblock.
+\par   High Memory Area (HMA)       gibt an, ob die HMA vorhanden
+\par                                oder nicht f\'81r XMS verf\'81gbar ist
+\par   EMB-Handles verf\'81gbar        Zahl der verf\'81gbaren EMB-Handles
+\par   A20 Adress-Leitung           gibt an, ob die A20 Adress-Leitung
+\par                                aktiv oder inaktiv ist. Bei aktiver
+\par                                Leitung A20 hat XMS Zugriff auf
+\par                                die High Memory Area (HMA)
+\par   DPMI-Version                 Version des aktuellen DOS
+\par                                Protected Mode Interface
+\par   Unterst\'81tzung f\'81r            gibt an, ob 32-Bit Programme derzeit
+\par   32-bit-Programme             unterst\'81tzt werden
+\par 
+\par Die {\b Lernhilfe }enth\'84lt weitere Informationen zu diesem Thema.
+\par 
+\par {\fs28\cf6 >>H.Mem_Tim
+\par }@P H.Mem_Sum H.Mem_Tim
+\par                       {\i Speicher-Geschwindigkeit
+\par }
+\par Dieser Bildschirm zeigt die Testergebnisse f\'81r die Speicher-
+\par Zugriffsgeschwindigkeit. Die Tabelle enth\'84lt die Zugriffs-
+\par geschwindigkeiten f\'81r folgende Speichertypen:
+\par 
+\par   * {\b LoDOS}-Bereich (d.h. unterhalb 640 KB)
+\par   * Drei reservierte {\b Bildschirm-Speicherbereiche} mit den
+\par     Anfangsadressen A000, B000 und B800
+\par   * {\b Video ROM}-Bereich, falls verf\'81gbar
+\par   * {\b EMS-Seiten-Rahmen}, falls verf\'81gbar
+\par   * {\b System ROM}-Bereich
+\par 
+\par Der Bildschirm enth\'84lt Angaben \'81ber:
+\par 
+\par   * Anfangsadresse {\b Hexa}-dezimal
+\par   * Anfangsadresse in {\b Kilobyte}
+\par   * {\b Gr\rdblquote \'e1}{\b e} in Kilobyte
+\par   * mittlere {\b Zugriffszeit} in Mikrosekunden
+\par   * {\b Geschwindigkeits-Verh\'84ltnis} in einer relativen Messung.
+\par     Die Zugriffszeit f\'81r jeden Speichertyp erscheint als ein
+\par     Prozentsatz des schnellsten Speicher im System
+\par     (mit 100% angezeigt).
+\par 
+\par Die Zugriffszeit f\'81r das Extended Menory wird nicht gemessen.
+\par 
+\par Die {\b Lernhilfe }enth\'84lt weitere Informationen zu diesem Thema.
+\par 
+\par {\fs28\cf6 >>H.Cfg_Sum
+\par }@P H.Cfg_Sum H.Cfg_CMO
+\par                     {\i Konfigurations-\'9abersicht
+\par }
+\par Die Konfigurations-\'9abersicht zeigt die Einstellungen der DOS-{\b Umgebungsvariablen}. Der erste Bildschirm zeigt Voreinstellungen in DOS und in der CONFIG.SYS Datei:
+\par 
+\par   {\b Information    Beschreibung------------------------------------}
+\par   DOS-Version    DOS-Version
+\par   Files          Einstellung des DOS-Befehls FILES
+\par   Buffers        Einstellung des DOS-Befehls BUFFERS
+\par   FCBs           Einstellung des DOS-Befehls FCBS
+\par   Stacks         Einstellung des DOS-Befehls STACKS
+\par   Lastdrive      Einstellung des DOS-Befehls LASTDRIVE
+\par   Break          Einstellung des DOS-Befehls BREAK
+\par   COUNTRY=       Einstellung des Befehls COUNTRY, falls in
+\par                  CONFIG.SYS enthalten
+\par   DRIVPARM=      Einstellung des Befehls DRIVPARM, falls in
+\par                  CONFIG.SYS enthalten
+\par   SHELL=         Einstellung des Befehls SHELL, falls in 
+\par                  CONFIG.SYS enthalten
+\par 
+\par   Environment (Umgebung):
+\par 
+\par   Gr\rdblquote \'e1e        - der DOS-Umgebung zugeordneter Speicherbetrag
+\par   benutzt      - der von DOS-Umgebungsvariablen belegte Bereich
+\par 
+\par Der n\'84chste Bildschirm zeigt die in der AUTOEXEC.BAT Datei oder am DOS-Prompt spezifizierten Einstellungen der {\b Umgebungsvariablen}. Diese Einstellungen entsprechen denjenigen des DOS-Befehls "SET".
+\par 
+\par Die Konfigurations-\'9abersicht endet mit der Anzahl Dateisteuerbl\rdblquote cke
+\par (FCBs = File Control Blocks) und einer Liste der offenen Dateien.
+\par 
+\par Lesen Sie dazu auch die Informationen im Handbuch des DOS Betriebssystems.
+\par 
+\par In der Lernhilfe sind weitere Informationen \'81ber dieses Thema enthalten.
+\par 
+\par {\fs28\cf6 >>H.Cfg_CFG
+\par }@P H.Cfg_Sum H.Cfg_CMO
+\par                      {\i Anzeige der Datei CONFIG.SYS
+\par }
+\par Der Datei-Betrachter zeigt C:\\{\b CONFIG.SYS} (falls vorhanden) an. Wenn das System \'81ber das Laufwerk C: verf\'81gt, aber von einer Diskette gestartet wird, dann tippen Sie {\b ASQ /F A:.}
+ Dann liest ASQ die Datei CONFIG.SYS von der Diskette ein. Wird die Datei \'81ber ein anderes Laufwerk oder einen anderen Pfad gestartet, dann wird sie nicht angezeigt. 
+\par 
+\par Sie k\rdblquote nnen CONFIG.SYS mit dem {\b MAX Editor} oder jedem Standard-
+\par Texteditor ver\'84ndern, nicht jedoch mit dem Datei-Betrachter.
+\par 
+\par \pard \fi-2\li2 Weitere Informationen \'81ber die Anzeige dieser Datei erhalten Sie unter {\ul Datei-Betrachter anwenden}{\v H.U_Browse}.
+\par \pard 
+\par Die Lernhilfe enth\'84lt weitere Informationen \'81ber dieses Thema.
+\par \pard 
+\par {\fs28\cf6 >>H.Cfg_AUT
+\par }@P H.Cfg_Sum H.Cfg_CMO
+\par                     {\i Anzeige der Datei AUTOEXEC.BAT
+\par }
+\par Der Datei-Betrachter zeigt C:\\{\b AUTOEXEC.BAT} (falls vorhanden) an. Wenn das System \'81ber das Laufwerk C: verf\'81gt, aber von einer Diskette gestartet wird, dann tippen Sie {\b ASQ /F A:}. Dann liest ASQ die Datei AUTOEXEC.BAT von der Diskette ein
+. Wird die Datei \'81ber ein anderes Laufwerk oder einen anderen Pfad gestartet, erfolgt keine Anzeige. 
+\par 
+\par Sie k\rdblquote nnen AUTOEXEC.BAT mit dem {\b MAX Editor} oder jedem Standard-
+\par Texteditor ver\'84ndern, nicht jedoch mit dem Datei-Betrachter.
+\par 
+\par \pard \fi-2\li2 Weitere Informationen \'81ber die Anzeige dieser Datei erhalten Sie unter {\ul Datei-Betrachter anwenden}{\v H.U_Browse}.
+\par \pard 
+\par Die Lernhilfe enth\'84lt weitere Informationen \'81ber dieses Thema.
+\par 
+\par 
+\par {\fs28\cf6 >>H.Cfg_PRO
+\par }@P H.Cfg_Sum H.Cfg_CMO
+\par                         {\i Anzeige der .PRO Datei
+\par }
+\par Der Datei-Betrachter zeigt die Dateien {\b 386MAX.PRO}, {\b BLUEMAX.PRO} oder  {\b MOVE'EM.PRO} an, falls auf diese in CONFIG.SYS eine Referenz vor-
+\par handen ist.
+\par 
+\par Bei der Installation einer Memory Management Software von Qualitas wird automatisch eine dieser Dateien angelegt sowie eine Referenz in die CONFIG.SYS Datei aufgenommen. Dies geschieht \'81
+ber die Befehle DEVICE= und PRO=. Profildateien, auf die nicht aus CONFIG.SYS Bezug genommen ist, werden nicht angezeigt.
+\par 
+\par Sie k\rdblquote nnen die PROfil-Datei mit dem {\b MAX Editor} oder jedem Standard-
+\par Texteditor ver\'84ndern, nicht jedoch mit dem Datei-Betrachter.
+\par 
+\par \pard \fi-2\li2 Weitere Informationen \'81ber die Anzeige dieser Datei erhalten Sie unter {\ul Datei-Betrachter anwenden}{\v H.U_Browse}.
+\par \pard 
+\par Die Lernhilfe enth\'84lt weitere Informationen \'81ber dieses Thema.
+\par 
+\par 
+\par \pard\plain \s1 \f11\fs28\cf6\lang1033 >>H.Cfg_EPro
+\par \pard\plain \f11\lang1033 @P H.Cfg_Sum H.Cfg_CMO
+\par                    {\i Anzeige der Datei EXTRADOS.PRO
+\par }
+\par Die ExtraDOS.PRO Datei wird angezeigt, falls eine Referenz auf diese Datei in CONFIG.SYS enthalten ist. Bei der Installation einer Memory Management Software von Qualitas w
+ird diese Datei angelegt und die Referenz in die CONFIG.SYS Datei aufgenommen. Dies geschieht \'81ber die Befehle DEVICE= und PRO=. Eine Profildatei, auf die nicht aus CONFIG.SYS Bezug genommen ist, wird nicht angezeigt.
+\par 
+\par Sie k\rdblquote nnen die PROfil-Datei mit dem {\b MAX Editor} oder jedem Standard-
+\par Texteditor ver\'84ndern, nicht jedoch mit dem Datei-Betrachter.
+\par 
+\par \pard \fi-2\li2 Weitere Informationen \'81ber die Anzeige dieser Datei erhalten Sie unter {\ul Datei-Betrachter anwenden}{\v H.U_Browse}.
+\par \pard 
+\par Die Lernhilfe enth\'84lt weitere Informationen \'81ber dieses Thema.
+\par 
+\par \pard\plain \s1 \f11\fs28\cf6\lang1033 >>H.Cfg_SYSINI
+\par \pard\plain \f11\lang1033 @P H.Cfg_Sum H.Cfg_CMO
+\par                        {\i Anzeige der Datei SYSTEM.INI
+\par }
+\par Die Datei SYSTEM.INI im Windows-Verzeichnis wird angezeigt. Wenn die Datei auf einem anderen Laufwerk bzw. in einem anderen Verzeichnis liegt und nicht \'81
+ber die Pfad-Anweisung oder aufgrund einer Angabe bei der Installation zu finden ist, wird sie nicht angezeigt.
+\par 
+\par Sie k\rdblquote nnen die Datei SYSTEM.INI mit dem {\b MAX Editor} oder jedem Standard-Texteditor ver\'84ndern, nicht jedoch mit dem Datei-Betrachter.
+\par 
+\par \pard \fi-2\li2 Weitere Informationen \'81ber die Anzeige dieser Datei erhalten Sie unter {\ul Datei-Betrachter anwenden}{\v H.U_Browse}.
+\par \pard 
+\par Die Lernhilfe enth\'84lt weitere Informationen \'81ber dieses Thema.
+\par 
+\par 
+\par {\fs28\cf6 >>H.U_Browse
+\par }@P H.Cfg_Cfg H.U_Browse
+\par                        {\i Datei-Betrachter anwenden}
+\par 
+\par {\b Der Bildschirm des Datei-Betrachters}
+\par 
+\par Der Datei-Betrachter zeigt den aktuellen {\b Dateinamen} in einem Fenster. Es erscheint ein Zeilen/Spalten-Z\'84hler in der oberen rechten Ecke des Betrachter-Fensters. Die erste Zahl gibt die Zeile der ak
+tuellen Cursor-Position an, die zweite Zahl bezeichnet die Gesamtzahl der Zeilen in der Datei, und die dritte Zahl bezeichnet die aktuelle Spaltenposition.
+\par 
+\par Der Datei-Betrachter hat eine maximale Zeilenl\'84nge von {\b 256} Zeichen. Wenn Sie eine Datei mit einer l\'84ngeren Zeile laden, kann dies zu einem Datenverlust f\'81hren. Die maximale Anzahl der Zeilen in einer Datei wird durch die Speicherkapazit\'84
+t begrenzt und kann von System zu System unterschiedlich sein. Die meisten Systeme k\rdblquote nnen Dateien mit einigen Tausend Zeilen verwalten.
+\par 
+\par {\b Tastatur benutzen}
+\par 
+\par In der ersten Zeile des Anzeigenfensters befindet sich ein Cursor, auch wenn im Text gebl\'84ttert wird.
+\par 
+\par Sie k\rdblquote nnen sich mit folgenden Funktionstasten im Text bewegen:
+\par 
+\par   * {\b STRG+Ende}            - springt zum Ende der Datei
+\par   * {\b STRG+POS1}            - springt zum Anfang der Datei
+\par   * {\b STRG+Bild-Nach-Unten} - springt einen Bildschirm (74 Spalten)
+\par                            nach rechts
+\par   * {\b STRG+Bild-Nach-Oben  }- springt einen Bildschirm (74 Spalten)
+\par                            nach links
+\par   * {\b Nach-Unten }          - rollt den Text in der Anzeige eine Zeile
+\par                            aufw\'84rts
+\par   * {\b Ende}                 - springt zum Ende der ersten Zeile im
+\par                            Anzeigefenster
+\par \pard \fi-1\li1   * {\b ESC-Taste }           - beendet Datei-Betrachter
+\par \pard   * {\b POS1         }        - springt zum Anfang der ersten Zeile im
+\par                            Anzeigefenster
+\par   * {\b Nach-Links }          - verschiebt den Text um ein Zeichen nach
+\par                            links
+\par   * {\b Bil}{\b d-Nach-Unten}      - springt einen Bildschirm nach unten
+\par   * {\b Bild-Nach-Oben  }     - springt einen Bildschirm nach oben
+\par   * {\b Nach-Rechts          }- verschiebt den Text um ein Zeichen nach
+\par                            rechts
+\par   * {\b Nach-Oben }           - rollt den Text in der Anzeige eine Zeile 
+\par                            abw\'84rts
+\par 
+\par \pard\plain \s1 \f11\fs28\cf6\lang1033 >>H.Cfg_Qualitas
+\par \pard\plain \f11\lang1033 @P H.Cfg_Sum H.Cfg_CMO
+\par                     {\i Qualitas Produkt-Informationen
+\par }
+\par \pard \fi-2\li2 Die Qualitas Produkt-Information zeigt Daten zu ben\rdblquote tigten Qualitas Programmen, deren Gr\rdblquote \'e1e und Dateidatum. Informationen \'81ber residente Programme wird ebenso gelistet; diese Daten k\rdblquote 
+nnen zur Fehlerbehebung vorteilhaft sein.
+\par 
+\par \pard Die {\b Lernhilfe }enth\'84lt weitere Informationen zu diesem Thema.
+\par 
+\par \pard\plain \s1 \f11\fs28\cf6\lang1033 >>H.Cfg_Windows
+\par \pard\plain \f11\lang1033 @P H.Cfg_Sum H.Cfg_CMO
+\par                   {\i Anzeige von Windows-Informationen
+\par }
+\par Diese Windows-Informationen werden angezeigt, wenn Windows in der Pfad-Anweisung enthalten ist. Die Information umfa\'e1t auch Windows-Treiber, die aktuell aufgrund von Eintr\'84gen in der SYSTEM.INI geladen sind. Diese Informationen k\rdblquote 
+nnen zur Fehlerbehebung vorteilhaft sein.
+\par \pard \fi-2\li2 
+\par \pard Die {\b Lernhilfe }enth\'84lt weitere Informationen zu diesem Thema.
+\par 
+\par {\fs28\cf6 >>H.Cfg_CMO
+\par }@P H.Cfg_Sum H.Cfg_CMO
+\par                        {\i CMOS Detail-Information
+\par }
+\par Die CMOS-Daten des Systems werden angezeigt.
+\par 
+\par   {\b Information   Beschreibung------------------------------------}
+\par   CMOS-Info     Bedeutung einer bestimmten CMOS-Adresse
+\par   Byte          Offset der CMOS-Anfangsadresse
+\par   Wert          numerische Werte der CMOS-Speicheradresse.
+\par 
+\par Die {\b Lernhilfe }enth\'84lt weitere Informationen zu diesem Thema.
+\par 
+\par {\fs28\cf6 >>H.Hdw_Sum
+\par }@P H.Hdw_Sum H.Hdw_BIOS
+\par                        {\i Maschinen-Ausstattung
+\par }
+\par Dieser Bildschirm enth\'84lt Informationen \'81ber die verwendete Hardware:
+\par 
+\par   {\b Information----------     Beschreibung----------------------}
+\par   Computer-Typ              PC-Ausf\'81hrung in allgemeiner Form
+\par                             (z.B. AT, PS/2, 386, etc.) oder
+\par                             ein Sondermodell, falls bekannt
+\par   DOS Betriebssystem        aktuelle DOS-Version
+\par   Hauptprozessor (CPU)      Typ und Geschwindigkeit der CPU
+\par   Koprozessor               Typ des math. Koprozessors, falls einer
+\par                             installiert ist
+\par   CPU-Takt in MHz           durchschnittliche Geschwindigkeit
+\par                             des Prozessors (Zentraleinheit)
+\par   Bus-Typ                   ISA (Industry Standard Architecture),
+\par                             EISA (Extended ISA) oder
+\par                             MC (Mikro-Kanal)
+\par   BIOS Hersteller           Hersteller des ROM BIOS-Chips
+\par   BIOS Ausgabe-Datum        Ausgabedatum des ROM BIOS-Chips
+\par   BIOS Modell               BIOS-Kennzeichen f\'81r den Computertyp
+\par                             (normalerweise aus Interrupt 15).
+\par   BIOS Untermodell          Bezeichnung f\'81r den Code des
+\par                             BIOS-Modells
+\par   BIOS Revision             Ausgabeversion der BIOS-Software
+\par   BIOS CRC                  Wert der BIOS-CRC, gefolgt von der
+\par   (Cyclical Redundancy      Gr\rdblquote \'e1e des BIOS in KB (normalerweise 64 
+\par    Check = zyklische        oder 128); BIOS-CRC ist m\rdblquote glicherweise
+\par    Blockpr\'81fung)            nicht sehr sinnvoll, wenn ROM-Adressen
+\par                             durch die Memory Management Software 
+\par                             genutzt und neu abgebildet werden
+\par   Chipset                   Chipset von Chips & Technologies 
+\par                             (z.B- AT/386, NEAT, NEAT < 1 MB), 
+\par                             falls vorhanden
+\par   Disketten-Laufwerke       Anzahl Diskettenlaufwerke, die
+\par   laut BIOS                 vom BIOS erkannt wurden
+\par   Festplatten-Laufwerke     Anzahl Festplatten, die vom BIOS
+\par   laut BIOS                 erkannt wurden
+\par   logische Platten          Anzahl und Buchstaben aller Laufwerke
+\par   Video-Adapter             Typ des Bildschirmadapters und dessen
+\par                             Speicherkapazit\'84t
+\par   Video-Modus               aktueller Anzeigenmodus des Bildschirms
+\par   serielle Ports            Anzahl und Adressen aller 
+\par                             seriellen Schnittstellen
+\par   parallele Ports           Anzahl und Adressen aller 
+\par                             parallelen Schnittstellen
+\par \pard   Tastatur                  Tastaturausf\'81hrung (Standard- oder 
+\par                             erweiterte Tastatur)
+\par   Maus                      Maus-Informationen, einschlie\'e1lich der
+\par                             Treiber-Version und des Interrupts
+\par   Game-Adapter              gibt an, ob ein Adapter f\'81r Spiele
+\par                             (Games) vorhanden ist
+\par   LIM-Standard              EMS LIM-Version, falls vorhanden
+\par   System-Zeit               aktuelle System-Zeit
+\par   System-Datum              aktuelles System-Datum
+\par   System-Basisspeicher      Gesamtbetrag des Basisspeichers in
+\par                             der CMOS-Konfiguration
+\par   Speicher-Erweiterung      Gesamtbetrag des Extended Memory
+\par                             (aus der CMOS-Konfiguration)
+\par   Diskettenlaufwerke        Speicherkapazit\'84t eines jeden
+\par                             Diskettenlaufwerks
+\par   Festplatte                Speicherkapazit\'84t jeder Festplatte
+\par 
+\par F\'81r Mikrokanal-Maschinen werden folgende Adapterdaten angezeigt:
+\par 
+\par   {\b Information   Beschreibung----------------------------------}
+\par   Slot          Steckplatz der Systemkarte
+\par   ID            Kennzeichen der Mikrokanal-Adapterkarte
+\par   Adaptername   Beschreibung des Adapter aus der ADF-Datei oder 
+\par                 "unbekannt", falls die Datei beim Systemstart nicht
+\par                 verf\'81gbar war
+\par 
+\par Die {\b Lernhilfe }enth\'84lt weitere Informationen zu diesem Thema.
+\par 
+\par {\fs28\cf6 >>H.Hdw_Vid
+\par }@P H.Hdw_Sum H.Hdw_BIOS
+\par                       {\i Bildschirm-Information
+\par }
+\par Dieser Bildschirm enth\'84lt Informationen \'81ber das Bildschirm-
+\par Ausgabeger\'84t:
+\par 
+\par   {\b Information----    Beschreibung-------------------------------}
+\par   Adapter-Typ        Standard des Bildschirmadapters
+\par                      z.B. MDA, CGA, EGA, VGA, SVGA
+\par   Hersteller         Hersteller des Bildschirm-Adapters
+\par   Adapter-Modell     Modell-Kennzeichen des Adapter-
+\par                      Herstellers
+\par   Speicher           Speicherbetrag, der vom Bildschirm-
+\par                      Adapter gemeldet wird
+\par   Anzeige-Modus      aktueller Anzeigemodus: Farbe/Monochrom
+\par   Kapazit\'84t          aktuelle Gr\rdblquote \'e1e der Bildschirm-Anzeige
+\par                      in Spalten und Zeilen
+\par   Grafik-Speicher    Adressen des Grafikspeichers
+\par                      im HiDOS-Adre\'e1bereich
+\par   Text-Speicher      Adressen des Textspeichers
+\par                      im HiDOS-Adre\'e1bereich
+\par   ROM-Region         Adressen des Video-ROM
+\par                      im HiDOS-Adre\'e1bereich
+\par 
+\par Die {\b Lernhilfe }enth\'84lt weitere Informationen zu diesem Thema.
+\par 
+\par {\fs28\cf6 >>H.Hdw_Drv
+\par }@P H.Hdw_Sum H.Hdw_BIOS
+\par                         {\i Laufwerks-Information
+\par }
+\par Dieser Bildschirm enth\'84lt Informationen \'81ber die auswechselbaren Laufwerke, Festplattenlaufwerke und RAM-Laufwerke:
+\par 
+\par   {\b Information Beschreibung---------------------------------------}
+\par   Laufwerk    Laufwerktyp
+\par   Gr\rdblquote \'e1e       Speicherkapazit\'84t in Kilobyte oder Megabyte
+\par   K\rdblquote pfe       Anzahl der Schreib-/Lesek\rdblquote pfe des Laufwerks
+\par   Zylinder    Anzahl der logischen Zylinder im Format des Laufwerks
+\par   Sektoren    Anzahl der Sektoren im Format des Laufwerks
+\par   Typ         Kennzeichen des Laufwerkstyps gem\'84\'e1 der CMOS-
+\par               Konfiguration; Sie erhalten weitere Informationen
+\par               \'81ber die Laufwerkskennzeichen (IDs) im Handbuch
+\par               Ihres Computers.
+\par 
+\par Daran schlie\'e1t sich eine Anzeige der Festplatten-Partitionen an:
+\par 
+\par   {\b Information       Angezeigt wird:---------------------------------}
+\par   Partition         Nummer der Platten-Partition
+\par   Typ               ID-Code der Partition. Es gibt folgende Werte:
+\par                     00 = kein Programmbereich definiert
+\par                     01 = 12-Bit FAT-Eintr\'84ge  (DOS 2.x kompatibel)
+\par                     04 = 16-Bit FAT-Eintr\'84ge  (DOS 3.x kompatibel)
+\par                     05 = erweiterte Partition (DOS 3.3 und h\rdblquote her)
+\par                     06 = sehr gro\'e1e Partition (DOS 4.0 und h\rdblquote her)
+\par   Anfang            Anfangszylinder der Partition
+\par   Ende              Endzylinder der Partition
+\par   aktiv             derzeit aktive Partition
+\par 
+\par Die {\b Lernhilfe }enth\'84lt weitere Informationen zu diesem Thema.
+\par 
+\par {\fs28\cf6 >>H.Hdw_Por
+\par }@P H.Hdw_Sum H.Hdw_BIOS
+\par                    {\i Kommunikations-Schnittstellen
+\par }
+\par Es wird eine Liste der verf\'81gbaren {\b Ein/Ausgabe-Schnittstellen }(serielle und parallele) zusammen mit der jeweiligen Adresse der f\'81r jede Schnittstelle zugewiesenen Einheit angezeigt.
+\par 
+\par Die {\b Lernhilfe }enth\'84lt weitere Informationen zu diesem Thema.
+\par 
+\par {\fs28\cf6 >>H.Hdw_BIOS
+\par }@P H.Hdw_Sum H.Hdw_BIOS
+\par                       {\i BIOS Detail-Information
+\par }
+\par Es erscheinen folgende ROM BIOS-Daten
+\par \pard 
+\par   {\b Information   Beschreibung-------------------------------------}
+\par   BIOS Info     Bedeutung einer bestimmten BIOS Daten-Adresse
+\par   Hex-Anfang    Offset im BIOS Adre\'e1bereich
+\par   Inhalt        Werte der einzelnen Adressen
+\par 
+\par Die {\b Lernhilfe }enth\'84lt weitere Informationen zu diesem Thema.
+\par 
+\par {\fs28\cf6 >>H.Index
+\par }@P H.Index H.Index
+\par                       {\i ASQ Stichwort-Verzeichnis
+\par }
+\par Verwenden sie die{\b  rechte/linke} Pfeiltaste, um ein Thema auszuw\'84hlen. Dr\'81cken Sie anschlie\'e1end die Eingabetaste.
+\par 
+\par {\b Stichwort----------------  }{\b  Hilfe-Thema---------------------------}
+\par {\ul 386MAX.PRO Datei}{\v H.Cfg_PRO}           Anzeige der .PRO Datei
+\par {\ul AUTOEXEC.BAT Datei}{\v H.Cfg_AUT}         Anzeige der AUTOEXEC.BAT Datei
+\par {\ul Bildschirm}{\v H.Hdw_Vid}                 Bildschirm-Information
+\par {\ul BIOS}{\v H.Hdw_BIOS}                       BIOS Detail-Information
+\par {\ul BLUEMAX.PRO Datei}{\v H.Cfg_PRO}          Anzeige der .Pro Datei
+\par {\ul CMOS}{\v H.Cfg_CMO}                       CMOS Detail-Information
+\par {\ul CONFIG.SYS Datei}{\v H.Cfg_CFG}           Anzeige der CONFIG.SYS Datei
+\par {\ul Datei-Betr, Funkt-Tasten}{\v H.U_Browse}   Datei-Betrachter anwenden
+\par {\ul Datei-Betr, Bildschirm}{\v H.U_Browse}     Datei-Betrachter anwenden
+\par {\ul Dialogfeld, drucken}{\v H.U_Print}        Umgang mit dem Drucksystem
+\par {\ul Dialogfeld, Schaltfl\'84chen}{\v H.U_Dial}  Umgang mit einem Dialogfeld
+\par {\ul Diskettenlaufwerke}{\v H.Hdw_Drv}         Laufwerks-Information
+\par {\ul EMS-Speicher}{\v H.Mem_Exp}               Expanded Memory-Information
+\par {\ul EMS-Speicherbelegung}{\v H.Mem_EMS}       EMS-Speicherbelegung
+\par {\ul Expanded Memory}{\v H.Mem_Exp}            Expanded Memory-Information
+\par {\ul Expanded Memory Belegung}{\v H.Mem_EMS}   EMS-Speicherbelegung
+\par {\ul Extended Memory}{\v H.Mem_Ext}            Extended Memory-Information
+\par {\ul ExtraDOS.PRO Datei}{\v\ul H.Cfg_Pro}         Anzeige ExtraDOS.PRO Datei{\ul 
+\par }{\ul Feld-Editor}{\v H.U_Dial}                Umgang mit einem Dialogfeld
+\par {\ul Funktionstasten}{\v H.Default}            Einf\'81hrung in das Men\'81system
+\par {\ul Glossar-System}{\v H.U_Gloss}             Umgang mit dem Glossar-System
+\par {\ul HiDOS-Speicher}{\v H.Mem_Hi}             HiDOS Speicher-Information 
+\par {\ul Hilfen, allgemein}{\v H.U_Help}          Einf\'81hrung in das Hilfesystem
+\par {\ul Hilfen zum Bl\'84ttern}{\v H.U_Tutor}        Einf\'81hrung in die Lernhilfe
+\par {\ul Hilfesystem, Schaltfl\'84chen}{\v H.U_Help} Einsteig in das Hilfe-System
+\par {\ul Interrupts}{\v H.Mem_Int}                 Interrupt-Information
+\par {\ul Kommunikations-Schnittst.}{\v H.Hdw_Por}  Kommunikations-Schnittstelle
+\par {\ul Konfiguration/Analyse}{\v H.Cfg_Sum}      Maschinen-Ausstattung
+\par {\ul Kontrollk\'84stchen}{\v H.U_Dial}           Umgang mit einem Dialogfeld
+\par {\ul Lernhilfe, Schaltfl\'84chen}{\v H.U_Tutor}   Einf\'81hrung in das Lernhilfe-System
+\par {\ul LoDOS-Speicher}{\v H.Mem_Low}             LoDOS Speicher-Information
+\par {\ul Maschine/Analyse}{\v H.Hdw_Sum}           Maschine (Ausstattungs-\'9abersicht)
+\par {\ul Men\'81-Tasten}{\v H.Default}                Einf\'81hrung in das Men\'81system
+\par {\ul Men\'81ystem, Schaltfl\'84chen}{\v H.Default}   Einf\'81hrung in das Men\'81system
+\par {\ul MOVE'EM.PRO Datei}{\v H.Cfg_PRO}          Anzeige der .PRO Datei
+\par {\ul Optionsschalter}{\v H.U_Dial}            Umgang mit einem Dialogfeld
+\par {\ul Qualitas Produkt-Info}{\v\ul H.Cfg_Qualitas}      Anzeige Qualitas Produkt-Information{\ul 
+\par }{\ul ROM-Information}{\v H.Mem_ROM}            ROM Scan-Information 
+\par {\ul Snapshot Beschreibung}{\v H.Snp_Save}      SnapShot-Datei laden
+\par {\ul Snapshot Information}{\v H.Snp_I}{\v nfo}       Information der SnapShot-Datei
+\par {\ul SnapShot laden}{\v H.Snp_Load}             SnapShot-Datei laden
+\par {\ul SnapShot l\rdblquote schen}{\v H.Snp_Clear}           SnapShot-Information l\rdblquote schen
+\par {\ul SnapShot speichern}{\v H.Snp_Save}         In eine SnapShot-Datei speichern
+\par {\ul Speicheranalyse}{\v H.Mem_Sum}            Speicher-\'9abersicht
+\par {\ul Speicher-Geschwindigkeit}{\v tH.Mem_Tim   }   Speicher-Zugriffszeit
+\par {\ul SYSTEM.INI Datei}{\v\ul H.Cfg_SYSINI}           Anzeige der SYSTEM.INI Datei{\ul 
+\par }{\ul Text-Meldungen}{\v H.U_Dial}             Umgang mit einem Dialogfeld
+\par {\ul Themen}{\v H.Contents}                     ASQ Stichwort-Verzeichnis
+\par {\ul Themenverwandte Lernhilfe}{\v H.U_Tutor}  Einsteig in das Lernhilfe-System
+\par {\ul Unterfenster}{\v H.U_Dial}               Umgang mit einem Dialogfeld
+\par {\ul Verwandtes Thema}{\v H.U_Help}           Einf\'81hrung in das Hilfe-System
+\par {\ul Windows Information}{\v\ul H.Cfg_Windows}        Anzeige von Windows Informationen{\ul 
+\par }{\ul XMS-Speicher}{\v H.Mem_XMS}               XMS-Speicherbelegung
+\par 
+\par }

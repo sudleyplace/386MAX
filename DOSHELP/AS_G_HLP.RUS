@@ -1,0 +1,259 @@
+{\rtf1\ansi \deff0{\fonttbl{\f0\froman Tms Rmn;}{\f1\froman Symbol;}{\f2\fswiss Helv;}{\f3\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;
+\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;}{\stylesheet{\f3 \snext0 Normal;}{\s2\fi-288\li576 \f3 \sbasedon0\snext2 Outdent4;}{\s3 \f3\fs28\cf6 \sbasedon0\snext3 Context;}{\s4\fi-1584\li1872 \f3 \sbasedon0\snext4 Outdent13;}{
+\s5\li288 \f3 \sbasedon0\snext5 Indent2;}}{\info{\title asq help system, glossary topics}{\author Stan Leszynski}{\operator Henry Groover}{\creatim\yr1991\mo5\dy8\hr13\min43}{\revtim\yr1993\mo5\dy5\hr13\min56}{\printim\yr1993\mo5\dy5\hr13\min56}
+{\version29}{\edmins308}{\nofpages7}{\nofwords1534}{\nofchars10543}{\vern8368}}\margl1440\margr1008\deftab0\widowctrl\ftnbj \sectd \linex0\endnhere \pard\plain \f3 {\cf2 ASQ Glossary
+\par by Stan Leszynski
+\par These notes are not a live context
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 68
+\par Context strings begin with >>
+\par Center the title of each block
+\par First line is @ plus P (print) or N (noprint) plus stop markers for Prev/Next
+\par }\pard {\cf2 MSWord file use: 
+\par  Set Printer to Generic/Text only on File:
+\par  Set View to Page mode to see wrapping 
+\par  Default tabs 0
+\par  Left margin 0
+\par  Right margin 1.7"
+\par  Top margin 0
+\par  Bottom margin 0
+\par For indented lines or to get desired wrapping, use hard returns
+\par Text highlighting:
+\par  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text
+\par  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text
+\par  use }{\ul\cf2 UNDERLINE}{\cf2  for context jump= red text
+\par  use }{\b\i\cf2 BOLD ITALICS}{\cf2  for bullets= yellow text
+\par }\pard \fi-288\li288\ri-2700 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Contents
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                          {\i ASQ Glossary Topics
+\par }
+\par ASQ glossary topics displayed in red are context jumps that allow you to move directly to another help topic.  Scroll up and down through the text to find a desired topic, then use the {\b Right} or {\b Left }
+arrow key to highlight a context jump topic and press {\b Enter}.
+\par 
+\par Memory management terms:
+\par  {\ul Address Space}{\v H.Default}
+\par  {\ul Backfilling}{\v H.G_Back}
+\par  {\ul BIOS}{\v H.G_BIOS}
+\par  {\ul Device Driver}{\v H.G_Dev}
+\par  {\ul DOS Limits}{\v H.G_DOS}
+\par  {\ul DPMI}{\v H.G_DPMI}
+\par  {\ul Expanded Memory}{\v H.G_Exp}
+\par  {\ul Extended Memory}{\v H.G_Ext}
+\par  {\ul High DOS}{\v H.G_High}
+\par  {\ul High Memory Area}{\v H.G_HMA}
+\par  {\ul LIM Memory}{\v H.G_LIM}
+\par  {\ul Low DOS Memory}{\v H.G_Low}
+\par  {\ul Memory Types}{\v H.G_MemT}
+\par  {\ul Protected Mode}{\v H.G_Pro}
+\par  {\ul RAM Memory}{\v H.G_RAM}
+\par  {\ul Real Mode}{\v H.G_Real}
+\par  {\ul ROM and Buffer RAM}{\v H.G_ROM}
+\par  {\ul System ROM}{\v H.G_Sys}
+\par  {\ul TSR}{\v H.G_TSR}
+\par  {\ul VCPI}{\v H.G_VCPI}
+\par  {\ul VDS}{\v H.G_VDS}
+\par  {\ul Video Memory}{\v H.G_Vid}
+\par  {\ul XMS Memory}{\v H.G_XMS}
+\par Related information:
+\par  {\ul ASQ Tutorial Topics}{\v As_T_Hlp.Hlp!H.Contents}
+\par  {\ul ASQ Help Topics}{\v As_H_Hlp.Hlp!H.Contents}
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Default
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                             {\i Address Space}
+\par 
+\par The {\b amount of memory}
+ a CPU is designed to access.  Address space is limited by the number of bits (binary digits) the CPU uses for addressing.  Intel 8088/8086 CPUs address with 20 bits and can access one megabyte (2 to the 20th power).  The 80286 CPU address space is 16 meg
+abytes (2 to the 24th), and the modern 80386/80486 address more than 4 gigabytes (2 to the 32nd).
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_Back
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                              {\i Backfilling}
+\par 
+\par The process of filling in low DOS memory from the point where system board memory ends to the base of video memory.  A memory management program uses memory from beyond 1 MB and {\b maps} it into the{\b  }low DOS{\b  }
+area, thus giving DOS at least 640 KB.
+\par 
+\par \pard \li1 Select {\b Next} to view glossary topics in alphabetical sequence.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_BIOS
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                                 {\i BIOS}
+\par 
+\par The BIOS ({\b Basic Input Output System}) routines are stored in ROM memory and provide instructions for system startup and communication with hardware devices.  BIOS routines are stored on a chip and are non-volatile.
+\par 
+\par BIOS routines, like other programs, use {\b memory address} locations.  Because many of the BIOS routines are not needed at the time DOS is operating, there is the potential to use some of these BIOS addresses for additional high DOS memory .
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_Dev
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                             {\i Device Driver}
+\par 
+\par An operating system {\b enhancement program}
+ loaded during boot up by CONFIG.SYS and remaining in memory.  Such programs perform communication functions between the computer and attached hardware devices such as hard disks, scanners, or local area networks.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_DOS
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                              {\i DOS Limits}
+\par 
+\par DOS was designed for the {\b one megabyte address space} of the 8088 CPU, dividing it into a 640 K
+B portion and the remaining 384 KB portion.  The first 640 KB is used by DOS, operating system enhancement programs (device drivers), and application programs.  Of the remaining 384 KB, 320 KB is reserved for physical devices such as hard disk controllers
+, video boards, and local area network boards.  The last 64 KB (or 128 KB on some machines) is reserved for the system ROM that starts up and operates the computer.  These DOS limits persist today regardless of what CPU is used, but memory management prog
+rams can help redefine the limits.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_DPMI
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                                 {\i DPMI}
+\par 
+\par The DOS Protected Mode Interface ({\b DPMI}) specification establishes ground rules for memory requests that allow programs operating in protected mode to share resources.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_Exp
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                            {\i Expanded Memory}
+\par 
+\par Also called {\b EMS} (Expa
+nded Memory Specification) memory, this uses a bank switching technique that allows up to 32 MB of memory to be accessed in 64 KB portions using addresses within the first one megabyte.  Many programs can use expanded memory for temporary storage to impro
+ve performance.  EMS memory can be implemented through memory board hardware or by using software drivers that use extended memory to emulate EMS memory.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_Ext
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                            {\i Extended Memory}
+\par 
+\par Memory addresses at {\b 1 MB and above}.  Physically addressable by 80286/386/486/++ CPUs when operating in protected mode.  Extended memory is not normally directly accessible by application programs running under DOS.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_High
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                               {\i High DOS}
+\par 
+\par Memory addresses in the region {\b between 640 KB and 1 MB}.  This term sometimes refers to the full 384 KB region and sometimes to the portion which can be made available to DOS by special memory management programs.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_HMA
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                           {\i High Memory Area}
+\par 
+\par The HMA is a {\b 64 KB region} of extended memory starting at 1 MB defined by the eXtended Memory Specification (XMS).  The HMA allows XMS-aware applications to take advantage of an additional 64 KB of memory.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_LIM
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                              {\i LIM Memory}
+\par 
+\par Another name used for EMS (expanded) memory, referring to the companies {\b Lotus, Intel, and Microsoft} that originated the specification.  LIM 4.0 is the current version of the specification.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_Low
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                            {\i Low DOS Memory}
+\par 
+\par The {\b first 640 KB}, where the operating system (DOS) and the application programs oper
+ate.  This is the memory area most frequently needed by application programs.  Low DOS can sometimes be increased slightly beyond 640 KB by memory management programs.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_MemT
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                             {\i Memory Types}
+\par 
+\par Physical memory is separated into several logical types based on {\b address location} and {\b access scheme}.  Examples include EMS and extended memory defined elsewhere in this glossary.
+\par 
+\par Application programs perform to maximum capacity and potential when provided with  sufficient memory  of the types they were designed to use.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_Pro
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                            {\i Protected Mode}
+\par 
+\par A mode of operation for the 80286/386/486/++ CPUs, which allows software running on them to access memory {\b beyond 1 megabyte}.  Multi-tasking operating systems run in protected mode.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_RAM
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                              {\i RAM Memory}
+\par 
+\par {\b Random Access Memory} provides the temporary work areas where DOS and software applications perform their operations.  RAM memory can be read from and written to.  The contents of RAM are lost when the power is turned off.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_Real
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                               {\i Real Mode}
+\par 
+\par A mode of operation of an 80286/386/486/++ CPU that causes it to operate {\b like the 8088/8086}, and restricts its memory addressing capacity to 1 MB.  DOS and most application programs must operate in real mode.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_ROM
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                          {\i ROM and Buffer RAM}
+\par 
+\par Addresses between {\b 640 KB and 1 MB} used by add-in boards such as hard disk controllers, network cards, and video adapters to communicate with the bus.  Depending on the computer configuration, much of this address space may be unused.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_Sys
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                              {\i System ROM}
+\par 
+\par The {\b last 64 KB} of address space in the first megabyte.  On Micro Channel machines, the last 128 KB.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_TSR
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                                  {\i TSR}
+\par 
+\par {\b Terminate and Stay Resident} (or Memory Resident) programs stay resident in memory after loading and r
+emain active even when other programs are running.  These programs usually provide a utility function, such as mouse control, telecommunication, or menu shells.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_VCPI
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                                 {\i VCPI}
+\par 
+\par The Phar Lap/Quarterdeck {\b Virtual Control Program Interface} (VCPI) specification which establishes ground rules for memory requests that allow programs operating in protected mode to coexist.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_VDS
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                                  {\i VDS}
+\par 
+\par The {\b Virtual DMA Services} (VDS) specification allows software to obtain proper information for a DMA (Direct Memory Access) transfer while running in a protected mode environment.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_Vid
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                             {\i Video Memory}
+\par 
+\par The address regions between 640 KB and 1 MB used by {\b video adapters} for I/O buffering and ROMs.  Video adapters generally use addresses from 640 through 800 KB, although different adapters use varying addresses.
+\par 
+\par Select {\b Next} to view glossary topics in alphabetical sequence.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.G_XMS
+\par \pard\plain \f3 @P H.Contents H.G_XMS
+\par                              {\i XMS Memory}
+\par 
+\par Microsoft's {\b eXtended Memory Specification} (XMS) for programs to request memory above the conventional memory area.  XMS memory can be allocated from three areas: High DOS in blocks called upper memory blocks (UMBs), Ex
+tended memory in extended memory blocks (EMBs), or from the area called HMA.  Only XMS-aware programs use XMS memory.
+\par 
+\par }

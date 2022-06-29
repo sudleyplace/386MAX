@@ -1,0 +1,101 @@
+.comment file As_D_Hlp.Asc 08:19 09/23/91
+.comment ascii source for asq dummy data displays
+.comment line width max 51, compile at 51 wide
+.comment \b = hi cyan, \b\i = hi yellow
+.comment \i = inverse (blue on white)
+.context A_D_Clear
+.comment asq data window display for File>Clear
+
+
+
+                   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+                   ³ \i          \i  ³
+                   ³ \i System-  \i  ³
+                   ³ \i Analyse  \i o³
+                   ³ \i   ³ ³ ÀÄ¯\i o³
+                   ÀÄÄÄÄ\b³\bÄ\b³\bÄÄÄÄÄÄÙ
+             ÚÄÄÄÄÄÄÄÄÄÄ\b³\bÄ\b³\bÄÄÄÄÄÄÄÄÄÄÄÄ¿
+             ³ ÄÄððÄÄ \b®Ä´ ³\b            ³
+             ³  ÄððÄ  \b®ÄÙ ÀÄÄÄÄÄÄ¯\b o o ³
+             ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+.context A_D_Exit
+.comment asq data window display for File>Exit
+
+
+
+                    ÚÄÄÄÄÄÄÄÄÄÄ¿
+                    ³          ³
+                    ³   \b\iENDE\b\i   º
+                    ³          ³
+                    ³o         ³
+                    ³          ³
+                    ³          ³
+                    ³          º
+                    ³          ³
+                    ÀÄÄÄÄÄÄÄÄÄÄÙ
+.context A_D_Help
+.comment asq data window display for Help>all
+    ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+    ³ \b\iMaschine\b\i      ³
+    ³--ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+    ³  ³ \b\iKonfiguration\b\i ³                ³
+    ³  ³--ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+    ³  ³  ³ \b\iSpeicher\b\i      ³                ³
+    ³  ³  ³---------------ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+    ³  ³  ³                                   ³
+    ³  ³  ³            \bÜÜÜÜÜÜÜ\b                ³
+    ³  ³  ³            \bÛ     Û\b                ³
+    ³  ³  ³            \b      Û\b                ³
+    ÀÄÄ³  ³            \b   Ûßßß\b                ³
+       ³  ³            \b   Û   \b                ³
+       ÀÄÄ³            \b   ß   \b                ³
+          ³            \b   ß   \b                ³
+          ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+.context A_D_Learn
+.comment asq data window display for Learn>all
+
+
+                           ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+                          ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»º
+        ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËËÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»ºº
+        º   \b\iLernhilfe\b\i   ºº               ººº
+        º               ºº               ººº
+        º ÷÷ ÷ ÷÷ ÷÷ ÷÷ ºº ÷÷ ÷ ÷÷ ÷÷ ÷÷ ººº
+        º ÷ ÷÷÷÷÷÷ ÷÷÷÷ ºº ÷ ÷÷÷÷÷÷ ÷÷÷÷ ººº
+        º ÷÷÷÷÷ ÷÷÷÷÷÷÷ ºº ÷÷÷÷÷ ÷÷÷÷÷÷÷ ººº
+        º ÷ ÷÷÷÷÷ ÷÷÷÷÷ ºº ÷ ÷÷÷÷÷ ÷÷÷÷÷ ººº
+        º ÷÷÷ ÷÷÷÷÷ ÷÷÷ ºº ÷÷÷ ÷÷÷÷÷ ÷÷÷ ººº
+        º ÷÷÷÷÷÷÷ ÷÷÷÷÷ ºº ÷÷÷÷÷÷÷ ÷÷÷÷÷ ºº¼
+        º               ºº               º¼
+        ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÊÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+.context A_D_Load
+.comment asq data window display for File>Load
+
+
+
+                   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+                   ³ \i          \i  ³
+                 \bÚ¯\b³ \i Snapshot \i  ³
+                 \b³ \b³ \i  laden   \i o³
+                 \b³ \b³ \i          \i o³
+                 \b³ \bÀÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+             ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+             ³ ÄÄððÄÄ                  ³
+             ³  ÄððÄ               o o ³
+             ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+.context A_D_Save
+.comment asq data window display for File>Save
+
+
+
+                   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+                   ³ \i          \i  ³
+                 \bÚÄ\b³ \i Snapshot \i  ³
+                 \b³ \b³ \i sichern  \i o³
+                 \b³ \b³ \i          \i o³
+                 \bv \bÀÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+             ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+             ³ ÄÄððÄÄ                  ³
+             ³  ÄððÄ               o o ³
+             ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+.comment end

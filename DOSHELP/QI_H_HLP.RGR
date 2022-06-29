@@ -1,0 +1,427 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times;}{\f1\froman Symbol;}{\f2\fswiss Helvetica;}{\f3\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;
+\red192\green192\blue192;}{\stylesheet{\f3\lang1033 \snext0 Normal;}{\s1\fi-288\li576 \f3\lang1033 \sbasedon0\snext1 Outdent4;}{\s2 \f3\fs28\cf6\lang1033 \sbasedon0\snext2 Context;}{\s3\fi-1584\li1872 \f3\lang1033 \sbasedon0\snext3 Outdent13;}{\s4\li288 
+\f3\lang1033 \sbasedon0\snext4 Indent2;}{\s5 \i\f3\lang1033 \sbasedon0\snext5 HelpTopic;}{\s6\li5472\ri-360 \f3\lang1033 \sbasedon0\snext6 QMTSched;}}{\info{\title install help system, help topics}{\author Klaus Albrecht}{\operator Klaus Albrecht}
+{\creatim\yr1994\mo2\dy13\hr22\min8}{\revtim\yr1996\mo2\dy15\hr21\min4}{\version1}{\edmins0}{\nofpages0}{\nofwords0}{\nofchars0}{\vern16417}}\paperw12240\paperh15840\margl1440\margr1008\margt1417\margb1134\gutter0 \deftab0\widowctrl\ftnbj\hyphhotz0 
+\sectd \linex0\headery709\footery709\colsx709\endnhere \pard\plain \f3\lang1033 {\cf2 QMTSetup Help Text
+\par }\pard \fi-288\li270\ri-2700 {\cf2 These notes are not a live context
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 68
+\par }{\cf2 Context strings begin with >>
+\par }{\cf2 Center the title of each b}{\cf2 lock
+\par }{\cf2 First line is @ plus P (print) or N (noprint) plus stop markers for Prev/Next
+\par }\pard {\cf2 MSWord file use:
+\par }{\cf2  Set Printer to Generic/Text only on File:
+\par }{\cf2  Set View to Page mode to see wrapping
+\par }{\cf2  Default tabs 0
+\par }{\cf2  Left margin 0
+\par }{\cf2  Right margin 1.7"
+\par }{\cf2  Top margin 0
+\par }{\cf2  Bottom margin 0
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns
+\par }{\cf2 Text highlighting:
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text
+\par }{\cf2  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text
+\par }{\cf2  use }{\ul\cf2 UNDERLINE}{\cf2  for context jump= red text
+\par }{\cf2  use }{\b\i\cf2 BOLD ITALICS}{\cf2  for bullets}{\cf2 = yellow text
+\par }\pard \fi-288\li288\ri-2700 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>H.Contents
+\par \pard\plain \f3\lang1033 @P H.Contents I_QMTCfg
+\par                          {\i #PROGNAME# Hilfe-Themen
+\par }
+\par Die in Rot dargestellten Hilfe-Themen sind Hypertext-Verbindungen. Sie erm\rdblquote glichen Ihnen den direkten Zugang zu anderen Themen. Bl\'84ttern Sie im Text nach oben oder nach unten und w\'84hlen Sie das gew\'81nschte Thema aus. Benutzen Sie die {
+\b rechte }oder{\b  linke }Pfeiltaste, um das Thema hervorzuheben und dr\'81cken Sie dann die {\b Eingabetaste}. Die Auswahl mit der Maus erfolgt durch Anwahl und Anklicken der gew\'81nschten Information.
+\par 
+\par    - Diese Themen helfen Ihnen das {\b #PROGNAME# Produkt }anzuwenden -
+\par                        {\ul Schaltfl\'84chen benutzen}{\v H.Default}
+\par                     {\ul Einf\'81hrung in das Hilfe-System}{\v H.U_Help}
+\par                       {\ul Umgang mit dem Dialogfeld}{\v H.U_Dial}
+\par                      {\ul Umgang mit dem Druck-System}{\v H.U_Print}
+\par                       {\ul Datei-Betrachter anwenden}{\v H.U_Browse}
+\par - Diese {\b #PROGNAME# Hilfe-Meldungen }beschreiben spezielle Aufgaben -
+\par    - Au\'e1erhalb des Kontxt gelesen erscheinen sie wenig sinnvoll-
+\par                              {\ul abbrechen}{\v I_abrt}
+\par                       {\ul Quellenlaufwerk festlegen}{\v I_srcdrv}
+\par                              {\ul Copyright}{\v I_cpyrght}
+\par                         {\ul Namen registrieren}{\v I_userinfo}
+\par                           {\ul Zielverzeichnis}{\v I_destdrv}
+\par                           {\ul RSETUP \'8enderungen}{\v I_configsys}
+\par                             {\ul Speichertest}{\v I_QMT}
+\par                       {\ul Konfiguraton f\'81r #FLENME#}{\v I_QMTCfg}
+\par         - Diese Themen enthalten {\b verwandte Informationen} -
+\par                             {\ul Hilfe-In}{\ul dex}{\v H.Index}
+\par 
+\par Mit der Schaltfl\'84che{\b  n\'84chste} k\rdblquote nnen Sie die Themen der Reihe nach durchbl\'84ttern.
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>H.Default
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par                         {\i Schaltfl\'84chen }benutzen
+\par {\b 
+\par }Mit{\b  Schaltfl\'84chen }werden wichtige Befehle ausgef\'81hrt. Eine Schaltfl\'84che ist ein kleines schattiertes Feld im unteren Bildschirmbereich, ein Datenfenster oder ein Dialogfeld. Jede Schaltfl\'84che enth\'84
+lt einen hervorgehobenen Buchstaben sowie ein oder zwei W\rdblquote rter, die diese Funktion beschreiben. Dr\'81cken Sie auf der Tastatur die entsprechende Taste, um die Funktion der Schaltfl\'84che auszuf\'81hren. Mit der Maus k\rdblquote 
+nnen Sie die Schaltfl\'84che am Bildschirm anw\'84hlen und zur Ausf\'81hrung anklicken. Mit der TAB-Taste oder mit der Eingabetaste k\rdblquote nnen Sie die Schaltfl\'84chen innerhalb eines Dialogfeldes ausw\'84hlen. (Vgl. {\ul Umgang mit einem Dialogfeld
+}{\v H.U_Dial})
+\par 
+\par 
+\par Die meisten Bildschirme verf\'81gen \'81ber folgende Schaltfl\'84chen:
+\par 
+\par   * {\b Abbruch Esc} - bricht das Programm ab
+\par   * {\b Hilfe F1} - zeigt aktuelle Hilfe-Information
+\par   * {\b Druck F2} - zeigt das {\ul Druck-Dialo}{\ul gfeld}{\v H.U_Print} an, falls verf\'81gbar
+\par 
+\par \pard \fi-1\li1 Schaltfl\'84chen werden verwendet, wenn ihre Funktionen f\'81r die aktuelle Aufgabe relevant sind. Eine bestimmte Schaltfl\'84che kann m\rdblquote glicherweise im aktuellen Men\'81system nicht verf\'81gbar sein. Auch wenn eine Schaltfl\'84
+che angezeigt wird, kann sie m\rdblquote glicherweise nicht aktiv sein, d.h. Sie k\rdblquote nnen sie nicht ausw\'84hlen. Die aktiven Schaltfl\'84chen enthalten einen hervorgehobenen Buchstaben. Der Text inaktiver Schaltfl\'84
+chen ist nur schwach dargestellt.
+\par \pard 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>H.U_Help
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par                      {\i Einf\'81hrung in das Hilfe-System
+\par }
+\par Das Hilfe-System enth\'84lt aktuelle Informationen \'81ber die jeweiligen Programm-Funktionen. Bei aktiver{\b  Schaltfl\'84che "Hilfe"} am unteren Bildschirmrand f\'81hrt ein Druck auf die entsprechende Funktionstaste zur Anzeige des Hilfefensters f\'81
+r die aktuelle Aktivit\'84t. Mit der Maus k\rdblquote nnen Sie die Schaltfl\'84che direkt anklicken. Ist die Hilfe-
+\par Information gr\rdblquote \'e1er als das Fenster, dann k\rdblquote nnen Sie mit den Tasten Bild-Nach-Unten, Bild-Nach-Oben, STRG+POS1, STRG+Ende und den Pfeiltasten durch den Text bl\'84ttern. Mit der Maus k\rdblquote 
+nnen Sie sich anhand der Bildlaufleisten im Text bewegen.
+\par 
+\par Bei aktivem Hilfesystem sind folgende Optionen auf Schaltfl\'84chen verf\'81gbar:
+\par 
+\par   * {\b Themen} - zeigt eine Liste der Hilfe-Themen an.
+\par     Die Themen werden in der Reihenfolge angeboten, in der Sie
+\par     beim Bl\'84ttern durch das Hilfesystem  mit der Schaltfl\'84che
+\par     "n\'84chste" auftreten.
+\par   * {\b Stichwort} - zeigt das Stichwortregister f\'81r das Hilfesystem.
+\par     Die Themen werden in alphabetischer Reihenfolge ihrer prim\'84ren
+\par     Bedeutung gelistet.
+\par   * {\b n\'84chste} - springt zum n\'84chsten Thema der aktuellen Bl\'84tter-Liste
+\par     (s.u.).
+\par \pard   * {\b vorher} - springt auf vorangegangene Themen zur\'81ck. Mit Auswahl
+\par     "vorher" erhalten Sie immer den Bildschirm, der dem aktuellen
+\par     vorausging. Dieser Vorgang ist nach 20 Bildschirmen beendet
+\par     bzw. dann, wenn der urspr\'81nglich ausgew\'84hlte Bildschirm
+\par     wieder angezeigt ist.
+\par 
+\par Mit der Auswahl eines Hilfe-Themas wird eine {\b Bl\'84tter-Liste} aktiv. Die Bl\'84tter-Liste verbindet das Thema mit verwandten Themen-
+\par bereichen. Mit "n\'84chste" bewegen Sie sich durch die Bl\'84tter-Liste. Die Bl\'84tter-Liste bleibt so lange aktiv, bis Sie Themen, Stichwort oder ein neues Thema \'81ber die Hypertext-Verbindung ausw\'84hlen (s.u.). In der Bl\'84
+tter-Liste der Themen ist jedes Element des Hilfesystems enthalten.
+\par 
+\par Der in Rot dargestellte Hilfetext ist eine Hypertext-Verbindung, mit der Sie ein verwandtes Thema direkt anspringen k\rdblquote nnen. Sie w\'84hlen ein Thema aus, indem Sie das Thema mit der rechten oder linken Pfeiltaste hervorheben und anschlie\'e1
+end die Eingabetaste dr\'81cken. Mit der Maus wird das Thema direkt angeklickt. Alternativ k\rdblquote nnen Sie auch auf ein hervorgehobenes oder nicht hervorgehobenes Thema doppelklicken, um zu springen. Mit der Schaltfl\'84
+che "vorher" kehren Sie wieder zum urspr\'81nglichen Thema (d.h. zu Ihrem Ausgangspunkt) zur\'81ck.
+\par 
+\par \'9aber das {\ul Drucksystem}{\v H.U_Print} k\rdblquote nnen Sie Hilfe-Informationen ausdrucken.
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>H.U_Dial
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par                    {\i  Umgang mit einem Dialogf}{\i eld
+\par }
+\par Dialogfelder werden auf dem aktuellen Bildschirm eingeblendet. Sie enthalten einige bzw. alle folgenden Elemente:
+\par 
+\par {\b Text-Meldungen
+\par }
+\par Die Meldungen informieren \'81ber den aktuellen Status oder fordern zu einer notwendigen Aktion auf.
+\par 
+\par {\b Unterfenster}
+\par 
+\par In einem Dialogfeld mit mehr als einem Arbeits- oder Anzeigebereich nimmt jeder Bereich ein eigenes Unterfenster mit einem separaten Namen ein. In einem aktiven Unterfenster ist der Name hervorgehoben. So aktivieren Sie ein Unterfenster:
+\par 
+\par   * Sie k\rdblquote nnen mit der {\b TAB-Taste} und der {\b Umschalttaste+TAB
+\par }{\b  }   zwischen den Unterfenstern springen oder
+\par   * die {\b ALT-Taste }zusammen mit dem hervorgehobenen Buchstaben
+\par     (aus dem Namen des Unterfensters) dr\'81cken oder
+\par   * irgendeinen Bereich innerhalb des Unterfensters mit der Maus
+\par     {\b anklicken.}
+\par 
+\par {\b Feld-Editor}
+\par 
+\par Ein Feld-Editor stellt einen Bereich f\'81r die Texteingabe zur Verf\'81gung. Benutzen sie die linke und rechte Pfeiltaste, die R\'81cktaste und die alphanumerischen Tasten, um den erforderlichen Eintrag zu vervollst\'84
+ndigen. Akzeptiert das aktuelle Feld eine Texteingabe, die gr\rdblquote \'e1er ist als das Textfeld, dann erfolgt ein Bildlauf im Text.
+\par 
+\par {\b Kontrollk\'84stchen}
+\par 
+\par Ein Kontrollk\'84stchen ist eine Option, die entweder ein- oder ausgeschaltet ist. Eine Markierung in Klammern gibt den Status der Option an. In einem Unterfenster k\rdblquote nnen mehrere Kontrollk\'84stchen markiert werden.
+\par 
+\par Sie aktivieren ein Kontrollk\'84stchen, indem Sie mit der TAB-Taste in das Unterfenster springen und mit den Tasten Nach-Oben und Nach-
+\par Unten das entsprechende K\'84stchen ansteuern. Alternativ k\rdblquote nnen Sie die ALT-Taste zusammen mit dem hervorgehobenen Buchstaben (aus dem Namen des Kontrollk\'84stchens) dr\'81
+cken. Mit der Leertaste wird eine Option ein- oder ausgeschaltet. Ein Ansteuern des Kontrollk\'84stchens mit den Pfeiltasten aktiviert die Option nicht, ein Ansteuern mit der ALT-Taste jedoch schon. Die Auswahl eines Kontrollk\'84
+stchens mit der Maus erfolgt \'81ber das Anw\'84hlen und Anklicken.
+\par \pard \fi-1\li1 {\b 
+\par }{\b Optionsschalter
+\par }
+\par \pard Ein Optionsschalter ist eine Option, die entweder ein- oder ausgeschaltet ist. Eine Markierung in Klammern gibt den Status der Option an. Es kann nur jeweils ein Optionsschalter ausgew\'84hlt werden.
+\par 
+\par Sie bewegen sich auf einen Optionsschalter, indem Sie mit der TAB-Taste in das Unterfenster springen und mit den Tasten Nach-Oben und Nach-Unten den entsprechenden Schalter ansteuern. Alternativ k\rdblquote 
+nnen Sie die ALT-Taste zusammen mit dem hervorgehobenen Buchstaben (aus dem Namen des Auswahlsymbols) dr\'81cken. Mit der Leertaste wird ein Optionsschalter ein- oder ausgeschaltet.
+\par 
+\par Ein Ansteuern des Optionsschalters mit den Pfeiltasten aktiviert die Option nicht, ein Ansteuern mit der ALT-Taste jedoch schon. Mit der Maus k\rdblquote nnen Sie den Optionsschalter anw\'84hlen und mit Klicken der linken Maustaste aktivieren.
+\par \pard \fi-1\li1 
+\par \pard {\b Schaltfl\'84chen}
+\par 
+\par Aktions-Schaltfl\'84chen am unteren Rand eines Dialogfeldes zeigen wichtige Funktionstasten an. Die Taste, mit der die Funktion einer Schaltfl\'84che ausgew\'84hlt werden kann, wird in der Schaltfl\'84che hervorgehoben dargestellt. Dr\'81
+cken Sie die Taste allein oder mit der ALT-Taste. Die Auswahl mit der Maus erfolgt durch direktes Anklicken der Taste.
+\par 
+\par Die meisten Dialogfelder verf\'81gen \'81ber die Schaltfl\'84che{\b  Fertig}, mit der die Funktion des Feldes ausgef\'81hrt wird und \'81ber die Schaltfl\'84che  {\b Abbruch,} mit der die Aktion abgebrochen und das Feld ausgeblendet wird. F\'81
+r die Auswahl der Schaltfl\'84che "Fertig" dr\'81cken Sie die Taste "F", ALT+F oder die Eingabetaste. Die Schaltfl\'84che "Abbruch" wird \'81ber "A", ALT+A oder die Eingabetaste ausgew\'84hlt.
+\par 
+\par Bei der Anzeige von Dialogfeldern wird eine der Schaltfl\'84chen in Klammern gezeigt. Diese Schaltfl\'84che ist die{\b  Vorgabe (Vor-
+\par }{\b einstellung)}. Die Auswahl erfolgt mit der Eingabetaste. Mit den Tasten {\b TAB} und {\b Umschalttaste+TAB} kann eine andere Schaltfl\'84che als die aktuelle hervorgehoben und aktiviert werden.
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>H.U_Print
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par                    {\i Umgang mit dem Druck-System
+\par }
+\par Das Drucksystem liefert Informationen aus Dateien sowie Hilfe-
+\par Texte auf Papier oder als Text-Information in einer Datei.
+\par 
+\par Im ersten Unterfenster des Dialogfeldes "Druck" wird der Ausgabe-
+\par Umfang festgelegt. Jede Option verf\'81gt \'81ber ein Kontrollk\'84stchen, so da\'e1 mehr als eine Option ausgew\'84hlt werden kann.
+\par 
+\par Das zweite Unterfenster des Dialogfelds "Druck" enth\'84lt eine Liste der Ausgabeziele. Jedes Ziel verf\'81gt \'81ber einen Optionsschalter, so da\'e1 jeweils nur eines ausgew\'84hlt werden kann.
+\par 
+\par Wird die Druckausgabe in eine {\b Datei} geschrieben, dann schl\'84gt ASQ einen Namen f\'81r die Druckausgabe vor. Sie k\rdblquote nnen jede g\'81ltige Dateispezifikation eingeben.
+\par 
+\par Mit der {\b TAB}-Taste bewegen Sie sich zwischen den Unterfenstern.
+\par F\'81r das Ausgabeziel "Drucker" haben Sie keinen Zugriff auf das Dateinamen-Feld.
+\par 
+\par Werden {\b alle Hilfe-Themen }gedruckt, gibt die Liste der Hilfe-Themen die Themen sowie deren Druckreihenfolge an. Einige nebens\'84chliche Themen befinden sich m\rdblquote glicherweise nicht in der Liste oder in der Druckausgabe. Sie k\rdblquote 
+nnen die aktuelle Information jedoch mit der Option {\b "dieses Hilfe-Thema" }ausdrucken, w\'84hrend Sie den entsprechenden Hilfe-Bildschirm anzeigen.
+\par 
+\par Weitere Informationen erhalten Sie in der Beschreibung zum Thema
+\par {\ul Umgang mit einem Dialogfeld}{\v H.U_Dial}.
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>H.U_Browse
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par                      {\i Datei-Betrachter }anwenden
+\par 
+\par {\b Der Bildschirm des Datei-Betrachters}
+\par \pard 
+\par Der Datei-Betrachter zeigt die aktuelle Datei in einem Fenster. Ein Zeilen/Spalten-Z\'84hler in der oberen rechten Ecke des Betrachter-Fensters informiert \'81
+ber die Cursor-Position. Die erste Zahl gibt die Zeile an, die zweite Zahl bezeichnet die Gesamtzahl der Zeilen in der Datei und die dritte Zahl bezeichnet die aktuelle Spalte des fCursors.
+\par 
+\par Der Datei-Betrachter hat eine Breite von {\b 256} Zeichen. Wird eine Datei mit einer l\'84ngeren Seitenbreite geladen, kann dies zu einem Datenverlust f\'81hren. Die maximale Anzahl der Zeilen in einer Datei wird durch die Speicherkapazit\'84
+t des Systems begrenzt und kann von System zu System unterschiedlich sein. Die meisten Systeme k\rdblquote nnen Dateien mit einigen Tausend Zeilen verwalten.
+\par 
+\par {\b Tastatur benutzen}
+\par 
+\par Sie k\rdblquote nnen sich mit folgenden Funktionstasten im Text bewegen:
+\par 
+\par   * {\b STRG+Ende}            - springt zum Ende der Datei
+\par   * {\b STRG+POS1}            - springt zum Anfang der Datei
+\par   * {\b STRG+Bild-Nach-Unten} - springt einen Bildschirm (74 Spalten)
+\par                            nach rechts
+\par   * {\b STRG+Bild-Nach-Oben  }- springt einen Bildschirm (74 Spalten)
+\par                            nach links
+\par   * {\b Nach-Unten }          - rollt den Text in der Anzeige eine Zeile
+\par                            aufw\'84rts
+\par   * {\b Ende}                 - springt zum Ende der ersten Zeile im
+\par                            Anzeigefenster
+\par \pard \fi-1\li1   * {\b ESC-Taste }           - beendet Datei-Betrachter
+\par \pard   * {\b POS1         }        - springt zum Anfang der ersten Zeile im
+\par                            Anzeigefenster
+\par   * {\b Nach-Links }          - verschiebt den Text um ein Zeichen nach
+\par                            links
+\par   * {\b Bild-Nach-Unten}      - springt einen Bildschirm nach unten
+\par   * {\b Bild-Nach-Oben  }     - springt einen Bildschirm nach oben
+\par   * {\b Nach-Rechts          }- verschiebt den Text um ein Zeichen nach
+\par                            rechts
+\par   * {\b Nach-Oben }           - rollt den Text in der Anzeige eine Zeile 
+\par                            abw\'84rts
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>I_abrt
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par                               {\i Abbrechen}
+\par 
+\par Mit Abbruch beenden Sie m\rdblquote glicherweise #PROGNAME#, {\b bevor} er die notwendigen \'8enderungen in den Systemdateien vornehmen konnte. Starten Sie nach Abbruch #PROGNAME# erneut, soda\'e1 die \'8enderungen vollst\'84ndig abgeschlossen werden k
+\rdblquote nnen.
+\par 
+\par #FLENME# Dateien wurden auf die Festplatte kopiert. Sie sind m\rdblquote glicherweise {\b nicht }funktionsf\'84hig.
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>I_bootdsk
+\par \pard\plain \f3\lang1033 @P H.Default I_bootdsk
+\par                          {\i Boot-Laufwerk angeben}
+\par 
+\par Zur Installation von #FLENME#, mu\'e1 m\rdblquote glicherweise die Datei AUTOEXEC.BAT ge\'84ndert werden. Geben Sie den Buchstaben des {\b Boot}-{\b Laufwerks} f\'81r dieses System ein.
+\par 
+\par Die Datei {\b AUTOEXEC.BAT} mu\'e1 sich im Stammverzeichnis des Boot-Laufwerks befinden. Ist AUTOEXEC.BAT nicht vorhanden, kann #PROGNAME# diese Systemdatei anlegen. 
+\par 
+\par Sie {\b m\'81ssen }einen zul\'84ssigen Laufwerksbuchstaben angeben, auch wenn Sie nicht wollen, da\'e1 #PROGNAME# die Datei AUTOEXEC.BAT editiert.
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>I_srcdrv
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par                         {\i Quellenlaufwerk angeben}
+\par 
+\par #PROGNAME# mu\'e1 Dateien von der Installationsdiskette kopieren.
+\par 
+\par Bei Aufforderung zur Disketteneingabe legen Sie die #FLENME_____# {\b Diskette} in das Laufwerk und geben den entsprechenden Laufwerks-
+\par Buchstaben an. Sie k\rdblquote nnen hier Lauferk/Pfad der o.g. Datei (ggf. auf dem Netzlaufwerk) angeben.
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>I_cpyrght
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par                                {\i Copyright}
+\par 
+\par Bitte beachten Sie, da\'e1 #FLENME# jeweils nur auf {\b einer Maschine} gestartet werden darf. F\'81r den Einsatz dieses Programmes auf mehr als einer Maschine zu einer Zeit ben\rdblquote tigen Sie eine Lizenz f\'81r jede Maschine.
+\par 
+\par Sie d\'81rfen diese Software auf verschiedenen Maschinen einsetzen, vorausgesetzt, sie wird von allen anderen Maschinen au\'e1er dem aktuellen System {\b entfernt}.
+\par 
+\par N\'84here Informationen entnehmen Sie bitte den Lizenzvereinbarungen am Anfang des {\b Installationshandbuchs.}
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>I_userinfo
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par                {\i Name und Seriennummer registrieren}
+\par 
+\par Geben Sie den Namen f\'81r die Registrierung von #FLENME# ein. #PROGNAME# ben\rdblquote tigt den {\b Namen}, um diese Kopie von #FLENME# zu personalisieren.
+\par 
+\par Geben Sie die Seriennnummer in der korrekten Form an. Die Nummer befindet sich auf den Registrier-Unterlagen und auf der Unterseite des Software-Pakets. Die Seriennummer mu\'e1 aus {\b genau 11 Ziffern }bestehen. Andere Eingaben werden abgewiesen.
+\par 
+\par Mit der R\'81cktaste, den Tasten EINFG, ENTF, POS1, ENDE und den Pfeiltasten k\rdblquote nnen Sie sich innerhalb der Felder bewegen.
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>I_destdrv
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par                            {\i Zielverzeichnis}
+\par 
+\par #PROGNAME# legt ein {\b Verzeichnis} mit dem Namen #FLENME# an und kopiert die angeforderten Dateien in das Verzeichnis #FLENME#.
+\par 
+\par Wenn Sie die #FLENME# Dateien in ein bereits bestehendes Verzeichnis kopieren oder ein neues Verzeichnis mit einem anderen Namen anlegen m\rdblquote chten, geben Sie das entsprechende {\b Laufwerk und den Pfad} an. 
+\par 
+\par \pard Mit der R\'81cktaste, den Tasten EINFG, ENTF, POS1, ENDE und den Pfeiltasten k\rdblquote nnen Sie sich innerhalb des Feldes bewegen.
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>I_configsys
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par                           {\i RSETUP \'8enderungen}
+\par 
+\par #PROGNAME# mu\'e1 m\rdblquote glicherweise die folgenden Dateien \'84ndern:
+\par 
+\par AUTOEXEC.BAT
+\par RUTIL.BAT
+\par 
+\par Mit der Auswahl {\b OK} werden die erforderlichen \'8enderungen vorgenommen. #PROGNAME# wird AUTOEXEC.BAT und/oder RUTIL.BAT editieren und/oder anlegen.
+\par 
+\par Mit der Auswahl {\b Abbrechen} wird #PROGNAME# zu DOS zur\'81ckkehren. Sie m\'81ssen dann AUTOEXEC.BAT bzw. RUTIL.BAT selbst bearbeiten. Die erforderlichen \'8enderungen finden Sie in folgenden Dateien:
+\par 
+\par     *.ADD Dateien zeigen die erforderliche neue Version
+\par     *.DIF Dateien zeigen zeilenweise die \'8enderungen, die
+\par       #PROGNAME# f\'81r Sie vorgenommen h\'84tte:
+\par 
+\par       {\b GLEICH:} Diese Zeile bliebe unver\'84ndert.
+\par       {\b HINZU :} Diese Zeile w\'81rde hinzugef\'81gt.
+\par       {\b LOESCH:} Diese Zeile w\'81rde gel\rdblquote scht.
+\par 
+\par N\'84here Informationen \'81ber die manuelle Konfiguration von #FLENME# erhalten Sie im{\b  Anwenderhandbuch}.
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>I_QMT
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par                        {\i  Speichertest}
+\par 
+\par #FLENME# arbeitet mit hochentwickelten Pr\'81fmethoden zum Aufsp\'81ren m\rdblquote glicher Probleme im Speichersystem Ihres Computers. #FLENME# kann h\'84ufig Speicherfehler finden, die vom Einschalt-Selbsttest beim Start der Ger\'84
+te nicht erkannt werden. Einige der m\rdblquote glichen Speicherprobleme umfassen Luftfeuchtigkeit, statische Aufladung, Temperaturschwankungen und Ver\'84nderungen des Luftdrucks.
+\par 
+\par Auswahl {\b Ja} installiert #FLENME# am Anfang der AUTOEXEC.BAT und f\'81hrt das Testprogramm im Schnelldurchlauf (Quick Modus) bei jedem Systemstart Ihres Computers aus. Die t\'84gliche \'9aberpr\'81fung des verf\'81
+gbaren Speichers bietet einige Vorteile. F\'81r eine vollst\'84ndige \'9aberpr\'81fung des gesamten Systemspeichers sollte #FLENME
+# von Zeit zu Zeit auf dem System in einer Konfiguration ohne Memory Manager und ohne andere residente Programme, die Erweiterungsspeicher benutzen, eingesetzt werden.
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>I_QMTCfg
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par                        {\i #FLENME# Konfiguration
+\par }
+\par Sie k\rdblquote nnen w\'84hlen, zu welchem Zeitpunkt #FLENME# ausgef\'81hrt wird. Standardm\'84\'e1ig wird #PROGNAME# die Konfiguration f\'81r #FLENME# so einstellen, da\'e1 der Speichertest mit jedem Systemstart Ihres Computers abl\'84uft. Sie k
+\rdblquote nnen #PROGNAME# konfigurieren, soda\'e1 #FLENME# nach dem folgenden Schema ausgef\'81hrt wird:
+\par 
+\par IMMER:       Mit jedem Systemstart Ihres Computers.
+\par 
+\par T\'8eGLICH:     F\'81hrt #FLENME# einmal am Tag aus, d.h.
+\par              immer bei erstem Start des Systems nach
+\par              Mitternacht (0:00 Uhr).
+\par 
+\par W\'99CHENTLICH: F\'81hrt #FLENME# einmal pro Woche am angegebenen
+\par              Tag aus (erster Start nach Mitternach, 0:00 Uhr).
+\par 
+\par MONATLICH:   F\'81hrt #FLENME# einmal pro Monat am angegebenen
+\par              Tag aus (erster Start nach Mitternach, 0:00 Uhr).
+\par 
+\par INTERVALL:   F\'81hrt #FLENME# nach jeweils {\i n} Tagen aus, wobei {\i n} 
+\par              ein von Ihnen gew\'84hltes Intervall ist.
+\par 
+\par Sie k\rdblquote nnen #FLENME# zu jeder Zeit von der DOS Eingabeaufforderung aufrufen. F\'81r den gr\'81ndlichsten Test sollten Sie #FLENME# in einem "reinen" System ohne irgendwelche residente Software (und ohne Memory Manager) ablaufen lassen.
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>H.Index
+\par \pard\plain \f3\lang1033 @P H.Index H.Index
+\par                          {\i #PROGNAME# Hilfe-Index
+\par }
+\par Mit der {\b rechten/linken} Pfeiltaste w\'84hlen Sie ein Thema. Dr\'81cken Sie anschlie\'e1end die Eingabetaste.
+\par 
+\par {\b Themen---------------------  Hilfe-Themen--------------------------}
+\par {\ul abbrechen}{\v I_abrt}                    abbrechen
+\par {\ul Copyright}{\v I_cpyrght}                    Copyright
+\par {\ul Datei-Betrachter, Bildschirm}{\v H.U_Browse} Datei-Betrachter anwenden
+\par {\ul Datei-Bet}{\ul rachter, Tasten}{\v H.U_Browse}     Datei-Betrachter anwenden
+\par {\ul Dialogfeld "Druck"}{\v H.U_Print}           Umgang mit dem Druck-System
+\par {\ul Dialogfeld-Schaltfl\'84chen}{\v H.U_Dial}     Umgang mit einem Dialogfeld
+\par {\ul Feldeditor}{\v H.U_Dial}                   Umgang mit einem Dialogfeld
+\par {\ul Hilfen zum Bl\'84ttern}{\v H.U_Help}          Einf\'81hrung in das Hilfe-System
+\par {\ul Hilfe-System, Schaltfl\'84chen}{\v H.U_Help}  Einf\'81hrung in das Hilfe-System
+\par {\ul Installations-Verzeichnis}{\v I_destdrv}    Zielverzeichnis
+\par {\ul Kontrollk\'84stchen}{\v H.U_Dial}             Umgang mit einem Dialogfeld
+\par {\ul Optionsschalter}{\v H.U_Dial}              Umgang mit einem Dialogfeld
+\par {\ul Quellenlaufwerk}{\v I_srcdrv}              Quellenlaufwerk festlegen
+\par {\ul RAMexam}{\v I_QMT}                      Speichertest
+\par {\ul Registrierung}{\v I_userinfo}                Namen registrieren
+\par {\ul RSETUP \'8enderungen}{\v I_configsys}            Systemdateien \'84ndern
+\par {\ul Schaltfl\'84chen}{\v H.Default}                Schaltfl\'84chen benutzen
+\par {\ul Spr\'81nge zu verwandten Themen}{\v H.U_Help} Einf\'81hrung in das Hilfe-System
+\par {\ul Text-Meldung}{\v H.U_Dial}                 Umgang mit einem Dialogfeld
+\par {\ul Themen}{\v H.Conte}{\v nts}                       Hilfe-Themen
+\par {\ul Unterfenster}{\v H.U_Dial}                 Umgang mit einem Dialogfeld
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>NOTES
+\par \pard\plain \f3\lang1033 @P
+\par HINWEIS: Der folgende Text ist g\'81ltig, er ist jedoch nicht im Inhaltsverzeichnis, im Index oder in der Bl\'84tter-Liste enthalten.
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>I_swapdrive
+\par \pard\plain \f3\lang1033 @N H.Default I_swapdrive
+\par              {\i Unterst\'81tzung f\'81r Disk-Komprimierung}
+\par 
+\par #PROGNAME# erkennt die meisten Disk-Komprimierungsprogramme. Die Option /K erlaubt f\'81r nicht unterst\'81tzte Produkte eine manuelle Eingabe der Informationen.
+\par 
+\par {\b Ist #AR}{\b G4_# komprimiert?}
+\par 
+\par Ihr Laufwerk ist komprimiert, wenn ein besonderer Software-Treiber in CONFIG.SYS die Daten dieses Laufwerks verf\'81gbar macht. Ohne den mit dieser Software gelieferten Treiber ist das Laufwerk nur als Datei auf der Festplatte erkennbar.
+\par 
+\par {\b Dieses Laufwerk kann ein sog. getauschtes Laufwerk (Swapped Drive) sein. Welcher Laufwerksbuchstabe ist f\'81r #ARG4_# zum Boot-Zeitpunkt g\'81ltig? (Wenn das Laufwerk zum Boot-Zeitpunkt nicht vorhanden ist, geben Sie hier nichts an.)}
+\par 
+\par Einige Disk-Komprimierungsprogramme tauschen Laufwerkskennungen, soda\'e1 das erzeugte neue Laufwerk wie das Ursprungslaufwerk angesprochen werden kann. Diese Wirkung wird \'81blicherweise mit Hilfe eines weiteren Treibers in CONFIG.SYS erzielt.
+\par 
+\par {\b Ihr Boot-Laufwerk ist #ARG1#:. Die vorherige Laufwerkskennung f\'81r Laufwerk #ARG1#: ist#ARG3#}
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>I_MBMenu
+\par \pard\plain \f3\lang1033 @P H.Default I_MBMenu
+\par           {\i Einen MultiConfig Konfigurationsblock w\'84hlen}
+\par 
+\par #PROGNAME# hat erkannt, da\'e1 Sie MS DOS 6 MultiConfig benutzen. Mit den Pfeiltasten NACH-OBEN bzw. NACH-UNTEN w\'84hlen Sie die gew\'81nschte Konfiguration. Best\'84tigen Sie Ihre Wahl mit der EINGABETASTE. #PROGNAME# f\'81
+gt den #FLENME# Treiber nur zu der gew\'84hlten Konfiguration hinzu. Wenn Sie mit Maximize fortsetzen, wird die gew\'84hlte Konfiguration optimiert.
+\par 
+\par F\'81r die Aufnahme des #FLENME# in weitere Konfigurationsbl\rdblquote cke rufen Sie #PROGNAME# /R f\'81r einen Refresh der Installation auf. Damit wird der gew\'84hlte Konfigurationsblock um den #FLENME# Treiber erg\'84nzt.
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>I_QMTMB
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTMB
+\par                        {\i Speichertest
+\par }
+\par #FLENME# arbeitet mit hochentwickelten Pr\'81fmethoden zum Aufsp\'81ren m\rdblquote glicher Probleme im Speichersystem Ihres Computers. #FLENME# kann h\'84ufig Speicherfehler finden, die vom Einschalt-Selbsttest beim Start der Ger\'84
+te nicht erkannt werden. Einige der m\rdblquote glichen Speicherprobleme umfassen Luftfeuchtigkeit, statische Aufladung, Temperaturschwankungen und Ver\'84nderungen des Luftdrucks.
+\par 
+\par Auswahl "{\b Alle" Abschnitte} installiert #FLENME# am Anfang der AUTOEXEC.BAT, soda\'e1 der Schnelldurchlauf (Quick Modus) bei jedem Systemstart abl\'84uft.
+\par 
+\par Auswahl {\b "Ein" Abschnitt} f\'81
+hrt zur Wahl der DOS 6 MultiConfig Konfiguration, in welcher #FLENME# installiert werden soll. #PROGNAME# erkennt Ihre DOS 6 MultiConfig Konfiguration und erlaubt Ihnen die Auswahl des Konfigurationsblockes, in dem #FLENME# installiert werden soll.
+\par 
+\par Die t\'84gliche \'9aberpr\'81fung des verf\'81gbaren Speichers bietet einige Vorteile. F\'81r eine vollst\'84ndige \'9aberpr\'81fung des gesamten Systemspeichers sollte #FLENME# von Zeit zu Zeit auf dem System in ein
+er Konfiguration ohne Memory Manager und ohne andere residente Programme, die Erweiterungsspeicher benutzen, eingesetzt werden.
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>H.MBMenu
+\par \pard\plain \f3\lang1033 @N H.MBMenu H.MBMenu
+\par Bitte w\'84hlen Sie die DOS MultiConfig Konfiguration, in welcher #FLENME___# installiert werden soll. Dr\'81cken Sie dann die EINGABETASTE.
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>H.MBMenu2
+\par \pard\plain \f3\lang1033 @N H.MBMenu2 H.MBMenu2
+\par Wenn Sie #FLENME___# in einen weiteren MultiConfig Konfigurationsblock aufnehmen m\rdblquote chten, f\'81hren Sie #PROGNAME# /R f\'81r einen "Refresh" der MultiConfig Konfiguration erneut aus.
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>H.QMTCfg
+\par \pard\plain \f3\lang1033 @N H.QMTCfg H.QMTCfg
+\par \pard\plain \s6\li5472\ri-360 \f3\lang1033 W\'84hlen Sie, wie h\'84ufig #FLENME# ausgef\'81hrt werden soll.
+\par \pard\plain \f3\lang1033 
+\par \pard\plain \s6\li5472\ri-360 \f3\lang1033 #FLENME# wird ausgef\'81hrt:
+\par }

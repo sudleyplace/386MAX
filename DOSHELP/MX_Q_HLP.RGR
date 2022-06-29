@@ -1,0 +1,63 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times;}{\f1\froman Symbol;}{\f2\fswiss Helvetica;}{\f3\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;
+\red192\green192\blue192;}{\stylesheet{\f3\lang1033 \snext0 Normal;}}{\info{\title max help system, quick ref topics}{\author Klaus Albrecht}{\operator Klaus Albrecht}{\creatim\yr1992\mo5\dy3\hr14\min44}{\revtim\yr1996\mo2\dy15\hr21\min3}
+{\printim\yr1992\mo5\dy18\hr12\min39}{\version1}{\edmins0}{\nofpages0}{\nofwords0}{\nofchars0}{\vern16417}}\paperw12240\paperh15840\margl1440\margr8064\margt1440\margb1440\gutter0 \facingp\widowctrl\ftnbj\ftnrestart\hyphhotz425 \sectd 
+\linex0\headery709\footery709\colsx709\endnhere \pard\plain \f3\lang1033 {\cf2 Maximize Quick Ref Topics
+\par }{\cf2 by Stan Leszynski
+\par }{\cf2 These notes are not a live context
+\par }{\cf2 Hard returns are required in quick ref files w}{\cf2 hen a space occurs in column 19 to get around help compiler bug
+\par }{\cf2 Line width 19
+\par }{\cf2 Topic height 17 lines
+\par }{\cf2 Context strings begin with >>
+\par }{\cf2 MSWord file use:
+\par }{\cf2  Set Printer to Generic/Text only on File:
+\par }{\cf2  Set View to Page mode to see wrapping
+\par }{\cf2  Default tabs 0
+\par }{\cf2  Left margin 0
+\par }{\cf2  Right margin 6.6"
+\par }{\cf2  Top margin 0
+\par }{\cf2  Bottom margin 0
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns
+\par }{\cf2 Text highlighting:
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text
+\par }{\cf2  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text
+\par }{\cf2  use }{\ul\cf2 UNDERLINE}{\cf2  for cont}{\cf2 ext jump= red text
+\par }{\cf2  use }{\b\i\cf2 BOLD ITALICS}{\cf2  for bullets= yellow text
+\par }{\cf2 
+\par }{\fs28\cf6 >>Q_Intro
+\par }Maximize sucht nach
+\par speicher-residenten
+\par Programmen und Treibern zur Verlagerung in den HiDOS-Speicher.
+\par 
+\par Es konfiguriert den
+\par Speicher, indem es Optionen in die Dateien CONFIG.SYS,
+\par AUTOEXEC.BAT und die Profildatei aufnimmt.
+\par {\fs28\cf6 >>Q_Phase1
+\par }Maximize Phase 1 untersucht die Dateien CONFIG.SYS,
+\par AUTOEXEC.BAT
+\par (und jede aus der AUTOEXEC.BAT auf-
+\par gerufene weitere
+\par Stapeldatei).
+\par 
+\par Bei Mikrokanal-
+\par Systemen werden Adapter-Informa-
+\par tionen von der Referenzdiskette
+\par gelesen.
+\par {\fs28\cf6 >>Q_Phase2
+\par }Maximize Phase 2 legt fest, ob die
+\par Programme und Treiber in den HiDOS-Speicher
+\par zu laden sind.
+\par 
+\par Dabei wird die Lade-Reihenfolge
+\par gepr\'81ft und entsprechende Optionen in die Systemdateien aufgenommen.
+\par {\fs28\cf6 >>Q_Phase3
+\par }Maximize Phase 3 konfiguriert das System zur Ver-
+\par lagerung der entsprechenden Treiber und Programme in das HiDOS auf Basis
+\par der Informationen
+\par aus Phase 2.
+\par 
+\par Maximize pr\'81ft,
+\par ob der Vorgang erfolgreich ab-
+\par geschlossen wurde.
+\par 
+\par }

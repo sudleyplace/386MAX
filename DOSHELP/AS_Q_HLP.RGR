@@ -1,0 +1,443 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times;}{\f1\froman Symbol;}{\f2\fswiss Helvetica;}{\f3\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;
+\red192\green192\blue192;}{\stylesheet{\f3\lang1033 \snext0 Normal;}{\s1 \f3\fs28\cf6\lang1033 \sbasedon0\snext1 Context;}}{\info{\title asq help system, quick ref topics}{\author Klaus Albrecht}{\operator Klaus Albrecht}
+{\creatim\yr1992\mo5\dy3\hr14\min31}{\revtim\yr1996\mo2\dy15\hr20\min59}{\printim\yr1992\mo5\dy18\hr11\min53}{\version1}{\edmins0}{\nofpages0}{\nofwords0}{\nofchars0}{\vern16417}}\paperw12240\paperh15840\margl1440\margr8064\margt1440\margb1440\gutter0 
+\facingp\widowctrl\ftnbj\ftnrestart\hyphhotz425 \sectd \linex0\headery709\footery709\colsx709\endnhere \pard\plain \f3\lang1033 {\cf2 ASQ Quick Ref Topics
+\par }{\cf2 by Stan Leszynski
+\par }{\cf2 These notes are not a live context
+\par }{\cf2 Hard returns are required in quick ref files when a}{\cf2  space occurs in column 19 to get around help compiler bug
+\par }{\cf2 Line width 19
+\par }{\cf2 Topic height 17 lines
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Context strings begin with >>
+\par }\pard {\cf2 MSWord file use:
+\par }{\cf2  Set Printer to Generic/Text only on File:
+\par }{\cf2  Set View to Page mode to see wrapping
+\par }{\cf2  Default tabs 0
+\par }{\cf2  Left margin 0
+\par }{\cf2  Right margin 6.6"
+\par }{\cf2  Top margin 0
+\par }{\cf2  Bottom margin 0
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns
+\par }{\cf2 Text highlighting:
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text
+\par }{\cf2  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text
+\par }{\cf2  use }{\ul\cf2 UNDERLINE}{\cf2  for context j}{\cf2 ump= red text
+\par }{\cf2  use }{\b\i\cf2 BOLD ITALICS}{\cf2  for bullets= yellow text
+\par }
+\par {\fs28\cf6 >>Q_Cfg_AUT
+\par }Die Systemdatei AUTOEXEC.BAT ent-
+\par h\'84lt Befehle, die
+\par beim Start des
+\par Computers auto-
+\par matisch ablaufen.
+\par 
+\par Diese Option l\'84dt
+\par C:\\AUTOEXEC.BAT
+\par in den Datei-
+\par Betrachter.
+\par {\fs28\cf6 >>Q_Cfg_CFG
+\par }Die Systemdatei CONFIG.SYS ent-
+\par h\'84lt Befehle, die
+\par beim Start des
+\par Computers die
+\par Einheiten-Treiber
+\par laden und andere
+\par wichtige System-
+\par Funktionen aus-
+\par f\'81hren.
+\par 
+\par Diese Option l\'84dt C:\\CONFIG.SYS
+\par in den Datei-
+\par Betrachter.
+\par 
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>Q_Cfg_EPRO
+\par \pard\plain \f3\lang1033 Die Profildatei enth\'84lt Optionen f\'81r Ladevorgang
+\par und Konfiguration
+\par der ExtraDOS-
+\par Funktion.
+\par 
+\par Die Option zeigt
+\par den Inhalt der Datei ExtraDOS.PRO
+\par die in CONFIG.SYS geladen wird.
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>Q_Cfg_SYSINI
+\par \pard\plain \f3\lang1033 SYSTEM.INI enth\'84lt
+\par Windows Start-
+\par Informationen.
+\par 
+\par Die Option zeigt den Inhalt der Datei SYSTEM.INI,
+\par wenn diese in der Pfad-Anweisung enthalten ist oder bei INSTALL ange-
+\par geben wurde.
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>Q_Cfg_Qualitas
+\par \pard\plain \f3\lang1033 Die Option zeigt Informationen \'81ber
+\par 
+\par  * Qualitas Produkt
+\par  * Daten wichtiger
+\par    Systemdateien
+\par  * Residente
+\par    Programme 
+\par  * Programme, die
+\par    von Maximize
+\par    verlagert sind
+\par    (einschl. Gr\rdblquote \'e1e,
+\par    Region und Lade-
+\par    folge)
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>Q_Cfg_Windows
+\par \pard\plain \f3\lang1033 Die Option zeigt Informationen \'81ber Windows, wenn dies im Pfad gefunden wird oder w\'84hrend INSTALL angegeben wurde.
+\par 
+\par Die Option zeigt:
+\par 
+\par  * Win Verzeichnis
+\par  * Windows Pfad
+\par  * Systemdateien
+\par {\fs28\cf6 >>Q_Cfg_CMO
+\par }Der CMOS-Chip (Complementary Metal Oxide
+\par Semiconductor)
+\par \pard speichert die Systemeinstellung f\'81r Datum/Zeit, Speicher und angeschlossene Ger\'84te.
+\par 
+\par Diese Option zeigt
+\par die Adressen sowie
+\par den Inhalt des CMOS-Speichers.
+\par {\fs28\cf6 >>Q_Cfg_PRO
+\par }Die PROfildatei enth\'84lt Optionen f\'81r Qualitas-
+\par Software zur Konfiguration des System-Speichers.
+\par 
+\par Diese Option zeigt
+\par den Inhalt der PROfil-Datei.
+\par In CONFIG.SYS wird
+\par mit den Befehlen DEVICE= und PRO= auf die PROfil-
+\par Datei verwiesen.
+\par {\fs28\cf6 >>Q_Cfg_Sum
+\par }Die Arbeitsumge-
+\par bung des Computers
+\par enth\'84lt wichtige DOS-Einstellungen
+\par und Variablen.
+\par 
+\par Diese Option zeigt
+\par 
+\par  * DOS-Version
+\par  * Files, Buffers
+\par  * FCBs, Stacks
+\par  * Lastdrive,
+\par    Break
+\par  * Environment
+\par  * Path, Prompt
+\par  * offene Dateien.
+\par {\fs28\cf6 >>Q_Exit
+\par }Diese Option beendet ASQ und kehrt zu DOS bzw. zum Hauptprogramm zur\'81ck.
+\par {\fs28\cf6 >>Q_Hdw_BIO
+\par }Das Basis Input/ Output System (BIOS) \'81berwacht die Kommunikation mit Ein- und Ausgabeger\'84ten,
+\par z.B. Tastatur,
+\par Disketten und
+\par Bildschirm.
+\par 
+\par Diese Option zeigt
+\par Adressen sowie Inhalt des ROM BIOS-Bereichs.
+\par {\fs28\cf6 >>Q_Hdw_Drv
+\par }Disk-Laufwerke speichern Infor-
+\par mationen und er-
+\par lauben den Daten-
+\par austausch mit anderen Systemen.
+\par 
+\par Diese Option zeigt
+\par angeschlossene Laufwerke mit ihren
+\par Eigenschaften:
+\par 
+\par  * Kapazit\'84t
+\par  * Organisation der
+\par    Zugriffstechnik
+\par    (K\rdblquote pfe/Zylinder)
+\par  * Laufwerkstyp.
+\par {\fs28\cf6 >>Q_Hdw_Por
+\par }Kommunikations-
+\par Schnittstellen (Ports, Anschl\'81sse)
+\par erm\rdblquote glichen dem Computer einen Informations-
+\par austausch mit Ger\'84ten wie z.B. Drucker, Modem und
+\par anderen Computern.
+\par 
+\par Diese Option zeigt:
+\par 
+\par  * seriellen Port
+\par  * parallelen Port
+\par  * Adressen
+\par {\fs28\cf6 >>Q_Hdw_Sum
+\par }Der Computer be-
+\par steht aus Hardware-
+\par Komponenten, die um
+\par den Prozessor gruppiert sind:
+\par 
+\par  * Computertyp
+\par  * CPU, BIOS
+\par  * Disk-Laufwerke
+\par  * Bildschirm
+\par  * Anschl\'81sse,
+\par    Adapter
+\par  * physischer
+\par    Speicher.
+\par {\fs28\cf6 >>Q_Hdw_Vid
+\par }Mit Hilfe des Bildschirm-
+\par adapters werden Texte und Grafiken
+\par auf einem Monitor angezeigt.
+\par 
+\par Diese Option zeigt
+\par 
+\par  * Adapter-Typ
+\par  * Speicher
+\par  * Anzeige-Modus
+\par  * Bild-Kapazit\'84t
+\par  * Grafik-Speicher
+\par  * Text-Speiche
+\par  * ROM-Region(en).
+\par {\fs28\cf6 >>Q_Help
+\par }Das ASQ Hilfe-
+\par System bietet situations-
+\par bezogene Hilfe-
+\par Texte, Stichwort-
+\par Register und Verweise auf verwandten Themen.
+\par \pard 
+\par Diese Option startet das Hilfesystem und zeigt Infor-
+\par mationen \'81ber
+\par das gew\'81nschte Thema.
+\par {\fs28\cf6 >>Q_Mem_EMS
+\par }Die Expanded Memory
+\par Spezifikation (EMS)
+\par erm\rdblquote glicht mit der
+\par Speicherbank-
+\par Umschaltung den Speicherzugriff oberhalb 1 MB.
+\par 
+\par Diese Option zeigt
+\par 
+\par  * EMS-Seiten
+\par  * ungenutztes EMS
+\par  * Seiten-Rahmen
+\par  * ROM-Adressen.
+\par {\fs28\cf6 >>Q_Mem_Exp
+\par }Die Expanded Memory
+\par Spezifikation (EMS)
+\par erm\rdblquote glicht mit der
+\par Speicherbank-
+\par Umschaltung den Speicherzugriff oberhalb 1 MB.
+\par 
+\par Diese Option zeigt
+\par 
+\par  * EMS-Version
+\par  * VCPI-Version
+\par  * Seiten-Rahmen
+\par  * abbildbare
+\par    EMS-Seiten
+\par  * Handles.
+\par {\fs28\cf6 >>Q_Mem_Ext
+\par }Der Extended Memory
+\par Adre\'e1bereich be-
+\par ginnt oberhalb des
+\par ersten Megabyte.
+\par 
+\par Diese Option zeigt
+\par 
+\par  * Gesamtbetrag
+\par    Extended Memory
+\par  * Belegung des
+\par    Extended Memory
+\par    (Adre\'e1bereich
+\par    und Gr\rdblquote \'e1e).
+\par {\fs28\cf6 >>Q_Mem_Hi
+\par }Die oberen 384 KB im ersten Megabyte
+\par werden als HiDOS bezeichnet. Dieser
+\par Speicher ist normalerweise f\'81r System-Funktionen und Hardware reserviert.
+\par 
+\par Diese Option zeigt
+\par das HiDOS mit:
+\par 
+\par  * Programm-Name
+\par  * Adresse
+\par  * Gr\rdblquote \'e1e
+\par  * Umgebung.
+\par {\fs28\cf6 >>Q_Mem_Int
+\par }"Interrupts" sind Speicherzellen, die
+\par eine Kommuni-
+\par kation zwischen Hardware und Software erm\rdblquote g-
+\par lichen.
+\par 
+\par Diese Option listet
+\par alle Interrupts im System nach zwei Kriterien:
+\par 
+\par  * Programmname
+\par  * Interrupt-
+\par    Nummer.
+\par {\fs28\cf6 >>Q_Mem_Low
+\par }Die ersten 640 KB
+\par des Speichers werden als LoDOS
+\par bezeichnet. Dies ist der "Arbeits-
+\par speicher" f\'81r Betriebssystem
+\par und Anwendungs-
+\par Programme.
+\par 
+\par Diese Option zeigt
+\par das LoDOS mit:
+\par 
+\par  * Programm-Name
+\par  * Adresse
+\par  * Gr\rdblquote \'e1e
+\par  * Umgebung.
+\par {\fs28\cf6 >>Q_Me}{\fs28\cf6 m_ROM
+\par }Der Festwert-
+\par speicher (ROM = Read Only Memory) h\'84lt permanente Instruktionen des Betriebssystems
+\par und anderer Software fest.
+\par 
+\par Diese Option zeigt
+\par Gr\rdblquote \'e1e und Adressen
+\par der ROM-Bereiche
+\par im Verh\'84ltnis zu
+\par anderen Speicher-
+\par bereichen.
+\par {\fs28\cf6 >>Q_Mem_Sum
+\par }Der Adre\'e1raum des Computerspeichers kann verschiedene Speichertypen enthalten.
+\par 
+\par Diese Option zeigt
+\par alle Speichertypen:
+\par \pard 
+\par  * DOS-System
+\par  * LoDOS/HiDOS
+\par  * Video, ROM
+\par  * Expanded Memory
+\par  * Extended Memory
+\par {\fs28\cf6 >>Q_Mem_Tim
+\par }Die Geschwindig-
+\par keit der Speicher-
+\par Chips und die Zugriffsbreite des Datenbus wirken sich auf die Systemleistung aus.
+\par 
+\par Diese Option mi\'e1t die Zugriffszeit jedes Datenblocks und zeigt:
+\par 
+\par  * Block-Adresse
+\par  * Block-Gr\rdblquote \'e1e
+\par  * Zugriffszeit
+\par {\fs28\cf6 >>Q_Mem_XMS
+\par }Die Extended Memory
+\par Spezifikation (XMS)
+\par erm\rdblquote glicht Pro-
+\par grammen den Zugriff
+\par auf Speicher ober-
+\par halb des ersten
+\par Megabyte. 
+\par 
+\par Diese Option zeigt
+\par die XMS-Daten:
+\par 
+\par  * XMS-Version
+\par  * Treiberversion
+\par  * UMB-Speicher
+\par  * EMB-Speicher
+\par  * HMA-Status
+\par  * A20-Status.
+\par {\fs28\cf6 >>Q_Snp_Clear
+\par }Nach dem Laden einer ASQ Snapshot-
+\par Datei werden alle Informationen aus dieser Datei an Stelle der aktu-
+\par ellen System-
+\par daten angezeigt.
+\par 
+\par Diese Option l\rdblquote scht
+\par den "Schnappschu\'e1"
+\par aus dem ASQ-
+\par Speicher und l\'84dt wieder die aktuelle
+\par System-Konfigura-
+\par tion.
+\par {\fs28\cf6 >>Q_Snp_Info
+\par }ASQ analysiert das
+\par System. Alle Daten
+\par werden in einer Snapshot-Datei gespeichert. "Schnappsch\'81sse" k\rdblquote nnen mit ASQ auf
+\par einem anderen System angezeigt werden.
+\par 
+\par Diese Option zeigt
+\par Informationen aus einer momentan geladenen Snapshot-
+\par Datei (falls vor-
+\par handen).
+\par {\fs28\cf6 >>Q_Snp_Load
+\par }Nach dem Laden einer ASQ Snapshot-
+\par Datei werden alle
+\par Informationen aus dieser Datei an Stelle der aktu-
+\par ellen Systemdaten
+\par angezeigt.
+\par 
+\par Diese Option ent-
+\par leert den ASQ-
+\par Speicher und l\'84dt
+\par einen neuen "Schnappschu\'e1".
+\par {\fs28\cf6 >>Q_Snp_Sav
+\par }ASQ analysiert das
+\par System. Alle Daten
+\par werden in einer Snapshot-Datei gespeichert.
+\par 
+\par "Schnappsch\'81sse" k\rdblquote nnen mit ASQ auf einem anderen System angezeigt werden.
+\par 
+\par Diese Option legt eine Snapshot-Datei
+\par mit der aktuellen System-Konfigu-
+\par ration an.
+\par {\fs28\cf6 >>Q_L_Abt_ASQ
+\par }Diese Option be-
+\par schreibt ASQ und gibt Empfehlungen,
+\par wie Sie ASQ f\'81r eine Optimierung der Systemleistung
+\par einsetzen k\rdblquote nnen.
+\par {\fs28\cf6 >>Q_L_Cfg
+\par }Das ASQ Lernhilfe-
+\par System bietet Lektionen \'81ber Computer-Hardware
+\par und System-
+\par Optimierung.
+\par 
+\par Diese Option l\'84dt
+\par die Lernhilfe.
+\par Erstes Thema: System-Konfigu-
+\par ration.
+\par {\fs28\cf6 >>Q_L_Contents
+\par }Das ASQ Lernhilfe-
+\par System bietet Lektionen \'81ber Computer-Hardware
+\par und System-
+\par Optimierung.
+\par 
+\par Diese Option l\'84dt die Lernhilfe und zeigt eine Liste der Themen.
+\par {\fs28\cf6 >>Q_L_Gloss
+\par }Das ASQ-Glossar enth\'84lt h\'84ufig wiederkehrende Begriffe zum Thema
+\par \pard Memory Management.
+\par 
+\par Diese Option l\'84dt das Glossar-System
+\par und zeigt eine Themenliste.
+\par {\fs28\cf6 >>Q_L_Hdw
+\par }Das ASQ-Lernhilfe-
+\par System bietet Lektionen \'81ber Computer-Hardware
+\par und System-
+\par Optimierung.
+\par 
+\par Diese Option l\'84dt die Lernhilfe.
+\par Erstes Thema: Computer-
+\par Ausstattung.
+\par {\fs28\cf6 >>Q_L_Index
+\par }Das ASQ Lernhilfe-
+\par System bietet Lektionen \'81ber Computer-Hardware
+\par und System-
+\par Optimierung.
+\par 
+\par Diese Option l\'84dt
+\par das Lernhilfe-
+\par System und zeigt das Stichwort-
+\par Register.
+\par {\fs28\cf6 >>Q_L_Mem
+\par }Das ASQ Lernhilfe-
+\par System bietet Lektionen \'81ber Computer-Hardware
+\par und System-
+\par Optimierung.
+\par 
+\par Diese Option l\'84dt die Lernhilfe.
+\par Erstes Thema: Memory Management.
+\par {\fs28\cf6 >>Q_L_Q
+\par }ASQ analysiert dieses System und
+\par empfiehlt eine entsprechende Memory Management Software von Qualitas.
+\par {\fs28\cf6 >>Q_L_Tune
+\par }ASQ erkennt m\rdblquote glicherweise empfehlenswerte Ver\'84nderungen in der System-
+\par Hardware und Software, die zu einer Leistungs-
+\par verbesserung Ihres
+\par Systems f\'81hren k\rdblquote nnten.
+\par 
+\par Nach der System-
+\par analyse schl\'84gt
+\par ASQ entsprechende
+\par Ver\'84nderungen vor.
+\par 
+\par }

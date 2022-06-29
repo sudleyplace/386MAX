@@ -1,0 +1,504 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times New Roman;}{\f1\froman Symbol;}{\f2\fswiss Arial;}{\f3\fmodern Courier;}{\f4\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;
+\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;
+\red127\green127\blue0;\red127\green127\blue127;\red192\green192\blue192;}{\stylesheet{\f4\lang1033 \snext0 Normal;}{\s2\fi-288\li576 \f4\lang1033 \sbasedon0\snext2 Outdent4;}{\s3 \f4\fs28\cf6\lang1033 \sbasedon0\snext3 Context;}{\s4\fi-1584\li1872 
+\f4\lang1033 \sbasedon0\snext4 Outdent13;}{\s5\li288 \f4\lang1033 \sbasedon0\snext5 Indent2;}}{\info{\title maximize help system, help topics}{\author Stan}{\operator Henry A. Groover}{\creatim\yr1991\mo5\dy16\hr17\min39}
+{\revtim\yr1995\mo10\dy25\hr13\min9}{\version68}{\edmins864}{\nofpages1}{\nofwords65536}{\nofchars65536}{\vern16417}}\paperw12240\paperh15840\margl1440\margr1008\margt1440\margb1440\gutter0 \deftab0\widowctrl\ftnbj \sectd \linex0\endnhere \pard\plain 
+\f4\lang1033 {\cf2 Maximize General Help
+\par }{\cf2 by Stan Leszynski}{\cf2 
+\par }\pard \fi-288\li270\ri-2700 {\cf2 These notes are not a live context}{\cf2 
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Some topics need work, search for !}{\cf2 
+\par }{\cf2 Line width 68}{\cf2 
+\par }{\cf2 Context strings begin with >>}{\cf2 
+\par }{\cf2 First line is @ plus P (print) or N (noprint) plus stop markers for Prev/Next}{\cf2 
+\par }\pard {\cf2 MSWord file use:}{\cf2 
+\par }{\cf2  Set Printer to Generic/Text only on File:}{\cf2 
+\par }{\cf2  Set View to Page mode to see wrapping}{\cf2 
+\par }{\cf2  Default tabs 0}{\cf2 
+\par }{\cf2  Left margin 0}{\cf2 
+\par }{\cf2  Right margin 1.7"}{\cf2 
+\par }{\cf2  Top margin 0}{\cf2 
+\par }{\cf2  Bottom margin 0}{\cf2 
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns}{\cf2 
+\par }{\cf2 Text highlighting:}{\cf2 
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text}{\cf2 
+\par }{\cf2  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text}{\cf2 
+\par }{\cf2  use }{\ul\cf2 UNDERLINE}{\cf2  for context jump= red text}{\cf2 
+\par }{\cf2  use }{\b\i\cf2 BOLD ITALICS}{\cf2  for bullets= yellow text}{\cf2 
+\par }\pard \fi-288\li288\ri-2700 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>H.Contents
+\par \pard\plain \f4\lang1033 @P H.Contents M_Complete
+\par                         {\i Maximize Help Topics}{\i 
+\par }
+\par Help system topics displayed in red are context jumps that allow you to move directly to another help topic.  Scroll up and down through the text to find a desired topic, then use the {\b Right} or{\b  Left }
+arrow key to highlight a context jump topic and press {\b Enter}.
+\par 
+\par                - These topics help you use {\b Maximize} -
+\par                            {\ul Using Buttons}{\v H.Default}
+\par                        {\ul Using the Help System}{\v H.U_Help}
+\par                          {\ul Using a Dialog Box}{\v H.U_Dial}
+\par                        {\ul Using the Print System}{\v H.U_Print}
+\par   - These {\b Maximize help messages} are relevant to specific tasks -
+\par      - They may not be as meaningful when read out of context -
+\par                               {\ul Aborting}{\v M_abrt}
+\par                            {\ul Maximize Tasks}{\v M_IntroMax}
+\par                            {\ul Micro Channel}{\v M_IntroP2}
+\par                         {\ul Identify Boot Drive}{\v M_bootdsk}
+\par                        {\ul Required Files Missing}{\v M_filereq}
+\par                      {\ul Insert Reference Diskette}{\v M_refdsk}
+\par                         {\ul Maximizing Adapters}{\v M_p1help}
+\par                            {\ul Express Maximize}{\v M_Quick}
+\par                         {\ul Rebooting the System}{\v M_reboot}
+\par                     {\ul Maximizing Driver}{\ul s and TSRs}{\v M_p2help}
+\par                         {\ul ROM Search Technology}{\v M_probe}{\ul 
+\par }                           {\ul VGAswap Option}{\v M_vgaswap}{\ul 
+\par }                             {\ul Reordering}{\v M_reorder}
+\par                                {\ul Groups}{\v M_p3help}
+\par                       {\ul Maximize Complete Screen}{\v M_complete}
+\par             - The topics provide {\b related information} -
+\par                         {\ul Maximize Help Index}{\v H.Index}
+\par 
+\par You can browse sequentially through all topics on the list above by using the {\b Next} button now.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>H.Default
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                             {\i Using Buttons}
+\par 
+\par {\b Buttons}
+ are used to denote important keystrokes available during a function and to allow mouse users to execute the keystrokes.  A button is a small shadowed box at the bottom of the screen, data display window, or dialog box.  The key to press to select the but
+ton's function is highlighted in the button text, or mouse users can click on the button.  Buttons that appear inside a dialog box can also be selected using the Tab and Enter keys (see {\ul Using a Dialog Box}{\v H.U_Dial} for more information).
+\par 
+\par These buttons are available on most screens:
+\par 
+\par   * {\b Abort Esc} - Abort the program at the current process.
+\par   * {\b Help F1} - Display topical help information.
+\par   * {\b Print F2} - Display the {\ul Print Dialog Box}{\v H.U_Print}, where available.
+\par 
+\par \pard \fi-1\li1 Not all function key buttons are available at each program process.  Buttons that are active have a {\b highlighted} key designation on them; inactive buttons have low intensity text.
+\par \pard 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>H.U_Help
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                         {\i Using the Help System}{\i 
+\par }
+\par The Help system provides topical information on program features.
+\par 
+\par During a program process, if the {\b Help button}
+ at the bottom of the screen is active, pressing the help function key or clicking the mouse on the button will display the help associated with the activity.  Help information that is larger than the display window can be scrolled using PgDn, PgUp, Ctrl-
+Home, Ctrl-End, the arrow keys, or the scroll bars in conjunction with the mouse.
+\par 
+\par When the Help system is displayed, these options are available:
+\par 
+\par   * {\b Topics} - Displays the topics list for the Help system.  Topics
+\par     are listed in the order that they are traversed when browsing
+\par     the Help system with the Next button.
+\par   * {\b Index} - Displays the subject index for the Help system.  Topics
+\par     are listed in alphabetical order by their primary subject(s).
+\par   * {\b Next} - Move to the next help topic in the current browse list
+\par     (see below).
+\par   * {\b Back} - Move sequentially backwards through previously viewed
+\par     topics.  Each time Back is chosen, a previously viewed screen is
+\par     shown, until the original topic chosen with the Help button is
+\par     reached or the limit of 20 backtracks is attained.
+\par 
+\par When a help topic is chosen with the Help button and displayed, a {\b browse list} for the topic becomes active.  The browse list links the topic to other related topics.  To browse through the list and view r
+elated topics, select Next..  Once the Help system is activated, the browse list is reset only when Topics or Index are chosen, or when a new topic is chosen through a context jump (see below).  Browsing to a related topic does not reset the browse list. 
+ The browse list for the Topics list includes every help topic in the system.
+\par 
+\par Help system text displayed in red is a {\b context jump} that allows you to jump directly to a related help topic.  To select a context jump topic, us
+e the Right or Left arrow key to move to (highlight) the topic then press Enter.  With a mouse, click on the topic to highlight it, or double-click on a highlighted or non-highlighted topic to jump.  To reverse a context jump, choose the Back button to re
+turn to the topic that you jumped from.
+\par 
+\par Help information can be printed using the {\ul Print System}{\v H.U_Print}.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>H.U_Dial
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                          {\i Using a Dialog Box}{\i 
+\par }
+\par Dialog boxes appear on top of the current screen information and contain some or all of the following elements.
+\par 
+\par {\b Message Text}{\b 
+\par }
+\par Dialog box messages provide current {\b status} information or {\b prompts} for an action required by the user.
+\par 
+\par {\b Subwindows}
+\par 
+\par If the dialog box contains more than one work area or display area, each area will be in a subwindow with a separate title.  The title is highlighted in bold white if the subwindow is active.  To activate a subwindow:
+\par 
+\par   * Use the {\b Tab} and {\b Shift-Tab} keys to move between subwindows; or
+\par   * Use the {\b Alt} key with the highlighted letter in the subwindow
+\par     title; or
+\par   * {\b Click} anywhere in the subwindow with the mouse.
+\par 
+\par {\b Field Editor}
+\par 
+\par A field editor provides an area for {\b text entry}.  Use the Left and Right arrow keys, Backspace, and alphanumeric keys to complete the required entry.  If text values longer than the field editor are allowed, the text will scroll.
+\par 
+\par {\b Checkboxes}
+\par 
+\par A checkbox is an option that is either {\b on or off} as indicated by a check mark enclosed in brackets [].  Within one subwindow, multiple checkboxes can be selected.  To toggle checkboxes on and off, move to the checkbox and press the {\b Spacebar}
+ to toggle, or click within the checkbox with the mouse.
+\par 
+\par To move to a checkbox, tab to the subwindow then use the {\b Up} and {\b Down} arrow keys, or use the {\b Alt} key in conjunction with the highlighted letter in the checkbox description.  Moving to a checkbox with the arrow keys does {\b not}
+ toggle the checkbox; moving with the Alt key or the mouse toggles the checkbox.
+\par \pard \fi-1\li1 
+\par {\b Radio Buttons}
+\par 
+\par \pard A radio button, enclosed in parentheses (), is either {\b on or off} as indicated by a dot.  Only one radio button in a subwindow can be selected at one time.  Move to the radio button and press the {\b Spacebar}
+ to toggle, or click in the radio button with the mouse.
+\par 
+\par To move to a radio button, tab to the subwindow, then use the {\b Up} and {\b Down} arrow keys, or use the {\b Alt} key in conjunction with the highlighted letter in the button description.  Moving to a radio button with the arrow keys does {\b not}
+ toggle the option; moving with the Alt key or the mouse toggles the option.
+\par 
+\par {\b Buttons}
+\par 
+\par Action buttons at the bottom of the dialog box display important available keystrokes.  The key to press to select the button's function is highlighted in the button; press the key alone or in conjunction with the Alt key.  Mouse users can click on the bu
+tton itself.
+\par 
+\par Most dialog boxes contain an {\b OK} button which executes the dialog box feature, and a {\b Cancel}
+ button which cancels the dialog box with no action.  To select the OK button, press O, Alt-O, or the Enter key.  To select the Cancel button, press C, Alt-C, or the Esc key.
+\par 
+\par When a dialog box is opened, one button is shown as the {\b default} button by enclosing the button name in brackets; this button is chosen when Enter is pressed.  In addition to moving the subwindow highlight, the {\b Tab} and {\b Shift-Tab}
+ keys also allow you to highlight a button other than the default button and then press Enter to select it.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>H.U_Print
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                        {\i Using the Print System}{\i 
+\par }
+\par The Print system allows for printing of displayed files and help text.
+\par 
+\par The first subwindow on the print dialog box describes which {\b options} are currently available for printing.  Each option has a checkbox, so multiple options can be selected for printing.
+\par 
+\par The second subwindow on the print dialog box lists the output {\b destinations}.  Each destination has a radio button, so only one destination can be selected.
+\par 
+\par When printing to a {\b file}, Print suggests an output filename or you can enter a valid file specification in the field editor.
+\par 
+\par Use the {\b Tab} key to move between the subwindows and the field editor.  The filename field editor cannot be accessed if the output destination is the printer.
+\par 
+\par When printing {\b All help topics}
+, the Help Topics list provides the list of topics that will be printed and their print order.  Some incidental help topics may not be included in the Topics list and therefore will not be printed with this feature, but can be printed using the {\b 
+Current help topic} option while viewing the individual help screen.
+\par 
+\par Other information relevant to using the print dialog box can be found in {\ul Using a Dialog Box}{\v H.U_Dial}.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_abrt
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                               {\i Aborting}
+\par 
+\par Aborting will {\b u}{\b ndo} all changes to configuration and boot files on this system made during this run of Maximize.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_IntroMax
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                            {\i Maximize Tasks}
+\par 
+\par On all systems Maximize will: 
+\par 
+\par   * {\b Identify} all available high DOS memory regions, 
+\par   * Make {\b backup} copies of CONFIG.SYS, AUTOEXEC.BAT, and your
+\par     #PRODNAME# profile, 
+\par   * {\b Reboot} the system to locate all memory resident programs, 
+\par   * {\b Modify} CONFIG.SYS and AUTOEXEC.BAT so that memory resident
+\par     programs are loaded under Maximize's control, 
+\par   * {\b Reboot} the system to determine the RAM requirements during the
+\par     load, initialization, and resident phases for all memory
+\par     resident programs, 
+\par   * {\b Modify} CONFIG.SYS and AUTOEXEC.BAT a final time to make
+\par     available the maximum amount of conventional memory possible,
+\par     and 
+\par   * {\b Reboot} the system to return control to DOS. 
+\par 
+\par Make sure that floppy drive A: is {\b empty} when Maximize reboots the system between steps.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_IntroP2
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                             {\i Micro Channel}
+\par 
+\par Maximize can identify {\b Micro Channel} machines.
+\par 
+\par To ensure that adapter cards are configured {\b optimally} on Micro Channel systems, Maximize will:
+\par 
+\par   * {\b Request} that you insert the working copy of your reference
+\par     diskette into drive A:, 
+\par   * {\b Read} the reference information files, 
+\par   * {\b Analyze} adapter RAM/ROM use, and 
+\par   * {\b Recommend} optimal adapter configurations, and 
+\par   * {\b Reconfigure} the adapters optimally if you desire. 
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_bootdsk
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                          {\i Identify Boot Drive}
+\par 
+\par Changes to CONFIG.SYS may be necessary during Maximize.  Enter the letter that designates the {\b boot drive} for your system.  The current CONFIG.SYS file must be present in the root directory of the designated boot drive.
+\par 
+\par You {\b must} enter a valid drive letter at the dialog box.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_filereq
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                        {\i Required Files Missing}
+\par 
+\par When Maximize cannot find a {\b required} support file, the filename may be shown in the data display window on the screen.
+\par 
+\par All Maximize support files must be located in the {\b same directory} that contains Maximize.  If necessary, reinstall the product or relocate files that have been moved since installation.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_refdsk
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                       {\i Insert Reference Diskette}
+\par 
+\par Maximize must read information from the {\b Reference Diskette} that came with the computer.
+\par 
+\par Please insert a working copy of your Reference Diskette.  {\b D}{\b O NOT USE YOUR ORIGINAL REFERENCE DISKETTE.}
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_p1help
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                          {\i Maximizing Adapters}
+\par 
+\par Maximize attempts to {\b relocate} any adapter RAM or ROM so as to maximize available high DOS memory.
+\par 
+\par The adapter toggle screen displays the names of adapters found in this system along with suggested actions {\b MAXIMIZE}, {\b STATIC}, or {\b NO MEMORY}
+.  Except for adapters with no memory, you may toggle an adapter's load action between MAXIMIZE and STATIC with the {\b Toggle} button.
+\par 
+\par Select the {\b Done} button to proceed to the next phase.  For adapters whose state is marked Maximize, attempts will be made to move their RAM and ROM to the best location. 
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_Quick
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                         {\i Express Maximize}
+\par 
+\par {\b Maximize} can be run in two modes: Express and Custom.
+\par 
+\par Express Maximize uses {\b default} parameters and program logic to Maximize the system.  Maximize loads each TSR and device driver sequentially into high DOS memory until all drivers are moved or all available memory is used.
+\par 
+\par Custom Maximize displays toggle screens with all TSRs and device drivers available for toggling; you must {\b choose} whether or not to load each item high.
+\par 
+\par We recommend that you respond {\b Yes} to the dialog box if you are new to Maximize and would like Maximize to make its best effort at relocating software for you.  When you are familiar with Maximize features, choose {\b No}
+ and use the full potential of Maximize to custom tailor your system's memory to your needs.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_reboot
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                         {\i Rebooting the System}
+\par 
+\par At the end of each phase, Maximize must {\b reboot} the system to read changes made to CONFIG.SYS and the system initialization batch files (AUTOEXEC.BAT and any called files) during the phase.
+\par 
+\par After each reboot, Maximize needs to load itself again and continue where it left off.  If AUTOEXEC.BAT loads a shell program, network login, or other utility after a reboot, Maximize will not be able to continue until the loaded program is removed or exi
+ted.  You must interact with the computer {\b after each reboot} to get back to DOS, where Maximize will load itself and resume execution automatically.
+\par 
+\par {\b Maximize will tell you when it is done} and force a final reboot, at which time you may resume normal use of the computer.
+\par 
+\par Drive A: must be {\b empty} for the reboot to execute successfully.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_p2help
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                      {\i Maximizing Drivers and TSRs}
+\par 
+\par Maximize identifies on a toggle screen a list of device drivers and memory resident programs as candidates to be loaded into high DOS memory.  Programs that Maximize has selected appear with an action designation to the left.  Initially, Maximize marks th
+e lines containing all resident programs as {\b HIGH} if they are already being loaded into high DOS memory, {\b LOW} if they are too long to include the #LOADNAME# GETSIZE prefix without exceeding the maximum DOS command line length, or {\b Maximize}
+ otherwise.
+\par 
+\par By default, Maximize selects {\b every} memory resident device driver and program as a candidate to be loaded out of conventional memory.  However, if Maximize finds a program that is already being loaded into high DOS it does not modify that line.
+\par 
+\par Move the highlight bar with the Up and Down arrow keys to the desired line.  Select the {\b Toggle} button to toggle to a different action designation.  Select the {\b Next} button or {\b Done} button to move to the next file.  Select the {\b Done}
+ button when the last file is displayed to proceed to the next phase.
+\par 
+\par To force a program that #LOADNAME# is currently loading high to be loaded low with the GETSIZE option, use the Toggle button to toggle the action designator for that line to {\b Maximize}.
+\par 
+\par A small number of programs will not function properly when loaded by Maximize.  To deselect a program as a candidate to be loaded high toggle the action selection to {\b LOW}.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_probe
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                            {\i ROM Search Technology}
+\par 
+\par Maximize offers optional ROM Search Technology to locate unused areas in system ROM and adds "USE=" statements to your #PRODNAME# profile to reclaim these areas as additional high DOS memory.
+\par 
+\par To detect ROM service areas, ROM Search processing requires you to place a diskette in any floppy disk drive, and to press any key when asked.
+\par 
+\par If your computer has built-in (ROM-based) programs such as SETUP that are activated by special key combinations, you will need to activate them {\ul before}
+ pressing the key to continue so that ROM Search can identify the areas they use in ROM.  Many laptop computers use such programs for screen contrast or battery saving options.  Do not activate programs such as some 
+SETUP programs that cause the system to reboot upon exit, or any program such as a notepad or calculator that is not contained in ROM.
+\par 
+\par Once ROM Search has analyzed your system, subsequent executions of Maximize will not ask to run it again.  To force Maximize to ask if you wish to run ROM Search again, you must edit your #PRODNAME# profile and either remove all lines containing the word 
+ROMSRCH, or add a semicolon at the beginning of every such line (including those that already start with one semicolon).  The next time Maximize is executed it will ask if you want to run ROM Search.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_vgaswap
+\par \pard\plain \f4\lang1033 @P H.Default M_complete
+\par                               {\i VGAswap}
+\par 
+\par The VGAswap option creates more usable high DOS memory by relocating VGA and EGA ROM software into the monochrome region of video memory.  If the monochrome area is unavailable, VGAswap may still be able to relocate the VGA ROM in such a way that more con
+tiguous high DOS memory is available.
+\par 
+\par Maximize will automatically activate VGAswap if your system supports it.  VGAswap will not affect performance or software compatibility.
+\par 
+\par Although VGAswap does not {\b add} any new high DOS, because it {\b moves} the VGA or EGA ROM BIOS it can dramatically increase the amount of {\b contiguous}
+ high DOS available, thus allowing greater flexibility in loading device drivers and TSR programs into high DOS memory.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_reorder
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                              {\i Reordering}
+\par 
+\par Maximize is able to change your system start up files so that resident programs are loaded in the optimal sequence providing you with the maximum memory.
+\par 
+\par Some statements or commands must load in a particular sequence to run properly.  Most network software falls into this category.  You must identify such statements and commands in order for the system to function as intended after reordering.  Note that t
+his may include lines in CONFIG.SYS and/or AUTOEXEC.BAT that do not load resident software such as IF, GOTO, REM and LOGIN commands.
+\par 
+\par {\b Grouping} lines in your startup files ensures that Maximize will maintain the order of the lines relative to each other only.  Other lines may be moved between the lines in the group.
+\par 
+\par If you are familiar with the programs loaded during your system's start up {\b and}
+ how these programs operate then select YES.  You will then be asked to group such lines together.  Otherwise, select NO.  If you select NO then Maximize will configure your system based on the existing loading order.
+\par 
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_p3help
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                               {\i Groups}
+\par 
+\par The {\b reordering}
+ process tries different orders of high DOS program loading to optimize the use of system memory.  Groups of programs that require loading in a specific sequence must be marked on this screen to ensure that they will be kept in sequence while being reorde
+red.
+\par 
+\par On the groups toggle screen, move the highlight bar with the Up and Down arrow keys to the desired line.  Select the {\b Group} button to display the gr
+ouping menu.  Groups are assigned consecutive letters beginning with A as they are assigned.  Moving the menu highlight to a lettered group will cause other programs assigned to the group to be highlighted on the toggle screen.  From the menu you can:
+
+\par 
+\par   * assign a program to an {\b existing} group letter;
+\par   * create a {\b new} group letter and assign the program to it; or
+\par   * {\b remove} the group designation from a marked program.
+\par 
+\par Select the {\b Done} button when you are satisfied with the grouping designations.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_complete
+\par \pard\plain \f4\lang1033 @P H.Default M_Complete
+\par                       {\i Maximize Complete Screen}
+\par 
+\par When Maximize is complete, it displays how it has {\b reorganized} memory.
+\par 
+\par The upper part of the display shows the drivers and software programs that have been {\b relocated} from low DOS to high DOS memory.
+\par 
+\par The lower part of the display lists drivers and programs that Maximize could {\b not} move into high DOS.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_SwappedDrive
+\par \pard\plain \f4\lang1033 @P H.Default M_SwappedDrive
+\par                       {\i Disk compression support}
+\par 
+\par Maximize automatically detects most disk compression software.  The /K option allows manual entry of information when unsupported disk compression software is in use.
+\par 
+\par {\b Is #ARG4_# compressed?}{\b 
+\par }
+\par Your drive is compressed if you have a special software driver in your Config.sys that makes the data on this drive accessible to you.  Without the device driver provided by the software, the drive exists only as a file on your hard disk.
+\par 
+\par {\b This drive may also be a swapped drive.  What is the drive designation of #ARG4_# at boot ti}{\b me (If this drive did not exist at boot time, leave this space blank)?}
+\par 
+\par Some disk compression utilities swap drives so that the created drive appears and functions as your original boot drive rather than the assigned drive letter.  This is typically accomplished through another device driver in Config.sys that swaps the drive
+s.
+\par 
+\par {\b Your boot drive is #ARG1#:.  The previous drive designation for drive #ARG1#: is#ARG3#}
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_MBMenu
+\par \pard\plain \f4\lang1033 @P H.Default M_MBMenu
+\par                         {\i MultiConfig}
+\par 
+\par Maximize has detected MS DOS 6 MultiConfig in use.  Using the UP and DOWN arrow keys, select the desired configuration and press ENTER.  Maximize will optimize only the selected configuration.
+\par 
+\par If you wish to Maximize an additional MultiConfig configuration, please re-run Maximize and select a new section.  #PRODNAME# must be present in the MultiConfig section selected in order to run Maximize.  If not, please run SETUP
+/R to Refresh the selected MultiConfig configuration to include #PRODNAME#.
+\par 
+\par You may also indicate a MultiConfig configuration from the DOS prompt by running Maximize with the /A switch using the following syntax (where "boot_name" is the MultiConfig configuration name):
+\par 
+\par MAXIMIZE /A boot_name
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>H.MBMenu
+\par \pard\plain \f4\lang1033 Maximize has detected MS DOS 6 MultiConfig in use.  Please select the configuration you wish to Maximize and press ENTER.
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>H.MBMenu2
+\par \pard\plain \f4\lang1033 If you wish to add #PRODNAME# to another MultiConfig section, please run SETUP /R to refresh your MultiConfig configuration.
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_ABIOSErr
+\par \pard\plain \f4\lang1033 @P H.Default M_ABIOSErr
+\par                    {\i Error initializing ABIOS}
+\par 
+\par Maximize was unable to obtain information from the ABIOS.  This information is needed for optimization of high DOS and to protected existing adapter address space.
+\par 
+\par Your system may require the ABIOS to be loaded from RAM.  This must be done by #PRODNAME# at boot time.  Maximize can reboot your system so you can restart Maximize, or you may elect to continue with Maximize.  If you continue, some adapters may not be re
+cognized properly.
+\par 
+\par After rebooting, if you still receive this warning your system may not have an ABIOS.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_DelBackup
+\par \pard\plain \f4\lang1033 @P H.Default M_DelBackup
+\par                    {\i Delete Backup Files}
+\par 
+\par MAXIMIZE has detected numerous backup files in your #PRODNAME# directory.  Each time Maximize is run your system startup files are saved to filename.xxx where xxx is a numeric extension.
+\par 
+\par Maximize can free additional disk space by deleting extraneous backup files.  This feature will be performed automatically in the future based on the settings you choose here.  These settings will translate to the BACKUP= option in the MAXIMIZE.CFG file. 
+ The option is as follows:
+\par 
+\par          BACKUP= max, min
+\par 
+\par where max = # of backup files to allow before cleanup begins
+\par       min = # of backup files to keep in the #PRODNAME# directory
+\par 
+\par For example, BACKUP=8,3 will cause Maximize to delete all but 3 backup files every time the number of backups reaches 8.  The 3 backup files that remain include the 3 newest.  The current backup files also remain.
+\par 
+\par Select YES to enable BACKUP= to the settings specified.
+\par Select NO to never delete backup files and never ask again.  BACKUP=-1 will be added to the MAXIMIZE.CFG file.
+\par Select CANCEL to bypass the question this pass of Maximize. BACKUP= will not be added to MAXIMIZE.CFG.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>H.Index
+\par \pard\plain \f4\lang1033 @P H.Index H.Index
+\par                         {\i Maximize Help Index}{\i 
+\par }
+\par Use the {\b R}{\b ight/Left} arrow keys to select a subject, then press Enter.
+\par 
+\par {\b Subject--------------------  Help Topic----------------------------}
+\par {\ul Aborting}{\v M_abrt}                     Aborting
+\par {\ul Adapter memory}{\v M_p1help}               Maximizing Adapters
+\par {\ul Adapter toggle screen}{\v M_p1help}        Maximizing Adapters
+\par {\ul AUTOEXEC.BAT file}{\v M_IntroMax}            Maximize Tasks
+\par {\ul Boot drive}{\v M_bootdsk}                   Identify Boot Drive
+\par {\ul Completion screen}{\v M_complete}            Maximize Complete Screen
+\par {\ul CONFIG.SYS file}{\v M_IntroMax}              Maximize Tasks
+\par {\ul Device drivers}{\v M_p2help}               Maximizing Drivers and TSRs
+\par {\ul Custom Maximize}{\v M_Quick}              Express Maximize
+\par {\ul Group toggle screen}{\v M_p3help}          Groups
+\par {\ul Load order}{\v M_reorder}                   Reordering
+\par {\ul Maximize tasks}{\v M_IntroMax}               Maximize Tasks
+\par {\ul Maximize toggle screen}{\v M_p2help}       Maximizing Drivers and TSRs
+\par {\ul Micro Channel tasks}{\v M_IntroP2}          Micro Channel
+\par {\ul Express Maximize}{\v M_Quick}             Express Maximize
+\par {\ul Rebooting}{\v M_reboot}                    Rebooting the System
+\par {\ul Reference diskette}{\v M_refdsk}           Insert Reference Diskette
+\par {\ul Reordering}{\v M_reorder}                   Reordering
+\par {\ul ROM searching}{\v M_probe}                ROM Search Technology
+\par {\ul Support files}{\v M_filereq}                Required Files Missing
+\par {\ul Topics}{\v H.Contents}                       Maximize Help Topics
+\par {\ul TSR programs}{\v M_p2help}                 Maximizing Drivers and TSRs
+\par {\ul VGAswap}{\v M_vgaswap}                      VGAswap Option
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>NOTES
+\par \pard\plain \f4\lang1033 M_intromov is rare so not on contents or indexed.
+\par M_refdsk2 is rare so not on contents or indexed.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_IntroMov
+\par \pard\plain \f4\lang1033 @N M_intromov M_intromov
+\par                            {\i Maximize Tasks}
+\par 
+\par On all systems Maximize will:
+\par 
+\par   * {\b Identify} all available high DOS memory regions, 
+\par   * Make {\b backup} copies of CONFIG.SYS and AUTOEXEC.BAT, 
+\par   * {\b Reboot} the system to locate all memory resident programs, 
+\par   * {\b Modify} CONFIG.SYS and AUTOEXEC.BAT so that memory resident
+\par     programs are loaded under Maximize's control, 
+\par   * {\b Reboot} the system to determine the RAM requirements during the 
+\par     load, initialization, and resident phases for all memory 
+\par     resident programs, 
+\par   * {\b Modify} CONFIG.SYS and AUTOEXEC.BAT a final time to make 
+\par     available the maximum amount of conventional memory possible, 
+\par     and 
+\par   * {\b Reboot} the system to return control to DOS. 
+\par 
+\par Make sure that floppy drive A: is {\b empty} when Maximize reboots the system between steps.
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>M_refdsk2
+\par \pard\plain \f4\lang1033 @N M_refdsk2 M_refdsk2
+\par                      {\i Reference Diskette Required}
+\par 
+\par Maximize must read information from the {\b Reference Diskette} that came with the computer.  If you choose not to read the Reference Diskette when prompted, high DOS loading may not be optimized to the greatest possible degree.
+\par 
+\par Please insert a working copy of your Reference Diskette.  {\b DO NOT USE YOUR ORIGINAL REFERENCE DISKETTE.}
+\par 
+\par Do not skip this step unless the Reference Diskette is {\b unavailable}.
+\par 
+\par }

@@ -1,0 +1,73 @@
+{\rtf1\ansi \deff11\deflang1033{\fonttbl{\f11\fmodern\fcharset0\fprq1 Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;
+\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\f11 
+\snext0 Normal;}{\*\cs10 \additive Default Paragraph Font;}{\s15\fi-288\li576 \f11 \sbasedon0\snext15 Outdent4;}{\s16 \f11\fs28\cf6 \sbasedon0\snext16 Context;}{\s17\fi-1584\li1872 \f11 \sbasedon0\snext17 Outdent13;}{\s18\li288 \f11 \sbasedon0\snext18 
+Indent2;}{\s19 \f11\fs16\cf2 \sbasedon0\snext19 Comment;}}{\info{\title install messge system, large msgs.}{\author Stan}{\operator Henry A. Groover}{\creatim\yr1991\mo5\dy19\hr12\min13}{\revtim\yr1996\mo2\dy1\hr12\min17}{\version1}{\edmins0}{\nofpages0}
+{\nofwords0}{\nofchars0}{\vern49197}}\margl1440\margr1008 \deftab0\widowctrl\ftnbj\aenddoc\hyphcaps0 \fet0\sectd \linex0\endnhere {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}
+{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang
+{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \s19 
+\f11\fs16\cf2 QMTSetup Message Text, Large Messages
+\par These notes are not a live context
+\par Line width 68
+\par Context strings begin with >>
+\par Use ## to surround replaceable parameters, tag _ at end of parameter to reserve spaces for attribute if ## block not big enough to properly wrap
+\par MSWord file use:
+\par  Set Printer to Generic/Text only on File:
+\par  Set View to Page mode to see wrapping
+\par  Default tabs 0
+\par  Left margin 0
+\par  Right margin 1.7"
+\par  Top margin 0
+\par  Bottom margin 0
+\par For indented lines or to get desired wrapping, use hard returns
+\par Text highlighting:
+\par  use BOLD for accenting= yellow text
+\par \pard\plain \f11 
+\par \pard\plain \s16 \f11\fs28\cf6 >>L.ConfigSysN
+\par \pard\plain \f11 The installation of #FLENME___# requires certain changes to your start-up files.  These files will be backed up in your #FLENME__# directory.  If you do not want these changes made to your system you must abort now to quit installation.
+
+\par 
+\par Additionally, #FLENME__# includes on-line information for certain topics.
+\par 
+\par 
+\par     {\b Press Alt-V to View changes and on-line documentation}
+\par \pard\plain \s16 \f11\fs28\cf6 >>L.Copyright
+\par \pard\plain \f11 {\b Please remember that this software may be installed and in use on only one machine at a time.}
+\par 
+\par Please do not make copies of any Qualitas documentation or program disks other than for purposes of backup.  If you wish to use this product on more than one machine, you must purchase a copy for each machine.
+\par 
+\par Other restrictions apply, as specified in the license agreement{\b .
+\par }
+\par      (C) Copyright 1987-97 Qualitas, Inc.  All rights reserved.
+\par \pard\plain \s16 \f11\fs28\cf6 >>L.NoFreeDisk
+\par \pard\plain \f11 There is not enough available disk space on drive #ARG3# to store the #FLENME# programs.
+\par 
+\par   {\b #ARG1# bytes} (approximately) needed,
+\par   {\b #ARG2# bytes} are available.
+\par 
+\par {\b You need to make additional disk space available, and re-run #PROGNAME#.}
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>L.NoFreeDisk2
+\par \pard\plain \f11 There is not enough available disk space on drive #ARG3# to store the #FLENME# programs.
+\par 
+\par   {\b #ARG1# bytes} (approximately) needed,
+\par   {\b #ARG2# bytes} are available.
+\par 
+\par {\b You may respecify another destination directory, or leave #PROGNAME#, make additional disk space available, and re-run #PROGNAME#.}
+\par \pard\plain \s16 \f11\fs28\cf6 >>L.Userinfo
+\par \pard\plain \f11 {\b Please enter registration information.}
+\par 
+\par #PROGNAME# will write the information to the distribution disk.  Enter the person or company name that will be used when registering the product with Qualitas.
+\par 
+\par {\b          Name}
+\par 
+\par Enter the 11 digit serial number located on the title page of your documentation or on the diskette.
+\par 
+\par {\b              Serial Number
+\par }\pard\plain \s16 \f11\fs28\cf6 >>L.Confirm
+\par \pard\plain \f11 Is this information correct?
+\par 
+\par {\b Name:}          #ARG1#
+\par 
+\par {\b Serial number:} #ARG2#
+\par 
+\par }

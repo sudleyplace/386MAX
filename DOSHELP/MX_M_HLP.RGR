@@ -1,0 +1,132 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times;}{\f1\froman Symbol;}{\f2\fswiss Helvetica;}{\f3\fmodern Letter Gothic;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;
+\red192\green192\blue192;}{\stylesheet{\s252 \f3\lang1033 \sbasedon0\snext0 heading 3;}{\s253 \f3\lang1033 \sbasedon0\snext0 heading 2;}{\s254 \f3\lang1033 \sbasedon0\snext0 heading 1;}{\f3\lang1033 \snext0 Normal;}{\s1\li708 \f3\lang1033 
+\sbasedon0\snext1 Normal Indent;}{\s2 \f3\fs28\cf6\lang1033 \sbasedon0\snext0 Context;}{\s3\fi-288\li288 \f3\fs16\cf2\lang1033 \sbasedon0\snext3 Comment;}}{\info{\title max messge system, medium msgs.}{\author Klaus Albrecht}{\operator Klaus Albrecht}
+{\creatim\yr1992\mo5\dy3\hr14\min41}{\revtim\yr1996\mo2\dy15\hr21\min2}{\printim\yr1992\mo9\dy16\hr15\min19}{\version1}{\edmins0}{\nofpages0}{\nofwords0}{\nofchars0}{\vern16417}}\paperw12240\paperh15840\margl1440\margr2750\margt1440\margb1440\gutter0 
+\facingp\widowctrl\ftnbj\ftnrestart\hyphhotz425 \sectd \linex0\headery709\footery709\colsx709\endnhere \pard\plain \s3\fi-288\li288 \f3\fs16\cf2\lang1033 Maximize Message Text, Medium Messages
+\par by Stan Leszynski
+\par These notes are not a live context
+\par Line width 56 (51 for non-German versions)
+\par Note that the margins need to be 0.01" smaller than common sense would dictate.  One might think that setting margins to 1" left and 1.9" right with a paper width of 8.5" would yield a maximum characters per line of 56 when using a 12 point fixed width fo
+nt, but alas! it is not so.
+\par Context strings begin with >>
+\par Use ## to surround replaceable parameters, tag _ at end of parameter to reserve spaces for attribute if ## block not big enough to properly wrap
+\par MSWord file use:
+\par  Set Printer to Generic/Text only on File:
+\par  Set View to Page mode to see wrapping
+\par  Default tabs 0
+\par  Left margin 1
+\par  Right margin 1.9"
+\par  Top margin 1
+\par  Bottom margin 1
+\par For indented lines or to get desired wrapping, use hard returns
+\par Text highlighting:
+\par  use {\b BOLD} for accenting= yellow text
+\par 
+\par \pard\plain \f3\lang1033 {\fs28\cf6 >>M.Adapter
+\par }Maximize bietet f\'81r Adapter mit einstellbaren RAM-
+\par oder ROM-Adressen entsprechende Optionen zur Maximierung. So kann ein m\rdblquote glichst gro\'e1er zusammen-
+\par h\'84ngender HiDOS-Speicher erzielt werden.
+\par 
+\par Mit der Schaltfl\'84che {\b Hilfe }erhalten Sie weitere Informationen.
+\par {\fs28\cf6 >>M.ErrAdap
+\par }W\'84hrend der Bearbeitung eines Mikrokanal-Adapters ist ein Fehler aufgetreten.
+\par #ARG1#
+\par #ARG2#
+\par 
+\par #ARG3#
+\par #ARG4#
+\par {\fs28\cf6 >>M.FeelLucky
+\par }Maximize kann derzeit #ARG1___# Byte in den HiDOS-Speicher laden. Ein maximaler Betrag von weiteren #ARG2__# Byte kann m\rdblquote glicherweise in den HiDOS Speicher verlagert werden.
+\par 
+\par Zu diesem Zweck mu\'e1 Maximize die Lade-Reihenfolge der speicher-residenten Programme ver\'84ndern. Dieser Vorgang wird Programm-Neuordnung genannt.
+\par {\fs28\cf6 >>M.FeelLucky2
+\par }Sie k\rdblquote nnen w\'84hlen, ob eine Neuordnung stattfinden soll.
+\par 
+\par Mit der Auswahl {\b Ja} m\'81ssen Sie alle Programme markieren, die einer bestimmten Lade-Reihenrolge unterliegen. Mit der Auswahl {\b Nein }konfiguriert Maximize das System auf Grundlage der aktuellen Lade-Reihenfolge.
+\par 
+\par {\b K\rdblquote nnen Sie alle Programme bestimmen, die eine vorgegebene Lade-Reihenfolge erfordern?}
+\par {\fs28\cf6 >>M.Group
+\par }Dieser Bildschirm zeigt die Lade-Reihenfolge der speicher-residenten Programme und Treiber. Sie k\rdblquote nnen nun eine Gruppierung der Programme vornehmen, die gemeinsam und in bestimmter Reihenfolge geladen werden m\'81ssen.
+\par 
+\par Mit der Schaltfl\'84che {\b Hilfe }erhalten Sie weitere Informationen \'81ber dieses Gruppieren der Programme.
+\par {\fs28\cf6 >>M.IntroPS2
+\par }Maximize hat dieses System als {\b Mikrokanal}-System erkannt.
+\par 
+\par Maximize m\rdblquote chte Sie bei der Konfiguration der Adapterkarten unterst\'81tzen. Bei erstmaliger Anwendung bittet es um eine Arbeitskopie der {\b Referenzdiskette} Ihres Mikrokanal-Systems. Die Informationen werden dann f\'81
+r weitere Maximize-Aktionen gespeichert.
+\par 
+\par Mit der Schaltfl\'84che{\b  Hilfe }erhalten Sie weitere Informationen zu Mikrokanal-Systemen.
+\par {\fs28\cf6 >>M.MultBatch
+\par }Maximize konnte nicht alle Einheiten-Treiber und speicher-residenten Programme in den HiDOS-Speicher verlagern. Maximize kann m\rdblquote glicherweise mehr Programme in den HiDOS-Speicher verlagern, indem es die Lade-Reihenfolge der Programme/Treiber 
+\'84ndert. Im aktuellen Zustand ist dies nicht m\rdblquote glich, denn es befinden sich nicht alle Programme in einer einzigen Stapeldatei (Batch-Datei). Andernfalls k\rdblquote nnten m\rdblquote glicherweise bi
+s zu #ARG2__# Byte mehr in den HiDOS Speicher verlagert werden.
+\par 
+\par Zum Fortsetzen der Neuordnung m\'81ssen Sie die AUTOEXEC.BAT Datei und weitere Stapeldateien, die daraus aufgerufen werden, \'84ndern. Alle Befehle zum Aufruf speicher-residenter Programme m\'81ssen sich in einer einzigen Stapeldatei befinden.
+\par {\fs28\cf6 >>M.PreToggle
+\par }Dieser Bildschirm zeigt die speicher-residenten Programme und Treiber, die Maximize in den {\b HiDOS}-Speicher zu laden versucht. Sie k\rdblquote nnen f\'81r jedes Programm eine Lade-Option bestimmen oder die von Maximize gew\'84
+hlte Voreinstellung akzeptieren. 
+\par 
+\par Mit der Schaltfl\'84che {\b Hilfe }erhalten Sie weitere Informationen zu Optionen f\'81r das Programm-Laden.
+\par {\fs28\cf6 >>M.Quick
+\par }Maximize kann in zwei Modi ablaufen:
+\par 
+\par   {\b *} Expre\'e1-Maximize verwendet Standard-
+\par     parameter zur Systemkonfiguration.
+\par     Mit der Auswahl {\b Ja} starten Sie den 
+\par     Maximize Expre\'e1-Durchlauf.
+\par 
+\par   {\b *} Angepa\'e1tes Maximize erwartet von Ihnen einige
+\par     Informationen: Sie w\'84hlen die Software-
+\par     Komponenten f\'81r den Lade-Vorgang sowie die
+\par     Gruppierung f\'81r die Lade-Reihenfolge.
+\par     Mit {\b Nein} starten Sie Maximize angepa\'e1t.
+\par {\b 
+\par }{\b M\rdblquote chten Sie die Maximize-Voreinstellungen akzeptieren und den Maximize Expre\'e1-Durchlauf starten?
+\par }{\fs28\cf6 >>M.ReqFile
+\par }Maximize kann die f\'81r den Vorgang notwendigen Dateien nicht finden. {\b Bitte geben Sie Laufwerk und Pfad der entsprechenden Dateien an oder brechen Sie den Vorgang jetzt ab.
+\par }{\fs28\cf6 >>M.ROMSrch1
+\par }Mit der ROM-Search-Technologie kann #PRODNAME# unbenutzte Bereiche im System-ROM gewinnen und als HiDOS-Speicher zur Verf\'81gung stellen.
+\par 
+\par Einige Systeme (z.B. Laptop-Computer) nutzen besondere Tastenkombinationen zur Aktivierung von ROM-Programmen. Mit der Schaltfl\'84che {\b Hilfe }erhalten Sie weitere Informationen zu diesem Vorgang.
+\par 
+\par Bitte legen Sie eine Diskette in eines der Diskettenlaufwerke, damit ROM Search die Laufwerks-Steuerung erkennen kann.
+\par 
+\par {\b Soll ROM-Search jetzt gestartet werden?
+\par }{\fs28\cf6 >>M.ROMSrch2
+\par }Der ROMsearch-Vorgang ist beendet. Bitte entfernen Sie die Diskette aus dem Diskettenlaufwerk.
+\par {\fs28\cf6 >>M.Single
+\par }{\b Sie haben eine Einzelposten-G}{\b ruppe erstellt.}
+\par 
+\par Einzelposten-Gruppen sind f\'81r Maximize bedeutungs-
+\par los. Bitte ordnen Sie der Gruppe weitere Posten zu oder entfernen Sie diese Gruppe.
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>M.VGASwap
+\par \pard\plain \f3\lang1033 Maximize hat festgestellt, da\'e1 Ihr System VGAswap Unterst\'81tzung bietet. Mit dieser Funktion kann der zusammenh\'84ngende HiDOS-Speicher durch Verlagerung des VGA BIOS vergr\rdblquote \'e1ert werden.
+\par 
+\par Mit der Schaltfl\'84che {\b Hilfe }erhalten Sie weitere Informationen zu VGAswap.
+\par 
+\par \pard {\b Soll VGAswap jetzt aktiviert werden?}
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>M.BootSwap_A
+\par \pard\plain \f3\lang1033 Sie haben Unterst\'81tzung f\'81r den Tausch von Laufwerkskennungen (Drive Swapping) angefordert. Maximize mu\'e1 Ihnen einige Fragen stellen. Wenn eine Laufwerkskennung nicht zutrifft, \'81
+bergehen Sie den Eintrag mit der LEER-Taste.
+\par 
+\par {\b Disk-Komprimierung/Swapping erkannt:} #ARG3____#
+\par {\b Boot-Laufwerk:} #ARG1#
+\par {\b Tats\'84chliches Boot-Lw:}
+\par {\b CONFIG.SYS und AUTOEXEC kopieren auf:}
+\par 
+\par {\b #PRODNAME# Verzeichnis:}
+\par #ARG2#
+\par {\b Laufwerk f\'81r #PRODNAME# in CONFIG.SYS:}
+\par {\b Notwendige #PRODNAME# Dateien kopieren auf:}
+\par {\b Alternatives Lw f\'81r erf. #PRODNAME# Dateien:}
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>M.BootSwap
+\par \pard\plain \f3\lang1033 #PRODNAME# ist zur Zeit installiert in
+\par #ARG2#
+\par 
+\par Ist #ARG4_# komprimiert?
+\par 
+\par Dieses Laufwerk kann ein sog. getauschtes Laufwerk (Swapped Drive) sein. Welches ist der Laufwerksbuchstabe f\'81r #ARG4_# zum Boot-Zeitpunkt? (Wenn das Laufwerk zum Boot-Zeitpunkt nicht vorhanden ist, geben Sie hier nichts an.)
+\par 
+\par Ihr Boot-Laufwerk ist #ARG1#:. Die vorherige Laufwerkskennung f\'81r Laufwerk #ARG1#: ist#ARG3#
+\par }

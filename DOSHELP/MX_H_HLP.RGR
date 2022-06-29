@@ -1,0 +1,537 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times;}{\f1\froman Symbol;}{\f2\fswiss Helvetica;}{\f3\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;
+\red192\green192\blue192;}{\stylesheet{\f3\lang1033 \snext0 Normal;}{\s1 \f3\fs28\cf6\lang1033 \sbasedon0\snext1 Context;}}{\info{\title maximize help system, help topics}{\author Klaus Albrecht}{\operator Klaus Albrecht}
+{\creatim\yr1992\mo5\dy3\hr14\min40}{\revtim\yr1996\mo2\dy15\hr21\min1}{\printim\yr1992\mo9\dy15\hr17\min40}{\version1}{\edmins1}{\nofpages0}{\nofwords0}{\nofchars0}{\vern16417}}\paperw12240\paperh15840\margl1440\margr1008\margt1440\margb1440\gutter0 
+\facingp\widowctrl\ftnbj\ftnrestart\hyphhotz425 \sectd \linex0\headery709\footery709\colsx709\endnhere \pard\plain \f3\lang1033 {\cf2 Maximize General Help
+\par }{\cf2 by Stan Leszynski
+\par }\pard \fi-288\li270\ri-2700 {\cf2 These notes are not a live context
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Some topics need work, search for !
+\par }{\cf2 Line width 68}{\cf2 
+\par }{\cf2 Context strings begin with >>
+\par }{\cf2 First line is @ plus P (print) or N (noprint) plus stop markers for Prev/Next
+\par }\pard {\cf2 MSWord file use:
+\par }{\cf2  Set Printer to Generic/Text only on File:
+\par }{\cf2  Set View to Page mode to see wrapping
+\par }{\cf2  Default tabs 0
+\par }{\cf2  Left margin 0
+\par }{\cf2  Right margin 1.7"
+\par }{\cf2  Top margin 0
+\par }{\cf2  Bottom margin 0
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns
+\par }{\cf2 Text highlighting:
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text
+\par }{\cf2  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text
+\par }{\cf2  use }{\ul\cf2 UNDERLINE}{\cf2  for context jump= red text
+\par }{\cf2  u}{\cf2 se }{\b\i\cf2 BOLD ITALICS}{\cf2  for bullets= yellow text
+\par }\pard \fi-288\li288\ri-2700 
+\par \pard {\fs28\cf6 >>H.Contents
+\par }@P H.Contents M_Complete
+\par                        {\i Maximize Hilfe-Themen
+\par }
+\par Die in Rot dargestellten Hilfe-Themen sind Hypertext-Verbindungen. Sie erm\rdblquote glichen Ihnen den direkten Zugang zu anderen Hilfe-Themen. Bl\'84ttern Sie im Text nach oben oder nach unten und w\'84hlen Sie das gew\'81nschte Thema. Benutzen Sie die {
+\b rechte} oder {\b linke }Pfeiltaste, um das Thema hervorzuheben und dr\'81cken Sie dann die{\b  Eingabetaste}. Die Auswahl mit der Maus erfolgt durch Anwahl und Doppelklick.
+\par 
+\par        - Diese Themen helfen Ihnen im Umgang mit {\b Maximize} -
+\par                       {\ul Schaltfl\'84chen benutzen}{\v H.Default}
+\par                   {\ul Einf\'81hrung in das Hilfe-System}{\v H.U_Help}
+\par                    {\ul Umgang mit einem Dialogfeld}{\v H.U_Dial}
+\par                    {\ul Umgang mit dem Druck-System}{\v H.U_Print}
+\par  - Diese {\b Maximize Hilfe-Meldungen }beschreiben spezielle Aufgaben -
+\par   - Au\'e1erhalb des Kontext gelesen erscheinen sie wenig sinnvoll -
+\par                              {\ul abbrechen}{\v M_abrt}
+\par                          {\ul Ma}{\ul ximize-Aufgaben}{\v M_IntroMax}
+\par                          {\ul Mikrokanal-Systeme}{\v M_IntroP2}
+\par                        {\ul Boot-Laufwerk angeben}{\v M_bootdsk}
+\par                  {\ul Erforderliche Dateien nicht vorhanden}{\v M_filereq}
+\par                      {\ul Referenzdiskette einlegen}{\v M_refdsk}
+\par                         {\ul Adapter maximieren}{\v M_p1help}
+\par                           {\ul Expre\'e1-Maximize}{\v M_Quick}
+\par                  {\ul Neustart des Systems durchf\'81hren}{\v M_reboot}
+\par                    {\ul Treiber und TSRs maximieren}{\v M_p2help}
+\par                        {\ul ROMSearch-Techn}{\ul ologie}{\v M_probe}{\ul 
+\par }                           {\ul VGAswap Option}{\v M_vgaswap}{\ul 
+\par }                        {\ul Programm-Neuordnung}{\v M_reorder}
+\par                              {\ul Gruppen}{\v M_p3help}
+\par                      {\ul Maximize-Ergebnisanzeige}{\v M_complete}
+\par            - Diese Themen enthalten {\b verwandte Informationen} -
+\par                    {\ul Maximize Stichwortverzeichnis}{\v H.Index}
+\par 
+\par Mit der Schaltfl\'84che{\b  n\'84chste} k\rdblquote nnen Sie die Themen der Reihe nach durchbl\'84ttern.
+\par 
+\par {\fs28\cf6 >>H.Default
+\par }@P H.Default M_Complete
+\par                         {\i Schaltfl\'84chen benutz}{\i en}
+\par 
+\par Mit {\b Schaltfl\'84chen }werden wichtige Befehle ausgef\'81hrt. Eine Schaltfl\'84che ist ein kleines, schattiertes Feld im unteren Bildschirmbereich, ein Datenfenster oder ein Dialogfeld. Jede Schaltfl\'84che enth\'84
+lt einen hervorgehobenen Buchstaben sowie ein oder zwei W\rdblquote rter, die diese Funktion beschreiben. Dr\'81cken Sie auf der Tastatur die entsprechende Taste, um die Funktion der Schaltfl\'84che auszuf\'81hren. Mit der Maus k\rdblquote 
+nnen Sie die Schaltfl\'84che am Bildschirm anw\'84hlen und zur Ausf\'81hrung anklicken. Mit der TAB-Taste oder mit der Eingabetaste k\rdblquote nnen die Schaltfl\'84chen innerhalb eines Dialogfeldes ausw\'84hlen. (Vgl. {\ul Umgang mit einem Dialogfeld}{
+\v H.U_Dial}) 
+\par 
+\par Die meisten Bildschirme verf\'81gen \'81ber folgende Schaltfl\'84chen:
+\par 
+\par   * {\b Abbruch Esc} - bricht das Programm ab
+\par   * {\b Hilfe F1} - zeigt aktuelle Hilfe-Information an
+\par   * {\b Druck F2} - zeigt das {\ul Druck-Dialogfeld}{\v H.U_Print} an, falls verf\'81gbar.
+\par 
+\par \pard \fi-1\li1 Schaltfl\'84chen werden verwendet, wenn ihre Funktionen f\'81r die aktuelle Aufgabe relevant sind. Eine bestimmte Schaltfl\'84che kann m\rdblquote glicherweise im aktuellen Men\'81system nicht verf\'81gbar sein. Auch wenn eine Schaltfl\'84
+che angezeigt wird, kann sie m\rdblquote glicherweise nicht aktiv sein, d.h. Sie k\rdblquote nnen sie nicht ausw\'84hlen. Die aktiven Schaltfl\'84chen enthalten einen hervorgehobenen Buchstaben. Der Text inaktiver Schaltfl\'84
+chen ist nur schwach dargestellt.
+\par \pard 
+\par {\fs28\cf6 >>H.U_Help
+\par }@P H.Default M_Complete
+\par                      {\i Einf\'81hrung in das Hilfe-System
+\par }
+\par Das Hilfe-System enth\'84lt aktuelle Informationen \'81ber die jeweiligen Programm-Funktionen. Bei aktiver{\b  Schaltfl\'84che "}{\b Hilfe"} am unteren Bildschirmrand f\'81hrt ein Druck auf die entsprechende Funktionstaste zur Anzeige des Hilfefensters f
+\'81r die aktuelle Aktivit\'84t. Mit der Maus k\rdblquote nnen Sie die Schaltfl\'84che direkt anklicken. Ist die Hilfe-
+\par Information gr\rdblquote \'e1er als das Fenster, dann k\rdblquote nnen Sie mit den Tasten Bild-Nach-Unten, Bild-Nach-Oben, STRG+POS1, STRG+Ende und den Pfeiltasten durch den Text bl\'84ttern. Mit der Maus k\rdblquote 
+nnen Sie sich anhand der Bildlaufleisten im Text bewegen.
+\par 
+\par Bei aktivem Hilfesystem sind folgende Optionen auf Schaltfl\'84chen verf\'81gbar:
+\par 
+\par   * {\b Themen} - zeigt eine Liste der Hilfe-Themen an.
+\par     Die Themen werden in der Reihenfolge angeboten, in der Sie
+\par     beim Bl\'84ttern durch das Hilfesystem  mit der Schaltfl\'84che
+\par    "n\'84chste" auftreten.
+\par   * {\b Stichwort} - zeigt das Stichwortregister f\'81r das Hilfesystem.
+\par     Die Themen werden in alphabetischer Reihenfolge ihrer prim\'84ren
+\par     Bedeutung gelistet.
+\par   * {\b n\'84chste} - springt zum n\'84chsten Thema der aktuellen Bl\'84tter-Liste
+\par     (s.u.)
+\par \pard   * {\b vorher} - springt auf vorangegangene Themen zur\'81ck. Mit Auswahl
+\par     "vorher" erhalten Sie immer den Bildschirm, der dem aktuellen
+\par     vorausging. Dieser Vorgang ist nach 20 Bildschirmen beendet
+\par     bzw. dann, wenn der urspr\'81nglich ausgew\'84hlte Bildschirm
+\par     wieder angezeigt ist.
+\par 
+\par Mit der Auswahl eines Hilfe-Themas wird eine {\b Bl\'84tter-Liste} aktiv. Die Bl\'84tter-Liste verbindet das Thema mit verwandten Themen-
+\par bereichen. Mit "n\'84chste" bewegen Sie sich durch die Bl\'84tter-Liste. Die Bl\'84tter-Liste bleibt so lange aktiv, bis Sie Themen, Stichwort oder ein neues Thema \'81ber die Hypertext-Verbindung ausw\'84hlen (s.u.). In der Bl\'84
+tter-Liste der Themen ist jedes Element des Hilfesystems enthalten.
+\par 
+\par Der in Rot dargestellte Hilfetext ist eine {\b Hypertext-Verbindung}, mit der Sie ein verwandtes Thema direkt anspringen k\rdblquote nnen. Sie w\'84hlen ein Thema aus, indem Sie das Thema mit der rechten oder linken Pfeiltaste hervorheben und anschlie\'e1
+end die Eingabetaste dr\'81cken. Mit der Maus wird das Thema direkt angeklickt. Alternativ k\rdblquote nnen Sie auch auf ein hervorgehobenes oder nicht hervorgehobenes Thema doppelklicken, um zu springen. Mit der Schaltfl\'84
+che "vorher" kehren Sie wieder zum urspr\'81nglichen Thema (d.h. zu Ihrem Ausgangspunkt) zur\'81ck.
+\par 
+\par \'9aber das {\ul Drucksystem}{\v H.U_Print} k\rdblquote nnen Sie Hilfe-Informationen ausdrucken.
+\par 
+\par 
+\par {\fs28\cf6 >>H.U_Dial
+\par }@P H.Default M_Complete
+\par                     {\i Umgang mit einem Dialogfeld
+\par }
+\par Dialogfelder werden vom oberen Bildschirmrand abw\'84rts eingeblendet. Sie enthalten einige bzw. alle folgenden Elemente:
+\par 
+\par {\b Text-Meldungen
+\par }
+\par Die Meldungen informieren \'81ber den aktuellen Status-oder fordern zu einer notwendigen Aktion auf.
+\par 
+\par {\b Unterfenster}
+\par 
+\par In einem Dialogfeld mit mehr als einem Arbeits- oder Anzeigebereich nimmt jeder Bereich ein eigenes Unterfenster mit einem separaten Namen ein. In einem aktiven Unterfenster ist der Name hervorgehoben. So aktivieren Sie ein Unterfenster:
+\par 
+\par   * Sie k\rdblquote nnen mit der {\b TAB-Taste} und der {\b Umschalttaste+TAB
+\par }{\b  }   zwischen den Unterfenstern springen oder
+\par   * die {\b ALT-Taste }zusammen mit dem hervorgehobenen Buchstaben
+\par     (aus dem Namen des Unterfensters) dr\'81cken oder
+\par   * irgendeinen Bereich innerhalb des Unterfensters mit der Maus
+\par     {\b anklicken.}
+\par 
+\par {\b Feld-Editor}
+\par 
+\par Ein Feld-Editor stellt einen Bereich f\'81r die Texteingabe zur Verf\'81gung. Benutzen sie die linke und rechte Pfeiltaste, die R\'81cktaste und die alphanumerischen Tasten, um den erforderlichen Eintrag zu vervollst\'84
+ndigen. Akzeptiert das aktuelle Feld eine Texteingabe, die gr\rdblquote \'e1er ist als das Textfeld, dann erfolgt ein Bildlauf im Text.
+\par 
+\par {\b Kontrollk\'84stchen}
+\par 
+\par Ein Kontrollk\'84stchen ist eine Option, die entweder {\b ein-} oder {\b ausgeschaltet} ist. Eine Markierung in Klammern gibt den Status der Option an. In einem Unterfenster k\rdblquote nnen mehrere Kontrollk\'84stchen markiert werden.
+\par 
+\par Sie aktivieren ein Kontrollk\'84stchen, indem Sie es mit den Tasten {\b Nach-Oben} und {\b Nach-Unten} ansteuern und die {\b Leertaste} dr\'81cken. Alternativ k\rdblquote 
+nnen Sie die ALT-Taste zusammen mit dem hervorgehobenen Buchstaben im Namen des Kontrollk\'84stchens dr\'81cken. Die Auswahl eines Kontrollk\'84stchens mit der Maus erfolgt \'81ber Anw\'84hlen und Anklicken. 
+\par 
+\par Ein Ansteuern des Kontrollk\'84stchens mit den {\b Pfeiltasten} aktiviert die Option nicht, ein Ansteuern mit der {\b ALT}-Taste jedoch schon.
+\par 
+\par \pard \fi-1\li1 {\b Optionsschalter
+\par }
+\par \pard Ein Optionsschalter ist eine Option, die entweder {\b ein-} oder {\b ausgeschaltet} ist. Eine Markierung in Klammern gibt den Status der Option an.
+\par 
+\par Sie aktivieren einen Optionsschalter, indem Sie ihn mit den Tasten {\b Nach-Oben} und {\b Nach-Unten} ansteuern und die Leertaste dr\'81cken. Alternativ k\rdblquote nnen Sie die ALT-Taste zusammen mit dem hervorgehobenen Bu
+chstaben im Namen des Optionsschalters dr\'81cken. Mit der Maus k\rdblquote nnen Sie den Optionsschalter direkt anzeigen und mit der linken Maustaste klicken. Es kann jeweils nur ein Optionsschalter ausgew\'84hlt werden. 
+\par 
+\par Ein Ansteuern des Optionsschalters mit den {\b Pfeiltasten} aktiviert die Option nicht, ein Ansteuern mit der {\b ALT-}Taste jedoch schon. Mit der Maus k\rdblquote nnen Sie den Optionsschalter anw\'84hlen und mit Klicken der linken Maustaste aktivieren.
+
+\par 
+\par {\b Schaltfl\'84chen}
+\par 
+\par Aktions-Schaltfl\'84chen am unteren Rand eines Dialogfeldes zeigen wichtige Funktionstasten an. Die Taste, mit der die Funktion einer Schaltfl\'84che ausgew\'84hlt werden kann, wird in der Schaltfl\'84che hervorgehoben dargestellt. Dr\'81
+cken Sie die Taste allein oder mit der ALT-Taste. Die Auswahl mit der Maus erfolgt durch direktes Anklicken der Taste.
+\par 
+\par Die meisten Dialogfelder verf\'81gen \'81ber die Schaltfl\'84che{\b  Fertig}, mit der die Funktion des Feldes ausgef\'81hrt wird und \'81ber die Schaltfl\'84che  {\b Abbruch,} mit der die Aktion abgebrochen und das Feld ausgeblendet wird. F\'81r die 
+Auswahl der Schaltfl\'84che "Fertig" dr\'81cken Sie die Taste "F", ALT+F oder die Eingabetaste. Die Schaltfl\'84che "Abbruch" wird \'81ber "A", ALT+A oder die Eingabetaste ausgew\'84hlt.
+\par 
+\par Bei der Anzeige von Dialogfeldern wird eine der Schaltfl\'84chen in Klammern gezeigt. Diese Schaltfl\'84che ist die{\b  Vorgabe (Vor-
+\par }{\b einstellung)}. Die Auswahl erfolgt mit der Eingabetaste. Mit den Tasten {\b TAB} und {\b Umschalttaste+TAB} kann eine andere Schaltfl\'84che als die aktuelle hervorgehoben und aktiviert werden.
+\par 
+\par 
+\par {\fs28\cf6 >>H.U_Print
+\par }@P H.Default M_Complete
+\par                    {\i Umgang mit dem Druck-System
+\par }
+\par Das Drucksystem liefert Informationen aus Dateien sowie Hilfe-
+\par Texte auf Papier oder als Text-Information in einer Datei.
+\par 
+\par Im ersten Unterfenster des Dialogfeldes "Druck" wird der Ausgabe-
+\par Umfang festgelegt. Jede Option verf\'81gt \'81ber ein Kontrollk\'84stchen, so da\'e1 mehr als eine Option ausgew\'84hlt werden kann.
+\par 
+\par Das zweite Unterfenster enth\'84lt eine Liste der Ausgabeziele. Jedes Ziel verf\'81gt \'81ber einen Optionsschalter, so da\'e1 jeweils nur eines ausgew\'84hlt werden kann.
+\par 
+\par Wird die Druckausgabe in eine {\b Datei} geschrieben, dann schl\'84gt ASQ einen Namen f\'81r die Druckausgabe vor. Sie k\rdblquote nnen jede g\'81ltige Dateispezifikation eingeben.
+\par 
+\par Mit der {\b TAB}-Taste bewegen Sie sich zwischen den Unterfenstern.
+\par F\'81r das Ausgabeziel "Drucker" haben Sie keinen Zugriff auf das Dateinamen-Feld.
+\par 
+\par Werden {\b alle Hilfe-Themen }gedruckt, gibt die Liste der Hilfe-Themen die Themen sowie deren Druckreihenfolge an. Einige nebens\'84chliche Themen befinden sich m\rdblquote glicherweise nicht in der Liste oder in der Druckausgabe. Sie k\rdblquote 
+nnen die aktuelle Information jedoch mit der Option {\b "dieses Hilfe-Thema" }ausdrucken, w\'84hrend Sie den entsprechenden Hilfe-Bildschirm anzeigen.
+\par 
+\par Weitere Informationen erhalten Sie in der Beschreibung zum Thema
+\par {\ul Umgang mit einem Dialogfeld}{\v H.U_Dial}.
+\par 
+\par {\fs28\cf6 >>M_abrt
+\par }@P H.Default M_Complete
+\par                               {\i Abbrechen}
+\par 
+\par Bei Abbruch des Vorgangs werden alle Ver\'84nderungen, die Maximize w\'84hrend des aktuellen Laufes in der Konfiguration und in den Boot-Dateien vorgenommen hat, {\b r\'81ckg\'84ngig gemacht}.
+\par 
+\par {\fs28\cf6 >>M_IntroMax
+\par }@P H.Default M_Complete
+\par                           {\i Maximize-Aufgaben}
+\par 
+\par Maximize wird auf allen Systemen ...
+\par \pard 
+\par   * alle verf\'81gbaren HiDOS-Speicher-Regionen {\b erkennen}
+\par   * {\b Sicherungskopien} Ihrer CONFIG.SYS, AUTOEXEC.BAT sowie Ihrer
+\par     #PRODNAME# Profildatei erstellen
+\par   * einen {\b Reboot} durchf\'81hren, um die speicher-residenten Programme
+\par     ausfindig zu machen
+\par   * {\b Ver\'84nderungen }in den Systemdateien CONFIG.SYS und AUTOEXEC.BAT
+\par     vornehmen, so da\'e1 Maximize den Ladevorgang aller
+\par     speicher-residenten Programme steuern kann
+\par   * einen {\b Reboot} durchf\'81hren, um die RAM-Anforderungen w\'84hrend des
+\par     Ladens, der Initialisierung und der residenten Phase aller
+\par     speicher-residenten Programme zu ermitteln
+\par   * ein letztes Mal die CONFIG.SYS und AUTOEXEC.BAT Dateien
+\par     {\b ver\'84ndern}, um den konventionellen Speicher zu erzielen
+\par   * einen {\b Reboot} durchf\'81hren und zur DOS-Ebene zur\'81ckkehren.
+\par 
+\par Achten Sie darauf, da\'e1 das Diskettenlaufwerk A: {\b leer} ist, wenn Maximize zwischen den einzelen Phasen einen Reboot (Neustart des Systems) durchf\'81hrt.
+\par 
+\par {\fs28\cf6 >>M_IntroP2
+\par }@P H.Default M_Complete
+\par                            {\i Mikrokanal-Systeme}
+\par 
+\par Maximize kann {\b Mikrokanal-Systeme} erkennen. Maximize konfiguriert die
+\par Adapterkarten in Mikrokanal-Systemen so, da\'e1 der {\b maximale zusammen-
+\par }{\b h\'84ngende} HiDOS Speicher erzielt wird. W\'84hrend dieses Vorgangs wird Maximize ...
+\par 
+\par   * Sie dazu {\b auffordern}, die Arbeitskopie der Referenzdiskette in
+\par     das Laufwerk A: einzulegen und gegebenenfalls 
+\par   * die Informationen der Referenzdateien {\b lesen}, 
+\par   * die Belegung des RAM/ROM-Speichers {\b analysieren,}
+\par   * eine optimale Adapterkonfiguration {\b vorschlagen }und 
+\par   * die Adapter, falls Sie es w\'81nschen, entsprechend {\b neu
+\par }{\b     konfigurieren.}
+\par 
+\par {\fs28\cf6 >>M_bootdsk
+\par }@P H.Default M_Complete
+\par                         {\i Boot-Laufwerk angeben}
+\par 
+\par Es ist m\rdblquote glicherweise notwendig, die CONFIG.SYS Datei zu ver\'84ndern. Geben Sie den Buchstaben des {\b Boot-Laufwerks} in Ihrem System an. Die aktuelle CONFIG.SYS Datei mu\'e1 sich im Stammverzeichnis des ange-
+\par gebenen Boot-Laufwerks befinden. 
+\par 
+\par Sie {\b m\'81ssen }einen g\'81ltigen Laufwerksbuchstaben im Dialogfeld angeben.
+\par 
+\par {\fs28\cf6 >>M_filereq
+\par }@P H.Default M_Complete
+\par                  {\i Erforderliche Dateien nicht vorhanden}
+\par 
+\par Maximize meldet den Namen einer {\b fehlenden} System-Datei am Bildschirm.
+\par 
+\par Die Maximize System-Dateien m\'81ssen sich im {\b selben Verzeichnis }wie Maximize befinden. Installieren Sie - falls notwendig - das Produkt erneut oder kopieren Sie die erforderlichen Dateien in das richtige Verzeichnis.
+\par 
+\par {\fs28\cf6 >>M_ref}{\fs28\cf6 dsk
+\par }@P H.Default M_Complete
+\par                       {\i Referenzdiskette einlegen}
+\par 
+\par Maximize mu\'e1 die Informationen der Rechner-{\b Referenzdiskette} lesen.
+\par 
+\par Bitte legen Sie eine Arbeitskopie der Referenzdiskette ein. {\b VERWENDEN SIE NICHT DAS ORIGINAL IHRER REFERENZDISKETTE.}
+\par 
+\par {\fs28\cf6 >>M_p1help
+\par }@P H.Default M_Complete
+\par                           {\i Adapter maximieren}
+\par 
+\par Maximize versucht die Adapter-RAM und ROM-Adressen so einzurichten, da\'e1 ein gr\rdblquote \'e1tm\rdblquote glicher zusammenh\'84ngender HiDOS-Speicherbereich zur Verf\'81gung steht.
+\par 
+\par Der Bildschirm f\'81r die Adapter-Konfiguration zeigt die Namen der Adapter in diesem System sowie die f\'81r den Ladevorgang empfohlenen Optionen {\b MAXIMIZE}, {\b STATISCH} oder {\b KEIN SPEICHER}
+ an. Mit Ausnahme der Adapter, die keinen Speicher im HiDOS belegen, k\rdblquote nnen Sie \'81ber die Schaltfl\'84che {\b Umschalten} zwischen den Optionen MAXIMIZE und STATISCH wechseln. Wird f\'81r einen Adapter die Option MAXIMIZE gew\'84
+hlt, unternimmt Maximize den Versuch, die Adapter-RAMs und-ROMs im System bestm\rdblquote glich zu plazieren. 
+\par 
+\par W\'84hlen Sie die Schaltfl\'84che {\b Fertig}, um mit der n\'84chsten Phase fortzufahren. 
+\par 
+\par {\fs28\cf6 >>M_Quick
+\par }@P H.Default M_Complete
+\par                            {\i Expre\'e1-Maximize}
+\par 
+\par {\b Maximize} kann in zwei Optimierungs-Varianten gestartet werden: "Expre\'e1" oder "Angepa\'e1t".
+\par 
+\par Im Maximize Expre\'e1-Durchlauf wird Ihr System anhand der {\b Vorgabe}-
+\par Parameter konfiguriert. Maximize l\'84dt jedes speicher-residente Programm und jeden Ger\'84tetreiber in den HiDOS-Speicher, bis die gesamte speicher-residente Software installiert ist oder kein freier Speicherplatz mehr zur Verf\'81gung steht. 
+\par 
+\par Ein angepa\'e1ter Maximize-Lauf zeigt einen Bildschirm mit den entsprechenden Programmen und Treibern an. Sie k\rdblquote nnen f\'81r jedes Programm/Treiber getrennt {\b entscheiden}, ob es in den HiDOS-Speicher geladen werden soll. 
+\par 
+\par Fehlt Ihnen noch die entsprechende Kenntnis \'81ber das Maximize-
+\par Programm, empfehlen wir Ihnen, mit {\b Ja }zu antworten und den Expre\'e1-
+\par Durchlauf zu starten. Maximize wird eine "intelligente" Auswahl treffen und Ihrem System einen gr\rdblquote \'e1tm\rdblquote glichen Speicherbetrag zur Verf\'81gung stellen. Wenn Sie mit dem Maximize-Programm schon vertraut sind, antworten Sie {\b Nein}
+, um Maximize f\'81r den angepa\'e1ten Lauf zu starten. Jetzt k\rdblquote nnen Sie Ihre eigene Auswahl treffen und Ihren Systemspeicher individuell einrichten.
+\par 
+\par {\fs28\cf6 >>M_reboot
+\par }@P H.Default M_Complete
+\par                      {\i Neustart des Systems durchf\'81hren}
+\par 
+\par Nach jeder Phase mu\'e1 Maximize einen {\b Reboot} (Neustart des Systems) durchf\'81hren, um die Ver\'84nderungen in den Systemdateien CONFIG.SYS, AUTOEXEC.BAT sowie jeder durch AUTOEXEC.BAT aufgerufenen Stapeldatei zu lesen.
+\par 
+\par Nach jedem Reboot l\'84dt sich Maximize erneut und beginnt eine neue Phase. L\'84dt AUTOEXEC.BAT jedoch ein Men\'81-Programm, eine Netzwerk-Software oder ein anderes Dienstprogramm, kann Maximize nicht vollst\'84
+ndig ablaufen. Beenden Sie dann dieses Programm oder entfernen Sie es aus dem Speicher. Bei R\'81ckkehr zur DOS-Ebene l\'84dt Maximize erneut und f\'84hrt mit der Programmausf\'81hrung fort.
+\par 
+\par {\b Maximize teilt Ihnen den Abschlu\'e1 des Vorgangs mit.} Nach einem letzten Reboot k\rdblquote nnen Sie Ihre "normale" Arbeit am Computer wieder aufnehmen.
+\par 
+\par Laufwek A: mu\'e1 {\b leer} sein, damit ein erfolgreicher Neustart durchgef\'81hrt werden kann. 
+\par 
+\par {\fs28\cf6 >>M_p2help
+\par }@P H.Default M_Complete
+\par                      {\i Treiber und TSRs maximieren}
+\par 
+\par Maximize zeigt eine Liste der Befehlszeilen, die Ger\'84tetreiber und speicher-residenten Programme (TSRs = Terminate and Stay Resident) laden. Diese Liste enth\'84lt die Programme/Treiber, die f\'81
+r das Laden in den HiDOS-Speicher bestimmt wurden. Auf der linken Seite macht Maximize jeweils einen Aktionsvorschlag. Die Programme, die in den HiDOS-Speicher zu laden sind, werden mit {\b HIGH} markiert. Maximize ver\'84
+ndert keine Zeilen mit der Markierung "HIGH". Zeilen, die ein Programm enthalten, das f\'81r den #LOADNAME# GETSIZE-Vorspann zu lang ist, werden mit {\b LOW }markiert (ein zus\'84tzlicher Vorspann w\'81rde die maximale L\'84nge der DOS-Befehlszeile \'81
+berschreiten). F\'81r die anderen Programme und Treiber gilt die Option {\b Maximize}.
+\par \pard 
+\par Sie k\rdblquote nnen den Aktionszustand f\'81r ein Programm oder einen Treiber \'84ndern, indem Sie den Leuchtbalken mit den Tasten NACH-OBEN und NACH-UNTEN auf die entsprechende Zeile verschieben. Mit der Schaltfl\'84che {\b Umschalten }k\rdblquote 
+nnen Sie auf eine andere Aktion umschalten. Mit der Schaltfl\'84che {\b N\'84chste }oder {\b Fertig }gelangen Sie zur n\'84chsten Datei. Nachdem die Auswahl f\'81r die letzte Datei beendet ist, w\'84hlen Sie die Schaltfl\'84che {\b Fertig}, um die n\'84
+chste Phase zu beginnen.
+\par 
+\par Sie k\rdblquote nnen #LOADNAME# dazu veranlassen, ein Programm in den Optimierungsproze\'e1 einzubeziehen, auch wenn das Programm bereits in den HiDOS-Speicher geladen ist. W\'84hlen Sie dann f\'81r diese Zeile anhand der Schaltfl\'84
+che "Umschalten" die Option {\b MAXIMIZE.}
+\par 
+\par Es gibt einige wenige Programme, die mit Maximize nicht einwandfrei funktionieren. Markieren Sie diese Programme mit der Option {\b LOW}. Maximize wird diese Programme nicht zum Laden in den HiDOS-Speicher in Betracht ziehen.
+\par 
+\par {\fs28\cf6 >>M_probe
+\par }@P H.Default M_Complete
+\par                         {\i ROM Search-Technologie}
+\par 
+\par Maximize nutzt die ROM Search-Technologie, um freie Bereiche im System-ROM nutzbar zu machen. Es f\'81gt USE= Anweisungen in die #PRODNAME# Profildatei ein und gewinnt so diese Bereiche als HiDOS-
+\par Speicher.
+\par 
+\par Bei der Suche nach freien ROM-Bereichen wird im Diskettenlaufwerk eine Diskette f\'81r einen ungef\'84hrlichen Schreib-/Lesetest ben\rdblquote tigt.
+\par 
+\par Systemprogramme (ROM-gest\'81tze Programme), die \'81ber besondere Tasten-
+\par Kombinationen aktiviert werden, sollten Sie {\b vor} dem Start von ROM Search aktivieren. Ansonsten kann ROMSearch die freien ROM-Bereiche nicht zuverl\'84ssig ermitteln. Diese Programme
+ werden auf vielen Laptop-Computern eingesetzt, um den Bildschirmkontrast und den Batterie-Verbrauch zu regeln. Aktivieren Sie keine Programme, die zu einem Reboot f\'81
+hren. (Einige SETUP-Programme verursachen einen Reboot.) Sie sollten auch keine Dienstprogramme wie Notizblock oder Rechner aktivieren, wenn diese die nicht im ROM gespeichert sind.
+\par 
+\par Standardm\'84\'e1ig kann diese Option nur beim ersten Durchlauf von Maximize gestartet werden. Bei allen nachfolgenden Durchl\'84ufen steht ROM Search nicht zur Verf\'81gung. Soll Maximize die Option ROM Search nochmals starten, dann ver\'84
+ndern Sie die #PRODNAME# Profildatei und entfernen Sie alle Zeilen mit dem Wort ROMSRCH. (F\'81gen Sie dazu ein Semikolon am Anfang jeder Zeile ein, einschlie\'e1lich der Zeilen, die bereits mit e
+inem Semikolon beginnen.)  Beim folgenden Ablauf von Maximize werden Sie dann wieder gefragt, ob Sie ROMsearch starten m\rdblquote chten.
+\par 
+\par {\fs28\cf6 >>M_vgaswap
+\par }@P H.Default M_complete
+\par                                 {\i VGAswap}
+\par 
+\par Die Option VGAswap erweitert den zusammenh\'84ngenden HiDOS-
+\par Speicherbereich. Dabei wird VGA und EGA ROM-Software in den Speicherbereich des Monochrom-Adapters verlagert. Ist dieser Monochrom-Bereich nicht verf\'81gbar, kann VGAswap m\rdblquote glicherweise trotzdem das VGA ROM in einen anderen Bereich verlagern.
+
+\par 
+\par Wenn Ihr System die Option VGAswap unterst\'81tzt, dann wird Sie von Maximize automatisch aktiviert. VGAswap wirkt sich nicht auf die Leistungsf\'84higkeit und Kompatibilit\'84t Ihrer Software aus.
+\par 
+\par {\fs28\cf6 >>M_reorder
+\par }@P H.Default M_Complete
+\par                           {\i Programm-Neuordnung}
+\par 
+\par Maximize ver\'84ndert Ihre Systemdateien, soda\'e1 die residente Software in optimaler Reihenfolge geladen wird. Das \'8endern der Lade-
+\par Reihenfolge kann zu einem deutlichen Speichergewinn f\'81hren.
+\par 
+\par Einige Programme oder Treiber sind f\'81r den erfolgreichen Start von einer bestimmten Lade-Reihenfolge abh\'84ngig. Dazu geh\rdblquote rt auch ein Gro\'e1
+teil der Netzwerk-Software. Ihre Aufgabe ist es, die entsprechenden Zeilen in CONFIG.SYS und/oder AUTOEXEC.BAT zu ermitteln, so da\'e1 Maximize f\'81r diese Software keinen Versuch einer Neuordnung unternimmt. Beachten Sie dabei, da\'e1
+ dieser Vorgang auch Zeilen betreffen kann, die keine Software laden. Dazu geh\rdblquote ren beispielsweise Zeilen, die mit den Befehlen IF, GOTO, REM oder LOGIN beginnen.
+\par 
+\par Diese {\b Gruppenzuweisung} veranla\'e1t Maximize, die relative Reihenfolge der bezeichneten Zeilen zu behalten. Maximize kann m\rdblquote glicherweise andere Zeilen innerhalb einer Gruppe aufnehmen.
+\par 
+\par Sind Sie mit den Programmen Ihrer Systemdateien CONFIG.SYS und AUTOEXEC.BAT bereits vertraut, w\'84hlen Sie {\b Ja}. Maximize wird Sie nach etwaiger Gruppenzugeh\rdblquote rigkeit befragen. Andernfalls w\'84hlen Sie {\b Nein}
+. Maximize konfiguriert daraufhin Ihr System auf Basis der bestehenden Lade-Reihenfolge.
+\par 
+\par {\fs28\cf6 >>M_p3help
+\par }@P H.Default M_Complete
+\par                                 {\i Guppen}
+\par 
+\par W\'84hrend der {\b Programm-Neuordnung} wird die beste Lade-Reihenfolge der speicher-residenten Programme festgelegt. Maximize unternimmt dabei mehrere Versuche, um die optimale Reihenfolge zu ermitteln, mit der vorhandener Speicher am effizien
+testen genutzt wird. Einige Programme unterliegen einer bestimmten Lade-Reihenfolge f\'81r ihren ordnungsgem\'84\'e1en Ablauf. Sie m\'81ssen diese Programme als gruppen-
+\par zugeh\rdblquote rig kennzeichnen, damit Maximize ihre relative Lade-
+\par Reihenfolge beibeh\'84lt.
+\par 
+\par Sie weisen ein Programm einer bestimmten Gruppe zu, indem Sie den Leuchtbalken mit den Tasten Nach-Oben und Nach-Unten auf die gew\'81nschte Zeile setzen. W\'84hlen Sie anschlie\'e1end die Schaltfl\'84che {\b Gruppe}, um das Men\'81
+ "Gruppieren" anzuzeigen. Alle Programme einer Gruppe werden mit einem Buchstaben gekennzeichnet. Dieser dient der Identifikation der jeweiligen Gruppe. W\'84
+hrend Sie die Gruppen bestimmen, weist Maximize diese Buchstaben der Reihe nach zu. Wenn Sie den Cursor auf ein Programm oder einen Treiber bewegen, das/der zu einer bestimmten Gruppe geh\rdblquote 
+rt, werden alle anderen Elemente der Gruppe hervorgehoben dargestellt. \'9aber das Men\'81 "Gruppieren" k\rdblquote nnen Sie...
+\par 
+\par   * ein Programm einer {\b bestehenden} Gruppe zuweisen,
+\par   * eine {\b neue} Gruppe anlegen und dieser das Programm zuweisen oder
+\par   * das Gruppenziel eines markierten Programmes {\b entfernen}.
+\par 
+\par Wenn Sie mit der aktuellen Gruppierung einverstanden sind, w\'84hlen Sie die Schaltfl\'84che {\b Fertig}.
+\par 
+\par {\fs28\cf6 >>M_complete
+\par }@P H.Default M_Complete
+\par                       {\i Maximize-Ergebnisanzeige}
+\par 
+\par Nach Abschlu\'e1 des Maximize-Prozesses wird ein Bildschirm angezeigt, der Informationen \'81ber die {\b Neuaufteilung} des Speichers enth\'84lt.
+\par 
+\par Im oberen Bereich dieser Anzeige werden die Treiber und Programme gelistet, die Maximize vom LoDOS-Speicher in den HiDOS-Speicher {\b verlagert}
+ hat. Der Rest des Bildschirms zeigt die Treiber und Programme, die Maximize nicht in den HiDOS-Bereich verlagern konnte.
+\par 
+\par 
+\par {\fs28\cf6 >>M_SwappedDrive
+\par }@P H.Default M_SwappedDrive
+\par              {\i Unterst\'81tzung f\'81r Disk-Komprimierung}
+\par 
+\par Maximize erkennt die meisten Disk-Komprimierungsprogramme. Die Option /K erlaubt f\'81r nicht unterst\'81tzte Produkte eine manuelle Eingabe der Informationen.
+\par 
+\par {\b Ist #ARG4_# komprimiert?}
+\par 
+\par Ihr Laufwerk ist komprimiert, wenn ein besonderer Software-Treiber in CONFIG.SYS die Daten dieses Laufwerks verf\'81gbar macht. Ohne den mit dieser Software gelieferten Treiber ist das Laufwerk nur als Datei auf der Festplatte erkennbar.
+\par 
+\par {\b Dieses Laufwerk kann ein sog. getauschtes Laufwerk (Swapped Drive) sein. Welcher Laufwerksbuchstabe ist f\'81r #ARG4_# zum Boot-Zeitpunkt g\'81ltig? (Wenn das Laufwerk zum Boot-Zeitpunkt nicht vorhanden ist, geben Sie hier nichts an.)}
+\par 
+\par Einige Disk-Komprimierungsprogramme tauschen Laufwerkskennungen, soda\'e1 das erzeugte neue Laufwerk wie das Ursprungslaufwerk angesprochen werden kann. Diese Wirkung wird \'81blicherweise mit Hilfe eines weiteren Treibers in CONFIG.SYS erzielt.
+\par 
+\par {\b Ihr Boot-Laufwerk ist #ARG1#:. Die vorherige Laufwerkskennung f\'81r Laufwerk #ARG1#: ist#ARG3#}
+\par 
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>M_MBMenu
+\par \pard\plain \f3\lang1033 @P H.Default M_MBMenu
+\par                         {\i MultiConfig}
+\par 
+\par Maximize hat erkannt, da\'e1 Sie MS DOS 6 MultiConfig benutzen. Mit den Pfeiltasten NACH-OBEN bzw. NACH-UNTEN w\'84hlen Sie die gew\'81nschte Konfiguration. Best\'84tigen Sie Ihre Wahl mit der EINGABETASTE. Maximize wird nur die gew\'84
+hlte Konfiguration optimieren.
+\par 
+\par Wenn Sie Maximize f\'81r weitere MultiConfig Konfigurationen anwenden m\rdblquote chten, f\'81hren Sie Maximize erneut aus und w\'84hlen den entsprechenden Konfigurationsblock. #PRODNAME# mu\'e1
+ in diesem Konfigurationsblock installiert sein. Ist dies nicht der Fall, rufen Sie SETUP /R f\'81r einen Refresh der gew\'84hlten MultiConfig Konfiguration aus.
+\par 
+\par Eine MultiConfig Konfiguration k\rdblquote nnen Sie bei Aufruf des Maximize Programmes aus der DOS Ebene angeben; verwenden Sie dazu die Option /A mit dem Namen der Konfiguration (im folgenden Beispiel ist "boot_name" der Name des Konfigurationsblocks):
+
+\par 
+\par MAXIMIZE /A boot_name
+\par 
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>H.MBMenu
+\par \pard\plain \f3\lang1033 Maximize hat erkannt, da\'e1 Sie MS DOS 6 MultiConfig benutzen. Bitte w\'84hlen Sie die Konfiguration, die Sie Maximieren m\rdblquote chten. Best\'84tigen Sie Ihre Wahl mit der EINGABETASTE.
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>H.MBMenu2
+\par \pard\plain \f3\lang1033 Wenn Sie #PRODNAME# zu einem weiteren MultiConfig Konfigurationsblock hinzuf\'81gen m\rdblquote chten, rufen Sie SETUP /R f\'81r einen Refresh der entsprechenden MultiConfig Konfiguration auf.
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>M_ABIOSErr
+\par \pard\plain \f3\lang1033 @P H.Default M_ABIOSErr
+\par                  {\i Fehler bei ABIOS-Initialisierung}
+\par 
+\par Maximize konnte keine Informationen aus dem ABIOS erhalten. Diese Informationen werden jedoch f\'81r die Optimierung des HiDOS und zum Schutz der Adapter-Adressbereiche ben\rdblquote tigt.
+\par 
+\par M\rdblquote glicherweise erfordert Ihr System ein Laden der ABIOS Routinen in den RAM-Speicher. Dies mu\'e1 von #PRODNAME# zum Boot-Zeitpunkt erfolgen. Maximize kann Ihr System neu starten, soda\'e1 Maximize korrekt abl\'84uft oder Sie k\rdblquote 
+nnen jetzt mit Maximize fortsetzen. Im letzteren Fall werden einige Adapter m\rdblquote glicherweise nicht korrekt erkannt.
+\par 
+\par Wenn Sie nach dem System-Neustart diese Warnung noch immer erhalten, hat Ihr System wahrscheinlich kein ABIOS.
+\par 
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>M_DelBackup
+\par \pard\plain \f3\lang1033 @P H.Default M_DelBackup
+\par                  {\i L\rdblquote schen von Sicherungsdateien}
+\par 
+\par Maximize hat im Verzeichnis #PRODNAME# eine gr\rdblquote \'e1ere Anzahl Sicherungsdateien gefunden. Mit jedem Maximize Lauf werden die System-Startdateien unter Namen Dateiname.xxx gesichert, wobei xxx eine numerische Dateinamenerweiterung ist.
+\par 
+\par Maximize kann Plattenspeicher freimachen, indem \'84ltere Sicherungsdateien gel\rdblquote scht werden. Nach einmaliger Angabe des gew\'81nschten Wertes wird Maximize in Zukunft entsprechend aufr\'84
+umen. Die Einstellungen werden als Option BACKUP= in die Datei Maximize.CFG geschrieben. Die Option hat folgende Syntax:
+\par 
+\par          BACKUP= max, min
+\par 
+\par wobei max = # der erforderlichen Sicherungsdateien,
+\par               bevor ein Aufr\'84umen vorgenommen wird
+\par       min = # der Sicherungsdateien, die im 
+\par              #PRODNAME# Verzeichnis erhalten bleiben.
+\par 
+\par So wird z.B. BACKUP=8,3 den Maximize Lauf veranlassen, falls 8 Sicherungsdateien vorhanden sind, alle bis auf 3 Sicherungsdateien zu l\rdblquote 
+schen. Diese 3 Sicherungsdateien enthalten die neuesten Dateien. Die aktuellen Sicherungsdateien bleiben ebenso erhalten.
+\par 
+\par W\'84hlen Sie JA zur Aktivierung der BACKUP= Einstellungen.
+\par W\'84hlen Sie NEIN um keine Sicherungsdateien zu l\rdblquote schen und die Anfrage nicht erneut zu sehen. In diesem Fall wird BACKUP=-1 in die Maximize.CFG Datei geschrieben.
+\par W\'84hlen Sie ABBRECHEN zum \'9abergehen der Anfrage. Es wird dann keine Option BACKUP= in MAXIMIZE.CFG geschrieben.
+\par 
+\par {\fs28\cf6 >>H.Index
+\par }@P H.Index H.Index
+\par                      {\i Maximize Stichwort-Verzeichnis
+\par }
+\par Nutzen Sie die {\b rechte/linke} Pfeiltaste, um ein Thema auszuw\'84hlen. Dr\'81cken Sie dann die Eingabetaste.
+\par 
+\par {\b Stichwort---------------  Hilfe-Thema---------------------------}
+\par {\ul Abbrechen}{\v M_abrt}                 Abbrechen
+\par {\ul Adapter-Speicher}{\v M_p1help}          Adapter maximieren
+\par {\ul Adapterstatus umschalten}{\v M_p1help}  Adapter maximieren
+\par {\ul Angepa\'e1tes Maximize}{\v M_Quick}       Expre\'e1-Maximize
+\par {\ul AUTOEXEC.BAT Datei}{\v M_IntroMax}        Maximize Aufgaben
+\par {\ul Boot-Laufwerk}{\v M_bootdsk}             Boot-Laufwerk angeben
+\par {\ul CONFIG.SYS Datei}{\v M_IntroMax}          Maximize-Aufgaben
+\par {\ul Ergebnisanzeige}{\v M_complete}           Maximize-Ergebnisanzeige
+\par {\ul Expre\'e1-Maximize}{\v M_Quick}           Expre\'e1-Maximize
+\par {\ul Ger\'84tetreiber}{\v M_p2help}             Treiber und TSRs maximieren 
+\par {\ul Gruppieren}{\v M_p3help}                Gruppen
+\par {\ul Lade-Reihenfolge}{\v M_reorder}          Programm-Neuordnung
+\par {\ul Maximize-Aufgaben}{\v M_IntroMax}         Maximize-Aufgaben
+\par {\ul Mikrokanal-Einstellung}{\v M_IntroP2}    Mikrokanal
+\par {\ul Programm-Neuordnung}{\v M_reorder}       Programm-Neuordnung
+\par {\ul Programmstatus umschalten}{\v M_p2help} Treiber und TSRs maximieren{\ul 
+\par }{\ul Reboot}{\v M_reboot}                    Neustart des Systems durchf\'81hren
+\par {\ul Referenzdiskette}{\v M_refdsk}          Referenzdiskette einlegen
+\par {\ul ROMs durchsuchen}{\v M_probe}          ROMsearch-Technologie
+\par {\ul System-Dateien}{\v M_filere}            Erforderliche Dateien nicht vorhanden
+\par {\ul Themen}{\v H.Contents}                    Maximize Hilfe-Themen
+\par {\ul TSR-Programme}{\v M_p2help}             Treiber und TSRs maximieren
+\par {\ul VGAswap}{\v M_vgaswap}                   VGAswap-Option
+\par 
+\par {\fs28\cf6 >>NOTES
+\par }M_intromov is rare so not on contents or indexed.  ???
+\par M_refdsk2 is rare so not on contents or indexed. ??? 
+\par 
+\par {\fs28\cf6 >>M_IntroMov
+\par }@N M_intromov M_intromov
+\par                            {\i Maximize Aufgaben}
+\par 
+\par Maximize wird auf allen Systemen ...
+\par 
+\par   * alle verf\'81gbaren HiDOS-Speicher-Regionen {\b erkennen}
+\par   * {\b Sicherungskopien} Ihrer CONFIG.SYS, AUTOEXEC.BAT erstellen
+\par   * einen {\b Reboot} durchf\'81hren, um die speicher-residenten Programme
+\par     ausfindig zu machen
+\par   * {\b Ver\'84nderungen }in den Systemdateien CONFIG.SYS und AUTOEXEC.BAT
+\par     vornehmen, so da\'e1 Maximize den Ladevorgang aller
+\par     speicher-residenten Programme steuern kann
+\par   * einen {\b Reboot} durchf\'81hren, um die RAM-Anforderungen w\'84hrend des
+\par     Ladens, der Initialisierung und der residenten Phase aller
+\par     speicher-residenten Programme zu ermitteln
+\par   * ein letztes Mal die CONFIG.SYS und AUTOEXEC.BAT Dateien
+\par     {\b ver\'84}{\b ndern}, um den maximalen konventionellen Speicher zu erzielen
+\par   * einen {\b Reboot} durchf\'81hren und zur DOS-Ebene zur\'81ckkehren.
+\par 
+\par Achten Sie darauf, da\'e1 das Diskettenlaufwerk A: leer ist, wenn Maximize zwischen den einzelen Phasen einen Reboot (Neustart des Systems) durchf\'81hrt.
+\par 
+\par 
+\par {\fs28\cf6 >>M_refdsk2
+\par }@N M_refdsk2 M_refdsk2
+\par                      {\i Referenzdiskette erforderlich}
+\par \pard 
+\par Maximize ben\rdblquote tigt die Informationen der Rechner-{\b Referenzdiskette}. Ohne die Referenzdiskette kann Maximize keine optimale Auswahl zur Optimierung Ihres Systems treffen.
+\par 
+\par Bitte legen Sie eine Arbeitskopie der Referenzdiskette ein. {\b VERWENDEN SIE NICHT DAS ORIGINAL IHRER REFERENZDISKETTE.}
+\par 
+\par Lassen Sie diesen Schritt nicht aus - es sei denn, die Referenzdiskette w\'84re {\b nicht verf\'81gbar}.
+\par 
+\par }

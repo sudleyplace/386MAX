@@ -1,0 +1,762 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times;}{\f1\froman Symbol;}{\f2\fswiss Helvetica;}{\f3\fmodern Courier;}{\f4\froman Times New Roman;}{\f5\fswiss Arial;}{\f6\froman MS Serif;}{\f7\fswiss MS Sans Serif;}
+{\f8\froman Times;}{\f9\fswiss Helvetica;}{\f10\fswiss System;}{\f11\fmodern Courier New;}{\f12\fnil Wingdings;}{\f13\fswiss Aardvark;}{\f14\fswiss ProseAntique;}{\f15\fswiss Arabia;}{\f16\fswiss Avalon;}{\f17\fswiss Bahamas;}{\f18\fswiss Banff;}
+{\f19\fswiss Bangkok;}{\f20\fswiss Bodnoff;}{\f21\fswiss Brooklyn;}{\f22\fswiss NewBrunswick;}{\f23\fswiss Casablanca;}{\f24\fswiss DawnCastle;}{\f25\fswiss CommonBullets;}{\f26\fswiss Cottage;}{\f27\fswiss Cupertino;}{\f28\fswiss Dixieland;}
+{\f29\fswiss ErieLight;}{\f30\fswiss Erie;}{\f31\fswiss France;}{\f32\fswiss FrankfurtGothicHeavy;}{\f33\fswiss FrankfurtGothic;}{\f34\fswiss Freeport;}{\f35\fswiss Frankenstein;}{\f36\fswiss Fujiyama2;}{\f37\fswiss FujiyamaLight;}{\f38\fswiss Fujiyama;}
+{\f39\fswiss Gatineau;}{\f40\fswiss HomewardBound;}{\f41\fswiss Ireland;}{\f42\fswiss Jupiter;}{\f43\fswiss Koala;}{\f44\fswiss Lincoln;}{\f45\fswiss Linus;}{\f46\fswiss Memorandum;}{\f47\fswiss Monospaced;}{\f48\fswiss Motor;}
+{\f49\fswiss MusicalSymbols;}{\f50\fswiss Mystical;}{\f51\fswiss Nebraska;}{\f52\fswiss Ottawa;}{\f53\fswiss PalmSprings;}{\f54\fswiss Paradise;}{\f55\fswiss Paragon;}{\f56\fswiss Penguin;}{\f57\fswiss Posse;}{\f58\fswiss President;}{\f59\fswiss Quantum;}
+{\f60\fswiss Renfrew;}{\f61\fswiss Southern;}{\f62\fswiss Stamp;}{\f63\fswiss SwitzerlandBlack;}{\f64\fswiss GreekMathSymbols;}{\f65\fswiss Technical;}{\f66\fswiss Timpani;}{\f67\fswiss TimpaniHeavy;}{\f68\fswiss Toronto;}{\f69\fswiss Umbrella;}
+{\f70\fswiss Unicorn;}{\f71\fswiss USABlack;}{\f72\fswiss Vogue;}{\f73\fswiss ZurichCalligraphic;}{\f74\fnil LotusWPSet;}{\f75\fswiss LotusLineDraw;}{\f76\fswiss Arial Black;}{\f77\fswiss Arial Condensed Bold;}{\f78\fswiss Arial Narrow;}
+{\f79\froman Bodoni Black;}{\f80\froman Bodoni Book;}{\f81\fnil Botanical;}{\f82\fnil Monotype Sorts;}{\f83\fscript New Berolina;}{\f84\fdecor Old Style Bold Outline;}{\f85\fscript Palace Script;}{\f86\froman Photina;}{\f87\froman Rockwell;}
+{\f88\froman Rockwell Light;}{\f89\fscript Brush Script;}{\f90\fswiss Gill Sans;}{\f91\fmodern Letter Gothic;}{\f92\fswiss News Gothic;}{\f93\froman Perpetua;}{\f94\froman Photina Casual Black;}{\f95\fnil WP Greek Helve;}{\f96\fnil WP OverflowSet;}
+{\f97\fnil WP Greek Courier;}{\f98\fscript Ribbon131 Bd BT;}{\f99\froman Humanst521 Lt BT;}{\f100\froman GeoSlab703 Lt BT;}{\f101\fswiss Swis721 BlkEx BT;}{\f102\fswiss Humanst521 Cn BT;}{\f103\fdecor Onyx BT;}{\f104\fdecor CaslonOpnface BT;}
+{\f105\fswiss EngraversGothic BT;}{\f106\fscript ShelleyVolante BT;}{\f107\froman BernhardMod BT;}{\f108\fscript Brush738 BT;}{\f109\fscript Blackletter686 BT;}{\f110\froman Arrus BT;}{\f111\froman Arrus Blk BT;}{\f112\fscript OzHandicraft BT;}
+{\f113\fswiss AvantGarde Bk BT;}{\f114\fswiss AvantGarde Md BT;}{\f115\fdecor Algerian;}{\f116\fswiss Arial Rounded MT Bold;}{\f117\fdecor Bauhaus 93;}{\f118\froman Bookman Old Style;}{\f119\fdecor Braggadocio;}{\f120\fswiss Britannic Bold;}
+{\f121\fscript Brush Script MT;}{\f122\fdecor Colonna MT;}{\f123\fdecor Desdemona;}{\f124\froman Footlight MT Light;}{\f125\fswiss Century Gothic;}{\f126\fscript Gradl;}{\f127\fswiss Impact;}{\f128\fdecor Kino MT;}{\f129\froman Wide Latin;}
+{\f130\fscript Matura MT Script Capitals;}{\f131\fscript Mistral;}{\f132\fdecor Playbill;}{\f133\fdecor Stencil;}{\f134\fscript Vivaldi;}{\f135\fswiss WP Phonetic;}{\f136\fnil WP MathExtendedB;}{\f137\fnil WP BoxDrawing;}{\f138\fnil WP IconicSymbolsB;}
+{\f139\fnil WP MathExtendedA;}{\f140\froman WP CyrillicA;}{\f141\fnil WP Japanese;}{\f142\fnil WP MathB;}{\f143\fnil WP IconicSymbolsA;}{\f144\fnil WP Arabic Sihafa;}{\f145\fnil WP MultinationalA Roman;}{\f146\fnil WP CyrillicB;}
+{\f147\fnil WP MultinationalB Roman;}{\f148\fnil WP MathA;}{\f149\fnil WP ArabicScript Sihafa;}{\f150\fnil WP Greek Century;}{\f151\fnil WP TypographicSymbols;}{\f152\fnil WP Hebrew David;}{\f153\fnil Arial MT Black;}{\f154\fscript Benguiat Frisky ATT;}
+{\f155\froman Poster Bodoni ATT;}{\f156\fswiss Gill Sans MT Shadow;}{\f157\froman Goudy Old Style ATT;}{\f158\fscript Graphite Light ATT;}{\f159\fscript Graphite Light Narrow ATT;}{\f160\fscript Lucida Casual;}{\f161\fnil Milestones;}
+{\f162\fscript Phyllis ATT;}{\f163\fscript Signet Roundhand ATT;}{\f164\fmodern MS LineDraw;}{\f165\fswiss Expert-Rounded;}{\f166\fswiss AvantGarde;}{\f167\froman Bookman;}{\f168\fswiss Helvetica-Narrow;}{\f169\froman NewCenturySchlbk;}
+{\f170\froman Palatino;}{\f171\fscript ZapfChancery;}{\f172\fdecor ZapfDingbats;}{\f173\fmodern Modern;}{\f174\fscript Script;}{\f175\froman Roman;}{\f176\fswiss MS Dialog;}{\f177\froman New York;}{\f178\fswiss Geneva;}
+{\f179\fswiss TektoMM_240 RG 564 NO;}{\f180\fswiss TektoMM;}{\f181\fswiss Anna;}{\f182\fswiss Poppl-Laudatio Regular;}{\f183\fswiss Boulevard;}{\f184\froman Boton Regular;}{\f185\froman Baskerville BE Regular;}{\f186\fdecor Giddyup Thangs;}
+{\f187\fswiss Giddyup;}{\f188\fswiss TektoMM_100 LT 250 CN;}{\f189\fswiss TektoMM_100 LT 564 NO;}{\f190\fswiss TektoMM_100 LT 850 EX;}{\f191\fswiss TektoMM_240 RG 250 CN;}{\f192\fswiss TektoMM_240 RG 850 EX;}{\f193\fswiss TektoMM_503 BD 250 CN;}
+{\f194\fswiss TektoMM_503 BD 488 NO;}{\f195\fswiss TektoMM_503 BD 850 EX;}{\f196\fswiss Optima;}{\f197\fswiss StoneSans;}{\f198\fswiss StoneSansSemibold;}{\f199\fnil Marlett;}{\f200\froman Book Antiqua;}{\f201\froman Century Schoolbook;}
+{\f202\fswiss Haettenschweiler;}{\f203\froman Garamond;}{\f204\fswiss News Gothic MT;}{\f205\fscript Lucida Handwriting;}{\f206\fswiss Lucida Sans;}{\f207\fswiss Lucida Sans Unicode;}{\f208\fmodern OCR A Extended;}{\f209\froman Calisto MT;}
+{\f210\fswiss Abadi MT Condensed Light;}{\f211\fswiss Copperplate Gothic Bold;}{\f212\fswiss Copperplate Gothic Light;}{\f213\fscript Comic Sans MS;}{\f214\fmodern Lucida Console;}{\f215\froman LotusWP Int A;}{\f216\froman LotusWP Int B;}
+{\f217\fmodern LotusWP Box;}{\f218\froman LotusWP Type;}{\f219\froman LotusWP Icon;}{\f220\froman Math A;}{\f221\fnil Math B;}{\f222\fnil Math C;}{\f223\fnil Lotus Postal Barcode;}{\f224\froman Baskerville;}{\f225\fnil Binner Gothic;}
+{\f226\froman Centaur;}{\f227\fnil Gill Sans Condensed;}{\f228\fswiss Gill Sans Ultra Bold;}{\f229\froman Nimrod;}{\f230\froman Onyx;}{\f231\froman Rockwell Condensed;}{\f232\fnil Snowy;}{\f233\fnil Code 128;}{\f234\fswiss Univers;}
+{\f235\fswiss Univers Condensed;}{\f236\fswiss Albertus Extra Bold;}{\f237\fswiss Albertus Medium;}{\f238\fswiss Antique Olive;}{\f239\fswiss CG Omega;}{\f240\froman CG Times;}{\f241\froman Clarendon Condensed;}{\f242\fswiss Adelaide;}
+{\f243\fswiss Alefbet;}{\f244\fswiss Algiers;}{\f245\fswiss Alto;}{\f246\fswiss Amherst;}{\f247\fswiss Amy;}{\f248\fswiss Architecture;}{\f249\fswiss BahamasHeavy;}{\f250\fswiss BahamasLight;}{\f251\fswiss BallroomTango;}{\f252\fswiss Bard;}
+{\f253\fswiss Bassoon;}{\f254\fswiss Bedrock;}{\f255\fnil Beehive;}{\f256\froman Tms Rmn;}{\f257\froman Symbol;}{\f258\fswiss Helv;}{\f259\fmodern Courier;}{\f260\froman Times New Roman;}{\f261\fswiss Arial;}{\f262\froman MS Serif;}
+{\f263\fswiss MS Sans Serif;}{\f264\fmodern Courier New;}{\f265\fnil Wingdings;}{\f266\fswiss Aardvark;}{\f267\fswiss ProseAntique;}{\f268\fswiss Arabia;}{\f269\fswiss Avalon;}{\f270\fswiss Bahamas;}{\f271\fswiss Banff;}{\f272\fswiss Bangkok;}
+{\f273\fswiss Bodnoff;}{\f274\fswiss Brooklyn;}{\f275\fswiss NewBrunswick;}{\f276\fswiss Casablanca;}{\f277\fswiss DawnCastle;}{\f278\fswiss CommonBullets;}{\f279\fswiss Cottage;}{\f280\fswiss Cupertino;}{\f281\fswiss Dixieland;}{\f282\fswiss ErieLight;}
+{\f283\fswiss Erie;}{\f284\fswiss France;}{\f285\fswiss FrankfurtGothicHeavy;}{\f286\fswiss FrankfurtGothic;}{\f287\fswiss Freeport;}{\f288\fswiss Frankenstein;}{\f289\fswiss Fujiyama2;}{\f290\fswiss FujiyamaLight;}{\f291\fswiss Fujiyama;}
+{\f292\fswiss Gatineau;}{\f293\fswiss HomewardBound;}{\f294\fswiss Ireland;}{\f295\fswiss Jupiter;}{\f296\fswiss Koala;}{\f297\fswiss Lincoln;}{\f298\fswiss Linus;}{\f299\fswiss Memorandum;}{\f300\fswiss Monospaced;}{\f301\fswiss Motor;}
+{\f302\fswiss MusicalSymbols;}{\f303\fswiss Mystical;}{\f304\fswiss Nebraska;}{\f305\fswiss Ottawa;}{\f306\fswiss PalmSprings;}{\f307\fswiss Paradise;}{\f308\fswiss Paragon;}{\f309\fswiss Penguin;}{\f310\fswiss Posse;}{\f311\fswiss President;}
+{\f312\fswiss Quantum;}{\f313\fswiss Renfrew;}{\f314\fswiss Southern;}{\f315\fswiss Stamp;}{\f316\fswiss SwitzerlandBlack;}{\f317\fswiss GreekMathSymbols;}{\f318\fswiss Technical;}{\f319\fswiss Timpani;}{\f320\fswiss TimpaniHeavy;}{\f321\fswiss Toronto;}
+{\f322\fswiss Umbrella;}{\f323\fswiss Unicorn;}{\f324\fswiss USABlack;}{\f325\fswiss Vogue;}{\f326\fswiss ZurichCalligraphic;}{\f327\fnil LotusWPSet;}{\f328\fswiss LotusLineDraw;}{\f329\fswiss Arial Black;}{\f330\fswiss Arial Condensed Bold;}
+{\f331\fswiss Arial Narrow;}{\f332\froman Bodoni Black;}{\f333\froman Bodoni Book;}{\f334\fnil Botanical;}{\f335\fnil Monotype Sorts;}{\f336\fscript New Berolina;}{\f337\fdecor Old Style Bold Outline;}{\f338\fscript Palace Script;}{\f339\froman Photina;}
+{\f340\froman Rockwell;}{\f341\froman Rockwell Light;}{\f342\fscript Brush Script;}{\f343\fswiss Gill Sans;}{\f344\fmodern Letter Gothic;}{\f345\fswiss News Gothic;}{\f346\froman Perpetua;}{\f347\froman Photina Casual Black;}{\f348\fnil WP Greek Helve;}
+{\f349\fnil WP OverflowSet;}{\f350\fnil WP Greek Courier;}{\f351\fscript Ribbon131 Bd BT;}{\f352\froman Humanst521 Lt BT;}{\f353\froman GeoSlab703 Lt BT;}{\f354\fswiss Swis721 BlkEx BT;}{\f355\fswiss Humanst521 Cn BT;}{\f356\fdecor Onyx BT;}
+{\f357\fdecor CaslonOpnface BT;}{\f358\fswiss EngraversGothic BT;}{\f359\fscript ShelleyVolante BT;}{\f360\froman BernhardMod BT;}{\f361\fscript Brush738 BT;}{\f362\fscript Blackletter686 BT;}{\f363\froman Arrus BT;}{\f364\froman Arrus Blk BT;}
+{\f365\fscript OzHandicraft BT;}{\f366\fswiss AvantGarde Bk BT;}{\f367\fswiss AvantGarde Md BT;}{\f368\fdecor Algerian;}{\f369\fswiss Arial Rounded MT Bold;}{\f370\fdecor Bauhaus 93;}{\f371\froman Bookman Old Style;}{\f372\fdecor Braggadocio;}
+{\f373\fswiss Britannic Bold;}{\f374\fscript Brush Script MT;}{\f375\fdecor Colonna MT;}{\f376\fdecor Desdemona;}{\f377\froman Footlight MT Light;}{\f378\fswiss Century Gothic;}{\f379\fscript Gradl;}{\f380\fswiss Impact;}{\f381\fdecor Kino MT;}
+{\f382\froman Wide Latin;}{\f383\fscript Matura MT Script Capitals;}{\f384\fscript Mistral;}{\f385\fdecor Playbill;}{\f386\fdecor Stencil;}{\f387\fscript Vivaldi;}{\f388\fswiss WP Phonetic;}{\f389\fnil WP MathExtendedB;}{\f390\fnil WP BoxDrawing;}
+{\f391\fnil WP IconicSymbolsB;}{\f392\fnil WP MathExtendedA;}{\f393\froman WP CyrillicA;}{\f394\fnil WP Japanese;}{\f395\fnil WP MathB;}{\f396\fnil WP IconicSymbolsA;}{\f397\fnil WP Arabic Sihafa;}{\f398\fnil WP MultinationalA Roman;}
+{\f399\fnil WP CyrillicB;}{\f400\fnil WP MultinationalB Roman;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;
+\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;\red192\green192\blue192;}{\stylesheet{\f11\lang1033 \snext0 Normal;}}{\info
+{\title qshell help system, help topics}{\author Klaus Albrecht}{\operator Klaus Albrecht}{\creatim\yr1992\mo5\dy3\hr12\min22}{\revtim\yr1996\mo2\dy15\hr21\min5}{\printim\yr1992\mo5\dy18\hr12\min44}{\version1}{\edmins0}{\nofpages0}{\nofwords0}{\nofchars0}
+{\vern16417}}\paperw12240\paperh15840\margl1440\margr1008\margt1440\margb1440\gutter0 \facingp\widowctrl\ftnbj\ftnrestart\hyphhotz425 \sectd \linex0\headery709\footery709\colsx709\endnhere \pard\plain \f11\lang1033 {\cf2 QShell (MAX Shell) General Help
+
+\par }{\cf2 by Stan Leszynski
+\par }{\cf2 These notes are not a live context
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 68
+\par }{\cf2 Context strings begin wit}{\cf2 h >>
+\par }{\cf2 Center the title of each block
+\par }{\cf2 First line is @ plus P (print) or N (noprint) plus stop markers for Prev/Next
+\par }\pard {\cf2 MSWord file use:
+\par }{\cf2  Set Printer to Generic/Text only on File:
+\par }{\cf2  Set View to Page mode to see wrapping
+\par }{\cf2  Default tabs 0
+\par }{\cf2  Left margin 0
+\par }{\cf2  Right margin 1.7"
+\par }{\cf2  Top margin 0
+\par }{\cf2  Bottom margin 0
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns
+\par }{\cf2 Text highlighting:
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text
+\par }{\cf2  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text
+\par }{\cf2  use }{\ul\cf2 UNDERLINE}{\cf2  for context jump= red tex}{\cf2 t
+\par }{\cf2  use }{\b\i\cf2 BOLD ITALICS}{\cf2  for bullets= yellow text
+\par }\pard \fi-288\li288\ri-2700 
+\par \pard {\fs28\cf6 >>H.Contents
+\par }@P H.Contents H.Info_Time
+\par                           {\i MAX Hilfe-Themen
+\par }
+\par Die in Rot dargestellten Hilfe-Themen sind Hypertext-Verbindungen. Sie erm\rdblquote glichen Ihnen den direkten Zugang zu anderen Hilfe-Themen. Bl\'84ttern Sie im Text nach oben oder nach unten und w\'84hlen Sie das gew\'81
+nschte Thema aus. Benutzen Sie die {\b rechte} oder {\b linke }Pfeil-
+\par taste, um das Thema hervorzuheben und dr\'81cken Sie dann die{\b  Eingabetaste}. Die Auswahl mit der Maus erfolgt durch Anwahl und Anklicken der gew\'81nschten Information.
+\par 
+\par 
+\par -Diese Themen helfen Ihnen, die {\b MAX-Oberfl\'84che }besser zu verstehen-
+\par                      {\ul Einf\'81hrung in das Men\'81-System}{\v H.Default}
+\par                      {\ul Einf\'81hrung in das Hilfe-System}{\v H.U_Help}
+\par                       {\ul Umgang mit einem Dialogfeld}{\v H.U_Dial}
+\par                       {\ul Umgang mit dem Druck-System}{\v H.U_Print}
+\par                           {\ul Den Editor anwenden}{\v H.U_Editor}
+\par   - Diese Themen erleichtern Ihnen dem Umgang mit dem {\b Editor} -
+\par                            {\ul Editor-Grundlagen}{\v H.E_Basics}
+\par                         {\ul Editor Block-Funktionen}{\v H.E_Block}
+\par                        {\ul Optionen Editor anwenden}{\v H.E_Option}
+\par                         {\ul Editor-Sonderfunktionen}{\v H.E_Spec}
+\par    - Dieses Thema erl\'84utert Ihnen, wie Sie ein {\b Update }laden -
+\par                         {\ul Produkt-Aktualisierung}{\v H.U_Update}
+\par      - Diese Themen helfen Ihnen, {\b ASQ} besser zu verstehen -
+\par                              {\ul Was ist ASQ?}{\v H.ASQ}
+\par                          {\ul Speicher-\'9abersicht}{\v H.Mem_Sum}
+\par                        {\ul Konfigurations-\'9abersicht}{\v H.Cfg_Sum}
+\par                         {\ul Maschinen-Ausstattung}{\v H.Hdw_Sum}
+\par    - Diese Themen helfen Ihnen, {\b Maximize} besser zu verstehen -
+\par                           {\ul Expre\'e1-Maximize}{\v H.Max_Quick}
+\par                             {\ul Angepa\'e1tes Maximize}{\v H.Max_Full}
+\par Diese Themen helfen Ihnen, die {\b INFO-Bildschirme }besser zu verstehen
+\par                        {\ul Speicher-Gesamt\'81bersicht}{\v H.Info_Mem}
+\par                        {\ul EMS-Speicher-Information}{\v H.Info_EMS}
+\par                          {\ul residente Programme}{\v H.Info_Res}
+\par                           {\ul Ger\'84tetreiber}{\v H.Info_Dev}
+\par                          {\ul Programm-Lade-Gr\rdblquote \'e1en}{\v H.Info_Load}
+\par                       {\ul Speicher-Plan Information}{\v H.Info_ROM}
+\par                        {\ul Speicher-Geschwindigkeit}{\v H.Info_Time}
+\par          - Dieses Thema enth\'84lt ein {\b Stichwort-Verzeichnis }-
+\par                       {\ul MAX Stichwort-Verzeichnis}{\v H.Index}
+\par 
+\par Mit der Schaltfl\'84che{\b  n\'84chste} Info k\rdblquote nnen Sie die Themen der Reihe nach durchbl\'84ttern.
+\par 
+\par {\fs28\cf6 >>H.Default
+\par }@P H.Default H.U_Editor
+\par                     {\i Einf\'81hrung in das M}{\i en\'81-System} 
+\par 
+\par Die Funktionen dieses Systems werden \'81ber eine Men\'81leiste am oberen Bildschirmrand gesteuert. Die Optionen dieser Leiste rufen Pulldown-Men\'81s auf, die wiederum Qualitas MAX Befehle enthalten.
+\par 
+\par F\'81r die Men\'81leiste gelten folgende Funktionstasten:
+\par 
+\par   * {\b ALT+hervorgehobener Buchstabe} - zeigt das Pulldown-Men\'81 zur
+\par     Option des entsprechenden (hervorgehobenen) Buchstabens
+\par   * {\b Nach-Rechts, Nach-Links} - steuert eine neue Option an und
+\par     zeigt deren Pulldown-Men\'81{\b 
+\par }  * {\b TAB, Umschalttaste+TAB} - steuert eine neue Option an und
+\par     zeigt deren Pulldown-Men\'81{\b 
+\par }  * {\b ESC} - springt zur Option "Beenden"
+\par \pard \fi-288\li288 
+\par F\'81r Pulldown-Men\'81s gelten folgende Funktionstasten:
+\par \pard 
+\par   * {\b Eingabetaste} - f\'81hrt hervorgehobene Funktion aus
+\par   * {\b Hervorgehobener Buchstabe} - f\'81hrt die Men\'81-Option aus, die
+\par     den hervorgehobenen Buchstaben enth\'84lt
+\par   * {\b Nach-Oben, Nach-Unten} - stellt eine neue Men\'81-Auswahl
+\par     hervorgehoben dar
+\par   * {\b Esc} - springt zur Option "Beenden"
+\par 
+\par Das{\b  Datenfenster} nimmt den gr\rdblquote \'e1ten Teil des Bildschirms ein. Es zeigt den Inhalt der aktuellen Men\'81-Option. Falls Sie die Men\'81-
+\par Optionen sehr schnell durchbl\'84ttern, kann die Datenanzeige m\rdblquote glicherweise mit Ihrem Tempo nicht Schritt halten. Ist der Cursor nicht mehr in Bewegung, wird jedoch das aktuelle Fenster angezeigt.
+\par \pard 
+\par Wenn Sie mit der {\b Maus} arbeiten, dann ziehen Sie den Leuchtbalken in der Men\'81leiste und nach oben oder nach unten durch die Pulldown-Men\'81
+s. Die Auswahl einer hervorgehobenen aktiven Option erfolgt durch einmaliges Anklicken mit der linken Maustaste bzw. durch Doppelklicken auf einer nicht hervorgehobenen Option.
+\par \pard \ri-2700 
+\par \pard In der MAX-Oberfl\'84che werden wichtige Funktionen mit Tasten-
+\par kombinationen \'81ber {\b Schaltfl\'84chen }ausgef\'81hrt. Eine Schaltfl\'84che ist ein kleines, schattiertes Feld im unteren Bildschirmbereich, ein Datenfenster oder ein Dialogfeld. Jede Schaltfl\'84che enth\'84
+lt einen Text mit der Beschreibung der zugrundeliegenden Funktion. Ein Buchstabe dieses Textes wird immer hervorgehoben dargestellt. Dr\'81cken Sie auf der Tastatur die entsprechende Taste, um die Funktion der Schaltfl\'84che auszuf\'81hren. Oder w\'84
+hlen Sie die Schaltfl\'84che mit der Maus an klicken die Schaltfl\'84che am Bildschirm an. Mit der TAB-Taste oder der Eingabetaste k\rdblquote nnen Sie die Schaltfl\'84chen innerhalb eines Dialogfeldes ausw\'84hlen.
+\par (Vgl. {\ul Umgang mit einem Dialogfeld}{\v H.U_Dial}) 
+\par 
+\par 
+\par Das Men\'81system enth\'84lt folgende Schaltfl\'84chen:
+\par 
+\par   * {\b ESC} - kehrt zum Men\'81system zur\'81ck (aus einer Datenanzeige) oder
+\par     springt zur Option "Beenden" (aus einem Men\'81).
+\par   * {\b Hilfe F1} - zeigt aktuelle Hilfe-Information an.
+\par   * {\b Druck F2} - zeigt das {\ul Dialogfeld "Druck"}{\v H.U_Print} an, falls
+\par     verf\'81gbar.
+\par   * {\b Lernhilfe F3} - zeigt die Lernhilfe f\'81r die hervorgehobene
+\par     Option, falls dazu eine Lernhilfe vorhanden ist
+\par 
+\par \pard \fi-1\li1 Nicht jede Men\'81-Option enth\'84lt Schaltfl\'84chen, die mit Funktions-
+\par tasten ausgew\'84hlt werden. Aktive Schaltfl\'84chen verf\'81gen \'81ber einen {\b hervorgehobenen} Buchstaben. Der Text nicht aktiver Schaltfl\'84chen ist nur sehr schwach dargestellt.
+\par \pard 
+\par In einer Option, die ein Datenfenster aufruft, wird das Men\'81 mit der {\b Eingabe}{\b taste} ausgeblendet und das Fenster aktiviert. In einigen
+\par F\'84llen wird das Fenster f\'81r die Datenanzeige vergr\rdblquote \'e1ert. Fenster mit Informationen, die l\'84nger oder breiter als das Fenster selbst sind, werden an den R\'84ndern mit Bildlaufleisten versehen.
+\par 
+\par Mit diesen Tastenkombinationen bewegen Sie sich in einem Datenfenster:
+\par 
+\par   * {\b STRG+Ende} - zeigt den letzten Daten-Bildschirm
+\par   * {\b STRG+POS1} - zeigt den ersten Daten-Bildschirm
+\par   * {\b STRG+Bild-Nach-Unten} - zeigt den n\'84chsten Daten-Bildschirm
+\par     auf der rechten Seite (nur mit Datei-Betrachter)
+\par   * {\b STRG+Bild-Nach-Oben }- zeigt den n\'84chsten Datenbildschirm
+\par     auf der linken Seite (nur mit Datei-Betrachter)
+\par   * {\b POS1} - bl\'84ttert zur ersten Spalte
+\par   * {\b Ende} - bl\'84ttert zur letzten Spalte
+\par   * {\b Bild-Nach-Oben, Bild-Nach-Unten} - bl\'84ttert seitenweise
+\par     nach oben oder nach unten
+\par   * {\b Nach-Oben, Nach-Unten, Nach-Rechts, Nach-Links} - bl\'84ttert
+\par     reihen- und spaltenweise durch das Fenster
+\par     
+\par In einem Datenfenster sind zwei weitere Schaltfl\'84chen verf\'81gbar: {\b vorher F7} und {\b n\'84chste F8}. Diese Schaltfl\'84chen erzeugen eine Reihe von Bildschirmen in der Reihenfolge der Optionen. Damit m\'81
+ssen Sie nicht nach jeder Bildschirmseite zum Men\'81 zur\'81ckkehren.
+\par 
+\par Mit der {\b Maus} k\rdblquote nnen Sie die Tasten Bild-Nach-Oben- und Bild-Nach-
+\par Unten-, STRG+Bild-Nach-Oben und STRG+Bild-Nach-Unten simulieren, indem Sie innerhalb der Bildlaufleisten klicken. Das Anklicken eines Pfeils simuliert "Nach-Oben/Unten/Rechts/Links". Das einmalige Anklicken eines Dreiecks simuliert die Tasten
+\par Bild-Nach-Oben, Bild-Nach-Unten, STRG+Bild-Nach-Oben und
+\par STRG+Bild-Nach-Unten. Ein Doppelklick auf ein Dreieck simuliert STRG+POS1 und STRG+Ende.
+\par 
+\par {\fs28\cf6 >>H.U_Help
+\par }@P H.Default H.U_Editor
+\par                     {\i Einf\'81hrung in das Hilfe-System
+\par }
+\par Das Hilfesystem enth\'84lt aktuelle Informationem \'81ber Men\'81s und Programm-Funktionen.
+\par 
+\par Sie erhalten Zugang zum Hilfesystem, wenn am unteren Bildschirmrand die{\b  Schaltfl\'84che "Hilfe"} aktiv ist. Dr\'81cken Sie die Hilfe-Taste (oder klicken Sie die Schaltfl\'84che mit der Maus an). Zur aktuellen Aktivit\'84
+t wird ein Informations-Fenster angezeigt. Ist die Hilfe-
+\par Information gr\rdblquote \'e1er als das Fenster, k\rdblquote nnen Sie mit den Tasten Bild-
+\par Nach-Unten, Bild-Nach-Oben, STRG+POS1, STRG+Ende und den Pfeil-
+\par tasten im Text bl\'84ttern. Mit der Maus k\rdblquote nnen Sie sich anhand der Bildlaufleisten durch den Text bewegen.
+\par 
+\par Bei aktivem Hilfesystem sind folgende Optionen auf Schaltfl\'84chen verf\'81gbar:
+\par 
+\par   * {\b Themen} - zeigt eine Liste der Hilfe-Themen. Die Themen
+\par     erscheinen in der Reihenfolge, in der Sie beim Bl\'84ttern durch
+\par     das Hilfesystem mit der Schaltfl\'84che "n\'84chste" auftreten.
+\par   * {\b Stichwort} - zeigt das Stichwort-Register f\'81r das Hilfesystem.
+\par     Die Themen erscheinen in alphabetischer Reihenfolge ihrer
+\par     prim\'84ren Bedeutung.
+\par   * {\b n\'84chste} - springt auf das n\'84chste Thema der aktuellen
+\par     Bl\'84tter-Liste (s.u.)
+\par   * {\b vorher} - springt auf vorangegangene Themen zur\'81ck.
+\par     Mit Auswahl "vorher" erscheint der Bildschirm, welcher dem
+\par     aktuellen vorausging. Dieser Vorgang ist nach 20 Bildschirmen
+\par     beendet bzw. dann, wenn der urspr\'81nglich ausgew\'84hlte Bild-
+\par     schirm wieder angezeigt ist.
+\par 
+\par Mit der Auswahl eines Hilfe-Themas wird eine {\b Bl\'84tter-Liste} aktiv. Die Bl\'84tter-Liste verbindet das Thema mit verwandten Themen-
+\par bereichen. Mit "n\'84chste" bewegen Sie sich durch die Bl\'84tter-Liste. Die Bl\'84tter-Liste bleibt so lange aktiv, bis Sie Themen, Stichwort oder ein neues Thema \'81ber die Hypertext-Verbindung ausw\'84hlen (s.u.). In der Bl\'84
+tter-Liste der Themen ist jedes Element des Hilfesystems enthalten.
+\par 
+\par Der in Rot dargestellte Hilfetext ist eine Hypertext-Verbindung, mit der Sie ein verwandtes Thema direkt anspringen k\rdblquote nnen. Sie w\'84hlen ein Thema aus, indem Sie das Thema mit der rechten oder linken Pfeiltaste hervorheben und anschlie\'e1
+end die Eingabetaste dr\'81cken. Oder mit der Maus, indem Sie das Thema anklicken, um es hervorzuheben. Alternativ k\rdblquote nnen Sie auch auf ein hervorgehobenes oder nicht hervorgehobenes Thema doppelklicken, um zu springen. Mit der Schaltfl\'84
+che "vorher" kehren Sie wieder zum urspr\'81nglichen Thema (d.h. Ihrem Ausgangspunkt) zur\'81ck.
+\par 
+\par \'9aber das {\ul Drucksystem}{\v H.U_Print} k\rdblquote nnen Sie Hilfe-Informationen ausdrucken.
+\par 
+\par 
+\par {\fs28\cf6 >>H.U_Dial
+\par }@P H.Default H.U_Editor
+\par                      {\i Umgang mit einem Dialogfeld
+\par }
+\par Dialogfelder werden vom oberen Bildschirmrand abw\'84rts eingeblendet. Sie enthalten einige bzw. alle folgenden Elemente:
+\par 
+\par {\b Text-Meldungen
+\par }
+\par Die Meldungen informieren \'81ber den aktuellen Status-oder fordern zu einer notwendigen Aktion auf.
+\par 
+\par {\b Unterfenster}
+\par 
+\par In einem Dialogfeld mit mehr als einem Arbeits- oder Anzeigebereich nimmt jeder Bereich ein eigenes Unterfenster mit einem separaten Namen ein. In einem aktiven Unterfenster aktiv, dann ist der Name hervorgehoben. So aktivieren Sie ein Unterfenster:
+
+\par 
+\par   * Sie k\rdblquote nnen mit der {\b TAB-Taste} und der {\b Umschalttaste+TAB
+\par }\pard {\b  }   zwischen den Unterfenstern springen oder
+\par   * die {\b ALT-Taste }zusammen mit dem hervorgehobenen Buchstaben
+\par     (im Namen des Unterfensters) dr\'81cken oder
+\par   * einen beliebigen Bereich innerhalb des Unterfensters
+\par     mit der Maus {\b anklicken.}
+\par 
+\par {\b Feld-Editor}
+\par 
+\par Ein Feld-Editor stellt einen Bereich f\'81r die Texteingabe zur Verf\'81gung. Benutzen Sie die linke und rechte Pfeiltaste, die R\'81cktaste und die alphanumerischen Tasten, um den erforderlichen Eintrag zu vervollst\'84
+ndigen. Akzeptiert das aktuelle Feld eine Texteingabe, die gr\rdblquote \'e1er ist als das Textfeld, dann erfolgt ein Bildlauf im Text.
+\par 
+\par {\b Kontrollk\'84stchen}
+\par 
+\par Ein Kontrollk\'84stchen ist eine Option, die entweder ein- oder ausgeschaltet ist. Eine Markierung in Klammern gibt den Status der Option an. In einem Unterfenster k\rdblquote nnen mehrere Kontrollk\'84stchen markiert werden.
+\par 
+\par Sie aktivieren ein Kontrollk\'84stchen, indem Sie es mit den Tasten Nach-Oben und Nach-Unten ansteuern und die Leertaste dr\'81cken. Alternativ k\rdblquote nnen Sie die ALT-Taste zusammen mit dem hervor-
+\par gehobenen Buchstaben (aus dem Namen des Kontrollk\'84stchens) dr\'81cken. Mit der Maus k\rdblquote nnen Sie das Kontrollk\'84stchen anw\'84hlen und zur Auswahl anklicken.
+\par 
+\par Ein Ansteuern des Kontrollk\'84stchens mit den Pfeiltasten aktiviert die Option nicht, ein Ansteuern mit der ALT-Taste jedoch schon.
+\par 
+\par \pard \fi-1\li1 {\b Optionsschalter
+\par }
+\par \pard Ein Optionsschalter ist eine Option, die entweder ein- oder aus-
+\par geschaltet ist. Eine Markierung in Klammern gibt den Status der Option an. 
+\par 
+\par Sie aktivieren einen Optionsschalter, indem Sie ihn mit den Tasten Nach-Oben und Nach-Unten ansteuern und die Leertaste dr\'81cken. Alternativ k\rdblquote 
+nnen Sie die ALT-Taste zusammen mit dem hervorgehobenen Buchstaben (aus dem Namen des Optionsschalters) dr\'81cken. Mit der Maus wird der Optionsschalter direkt angezeigt und mit der linken Mausta
+ste geklickt. Es kann jeweils nur ein Optionsschalter ausgew\'84hlt werden.
+\par 
+\par Ein Ansteuern des Optionsschalters mit den Pfeiltasten aktiviert die Option nicht, ein Ansteuern mit der ALT-Taste jedoch schon. 
+\par \pard \fi-1\li1 
+\par \pard {\b Schaltfl\'84chen}
+\par 
+\par Aktions-Schaltfl\'84chen am unteren Rand eines Dialogfeldes zeigen wichtige Funktionstasten an. Die Taste, mit der die Funktion einer Schaltfl\'84che ausgew\'84hlt werden kann, wird in der Schaltfl\'84che hervorgehoben dargestellt. Dr\'81
+cken Sie die Taste allein oder mit der ALT-Taste. Die Auswahl mit der Maus erfolgt durch direktes Anklicken der Taste.
+\par 
+\par Die meisten Dialogfelder verf\'81gen \'81ber die Schaltfl\'84che{\b  Fertig}, mit der die Funktion des Feldes ausgef\'81hrt wird und \'81ber die Schaltfl\'84che {\b Abbruch,} mit der die Aktion abgebrochen und das Feld ausgeblendet wird. Sie w\'84
+hlen die Schaltfl\'84che "Fertig" mit der Taste "F", ALT+F oder mit der Eingabetaste. Die Schaltfl\'84che "Abbruch" wird \'81ber "A", ALT+A oder die Eingabetaste ausgew\'84hlt.
+\par 
+\par Bei der Anzeige von Dialogfeldern wird eine der Schaltfl\'84chen in Klammern gezeigt. Diese Schaltfl\'84che ist die{\b  Vorgabe (Vor-
+\par }{\b einstellung)}. Die Auswahl erfolgt mit der Eingabetaste. Mit den Tasten {\b TAB} und {\b Umschalttaste+TAB} kann eine andere Schaltfl\'84che als die aktuelle hervorgehoben und aktiviert werden.
+\par 
+\par 
+\par {\fs28\cf6 >>H.U_Print
+\par }@P H.Default H.U_Editor
+\par                     {\i Umgang mit dem Druck-System
+\par }
+\par \'9aber das Drucksystem k\rdblquote nnen Daten-Bildschirme, Lernhilfe-Lektionen, Glossar-Themen sowie Hilfetext ausgedruckt werden.
+\par 
+\par Im ersten Unterfenster des Dialogfeldes "Druck" wird der Ausgabe-
+\par umfang festgelegt. Jede Option verf\'81gt \'81ber ein Kontrollk\'84stchen, so da\'e1 mehr als eine Option ausgew\'84hlt werden kann.
+\par 
+\par Das zweite Unterfenster des Dialogfeldes "Druck" enth\'84lt eine Liste der {\b Ausgabeziele}. Jedes Ausgabeziel verf\'81gt \'81ber einen Optionsschalter, so da\'e1 jeweils nur eines ausgew\'84hlt werden kann.
+\par 
+\par Wird die Druckausgabe in eine{\b  Datei }geschrieben, dann schl\'84gt ASQ einen Namen f\'81r die Druckausgabedatei vor. Sie k\rdblquote nnen jede g\'81ltige Dateispezifikation eingeben.
+\par 
+\par Mit der {\b TAB}-Taste bewegen Sie sich zwischen den Unterfenstern. F\'81r das Ausgabeziel "Drucker" haben Sie keinen Zugriff auf das Dateinamen-Feld.
+\par 
+\par Bei Auswahl der Druck-Option {\b alle Hilfe-Themen}, wird eine Liste dieser Themen angezeigt. Die Reihenfolge entspricht der Druck-
+\par ausgabe.
+\par 
+\par Weitere Informationen erhalten Sie in der Beschreibung zum Thema
+\par {\ul Umgang mit einem Dialogfeld}{\v H.U_Dial}.
+\par 
+\par {\fs28\cf6 >>H.U_Editor
+\par }@P H.U_Editor H.E_Spec
+\par                          {\i Den Editor anwenden}
+\par 
+\par Mit dem MAX Editor k\rdblquote nnen Sie die Systemdateien CONFIG.SYS, AUTOEXEC.BAT sowie andere ASCII-{\b Textdateien }bearbeiten. Sie k\rdblquote nnen Text eingeben, ver\'84ndern, verschieben, l\rdblquote 
+schen und speichern. Mit dem besonderen Optionen Editor k\rdblquote nnen Sie die Memory Management Software von Qualitas schnell und einfach konfigurieren.
+\par 
+\par In diesem Kapitel stehen mehrere Themen zur Verf\'81gung. W\'84hlen Sie ein Thema aus oder zeigen Sie mit der Schaltfl\'84che {\b n\'84chste }alle Thema der Reihen nach an:
+\par 
+\par  {\ul Editor-Grundlagen}{\v H.E_Basics}         - so bewegen Sie sich im Editor
+\par  {\ul Editor Block-Funktionen}{\v H.E}{\v _Block}   - Textbl\rdblquote cke markieren und verschieben
+\par  {\ul Optionen-Editor anwenden}{\v H.E_Option}  - die Profildatei bearbeiten
+\par  {\ul Editor-Sonderfunktionen}{\v H.E_Spec}   - Tasten mit besonderen Funktionen.
+\par 
+\par {\fs28\cf6 >>H.E_Basics
+\par }@P H.U_Editor H.E_Spec
+\par                          {\i Editor-Grundlagen}
+\par 
+\par \pard \fi-1\li1 {\b Schaltfl\'84chen}
+\par 
+\par Der Editor verf\'81gt \'81ber folgende Schaltfl\'84chen:
+\par \pard 
+\par \pard \li1   * {\b Sichern F7} - speichert aktuelle Datei auf Disk. Diese
+\par     Schaltfl\'84che ist nur dann aktiv, wenn die Datei seit dem
+\par     letzten Laden oder Speichern ver\'84ndert wurde.
+\par \pard   * {\b Option F8} - Der Option Editor ist ein Dialogfeld, mit dem Sie
+\par     die Qualitas Software Ihrem System anpassen k\rdblquote nnen. 
+\par     Vgl. {\ul Optionen-Editor anwenden}{\v H.E_Option}.
+\par 
+\par {\b Editor-Bildschirm}
+\par 
+\par \pard Der Editor zeigt den Text der aktuellen Datei im Editor-Fenster. Ein Zeilen-/Spaltenz\'84hler in der oberen rechten Ecke des Fensters informiert \'81
+ber die aktuelle Cursor-Position. Die erste Zahl bezeichnet die aktuelle Cursor-Position, die zweite Zahl gibt die Anzahl der Zeilen in der Datei an und die dritte Zahl bezeichnet die aktuelle Spalte.
+\par 
+\par Der Editor kann Textzeilen bis zu einer L\'84nge von {\b 256} Zeichen bearbeiten. Wird eine Datei mit l\'84ngeren Zeilen geladen, kann dies zu einem Datenverlust f\'81
+hren. Die maximale Zeilenzahl einer Datei wird durch den freien Arbeitsspeicher bestimmt und kann von System zu System unterschiedlich sein. Die meisten Systeme akzeptieren Dateien mit einigen Tausend Zeilen. 
+\par 
+\par Der Editor arbeitet standardm\'84\'e1ig im {\b Einf\'81ge}-Modus. Mit der EINFG-
+\par Taste schalten Sie in den {\b \'9aberschreib}-Modus. Der Cursor wechselt von einem Unterstreichungszeichen zu einem Blockzeichen. Mit einem erneuten Dr\'81cken der EINFG-Taste kehren Sie wieder in den Einf\'81gemodus zur\'81ck.
+\par 
+\par {\b Sondertasten-Kombinationen}
+\par 
+\par Mit folgenden Tasten k\rdblquote nnen Sie sich im Text bewegen. Tasten, die mit der Markierung {\b [E]} gekennzeichnet sind, sind nur im Edit-Modus verf\'81gbar.
+\par 
+\par   * {\b R\'81cktaste}                l\rdblquote scht das Zeichen links vom Cursor
+\par                              bzw. l\rdblquote scht einen markierten Block [E]
+\par   * {\b STRG + NACH-UNTEN }       rollt Text eine Zeile aufw\'84rts, Cursor
+\par                              bleibt unver\'84ndert
+\par   * {\b STRG + ENDE }             springt zum Ende der Datei
+\par   * {\b STRG + POS1 }             springt zum Anfang der Datei
+\par   * {\b STRG + NACH-LINKS}        springt zum Anfang des vorangegangenen
+\par                              Wortes
+\par   * {\b STRG + BILD-NACH-UNTEN }  springt einen Bildschirm (74 Spalten)
+\par                              nach rechts
+\par   * {\b STRG + BILD-NACH-OBEN }   springt  einen Bildschirm (74 Spalten)
+\par                              nach links
+\par   * {\b STRG + NACH-RECHTS }      springt zum Anfang des n\'84chsten Wortes
+\par   * {\b STRG + NACH-OBEN }        rollt Text eine Zeile abw\'84rts, Cursor 
+\par                              bleibt unver\'84ndert
+\par   * {\b ENTF }                    l\rdblquote scht das Zeichen unter dem Cursor
+\par                              bzw. l\rdblquote scht einen markierten Block [E]
+\par   * {\b Nach-Unten }              bwegt den Cursor eine Zeile abw\'84rts
+\par   * {\b ENDE }                    springt zum Ende der Zeile
+\par \pard \fi-1\li1   * {\b EINGABETASTE }            \'9aberschreibmodus: Springt zu Pos. 1
+\par                              der n\'84chsten Zeile. Einf\'81gemodus:
+\par                              Bewirkt Zeilenumbruch an der
+\par                              Cursorposition und setzt den
+\par                              nachfolgenden Text an den Anfang einer
+\par                              neuen Zeile [E]
+\par   * {\b ESC }                     verl\'84\'e1t den Editor, Aufforderung zum
+\par                              Speichern oder Verwerfen etwaiger
+\par                              \'8enderungen
+\par \pard   * {\b POS1}                     springt zum Anfang der Zeile
+\par   * {\b EINFG}                    wechselt zwischen Einf\'81ge- u.
+\par                              \'9aberschreibmodus (Vorgabe ist
+\par                              Einf\'81gemodus) [E]
+\par   * {\b NACH-LINKS }              bewegt den Cursor um ein Zeichen nach
+\par                              links
+\par   * {\b BILD-NACH-UNTEN}          bl\'84ttert eine Bildschirmseite weiter
+\par   * {\b BILD-NACH-OBEN}           bl\'84ttert eine Bildschirmseite zur\'81ck
+\par   * {\b NACH-RECHTS }             bewegt den Cursor ein Zeichen nach
+\par                              rechts
+\par   * {\b NACH-OBEN }               bewegt den Cursor eine Zeile aufw\'84rts
+\par 
+\par {\fs28\cf6 >>H.E_Block
+\par }@P H.U_Editor H.E_Spec
+\par      {\i                  Editor Block-Funktionen}
+\par 
+\par Mit dem Editor k\rdblquote nnen Sie Textbl\rdblquote cke (die W\rdblquote rter, Zeilen oder Bildschirme enthalten) l\rdblquote schen, verschieben und kopieren. Mit folgenden Tastenkombinationen markieren Sie einen Textblock:
+\par (U = Umschalttaste)
+\par 
+\par \pard \tx2880   * {\b U + STRG + ENDE}         erweitert Blockmarkierung bis zum
+\par                             Dateiende
+\par   * {\b U + STRG + POS1}         erweitert Blockmarkierung bis zum
+\par \pard                             Dateianfang
+\par \pard \tx2880   * {\b U + STRG + NACH-LINKS }  erweitert Blockmarkierung bis zum
+\par                             Anfang des vorangegangenen Wortes
+\par \pard   * {\b U + STRG + NACH-RECHTS } erweitert Blockmarkierung bis zum
+\par                             Anfang des n\'84chsten Wortes
+\par \pard \tx2880   * {\b U + NACH-UNTEN}          erweitert Blockmarkierung um die
+\par                             n\'84chste Zeile
+\par   * {\b U + ENDE }               erweitert Blockmarkierung bis
+\par                             Zeilenende
+\par   * {\b U + POS1 }               erweitert Blockmarkierung bis
+\par                             Zeilenanfang
+\par   * {\b U + NACH-LINKS }         erweitert Blockmarkierung
+\par                             um ein Zeichen nach links
+\par   * {\b U + BILD-NACH-UNTEN }    erweitert Blockmarkierung um den
+\par                             n\'84chsten Bildschirm (18 Zeilen)
+\par   * {\b U + BILD-NACH-OBEN }     erweitert Blockmarkierung um den
+\par                             vorangegangenen Bildschirm (18 Zeilen)
+\par   * {\b U + NACH-RECHTS }        erweitert Blockmarkierung
+\par                             um ein Zeichen nach rechts
+\par \pard   * {\b U + NACH-OBEN }          erweitert Blockmarkierung um vorherige
+\par                             Zeile
+\par 
+\par Mit diesen Tasten verschieben, kopieren oder l\rdblquote schen Sie markierte Textbl\rdblquote cke:
+\par 
+\par   * {\b Alt + R\'81cktaste }  Soweit m\rdblquote glich, wird der zuvor gel\rdblquote schte
+\par                       Textblock wiederhergestellt. Der Textblock
+\par                       kehrt in seine Ausgangsposition zur\'81ck
+\par \pard   * {\b R\'81cktaste }        l\rdblquote scht dauerhaft den markierten Block
+\par   * {\b STRG + EINFG      }kopiert den markierten Block in eine
+\par                       Zwischenablage
+\par   * {\b ENTF }             l\rdblquote scht den markierten Block
+\par   * {\b U + ENTF          }l\rdblquote scht den markierten Block und speichert ihn
+\par                       in einer nicht sichtbaren Zwischenablage
+\par   * {\b U + EINFG         }f\'81gt den Block aus der Zwischenablage in die
+\par                       Datei der aktuellen Cursorposition ein
+\par {\fs28\cf6 >>H.E_Option
+\par }@P H.U_Editor H.E_Spec
+\par                         {\i Optionen-Editor anwenden}
+\par 
+\par Mit dem Optionen-Editor k\rdblquote nnen Sie eine Options-Anweisung in die Profildatei der Qualitas Software aufnehmen. Der Optionen-Editor enth\'84
+lt eine Liste der Profil-Optionen, eine Beschreibung zu jeder einzelnen Option sowie einen Feld-Editor mit dem Sie den Optionstext individuell f\'81r Ihr System einrichten k\rdblquote nnen.
+\par 
+\par Sie aktivieren und arbeiten mit einer Option, indem Sie diese markieren und mit der TAB-Taste, der ALT-Taste oder der Maus zum Eingabefeld (im unteren Bildschirmbereich) springen. Ersetzen Sie eine Variable ({\b xxx} oder{\b  nnn}
+) in der entsprechenden Befehlssyntax mit der Information f\'81r Ihr System. Wenn Sie im Feld-Editor die Eingabetaste dr\'81cken, wird das Dialogfeld geschlossen und die neue Optionszeile an der aktuellen Cursor-Position eingef\'81gt. 
+\par 
+\par Weitere Informationen \'81ber den Option-Editor finden Sie in der entsprechenden Dokumentation{\b .}
+\par 
+\par {\fs28\cf6 >>H.E_Spec
+\par }@P H.U_Editor H.E_Spec
+\par                         {\i Editor-Sonderfunktionen}
+\par 
+\par Der Editor belegt einige {\b Funktionstasten}, die nicht am Bildschirm angezeigt werden. Diese Funktionstasten dienen der Fehlersuche in Zusammenarbeit mit dem Technischen Support von Qualitas. Da sie auf den normalen Editiervorgang keinen Einflu\'e1
+ haben, sind nachfolgende Beschreibungen kurz gefa\'e1t:
+\par 
+\par   * {\b UMSCHALT + F3  }- f\'81gt REM am Zeilenanfang einer Stapeldatei ein
+\par   * {\b UMSCHALT + F4}  - l\rdblquote scht REM am Zeilenanfang einer Stapeldatei
+\par   * {\b UMSCHALT + F5}  - f\'81gt 386LOAD "GETSIZE" in eine DEVICE-Zeile
+\par                      der CONFIG.SYS ein
+\par   * {\b UMSCHALT + F6}  - l\rdblquote scht 386LOAD "GETSIZE" aus einer DEVICE-
+\par                      Zeile der CONFIG.SYS
+\par   * {\b UMSCHALT + F7}  - f\'81gt 386LOAD "GETSIZE" in eine Zeile einer
+\par                      Stapeldatei ein
+\par   * {\b UMSCHALT + F8}  - l\rdblquote scht 386LOAD "GETSIZE" aus einer Zeile einer
+\par                      Stapeldatei
+\par 
+\par {\fs28\cf6 >>H.U_Update
+\par }@P H.U_Update H.U_Update
+\par                         {\i Produkt-Aktualisierung}
+\par 
+\par Mit der Option "Update" aktualisieren Sie eine bestehende Kopie von Qualitas MAX oder BlueMAX mit einer Update-Diskette. Qualitas stellt diese Update-Diskette bei Bedarf registrierten Anwendern zur Verf\'81
+gung. Diese Option fordert Sie dazu auf, die Update-Diskette in das Diskettenlaufwerk einzulegen. 
+\par 
+\par {\fs28\cf6 >>H.ASQ
+\par }@P H.ASQ H.ASQ
+\par                             {\i Was ist ASQ?}
+\par 
+\par ASQ ist ein Instrument zur Systemanalyse sowie eine Lernhilfe.
+\par ASQ kann ...
+\par 
+\par   * Ihr System analysieren und \'81ber dessen aktuellen Status
+\par     berichten und
+\par   * Sie in Sachen {\b Memory Management} und anderen Computer-
+\par     Konzeptionen unterrichten.
+\par 
+\par Es gibt viele M\rdblquote glichkeiten, Ihre Hard- und Software f\'81r Ihr System zu konfigurieren. In dem Ma\'e1e wie Sie mehr \'81ber die Betriebsmittel in Ihrem Computer erfahren, werden Sie diese auch bewu\'e1ter einsetzen k\rdblquote 
+nnen. ASQ vermittelt Ihnen ein besseres Systemverst\'84ndnis und hilft Ihnen bei der Feineinstellung der Systemkonfiguration. ASQ untersucht jeden Aspekt Ihres PC und erstellt detaillierte Berichte. Wenn Ihnen etwas in der ASQ-Berichterstattung v
+\rdblquote llig fremd erscheint, rufen Sie einfach die ASQ-Hilfe auf. ASQ verf\'81gt \'81ber leicht verst\'84ndliche Lernhilfe-Lektionen, die viele Themenbereiche der Computer-Technologie abdecken.
+\par 
+\par Die ASQ Hauptfunktion ist das {\b Memory Management}. Diese Technik ist f\'81r Systeme, die mit einem 80386 und 80486 Mikroprozessor ausgestattet sind, unerl\'84\'e1lich. Denn diese leistungsstarken Rechner ben\rdblquote 
+tigen ein hochwertiges Memory Management zur \'9aberwindung der DOS-Grenze und f\'81r einen reibungslosen Ablauf der heute \'81blichen komplexen Software-Komponenten.
+\par 
+\par ASQ erhalten Sie kostenlos mit jedem Qualitas Produkt.
+\par 
+\par {\fs28\cf6 >>H.Mem_Sum}{\fs28\cf6 
+\par }@P H.Mem_Sum H.Hdw_Sum
+\par                          {\i Speicher-\'9abersicht
+\par }
+\par Dieser Bildschirm zeigt eine {\b \'9abersicht der Speicherbelegung} in Ihrem System.
+\par 
+\par In jeder Zeile wird der jeweilige {\b "Nutzer"} des Computerspeichers beschrieben. Ein "Nutzer" kann ein Programm, Ger\'84
+tetreiber, Bildschirmspeicher oder der EMS-Seitenrahmen sein. Auf der linken Seite erkennen Sie den Namen des "Nutzers", gefolgt von dessen Gr\rdblquote \'e1e (in Kilobyte). Die "Nutzer" erscheine
+n in der Reihenfolge, in der sie in den Speicher geladen wurden.
+\par 
+\par Diese Informationen stammen von {\b ASQ}. Zus\'84tzliche Hilfe-Informationen
+\par sowie eine Lernhilfe zur Speicher-\'9abersicht erhalten Sie in ASQ.
+\par 
+\par {\fs28\cf6 >>H.Cfg_Sum
+\par }@P H.Mem_Sum H.Hdw_Sum
+\par                        {\i Konfigurations-\'9abersicht
+\par }
+\par Die Konfigurations-\'9abersicht zeigt Einstellungen der DOS-{\b Umgebungs-
+\par }{\b parameter} wie z.B. DOS-Version, System-Prompt und mit dem DOS-
+\par Befehl SET angelegten Variablen. Sie enth\'84lt ebenso Informationen \'81ber die Anzahl der Dateisteuerbl\rdblquote cke (FCBs = File Control Blocks) sowie eine Liste der offenen Dateien. N\'84here Informationen \'81
+ber die Elemente dieses Bildschirms finden Sie DOS Betriebssystem-Handbuch.
+\par 
+\par Diese Informationen stammen von {\b ASQ}. Weitere Hilfe-Informationen
+\par sowie eine Lernhilfe zur die Konfigurations-\'9abersicht erhalten Sie in ASQ.
+\par 
+\par {\fs28\cf6 >>H.Hdw_Sum
+\par }@P H.Mem_Sum H.Hdw_Sum
+\par                         {\i Maschinen-Ausstattung
+\par }
+\par Dieser Bildschirm zeigt ein Verzeichnis der Hardware-Einheiten in Ihrem System. Dazu geh\rdblquote ren CPU, Speicher, I/O Schnittstellen, die Tastatur und das System ROM BIOS.
+\par 
+\par Diese Informationen stammen von {\b ASQ}. Weitere Hilfe-Informationen
+\par sowie eine Lernhilfe zur Maschinen-Austattung erhalten Sie in ASQ.
+\par 
+\par {\fs28\cf6 >>H.Max_Quick
+\par }@P H.Max_Quick H.Max_Full
+\par                            {\i Expre\'e1-Maximize}
+\par 
+\par Im Maximize Expre\'e1-Durchlauf wird die speicher-residente Software in den LoDOS-Speicher geladen und ermittelt, wieviel Speicher sie beansprucht. Dann erfolgt automatisch eine Auswahl und Verlagerung dieser Software in den HiDOS Bereich, soda\'e1
+ die bestm\rdblquote gliche Auslastung erzielt wird.
+\par 
+\par Im Expre\'e1-Durchlauf konfiguriert Maximize Ihr System anhand der {\b Vorgabe}-Parameter. Diese Optimierungsvariante ist haupts\'84chlich f\'81r Anwender gedacht, die mit Maximize noch nicht vertraut sind.
+\par 
+\par {\fs28\cf6 >>H.Max_Full
+\par }@P H.Max_Quick H.Max_Full
+\par                             {\i Angepa\'e1tes Maximize}
+\par \pard  
+\par Mit der Optimierungs-Variante des angepa\'e1ten Maximize zeigt Ihnen Maximize eine Liste der speicher-residenten Programme und Treiber in Ihrem System an. Sie haben nun die Aufgabe, selbst das Ziel f\'81r das jeweilig
+e Programm/den Treiber zu bestimmen. Sie k\rdblquote nnen {\b w\'84hlen} welches Programm/welcher Treiber in den HiDOS-Speicher geladen und welche Software im LoDOS-Speicher verbleiben soll. 
+\par 
+\par Angepa\'e1tes Maximize bietet Anwendern, die mit Maximize bereits vertraut sind, {\b mehr Leistung und Flexibilit\'84t}. Erfahrene Anwender k\rdblquote nnen so Ihren Systemspeicher selbst einstellen und dabei beste Ergebnisse erzielen.
+\par 
+\par {\fs28\cf6 >>H.Info_Mem
+\par }@P H.Info_Mem H.Info_Time
+\par                       {\i Speicher-Gesamt\'81bersicht}
+\par 
+\par Die Speicherbelegungs-Tabelle zeigt die Aufteilung des ersten Megabyte im Speicher-Adre\'e1raum durch {\b Qualitas Produkte} sowie die Extended Memory-Belegung.
+\par 
+\par Dieser Bildschirm enth\'84lt folgende Elemente:
+\par 
+\par   {\b Information--------------   Beschreibung--------------------}
+\par   neue DOS-Obergrenze         obere Grenze des LoDOS-Speichers
+\par                               nach Erweiterung durch Qualitas MAX
+\par   zus\'84tzlicher LoDOS-Speicher durch Qualitas MAX zugef\'81gter
+\par                               konventioneller DOS Speicher
+\par   zus\'84tzlicher HiDOS-Speicher durch Qualtias MAX eingerichteter
+\par                               Speicher oberhalb des konventionellen
+\par                               DOS Speichers bzw. Video-Adapters
+\par   verf\'81gbares Extended Memory Extended Memory-Betrag oberhalb 1 MB
+\par   freier dynamischer Speicher Speicherbetrag, der als
+\par                               SmartMemory zur Verf\'81gung steht
+\par   Programmspeicher            Betrag des von Qualitas MAX
+\par                               belegten Extended Memory
+\par   ROM Abbildungsbereich       Gr\rdblquote \'e1e der mit ROM-Cache beschleunig-
+\par                               ten Bereiche sowie derern Adressen
+\par   HiDOS-Speicher              HiDOS-Speicherbetrag, der durch
+\par                               Adre\'e1abbildung aus Extended Memory
+\par                               gewonnen wurde
+\par   LoDOS-Speicher              LoDOS-Speicherbetrag, der durch
+\par                               Adre\'e1abbildung aus Extended Memory
+\par                               gewonnen wurde
+\par   verf\'81gbar dynamisch         Speicherbetrag, der als 
+\par                               SmartMemory zur Verf\'81gung steht
+\par   Rest Extended Memory        Extended Memory-Betrag, der nicht
+\par                               als EMS-Speicher zugewiesen wurde
+\par   gesamt Extended Memory      urspr\'81nglicher Gesamtbetrag des
+\par                               Extended Memory
+\par   aktueller Status ist ...    Betriebszustand von Qualitas MAX:
+\par                               ON, OFF oder AUTO
+\par 
+\par {\fs28\cf6 >>H.Info_EMS
+\par }@P H.Info_Mem H.Info_Time
+\par            {\i            EMS-Speicher-Information}
+\par 
+\par Dieser Bildschirm zeigt die EMS-Speicherzuweisung durch Qualitas MAX/BlueMAX sowie eine \'9abersicht der aktuellen EMS-
+\par Speicherbelegung. Der Bildschirm enth\'84lt folgende Elemente:
+\par 
+\par   {\b Information   Beschreibung---------------------------------------}
+\par   Handle        eine eindeutige Identifikationszahl, die als Handle
+\par                 bezeichnet und durch Qualitas MAX zugewiesen wird
+\par                 "Freier dynamischer Speicher" meldet den als 
+\par                 SmartMemory verf\'81gbaren Speicherbetrag
+\par   Gr\rdblquote \'e1e         Speicherbetrag, der jeder aktiven Handle
+\par                 (EMS-Nutzer) zugewiesen ist
+\par   Name          Name des EMS-Handle (EMS-Nutzer), falls vorhanden.
+\par   gesamt        Gesamtbetrag des EMS-Speichers
+\par   EMS Seiten    eine graphische Darstellung des ersten Megabyte
+\par                 Speicher unter Angabe der EMS-abbildbaren Seiten;
+\par                 die ROM- und RAM-Adressen im HiDOS werden ebenfalls
+\par                 angezeigt
+\par                 
+\par {\fs28\cf6 >>H.Info_Res
+\par }@P H.Info_Mem H.Info_Time
+\par                        {\i   residente Programme}
+\par 
+\par Dieser Bildschirm enth\'84lt Inforamtionen \'81ber die residenten Programme im LoDOS/HiDOS-Speicher. Es werden folgende Elemente angezeigt:
+\par 
+\par   {\b Information--------------  Beschreibung-----------------------}
+\par   Name                       Name des durch DOS oder 386LOAD 
+\par                              geladenen Programmes oder Treibers;
+\par                              f\'81r "RAM oder ROM" stellen die
+\par                              Adressen/L\'84ngen ein Puffer-RAM oder 
+\par                              BIOS-ROM dar, die m\rdblquote glicherweise den 
+\par                              HiDOS-Speicher fragmentieren
+\par   Hex Anfang und Hex Ende    Hexa-dezimale Anfangs- und
+\par                              Ende-Adresse des Programms
+\par   Hex Halter                 Hexa-dezimale Adresse des 
+\par                              Programms, das den Speicherblock 
+\par                              kontrolliert
+\par   L\'84nge dezimal              Dezimale G\rdblquote \'e1e des residenten 
+\par                              Programms; die dezimale L\'84nge der 
+\par                              Region, die im LoDOS-Speicher als
+\par                              {\b verf\'81gbar} gekennzeichnet ist, sollte
+\par                              dem Wert des DOS-Befehls CHKDSK
+\par                              entsprechen
+\par   Text- oder Interrupt-      Adressen der Unterbrechungs-Vektoren,
+\par   Nummer                     die das Programm kontrolliert
+\par 
+\par {\fs28\cf6 >>H.Info_Dev
+\par }@P H.Info_Mem H.Info_Time
+\par                           {\i Ger\'84tetreiber}
+\par 
+\par Es erfolgt eine Anzeige der momentan im LoDOS-Speicher geladenen {\b G}{\b er\'84tetreiber (Einheiten-Treiber)}. Der Bildschirm enth\'84lt folgende Elemente:
+\par 
+\par   {\b Information------  Beschreibung----------------------------------}
+\par   Name               Name des Treibers; entspricht
+\par                      m\rdblquote glicherweise nicht dem Namen, der in 
+\par                      CONFIG.SYS mit DEVICE= angegeben wurde
+\par \pard   Hex Anfang         Hexa-dezimale Anfangsadresse des Treibers
+\par   L\'84nge dezimal      L\'84nge des Treibers. Treiber, die einer 
+\par                      Gruppe angeh\rdblquote ren, verf\'81gen nicht \'81ber eine
+\par                      individuelle L\'84nge. Deren L\'84ngenangabe erfolgt
+\par                      stets \'81ber den ersten Treiber in der Liste.
+\par   Interrupt-Nummern  die vom Treiber kontrollierten Interrupt-
+\par                      Nummern
+\par 
+\par Wird ein Treiber durch 386LOAD in den HiDOS-Speicher ausgelagert, dann verbleibt der Vorspann des Treibers im LoDOS-Speicher. Die tats\'84chlich in den HiDOS-Speicher geladenen Treiber werden im Bildschirm der "residenten Programme" angezeigt.
+\par 
+\par {\fs28\cf6 >>H.Info_Load
+\par }@P H.Info_Mem H.Info_Time
+\par                          {\i Programm-Lade-Gr\rdblquote \'e1en}
+\par 
+\par Mit dieser Option werden die Lade-Gr\rdblquote \'e1en aller durch 386LOAD in den HiDOS/LoDOS-Speicher geladenen Programme angezeigt. Dieser Bildschirm enth\'84lt folgende Elemente:
+\par 
+\par   {\b Information-----  Beschreibung--------------------------------}
+\par   Ger\'84te- oder      Name des speicher-residenten Programmes,
+\par   Programmname      falls verf\'81gbar
+\par   Initialisierung   die f\'81r das Laden in den HiDOS-Speicher 
+\par                     erforderliche Initialisierungsgr\rdblquote \'e1e des
+\par                     Programmes/Treibers
+\par   resident          Speicherbetrag, der im residenten Betrieb
+\par                     beansprucht wird
+\par   FlexFrame Ja/Nein Gibt an, ob 386LOAD den EMS-Seitenrahmen
+\par                     w\'84hrend der Initialisierungsphase des
+\par                     Programmes benutzen darf
+\par   \'8enderungs-        Empfehlungen f\'81r eine h\rdblquote here Effizienz beim
+\par   Empfehlungen      Laden der Programme; weist auf m\rdblquote gliche 
+\par                     \'8enderungen der 386LOAD-Optionen hin
+\par 
+\par {\fs28\cf6 >>H.Info_ROM
+\par }@P H.Info_Mem H.Info_Time
+\par                         {\i Speicher-Plan Information}
+\par 
+\par Mit dieser Option werden die Adre\'e1bereiche des Systemspeichers angezeigt, sowie deren jeweilige Belegung erl\'84utert. Der Bildschirm enth\'84lt folgende Elemente:
+\par 
+\par   {\b Info----  Beschreibung-----------------------------------------}
+\par   Typ       Speichertyp f\'81r den ausgewiesenen Adre\'e1bereich 
+\par   Handle    Identifikationszahl f\'81r ein bestimmtes
+\par             Anwendungsprogramm (z.B. f\'81r EMS- und XMS-Nutzer)
+\par   Adress-   Hexa-dezimale Anfangs- und Ende-Adresse des Bereichs;
+\par   bereich   Bereiche, in denen die HiDOS-Region den RAM- oder ROM-
+\par             Speicher \'81berlappt, sind durch Markierungen
+\par             gekennzeichnet
+\par   Gr\rdblquote \'e1e     Gr\rdblquote \'e1enangabe in Kilobyte
+\par   Name      Text zur Identifikation des Programmes, das den
+\par             Speicher zugewiesen hat. Dieser Text ist m\rdblquote glicherweise
+\par             nicht verf\'81gbar
+\par 
+\par Der untere Bildschirmbereich enth\'84lt Informationen \'81ber die HiDOS-
+\par Speicherbelegug sowie \'81ber das Extended Memory.
+\par 
+\par {\fs28\cf6 >>H.I}{\fs28\cf6 nfo_Time
+\par }@P H.Info_Mem H.Info_Time
+\par                       {\i Speicher-Geschwindigkeit}
+\par 
+\par Manchmal verf\'81gt ein Computer \'81ber verschiedene Speicher-Hardware. Diese unterschiedlichen Speichertypen unterliegen m\rdblquote glicherweise unterschiedlichen Zugriffs-Zeiten. Die Anzeige bietet eine \'9abersicht der Testergebnisse f\'81r die {\b 
+Speicher-Zugriffszeiten}.
+\par 
+\par Jede Reihe in der Tabelle beschreibt einen bestimmten {\b zusammen-
+\par }{\b h\'84ngenden} Speicherblock. Jeder Speicherblock weist eine eigene Geschwindigkeit auf. F\'81r jeden Block wird separat die hexa-dezimale Anfangsadresse angezeigt, die dezimale Anfangs- und Ende-Adresse (in KB), die L\'84
+nge (in KB) und die mittlere Zugriffszeit in Mikro-
+\par Sekunden. Anhand dieser \'9abersicht wird jeder Speicherblock mit dem schnellsten Speicherblock im System verglichen.
+\par 
+\par {\fs28\cf6 >>H.Index
+\par }@P H.Index H.Index
+\par                       {\i MAX Stichwort-Verzeichnis
+\par }
+\par W\'84hlen Sie ein Thema mit der {\b rechten/linken }Pfeiltaste aus. Dr\'81cken Sie anschlie\'e1end die Eingabetaste.
+\par 
+\par {\b Stichwort--------------------  Hilfe-Thema----}{\b --------------------}
+\par {\ul 386UTIL LIST}{\v H.Info_Mem}                   Speicher-Gesamt\'81bersicht
+\par {\ul 386UTIL MAPDEV}{\v H.Info_Dev}                 Ger\'84tetreiber
+\par {\ul 386UTIL MAPMEM}{\v H.Info_Res}                 residente Programme
+\par {\ul 386UTIL MAPEMS}{\v H.Info_EMS}                 EMS-Speicher Information
+\par {\ul 386UTIL RAMSCAN}{\v H.Info_ROM}                Speicher-Plan Information
+\par {\ul 386UTIL SUMMARY}{\v H.Info_Load}                Lade-Gr\rdblquote \'e1en Information
+\par {\ul 386UTIL TIMEMEM}{\v H.Info_Time}                Speicher-Geschwindigkeit
+\par {\ul ASQ-Funktionen}{\v H.ASQ}                 Was ist ASQ?
+\par {\ul Angepa\'e1tes Maximize}{\v H.Max_Full}            Angepa\'e1tes Maximize
+\par {\ul Ausstattungs-Analyse}{\v H.Hdw_Sum}           Maschinen-Ausstattung
+\par {\ul Dialogfeld "Druck"}{\v H.U_Print}             Umgang mit dem Druck-System
+\par {\ul Dialogfeld-Schaltfl\'84chen}{\v H.U_Dial}       Umgang mit einem Dialogfeld
+\par {\ul Editor, Anwendung}{\v H.U_Editor}              Editor anwenden
+\par {\ul Editor-Bildschirm}{\v H.E_Basics}              Editor-Grundlagen
+\par {\ul Editor Block-Bearbeitung}{\v H.E_Block}       Editor Block-Funktionen
+\par {\ul Editor-Tasten, Blockmarkierung}{\v H.E_Block} Editor Block-Funktionen
+\par {\ul Editor-Schaltfl\'84chen}{\v H.E_Basics}           Editor-Grundlagen
+\par {\ul Editor-Sondertasten}{\v H.E_Spec}            Editor-Sonderfunktion
+\par {\ul Editor-Tasten}{\v H.E_Basics}                  Editor-Grundlagen
+\par {\ul EMS-Speicher}{\v H.Info_EMS}                   EMS-Speicher-Information
+\par {\ul Expre\'e1-Maximize}{\v H.Max_Quick}                Expre\'e1-Maximize
+\par {\ul Feld-Editor}{\v H.U_Dial}                    Umgang mit einem Dialogfeld
+\par {\ul Ger\'84tetreiber}{\v H.Info_Dev}                  Ger\'84tetreiber
+\par {\ul Hilfe zum Bl\'84ttern}{\v H.U_Help}             Einf\'81hrung in das Hilfesystem
+\par {\ul Konfigurations-Aanalyse}{\v H.Cfg_Sum}        Konfigurations-\'9abersicht
+\par {\ul Kontrollk\'84stchen}{\v H.U_Dial}               Umgang mit einem Dialogfeld
+\par {\ul Men\'81-Tasten}{\v H.Default}                    Einf\'81hrung in das Men\'81-System
+\par {\ul Optionen Editor Dialogfeld}{\v H.E_Option}     Optionen Editor anwenden
+\par {\ul Optionsschalter}{\v H.U_Dial}                Umgang mit einem Dialogfeld
+\par {\ul Programm Lade-Gr\rdblquote \'e1en}{\v H.Info_Load}           Programm-Lade-Gr\rdblquote \'e1en
+\par {\ul residente Programme}{\v H.Info_Res}            residente Programme
+\par \pard {\ul ROM-Adressen}{\v H.Info_ROM}                   Speicher-Plan Information
+\par {\ul Schaltfl\'84chen im Hilfesystem}{\v H.U_Help}   Einf\'81hrung in das Hilfesystem
+\par {\ul Schaltfl\'84chen im Men\'81system}{\v H.Default}    Einf\'81hrung in das Men\'81-System
+\par {\ul Speicher-Analyse}{\v H.Mem_Sum}               Speicher-\'9abersicht
+\par {\ul Speicher-\'9abersicht}{\v H.Info_Mem}             Speicher-Gesamt\'81bersicht
+\par {\ul Speicherzugriffszeit}{\v H.Info_Time}           Speicher-Zugriffszeit
+\par {\ul Tasten zur Datenanzeige}{\v H.Default}        Einf\'81hrung in das Men\'81system
+\par {\ul Text-Meldungen}{\v H.U_Dial}                 Umgang mit einem Dialogfeld
+\par {\ul Themen}{\v H.Contents}                         MAX Hilfe-Themen
+\par {\ul Themenverwandte Lernhilfe}{\v H.U_Help}      Einf\'81hrung in das Hilfesystem
+\par {\ul Unterfenster}{\v H.U_Dial}                   Umgang mit einem Dialogfeld
+\par {\ul Update}{\v H.U_Update}                         Produkt-Aktualisierung
+\par 
+\par }

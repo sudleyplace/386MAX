@@ -1,0 +1,116 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times;}{\f1\froman Symbol;}{\f2\fswiss Helvetica;}{\f3\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;
+\red192\green192\blue192;}{\stylesheet{\f3\lang1033 \snext0 Normal;}{\s1 \f3\fs28\cf6\lang1033 \sbasedon0\snext1 Context;}}{\info{\title max messge system, large msgs.}{\author Klaus Albrecht}{\operator Klaus Albrecht}{\creatim\yr1992\mo5\dy3\hr14\min41}
+{\revtim\yr1996\mo2\dy15\hr21\min2}{\printim\yr1992\mo6\dy16\hr8\min46}{\version1}{\edmins0}{\nofpages0}{\nofwords0}{\nofchars0}{\vern16417}}\paperw12240\paperh15840\margl1440\margr1008\margt1417\margb1134\gutter0 
+\facingp\widowctrl\ftnbj\ftnrestart\hyphhotz425 \sectd \linex0\headery709\footery709\colsx709\endnhere \pard\plain \f3\lang1033 {\cf2 Maximize Message Text, Large Messages
+\par }{\cf2 by Stan Leszynski
+\par }\pard \fi-288\li270\ri-2700 {\cf2 These notes are not a live context
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Some topics need work, search for }{\cf2 !
+\par }{\cf2 Line width 68
+\par }{\cf2 Context strings begin with >>
+\par }{\cf2 Use ## to surround replaceable parameters, tag _ at end of parameter to reserve spaces for attribute if ## block not big enough to properly wrap
+\par }\pard {\cf2 MSWord file use:
+\par }{\cf2  Set Printer to Generic/Text only on File:
+\par }{\cf2  Set View to Page mode to see wrapping
+\par }{\cf2  Default tabs 0
+\par }{\cf2  Left margin 0
+\par }{\cf2  Right margin 1.7"
+\par }{\cf2  Top margin 0
+\par }{\cf2  Bottom margin 0
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns
+\par }{\cf2 Text highlighting:
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= yellow text
+\par }
+\par {\fs28\cf6 >>L.}{\fs28\cf6 CacheWarn
+\par }#PRODNAME# hat in diesem System eine Bus-Master-Steuerung entdeckt.
+\par Diese Steuerung arbeitet m\rdblquote glicherweise nicht korrekt in Systemen mit abgebildeten (neu organisierten) Speicheradressen. Dazu geh\rdblquote ren auch Systeme, die EMS-Unterst\'81
+tzung nutzen oder in einem Multitasking-Umfeld wie beispielsweise Windows ablaufen. (Lesen Sie dazu in der README Datei den Abschnitt \'81ber Bus-Master-Einheiten.)
+\par 
+\par Diese Steuerung kann m\rdblquote glicherweise zu Probleme mit Disk Cache-
+\par Programmenm f\'81hren, wenn diese in den HiDOS-Speicher geladenen werden. Wir empfehlen Ihnen, diese Programme {\b nicht }in den HiDOS-Speicher zu laden, es sei denn, Sie nutzen einen Platten-Treiber mit Unterst\'81tzung f\'81r Virtual DMA Services (VDS).
+
+\par 
+\par {\b WENN SIE DIESES PROGRAMM IN DEN HIDOS-SPEICHER LADEN, KANN DIES ZU EINEM DATENVERLUST F\'9aHREN. Sind Sie sicher, da\'e1 Sie es tats\'84chlich in den HiDOS-Speicher laden wollen?}
+\par {\fs28\cf6 >>L.EMSHelp
+\par }{\b Kann EMS-Seiten-Rahmen nicht im HiDOS-Speicher einrichten.}
+\par 
+\par Die Adapterkarten in diesem System bieten keine ausreichende Speicherkapazit\'84t im HiDOS-Bereich, um den EMS-Seiten-Rahmen einzurichten. Bei aktiver EMS-Unterst\'81zung werden 64 KB vom konventionellen Speicher belegt.
+\par 
+\par Dr\'81cken Sie: {\b C} um den EMS-Seiten-Rahmen im LoDOS einzurichten
+\par        {\b       N} f\'81r EMS-Unterst\'81tzung ohne Seiten-Rahmen
+\par        {\b       D} zur Deaktivierung der EMS-Unterst\'81tzung
+\par        {\b       R} zur Rekonfiguration der Adapter.
+\par {\fs28\cf6 >>L.IntroP1
+\par }{\b Willkommen bei Maximize.}
+\par 
+\par Maximize konfiguriert automatisch Ihr System sowie den #PRODNAME# Programm-Lader. Eine mit Maximize konfigurierte #PRODNAME# Version verlagert Ihre speicherresidenten Programme und Ger\'84
+tetreiber in einen alternativen Speicherbereich mit dem Namen HiDOS-Speicher. Damit steht Ihren Anwendungsprogrammen der maximale konventionelle Speicher zur Verf\'81gung.
+\par 
+\par Wenn Sie Maximize zum ersten Mal einsetzen oder Ihr Wissen \'81ber das Programm auffrischen wollen, dann ergreifen Sie diese Gelegenheit und lesen Sie die Maximize-\'9abersicht.
+\par 
+\par {\b Mit der Schaltfl\'84che Hilfe erhalten Sie die Maximize-\'9abersicht.}
+\par {\fs28\cf6 >>}{\fs28\cf6 L.NoFit
+\par }Im Schnelldurchlauf konnte Maximize nicht alle ausgew\'84hlten Ger\'84tetreiber und Programme in den HiDOS-Speicher verlagern.
+\par 
+\par Maximize kann m\rdblquote glicherweise eine g\'81nstigere Konfiguration f\'81r die Verlagerung der \'81brigen speicherresidenten Software finden, wenn es die {\b Lade-Reihenfolge} der speicherresidenten Programme/Treiber ver\'84
+ndert. Starten Sie hierzu Maximize erneut. W\'84hlen Sie die Option Angepa\'e1ter Maximize-Lauf, soda\'e1 evtl. weitere #ARG2__# Byte in den HiDOS Speicher verlagert werden k\rdblquote nnen.
+\par 
+\par Die Programm-Neuordnung ist eine erweiterte Option. Sie kann - je nach System - sehr zeitaufwendig sein. {\b Bitte lesen Sie dazu auch den entsprechenden Abschnitt im Anwenderhandbuch, bevor Sie von dieser Option Gebrauch machen.
+\par }{\fs28\cf6 >>L.Reboot
+\par }{\b W\'84hrend des Maximize-Durchlaufs f\'81hrt Ihr System mehrere Male einen Neustart (Reboot) durch. }
+\par 
+\par Nach einem Reboot wird Maximize erneut gestartet und der Vorgang fortgesetzt. Maximize kann nicht fortfahren, wenn die AUTOEXEC.BAT ein Programm l\'84dt, das zu einem Men\'81system, "Shell"-Programm, Netzwerk-Oberfl\'84che oder zum DOS-Prompt f\'81
+hrt. Verlassen Sie dann dieses Programm oder entfernen Sie es vor\'81bergehend aus der AUTOEXEC.BAT. Wenn Sie den DOS-Prompt erhalten, k\rdblquote nnen Sie in der Regel mit EXIT und der Eingabetaste zu Maximize zur\'81ckkehren, soda\'e1
+ Maximize den Vorgang fortsetzen kann.
+\par 
+\par Maximize teilt Ihnen mit, wenn der Vorgang abgeschlossen ist. Dann f\'81hrt es ein letztes Mal einen Reboot durch. Wenn Sie nun den DOS-Prompt erhalten, k\rdblquote nnen Sie die Arbeit am Computer wieder aufnehmen.
+\par {\fs28\cf6 >>L.RefDsk
+\par }Bitte legen Sie eine Arbeitskopie Ihrer Referenzdiskette ein. {\b Verwenden Sie nicht die Original-Referenzdiskette.}
+\par 
+\par Maximize ben\rdblquote tigt die Referenzdiskette, um die Adapter-RAMs und -ROMs zu ermitteln, zu sch\'81tzen und (falls notwendig) zu reorganisieren und so den maximalen HiDOS-Speicherbetrag zu erzielen. Maximize funktioniert grunds\'84
+tzlich auch ohne die Referenzdiskette; es wird jedoch ausdr\'81cklich empfohlen, die Referenzdiskette zu verwenden, da so der gr\rdblquote \'e1tm\rdblquote gliche HiDOS-Speicher gewonnen wird.
+\par 
+\par Wenn Sie Ihre Referenzdiskette auf ein anderes Laufwerk und/oder in einen anderern Pfad kopiert haben, geben Sie das bitte an:
+\par 
+\par 
+\par {\fs28\cf6 >>L.RefDsk2
+\par }Ohne Referenzdiskette funktioniert #PRODNAME# m\rdblquote glicherweise nicht einwandfrei mit den Adapterkarten in Ihrem System. Dies kann zu einem Ausfall des Adapters bzw. zu einem Software-Fehler f\'81
+hren. Wenn Sie dem Technischen Kundendienst von Qualitas ein Problem mit Maximize melden, ben\rdblquote tigen Sie eine Kopie Ihrer Referenzdiskette. (Der Kundendienst wird einige Informationen \'81ber die verwendeten Adapter ben\rdblquote tigen.)
+\par 
+\par {\b Sind Sie sicher, da\'e1 Sie diesen wichtigen Schritt \'81bergehen m\rdblquote chten?}
+\par {\fs28\cf6 >>L.Static3270
+\par }Wenn Maximize den RAM- oder ROM-Speicher auf einem 3270 Emulationsadapter verlagert, dann mu\'e1 m\rdblquote glicherweise die Befehlszeile f\'81r den 3270 Ger\'84tetreiber ebenfalls ver\'84ndert werden.
+\par 
+\par Einige 3270 Treiber - aber nicht alle - k\rdblquote nnen die notwendige Information direkt dem Adapter entnehmen. Wenn Sie sich \'81ber Ihren 3270 Adapter nicht im klaren sind, definieren Sie ihn als {\b STATISCH. }
+Sie sollten vom entsprechenden Hersteller die neuesten Version dieses Software-Treibers beziehen. Der neue Treiber sollte keine RAM und ROM Informationen aus der Befehlszeile ben\rdblquote tigen.
+\par 
+\par {\b Sind Sie sicher, da\'e1 Sie den Speicher auf diesem Adapter neu organisieren wollen?}
+\par {\fs28\cf6 >>L.Static6001
+\par }{\b ACHTUNG: }Bei einigen ADF-Versionen dieses Adapters mu\'e1 die ROM-Verlagerung gleichzeitig mit dem Wechsel der I/O Anschl\'81sse und der IRQ-Nummer erfolgen. Da Maximize diese Informationen nicht ermitteln kann, {\b EMPFEHLEN WIR IHNEN AUSDR\'9a
+CKLICH}, den Status dieses Adapters {\b NICHT }zu ver\'84ndern. Die Verlagerung des Adapter-ROM kann zu einem Blockieren des Systems f\'81hren. In diesem Fall m\'81
+ssen Sie die Batterie des Systems abschalten und ca. zwanzig Minuten warten, bevor Sie das System erneut einschalten. Wenn Sie sich \'81ber den Adapter nicht im klaren sind, dann setzen Sie sich mit dem Hersteller in Verbindung und kl\'84
+ren Sie, ob diese ADF-Version mit Maximize funktioniert.
+\par 
+\par {\b Sind Sie sicher, da\'e1 Sie diesen Adapter "Maxi}{\b mieren" wollen?}
+\par 
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>L.StaticUser
+\par \pard\plain \f3\lang1033 Sie haben f\'81r diesen Adapter in der Datei MAXIMIZE.CFG die Vorgabe "STATIC" (keine Verlagerung) festgelegt.
+\par 
+\par {\b Sind Sie sicher, da\'e1 Sie diesen Adapter "Maximieren" m\rdblquote chten?
+\par }\pard\plain \s1 \f3\fs28\cf6\lang1033 >>L.ABIOSErr
+\par \pard\plain \f3\lang1033 Maximize konnte das ABIOS nicht initialisieren. Es wurden einige Dateien von der Referenzdiskette Ihres Computers kopiert, die #PRODNAME# evtl. w\'84hrend des Systemstarts (Boot-Zeitpunkt) ben\rdblquote tigt.
+\par 
+\par Wir empfehlen Ihnen, den Computer neu zu starten und dann Maximize mit folgender Eingabe an der DOS Eingabeaufforderung aufzurufen:
+\par #ARG1#
+\par 
+\par {\b System jetzt neu starten (Reboot)?}
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>L.DelBackup
+\par \pard\plain \f3\lang1033 Maximize hat im Verzeichnis #PRODNAME# einige Sicherungsdateien gefunden. Ein L\rdblquote schen dieser Dateien macht wertvollen Plattenspeicher frei.
+\par 
+\par Maximize wird in Zukunft automatisch Sicherungsdateien erkennen und entsprechend aufr\'84umen.
+\par 
+\par Anzahl erlaubte Sicherungsdateien vorher:
+\par 
+\par Anzahl alte Sicherungen erhalten:
+\par 
+\par }

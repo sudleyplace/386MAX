@@ -1,0 +1,125 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times New Roman;}{\f1\froman Symbol;}{\f2\fswiss Arial;}{\f3\fmodern Courier;}{\f4\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;
+\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;
+\red127\green127\blue0;\red127\green127\blue127;\red192\green192\blue192;}{\stylesheet{\f4\lang1033 \snext0 Normal;}{\s2\fi-288\li576 \f4\lang1033 \sbasedon0\snext2 Outdent4;}{\s3\keepn \f4\fs28\cf6\lang1033 \sbasedon0\snext3 Context;}{\s4\fi-1584\li1872 
+\f4\lang1033 \sbasedon0\snext4 Outdent13;}{\s5\li288 \f4\lang1033 \sbasedon0\snext5 Indent2;}}{\info{\title install messge system, medium msgs.}{\author Stan}{\operator Qualitas, Inc.}{\creatim\yr1991\mo5\dy19\hr11\min33}
+{\revtim\yr1993\mo6\dy2\hr14\min55}{\printim\yr1992\mo8\dy5\hr15\min1}{\version58}{\edmins608}{\nofpages1}{\nofwords65536}{\nofchars65536}{\vern16417}}\paperw12240\paperh15840\margl1440\margr3456\margt1440\margb1440\gutter0 \deftab0\widowctrl\ftnbj 
+\sectd \linex0\endnhere \pard\plain \f4\lang1033 {\cf2 Install Message Text, Medium Messages
+\par }{\cf2 by Stan Leszynski}{\cf2 
+\par }\pard \fi-288\li270\ri-2700 {\cf2 These notes are not a live context}{\cf2 
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 51}{\cf2 
+\par }{\cf2 Context strings begin with >>}{\cf2 
+\par }{\cf2 Use ## to surround replaceable parameters, tag _ at end of parameter to reserve spaces for attribute if ## block not big enough to properly wrap}{\cf2 
+\par }\pard {\cf2 MSWord file use:}{\cf2 
+\par }{\cf2  Set Printer to Generic/Text only on File:}{\cf2 
+\par }{\cf2  Set View to Page mode to see wrapping}{\cf2 
+\par }{\cf2  Default tabs 0}{\cf2 
+\par }{\cf2  Left margin 0}{\cf2 
+\par }{\cf2  Right margin 3.4"}{\cf2 
+\par }{\cf2  Top margin 0}{\cf2 
+\par }{\cf2  Bottom margin 0}{\cf2 
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns}{\cf2 
+\par }{\cf2 Text highlighting:}{\cf2 
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= yellow text}{\cf2 
+\par }{\cf2 
+\par }\pard\plain \s3\keepn \f4\fs28\cf6\lang1033 >>M.BadDOSSubdir
+\par \pard\plain \f4\lang1033 #PROGNAME# did not detect DOS 5.x help files in:
+\par   #ARG1#
+\par 
+\par {\b Would you like to enter a new subdirectory?}
+\par \pard\plain \s3\keepn \f4\fs28\cf6\lang1033 >>M.BadUpdSubdir
+\par \pard\plain \f4\lang1033 We did not detect working Qualitas MAX or BlueMAX files in:
+\par   #ARG1#
+\par 
+\par {\b Reenter another subdirectory or exit #PROGNAME# and install }{\b Qualitas MAX}{\b  or BlueMAX from the original disk before running #PROGNAME#.}
+\par \pard\plain \s3\keepn \f4\fs28\cf6\lang1033 >>M.DestDir
+\par \pard\plain \f4\lang1033 {\b Enter a directory}{\b  specification for the location of the program files after installation:}
+\par 
+\par 
+\par \pard\plain \s3\keepn \f4\fs28\cf6\lang1033 >>M.DOSHelp
+\par \pard\plain \f4\lang1033 #PROGNAME# has detected DOS 5.x on this system and can add help text for installed Qualitas products to the DOS help file.
+\par 
+\par {\b Would you like #PROGNAME# to add help text to the DOS help file?}{\b 
+\par }\pard\plain \s3\keepn \f4\fs28\cf6\lang1033 >>M.DOSPath
+\par \pard\plain \f4\lang1033 #PROGNAME# needs to know the location of your DOS directory so that it can add help text for Qualitas products.
+\par 
+\par {\b Specify the drive and path of the DOS subdirectory:}{\b 
+\par }
+\par 
+\par \pard\plain \s3\keepn \f4\fs28\cf6\lang1033 >>M.GetMono
+\par \pard\plain \f4\lang1033 We have detected available regions in the monochrome display adapter area (MDA).
+\par 
+\par #PROGNAME# can add statements to the #FLENMEXT__# profile to recover the available regions in the MDA as high DOS memory.
+\par 
+\par {\b Would you like #PROGNAME# to allow use of the MDA region as high DOS memory?}
+\par \pard\plain \s3\keepn \f4\fs28\cf6\lang1033 >>M.MaxBack
+\par \pard\plain \f4\lang1033 Standard #PROGNAME# is complete.  Existing installation has been saved in
+\par #ARG1#.  Run #ARG2# to delete.
+\par 
+\par Maximize is a program that automatically and optimally configures your system and the program loader 386LOAD to make available the maximum amount of conventional memory.
+\par 
+\par {\b Would you like to run Maximize now?}
+\par \pard\plain \s3\keepn \f4\fs28\cf6\lang1033 >>M.Maximize
+\par \pard\plain \f4\lang1033 Standard #PROGNAME# is complete.
+\par 
+\par Maximize is a program that automatically and optimally configures your system and the program loader 386LOAD to make available the maximum amount of conventional memory.
+\par 
+\par {\b Would you like to run Maximize now?}
+\par \pard\plain \s3\keepn \f4\fs28\cf6\lang1033 >>M.NoInstall
+\par \pard\plain \f4\lang1033 #PROGNAME# has not detected hardware in this machine that will support a Qualitas product and cannot continue.  One of these is required:
+\par 
+\par   {\b\i *} a Chips & Technologies chipset; or
+\par   {\b\i *} hardware LIM 4.0 EMS support.
+\par 
+\par {\b Press Enter to end #PROGNAME#.}
+\par \pard\plain \s3\keepn \f4\fs28\cf6\lang1033 >>M.NoMaximize
+\par \pard\plain \f4\lang1033 You chose to exit #PROGNAME# without running Maximize.
+\par 
+\par Maximize optimally configures your system to make available the maximum amount of conventional memory possible.
+\par 
+\par {\b Do you want #PROGNAME# to run Maximize now?}
+\par \pard\plain \s3\keepn \f4\fs28\cf6\lang1033 >>M.UpdateDir
+\par \pard\plain \f4\lang1033 {\b Enter the location of an installed Move'EM:}
+\par 
+\par \pard\plain \s3\keepn \f4\fs28\cf6\lang1033 >>M.SrcDrv
+\par \pard\plain \f4\lang1033 Place the working copy of #FLENME# in a floppy drive and enter the drive letter, or enter the drive and path specifying the location of the distribution files:
+\par 
+\par \pard\plain \s3\keepn \f4\fs28\cf6\lang1033 >>M.SVGAWarn
+\par \pard\plain \f4\lang1033 #PROGNAME# has detected a
+\par #ARG1# #ARG2#
+\par super VGA card with #ARG3#K or more of video memory.  This device adapter is CAPABLE of using the monochrome display area (MDA).
+\par 
+\par #PROGNAME# can add statements to the #FLENMEXT# profile to recover the available regions in the MDA as high DOS memory.  Although there are available regions in 
+your monochrome display adapter area, you may not want to recover them if any of your software applications use this area for super VGA modes, or if you use monochrome display emulation.
+\par 
+\par {\b Do you want #PROGNAME# to allow use of the MDA region as high DOS memory?}
+\par \pard\plain \s3\keepn \f4\fs28\cf6\lang1033 >>M.BootSwap_A
+\par \pard\plain \f4\lang1033 You have requested drive swapping environment support.  #PROGNAME# needs to ask a few questions.  If a drive designation is not applicable, leave it blank by pressing the space bar.
+\par 
+\par {\b\f3 Disk compression/swapping detected:}{\f3  #ARG3____#}{\f3 
+\par }{\b Boot drive:} #ARG1#
+\par {\b Actual boot drive:}{\b 
+\par }{\b Drive to copy CONFIG.SYS and AUTOEXEC to:}{\b 
+\par }{\b 
+\par }{\b #FLENME# directory:}{\b 
+\par }#ARG2#
+\par {\b Drive to use for #FLENME# in CONFIG.SYS:}{\b 
+\par }{\b Drive to copy essential #FLENME# files to:}{\b 
+\par }{\b Alternate drive for essential #FLENME# files:}{\b 
+\par }\pard\plain \s3\keepn \f4\fs28\cf6\lang1033 >>M.BootSwap
+\par \pard\plain \f4\lang1033 You are installing #FLENME# to
+\par #ARG2#
+\par 
+\par Is #ARG4_# compressed?
+\par 
+\par This drive may also be a swapped drive.  What is the drive designation of #ARG4_# at boot time (If this drive did not exist at boot time, leave this space blank)?
+\par 
+\par Your boot drive is #ARG1#:.  The previous drive designation for drive #ARG1#: is#ARG3#
+\par \pard\plain \s3\keepn \f4\fs28\cf6\lang1033 >>M.QMT
+\par \pard\plain \f4\lang1033 #FLENME# includes the Qualitas Memory Tester (QMT).  QMT uses advanced memory checking to find problems in your PC's memory system.  Memory problems can cause system crashes and data loss.
+\par 
+\par QMT may be added to your AUTOEXEC.BAT so that memory is quickly tested each time you boot your system.  Running QMT this way adds approximately #ARG1# seconds to system start-up.
+\par 
+\par {\b Would you like #PROGNAME# to add QMT to y}{\b our}{\b 
+\par }{\b AUTOEXEC.BAT?}
+\par 
+\par }

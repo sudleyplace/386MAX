@@ -1,0 +1,85 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times;}{\f1\froman Symbol;}{\f2\fswiss Helvetica;}{\f3\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;
+\red192\green192\blue192;}{\stylesheet{\f3\lang1033 \snext0 Normal;}{\s1 \f3\fs28\cf6\lang1033 \sbasedon0\snext1 Context;}}{\info{\title max messge system, small msgs.}{\author Klaus Albrecht}{\operator Klaus Albrecht}{\creatim\yr1992\mo5\dy3\hr14\min45}
+{\revtim\yr1996\mo2\dy15\hr21\min3}{\printim\yr1992\mo5\dy18\hr12\min42}{\version1}{\edmins1}{\nofpages0}{\nofwords0}{\nofchars0}{\vern16417}}\paperw12240\paperh15840\margl1440\margr6192\margt1440\margb1440\gutter0 
+\facingp\widowctrl\ftnbj\ftnrestart\hyphhotz425 \sectd \linex0\headery709\footery709\colsx709\endnhere \pard\plain \f3\lang1033 {\cf2 Maximize Message Text, Small Messages
+\par }{\cf2 by Stan Leszynski
+\par }{\cf2 These notes are not a live context
+\par }{\cf2 Line width 32
+\par }{\cf2 Context strings beg}{\cf2 in with >>
+\par }{\cf2 Use ## to surround replaceable parameters, tag _ at end of parameter to reserve spaces for attribute if ## block not big enough to properly wrap
+\par }{\cf2 MSWord file use:
+\par }{\cf2  Set Printer to Generic/Text only on File:
+\par }{\cf2  Set View to Page mode to see wrapping
+\par }{\cf2  Default tabs 0
+\par }{\cf2  Left margin 1
+\par }{\cf2  Right margin 4.3"
+\par }{\cf2  Top margin 0
+\par }{\cf2  Bottom margin 0
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns
+\par }{\cf2 Text highlighting:
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= yellow text
+\par }
+\par {\fs28\cf6 >>S.ABIOSErr
+\par }Kann POS-Werte aus dem ABIOS nicht lesen.
+\par {\b Maximize kann die Adapter in diesem System nicht optimieren.
+\par }{\fs28\cf6 >>S.BadDrive
+\par }Es wurde ein unzul\'84ssiger Laufwerksbuchstabe angegeben. {\b Geben Sie ein neues Laufwerk an, oder brechen Sie Maximize ab. Beheben Sie anschlie\'e1end das Problem.}
+\par {\fs28\cf6 >>S.BatNf
+\par }Das f\'81r den Ablauf notwendige Programm BATPROC.EXE ist nicht auffindbar. {\b Breche Programm ab.}
+\par {\fs28\cf6 >>S.Blk
+\par }Blockfaktor-Fehler w\'84hrend der Verarbeitung von ADP-Dateien.{\b  Breche Programm ab.}
+\par {\fs28\cf6 >>S.BootDisk
+\par }{\b Bitte geben Sie den Buchstaben Ihres Boot-Laufwerks }{\b an.}
+\par 
+\par {\fs28\cf6 >>S.CnfNf
+\par }CONFIG.SYS nicht gefunden.
+\par {\fs28\cf6 >>S.CnfWp
+\par }Schreib-Erlaubnis f\'81r CONFIG.SYS 
+\par verweigert.
+\par {\fs28\cf6 >>S.DOSErr
+\par }DOS-Fehler #ARG1#h w\'84hrend des Ladevorgangs von: #ARG2#.
+\par {\b Breche Programm ab.}
+\par {\fs28\cf6 >>S.ErrConf
+\par }Fehler beim Schreiben der Datei CONFIG.SYS.{\b  Breche Programm ab.}
+\par {\fs28\cf6 >>S.ErrRead
+\par }Fehler beim Lesen der Datei #ARG1#.
+\par {\fs28\cf6 >>S.ErrWrite
+\par }Fehler beim Schreiben der Datei #ARG1#{\b .
+\par }{\b Breche Programm ab.
+\par }{\fs28\cf6 >>S.FromWIN
+\par }Kann Maximize nicht aus Windows starten. {\b Breche Programm ab.}
+\par {\fs28\cf6 >>S.LocCfg
+\par }Kann #LOADER#.CFG nicht finden. {\b Breche Programm ab.}
+\par {\fs28\cf6 >>S.LocMax
+\par }Kann MAXIMIZE.OUT nicht finden.
+\par {\fs28\cf6 >>S.NoADF
+\par }Das von Ihnen benannte Laufwerk und der Pfad enthalten keine Dateien der Referenzdiskette. {\b Bitte \'81berpr\'81fen und neu eingeben.}
+\par {\fs28\cf6 >>S.NoCfgSys
+\par }Kann CONFIG.SYS nicht \rdblquote ffnen.{\b  Breche Programm ab.
+\par }{\fs28\cf6 >>S.NoInst
+\par }Aus irgendeinem Grund konnte #PRODNAME# nicht installiert werden.{\b  Bitte \'81berpr\'81fen Sie CONFIG.SYS auf Fehler und starten Sie Maximize erneut.}
+\par {\fs28\cf6 >>S.NoMaxCfg
+\par }Kann #PRODNAME#-Treiber nicht in CONFIG.SYS finden.
+\par {\b Breche Program}{\b m ab.
+\par }\pard\plain \s1 \f3\fs28\cf6\lang1033 >>S.NoMaxCfgMB
+\par \pard\plain \f3\lang1033 #PRODNAME# ist nicht in diesem Konfigurationsblock enthalten. Bitte rufen Sie SETUP /R auf, soda\'e1 #PRODNAME# hinzugef\'81gt wird.{\b 
+\par }{\fs28\cf6 >>S.NoneToDo
+\par }In den aktuellen Dateien CONFIG.SYS und AUTOEXEC.BAT gibt es nichts mehr zu "Maximieren". {\b Vorgang abgeschlossen.}
+\par {\fs28\cf6 >>S.PhsErr
+\par }Aus irgendeinem Grund konnte der vorherige Maximize-Lauf nicht erfolgreich beendet werden.
+\par 
+\par {\b Bitte rufen Sie PREMAXIM.BAT auf, bevor Sie Maximize erneut starten. Breche Programm ab.
+\par }{\fs28\cf6 >>S.ProLim
+\par }Kann keine neue Profildatei anlegen. {\b Bitte starten Sie das
+\par }{\b SETUP Programm erneut.
+\par }{\b Breche Programm ab.}
+\par {\fs28\cf6 >>S.ReadMax
+\par }Kann MAXIMIZE.OUT nicht lesen.
+\par {\fs28\cf6 >>S.UnaFind
+\par }Kann die Datei #ARG1# nicht finden.{\b  Breche Programm ab.}
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>S.InvBack
+\par \pard\plain \f3\lang1033 Ung\'81ltiger Eintrag. Der Minimum-Wert mu\'e1 zwischen 0 und 999 liegen, der maximale Wert zwischen 1 und 999.
+\par 
+\par 
+\par }

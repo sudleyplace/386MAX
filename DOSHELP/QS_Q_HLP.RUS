@@ -1,0 +1,162 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times New Roman;}{\f1\froman Symbol;}{\f2\fswiss Arial;}{\f3\froman CG Times (W1);}{\f4\fswiss Univers (W1);}{\f5\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;
+\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;
+\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;\red192\green192\blue192;}{\stylesheet{\f5\lang1033 \snext0 Normal;}{\s2\fi-288\li576 \f5\lang1033 \sbasedon0\snext2 Outdent4;}{\s3 \f5\fs28\cf6\lang1033 \sbasedon0\snext3 Context;}{
+\s4\fi-1584\li1872 \f5\lang1033 \sbasedon0\snext4 Outdent13;}{\s5\li288 \f5\lang1033 \sbasedon0\snext5 Indent2;}{\s6\ri-5760 \f5\cf2\lang1033 \sbasedon0\snext6 Comment;}}{\info{\title qshell help system, quick ref topics}{\author Stan Leszynski}
+{\operator Victoria L. Borton}{\creatim\yr1991\mo5\dy15\hr9\min55}{\revtim\yr1993\mo5\dy18\hr13\min36}{\printim\yr1993\mo5\dy11\hr18\min29}{\version31}{\edmins541}{\nofpages6}{\nofwords66268}{\nofchars70405}{\vern16417}}
+\paperw12240\paperh15840\margl1440\margr8064\margt720\margb720\gutter0 \deftab0\widowctrl\ftnbj \sectd \linex0\endnhere \pard\plain \s6\ri-5760 \f5\cf2\lang1033 QShell Quick Ref Topics
+\par by Stan Leszynski
+\par These notes are not a live context
+\par Hard returns are required in quick ref files when a space occurs in column 19 to get around help compiler bug
+\par Line width 19
+\par Topic height 17 lines
+\par Context strings begin with >>
+\par MSWord file use:
+\par  Set Printer to Generic/Text only on File:
+\par  Set View to Page mode to see wrapping
+\par  Default tabs 0
+\par  Left margin 0
+\par  Right margin 6.6"
+\par  Top margin 0
+\par  Bottom margin 0
+\par For indented lines or to get desired wrapping, use hard returns
+\par \pard\plain \f5\lang1033 {\cf2 Text highlighting:}{\cf2 
+\par }\pard\plain \s6\ri-5760 \f5\cf2\lang1033  use {\b BOLD} for accenting= blue text
+\par  use {\i ITALICS} for subject headers= white text
+\par  use {\ul UNDERLINE} for context jump= red text
+\par  use {\b\i BOLD ITALICS} for bullets= yellow text
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_ASQ
+\par \pard\plain \f5\lang1033 ASQ is a system analysis and memory management tool.
+\par 
+\par ASQ examines the system configu-
+\par ration and can help
+\par you understand how
+\par to maximize productivity with Qualitas products.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Cfg_Sum
+\par \pard\plain \f5\lang1033 The computer's work
+\par environment is configured by DOS commands and other
+\par software products.
+\par 
+\par This option uses the ASQ configura-
+\par tion summary to describe the settings in the system environment.
+\par 
+\par Enhanced configura-
+\par tion reporting is available in ASQ.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Edit_AUT
+\par \pard\plain \f5\lang1033 AUTOEXEC.BAT contains commands and programs that must execute upon boot up.
+\par 
+\par This option loads AUTOEXEC.BAT into the MAX editor for editing.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Edit_CFG
+\par \pard\plain \f5\lang1033 CONFIG.SYS contains commands to install device drivers and configure system settings at boot up.
+\par 
+\par This option loads CONFIG.SYS into the MAX editor for editing.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Edit_Ext
+\par \pard\plain \f5\lang1033 ExtraDOS.PRO contains options used during loading and configuration of the ExtraDOS feature.
+\par 
+\par This option loads ExtraDOS.PRO into the MAX editor for editing.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Edit_SYS
+\par \pard\plain \f5\lang1033 SYSTEM.INI contains Windows startup information.
+\par 
+\par This option loads SYSTEM.INI into the MAX editor for editing.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Edit_Load
+\par \pard\plain \f5\lang1033 The loader con-
+\par figuration file contains options for special handling of certain programs by Qualitas products. This is a technical support tool only.
+\par 
+\par This option loads 386LOAD.CFG or Move'EM.CFG into the MAX editor for editing.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Edit_Othr
+\par \pard\plain \f5\lang1033 The MAX editor may be used to edit
+\par any ASCII text file, within memory
+\par limitations.
+\par 
+\par This option loads a
+\par specified file into
+\par the MAX editor for editing.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Edit_PRO
+\par \pard\plain \f5\lang1033 The profile contains commands used by Qualitas products during system configuration.
+\par 
+\par This option loads the profile into the MAX editor for editing.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Exit
+\par \pard\plain \f5\lang1033 Exit MAX and return
+\par to DOS.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Hdw_Sum
+\par \pard\plain \f5\lang1033 The computer is a collection of hardware devices and components attached to a processor.
+\par 
+\par This option uses the ASQ hardware summary to evaluate
+\par and describe the system's hardware configuration.
+\par 
+\par Enhanced hardware reporting is available in ASQ.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Help
+\par \pard\plain \f5\lang1033 The MAX Help system
+\par provides a context sensitive, indexed,
+\par and topic-linked help system to help you use Qualitas products.
+\par 
+\par This option loads the Help system at
+\par the named topic.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Info_Dev
+\par \pard\plain \f5\lang1033 MAX includes 386UTIL utilities to examine system configuration relevant to memory
+\par management.
+\par 
+\par This option uses the 386UTIL MAPDEV
+\par utility to show device drivers loaded into low DOS
+\par memory.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Info_EMS
+\par \pard\plain \f5\lang1033 MAX includes 386UTIL utilities to examine system configuration relevant to memory management.
+\par 
+\par This option uses the 386UTIL MAPEMS utility to show how
+\par EMS memory is being
+\par used.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Info_Load
+\par \pard\plain \f5\lang1033 MAX includes 386UTIL utilities to examine system configuration relevant to memory management.
+\par 
+\par This option uses the 386UTIL SUMMARY
+\par utility to show resident program size information.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Info_Mem
+\par \pard\plain \f5\lang1033 MAX includes 386UTIL utilities to examine system configuration relevant to memory management.
+\par 
+\par This option uses the 386UTIL LIST utility to show how
+\par Qualitas products have arranged conventional memory
+\par and allocated extended memory.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Info_Res
+\par \pard\plain \f5\lang1033 MAX includes 386UTIL utilities to examine system configuration relevant to memory management.
+\par 
+\par This option uses the 386UTIL MAPMEM
+\par utility to show where resident programs are loaded
+\par into low and high DOS memory.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Info_ROM
+\par \pard\plain \f5\lang1033 MAX includes 386UTIL utilities to examine system configuration relevant to memory management.
+\par 
+\par This option uses the 386UTIL RAMSCAN
+\par utility to show usage of all address areas in the system's address space.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Info_Time
+\par \pard\plain \f5\lang1033 MAX includes 386UTIL utilities to examine system configuration relevant to memory management.
+\par 
+\par This option uses the 386UTIL TIMEMEM
+\par utility to show the
+\par results of a memory
+\par timing evaluation.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Max_Full
+\par \pard\plain \f5\lang1033 Maximize recon-
+\par figures the system by placing options in CONFIG.SYS, AUTOEXEC.BAT, and the PROfile.
+\par 
+\par The Custom Maximize option allows you to control options
+\par during Maximize's memory configura-
+\par tion efforts.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Max_Quick
+\par \pard\plain \f5\lang1033 Maximize recon-
+\par figures the system
+\par by placing options
+\par in CONFIG.SYS, AUTOEXEC.BAT, and the PROfile.
+\par 
+\par Express Maximize uses
+\par Maximize defaults instead of asking for user input.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Mem_Sum
+\par \pard\plain \f5\lang1033 This option uses the ASQ memory summary to evaluate
+\par and describe the system's memory configuration.
+\par 
+\par Enhanced memory reporting is available in ASQ.
+\par \pard\plain \s3 \f5\fs28\cf6\lang1033 >>Q_Update
+\par \pard\plain \f5\lang1033 Qualitas provides periodic product update disks to registered users.  This option runs the Update program
+\par on the update disk.
+\par 
+\par This option will ask for the Qualitas update disk to be placed in a floppy drive.
+\par }

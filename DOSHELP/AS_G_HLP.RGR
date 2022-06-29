@@ -1,0 +1,269 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times;}{\f1\froman Symbol;}{\f2\fswiss Helvetica;}{\f3\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;
+\red192\green192\blue192;}{\stylesheet{\f3\lang1033 \snext0 Normal;}{\s1 \f3\fs28\cf6\lang1033 \sbasedon0\snext1 Context;}}{\info{\title asq help system, glossary topics}{\author Klaus Albrecht}{\operator Klaus Albrecht}
+{\creatim\yr1992\mo5\dy3\hr14\min15}{\revtim\yr1996\mo2\dy15\hr20\min57}{\printim\yr1992\mo5\dy18\hr11\min45}{\version1}{\edmins1}{\nofpages0}{\nofwords0}{\nofchars0}{\vern16417}}\paperw12240\paperh15840\margl1440\margr1008\margt1440\margb1440\gutter0 
+\facingp\widowctrl\ftnbj\ftnrestart\hyphhotz425 \sectd \linex0\headery709\footery709\colsx709\endnhere \pard\plain \f3\lang1033 {\cf2 ASQ Glossary
+\par }{\cf2 by Stan Leszynski
+\par }{\cf2 These notes are not a live context
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 68
+\par }{\cf2 Context strings begin with >>
+\par }{\cf2 Center the ti}{\cf2 tle of each block
+\par }{\cf2 First line is @ plus P (print) or N (noprint) plus stop markers for Prev/Next
+\par }\pard {\cf2 MSWord file use: 
+\par }{\cf2  Set Printer to Generic/Text only on File:
+\par }{\cf2  Set View to Page mode to see wrapping 
+\par }{\cf2  Default tabs 0
+\par }{\cf2  Left margin 0
+\par }{\cf2  Right margin 1.7"
+\par }{\cf2  Top margin 0
+\par }{\cf2  Bottom margin 0
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns
+\par }{\cf2 Text highlighting:
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text
+\par }{\cf2  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text
+\par }{\cf2  use }{\ul\cf2 UNDERLINE}{\cf2  for context jump= red text
+\par }{\cf2  use }{\b\i\cf2 BOLD ITAL}{\b\i\cf2 ICS}{\cf2  for bullets= yellow text
+\par }\pard \fi-288\li288\ri-2700 
+\par \pard {\fs28\cf6 >>H.Contents
+\par }@P H.Contents H.G_XMS
+\par                          {\i ASQ Glossar-Themen
+\par }
+\par Die rot dargestellten Glossar-Themen sind Hypertext-Verbindungen. Mit diesen k\rdblquote nnen Sie ein anderes Hilfe-Thema direkt anspringen. Bl\'84ttern Sie im Text nach oben oder nach unten, um ein gew\'81nschtes Thema anzusteuern. Benutzen Sie die {\b 
+rechte }oder {\b linke }Pfeiltaste, um das Thema hervorzuheben. Dr\'81cken Sie zur Auswahl die {\b Eingabetaste.}
+\par 
+\par Memory Management Begriffe:
+\par  {\ul Adresse/Adre\'e1raum}{\v H.Default}
+\par  {\ul Backfilling}{\v H.G_Back}
+\par  {\ul BIOS}{\v H.G_BIOS}
+\par  {\ul DOS Grenzen}{\v H.G_DOS}
+\par  {\ul DPMI}{\v H.G_DPMI}
+\par  {\ul EMS}{\v H.G_Exp}
+\par  {\ul Extended Memory}{\v H.G_Ext}
+\par  {\ul Ger\'84tetreiber}{\v H.G_Dev}
+\par  {\ul HiDOS-Speicher}{\v H.G_High}
+\par  {\ul High Memory Area}{\v H.G_HMA}
+\par  {\ul LIM Speicher}{\v H.G_LIM}
+\par  {\ul LoDOS-Speicher}{\v H.G_Low}
+\par  {\ul Protected Mode}{\v H.G_Pro}
+\par  {\ul RAM-Speicher}{\v H.G_RAM}
+\par  {\ul Real Mode}{\v H.G_Real}
+\par  {\ul ROM und Puffer-RAM}{\v H.G_ROM}
+\par  {\ul Speicher-Typen}{\v H.G_MemT}
+\par  {\ul System-ROM}{\v H.G_Sys}
+\par  {\ul TSR}{\v H.G_TSR}
+\par  {\ul VCPI}{\v H.G_VCPI}
+\par  {\ul VDS}{\v H.G_VDS}
+\par  {\ul Video (Bildschirm-) Speicher}{\v H.G_Vid}
+\par  {\ul XMS-Speicher}{\v H.G_XMS}
+\par Themenverwandte Informationen:
+\par  {\ul ASQ Lernh}{\ul ilfe-Themen}{\v As_T_Hlp.Hlp!H.Contents}
+\par  {\ul ASQ Hilfe-Themen}{\v As_H_Hlp.Hlp!H.Contents}
+\par 
+\par {\fs28\cf6 >>H.Default
+\par }@P H.Contents H.G_XMS
+\par                           {\i Adresse/Adre\'e1raum}
+\par 
+\par Eine {\b Adresse} ist eine Zahl, die eine Speicherstelle im Computer- RAM-Speicher identifiziert. Der {\b Adre\'e1raum} ist durch die Anzahl Bit (Bin\'84re Zahlen) begrenzt, welche die CPU (d.h. der Prozessor) f\'81
+r die Adressierung verwendet. Intel 8088/8086 CPUs adressieren mit 20 Bit und k\rdblquote nnen ein Megabyte (2 hoch 20) RAM direkt ansprechen. Der 80286 CPU-Adre\'e1r
+aum ist 16 Megabyte (2 hoch 24) und die modernen 80386/80486 Prozessoren erreichen mehr als 4 Gigabyte (2 hoch 32).
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_Back
+\par }@P H.Contents H.G_XMS
+\par                              {\i Backfilling}
+\par \pard \ri1812 
+\par \pard Die Erweiterung des LoDOS-Speichers ab der h\rdblquote chsten physikalischen Speicher-Adresse der Systemplatine bis zur niedrigsten Adresse des Bildschirmadapters wird englisch "Backfilling" (Auff\'81
+llen) genannt. Ein Memory Management Programm verwendet Speicher oberhalb 1 MB und bildet diesen in den LoDOS Speicher ab, soda\'e1 DOS mindestens 640 KB verf\'81gbar hat.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_BIOS
+\par }@P H.Contents H.G_XMS
+\par                                 {\i BIOS}
+\par 
+\par BIOS = {\b Basis Input/Output System}. Das BIOS besteht aus einer Reihe von systemnahen Programmen, die grundlegende Funktionen ausf\'81hren. Sie stellen die Verbindung zwischen neutralen Betriebssystem-
+\par Funktionen und der Hardware her. BIOS Routinen sind in einem Chip gespeichert und k\rdblquote nnen nicht ver\'84ndert werden.
+\par 
+\par Im Gegensatz zu anderen Programmen benutzen BIOS Routinen {\b Speicheradressen}.Da viele der BIOS Routinen nicht mehr ben\rdblquote tigt werden, wenn DOS den Startvorgang beendet hat, k\rdblquote nnen einige Bereiche als zus\'84
+tzlicher HiDOS Speicher nutzbar gemacht werden.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_Dev
+\par }@P H.Contents H.G_XMS
+\par                            {\i Ger\'84tetreiber}
+\par 
+\par Ein systemnahes Programm, das eine Ger\'84te-Einheit steuert - zum Beispiel eine Festplatte, einen Scanner (Abtaster) oder ein lokales Netzwerk. Die Einheiten-Treiber werden in der Datei CONFIG.SYS installiert. Sie werden beim Systemstart aktiv.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par 
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>H.G_DOS
+\par \pard\plain \f3\lang1033 @P H.Contents H.G_XMS
+\par                              {\i DOS Grenzen}
+\par 
+\par DOS wurde f\'81r den Einsatz im Adre\'e1raum der 8088 CPU entworfen - es kann daher {\b ein Megabyte} nutzen. Dieser Adre\'e1raum ist aufgeteilt in 640 KB Basisspeicher und einen 384 KB gro\'e1
+en Zusatzbereich. Die ersten 640 KB werden von DOS, Betriebssystem-Erweiterungen (z.G. Treiber) und Anwendungsprogrammen benutzt. Vom zus\'84tzlichen 384 KB Speicherbereich sind 320 KB f\'81r physikalische Ger\'84
+te wie z.B. Festplatten-Kontroller, Bildschirmadapter und Netzwerkadapter reserviert. Die letzten 64 KB (oder 128 KB in einigen Systemen) sind f\'81r das System-ROM reserviert, das f\'81r den Start und Betrieb des Computers zust\'84
+ndig ist. Diese DOS Grenzen stehen im Widerspruch zur Leistungsf\'84higkeit moderner Prozessoren - doch Memory Management Programme k\rdblquote nnen helfen, die Grenzen teilweise zu \'81berwinden.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_DPMI
+\par }@P H.Contents H.G_XMS
+\par                                 {\i DPMI}
+\par 
+\par Die DOS Protected Mode Interface ({\b DPMI}) Spezifkation definiert Grundregeln f\'81r Speicheranforderungen, die Programmen im Protected Mode die Nutzung gemeinsamer Ressourcen erm\rdblquote glicht.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_Ex}{\fs28\cf6 p
+\par }@P H.Contents H.G_XMS
+\par                                  {\i EMS}
+\par \pard \ri1812 
+\par \pard Eine Abk\'81rzung f\'81r die {\b Expanded Memory Spezifikation}
+. Das Verfahren benutzt eine Speicherbank-Umschaltung, die maximal 32 MB Speicher in Einheiten zu 64 KB verwaltet. Das 64 KB "Speicherfenster" (Seitenrahmen = Page Frame) wird dabei in das erste Megabyte eingeblendet. Viele Programme k\rdblquote 
+nnen Expanded Memory f\'81r tempor\'84ren Speicher nutzen und so zu eine h\rdblquote here Leistung erreichen. EMS kann mit Hilfe von Speichererweiterungs-Hardware implementie
+rt werden oder mit Software-Treibern, die Extended Memory benutzen und dort EMS-Speicher emulieren.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_Ext
+\par }@P H.Contents H.G_XMS
+\par                            {\i Extended Memory}
+\par 
+\par Extended Memory ist Speicher mit Adressen bei {\b 1 MB und h\rdblquote her}.Dieser Speicher ist physikalisch mit 80286/386/486/++ CPUs im Protected Mode adressierbar. Extended Memory ist f\'81
+r Anwendungsprogramme unter DOS normalerweise nicht direkt erreichbar.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_High
+\par }@P H.Contents H.G_XMS
+\par                             {\i HiDOS-Speicher}
+\par 
+\par Ein Adre\'e1bereich {\b zwischen 640 KB und 1 MB}. Der Begriff kennzeichnet je nach Definition den vollst\'84ndigen 384 KB Speicherbereich oder nur den Bereich, der f\'81r DOS mit Hilfe besonderer Memory Management Programme bereitgestellt wird.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_HMA
+\par }@P H.Contents H.G_XMS
+\par                        {\i High Memor}{\i y Area (HMA)}
+\par 
+\par \pard \tx1284\tx1590\tx2004\tx2160\tx2724\tx2934\tldot\tx3084\tx3444\tx3654\tx3804\tx4164\tx4524\tx4884\tx5604\tx6324\tx7044\tx7764\tx8484\tx9204 Eine {\b 64 KB Region} direkt oberhalb 1 MB, die gem\'84\'e1
+ eXtended Memory Spezifikation definiert ist. Die High Memory Area (HMA) erlaubt es XMS-f\'84higen Programmen, diese zus\'84tzlichen 64 KB Speicher zu nutzen.
+\par \pard 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>H.G_LIM
+\par \pard\plain \f3\lang1033 @P H.Contents H.G_XMS
+\par                              {\i LIM Speicher}
+\par 
+\par Eine andere Bezeichnung f\'81r EMS (Expanded) Memory, benannt nach den Erfindern der Spezifikation: {\b Lotus, Intel }und{\b  Microsoft}. Die aktuelle Version ist LIM 4.0.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_Low
+\par }@P H.Contents H.G_XMS
+\par                            {\i LoDOS-Speicher}
+\par 
+\par Die {\b ersten 640 KB}, in denen das Betriebssystem (DOS) und die Anwendungsprogramme ablaufen. Dieser Bereich, auch LoDOS (= Low DOS) genannt, ist der von Anwendungsprogrammen am h\'84
+ufigsten benutzte Speicher. LoDOS kann mit Hilfe von Memory Management Programmen in einigen Konfigurationen \'81ber 640 KB ausgedehnt werden.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>H.G_MemT
+\par \pard\plain \f3\lang1033 @P H.Contents H.G_XMS
+\par                             {\i Speicher-Typen}
+\par 
+\par Physikalischer Speicher wird in Bezug auf {\b Adre\'e1bereich }und {\b Zugriffsart} nach verschiedenen logischen Speicher-Typen unterschieden. Beispiele sind EMS und eXtended Memory. Definitionen finden Sie in diesem Glossar.
+\par 
+\par Anwendungsprogramme erzielen die h\rdblquote chste Leistung, wenn zum entsprechenden Zeitpunkt der Speicher-Typ verf\'81gbar ist, f\'81r den das Anwendungsprogramm entworfen wurde.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_Pro
+\par }@P H.Contents H.G_XMS
+\par                             {\i Protected Mode}
+\par 
+\par Ein Betriebsmodus der Intel 80286/386/486/++ CPUs. Der Name (Protected Mode = gesch\'81tzter Modus) r\'81hrt von der Konstruktion der CPU her, welche die Programme voreinander "sch\'81
+tzt", wenn sie gleichzeitig in den Speicher geladen werden. Protected Mode-Programme k\rdblquote nnen auf einen Speicher {\b \'81ber 1 MB hinaus} zugreifen.
+\par \pard 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_RAM
+\par }@P H.Contents H.G_XMS
+\par                              {\i RAM-Speicher}
+\par 
+\par Der RAM-Speicher ({\b Random Access Memory} = Direktzugriffs-Speicher) im Computer dient zur tempor\'84ren Speicherung von Programmen und Daten. Im Gegensatz zu den Daten, die im ROM-Speicher vorhanden sind, kann sich der Inhalt des RAM-Speichers w\'84
+hrend einer Programmausf\'81hrung ver\'84ndern. Der Speicherinhalt geht verloren, wenn der Computer ausgeschaltet wird.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_Real
+\par }@P H.Contents H.G_XMS
+\par                               {\i Real Mode}
+\par 
+\par Ein Betriebsmodus der Intel 80286/386/486++ CPUs mit einer Arbeitsweise die die {\b 8088/8086} CPUs mit einem maximalen Adre\'e1raum von 1 MB. DOS und die meisten Anwendungsprogramme m\'81ssen im Real Mode ablaufen.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>H.G_ROM
+\par \pard\plain \f3\lang1033 @P H.Contents H.G_XMS
+\par                          {\i ROM und Puffer-RAM}
+\par 
+\par Adressen zwischen {\b 640 KB und 1 MB}, die von Adapterkarte
+n wie z.B. Festplatten-Kontroller, Netzerkadapter und Bildschirmadapter, belegt werden um mit dem Systmebus zu kommunizieren. Je nach Konfiguration des Computers ist ein entsprechender Teil dieses Bereiches unbenutzt.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_Sys
+\par }@P H.Contents H.G_XMS
+\par                               {\i System-ROM}
+\par 
+\par Die {\b obersten 64 KB} des Adre\'e1bereiches im ersten Megabyte. Mikrokanal-Systeme benutzen die obersten 128 KB.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_TSR
+\par }@P H.Contents H.G_XMS
+\par                                  {\i TSR}
+\par 
+\par \pard \tx1284\tx1590\tx2004\tx2160\tx2724\tx2934\tldot\tx3084\tx3444\tx3654\tx3804\tx4164\tx4524\tx4884\tx5604\tx6324\tx7044\tx7764\tx8484\tx9204 Eine Abk\'81rzung f\'81r {\b "Terminate and Stay Resident"}, auch speicher- residentes Programm genannt.
+
+\par \pard 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_VCPI
+\par }@P H.Contents H.G_XMS
+\par                                   {\i VCPI}
+\par 
+\par Die VCPI-Spezifikation ({\b Virtual Control Program Interface}) definiert Grundregeln f\'81r Speicheranforderungen, die Programmen im Protected Mode eine Koexistenz erlauben.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_VDS
+\par }@P H.Contents H.G_XMS
+\par                                   {\i VDS}
+\par 
+\par Die VDS-Spezifikation ({\b Virtual DMA Services}), erm\rdblquote glicht der Software, Informationen f\'81r einen direkten Speicherzugriff (DMA = Direct Memory Access) zu erhalten, w\'84hrend das System im Protected Mode l\'84uft.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_Vid
+\par }@P H.Contents H.G_XMS
+\par                        {\i Video (Bildschirm-}{\i ) Speicher}
+\par 
+\par {\b Bildschirmadapter} nutzen Adre\'e1bereiche zwischen 640 KB und 1 MB als Puffer sowie f\'81r ROM-Routinen. Dabei nutzten unterschiedliche Adapter unterschiedliche Adre\'e1bereiche; die meisten gehen jedoch nicht \'81ber die 800 KB Adre\'e1
+grenze hinaus.
+\par 
+\par Mit {\b n\'84chste} Info sehen Sie Glossar-Themen in alphabetischer Folge.
+\par 
+\par {\fs28\cf6 >>H.G_XMS
+\par }@P H.Contents H.G_XMS
+\par                               {\i XMS-Speicher}
+\par 
+\par Die {\b eXtended Memory Spezifikation} (XMS) von Microsoft ist ein Standard, der Anwendungsprogrammen den Zugriff auf Speicher oberhalb der 640 KB Grenze erm\rdblquote 
+glicht. XMS bietet den Zugang auf Upper Memory Blocks (UMB), die High Memory Area (HMA) und Extended Memory in Extended Memory Blocks (EMB). Nur XMS-f\'84hige Programme k\rdblquote nnen XMS-Speicher nutzen.
+\par 
+\par }

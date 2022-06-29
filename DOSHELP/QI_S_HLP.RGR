@@ -1,0 +1,76 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times;}{\f1\froman Symbol;}{\f2\fswiss Helvetica;}{\f3\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;
+\red192\green192\blue192;}{\stylesheet{\f3\lang1033 \snext0 Normal;}{\s1\fi-288\li576 \f3\lang1033 \sbasedon0\snext1 Outdent4;}{\s2 \f3\fs28\cf6\lang1033 \sbasedon0\snext2 Context;}{\s3\fi-1584\li1872 \f3\lang1033 \sbasedon0\snext3 Outdent13;}{\s4\li288 
+\f3\lang1033 \sbasedon0\snext4 Indent2;}{\s5\ri-2880 \f3\fs16\lang1033 \sbasedon0\snext5 Comment;}}{\info{\title install messge system, small msgs.}{\author Klaus Albrecht}{\operator Klaus Albrecht}{\creatim\yr1994\mo2\dy13\hr21\min10}
+{\revtim\yr1996\mo2\dy15\hr21\min5}{\version1}{\edmins0}{\nofpages0}{\nofwords0}{\nofchars0}{\vern16417}}\paperw12240\paperh15840\margl1440\margr6192\margt720\margb720\gutter0 \deftab0\widowctrl\ftnbj\hyphhotz0 \sectd 
+\linex0\headery709\footery709\colsx709\endnhere \pard\plain \s5\ri-2880 \f3\fs16\lang1033 Install Message Text, Small Messages
+\par by Stan Leszynski
+\par These notes are not a live context
+\par Line width 32
+\par Context strings begin with >>
+\par Use ## to surround replaceable parameters, tag _ at end of parameter to reserve spaces for attribute if ## block not big enough to properly wrap
+\par MSWord file use:
+\par  Set Printer to Generic/Text only on File:
+\par  Set View to Page mode to see wrapping
+\par  Default tabs 0
+\par  Left margin 0
+\par  Right margin 5.3"
+\par  Top margin 0
+\par  Bottom margin 0
+\par For indented lines or to get desired wrapping, use hard returns
+\par Text highlighting:
+\par  use {\b BOLD} for accenting= yellow text
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>S.BadCreatSub
+\par \pard\plain \f3\lang1033 #PROGNAME# konnte nicht auf das angegebene Ziel-Verzeichnis zugreifen oder es nicht anlegen.
+\par {\b Bitte geben Sie das gew\'81nschte Ziel-Laufwerk und -verzeichnis erneut ein.}
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>S.BadDest
+\par \pard\plain \f3\lang1033 Das angegebene Ziel-Laufwerk ist unzul\'84ssig. {\b Bitte geben Sie das gew\'81nschte Ziel-Laufwerk und 
+\par }{\b -verzeichnis erneut ein.}
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>S.BadDrive
+\par \pard\plain \f3\lang1033 Der angebebene Laufwerksbuch-
+\par stabe ist unzul\'84ssig.
+\par {\b Geben Sie ein neues Laufwerk an oder brechen Sie #PROGNAME# ab und beheben Sie das Problem.}
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>S.NotFull
+\par \pard\plain \f3\lang1033 Die m\'81ssen das Laufwerk und den vollst\'84ndigen Verzeichnispfad (ab Stammverzeichnis) angeben:
+\par C:\\#FLENME# ist g\'81ltig; C:.\\#FLENME# und ..\\#FLENME# sind ung\'81ltig. {\b Bitte geben Sie das erforderliche Ziellaufwerk und -verzeichnis an.}
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>S.BadNumber
+\par \pard\plain \f3\lang1033 Eine g\'81ltige Seriennummer besteht aus 11 Ziffern.
+\par Die korrekte Nummer kann den Registrier-Unterlagen im Programm-Paket bzw. dem Aufkleber im Handbuch 
+\par entnommen werden. Andere Eingaben sind ung\'81ltig.
+\par 
+\par {\b Geben Sie die Seriennummer mit
+\par }{\b allen Ziffern so ein, wie sie
+\par }{\b geschrieben ist, vermeiden Sie
+\par }{\b aber Leerzeichen.}
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>S.BlankWarn
+\par \pard\plain \f3\lang1033 Ein Leer-Eintrag ist unzul\'84ssig.
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>S.BootDisk
+\par \pard\plain \f3\lang1033 {\b Geben Sie den Buchstaben des Boot-Laufwerks an:
+\par }
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>S.Dropout
+\par \pard\plain \f3\lang1033 Da Sie sich entschlossen haben, die Datei AUTOEXEC.BAT manuell zu \'84ndern, kehrt {\b #PROGNAME# nun zur DOS-Ebene zur\'81ck.}
+\par 
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>S.InsertDest
+\par \pard\plain \f3\lang1033 {\b Bitte legen Sie jetzt die Zieldiskette in das Laufwerk.}
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>S.InsertSrc
+\par \pard\plain \f3\lang1033 {\b Bitte legen Sie jetzt die  #FLENME# Diskette
+\par }{\b #ARG1# in das Laufwerk.}
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>S.InvalidDrv
+\par \pard\plain \f3\lang1033 {\b Das angegebene Laufwerk ist nicht vorhanden.
+\par }\pard\plain \s2 \f3\fs28\cf6\lang1033 >>S.SrcWarn
+\par \pard\plain \f3\lang1033 #PROGNAME# konnte keine #FLENME# Dateien im angegebenen Laufwerk finden.
+\par {\b Bitte geben Sie einen anderen Laufwerks-Buchstaben an.}
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>S.UnLocate
+\par \pard\plain \f3\lang1033 #ARG1# nicht auffindbar.
+\par 
+\par {\b Dr\'81cken Sie die Eingabetaste f\'81r die R\'81ckkehr zu DOS.}
+\par \pard\plain \s2 \f3\fs28\cf6\lang1033 >>S.RdOnly
+\par \pard\plain \f3\lang1033 Die Datei:
+\par 
+\par   #ARG1#
+\par 
+\par hat ein Nur-Lese Attribut (schreibgesch\'81tzt). {\b Bitte beheben Sie das Problem und f\'81hren Sie dann #PROGNAME#
+\par }{\b erneut aus.
+\par }{\b 
+\par }}

@@ -1,0 +1,514 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times;}{\f1\froman Symbol;}{\f2\fswiss Helvetica;}{\f3\fmodern Courier;}{\f4\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;
+\red127\green127\blue127;\red192\green192\blue192;}{\stylesheet{\f4\lang1033 \snext0 Normal;}{\s1 \f4\fs28\cf6\lang1033 \sbasedon0\snext1 Context;}}{\info{\title install help system, help topics}{\author Klaus Albrecht}{\operator Klaus Albrecht}
+{\creatim\yr1992\mo5\dy3\hr14\min34}{\revtim\yr1996\mo2\dy15\hr20\min59}{\printim\yr1992\mo5\dy18\hr12\min3}{\version1}{\edmins0}{\nofpages0}{\nofwords0}{\nofchars0}{\vern16417}}\paperw12240\paperh15840\margl1440\margr1008\margt1440\margb1440\gutter0 
+\facingp\widowctrl\ftnbj\ftnrestart\hyphhotz425 \sectd \linex0\headery709\footery709\colsx709\endnhere \pard\plain \f4\lang1033 {\cf2 Install Help Text
+\par }{\cf2 by Stan Leszynski
+\par }\pard \fi-288\li270\ri-2700 {\cf2 These notes are not a live context
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 68
+\par }{\cf2 Context strings begin with >>
+\par }{\cf2 Center t}{\cf2 he title of each block
+\par }{\cf2 First line is @ plus P (print) or N (noprint) plus stop markers for Prev/Next
+\par }\pard {\cf2 MSWord file use:
+\par }{\cf2  Set Printer to Generic/Text only on File:
+\par }{\cf2  Set View to Page mode to see wrapping
+\par }{\cf2  Default tabs 0
+\par }{\cf2  Left margin 0
+\par }{\cf2  Right margin 1.7"
+\par }{\cf2  Top margin 0
+\par }{\cf2  Bottom margin 0
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns
+\par }{\cf2 Text highlighting:
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text
+\par }{\cf2  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text
+\par }{\cf2  use }{\ul\cf2 UNDERLINE}{\cf2  for context jump= red text
+\par }{\cf2  use }{\b\i\cf2 BOLD I}{\b\i\cf2 TALICS}{\cf2  for bullets= yellow text
+\par }\pard \fi-288\li288\ri-2700 
+\par \pard {\fs28\cf6 >>H.Contents
+\par }@P H.Contents I_NoMaximize
+\par                          {\i #PROGNAME# Hilfe-Themen
+\par }
+\par Die in Rot dargestellten Hilfe-Themen sind Hypertext-Verbindungen. Sie erm\rdblquote glichen Ihnen den direkten Zugang zu anderen Themen. Bl\'84ttern Sie im Text nach oben oder nach unten und w\'84hlen Sie das gew\'81nschte Thema aus. Benutzen Sie die {
+\b rechte }oder{\b  linke }Pfeiltaste, um das Thema hervorzuheben und dr\'81cken Sie dann die {\b Eingabetaste}. Die Auswahl mit der Maus erfolgt durch Anwahl und Anklicken der gew\'81nschten Information.
+\par 
+\par    - Diese Themen helfen Ihnen das {\b #PROGNAME# Produkt }anzuwenden -
+\par                        {\ul Schaltfl\'84chen benutzen}{\v H.Default}
+\par                     {\ul Einf\'81hrung in das Hilfe-System}{\v H.U_Help}
+\par                       {\ul Umgang mit dem Dialogfeld}{\v H.U_Dial}
+\par                      {\ul Umgang mit dem Druck-System}{\v H.U_Print}
+\par                       {\ul Datei-Betrachter anwenden}{\v H.U_Browse}
+\par - Diese {\b #PROGNAME# Hilfe-Meldungen }beschreiben spezielle Aufgaben -
+\par    - Au\'e1erhalb des Kontxt gelesen erscheinen sie wenig sinnvoll-
+\par                              {\ul abbrechen}{\v I_abrt}
+\par                       {\ul Quellenlaufwerk festlegen}{\v I_srcdrv}
+\par                              {\ul Copyright}{\v I_cpyrght}
+\par                         {\ul Namen registrieren}{\v I_userinfo}
+\par                           {\ul Zielverzeichnis}{\v I_destdrv}
+\par                        {\ul Boot-Laufwerk angeben}{\v I_bootdsk}
+\par                      {\ul Referenzdiskette einlegen}{\v I_refdsk}
+\par                   {\ul Monochrom-Bereich wiederherstellen}{\v I_getmono}
+\par                           {\ul DOS Verzeichnis}{\v I_getdosdir}
+\par                     {\ul Eine PROfil-Datei erstellen}{\v I_configsys}
+\par                            {\ul Speichertest}{\v I_QMT}
+\par                              {\ul Maximize}{\v I_maximize}
+\par                            {\ul Kein Maximize}{\v I_nomaximize}
+\par         - Diese Themen enthalten {\b verwandte Informationen} -
+\par                             {\ul Hilfe-Index}{\v H.Index}
+\par 
+\par Mit der Schaltfl\'84che{\b  n\'84chste} k\rdblquote nnen Sie die Themen der Reihe nach durchbl\'84ttern.
+\par 
+\par {\fs28\cf6 >>H.Default
+\par }@P H.Default I_NoMaximize
+\par                         {\i Schaltfl\'84chen }benutzen
+\par {\b 
+\par }Mit{\b  Schaltfl\'84chen }werden wichtige Befehle ausgef\'81hrt. Eine Schaltfl\'84che ist ein kleines schattiertes Feld im unteren Bildschirmbereich, ein Datenfenster oder ein Dialogfeld. Jede Schaltfl\'84che enth\'84
+lt einen hervorgehobenen Buchstaben sowie ein oder zwei W\rdblquote rter, die diese Funktion beschreiben. Dr\'81cken Sie auf der Tastatur die entsprechende Taste, um die Funktion der Schaltfl\'84che auszuf\'81hren. Mit der Maus k\rdblquote 
+nnen Sie die Schaltfl\'84che am Bildschirm anw\'84hlen und zur Ausf\'81hrung anklicken. Mit der TAB-Taste oder mit der Eingabetaste k\rdblquote nnen Sie die Schaltfl\'84chen innerhalb eines Dialogfeldes ausw\'84hlen. (Vgl. {\ul Umgang mit einem Dialogfeld
+}{\v H.U_Dial})
+\par 
+\par 
+\par Die meisten Bildschirme verf\'81gen \'81ber folgende Schaltfl\'84chen:
+\par 
+\par   * {\b Abbruch Esc} - bricht das Programm ab
+\par   * {\b Hilfe F1} - zeigt aktuelle Hilfe-Information
+\par   * {\b Druck F2} - zeigt das {\ul Druck-Dialogfeld}{\v H.U_Print} an, falls verf\'81gbar
+\par 
+\par \pard \fi-1\li1 Schaltfl\'84chen werden verwendet, wenn ihre Funktionen f\'81r die aktuelle Aufgabe relevant sind. Eine bestimmte Schaltfl\'84che kann m\rdblquote glicherweise im aktuellen Men\'81system nicht verf\'81gbar sein. Auch wenn eine Schaltfl\'84
+che angezeigt wird, kann sie m\rdblquote glicherweise nicht aktiv sein, d.h. Sie k\rdblquote nnen sie nicht ausw\'84hlen. Die aktiven Schaltfl\'84chen enthalten einen hervorgehobenen Buchstaben. Der Text inaktiver Schaltfl\'84chen ist nur schwa
+ch dargestellt.
+\par \pard 
+\par {\fs28\cf6 >>H.U_Help
+\par }@P H.Default I_NoMaximize
+\par                      {\i Einf\'81hrung in das Hilfe-System
+\par }
+\par Das Hilfe-System enth\'84lt aktuelle Informationen \'81ber die jeweiligen Programm-Funktionen. Bei aktiver{\b  Schaltfl\'84che "Hilfe"} am unteren Bildschirmrand f\'81hrt ein Druck auf die entsprechende Funktionstaste zur Anzeige des Hilfefensters f\'81
+r die aktuelle Aktivit\'84t. Mit der Maus k\rdblquote nnen Sie die Schaltfl\'84che direkt anklicken. Ist die Hilfe-
+\par Information gr\rdblquote \'e1er als das Fenster, dann k\rdblquote nnen Sie mit den Tasten Bild-Nach-Unten, Bild-Nach-Oben, STRG+POS1, STRG+Ende und den Pfeiltasten durch den Text bl\'84ttern. Mit der Maus k\rdblquote 
+nnen Sie sich anhand der Bildlaufleisten im Text bewegen.
+\par 
+\par Bei aktivem Hilfesystem sind folgende Optionen auf Schaltfl\'84chen verf\'81gbar:
+\par 
+\par   * {\b Themen} - zeigt eine Liste der Hilfe-Themen an.
+\par     Die Themen werden in der Reihenfolge angeboten, in der Sie
+\par     beim Bl\'84ttern durch das Hilfesystem  mit der Schaltfl\'84che
+\par     "n\'84chste" auftreten.
+\par   * {\b Stichwort} - zeigt das Stichwortregister f\'81r das Hilfesystem.
+\par     Die Themen werden in alphabetischer Reihenfolge ihrer prim\'84ren
+\par     Bedeutung gelistet.
+\par   * {\b n\'84chste} - springt zum n\'84chsten Thema der aktuellen Bl\'84tter-Liste
+\par     (s.u.).
+\par \pard   * {\b vorher} - springt auf vorangegangene Themen zur\'81ck. Mit Auswahl
+\par     "vorher" erhalten Sie immer den Bildschirm, der dem aktuellen
+\par     vorausging. Dieser Vorgang ist nach 20 Bildschirmen beendet
+\par     bzw. dann, wenn der urspr\'81nglich ausgew\'84hlte Bildschirm
+\par     wieder angezeigt ist.
+\par 
+\par Mit der Auswahl eines Hilfe-Themas wird eine {\b Bl\'84tter-Liste} aktiv. Die Bl\'84tter-Liste verbindet das Thema mit verwandten Themen-
+\par bereichen. Mit "n\'84chste" bewegen Sie sich durch die Bl\'84tter-Liste. Die Bl\'84tter-Liste bleibt so lange aktiv, bis Sie Themen, Stichwort oder ein neues Thema \'81ber die Hypertext-Verbindung ausw\'84hlen (s.u.). In der Bl\'84
+tter-Liste der Themen ist jedes Element des Hilfesystems enthalten.
+\par 
+\par Der in Rot dargestellte Hilfetext ist eine Hypertext-Verbindung, mit der Sie ein verwandtes Thema direkt anspringen k\rdblquote nnen. Sie w\'84hlen ein Thema aus, indem Sie das Thema mit der rechten oder linken Pfeiltaste hervorheben und anschlie\'e1
+end die Eingabetaste dr\'81cken. Mit der Maus wird das Thema direkt angeklickt. Alternativ k\rdblquote nnen Sie auch auf ein hervorgehobenes oder nicht hervorgehobenes Thema doppelklicken, um zu springen. Mit der Schaltfl\'84
+che "vorher" kehren Sie wieder zum urspr\'81nglichen Thema (d.h. zu Ihrem Ausgangspunkt) zur\'81ck.
+\par 
+\par \'9aber das {\ul Drucksystem}{\v H.U_Print} k\rdblquote nnen Sie Hilfe-Informationen ausdrucken.
+\par 
+\par {\fs28\cf6 >>H.U_Dial
+\par }@P H.Default I_NoMaximize
+\par 
+\par                    {\i  Umgang mit einem Dialogfeld
+\par }
+\par Dialogfelder werden vom oberen Bildschirmrand abw\'84rts eingeblendet. Sie enthalten einige bzw. alle folgenden Elemente:
+\par 
+\par {\b Text-Meldungen
+\par }
+\par Die Meldungen informieren \'81ber den aktuellen Status-oder fordern zu einer notwendigen Aktion auf.
+\par 
+\par {\b Unterfenster}
+\par 
+\par In einem Dialogfeld mit mehr als einem Arbeits- oder Anzeigebereich nimmt jeder Bereich ein eigenes Unterfenster mit einem separaten Namen ein. In einem aktiven Unterfenster ist der Name hervorgehoben. So aktivieren Sie ein Unterfenster:
+\par 
+\par   * Sie k\rdblquote nnen mit der {\b TAB-Taste} und der {\b Umschalttaste+TAB
+\par }{\b  }   zwischen den Unterfenstern springen oder
+\par   * die {\b ALT-Taste }zusammen mit dem hervorgehobenen Buchstaben
+\par     (aus dem Namen des Unterfensters) dr\'81cken oder
+\par   * irgendeinen Bereich innerhalb des Unterfensters mit der Maus
+\par     {\b anklicken.}
+\par 
+\par {\b Feld-Editor}
+\par 
+\par Ein Feld-Editor stellt einen Bereich f\'81r die Texteingabe zur Verf\'81gung. Benutzen sie die linke und rechte Pfeiltaste, die R\'81cktaste und die alphanumerischen Tasten, um den erforderlichen Eintrag zu vervollst\'84
+ndigen. Akzeptiert das aktuelle Feld eine Texteingabe, die gr\rdblquote \'e1er ist als das Textfeld, dann erfolgt ein Bildlauf im Text.
+\par 
+\par {\b Kontrollk\'84stchen}
+\par 
+\par Ein Kontrollk\'84stchen ist eine Option, die entweder ein- oder ausgeschaltet ist. Eine Markierung in Klammern gibt den Status der Option an. In einem Unterfenster k\rdblquote nnen mehrere Felder markiert werden.
+\par 
+\par Sie aktivieren ein Kontrollk\'84stchen, indem Sie mit der TAB-Taste in das Unterfenster springen und mit den Tasten Nach-Oben und Nach-
+\par Unten das entsprechende Kontrollk\'84stchen ansteuern. Alternativ k\rdblquote nnen Sie die ALT-Taste zusammen mit dem hervorgehobenen Buchstaben (aus dem Namen des Kontrollk\'84stchens) dr\'81cken. Mit der Leertaste wird eine Option ein- 
+oder ausgeschaltet. Ein Ansteuern des Kontrollk\'84stchens mit den Pfeiltasten aktiviert die Option nicht, ein Ansteuern mit der ALT-Taste jedoch schon. Die Auswahl eines Kontrollk\'84stchens mit der Maus erfolgt \'81ber das Anw\'84hlen und Anklicken.
+
+\par \pard \fi-1\li1 {\b 
+\par }{\b Optionsschalter
+\par }
+\par \pard Ein Optionsschalter ist eine Option, die entweder ein- oder ausgeschaltet ist. Eine Markierung in Klammern gibt den Status der Option an. Es kann nur jeweils ein Optionsschalter ausgew\'84hlt werden.
+\par 
+\par Sie bewegen sich auf einen Optionsschalter, indem Sie mit der TAB-Taste in das Unterfenster springen und mit den Tasten Nach-Oben und Nach-Unten das entsprechende Symbol ansteuern. Alternativ k\rdblquote 
+nnen Sie die ALT-Taste zusammen mit dem hervorgehobenen Buchstaben (aus dem Namen des Optionsschalters) dr\'81cken. Mit der Leertaste wird ein Optionsschalter ein- oder ausgeschaltet.
+\par 
+\par Ein Ansteuern des Optionsschalters mit den Pfeiltasten aktiviert die Option nicht, ein Ansteuern mit der ALT-Taste jedoch schon. Mit der Maus k\rdblquote nnen Sie den Optionsschalter anw\'84hlen und mit Klicken der linken Maustaste aktivieren.
+\par \pard \fi-1\li1 
+\par \pard {\b Schaltfl\'84chen}
+\par 
+\par Aktions-Schaltfl\'84chen am unteren Rand eines Dialogfeldes zeigen wichtige Funktionstasten an. Die Taste, mit der die Funktion einer Schaltfl\'84che ausgew\'84hlt werden kann, wird in der Schaltfl\'84che hervorgehoben dargestellt. Dr\'81
+cken Sie die Taste allein oder mit der ALT-Taste. Die Auswahl mit der Maus erfolgt durch direktes Anklicken der Taste.
+\par 
+\par Die meisten Dialogfelder verf\'81gen \'81ber die Schaltfl\'84che{\b  Fertig}, mit der die Funktion des Feldes ausgef\'81hrt wird und \'81ber die Schaltfl\'84che  {\b Abbruch,} mit der die Aktion abgebrochen und das Feld ausgeblendet wird. F\'81
+r die Auswahl der Schaltfl\'84che "Fertig" dr\'81cken Sie die Taste "F", ALT+F oder die Eingabetaste. Die Schaltfl\'84che "Abbruch" wird \'81ber "A", ALT+A oder die Eingabetaste ausgew\'84hlt.
+\par 
+\par Bei der Anzeige von Dialogfeldern wird eine der Schaltfl\'84chen in Klammern gezeigt. Diese Schaltfl\'84che ist die{\b  Vorgabe (Vor-
+\par }{\b einstellung)}. Die Auswahl erfolgt mit der Eingabetaste. Mit den Tasten {\b TAB} und {\b Umschalttaste+}{\b TAB} kann eine andere Schaltfl\'84che als die aktuelle hervorgehoben und aktiviert werden.
+\par 
+\par 
+\par {\fs28\cf6  >>H.U_Print
+\par }@P H.Default I_NoMaximize
+\par                    {\i Umgang mit dem Druck-System
+\par }
+\par Das Drucksystem liefert Informationen aus Dateien sowie Hilfe-
+\par Texte auf Papier oder als Text-Information in einer Datei.
+\par 
+\par Im ersten Unterfenster des Dialogfeldes "Druck" wird der Ausgabe-
+\par Umfang festgelegt. Jede Option verf\'81gt \'81ber ein Kontrollk\'84stchen, so da\'e1 mehr als eine Option ausgew\'84hlt werden kann.
+\par 
+\par Das zweite Unterfenster des Dialogfelds "Druck" enth\'84lt eine Liste der Ausgabeziele. Jedes Ziel verf\'81gt \'81ber einen Optionsschalter, so da\'e1 jeweils nur eines ausgew\'84hlt werden kann.
+\par 
+\par Wird die Druckausgabe in eine {\b Datei} geschrieben, dann schl\'84gt ASQ einen Namen f\'81r die Druckausgabe vor. Sie k\rdblquote nnen jede g\'81ltige Dateispezifikation eingeben.
+\par 
+\par Mit der {\b TAB}-Taste bewegen Sie sich zwischen den Unterfenstern.
+\par F\'81r das Ausgabeziel "Drucker" haben Sie keinen Zugriff auf das Dateinamen-Feld.
+\par 
+\par Werden {\b alle Hilfe-Themen }gedruckt, gibt die Liste der Hilfe-Themen die Themen sowie deren Druckreihenfolge an. Einige nebens\'84chliche Themen befinden sich m\rdblquote glicherweise nicht in der Liste oder in der Druckausgabe. Sie k\rdblquote 
+nnen die aktuelle Information jedoch mit der Option {\b "dieses Hilfe-Thema" }ausdrucken, w\'84hrend Sie den entsprechenden Hilfe-Bildschirm anzeigen.
+\par 
+\par Weitere Informationen erhalten Sie in der Beschreibung zum Thema
+\par {\ul Umgang mit einem Dialogfeld}{\v H.U_Dial}.
+\par 
+\par {\fs28\cf6 >>H.U_Browse
+\par }@P H.Default I_NoMaximize
+\par                      {\i Datei-Betracht}{\i er }anwenden
+\par 
+\par {\b Der Bildschirm des Datei-Betrachters}
+\par 
+\par Der Datei-Betrachter zeigt die aktuelle Datei in einem Fenster. Ein Zeilen/Spalten-Z\'84hler in der oberen rechten Ecke des Betrachter-Fensters informiert \'81
+ber die Cursor-Position. Die erste Zahl gibt die Zeile an, die zweite Zahl bezeichnet die Gesamtzahl der Zeilen in der Datei und die dritte Zahl bezeichnet die aktuelle Spalte des Cursors.
+\par 
+\par Der Datei-Betrachter hat eine Breite von {\b 256} Zeichen. Wird eine Datei mit einer l\'84ngeren Seitenbreite geladen, kann dies zu einem Datenverlust f\'81hren. Die maximale Anzahl der Zeilen in einer Datei wird durch die Speicherkapazit\'84
+t des Systems begrenzt und kann von System zu System unterschiedlich sein. Die meisten Systeme k\rdblquote nnen Dateien mit einigen Tausend Zeilen verwalten.
+\par \pard 
+\par {\b Tastatur benutzen}
+\par 
+\par Sie k\rdblquote nnen sich mit folgenden Funktionstasten im Text bewegen:
+\par 
+\par   * {\b STRG+Ende}            - springt zum Ende der Datei
+\par   * {\b STRG+POS1}            - springt zum Anfang der Datei
+\par   * {\b STRG+Bild-Nach-Unten} - springt einen Bildschirm (74 Spalten)
+\par                            nach rechts
+\par   * {\b STRG+Bild-Nach-Oben  }- springt einen Bildschirm (74 Spalten)
+\par                            nach links
+\par   * {\b Nach-Unten }          - rollt den Text in der Anzeige eine Zeile
+\par                            aufw\'84rts
+\par   * {\b Ende}                 - springt zum Ende der ersten Zeile im
+\par                            Anzeigefenster
+\par \pard \fi-1\li1   * {\b ESC-Taste }           - beendet Datei-Betrachter
+\par \pard   * {\b POS1         }        - springt zum Anfang der ersten Zeile im
+\par                            Anzeigefenster
+\par   * {\b Nach-Links }          - verschiebt den Text um ein Zeichen nach
+\par                            links
+\par   * {\b Bild-Nach-Unten}      - springt einen Bildschirm nach unten
+\par   * {\b Bild-Nach-Oben  }     - springt einen Bildschirm nach oben
+\par   * {\b Nach-Rechts          }- verschiebt den Text um ein Zeichen nach
+\par                            rechts
+\par   * {\b Nach-Oben }           - rollt den Text in der Anzeige eine Zeile 
+\par                            abw\'84rts
+\par 
+\par {\fs28\cf6 >>I_abrt
+\par }@P H.Default I_NoMaximize
+\par                               {\i Abbrechen}
+\par 
+\par Mit Abbruch beenden Sie m\rdblquote glicherweise #PROGNAME#, {\b bevor} er die notwendigen \'8enderungen in den Systemdateien vornehmen konnte. Starten Sie nach Abbruch #PROGNAME# erneut, soda\'e1 die \'8enderungen vollst\'84ndig abgeschlossen werden k
+\rdblquote nnen.
+\par 
+\par #FLENME____# Dateien wurden auf die Festplatte kopiert. Sie sind m\rdblquote glicherweise {\b nicht }funktionsf\'84hig.
+\par 
+\par {\fs28\cf6 >>I_srcdrv
+\par }@P H.Default I_NoMaximize
+\par                         {\i Quellenlaufwerk angeben}
+\par 
+\par #PROGNAME# mu\'e1 Dateien, insbesondere die Datei #PRODFILE#.1, von der {\b Installationsdiskette} auf die Festplatte kopieren. Diese Datei kann auf ein beliebiges Laufwerk - auch ein Netzlaufwerk - kopiert werden.
+\par 
+\par Bei Aufforderung zur Disketteneingabe legen Sie die #FLENME_____# {\b Diskette} in das Laufwerk und geben den entsprechenden Laufwerks-
+\par Buchstaben an. Sie k\rdblquote nnen hier Lauferk/Pfad der o.g. Datei (ggf. auf dem Netzlaufwerk) angeben.
+\par 
+\par {\fs28\cf6 >>I_cpyrght
+\par }@P H.Default I_NoMaximize
+\par                                {\i Copyright}
+\par 
+\par Bitte beachten Sie, da\'e1 #FLENME____# jeweils nur auf {\b einer Maschine} gestartet werden darf. F\'81r den Einsatz dieses Programmes auf mehr als einer Maschine zu einer Zeit ben\rdblquote tigen Sie eine Lizenz f\'81r jede Maschine.
+\par 
+\par Sie d\'81rfen diese Software auf verschiedenen Maschinen einsetzen, vorausgesetzt, sie wird von allen anderen Maschinen au\'e1er dem aktuellen System {\b entfernt}.
+\par 
+\par N\'84here Informationen entnehmen Sie bitte den Lizenzvereinbarungen am Anfang des {\b Installationshandbuches.}
+\par 
+\par {\fs28\cf6 >>I_userinfo
+\par }@P H.Default I_NoMaximize
+\par                {\i Name un}{\i d Seriennummer registrieren}
+\par 
+\par Geben Sie den Namen f\'81r die Registrierung von #FLENME____# ein. #PROGNAME# ben\rdblquote tigt den {\b Namen}, um dieses Exemplar von #FLENME____# zu personalisieren.
+\par 
+\par Geben Sie die Seriennnummer in der korrekten Form an. Die Nummer befindet sich auf der R\'81ckseite des Qualitas MAX 8 Handbuch- und Disketten- Umschlags. Die Seriennummer mu\'e1 aus {\b genau 12 Ziffern }bestehen. Andere Eingaben werden abgewiesen.
+
+\par 
+\par Mit der R\'81cktaste, den Tasten EINFG, ENTF, POS1, ENDE und den Pfeiltasten k\rdblquote nnen Sie sich innerhalb der Felder bewegen.
+\par 
+\par 
+\par {\fs28\cf6 >>I_destdrv
+\par }@P H.Default I_NoMaximize
+\par                            {\i Zielverzeichnis}
+\par 
+\par #PROGNAME# legt ein {\b Verzeichnis} mit dem Namen #DIR# an und kopiert die angeforderten Dateien in das Verzeichnis #DIR#.
+\par 
+\par Wenn Sie die #FLENME____# Dateien in ein bereits bestehendes Verzeichnis kopieren oder ein neues Verzeichnis mit einem anderen Namen anlegen m\rdblquote chten, geben Sie das entsprechende {\b Laufwerk und den Pfad} an. 
+\par 
+\par Mit der R\'81cktaste, den Tasten EINFG, ENTF, POS1, ENDE und den Pfeiltasten k\rdblquote nnen Sie sich innerhalb des Feldes bewegen.
+\par 
+\par {\fs28\cf6 >>I_bootdsk
+\par }@P H.Default I_NoMaximize
+\par                          {\i Boot-Laufwerk angeben}
+\par 
+\par Zur Installation von #FLENME____#, mu\'e1 m\rdblquote glicherweise die Datei CONFIG.SYS ge\'84ndert werden. Geben Sie den Buchstaben des {\b Boot}-{\b Laufwerks} f\'81r dieses System ein.
+\par 
+\par Die Datei {\b CONFIG.SYS} mu\'e1 sich im Stammverzeichnis des Boot-Laufwerks befinden. Ist CONFIG.SYS nicht vorhanden, kann #PROGNAME# diese Systemdatei anlegen. 
+\par 
+\par Sie {\b m\'81ssen }einen zul\'84ssigen Laufwerksbuchstaben angeben, auch wenn Sie nicht wollen, da\'e1 #PROGNAME# die Datei CONFIG.SYS editiert.
+\par 
+\par {\fs28\cf6 >>I_refdsk
+\par }@P H.Default I_NoMaximize
+\par                       {\i Referenzdiskette einlegen}
+\par 
+\par #FLENME____# mu\'e1 die Informationen der Rechner-{\b Referenzdiskette} lesen. Sie haben diese Referenzdiskette mit Ihrem Computer erhalten.
+\par 
+\par Bitte legen Sie eine Arbeitskopie Ihrer Referenzdiskette ein. {\b VERWENDEN SIE NICHT DAS ORIGINAL IHRER REFERENZDISKETTE.}
+\par 
+\par {\fs28\cf6 >>I_getmono
+\par }@P H.Default I_NoMaximize
+\par                   {\i Monochr}{\i om-Bereich wiederherstellen}
+\par 
+\par #PROGNAME# hat verf\'81gbare Regionen im Speicherbereich des Monochrom-Adapters ({\b MDA}) gefunden. #FLENME____# kann m\rdblquote glicherweise den gesamten MDA-Bereich als HiDOS-Speicher zur Verf\'81gung stellen.
+\par \pard 
+\par Mit Auswahl der Option {\b JA }veranla\'e1t #PROGNAME# #FLENME____# den MDA-Speicherbereich als HiDOS-Speicher zu nutzen. Es f\'81
+gt die entsprechenden USE= Anweisungen in die #FLENME____# Profildatei ein. #PROGNAME# kann Netzwerkkarten und andere Karten erkennen, die auf diesen Bereich zugreifen, vorausgesetzt, sie haben den Initialisierungsproze\'e1 bereits durchlaufen.
+\par 
+\par F\'81r die Anwendung des DOS-Befehls {\b MODE MONO} (f\'81r den der MDA-Bereich erforderlich ist), sollten Sie im Dialogfeld die Option {\b Nein }w\'84hlen. Bei Einsatz eines Programmes aus der nachfolgenden Liste sollten Sie ebenfalls die Option {\b 
+Nein }w\'84hlen. Diese Programme greifen auf den MDA-Bereich zu. Mit Auswahl der Option {\b Nein }wird #FLENME____# diesen MDA-Bereich dann nicht als HiDOS-Speicher nutzen.
+\par 
+\par   * {\b The SoftKicker} von ARISTOCAD
+\par   * {\b Clear} von Clear Software
+\par   * {\b SuperCalc} von Computer Associates International
+\par 
+\par (Die oben genannten Software-Pakete sind registrierte Warenzeichen der entsprechenden Firmen.)
+\par 
+\par Einige Super VGA-Adapter greifen ebenfalls auf den MDA-Bereich zu.
+\par 
+\par {\fs28\cf6 >>I_getdosdir
+\par }@P H.Default I_NoMaximize
+\par                             {\i DOS Verzeichnis}
+\par 
+\par Wenn Sie es w\'81nschen, wird #PROGNAME# Hilfe-Informationen f\'81r die  Qualitas Produkte #FLENME#, 386LOAD, 386UTIL, ASQ, MAX, Maximize und SnapShot in das DOS 5.x Hilfe-System aufnehmen. #PROGNAME# ben\rdblquote tigt dazu die DOS 5.x {\b Hilfe}
+-Datei. Diese Datei - DOSHELP.HLP - befindet sich normalerweise Verzeichnis der DOS Dateien.
+\par 
+\par Geben Sie {\b Laufwerk und Pfad} ihres DOS-Verzeichnisses an.
+\par 
+\par Mit der R\'81cktaste, den Tasten EINFG, ENTF, POS1, ENDE und den Pfeiltasten k\rdblquote nnen Sie das Feld ver\'84ndern.
+\par 
+\par {\fs28\cf6 >>I_configsys
+\par }@P H.Default I_NoMaximize
+\par                          {\i Systemdateien \'84ndern}
+\par 
+\par #PROGNAME# mu\'e1 in den folgenden Dateien m\rdblquote glicherweise \'8enderungen vornehmen:
+\par 
+\par CONFIG.SYS
+\par AUTOEXEC.BAT
+\par #PRODFILE#.PRO
+\par 
+\par Mit der Auswahl {\b Ja} wird #PROGNAME# eine Sicherungskopie anfertigen und/oder CONFIG.SYS, AUTOEXEC.BAT und eine #FLENME____# PROfildatei anlegen.
+\par 
+\par Mit der Option {\b Abbruch }beendet #PROGNAME# seinen Ablauf und kehrt zur DOS-Ebene zur\'81ck. Anschlie\'e1end m\'81ssen Sie die Systemdateien editieren. Die erforderlichen \'8enderungen finden Sie in den folgenden Dateien:
+\par 
+\par     *.ADD Dateien zeigen die Dateien in neuer Version
+\par     *.DIF Dateien zeigen zeileweise alle \'8enderungen, die
+\par       #PROGNAME# vorgenommen h\'84tte; es bedeuten:
+\par 
+\par       {\b GLEICH:} Diese Zeile bliebe unver\'84ndert.
+\par       {\b HINZU :} Diese Zeile w\'81rde hinzugef\'81gt.
+\par       {\b LOESCH:} Diese Zeile w\'81rde gel\rdblquote scht.
+\par 
+\par N\'84here Informationen \'81ber die manuelle Konfiguration von #FLENME____# erhalten Sie in der Dokumentation{\b .}
+\par \pard \qj 
+\par \pard {\fs28\cf6 >>I_maximize
+\par }@P H.Default I_NoMaximize
+\par                                {\i Maximize}
+\par 
+\par Nach {\b Abschlu\'e1} des #PROGNAME# Vorganges werden Sie gefragt, ob nun das Konfigurationsprogramm von #FLENME____#, Maximize, gestartet werden soll. Wir empfehlen Ihnen mit {\b Ja }zu antworten und Maximize zu starten.
+\par 
+\par \pard \tx360 Maximize analysiert die System-Hardware und pa\'e1
+t #FLENME____# automatisch Ihrem System an. Maximize ist auch in der Lage, speicher-residente Programme und Treiber zu erkennen und diejenigen zu identifizieren, die in den HiDOS-Speicher geladen werden k\rdblquote nne
+n. Somit wird Ihren Anwendungsprogrammen der {\b maximale} konventionelle Speicher zur Verf\'81gung gestellt.
+\par \pard 
+\par N\'84here Informationen, wie Sie die speicherresidente Software in den HiDOS-Speicher verlagern k\rdblquote nnen, erhalten Sie in der Dokumentation.
+\par 
+\par Wenn Sie Maximize nicht starten m\rdblquote chten, kehrt #PROGNAME# zur {\b DOS}-Ebene zur\'81ck.{\b 
+\par }
+\par Wenn #PROGNAME# seine Aufgabe beendet hat, k\rdblquote nnen Sie Maximize in jedem Fall ablaufen lassen - auch wenn ein anderer Memory Manager aktiv ist. Obwohl #PROGNAME# Referenzen auf diesen vorherigen Memory Manager entfernt hat, mu\'e1
+ #PROGNAME# zum Entfernen dieses Memory Managers aus dem Speicher das System neu starten.
+\par 
+\par \pard\plain \s1 \f4\fs28\cf6\lang1033 >>I_nomaximize
+\par \pard\plain \f4\lang1033 @P H.Default I_NoMaximize
+\par                              {\i Kein Maximize}
+\par 
+\par Wir empfehlen Ihnen {\b ausdr\'81cklich}, nach Installation von #PROGNAME# Maximize zu starten. Maximize konfiguriert Ihr System so, da\'e1 die  Memory Management Funktionen der Qualitas Software wirksam werden.
+\par 
+\par Maximize kann auch sp\'84ter aus der DOS-Befehlsebene oder aus der MAX-Oberfl\'84che aufgerufen werden.
+\par 
+\par \pard\plain \s1 \f4\fs28\cf6\lang1033 >>I_swapdrive
+\par \pard\plain \f4\lang1033 @P H.Default I_swapdrive
+\par              {\i Unterst\'81tzung f\'81r Disk-Komprimierung}
+\par 
+\par #PROGNAME# erkennt die meisten Disk-Komprimierungsprogramme. Die Option /K erlaubt f\'81r nicht unterst\'81tzte Produkte eine manuelle Eingabe der Informationen.
+\par 
+\par {\b Ist #ARG4_# komprimiert?}
+\par 
+\par Ihr Laufwerk ist komprimiert, wenn ein besonderer Software-Treiber in CONFIG.SYS die Daten dieses Laufwerks verf\'81gbar macht. Ohne den mit dieser Software gelieferten Treiber ist das Laufwerk nur als Datei auf der Festplatte erkennbar.
+\par 
+\par {\b Dieses Laufwerk kann ein sog. getauschtes Laufwerk (Swapped Drive) sein. Welcher Laufwerksbuchstabe ist f\'81r #ARG4_# zum Boot-Zeitpunkt g\'81ltig? (Wenn das Laufwerk zum Boot-Zei}{\b tpunkt nicht vorhanden ist, geben Sie hier nichts an.)}
+\par 
+\par Einige Disk-Komprimierungsprogramme tauschen Laufwerkskennungen, soda\'e1 das erzeugte neue Laufwerk wie das Ursprungslaufwerk angesprochen werden kann. Diese Wirkung wird \'81blicherweise mit Hilfe eines weiteren Treibers in CONFIG.SYS erzielt.
+\par 
+\par {\b Ihr Boot-Laufwerk ist #ARG1#:. Die vorherige Laufwerkskennung f\'81r Laufwerk #ARG1#: ist #ARG3#
+\par }
+\par \pard\plain \s1 \f4\fs28\cf6\lang1033 >>I_MBMenu
+\par \pard\plain \f4\lang1033 @P H.Default I_MBMenu
+\par                        {\i MultiConfig}
+\par 
+\par #PROGNAME# hat erkannt, da\'e1 Sie MS DOS 6 MultiConfig benutzen. Mit den Pfeiltasten NACH-OBEN bzw. NACH-UNTEN w\'84hlen Sie die gew\'81nschte Konfiguration. Best\'84tigen Sie Ihre Wahl mit der EINGABETASTE. #PROGNAME# f\'81
+gt den #FLENME____# Treiber nur zu der gew\'84hlten Konfiguration hinzu. Wenn Sie mit Maximize fortsetzen, wird die gew\'84hlte Konfiguration optimiert.
+\par \pard 
+\par F\'81r die Aufnahme des #FLENME____# in weitere Konfigurationen rufen Sie #PROGNAME# /r f\'81r einen Refresh der Installation auf. Damit wird der gew\'84hlte Konfigurationsblock um den #FLENME____# Ger\'84tetreiber erg\'84nzt.
+\par 
+\par \pard\plain \s1 \f4\fs28\cf6\lang1033 >>H.MBMenu
+\par \pard\plain \f4\lang1033 #PROGNAME# hat erkannt, da\'e1 Sie MS DOS 6 MultiConfig benutzen. Bitte w\'84hlen Sie, in welcher Konfiguration #FLENME___# installiert werden soll und dr\'81cken Sie die EINGABETASTE.
+\par 
+\par \pard\plain \s1 \f4\fs28\cf6\lang1033 >>H.MBMenu2
+\par \pard\plain \f4\lang1033 M\rdblquote chten Sie #FLENME___# in einem weiteren Konfigurationsblock installieren, rufen Sie #PROGNAME# /r f\'81r einen Refresh Ihrer MultiConfig auf.
+\par 
+\par \pard\plain \s1 \f4\fs28\cf6\lang1033 >>I_QMT
+\par \pard\plain \f4\lang1033 @P H.Default I_QMT
+\par                    {\i Qualitas Memory Tester}
+\par 
+\par Der Qualitas Memory Tester (QMT) arbeitet mit hochentwickelten Pr\'81fmethoden zum Aufsp\'81ren m\rdblquote glicher Probleme im PC-Speichersystem. QMT kann h\'84ufig Speicherfehler finden, die vom Einschalt-Selbsttest beim Start der Ger\'84
+te nicht erkannt werden. Einige der m\rdblquote glichen Speicherprobleme umfassen Luftfeuchtigkeit, statische Aufladung, Temperaturschwankungen und Ver\'84nderungen des Luftdrucks.
+\par 
+\par Auswahl {\b Ja} installiert QMT zur Ausf\'81hrung im Schnelldurchlauf (Quick Modus) bei jedem Systemstart Ihres Computers. Die t\'84gliche \'9aberpr\'81fung des verf\'81gbaren Speichers bietet einige Vorteile. F\'81r eine vollst\'84ndige \'9aberpr\'81
+fung des gesamten Systemspeichers sollte QMT von Zeit zu Zeit auf dem System in einer Konfiguration ohne Memory Manager und ohne andere residente Programme, die Erweiterungsspeicher benutzen, eingesetzt werden.
+\par 
+\par Weitere Einzelheiten dazu erl\'84utert die Dokumentation.
+\par 
+\par \pard\plain \s1 \f4\fs28\cf6\lang1033 >>I_QMTMB
+\par \pard\plain \f4\lang1033 @P H.Default I_QMTMB
+\par                    {\i Qualitas Memory Tester}
+\par 
+\par Der Qualitas Memory Tester (QMT) arbeitet mit hochentwickelten Pr\'81fmethoden zum Aufsp\'81ren m\rdblquote glicher Problem im PC-Speichersystem. QMT kann h\'84ufig Speicherfehler finden, die vom Einschalt-Selbsttest beim Start der Ger\'84
+te nicht erkannt werden. Einige der m\rdblquote glichen Speicherprobleme umfassen Luftfeuchtigkeit, statische Aufladung, Temperaturschwankungen und Ver\'84nderungen des Luftdrucks.
+\par 
+\par Auswahl {\b Ja} installiert QMT am Anfang der AUTOEXEC zur Ausf\'81hrung im Schnelldurchlauf (Quick Modus) bei jedem Systemstart Ihres Computers.
+\par 
+\par Auswahl {\b Nein} installiert QMT nicht.
+\par 
+\par Die t\'84gliche \'9aberpr\'81fung des verf\'81gbaren Speichers bietet einige Vorteile. F\'81r eine vollst\'84ndige \'9aberpr\'81
+fung des gesamten Systemspeichers sollte QMT von Zeit zu Zeit auf dem System in einer Konfiguration ohne Memory Manager und ohne andere residente Programme, die Erweiterungsspeicher benutzen, eingesetzt werden.
+\par 
+\par Weitere Einzelheiten zum Qualitas Memory Tester erl\'84utert die Dokumentation.
+\par 
+\par \pard\plain \s1 \f4\fs28\cf6\lang1033 >>I_EMSOn
+\par \pard\plain \f4\lang1033 @P H.Default I_EMSOn
+\par                 {\i Expanded Memory Services (EMS)}
+\par 
+\par {\f3 Der aktuelle Memory Manager wurde f\'81r EMS Services (Expanded Memory) konfiguriert.}
+\par 
+\par {\f3 Auswahl }{\b\f3 Ja}{\f3  schaltet die}{\f3  #FLENME____# EMS-Unterst\'81tzung ein.}
+\par 
+\par {\f3 Auswahl }{\b\f3 Nein}{\f3  schaltet die #FLENME____# EMS-Unterst\'81tzung aus. Damit wird kein EMS-Seitenrahmen (Page Frame) ben\rdblquote tigt und Sie erhalten 64 KB mehr HiDOS Speicher.
+\par }
+\par \pard\plain \s1 \f4\fs28\cf6\lang1033 >>I_EMSOff
+\par \pard\plain \f4\lang1033 @P H.Default I_EMSOff
+\par                   {\i Standard-EMS-Konfiguration}
+\par 
+\par {\f3 Das System enth\'84lt keinen Memory Manager f\'81r die Bereitstellung von EMS Services (Expanded Memory).}
+\par 
+\par {\f3 Auswahl }{\b\f3 Nein}{\f3  schaltet die #FLENME____# EMS-Unterst\'81tzung aus. Damit wird kein EMS-Seitenrahmen (Page Frame) ben\rdblquote tigt und S}{\f3 ie erhalten 64 KB mehr HiDOS Speicher.}
+\par 
+\par {\f3 Auswahl }{\b\f3 Ja}{\f3  schaltet die #FLENME____# EMS-Unterst\'81tzung ein.}
+\par 
+\par {\fs28\cf6 >>H.Index
+\par }@P H.Index H.Index
+\par                          {\i #PROGNAME# Hilfe-Index
+\par }
+\par Mit der {\b rechten/linken} Pfeiltaste w\'84hlen Sie ein Thema. Dr\'81cken Sie anschlie\'e1end die Eingabetaste.
+\par 
+\par {\b Themen---------------------  Hilfe-Themen--------------------------}
+\par {\ul abbrechen}{\v I_abrt}                    abbrechen
+\par {\ul Boot-Laufwerk}{\v I_bootdsk}                Boot-Laufwerk angeben
+\par {\ul Copyright}{\v I_cpyrght}                    Copyright
+\par {\ul Datei-Betrachter, Bildschirm}{\v H.U_Browse} Datei-Betrachter anwenden
+\par {\ul Datei-Betrachter, Tasten}{\v H.U_Browse}     Datei-Betrachter anwenden
+\par {\ul DEVICE, Befehl}{\v I_configsys}               Profildatei anlegen
+\par {\ul Dialogfeld "Druck"}{\v H.U_Print}           Umgang mit dem Druck-System
+\par {\ul Dialogfeld-Schaltfl\'84chen}{\v H.U_Dial}     Umgang mit einem Dialogfeld
+\par {\ul DOS Hilfe}{\v I_getdosdir}                    DOS Verzeichnis
+\par {\ul Feldeditor}{\v H.U_Dial}                   Umgang mit einem Dialogfeld
+\par {\ul Hilfen zum Bl\'84ttern}{\v H.U_Help}          Einf\'81hrung in das Hilfe-System
+\par {\ul Hilfe-System, Schaltfl\'84chen}{\v H.U_Help}  Einf\'81hrung in das Hilfe-System
+\par {\ul Installations-Verzeichnis}{\v I_destdrv}    Zielverzeichnis
+\par {\ul Kontrollk\'84stchen}{\v H.U_Dial}             Umgang mit einem Dialogfeld
+\par {\ul Maximize}{\v I_maximize}                     Maximize
+\par {\ul Monochrom-Speicher}{\v I_getmono}           Monochrom-Bereich wiederherstellen
+\par {\ul Optionsschalter}{\v H.U_Dial}              Umgang mit einem Dialogfeld
+\par {\ul PROfildatei}{\v I_configsys}                  Profildatei anlegen
+\par {\ul Qualitas Memory Tester}{\v I_QMT}       Speicher \'81berpr\'81fen
+\par {\ul Quellenla}{\ul ufwerk}{\v I_srcdrv}              Quellenlaufwerk festlegen
+\par {\ul Registrierung}{\v I_userinfo}                Namen registrieren
+\par {\ul Schaltfl\'84chen}{\v H.Default}                Schaltfl\'84chen benutzen
+\par {\ul Spr\'81nge zu verwandten Themen}{\v H.U_Help} Einf\'81hrung in das Hilfe-System
+\par {\ul Text-Meldung}{\v H.U_Dial}                 Umgang mit einem Dialogfeld
+\par {\ul Themen}{\v H.Contents}                       Hilfe-Themen
+\par {\ul Unterfenster}{\v H.U_Dial}                 Umgang mit einem Dialogfeld
+\par 
+\par {\fs28\cf6 >>NOTES
+\par }HINWEIS: Der folgende Text ist g\'81ltig, er ist jedoch nicht im Inhaltsverzeichnis, im Index oder in der Bl\'84tter-Liste enthalten.
+\par \pard 
+\par {\fs28\cf6 >>I_updatedir
+\par }@N I_updatedir I_updatedir
+\par                             {\i MAX Verzeichnis}
+\par 
+\par #PROGNAME# funktioniert nicht ohne Qualitas MAX oder BlueMAX. Sie m\'81ssen das {\b Laufwerk und den Pfad }der Qualitas MAX oder BlueMAX-Software angeben.
+\par 
+\par Mit der R\'81cktaste, den Tasten EINFG, ENTF, POS1, ENDE und den Pfeiltasten k\rdblquote nnen Sie das Feld ver\'84ndern.
+\par 
+\par Das von Ihnen angegebene Unterverzeichnis {\b mu\'e1} folgende Dateien enthalten:
+\par 
+\par   * 386MAX.SYS oder BlueMAX.SYS
+\par   * 386UTIL.COM
+\par   * 386LOAD.COM
+\par 
+\par Wenn diese Dateien nicht im Unterverzeichnis vorhanden sind, dann kopieren Sie diese erneut von der Originaldiskette, bevor Sie #PROGNAME# starten.
+\par 
+\par }

@@ -1,0 +1,183 @@
+{\rtf1\ansi \deff276{\fonttbl{\f276\fmodern\fcharset0\fprq0 pica;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;
+\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\widctlpar 
+\f276 \snext0 Normal;}{\s1\widctlpar \f276 \sbasedon0\snext0 heading 1;}{\s2\widctlpar \f276 \sbasedon0\snext0 heading 2;}{\s3\widctlpar \f276 \sbasedon0\snext0 heading 3;}{\*\cs10 \additive Default Paragraph Font;}{
+\s15\li708\widctlpar \f276 \sbasedon0\snext15 Normal Indent;}{\s16\widctlpar \f276\fs28\cf6 \sbasedon0\snext0 Context;}{\s17\fi-288\li288\widctlpar \f276\fs16\cf2 \sbasedon0\snext17 Comment;}}{\info
+{\title Install medium dialogs, German}{\author Henry Groover}{\operator Klaus Albrecht}{\creatim\yr1992\mo9\dy16\hr16\min21}{\revtim\yr1996\mo2\dy15\hr21}{\version10}{\edmins0}{\nofpages6}{\nofwords1168}{\nofchars6661}{\vern57431}}\margl1440\margr3456 
+\facingp\widowctrl\ftnbj\aenddoc\ftnrestart\hyphhotz425\noextrasprl\prcolbl\cvmme\sprsspbf\brkfrm\swpbdr\hyphcaps0\fracwidth \fet0{\*\template C:\\QUI\\UIHELP\\GR_M_HLP.DOT}\sectd \linex0\headery709\footery709\colsx709\endnhere {\*\pnseclvl1
+\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5
+\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang
+{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \s17\fi-288\li288\widctlpar \f276\fs16\cf2 Install Message Text, Medium Messages
+\par by Stan Leszynski
+\par These notes are not a live context
+\par Line width 51
+\par !!! changed to 56 by Klaus !!!
+\par \pard \s17\fi-288\li288\widctlpar Note that the margins need to be 0.01" smaller than common sense would dictate.  One might think that setting margins to
+ 1" left and 1.9" right with a paper width of 8.5" would yield a maximum characters per line of 56 when using a 12 point fixed width font, but alas! it is not so.
+\par \pard \s17\fi-288\li288\widctlpar Context strings begin with >> 
+\par \pard \s17\fi-288\li288\widctlpar Use ## to surround replaceable parameters, tag _ at end of parameter to reserve spaces for attribute if ## block not big enough to properly wrap
+\par \pard \s17\fi-288\li288\widctlpar MSWord file use:
+\par  Set Printer to Generic/Text only on File:
+\par  Set View to Page mode to see wrapping
+\par  Default tabs 0
+\par  Left margin 1
+\par  Right margin 1.91"
+\par  Top margin 0
+\par  Bottom margin 0
+\par For indented lines or to get desired wrapping, use hard returns
+\par Text highlighting:
+\par  use BOLD for accenting= yellow text
+\par 
+\par \pard\plain \widctlpar\tx6300 \f276 {\fs28\cf6 >>M.BadDOSSubdir
+\par }\pard \widctlpar\tx6300 #PROGNAME# konnte keine DOS 5.x Hilfedateien in
+\par   #ARG1#  finden.
+\par 
+\par {\b M”chten Sie ein neues Verzeichnis angeben?}
+\par \pard \widctlpar\tx6300 {\fs28\cf6 >>M.BadUpdSubdir
+\par }\pard \widctlpar\tx6300 #PROGNAME# konnte keine vorhandene Lizenz eines Qualitas Memory Management Produktes finden. Falls Sie die Installation fortsetzen, kann #PROGNAME# die korrekte Arbeitsweise aller Funktionen nicht garantieren.
+\par \pard \widctlpar\tx6300 
+\par \pard \widctlpar {\b M”chten Sie den Vorgang fortsetzen?
+\par 
+\par }\pard \widctlpar {\b W„hlen Sie Vorher fr die erneute Eingabe des Verzeichnisses Ihrer vorhandenen Installation.
+\par }\pard \widctlpar 
+\par \pard \widctlpar {\fs28\cf6 >>M.BadWinSubdir
+\par }\pard \widctlpar #PROGNAME# konnte keine Windows-Dateien in 
+\par   #ARG1#  finden.
+\par 
+\par {\b M”chten Sie ein neues Verzeichnis angeben?}
+\par \pard \widctlpar {\fs28\cf6 >>M.DestDir
+\par }\pard \widctlpar {\b Geben Sie ein Verzeichnis fr Programmdateien an:}
+\par 
+\par 
+\par \pard \widctlpar {\fs28\cf6 >>M.DOSHelp
+\par }\pard \ri-36\widctlpar #PROGNAME# hat auf diesem System DOS 5.x gefunden.
+\par \pard \ri-36\widctlpar Die DOS Hilfe-Information kann fr Qualitas Produkte erweitert werden.
+\par \pard \widctlpar 
+\par {\b Soll #PROGNAME# zus„tzlichen Hilfe-Text in die
+\par DOS-Hilfedatei schreiben?
+\par }\pard \widctlpar {\fs28\cf6 >>M.DOSPath
+\par }\pard \widctlpar #PROGNAME# muá die Position des DOS-Verzeichnisses kennen, so daá es den Hilfe-Text fr Qualitas Produkte einfgen kann.
+\par \pard \widctlpar 
+\par \pard \widctlpar {\b Geben Sie Laufwerk/Pfad des DOS-Verzeichnisses an.
+\par }\pard \widctlpar 
+\par 
+\par \pard \widctlpar {\fs28\cf6 >>M.GetMono
+\par }\pard \widctlpar Wir haben verfgbare Speicher-Regionen im Bildschirm-Bereich des Monochrom-Adapters (MDA) gefunden.
+\par \pard \widctlpar 
+\par \pard \widctlpar #PROGNAME# kann Anweisungen in die Profildatei von #FLENMEXT# schreiben, welche die MDA-Region als HiDOS bereitstellt.
+\par \pard \widctlpar 
+\par \pard \widctlpar {\b Soll #PROGNAME# veranlassen, daá die MDA-Region als HiDOS-Speicher genutzt wird?}
+\par \pard \widctlpar {\fs28\cf6 >>M.MaxBack
+\par }\pard \widctlpar Standard #PROGNAME# ist abgeschlossen. Die alte Installation ist gesichert in 
+\par \pard \widctlpar 
+\par #ARG1#.
+\par 
+\par Mit Eingabe #ARG2# l”schen Sie die Sicherung.
+\par 
+\par \pard \widctlpar Maximize ist ein Programm, das Ihr System und den Programm-Lader 386LOAD automatisch konfiguriert.
+\par \pard \widctlpar Sie erhalten das Maximum an konventionellem Speicher.
+\par \pard \widctlpar 
+\par \pard \widctlpar {\b Soll Maximize jetzt gestartet werden?}
+\par \pard \widctlpar {\fs28\cf6 >>M.Maximize
+\par }\pard \widctlpar Standard #PROGNAME# ist abgeschlossen.
+\par 
+\par \pard \widctlpar Maximize ist ein Programm, das Ihr System und den Programm-Lader 386LOAD automatisch konfiguriert. SIe erhalten das Maximum an konventionellem Speicher.
+\par \pard \widctlpar 
+\par \pard \widctlpar {\b Soll Maximize jetzt gestartet werden?}
+\par \pard \widctlpar {\fs28\cf6 >>M.NoCache
+\par }\pard \widctlpar #PROGNAME# hat keinen aktiven Platten-Cache auf diesem System gefunden. #QCACHE# ist im #FLENME____#-Paket enthalten. Auf Wunsch kann #PROGNAME# die entsprechenden Anweisungen f
+r #QCACHE# in Ihre Systemdateien CONFIG.SYS und AUTOEXEC.BAT aufnehmen. #PROGNAME# kann mit Reduzierung der Pufferzahl in der Datei CONFIG.SYS auf #QCACHE_BUF# zus„tzlichen Speicher gewinnen. Dies ist der empfohlene Wert f
+r eine Systemoptimierung mit #QCACHE#.
+\par \pard \widctlpar 
+\par \pard \widctlpar {\b Soll #QCACHE# installiert werden?
+\par }\pard \widctlpar {\fs28\cf6 >>M.NoInstall
+\par }\pard \widctlpar #PROGNAME# hat dieses System untersucht und konnte keine Hardware finden, die ein Qualitas Produkt untersttzt. Deshalb muá der Vorgang abgebrochen werden. Systemvoraussetzung fr ein Memory Management-Produkt von Qualitas ist:
+
+\par \pard \widctlpar 
+\par \pard \widctlpar   {\b\i *} ein 80386 (oder h”her) Prozessor oder
+\par   {\b\i *} ein Chipset von Chips & Technologies oder
+\par   {\b\i *} Hardware LIM 4.0 EMS Untersttzung.
+\par \pard \widctlpar 
+\par \pard \widctlpar {\b Drcken Sie die Eingabetaste, um #PROGNAME# zu beenden.}
+\par \pard \widctlpar {\fs28\cf6 >>M.NoMaximize
+\par }\pard \widctlpar Sie m”chten #PROGNAME# ohne Maximize-Ablauf beenden?
+\par \pard \widctlpar 
+\par \pard \widctlpar Maximize konfiguriert Ihr System so, daá der gr”át-
+\par \pard \widctlpar m”gliche konventionelle Speicher zur Verfgung steht.
+\par \pard \widctlpar 
+\par \pard \widctlpar {\b Soll #PROGNAME# jetzt Maximize starten?}
+\par \pard \widctlpar {\fs28\cf6 >>M.NoSmartDrv
+\par }\pard \widctlpar Qualitas empfiehlt Ihnen ausdrcklich, SMARTDRV nicht in den HiDOS-Speicher zu laden. Maximize wird {\b nicht} versuchen, SMARTDRV in den HiDOS-Speicher zu laden. Qualitas bernimmt {\b keine} Verantwortung f
+r Systemfehler, falls Sie SMARTDRV in den HiDOS-Bereich laden!
+\par \pard \widctlpar 
+\par \pard \widctlpar {\b Soll SMARTDRV durch #QCACHE# ersetzt werden?}
+\par \pard\plain \s16\widctlpar \f276\fs28\cf6 >>M.NoWinSupp
+\par \pard\plain \widctlpar \f276 Die haben die DOS Version des Qualitas MAX Setup aufgerufen. Wenn Sie den Vorgang fortsetzen, werden keine Windows-Funktionen installiert. M”chten Sie die Windows-Funktionen nutzen, m
+ssen Sie die Windows-Version des Setup-Programmes aufrufen.
+\par \pard \widctlpar 
+\par \pard \widctlpar {\b M”chten Sie die Windows-Version des Qualitas MAX Setup starten?}
+\par \pard \widctlpar {\fs28\cf6 >>M.NoWin
+\par }\pard \widctlpar #PROGNAME# hat die Verzeichnisse der PATH-Anweisungen durchsucht und keine Windows-Dateien gefunden.
+\par \pard \widctlpar 
+\par \pard \widctlpar {\b Beabsichtigen Sie, Windows mit #FLENME____# zu nutzen?}
+\par \pard \widctlpar {\fs28\cf6 >>M.SmartDrv
+\par }\pard \widctlpar #PROGNAME# hat den Platten-Cache SMARTDRV auf Ihrem System entdeckt. Wir empfehlen Ihnen {\b nicht, }SMARTDRV in den HiDOS-Speicher zu laden. Maximize vermeidet jede Aktion, die SMARTDRV in den HiDOS-Speicher laden k”
+nnte. #QCACHE#, ein Platten-Cache im #FLENME____#-Paket, steigert die Zugriffsgeschwindigkeit fr Platten, stellt den Anwendungsprogrammen mehr Speicher zur Verfgung und funktioniert ausgezeichnet im HiDOS-Speicher. Mit installiertem #QCACHE# k”
+nnen Sie die Pufferzahl in der CONFIG.SYS Datei auf #QCACHE_BUF# reduzieren und so noch mehr Speicher gewinnen.
+\par \pard \widctlpar 
+\par \pard \widctlpar {\b Soll #PROGNAME# veranlassen, daá SMARTDRV durch #QCACHE# ersetzt und die Pufferzahl auf #QCACHE_BUF# reduziert wird?}
+\par \pard \widctlpar {\fs28\cf6 >>M.UpdateDir
+\par }\pard \widctlpar Dieses Produkt ist ein Upgrade fr eine vorhandene Version eines Qualitas Memory Management Produkts.
+\par \pard \widctlpar {\b 
+\par }\pard \widctlpar {\b Geben Sie das Verzeichnis des vorhandenen #FLENME____#, 386MAX oder BlueMAX an:
+\par }\pard \widctlpar 
+\par \pard\plain \s16\widctlpar \f276\fs28\cf6 >>M.SrcDrv
+\par \pard\plain \widctlpar \f276 Legen Sie die #FLENME____# Arbeitskopie in ein Diskettenlaufwerk und geben Sie den Laufwerksbuchstaben ein oder geben Sie Laufwerk und Pfad der Dateien ein:
+\par \pard \widctlpar 
+\par \pard \widctlpar {\fs28\cf6 >>M.WinPath
+\par }\pard \widctlpar {\b Geben Sie Laufwerk und Pfad des Windows Verzeichnisses an:}
+\par \pard \widctlpar 
+\par \pard \widctlpar {\fs28\cf6 >>M.SVGAWarn
+\par }\pard \widctlpar #PROGNAME# hat eine
+\par #ARG1# #ARG2#
+\par Super VGA-Karte mit #ARG3# KB oder mehr Bildschirm-
+\par \pard \widctlpar speicher entdeckt. Dieser Adapter {\b kann} den Adreá-
+\par \pard \widctlpar bereich der Monochrom-Anzeige (MDA) nutzen.
+\par 
+\par \pard \widctlpar #PROGNAME# kann die #FLENMEXT# Profildatei ver„ndern, um die MDA-Region als HiDOS-Speicher einzurichten. M”glicherweise mssen Sie diesen Bereich jedoch unberhrt lassen. Sie k”
+nnten diesen Bereich insbesondere dann als Bildschirmspeicher ben”tigen, wenn eines Ihrer Programme im Super VGA-Modus abl„uft oder eine Emulation fr die Monochrom-Anzeige ben”tigt.
+\par \pard \widctlpar 
+\par \pard \widctlpar {\b Soll #PROGNAME# den Gebrauch der MDA-Region als HiDOS Speicher erm”glichen?}
+\par \pard \widctlpar 
+\par \pard\plain \s16\widctlpar \f276\fs28\cf6 >>M.BootSwap_A
+\par \pard\plain \widctlpar \f276 Sie haben Untersttzung fr den Tausch von Laufwerkskennungen (Drive Swapping) angefordert. #PROGNAME# muá Ihnen einige Fragen stellen. Wenn eine Laufwerkskennung nicht zutrifft, 
+bergehen Sie den Eintrag mit der LEERTASTE.
+\par \pard \widctlpar 
+\par \pard \widctlpar {\b Disk-Komprimierung/Swapping erkannt:} #ARG3____#
+\par {\b Boot-Laufwerk:} #ARG1#
+\par {\b Tats„chliches Boot-Lw:}
+\par {\b CONFIG.SYS und AUTOEXEC kopieren auf:}
+\par \pard \widctlpar 
+\par \pard \widctlpar {\b #FLENME____# Verzeichnis:}
+\par \pard \widctlpar #ARG2#
+\par \pard \widctlpar {\b Laufwerk fr #FLENME____# in CONFIG.SYS:}
+\par {\b Notwendige #FLENME____# Dateien kopieren auf:}
+\par {\b Alternatives Lw fr erf. #FLENME____# Dateien:}
+\par \pard\plain \s16\widctlpar \f276\fs28\cf6 >>M.BootSwap
+\par \pard\plain \widctlpar \f276 Sie installieren #FLENME____# auf
+\par #ARG2#
+\par 
+\par Ist #ARG4_# komprimiert?
+\par 
+\par \pard \widctlpar Dieses Laufwerk kann ein sog. getauschtes Laufwerk (Swapped Drive) sein. Welches ist der Laufwerksbuchstabe fr #ARG4_# zum Boot-Zeitpunkt? (Wenn das Laufwerk zum Boot-Zeitpunkt nicht vorhanden ist, geben Sie hier nichts an.)
+\par \pard \widctlpar 
+\par \pard \widctlpar Ihr Boot-Laufwerk ist #ARG1#:. Die vorherige Laufwerkskennung fr Laufwerk #ARG1#: ist#ARG3#
+\par \pard\plain \s16\widctlpar \f276\fs28\cf6 >>M.QMT
+\par \pard\plain \widctlpar \f276 #FLENME____# enth„lt den Qualitas Memory Tester (QMT). QMT arbeitet mit hochentwickelten Prfverfahren zum Aufspren von Fehlern im Speichersystem Ihres Computers. Speicherfehler k”
+nnen einen Systemabsturz und Datenverlust bewirken.
+\par \pard \widctlpar 
+\par \pard \widctlpar Der QMT-Aufruf kann in die AUTOEXEC.BAT eingetragen werden, sodaá der Speicher bei jedem Systemstart Ihres Computers schnell berprft wird. Auf Ihrem System ben”tigt QMT fr diesen Kurztest ungef„hr #ARG1# Sekunden w
+„hrend des Systemstarts.
+\par \pard \widctlpar 
+\par \pard \widctlpar {\b M”chten Sie, daá #PROGNAME# den QMT-Aufruf in die AUTOEXEC.BAT eintr„gt?}
+\par \pard \widctlpar 
+\par }

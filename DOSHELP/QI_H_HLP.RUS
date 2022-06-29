@@ -1,0 +1,407 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman CG Times (W1);}{\f1\froman Symbol;}{\f2\fswiss Univers (W1);}{\f3\fmodern Courier New;}{\f4\fmodern Courier;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;
+\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;
+\red127\green127\blue0;\red127\green127\blue127;\red192\green192\blue192;}{\stylesheet{\f3\lang1033 \snext0 Normal;}{\s2\fi-288\li576 \f3\lang1033 \sbasedon0\snext2 Outdent4;}{\s3 \f3\fs28\cf6\lang1033 \sbasedon0\snext3 Context;}{\s4\fi-1584\li1872 
+\f3\lang1033 \sbasedon0\snext4 Outdent13;}{\s5\li288 \f3\lang1033 \sbasedon0\snext5 Indent2;}{\s6 \i\f3\lang1033 \sbasedon0\snext6 HelpTopic;}{\s7\li5472\ri-360 \f3\lang1033 \sbasedon0\snext7 QMTSched;}}{\info{\title install help system, help topics}
+{\author Alan C. Lindsay}{\operator Qualitas, Inc.}{\creatim\yr1991\mo12\dy23\hr11\min47}{\revtim\yr1993\mo11\dy23\hr10\min59}{\printim\yr1993\mo8\dy11\hr16\min7}{\version64}{\edmins578}{\nofpages12}{\nofwords4159}{\nofchars27093}{\vern16417}}
+\paperw12240\paperh15840\margl1440\margr1008\margt1440\margb1440\gutter0 \deftab0\widowctrl\ftnbj \sectd \linex0\endnhere \pard\plain \f3\lang1033 {\cf2 QMTSetup Help Text
+\par }\pard \fi-288\li270\ri-2700 {\cf2 These notes are not a live context
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 68
+\par }{\cf2 Context strings begin with >>
+\par }{\cf2 Center the title of each b}{\cf2 lock
+\par }{\cf2 First line is @ plus P (print) or N (noprint) plus stop markers for Prev/Next
+\par }\pard {\cf2 MSWord file use:
+\par }{\cf2  Set Printer to Generic/Text only on File:
+\par }{\cf2  Set View to Page mode to see wrapping
+\par }{\cf2  Default tabs 0
+\par }{\cf2  Left margin 0
+\par }{\cf2  Right margin 1.7"
+\par }{\cf2  Top margin 0
+\par }{\cf2  Bottom margin 0
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns
+\par }{\cf2 Text highlighting:
+\par }\pard {\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text
+\par }{\cf2  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text
+\par }\pard {\cf2  use }{\ul\cf2 UNDERLINE}{\cf2  for context jump= red text
+\par }\pard {\cf2  use }{\b\i\cf2 BOLD ITALICS}{\cf2  for bullets}{\cf2 = yellow text
+\par }\pard \fi-288\li288\ri-2700 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>H.Contents
+\par \pard\plain \f3\lang1033 @P H.Contents I_QMTCfg
+\par \pard                          {\i #PROGNAME# Help Topics
+\par }\pard 
+\par \pard Help system topics displayed in red are context jumps that allow you to move directly to another help topic.  Scroll up and down through the text to find a desired topic, then use the {\b Right} or{\b  Left }
+arrow key to highlight a context jump topic and press {\b Enter}.
+\par \pard 
+\par \pard         - These topics help you use the {\b #PROGNAME# product} -
+\par \pard                            {\ul Using Buttons}{\v H.Default}
+\par                        {\ul Using th}{\ul e Help System}{\v H.U_Help}
+\par                          {\ul Using a Dialog Box}{\v H.U_Dial}
+\par                        {\ul Using the Print System}{\v H.U_Print}
+\par                        {\ul Using the File Browser}{\v H.U_Browse}
+\par \pard    - These {\b #PROGNAME# help messages} are relevant to specific tasks -
+\par \pard      - They may not be as meaningful when read out of context -
+\par \pard                               {\ul Aborting}{\v I_abrt}
+\par                         {\ul Identify Source Drive}{\v I_srcdrv}
+\par                              {\ul Copyright}{\v I_cpyrght}
+\par                          {\ul Name Registra}{\ul tion}{\v I_userinfo}
+\par                        {\ul Destination Directory}{\v I_destdrv}
+\par                           {\ul RSETUP changes}{\v I_configsys}
+\par                           {\ul Testing memory}{\v I_QMT}
+\par                         {\ul Configuring #FLENME#}{\v I_QMTCfg}
+\par \pard             - The topics provide {\b related information} -
+\par \pard                              {\ul Help Index}{\v H.Index}
+\par \pard 
+\par \pard You can browse sequentially through all topics on the list above by using the {\b Next} button now.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>H.Default
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par \pard                             {\i Using Buttons}
+\par \pard 
+\par \pard {\b Bu}{\b ttons}
+ are used to denote important keystrokes available during a function and to allow mouse users to execute the keystrokes.  A button is a small shadowed box at the bottom of the screen, data display window, or dialog box.  The key to press to select the but
+ton's function is highlighted in the button text, or mouse users can click on the button.  Buttons that appear inside a dialog box can also be selected using the Tab and Enter keys (see {\ul Using a Dialog Box}{\v H.U_Dial} for more information).
+\par \pard 
+\par These buttons are available on most screens:
+\par 
+\par \pard   * {\b Abort Esc} - Abort the program at the current process.
+\par   * {\b Help F1} - Display topical help information.
+\par \pard   * {\b Print F2} - Display the {\ul Print Dialog Box}{\v H.U_Print}, where available.
+\par \pard 
+\par \pard \fi-1\li1 Not all function key buttons are available at each program process.  Buttons that are active have a {\b highlighted} key designation on them; inactive buttons have low intensity text.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>H.U_Help
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par \pard                         {\i Using the Help System
+\par }\pard 
+\par The Help system provides topical information on program features.
+\par 
+\par \pard During a program process, if the {\b Help button}
+ at the bottom of the screen is active, pressing the help function key or clicking the mouse on the button will display the help associated with the activity.  Help information that is larger than the display window can be scrolled using PgDn, PgUp, Ctrl-
+Home, Ctrl-End, the arrow keys, or the scroll bars in conjunction with the mouse.
+\par \pard 
+\par When the Help system is displayed, these options are available:
+\par 
+\par \pard   * {\b Topics} - Displays the topics list for the Help system.  Topics
+\par \pard     are listed in the order that they are traversed when browsing
+\par     the Help system with the Next button.
+\par \pard   * {\b Index} - Displays the subject index for the Help system.  Topics
+\par \pard     are listed in alphabetical order by their primary subject(s).
+\par \pard   * {\b Next} - Move to the next help topic in the current browse list
+\par \pard     (see below).
+\par \pard   * {\b Back} - Move sequentially backwards through previously viewed
+\par \pard     topics.  Each time Back is chosen, a previously viewed screen is
+\par     shown, until the original topic chosen with the Help button is
+\par     reached or the limit of 20 backtracks is attained.
+\par 
+\par \pard When a help topic is chosen with the Help button and displayed, a {\b browse list}
+ for the topic becomes active.  The browse list links the topic to other related topics.  To walk the browse list and view related topics, select Next.  Once the Help system is activated, the browse list is reset only when Topics or Index are chosen, or w
+hen a new topic is chosen through a context jump (see below).  Browsing to a related topic does not reset the browse list.  The browse list for the Topics list includes every help topic in the system.
+\par \pard 
+\par \pard Help system text displayed in red is a {\b context jump}
+ that allows you to jump directly to a related help topic.  To select a context jump topic, use the Right or Left arrow key to move to (highlight) the topic then press Enter.  With a mouse, click on the topic to highlight it, or double-click on a highligh
+ted or non-highlighted topic to jump.  To reverse a context jump, choose the Back button to return to the topic that you jumped from.
+\par \pard 
+\par \pard Help information can be printed using the {\ul Print System}{\v H.U_Print}.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>H.U_Dial
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par \pard                          {\i Using a Dialog Box
+\par }\pard 
+\par \pard Dialog boxes appear on top of the current screen information and contain some or all of the following elements.
+\par \pard 
+\par \pard {\b Message Text
+\par }\pard 
+\par \pard Dialog box messages provide current {\b status} information or {\b prompts} for an action required by the user.
+\par \pard 
+\par \pard {\b Subwindows}
+\par \pard 
+\par \pard If the dialog box contains more than one work area or display area, each area will be in a subwindow with a separate title.  The title is highlighted in bold white if the subwindow is active.  To activate a subwindow:
+\par \pard 
+\par \pard   * Use the {\b Tab} and {\b Shift-Tab} keys to move between subwindows; or
+\par   * Use the {\b Alt} key with the highlighted letter in the subwindow
+\par \pard     title; or
+\par \pard   * {\b Click} anywhere in the subwindow with the mouse.
+\par \pard 
+\par \pard {\b Field Editor}
+\par \pard 
+\par \pard A field editor provides an area for {\b text entry}.  Use the Left and Right arrow keys, Backspace, and alphanumeric keys to complete the required entry.  If text values longer than the field editor are allowed, the text will scroll.
+\par \pard 
+\par \pard {\b Checkboxes}
+\par \pard 
+\par \pard A checkbox is an option that is either {\b on or off} as indicated by a check mark enclosed in brackets [].  Within one subwindow, multiple checkboxes can be selected.  To toggle checkboxes on and off, move to the checkbox and press the {\b Spacebar
+} to toggle, or click in the checkbox with the mouse.
+\par \pard 
+\par \pard To move to a checkbox, tab to the subwindow then use the {\b Up} and {\b Down} arrow keys, or use the {\b Alt} key in conjunction with the highlighted letter in the checkbox description.  Moving to a checkbox with the arrow keys does {\b not}
+ toggle the checkbox; moving with the Alt key or the mouse toggles the checkbox.
+\par \pard \fi-1\li1 
+\par \pard \fi-1\li1 {\b Radio Buttons}
+\par \pard \fi-1\li1 
+\par \pard A radio button, enclosed in parentheses (), is either {\b on or off} as indicated by a dot.  Only one radio button in a subwindow can be selected at one time.  Move to the radio button and press the {\b Spacebar}
+ to toggle, or click in the radio button with the mouse.
+\par \pard 
+\par \pard To move to a radio button, tab to the subwindow, then use the {\b Up} and {\b Down} arrow keys, or use the {\b Alt} key in conjunction with the highlighted letter in the button description.  Moving to a radio button with the arrow keys does {\b not}
+ toggle the option; moving with the Alt key or the mouse toggles the option.
+\par \pard 
+\par \pard {\b Buttons}
+\par \pard 
+\par \pard Action buttons at the bottom of the dialog box display important available keystrokes.  The key to press to select the button's function is highlighted in the button text; press the key alon
+e or in conjunction with the Alt key.  Mouse users can click on the button itself.
+\par \pard 
+\par \pard Most dialog boxes contain an {\b OK} button which executes the dialog box feature, and a {\b Cancel}
+ button which cancels the dialog box with no action.  To select the OK button, press O, Alt-O, or the Enter key.  To select the Cancel button, press C, Alt-C, or the Esc key.
+\par \pard 
+\par \pard When a dialog box is opened, one button is shown as the {\b default} button by enclosing the button name in brackets; this button is chosen when Enter is pressed.  In addition to moving the subwindow highlight, the {\b Tab} and {\b Shift-Tab}
+ keys also allow you to highlight a button other than the default button and then press Enter to select it.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>H.U_Print
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par \pard                        {\i Using the Print System
+\par }\pard 
+\par \pard The Print system allows for printing of displayed files and help text.
+\par \pard 
+\par \pard The first subwindow on the print dialog box describes which {\b options} are currently available for printing.  Each option has a checkbox, so multiple options can be selected for printing.
+\par \pard 
+\par \pard The second subwindow on the print dialog box lists the output {\b destinations}.  Each destination has a radio button, so only one destination can be selected.
+\par \pard 
+\par \pard When printing to a {\b file}, Print suggests an output filename or you can enter a valid file specification in the field editor.
+\par \pard 
+\par \pard Use the {\b Tab} key to move between the subwindows and the field editor.  The filename field editor cannot be accessed if the output destination is the printer.
+\par \pard 
+\par \pard When printing {\b All help topics}, the Help Topics list 
+provides the list of topics that will be printed and their print order.  Some incidental help topics may not be included in the Topics list and therefore will not be printed with this feature, but can be printed using the {\b Current help topic}
+ option while viewing the individual help screen.
+\par \pard 
+\par \pard Other information relevant to using the print dialog box can be found in {\ul Using a Dialog Box}{\v H.U_Dial}.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>H.U_Browse
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par \pard                        {\i Using the File Browser}
+\par \pard 
+\par \pard {\b Browser Screen}
+\par \pard 
+\par \pard The browser displays the current {\b filename}
+ in the center of the browse window.  At the upper right of the browse window, a row/column counter is displayed.  The first number is the current line position of the cursor, the second number is the total number of lines in the file, and the third numbe
+r is the current column position.
+\par \pard 
+\par \pard The browser is {\b 256} characters wide (loading files with lines wider than 256 characters may result in some data loss).  The maximum number of lines in a file is limited by memory and varies b
+y system.  On most systems, the limit is at least several thousand lines.
+\par \pard 
+\par \pard {\b Using the Keyboard}
+\par \pard 
+\par \pard The cursor (not visible) sticks to the first line in the display window, even when the text is scrolled down or up.
+\par \pard 
+\par Use the following keys to move within the text:
+\par 
+\par \pard   * {\b Ctrl-End} - Jump to the bottom of the file.
+\par   * {\b Ctrl-Home} - Jump to the top of the file.
+\par   * {\b Ctrl-PgDn} - Jump right one screen (74 columns).
+\par   * {\b Ctrl-PgUp} - Jump left one screen (74 columns).
+\par   * {\b Down }- Scroll the text up one line within the display window.
+\par   * {\b End} - Jump to the end of the first line in the display window.
+\par \pard \fi-1\li1   * {\b Esc} - Exit the browser.
+\par \pard   * {\b Home} - Jump to the beginning of the first line in the display
+\par \pard     window.
+\par \pard   * {\b Left }- Scroll the text one character left.
+\par   * {\b PgDn} - Jump down one screen.
+\par   * {\b PgUp} - Jump up one screen.
+\par   * {\b Right }- Scroll the text one character right.
+\par   * {\b Up }- Scroll the text down one line within the display window.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>I_abrt
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par \pard                               {\i Aborting}
+\par \pard 
+\par \pard Aborting will quit #PROGNAME# {\b without} necessarily completing all changes to configuration and boot files on the target drive.  After aborting, #PROGNAME# should be re-run to completion as soon as is practical.
+\par \pard 
+\par \pard #FLENME# files that have been copied to hard disk remain but may {\b not} be fully functional.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>I_bootdsk
+\par \pard\plain \f3\lang1033 @P H.Default I_bootdsk
+\par \pard                          {\i Identify Boot Drive}
+\par \pard 
+\par \pard Changes to AUTOEXEC.BAT may be necessary to install #FLENME#.  You must enter the letter that designates the {\b boot drive} for this system.
+\par \pard 
+\par \pard You {\b must} enter a valid drive letter even if you do not want #PROGNAME# to edit AUTOEXEC.BAT.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>I_srcdrv
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par \pard                         {\i Identify Source Drive}
+\par \pard 
+\par \pard #PROGNAME# must copy files from the drive containing the distribution files.
+\par \pard 
+\par \pard When prompted, insert the #FLENME_____# disk into a {\b floppy drive} and enter the appropriate letter at the prompt. You may also enter the drive\\path of the location of the distribution files located on a network or alternate drive.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>I_cpyrght
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par \pard                               {\i Copyright}
+\par \pard 
+\par \pard #FLENME# may be run on only {\b one machine} at a time.  If you would like to run it on two or more machines simultaneously, you must purchase a copy of the software for each machine.
+\par \pard 
+\par \pard You may use it on different machines provided you {\b remove} the software from all machines except the one in use.
+\par \pard 
+\par For more information, consult the license agreement.
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>I_userinfo
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par \pard                {\i Name and Serial Number Registrati}{\i on}
+\par \pard 
+\par \pard Enter the name you will use when registering #FLENME#.  #PROGNAME# will {\b ID} this copy of #FLENME# with the name as it is entered.
+\par \pard 
+\par \pard Enter the serial number exactly as it is printed on the title page of your documentation or on the diskette.  The number must contain {\b 11 digits}.  Other numbers & characters are unacceptable.
+\par \pard 
+\par \pard To edit or move within field entries, use Backspace, Ins, Del, Home, End, and the arrow keys.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>I_destdrv
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par \pard                         {\i Destination Directory}
+\par \pard 
+\par \pard #PROGNAME# creates a {\b subdirectory} (called C:\\#FLENME# by default) and copies the required files into it.
+\par \pard 
+\par \pard If you would like to copy the #FLENME# files to an existing subdirectory or create a new subdirectory with a different name, enter the {\b drive and path}.
+\par \pard 
+\par \pard To edit or move within the entry field, use Backspace, Ins, Del, Home, End, and the arrow keys.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>I_configsys
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par \pard                          {\i Making Changes}
+\par \pard 
+\par #PROGNAME# may need to make changes to the following files:
+\par 
+\par AUTOEXEC.BAT
+\par RUTIL.BAT
+\par 
+\par \pard Select {\b OK} at the dialog box and #PROGNAME# will edit and/or create AUTOEXEC.BAT and/or RUTIL.BAT.
+\par \pard 
+\par \pard Select {\b Cancel} at the dialog box and #PROGNAME# will exit to the DOS prompt.  At that point you must edit your system startup files.  You will find the changes you need to make in the following files:
+\par \pard 
+\par     *.ADD files show the file in its altered state
+\par     *.DIF files display a line-by-line status of changes that
+\par       #PROGNAME# would make where
+\par 
+\par \pard       {\b SAME:} indicates the line would not change
+\par       {\b ADD :} indicates the line would be added
+\par       {\b DEL :} indicates the line would be deleted
+\par \pard 
+\par \pard See the {\b User Guide} for instructions on manually configuring #FLENME#.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>I_QMT
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par \pard                        {\i Testing memory}
+\par \pard 
+\par \pard 
+#FLENME# uses advanced memory checking to find problems in your PC's memory system.  #FLENME# detects classes of memory errors not detectable by the basic power on self test (POST) provided at boot-time.  Causes of memory problems include humidity, stat
+ic, aging, radiation, temperature fluctuations, and pressure changes.
+\par \pard 
+\par \pard Select {\b Yes}
+ to install #FLENME# at the top of AUTOEXEC.BAT and run it in the Quick mode when you boot your system.  There are advantages to checking the available portion of the system memory on a daily basis.  However, to fully check all system memory, #FLENME# is 
+best run on systems configured without memory managers or other resident software loaded that uses extended memory.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>I_QMTCfg
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTCfg
+\par \pard                        {\i #FLENME# Configuration
+\par }\pard 
+\par \pard You may select how frequently to run #FLENME#.  By default, #PROGNAME# will configure #FLENME# to run each time you boot your machine.  You may customize your #PROGNAME# to run #FLENME# on the following schedules:
+\par \pard 
+\par ALWAYS:  Every time the system boots.
+\par 
+\par DAILY:   Executes #FLENME# once a day, the first time the system is
+\par          booted after 12:00 AM.
+\par 
+\par WEEKLY:  Executes #FLENME# once a week, on the specified day, the
+\par          first time the system is booted after 12:00 AM.
+\par 
+\par MONTHLY: Executes #FLENME# once a month, on the specified date, the
+\par          first time the system is booted after 12:00 AM.
+\par 
+\par \pard USER DEFINED: Executes #FLENME# once every {\i n} days, where {\i n} is the
+\par \pard          selected number, the first time the system is booted
+\par          after 12:00 AM.
+\par 
+\par \pard You may also run #FLENME# at any time you wish from the DOS prompt.  For the most accurate testing, you should run #FLENME# on a 'clean' system, without any resident software (including memory managers) active.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>H.Index
+\par \pard\plain \f3\lang1033 @P H.Index H.Index
+\par \pard                          {\i #PROGNAME# Help Index
+\par }\pard 
+\par \pard Use the {\b Right/Left} arrow keys to select a subject, then press Enter.
+\par \pard 
+\par \pard {\b Subject--------------------  Help Topic----------------------------}
+\par \pard {\ul Aborting}{\v I_abrt}                     Aborting
+\par {\ul Boot drive}{\v I_bootdsk}                   Identify Boot Drive
+\par {\ul Browser keys}{\v H.U_Browse}                 Using the File Browser
+\par {\ul Browser screen}{\v H.U_Browse}               Using the File Browser
+\par {\ul Browsing help}{\v H.U_Help}                Using the Help System
+\par {\ul Butto}{\ul ns}{\v H.Default}                      Using Buttons
+\par {\ul Checkboxes}{\v H.U_Dial}                   Using a Dialog Box
+\par {\ul Copyright}{\v I_cpyrght}                    Copyright
+\par {\ul Dialog box buttons}{\v H.U_Dial}           Using a Dialog Box
+\par {\ul Field editor}{\v H.U_Dial}                 Using a Dialog Box
+\par {\ul Help context jumps}{\v H.U_Help}           Using the Help System
+\par {\ul Help system buttons}{\v H.U_Help}          Using the Help System
+\par {\ul Installation directory}{\v I_destdrv}       Destination Directory
+\par {\ul Message text}{\v H.U_Dial}                 Using a Dialog Box
+\par {\ul Print }{\ul dialog box}{\v H.U_Print}             Using the Print System
+\par {\ul Radio buttons}{\v H.U_Dial}                Using a Dialog Box
+\par {\ul RAMexam}{\v I_QMT}                      Testing your memory
+\par {\ul Registration}{\v I_userinfo}                 Name Registration
+\par {\ul RSETUP changes}{\v I_configsys}               Making Changes
+\par {\ul Scheduling}{\v I_QMTCfg}                   Configuring #FLENME#
+\par {\ul Source drive}{\v I_srcdrv}                 Identify Source Drive
+\par {\ul Subwindows}{\v H.U_Dial}                   Using a Dialog Box
+\par {\ul Topics}{\v H.Contents}                       Help Topics
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>NOTES
+\par \pard\plain \f3\lang1033 @P
+\par \pard NOTE: Contexts below here are valid but are not on contents, index, or browse list.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>I_swapdrive
+\par \pard\plain \f3\lang1033 @N H.Default I_swapdrive
+\par \pard                      {\i Disk compression support}
+\par \pard 
+\par \pard #PROGNAME# automatically detects most disk compression software.  The /K option allows manual entry of information when unsupported disk compression software is in use.
+\par \pard 
+\par \pard {\b Is #ARG4_# compressed?
+\par }\pard 
+\par \pard Your drive is compressed if you have a special software driver in your Config.sys that makes the data on this drive accessible to you.  Without the device driver provided by the software, the drive exists only as a file on your hard disk.
+\par \pard 
+\par \pard {\b This drive may also be a swapped drive.  What is the drive designation of #ARG4_# at boot time (If this drive did not exist at boot time, leave this space blank)?
+\par }\pard 
+\par \pard Some disk compression utilities swap drives so that the created drive appears and functions as your original boot drive rather than the assigned drive letter.  This is typically accomplished through another device driver in Conf
+ig.sys that swaps the drives.
+\par \pard 
+\par \pard {\b Your boot drive is #ARG1#:.  The previous drive designation for drive #ARG1#: is#ARG3#
+\par }\pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>I_MBMenu
+\par \pard\plain \f3\lang1033 @P H.Default I_MBMenu
+\par \pard                 {\i Selecting a MultiConfig Section}
+\par \pard 
+\par \pard #PROGNAME# has detected MS DOS 6 MultiConfig in use.  Using the UP and DOWN arrow keys, select the desired configuration and press ENTER. #PROGNAME# will add #FLENME# only to the selected configuration.
+\par \pard 
+\par \pard To add #FLENME# to additional MultiConfig sections please run #PROGNAME# /r to refresh.  This reconfigures the selected MultiConfig section to include #FLENME#.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>I_QMTMB
+\par \pard\plain \f3\lang1033 @P H.Default I_QMTMB
+\par \pard                       {\i Testing memory}
+\par \pard 
+\par \pard 
+#FLENME# uses advanced memory checking to find problems in your PC's memory system.  #FLENME# detects classes of memory errors not detectable by the basic power on self test (POST) provided at boot-time.  Causes of memory problems include humidity, static
+, aging, radiation, temperature fluctuations, and pressure changes.
+\par \pard 
+\par \pard Select "{\b All" sections} to install #FLENME# at the top of AUTOEXEC.BAT and run it in the Quick mode when you boot your system.
+\par \pard 
+\par \pard Select "{\b One" section} to specify the DOS 6 MultiConfig configuration into which #FLENME# is to be installed.  #PROGNAME# recognizes your DOS 6 MultiConfig configuration and allows you to select which section to install #FLENME# into.
+\par \pard 
+\par \pard There are advantages to checking the available portion of the system memory on a daily basis.  However, to fully check all system memory, #FLENME# is best run on systems configured without memor
+y managers or other resident software loaded that uses extended memory.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>H.MBMenu
+\par \pard\plain \f3\lang1033 @N H.MBMenu H.MBMenu
+\par \pard Please select the DOS MultiConfig configuration into which #FLENME___# should install and press ENTER.
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>H.MBMenu2
+\par \pard\plain \f3\lang1033 @N H.MBMenu2 H.MBMenu2
+\par \pard If you wish to add #FLENME___# to an additional MultiConfig section, please run #PROGNAME# /r to refresh your MultiConfig configuration.
+\par \pard\plain \s3 \f3\fs28\cf6\lang1033 >>H.QMTCfg
+\par \pard\plain \f3\lang1033 @N H.QMTCfg H.QMTCfg
+\par \pard\plain \s7\li5472\ri-360 \f3\lang1033 Choose how frequently you would like #FLENME# to run.
+\par \pard\plain \f3\lang1033 
+\par \pard\plain \s7\li5472\ri-360 \f3\lang1033 You have chosen to run #FLENME#
+\par }

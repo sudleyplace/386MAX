@@ -1,0 +1,216 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times;}{\f1\froman Symbol;}{\f2\fswiss Helvetica;}{\f3\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;
+\red192\green192\blue192;}{\stylesheet{\f3\lang1033 \snext0 Normal;}{\s1 \f3\fs28\cf6\lang1033 \sbasedon0\snext1 Context;}}{\info{\title qshell help system, quick ref topics}{\author Klaus Albrecht}{\operator Klaus Albrecht}
+{\creatim\yr1992\mo5\dy3\hr12\min54}{\revtim\yr1996\mo2\dy15\hr21\min6}{\printim\yr1992\mo5\dy18\hr12\min49}{\version1}{\edmins1}{\nofpages0}{\nofwords0}{\nofchars0}{\vern16417}}\paperw12240\paperh15840\margl1440\margr8064\margt1440\margb1440\gutter0 
+\facingp\widowctrl\ftnbj\ftnrestart\hyphhotz425 \sectd \linex0\headery709\footery709\colsx709\endnhere \pard\plain \f3\lang1033 {\cf2 Qshell Quick Ref Topics
+\par }{\cf2 by Stan Leszynski
+\par }{\cf2 These notes are not a live context
+\par }{\cf2 Hard returns are required in quick ref files whe}{\cf2 n a space occurs in column 19 to get around help compiler bug
+\par }{\cf2 Line width 19
+\par }{\cf2 Topic height 17 lines
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Context strings begin with >>
+\par }\pard {\cf2 MSWord file use:
+\par }{\cf2  Set Printer to Generic/Text only on File:
+\par }{\cf2  Set View to Page mode to see wrapping
+\par }{\cf2  Default tabs 0
+\par }{\cf2  Left margin 1
+\par }{\cf2  Right margin 5.6"
+\par }{\cf2  Top margin 0
+\par }{\cf2  Bottom margin 0
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns
+\par }{\cf2 Text highlighting:
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text
+\par }{\cf2  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text
+\par }{\cf2  use }{\ul\cf2 UNDERLINE}{\cf2  for contex}{\cf2 t jump= red text
+\par }{\cf2  use }{\b\i\cf2 BOLD ITALICS}{\cf2  for bullets= yellow text
+\par }
+\par {\fs28\cf6 >>Q_ASQ
+\par }ASQ ist ein System-
+\par Analyse-Programm und eine Lernhilfe zum Thema Memory Management.
+\par 
+\par ASQ untersucht die Hard- und Software Ihres Systems und erstellt ausf\'81hr-
+\par liche Berichte.
+\par Sie lernen Ihr System besser kennen und k\rdblquote nnen die Systemleistung optimieren.
+\par {\fs28\cf6 >>Q_Cfg_Sum
+\par }Die Arbeitsumge-
+\par bung des Computers enth\'84lt wichtige DOS-Parameter und andere Variablen.
+\par 
+\par Diese Option zeigt
+\par die Einstellungen dieser System-
+\par Variablen.
+\par 
+\par N\'84here Information
+\par \'81ber die System-
+\par Konfiguration er-
+\par halten Sie mit ASQ.
+\par {\fs28\cf6 >>Q_Edit_AUT
+\par }AUTOEXEC.BAT
+\par enth\'84lt Befehle und
+\par Programme, die beim
+\par Systemstart aus-
+\par gef\'81hrt werden.
+\par 
+\par Diese Option l\'84dt
+\par AUTOEXEC.BAT zur Bearbeitung in den MAX Editor.
+\par {\fs28\cf6 >>Q_Edit_CFG
+\par }CONFIG.SYS enth\'84lt Befehle zur Installation der Einheiten-Treiber. Diese Datei f\'81hrt zudem wichtige Funktionen beim Systemstart aus.
+\par 
+\par Diese Option l\'84dt
+\par CONFIG.SYS in den
+\par MAX Editor.
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>Q_Edit_Ext
+\par \pard\plain \f3\lang1033 ExtraDOS.PRO enth\'84lt Optionen, die zum Laden und zur Konfiguration der ExtraDOS Funktion benutzt werden.
+\par 
+\par Die Option l\'84dt ExtraDOS.PRO in den MAX Editor.
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>Q_Edit_SYS
+\par \pard\plain \f3\lang1033 SYSTEM.INI enth\'84lt Windows Start- Informationen.
+\par 
+\par Diese Option l\'84dt SYSTEM.INI in den MAX Editor.
+\par \pard\plain \s1 \f3\fs28\cf6\lang1033 >>Q_Edit_Load
+\par \pard\plain \f3\lang1033 Die "Loader" Kon-
+\par figurationsdatei
+\par enth\'84lt Anweisun-
+\par gen f\'81r Qualitas Produkte zur be-
+\par sonderen Behand-
+\par lung bestimmter Programme.
+\par 
+\par Nehmen Sie hier \'8enderungen nur nach R\'81cksprache mit
+\par dem technischen
+\par Kundendienst vor!
+\par {\fs28\cf6 >>Q_Edit_Othr
+\par }Der MAX Editor kann
+\par jede ASCII-Text-
+\par datei im Rahmen der
+\par Speichergrenzen bearbeiten.
+\par 
+\par Diese Option l\'84dt eine von Ihnen gew\'84hlte Datei in den MAX Editor.
+\par {\fs28\cf6 >>Q_Edit_PRO
+\par }Die Profildatei enth\'84lt Parameter f\'81r die Qualitas Software zur Kon-
+\par figuration des Systems.
+\par 
+\par Diese Option l\'84dt die Profildatei in den MAX Editor.
+\par {\fs28\cf6 >>Q_Exit
+\par }Beendet MAX und kehrt zur DOS-
+\par Ebene zur\'81ck.
+\par {\fs28\cf6 >>Q_Hdw_Sum
+\par }Der Computer be-
+\par \pard steht aus einer Reihe von Hardware-
+\par Komponenten, die um den Prozessor gruppiert sind.
+\par 
+\par Diese Option unter-
+\par sucht die System-
+\par Hardware und er-
+\par stellt eine Liste.
+\par 
+\par Ausf\'81hrliche Infor-
+\par mationen \'81ber die Hardware erhalten Sie mit ASQ.
+\par {\fs28\cf6 >>Q_Help
+\par }Das MAX Hilfe-
+\par System bietet eine
+\par situationsbezogene
+\par Hilfe, Stichwort-
+\par Verzeichnisse und Informationen zu verwandten Themen der Qualitas Software.
+\par 
+\par Diese Option ruft das Hilfesystem auf
+\par und bietet Zugang zu Informationen \'81ber das ausge-
+\par w\'84hlte Thema.
+\par {\fs28\cf6 >>Q_Info_Dev
+\par }MAX enth\'84lt das 386UTIL Dienst-
+\par programm f\'81r eine Speicher-Analyse.
+\par 
+\par Diese Option nutzt
+\par 386UTIL MAPDEV zur Anzeige einer Liste
+\par von Einheiten-
+\par Treibern im LoDOS
+\par Speicher {\fs28\cf6 >>Q_Info_EMS
+\par }MAX enth\'84lt das
+\par 386UTIL Dienst-
+\par programm f\'81r eine
+\par Speicher-Analyse.
+\par 
+\par Diese Option nutzt 386UTIL MAPEMS zur Anzeige der EMS-
+\par Speicher-Belegung {\fs28\cf6 >>Q_Info_Load
+\par }MAX enth\'84lt das
+\par 386UTIL Dienst-
+\par programm f\'81r eine Speicher-Analyse.
+\par 
+\par Diese Option nutzt 386UTIL SUMMARY zur
+\par Anzeige des Lade-
+\par verhaltens von speicher-residenten
+\par Programmen.
+\par {\fs28\cf6 >>Q_Info_Mem
+\par }MAX enth\'84lt das 386UTIL Dienst-
+\par programm f\'81r eine Speicher-Analyse.
+\par 
+\par Diese Option nutzt 386UTIL LIST zur Anzeige der opti-
+\par mierten Speicher-
+\par Organisation im konventionellen Speicher und im Extended Memory.
+\par {\fs28\cf6 >>Q_Info_Res
+\par }MAX enth\'84lt das 386UTIL Dienst-
+\par programm f\'81r eine Speicher-Analyse.
+\par 
+\par Diese Option nutzt
+\par 386UTIL MAPMEM zur
+\par Anzeige der Adres-
+\par sen von Programmen
+\par im LoDOS/HiDOS Speicher.
+\par {\fs28\cf6 >>Q_Info_ROM
+\par }MAX enth\'84lt das 386UTIL Dienst-
+\par programm f\'81r eine Speicher-Analyse.
+\par 
+\par Diese Option nutzt 386UTIL RAMSCAN zur
+\par Anzeige der im System vorhandenen
+\par Speicher-Regionen.
+\par Sie sehen deren Gr\rdblquote \'e1e und Bedeu-
+\par tung.
+\par {\fs28\cf6 >>Q_Info_Time
+\par }MAX enth\'84lt das 386UTIL Dienst-
+\par programm f\'81r eine Speicher-Analyse.
+\par 
+\par Diese Option nutzt 386UTIL TIMEMEM zur
+\par Anzeige einer \'9aber-
+\par sicht der Speicher-
+\par Zugriffszeiten.
+\par {\fs28\cf6 >>Q_Max_Full
+\par }Maximize konfi-
+\par guriert das System,
+\par indem es Optionen
+\par in CONFIG.SYS,
+\par AUTOEXEC.BAT und
+\par in die Profildatei
+\par einf\'81gt.
+\par 
+\par Im angepa\'e1ten Maximize bestimmen Sie selbst, welche Programme in den HiDOS-Speicher geladen werden.{\fs28\cf6 
+\par }{\fs28\cf6 >>Q_Max_Quick
+\par }Maximize konfi-
+\par guriert das System,
+\par indem es Optionen
+\par in CONFIG.SYS,
+\par AUTOEXEC.BAT und
+\par in die Profildatei
+\par einf\'81gt.
+\par 
+\par Expre\'e1-Maximize
+\par optimiert das System anhand von Standard-Optionen ohne Eingriff des Anwenders.
+\par {\fs28\cf6 >>Q_Mem_Sum
+\par }Diese Option analy-
+\par siert die Speicher-
+\par \pard Konfiguration Ihres
+\par Systems und zeigt das Ergebnis als \'9abersicht.
+\par 
+\par Ausf\'81hrliche Infor-
+\par mationen \'81ber den Systemspeicher er-
+\par halten Sie mit ASQ.
+\par {\fs28\cf6 >>Q_Update
+\par }Qualitas stellt registrierten Anwendern Produkt-
+\par Aktualisierungen in
+\par Form einer Update-
+\par Diskette zur Ver-
+\par f\'81gung.
+\par 
+\par Die Option startet
+\par das UPDATE Pro-
+\par gramm. Sie werden aufgefordert, die Update-Diskette in
+\par das entsprechende Diskettenlaufwerk einzulegen.
+\par 
+\par }

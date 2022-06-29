@@ -1,0 +1,85 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times;}{\f1\froman Symbol;}{\f2\fswiss Helvetica;}{\f3\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;
+\red192\green192\blue192;}{\stylesheet{\f3\lang1033 \snext0 Normal;}{\s1\fi-288\li576 \f3\lang1033 \sbasedon0\snext1 Outdent4;}{\s2\keepn \f3\fs28\cf6\lang1033 \sbasedon0\snext2 Context;}{\s3\fi-1584\li1872 \f3\lang1033 \sbasedon0\snext3 Outdent13;}{
+\s4\li288 \f3\lang1033 \sbasedon0\snext4 Indent2;}}{\info{\title install messge system, medium msgs.}{\author Klaus Albrecht}{\operator Klaus Albrecht}{\creatim\yr1994\mo2\dy13\hr21\min20}{\revtim\yr1996\mo2\dy15\hr21\min4}{\version1}{\edmins0}
+{\nofpages0}{\nofwords0}{\nofchars0}{\vern16417}}\paperw12240\paperh15840\margl1440\margr3456\margt1417\margb1134\gutter0 \deftab0\widowctrl\ftnbj\hyphhotz0 \sectd \linex0\headery709\footery709\colsx709\endnhere \pard\plain \f3\lang1033 {\cf2 
+QMTSetup Message Text, Medium Messages
+\par }\pard \fi-288\li270\ri-2700 {\cf2 These notes are not a live context
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 51
+\par }{\cf2 Context strings begin with >>
+\par }{\cf2 Use ##}{\cf2  to surround replaceable parameters, tag _ at end of parameter to reserve spaces for attribute if ## block not big enough to properly wrap
+\par }\pard {\cf2 MSWord file use:
+\par }{\cf2  Set Printer to Generic/Text only on File:
+\par }{\cf2  Set View to Page mode to see wrapping
+\par }{\cf2  Default tabs 0
+\par }{\cf2  Left margin 0
+\par }{\cf2  Right margin 3.4"
+\par }{\cf2  Top margin 0
+\par }{\cf2  Bottom margin 0
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns
+\par }{\cf2 Text highlighting:
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= yellow text
+\par }{\cf2 
+\par }\pard\plain \s2\keepn \f3\fs28\cf6\lang1033 >>M.BadDOSSubdir
+\par \pard\plain \tx6300 \f3\lang1033 #PROGNAME# konnte keine DOS 5.x Hilfedateien in
+\par   #ARG1#  finden.
+\par 
+\par {\b M\rdblquote chten Sie ein neues Verzeichnis angeben?}
+\par \pard\plain \s2\keepn \f3\fs28\cf6\lang1033 >>M.DestDir
+\par \pard\plain \f3\lang1033 {\b Geben Sie ein Verzeichnis f\'81r die Installation der Programmdateien an:}
+\par 
+\par 
+\par \pard\plain \s2\keepn \f3\fs28\cf6\lang1033 >>M.DOSHelp
+\par \pard\plain \ri-36 \f3\lang1033 #PROGNAME# hat auf diesem System DOS 5.x gefunden.
+\par Die DOS Hilfe-Information kann f\'81r Qualitas Produkte erweitert werden.
+\par \pard 
+\par {\b Soll #PROGNAME# zus\'84tzlichen Hilfe-Text in die
+\par }{\b DOS-Hilfedatei schreiben?
+\par }\pard\plain \s2\keepn \f3\fs28\cf6\lang1033 >>M.DOSPath
+\par \pard\plain \f3\lang1033 #PROGNAME# mu\'e1 die Position des DOS-Verzeichnisses kennen, so da\'e1 es den Hilfe-Text f\'81r Qualitas Produkte einf\'81gen kann.
+\par 
+\par {\b Geben Sie Laufwerk/Pfad des DOS-Verzeichnisses an.
+\par }
+\par 
+\par \pard\plain \s2\keepn \f3\fs28\cf6\lang1033 >>M.Complete
+\par \pard\plain \f3\lang1033 Standard #PROGNAME# ist abgeschlossen.
+\par 
+\par {\b MIt OK kehren Sie zu DOS zur\'81ck.}
+\par \pard\plain \s2\keepn \f3\fs28\cf6\lang1033 >>M.SrcDrv
+\par \pard\plain \f3\lang1033 Legen Sie die #FLENME# Arbeitskopie in ein Diskettenlaufwerk ein und geben Sie den Laufwerksbuchstaben oder Laufwerk und Pfad der Dateien ein:
+\par 
+\par \pard\plain \s2\keepn \f3\fs28\cf6\lang1033 >>M.BootSwap_A
+\par \pard\plain \f3\lang1033 Sie haben Unterst\'81tzung f\'81r den Tausch von Laufwerkskennungen (Drive Swapping) angefordert. #PROGNAME# mu\'e1 Ihnen einige Fragen stellen. Wenn eine Laufwerkskennung nicht zutrifft, \'81bergehen Si
+e den Eintrag mit der LEER-Taste.
+\par 
+\par {\b Disk-Komprimierung/Swapping erkannt:} #ARG3____#
+\par {\b Boot-Laufwerk:} #ARG1#
+\par {\b Tats\'84chliches Boot-Lw:}
+\par {\b CONFIG.SYS und AUTOEXEC kopieren auf:}
+\par 
+\par {\b #FLENME# Verzeichnis:}
+\par #ARG2#
+\par {\b Laufwerk f\'81r #FLENME# in CONFIG.SYS:}
+\par {\b Notwendige #FLENME# Dateien kopieren auf:}
+\par {\b Alternatives Lw f\'81r erf. #FLENME# Dateien:}
+\par \pard\plain \s2\keepn \f3\fs28\cf6\lang1033 >>M.BootSwap
+\par \pard\plain \f3\lang1033 Sie installieren #FLENME# f\'81r
+\par #ARG2#
+\par 
+\par Ist #ARG4_# komprimiert?
+\par 
+\par Dieses Laufwerk kann ein sog. getauschtes Laufwerk (Swapped Drive) sein. Welches ist der Laufwerksbuchstabe f\'81r #ARG4_# zum Boot-Zeitpunkt? (Wenn das Laufwerk zum Boot-Zeitpunkt nicht vorhanden ist, geben Sie hier nichts an.)
+\par 
+\par Ihr Boot-Laufwerk ist #ARG1#:. Die vorherige Laufwerkskennung f\'81r Laufwerk #ARG1#: ist#ARG3#
+\par \pard\plain \s2\keepn \f3\fs28\cf6\lang1033 >>M.QMT
+\par \pard\plain \f3\lang1033 #FLENME# arbeitet mit hochentwickelten Pr\'81fverfahren zum Aufsp\'81ren von Fehlern im Speichersystem Ihres Computers. Speicherfehler k\rdblquote nnen einen Systemabsturz und Datenverlust bewirken.
+\par 
+\par \pard #FLENME# kann in die AUTOEXEC.BAT eingetragen werden, soda\'e1 der Speicher mit dem Systemstart Ihres Computers \'81berpr\'81ft werden kann. Der Ablauf von #FLENME# ben\rdblquote tigt w\'84hrend des Boot-Vorganges f\'81r Ihr System ungef\'84
+hr #ARG1# Sekonden.
+\par 
+\par {\b M\rdblquote chten Sie, da\'e1 #PROGNAME# den #FLENME# Aufruf in die AUTOEXEC.BAT eintr\'84gt?}
+\par 
+\par \pard\plain \s2\keepn \f3\fs28\cf6\lang1033 >>M.Overwrite
+\par \pard\plain \f3\lang1033 Sie m\rdblquote chten die Installation durchf\'81hren, aber es ist bereits eine neuere Version von #FLENME# vorhanden. {\b M\rdblquote chten Sie dies wirklich?
+\par }
+\par }

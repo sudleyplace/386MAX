@@ -1,0 +1,69 @@
+{\rtf1\ansi \deff0\deflang1024{\fonttbl{\f0\froman Times New Roman;}{\f1\froman Symbol;}{\f2\fswiss Arial;}{\f3\fmodern Courier;}{\f4\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;
+\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;
+\red127\green127\blue0;\red127\green127\blue127;\red192\green192\blue192;}{\stylesheet{\f4\lang1033 \snext0 Normal;}{\s2\fi-288\li576 \f4\lang1033 \sbasedon0\snext2 Outdent4;}{\s3 \f4\fs28\cf6\lang1033 \sbasedon0\snext3 Context;}{\s4\fi-1584\li1872 
+\f4\lang1033 \sbasedon0\snext4 Outdent13;}{\s5\li288 \f4\lang1033 \sbasedon0\snext5 Indent2;}}{\info{\title install messge system, small msgs.}{\author Stan}{\operator Qualitas, Inc.}{\creatim\yr1991\mo5\dy19\hr11\min7}{\revtim\yr1993\mo6\dy2\hr14\min24}
+{\printim\yr1993\mo5\dy26\hr12\min46}{\version32}{\edmins149}{\nofpages1}{\nofwords65536}{\nofchars65536}{\vern16417}}\paperw12240\paperh15840\margl1440\margr6192\margt720\margb720\gutter0 \deftab0\widowctrl\ftnbj \sectd \linex0\endnhere \pard\plain 
+\f4\lang1033 {\cf2 Install Message Text, Small Messages
+\par }{\cf2 by Stan Leszynski}{\cf2 
+\par }{\cf2 These notes are not a live context}{\cf2 
+\par }{\cf2 Line width 32}{\cf2 
+\par }{\cf2 Context strings begin with >>}{\cf2 
+\par }{\cf2 Use ## to surround replaceable parameters, tag _ at end of parameter to reserve spaces for attribute if ## block not big enough to properly wrap}{\cf2 
+\par }{\cf2 MSWord file use:}{\cf2 
+\par }{\cf2  Set Printer to Generic/Text only on File:}{\cf2 
+\par }{\cf2  Set View to Page mode to see wrapping}{\cf2 
+\par }{\cf2  Default tabs 0}{\cf2 
+\par }{\cf2  Left margin 0}{\cf2 
+\par }{\cf2  Right margin 5.3"}{\cf2 
+\par }{\cf2  Top margin 0}{\cf2 
+\par }{\cf2  Bott}{\cf2 om margin 0}{\cf2 
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns}{\cf2 
+\par }{\cf2 Text highlighting:}{\cf2 
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= yellow text}{\cf2 
+\par }
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>S.BadCreatSub
+\par \pard\plain \f4\lang1033 #PROGNAME# could not change to or create the destination subdirectory as specified.  {\b Please re-enter the desired destination drive and directory.}
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>S.BadDest
+\par \pard\plain \f4\lang1033 The destination drive you specified is not valid.  {\b Please re-enter the desired destination drive and directory.}
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>S.BadDrive
+\par \pard\plain \f4\lang1033 The drive letter entered is not valid.  {\b Enter a new drive or abort #PR}{\b OGNAME# and fix the problem.}
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>S.BadNumber
+\par \pard\plain \f4\lang1033 A valid serial number must have 12 numeric characters.  The correct number can be found on the outside of the product envelope.  Other numbers are unacceptable.
+\par 
+\par {\b Enter the serial number exactly as it is printed.}
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>S.BlankWarn
+\par \pard\plain \f4\lang1033 A blank entry is not permitted.
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>S.BootDisk
+\par \pard\plain \f4\lang1033 {\b Enter the letter of your boot drive:}
+\par 
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>S.Dropout
+\par \pard\plain \f4\lang1033 Because you have chosen to modify CONFIG.SYS and create an options profile manually, {\b #PROGNAME# will now quit to DOS.}
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>S.InsertDest
+\par \pard\plain \f4\lang1033 {\b Please insert your destination diskette in the drive now.}
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>S.InsertSrc
+\par \pard\plain \f4\lang1033 {\b Please insert the #FLENME# distribution disk #ARG1#in the drive now.}
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>S.InsertBoot
+\par \pard\plain \f4\lang1033 {\b Please insert your boot diskette in the drive now.}
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>S.InvalidDrv
+\par \pard\plain \f4\lang1033 {\b The drive entered is not physically available.}
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>S.ProError
+\par \pard\plain \f4\lang1033 Invalid PRO= statement on #FLENME# device line in:
+\par   #ARG1#
+\par 
+\par {\b Press Enter to exit to DOS, then fix the problem.}
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>S.SrcWarn
+\par \pard\plain \f4\lang1033 #PROGNAME# could not locate #FLENME# distribution files. {\b Please enter another }{\b drive letter.}
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>S.StripMgrErr
+\par \pard\plain \f4\lang1033 An error was encountered executing STRIPMGR.EXE.  {\b Press Enter to Exit to DOS.}
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>S.UnLocate
+\par \pard\plain \f4\lang1033 We are unable to locate:
+\par   #ARG1#
+\par 
+\par {\b Press Enter to exit to DOS.}
+\par \pard\plain \s3 \f4\fs28\cf6\lang1033 >>S.RdOnly
+\par \pard\plain \f4\lang1033 The file:
+\par 
+\par   #ARG1#
+\par 
+\par is read-only.{\b   Please correct and rerun #PROGNAME#.}{\b 
+\par }}
