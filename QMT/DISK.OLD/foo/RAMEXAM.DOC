@@ -1,0 +1,24 @@
+			       RAMEXAM.DOC
+
+Additional RAMexam Options
+==========================
+
+/K:  In cases where there are no memory managers present when RAMexam is
+run, rapid keystrokes may cause a keyboard lockup during RAMexam testing.
+Using /K may stabilize keyboard activity.
+
+/V:  Some 486 machines equipped with VLSI chipsets (82C480) with the Level
+2 external cache may lock or reboot when RAMexam is executed.  Using /V
+will disable the external cache and allow RAMexam to run to completion.
+
+DOS 6 MultiConfig support and RSETUP
+====================================
+
+If you have DOS 6 MultiConfig and configure RAMexam to run in ALL
+sections, RSETUP will install RAMexam at the beginning of AUTOEXEC.BAT
+At this point, you cannot reconfigure RAMexam to run in specific
+MultiConfig sections unless you remove the reference to RAMexam in
+AUTOEXEC.BAT.  After removing RAMexam from AUTOEXEC.BAT, rerun RSETUP /R
+to select individual MultiConfig sections.
+
+

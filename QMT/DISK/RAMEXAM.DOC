@@ -1,0 +1,551 @@
+Table of Contents
+
+		*		Quick Start & RSetup	 
+		*		Optimal Testing and MAKEBOOT.EXE		 
+		*		Getting Support  
+		*		What is Memory	 
+		*		Why Memory Fails		 
+		*		A Word About Windows & Memory Testing	
+		*		How RAMexam Tests	  
+		*		Ways to Use RAMexam
+		*		A Note for OS/2 Users
+		*		Navigating RAMexam		
+		*		A Memory Error! Now What?		 
+		*		How to Avoid Memory Errors		
+		*		Command Line Options	 
+
+
+* Quick Start & RSetup
+
+Thank you for purchasing Qualitas RAMexam.	With it, you can use your
+PC with the confidence that your system RAM is functioning properly.
+
+Installing RAMexam
+
+Installing RAMexam is a simple task:
+
+1.	Place the RAMexam diskette in the diskette drive.
+
+2.	Type A: and press enter.  (If you are installing from a drive
+other than A substitute that drive letter.)
+
+3.	Type RSETUP and press enter.  If the Qualitas Memory Tester is
+already installed (Qualitas MAX v. 7 & 8 includes QMT), RSetup
+replaces QMT with RAMexam.	RAMexam includes all the features provided
+by QMT, and more.
+
+4.	RSetup prompts you for information, including your name, RAMexam
+serial number and the directory you want RAMexam installed into.
+
+5.	If you use MS-DOS 6 MultiConfig, RSetup asks into which
+configuration RAMexam should install.  The section "Ways to Use
+RAMexam" makes specific suggestions about taking advantage of RAMexam
+in a MultiConfig setup.
+
+6.	RSetup displays the scheduled testing setup screen on which you 
+can tell RSetup to install a RAMexam command into your AUTOEXEC.BAT 
+file for automated testing.  You may choose to schedule when RAMexam 
+runs from the following options:
+
+	Whenever the system starts (or is rebooted)
+	Daily (the first time the system is turned on or booted each day)
+	Weekly (you choose which day of the week)
+	Monthly (you choose which day of the month)
+	User Defined (every n days where n is any number)
+
+During installation, you have the opportunity to view any changes (and
+abort them) before they are made to your start-up files.  If you
+choose to allow RSetup to make the changes then your original files
+will be backed-up in the RAMexam directory.
+
+
+* Optimal Testing and MAKEBOOT.EXE
+
+The Qualitas Memory Tester includes a program called MAKEBOOT.EXE that
+creates a bootable diskette configured to test your system without any
+resident software active.  This is optimal for testing effectiveness.
+To use MAKEBOOT you need a formatted floppy disk.  MAKEBOOT deletes
+all existing files from this diskette.	The diskette needs to be the
+correct size to fit in drive A (unless your system boots from another
+floppy).  Put the diskette into the drive and enter:
+
+	MAKEBOOT a: [c:]
+
+where a: is the destination drive and c: is the optional drive letter
+from which you normally boot (do not include the brackets).  MAKEBOOT
+asks you to choose between having a Full or Quick test run when 
+booting from the floppy.  A Quick test usually takes under a minute 
+but is not as thorough as a Full test which can take several hours.  
+MAKEBOOT transfers the necessary system files to the diskette and 
+creates appropriate start-up files.  To use this diskette, place it 
+in drive A:  and restart your system.  After testing completes, remove
+the diskette and restart your system once more to return to your 
+original configuration.
+
+
+* Getting Support
+
+Qualitas provides technical support via e-mail only.  This support is
+free for a limited period that begins with the first e-mail contact.
+After the free support expires there are several paid support options
+available.
+
+	   Technical Support via e-mail:   tech@qualitas.com
+
+
+* What is Memory?
+
+The term "computer memory" is ambiguous.  It is often used to describe
+fixed and floppy disk storage, system and adapter "read only memory"
+(ROM), video adapter "random access memory" (RAM) and so on.  For the
+purpose of this documentation, the term "computer memory" (or just
+"memory") refers to the row or rows of system RAM chips that exist
+somewhere in your PC.  This is the memory in which your software runs
+and it is the memory RAMexam tests.
+
+Few components in your PC are as crucial to its operation as memory
+and the hardware which manages memory.	Defective memory can cause
+data loss, prevent your monitor from displaying properly or even cause
+your hard disk to crash.  Every element in your system depends on the
+correct operation of RAM.
+
+The capacity of PC memory to store information is measured in bytes.
+A typical PC comes standard with several megabytes of RAM.	A megabyte
+equals one million bytes (actually 1,048,576) - approximately the
+amount of memory needed to hold the text for a 600 page paperback
+novel.	Each byte on an IBM compatible system contains eight bits.
+This means that the average PC with four megabytes of RAM has over 33
+million bits -- each one ready and waiting for your valuable
+information.
+
+Let's take a look at just one bit.  Each bit "holds" one of two values
+-- 0 or 1 -- depending on its electrical state.  All the information
+in your PC amounts to nothing more than a series of bits, each one
+holding a 0 or 1. For example, the word "memory" has six characters,
+each represented as a byte in memory, for a total of 48 bits of
+information:
+
+01101101 01100101 01101101 01101111 01110010 01111001
+m		 e		  m 	   o		r		 y
+
+Each bit is significant.  What would happen if the last bit was stored
+in a defective memory chip and was stuck as zero?  The new word would
+be "memorx".  And if your software program got loaded into the
+defective bit then there is a very good chance your system would
+crash.	Your PC operates on the assumption that each bit (all 33
+million in the above example) functions perfectly every time you use
+your PC.
+
+
+* Why Memory Fails
+
+People expect most machines to break eventually.  We look at all the
+moving parts -- hard drives spinning rapidly for hours on end, car
+engines running for thousands of miles -- and we know that eventually
+the machine will stop working.	We see it happen every day.
+
+Why, then, should we be so surprised to learn that system memory also
+fails?	RAM itself may not spin, chug or move but it is acted upon in
+countless ways -- ways that, given RAM's fragile nature, can have
+devastating effects.
+
+In addition to faulty RAM, RAMexam may detect errors which occur due
+to faults in the memory subsystem - the hardware that manages the RAM.
+Unfortunately, there is no way for software to determine the
+difference between defective RAM and a defective memory subsystem.
+The causes for failure, though, are the same.
+
+Here are some of the most common (though by no means all) reasons that
+system memory fails:
+
+Static Electricity
+
+If you have opened your personal computer then you know that under the
+metal case are relatively vulnerable electronics.  Brushing against
+system RAM while carrying even the slightest static charge can destroy
+chips by subjecting them to momentary discharges of excessive
+electricity.
+
+Power Surges (large and small)
+
+We all know about the devastating effect lightning can have on a PC.
+While a $20 surge protector may reduce risk, it does not eliminate it.
+In fact, power brown-outs -- where power levels dip momentarily
+(because somebody upstairs just started their blow dryer) are not
+handled by most surge protectors and can be just as damaging over time
+as surges.	Actually, your PC is hit with a power surge every time it
+is turned on and electricity rushes into the cold system.  Even when
+these brown-outs and surges do not cause immediate problems, they can
+stress the semiconductor chips, which has a cumulative damaging
+effect.
+
+Dust, Smoke and Pet Hair
+
+Did you ever wonder why the television is usually the dustiest spot in
+the house?	Dust and other air impurities are attracted by the
+electrical charge of inside appliances like your television and PC
+where they layer onto components including system memory.  Over time,
+these materials can build up enough to carry electrical charges and
+"short" the PC's circuitry.  The dust also forms a blanket,
+diminishing the electronics' ability to release heat and stay cool.
+This results in heat stress and additional potential damage.
+
+Changes in Temperature
+
+Put your hand on the back of a PC that has been running for several
+hours.	It is very warm.  As with all things, PC components expand
+when their temperatures increase.  Components of different materials
+(like the metal RAM prongs and the plastic material to which it is
+attached) expand and contract at different rates.  Listen closely to
+your PC creak when turned off after hours of use.  This expansion and
+contraction can, over time, stress the system RAM as well as the
+connections between the RAM and the other components.
+
+
+Though we can take precautions, there are no guaranteed methods for
+eliminating all chances of memory error.  What we can do, though, is
+minimize the chances of losing work because of defective memory by
+using RAMexam to test system memory regularly.
+
+
+* A Word About Windows & Memory Testing
+
+When Microsoft Windows starts up, one of the first things it does is
+to grab almost every available byte of system memory.  Conventional
+memory, high DOS memory (UMBs) and extended memory are all allocated.
+This means two important things for RAMexam users:
+
+1) RAMexam can only test available memory -- which doesn't exist once
+Windows has allocated all of it.  RAMexam does not run in a DOS
+session under Windows because there is effectively no memory available
+for testing.
+
+2) Windows users should be especially zealous about doing periodic RAM
+testing because Windows is one of the few applications to use the
+multiple megabytes of RAM on most systems.	Frequently, a systems run
+without incident until Windows loads -- at which point Windows
+accesses a byte of bad RAM that had never been used before.  RAMexam
+testing is an effective pre-treatment because it warns you about
+defective RAM before Windows (and your work) trip over it.
+
+
+* How RAMexam Tests
+
+Memory is a collection of individual bits.	Any time a bit fails to
+change its value correctly or erroneously changes its value then a RAM
+error occurs.  Most (though not all) RAM that fails once will do so
+again.	RAMexam uses exhaustive testing to invoke, trap and report RAM
+errors before they affect your application software.
+
+Unlike other memory testers, RAMexam uses an underlying consistent
+fault model to detect RAM errors efficiently even in complex, multiple
+fault situations.  Using sophisticated strategies of writing and
+reading bit patterns in memory -- where each strategy targets a
+specific type of failure -- RAMexam provides faster and more
+comprehensive and effective testing.
+
+Here is a description of the categories of failures for which RAMexam
+tests:
+
+Stuck-at:  One or more bits retain the value that exists in the memory
+when the system boots, regardless of attempts to write new values into
+the memory.
+
+Transition:  Once changed, the value in the defective bit becomes
+stuck-at.
+
+Unlinked Inversion:  A bit changes erroneously as the result of a
+change to a bit elsewhere in memory.
+
+Linked Inversion:  A bit changes erroneously as the result of changes
+to two or more other bits elsewhere in memory.
+
+Unlinked Idempotent:  A bit becomes stuck-at as the result of a change
+to a bit elsewhere in memory.
+
+Linked Idempotent:	A bit becomes stuck-at as the result of changes to
+two or more other bits elsewhere in memory.
+
+RAMexam detects singular and multiple (coupled) occurrences of the
+above errors.
+
+From the basic display, RAMexam provides two testing options:  Quick
+and Full.  Selecting Quick is the same as choosing the transition
+fault test from the advanced display.  Selecting Full is the same as
+choosing the two idempotent tests from the advanced display.  All
+tests can be accessed by name from the advanced display.  Press
+ALT-Tab to toggle between basic and advanced displays.
+
+
+* Ways to Use RAMexam
+
+The Qualitas Memory Tester may be used several ways:
+
+  * You can run RAMexam every time you boot your system by including
+RAMexam in your AUTOEXEC.BAT.  When running RAMexam this way, you
+should use the command line switch for a "Quick" test.  Use RSetup to
+configure your system this way automatically.  Running RAMexam at
+system start-up adds between a few seconds and a few minutes to the
+time it takes to boot your system, depending on how much memory you
+have and the speed of your system.
+
+  * You can run RAMexam as often as you like from the DOS prompt by
+typing RAMexam and pressing enter.	Once RAMexam is running, select
+the test(s) you wish to run.
+
+  * RAMexam can test available memory only (you wouldn't want RAMexam 
+to write over memory in use by another program).  For extensive testing,
+you can use RAMexam on a "clean" system without resident software such
+as disk caches, RAM disks and memory managers active.  Running RAMexam
+with no other software active is the most effective way to test your
+system.  The program MAKEBOOT.EXE creates a bootable floppy for this
+purpose.  If you are using MS-DOS 6 MultiConfig or similar utility
+then you may wish to create a clean boot configur- ation which
+executes the following line:
+
+		d:\path\RAMexam FULL=1
+	
+where d:  is the drive on which RAMexam is installed and path is the
+directory.	This provides an easy way to test your system memory
+fully.
+
+To start RAMexam, you must be in the RAMexam directory or it must be
+included in your DOS search path.
+
+
+* A Note for OS/2 Users
+
+RAMexam can test the memory on systems that run OS/2.  In fact,
+RAMexam tests RAM on any Intel 386, 486 or Pentium-compatible
+microprocessor or above regard- less of the operating system.  First,
+you need access to a system running DOS so you can install RAMexam on
+that system and use MAKEBOOT.EXE to create a bootable test diskette.
+(MAKEBOOT does not run in an OS/2 DOS session because OS/2 does not
+support the necessary DOS SYS.COM command.)  Once you have your
+bootable diskette use it as described above.  Remember to observe
+copyright restrictions and use DOS and RAMexam only on the systems for
+which they are licensed.
+
+
+* Navigating RAMexam
+
+There are two RAMexam displays available, Basic and Advanced.  When
+RAMexam starts, it displays the Basic screen.  Three windows make up
+the Basic display.	The window in the upper left corner of the screen
+displays the program name and copyright.  The window in the upper
+right portion of the screen displays two buttons labeled Quick and
+Full.  Select the desired test using the right and left cursor (arrow)
+keys.  Press enter to start the test.  The third window, centered in
+the bottom half of the screen, displays test progress.
+
+RAMexam's Advanced screen is for users who want to see the nuts and
+bolts of memory testing.  Users may switch between the Advanced and
+Basic screens using Alt-Tab (even while testing).
+
+There are four windows on the Advanced display, one of which (in the
+top, left corner) is the same as in the Basic display.
+
+The Test Selection window, in the top right corner of the screen,
+displays the names of the six different memory tests.  Each test name
+is followed by a field in which you may enter the number of times
+RAMexam should run the test.  Enter "C" to instruct RAMexam to run the
+test continually until interrupted by the user.
+
+The Memory to Test window, in the lower left corner of the screen,
+displays the memory regions which RAMexam has identified.  Regions
+displayed in gray are in use by other software (such as a disk cache)
+or are not physically present and cannot be tested.
+
+The Test Status window appears in the lower right corner and includes
+the estimated time to test completion.	While running, RAMexam reads
+and writes (abbreviated in the display as "Rd" and "Wr") various test
+patterns into memory.  This activity appears in the Status window.
+
+Keyboard Overview
+
+The following keys are available in both Basic and Advanced screens:
+
+F1		displays help
+F5		toggles between color and monochrome displays
+ESC 	if a test is in progress, halts test, otherwise exits RAMexam
+
+The following keys are available while viewing the Basic display:
+
+ALT-Tab switches to the Advanced display (use F9 on 83-key keyboards)
+Cursor	alternates between highlighting Quick and Full buttons
+Enter	starts testing
+
+The following keys are available while viewing the Advanced display:
+
+ALT-Tab switches to the Basic display (use F9 on 83-key keyboards)
+Cursor	selects test
+Ctrl-Enter	runs the highlighted test once
+H		displays values in hexadecimal format
+D		displays values in decimal format
+Tab 	moves cursor between Test Selection window and Memory to Test 
+		window if there are more memory entries than fit in a single 
+		screen.  When in the Memory to Test window the cursor keys 
+		scroll the list up and down.
+
+The following keys are available while viewing the Help display:
+
+F2		prints help topic(s)
+F3		displays previous help topic
+F4		displays next help topic
+ESC 	returns to help menu
+
+
+* A Memory Error!  Now What?
+
+If you are fortunate, RAMexam will never find a memory error on your
+system.  When RAMexam detects defective or damaged RAM then the test
+halts and a red warning box appears with all known information about
+the error.
+
+Unfortunately, RAMexam cannot tell you which chip is the culprit.
+Software accesses memory through special hardware that is responsible
+for addressing the individual chips.  There is information within this
+hardware that maps the memory address used by software to a physical
+bit within a chip.	This information is not accessible to software and
+varies widely from system to system.  Should RAMexam detect defective 
+RAM, here are the recommended steps to take:
+
+  * See if the error is reproducible.  If a memory error only happens
+once and cannot be reproduced it may not be cause for alarm.
+Occasionally, alpha particle radiation -- which may not recur -- can
+cause memory failure.
+
+  * If the memory error recurs, take your system to a qualified repair
+facility.  Virtually every system manufacturer uses a unique memory
+architecture so that it is impossible for RAMexam to identify specific
+memory chips to replace.  DO NOT ATTEMPT TO REPLACE YOUR RAM UNLESS
+YOU ARE QUALIFIED.	(If you are not sure if you are qualified then you
+probably are not.)	All error information is saved into the RAMexam
+log file in the RAMexam directory.
+
+  * Diagnosis of memory errors, beyond that offered by RAMexam, 
+requires hands-on interaction with the problem system.	It also 
+frequently requires special equipment.	For these reasons, Qualitas 
+Technical Support cannot assist you in locating faulty memory chips.  
+You should contact a Qualitas technician only if you believe that 
+RAMexam itself is not functioning correctly.
+
+
+* How to Avoid Memory Errors
+
+As with most of life, a byte of prevention is worth a megabyte of
+cure.  Maintaining a proper environment for your PC can significantly
+reduce the chance of memory failure.  Here are some tips:
+
+  * Work in a dust free environment.
+
+  * Keep pets away from computer work areas.
+
+  * Do not smoke in the same room as your PC.
+
+  * Plug your PC into its own electrical circuit.
+
+  * Use a surge protector or, even better, an uninterruptable power
+	supply (UPS).
+
+  * If you use a modem or fax board, make sure that you use a 
+	telephone line surge protector.
+
+  * Never touch the inside of your PC without first grounding 
+	yourself.
+
+Even with these precautions, there is no guarantee that RAM will not
+fail.  RAM testing, though, significantly reduces the risk of losing
+work to defective RAM.
+
+
+* Command Line Options
+
+?			display help
+
+ADVANCED	start execution in advanced mode
+
+ALL=n		run all tests n times
+
+ASK[=timeout,response]
+			prompt for action to take, with a default response to be 
+			used after time-out seconds:
+
+			Y (Yes) 		run RAMexam
+			N (No)			skip test and wait until next 
+							scheduled occurrence
+			P (Postpone)	skip test; ask again later
+
+BW or /B	force black & white display
+
+COLOR or /C force color display
+
+DAILY		run RAMexam only if it has not been run since midnight
+
+FULL=n		run Full tests n times
+
+HEX 		display data initially in hexadecimal mode
+
+INTERVAL=n	run RAMexam only if at least n days have expired					   
+			since the last time RAMexam was run
+
+K			avoid spurious keyboard lockups
+
+L			use larger of BIOS and CMOS sizes if they differ
+
+LNKIDM=n	run Linked Idempotent Coupling Fault Test n times
+
+LNKINV=n	run Linked Inversion Coupling Fault Test n times
+
+LOG[=filename][,o]
+			append a log entry to RAMEXAM.LOG or other filename and 
+			use o to overwrite any existing file of the same name
+
+MONTHLY[=date]
+			run RAMexam only if it has not run in the last month - if 
+			optional date is specified, RAMexam runs on or after that 
+			day of the month (1-31)
+
+NODPMI		do not use DOS Protected Mode Interface 
+
+NOEXIT		do not exit after running tests automatically
+
+NOPARITY	avoid spurious parity errors on certain systems
+
+NOVCPI		do not use Vitrual Control Program Interface 
+
+NOXRAM		do not recover extra memory
+
+QUICK=n 	run Quick tests n times
+
+S			use smaller of BIOS and CMOS sizes if they differ
+
+SAF=n		run Stuck-At Fault Test n times
+
+TF=n		run Transition Fault Test n times
+
+TONE[=d:\path\filename.txt]
+			enable tones for certain events in RAMexam, optionally
+			specifying the tones to use in the named file.	See the 
+			file TONE.TXT for more details.
+
+TOP384		recover 384KB COMPAQ-like memory
+
+UNLIDM=n	run Unlinked Idempotent Coupling Fault Test n times
+
+UNLINV=n	run Unlinked Inversion Coupling Fault Test n times
+
+V			avoid lockups on certain VLSI chipsets (82C480)
+
+WEEKLY[=day]
+			run RAMexam only if it has not been run in the last week
+			- if optional day is specified, RAMexam runs on or after 
+			that day of the week (Sunday=1, Monday=2, etc.)
+	 
+* * * *
+
+(C) Copyright 1997-8 Qualitas
+
+Qualitas is a registered trademark and RAMexam is a trademark of
+Qualitas.  All other products are trademarks of their respective
+owners.
