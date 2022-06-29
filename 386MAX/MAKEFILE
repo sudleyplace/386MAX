@@ -1,0 +1,679 @@
+#' $Header:   P:/PVCS/MAX/386MAX/MAKEFILE.__V   1.18   08 Jul 1998 12:07:28   BOB  $
+#
+# Makefile for 386MAX
+#
+# Set defaults- conditionals will change these values if needed,
+# based on $(MKVER)
+# We can't set all these on the command line of MK??? batch files because
+# we are running out of command line real estate.  These values, even the
+# ones set within !IF !ENDIF blocks, are always overridden by the command
+# line.  A response file can also be passed to NMAKE in a similar manner
+# to those employed by LINK.
+
+OLDINC=$(INCLUDE)	# Previous include path
+INCLUDE=$(MAXROOT)include;$(INCLUDE)
+
+CORECODE=X					# X = 386MAX, U = BlueMAX
+!include <maxnames.mak>
+
+# Define defaults (in-house version, 386MAX with BCF enabled)
+OEM=BCF
+NEWDIR=N
+SYSNAME=386MAX
+UTLNAME=386MAX
+UT2NAME=386UTIL
+HINAME=MAXHI
+LONAME=MAXLO
+VERTP=VERSRET
+
+# If not an alpha build, change values based on $(OEM)
+!IF "$(ALPHA)" == ""
+
+# Extensions (OEM)
+#	   Beta    !Beta
+# Bluemax  BLB	   BLW
+# 386MAX   REB	   RET
+
+SYSNAME=$(COREPROD)
+UTLNAME=$(COREPROD)
+OEMSTEM=RE
+BETLETTER=B
+
+!IF "$(CORECODE)" == "U"
+# BlueMAX
+OEMSTEM=BL
+!IF $(BETA) == 0
+BETLETTER=W
+!ENDIF
+!ELSE
+# 386MAX
+!IF $(BETA) == 0
+BETLETTER=T
+!ENDIF
+!ENDIF
+
+OEM=$(OEMSTEM)$(BETLETTER)
+
+!ENDIF
+
+MKVER=OEM_$(OEM)
+
+!IF "$(LNKCMD)" == ""
+LNKCMD=link
+!ENDIF
+
+# define directories.  some of these are OEM-specific
+BIN=$(OEM)\		# destination for binaries
+BINDIR=$(MAXROOT)lib	# Default destination for binaries
+BD=$(BINDIR)\		# Destination
+MAKEHILO=0		# 1 to make MAXHI.COM and MAXLO.COM
+S=$(SWTDIR)	# 386SWAT source dir
+O=$(OEM)\		# OEM-specific .OBJ's and temporary .INC's
+			# (nothing under version control is kept in
+			#  sub-directories... yet)
+G=COMN\ 		# Generic .OBJ directory
+N=			# Generic .INC directory
+C=$(OEM)\		# OEM-specific source directory
+R=			# Generic source directory
+M=P:\max\386max\	# Main project source directory
+P=$(Q);$(M)		# Search sequence for source
+
+
+# Specify a default include path for .asm files
+!IF "$(O)" != "$(N)" && "$(N)" != ""
+ALLINC=.;$(O);$(N);$(I);$(Q);$(M)
+!ELSE
+ALLINC=.;$(O);$(I);$(Q);$(M)
+!ENDIF
+
+!IFDEF SWTDIR
+ALLINC=$(ALLINC);$(S)
+!ENDIF
+
+ALLINC=$(ALLINC);$(MAXROOT)include;$(INCLUDE)
+
+# ASMOPT=$(ASMOPT) /d$(MKVER)
+MOPT=$(ASMOPT) /DLANG_$(LANG) /mu/p/r/t/w1
+# Define macro LSTMAC so that we can tack it onto the end of ANY
+# masm command line, whether it is defined or empty.
+!IFDEF LST
+LSTMAC=,$(LST)\ \
+
+!ELSE
+LSTMAC=
+!ENDIF
+
+# NOTE:  You must specify the rule for the secondary source directory
+#	 before the corresponding rule for the current directory.
+#	 NMAKE apparently uses the last rule which matches.
+
+# Rules for .asm.obj -- generic and OEM-specific, secondary source
+{$(Q)}.asm{$(G)}.obj:
+!IF "$(NEWDIR)" == "Y"
+	 copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	 set INCLUDE=$(ALLINC)
+	 masm %s $(MOPT), $(@D)\ $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+!ENDIF
+
+{$(Q)}.asm{$(O)}.obj:
+!IF "$(NEWDIR)" == "Y"
+	 copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	 set INCLUDE=$(ALLINC)
+	 masm %s $(MOPT), $(@D)\ $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+!ENDIF
+
+# Rules for .asm.obj -- generic and OEM-specific, current directory
+{$(R)}.asm{$(G)}.obj:
+!IF "$(NEWDIR)" != "Y"
+	 set INCLUDE=$(ALLINC)
+	 masm %s $(MOPT), $(@D)\ $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+!ENDIF
+
+{$(R)}.asm{$(O)}.obj:
+!IF "$(NEWDIR)" != "Y"
+	 set INCLUDE=$(ALLINC)
+	 masm %s $(MOPT), $(@D)\ $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+!ENDIF
+
+# define this rule only if this OEM has a unique source dir
+!IF "$(C)" != "$(R)"
+{$(C)}.asm{$(O)}.obj:
+!IF "$(NEWDIR)" != "Y"
+	 set INCLUDE=$(ALLINC)
+	 masm %s $(MOPT), $(@D)\ $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+!ENDIF
+!ENDIF
+
+# Rule for .asm.opt -- 386UTIL optimization, secondary source
+{$(Q)}.asm{$(O)}.opt:
+!IF "$(NEWDIR)" == "Y"
+	 copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	 set INCLUDE=$(ALLINC)
+	 masm %s $(MOPT) /dOPTIM, $(@R).opt $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*.opt/w
+!ENDIF
+
+# Rule for .asm.opt -- 386UTIL optimization, current directory
+{$(R)}.asm{$(O)}.opt:
+!IF "$(NEWDIR)" != "Y"
+	 set INCLUDE=$(ALLINC)
+	 masm %s $(MOPT) /dOPTIM, $(@R).opt $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*.opt/w
+!ENDIF
+
+# Rule for .asm.nrm -- 386UTIL optimization, secondary source
+{$(Q)}.asm{$(O)}.nrm:
+!IF "$(NEWDIR)" == "Y"
+	 copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	 set INCLUDE=$(ALLINC)
+	 masm %s $(MOPT), $(@R).nrm $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*.nrm/w
+!ENDIF
+
+# Rule for .asm.nrm -- 386UTIL optimization, current directory
+{$(R)}.asm{$(O)}.nrm:
+!IF "$(NEWDIR)" != "Y"
+	 set INCLUDE=$(ALLINC)
+	 masm %s $(MOPT), $(@R).nrm $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*.nrm/w
+!ENDIF
+
+# Rule for .asm.hlo -- MAXHI/MAXLO, secondary source
+{$(Q)}.asm{$(O)}.hlo:
+!IF "$(NEWDIR)" == "Y"
+	 copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	 set INCLUDE=$(ALLINC)
+	 masm %s $(MOPT) /dHILO, $(@R).hlo $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*.hlo/w
+!ENDIF
+
+# Rule for .asm.hlo -- MAXHI/MAXLO, current directory
+{$(R)}.asm{$(O)}.hlo:
+!IF "$(NEWDIR)" != "Y"
+	 set INCLUDE=$(ALLINC)
+	 masm %s $(MOPT) /dHILO, $(@R).hlo $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*.hlo/w
+!ENDIF
+
+ALL:	 DIR	\
+		 $(BIN)$(SYSNAME).SYS					 \
+		 $(BIN)$(UT2NAME).COM					 \
+!IF "$(NEWDIR)" == "Y"
+		 NEWDIR 						 \
+!ENDIF
+!IF $(MAKEHILO)
+		 $(BIN)$(HINAME).COM		\
+		 $(BIN)$(LONAME).COM		\
+		 $(BIN)$(UTLNAME).COM		\
+		 $(BD)$(HINAME).COM		\
+		 $(BD)$(HINAME).COM		\
+		 $(BD)$(UTLNAME).COM		\
+!ENDIF
+		 $(BD)$(SYSNAME).SYS		\
+		 $(BD)$(UT2NAME).COM
+
+!IF "$(NEWDIR)" == "Y"
+NEWDIR: 	  {$(P)}PVCS.CFG	{$(P)}MAKEFILE
+	$(COMSPEC) /c <<$(O)MAKEFILE.BAT
+	xc/r/a/n/t $(**: =^
+	xc/r/a/n/t )
+<<NOKEEP
+	xc/r/a/n/t %|dpF$(O)maxdep.inc $(O).
+	xc/r/a/n/t %|dpF$(N)QMAX@$(OEM).OEM $(O)QMAX_OEM.INC
+
+!ENDIF
+
+DEL:
+	-rm $(O)*.* $(G)*.*
+
+DIR:
+	vdir -c $(O) $(G)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\386max\*
+VCSDIR = P:\PVCS\MAX\386max\*
+ALIAS ALL P:\PVCS\MAX\386max\*.*,p:\pvcs\max\386max\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+DEPSCAN = -r$(MAXROOT)
+DEPSCAN = $(DEPSCAN) -p{$$(P)}
+DEPSCAN = $(DEPSCAN) -t$(O)=$$(O)
+DEPSCAN = $(DEPSCAN)	 h*.asm     q*.asm     u*.asm	  v*.asm
+DEPSCAN = $(DEPSCAN) $(Q)h*.asm $(Q)q*.asm $(Q)u*.asm $(Q)v*.asm
+DEPSCAN = $(DEPSCAN) >$(O)maxdep.inc
+
+DEPSCAN: {$(P)}MAKEFILE
+	depscan $(DEPSCAN)
+
+{$(P)}MAKEFILE: $(O)maxdep.inc
+
+$(O)QMAX_OEM.INC: {$(P)}$(N)QMAX@$(OEM).OEM
+	xc /n/a %|dpF$(N)QMAX@$(OEM).OEM $*.INC
+
+!IF "$(NEWDIR)" != "Y"
+!if [vdir -c $(O)]
+!endif
+!if exist ($(O)QMAX_OEM.INC) == 0
+! if [xc/r/a/n/t $(M)QMAX@$(OEM).OEM $(O)QMAX_OEM.INC]
+! endif
+!endif
+!if exist ($(O)maxdep.inc) == 0
+!if [depscan $(DEPSCAN)]
+!endif
+!endif
+!include $(O)maxdep.inc
+!ENDIF
+
+$(O)QMAX.OBJ:	  {$(P)}QMAX.ASM $(QMAX_ADEP)
+
+$(O)QMAX_ARG.OBJ: {$(P)}QMAX_ARG.ASM $(QMAX_ARG_ADEP)
+
+$(O)QMAX_BCF.OBJ: {$(P)}QMAX_BCF.ASM $(QMAX_BCF_ADEP)
+
+$(O)QMAX_BSM.OBJ: {$(P)}QMAX_BSM.ASM $(QMAX_BSM_ADEP)
+
+$(O)QMAX_CPQ.OBJ: {$(P)}QMAX_CPQ.ASM $(QMAX_CPQ_ADEP)
+
+$(O)QMAX_D10.OBJ: {$(P)}QMAX_D10.ASM $(QMAX_D10_ADEP)
+
+$(O)QMAX_D15.OBJ: {$(P)}QMAX_D15.ASM $(QMAX_D15_ADEP)
+
+$(O)QMAX_D21.OBJ: {$(P)}QMAX_D21.ASM $(QMAX_D21_ADEP)
+
+$(O)QMAX_D33.OBJ: {$(P)}QMAX_D33.ASM $(QMAX_D33_ADEP)
+
+$(G)QMAX_DBG.OBJ: {$(P)}QMAX_DBG.ASM $(QMAX_DBG_ADEP)
+
+$(O)QMAX_DM2.OBJ: {$(P)}QMAX_DM2.ASM $(QMAX_DM2_ADEP)
+
+$(O)QMAX_DMA.OBJ: {$(P)}QMAX_DMA.ASM $(QMAX_DMA_ADEP)
+
+$(O)QMAX_DIF.OBJ: {$(P)}QMAX_DIF.ASM $(QMAX_DIF_ADEP)
+
+$(O)QMAX_EEM.OBJ: {$(P)}QMAX_EEM.ASM $(QMAX_EEM_ADEP)
+
+$(O)QMAX_EM2.OBJ: {$(P)}QMAX_EM2.ASM $(QMAX_EM2_ADEP)
+
+$(O)QMAX_IM2.OBJ: {$(P)}QMAX_IM2.ASM $(QMAX_IM2_ADEP)
+
+$(O)QMAX_EM4.OBJ: {$(P)}QMAX_EM4.ASM $(QMAX_EM4_ADEP)
+
+$(O)QMAX_EMX.OBJ: {$(P)}QMAX_EMX.ASM $(QMAX_EMX_ADEP)
+
+$(O)QMAX_EVM.OBJ: {$(P)}QMAX_EVM.ASM $(QMAX_EVM_ADEP)
+
+$(O)QMAX_FCN.OBJ: {$(P)}QMAX_FCN.ASM $(QMAX_FCN_ADEP)
+
+$(O)QMAX_I09.OBJ: {$(P)}QMAX_I09.ASM $(QMAX_I09_ADEP)
+
+$(O)QMAX_I0D.OBJ: {$(P)}QMAX_I0D.ASM $(QMAX_I0D_ADEP)
+
+$(O)QMAX_I0E.OBJ: {$(P)}QMAX_I0E.ASM $(QMAX_I0E_ADEP)
+
+$(O)QMAX_I15.OBJ: {$(P)}QMAX_I15.ASM $(QMAX_I15_ADEP)
+
+$(O)QMAX_I21.OBJ: {$(P)}QMAX_I21.ASM $(QMAX_I21_ADEP)
+
+$(O)QMAX_I31.OBJ: {$(P)}QMAX_I31.ASM $(QMAX_I31_ADEP)
+
+$(O)QMAX_J31.OBJ: {$(P)}QMAX_J31.ASM $(QMAX_J31_ADEP)
+
+$(O)QMAX_K31.OBJ: {$(P)}QMAX_K31.ASM $(QMAX_K31_ADEP)
+
+$(O)QMAX_L31.OBJ: {$(P)}QMAX_L31.ASM $(QMAX_L31_ADEP)
+
+$(O)QMAX_M31.OBJ: {$(P)}QMAX_M31.ASM $(QMAX_M31_ADEP)
+
+$(O)QMAX_N31.OBJ: {$(P)}QMAX_N31.ASM $(QMAX_N31_ADEP)
+
+$(O)QMAX_O31.OBJ: {$(P)}QMAX_O31.ASM $(QMAX_O31_ADEP)
+
+$(O)QMAX_I4B.OBJ: {$(P)}QMAX_I4B.ASM $(QMAX_I4B_ADEP)
+
+$(O)QMAX_I67.OBJ: {$(P)}QMAX_I67.ASM $(QMAX_I67_ADEP)
+
+$(O)QMAX_IDT.OBJ: {$(P)}QMAX_IDT.ASM $(QMAX_IDT_ADEP)
+
+$(O)QMAX_IN2.OBJ: {$(P)}QMAX_IN2.ASM $(QMAX_IN2_ADEP)
+
+$(O)QMAX_INI.OBJ: {$(P)}QMAX_INI.ASM $(QMAX_INI_ADEP)
+
+$(O)QMAX_IOP.OBJ: {$(P)}QMAX_IOP.ASM $(QMAX_IOP_ADEP)
+
+$(G)QMAX_KEY.OBJ: {$(P)}QMAX_KEY.ASM $(QMAX_KEY_ADEP)
+
+$(O)QMAX_LOD.OBJ: {$(P)}QMAX_LOD.ASM $(QMAX_LOD_ADEP)
+
+$(O)QMAX_LSM.OBJ: {$(P)}QMAX_LSM.ASM $(QMAX_LSM_ADEP)
+
+$(O)QMAX_MAC.OBJ: {$(P)}QMAX_MAC.ASM $(QMAX_MAC_ADEP)
+
+$(O)QMAX_MBT.OBJ: {$(P)}QMAX_MBT.ASM $(QMAX_MBT_ADEP)
+
+$(O)QMAX_MEM.OBJ: {$(P)}QMAX_MEM.ASM $(QMAX_MEM_ADEP)
+
+$(O)QMAX_MSG.OBJ: {$(P)}QMAX_MSG.ASM $(QMAX_MSG_ADEP)
+
+$(O)QMAX_OEM.OBJ: {$(P)}QMAX_OEM.ASM $(QMAX_OEM_ADEP)
+
+$(O)QMAX_OSE.OBJ: {$(P)}QMAX_OSE.ASM $(QMAX_OSE_ADEP)
+
+$(O)QMAX_OVR.OBJ: {$(P)}QMAX_OVR.ASM $(QMAX_OVR_ADEP)
+
+$(O)QMAX_PDT.OBJ: {$(P)}QMAX_PDT.ASM $(QMAX_PDT_ADEP)
+
+$(O)QMAX_PMR.OBJ: {$(P)}QMAX_PMR.ASM $(QMAX_PMR_ADEP)
+
+$(O)QMAX_PNP.OBJ: {$(P)}QMAX_PNP.ASM $(QMAX_PNP_ADEP)
+
+$(O)QMAX_POS.OBJ: {$(P)}QMAX_POS.ASM $(QMAX_POS_ADEP)
+
+$(O)QMAX_PPM.OBJ: {$(P)}QMAX_PPM.ASM $(QMAX_PPM_ADEP)
+
+$(O)QMAX_RSP.OBJ: {$(P)}QMAX_RSP.ASM $(QMAX_RSP_ADEP)
+
+$(O)QMAX_SCR.OBJ: {$(P)}QMAX_SCR.ASM $(QMAX_SCR_ADEP)
+
+$(O)QMAX_SHR.OBJ: {$(P)}QMAX_SHR.ASM $(QMAX_SHR_ADEP)
+
+$(O)QMAX_SIZ.OBJ: {$(P)}QMAX_SIZ.ASM $(QMAX_SIZ_ADEP)
+
+$(O)QMAX_STA.OBJ: {$(P)}QMAX_STA.ASM $(QMAX_STA_ADEP)
+
+$(O)QMAX_SWP.OBJ: {$(P)}QMAX_SWP.ASM $(QMAX_SWP_ADEP)
+
+$(O)QMAX_SYS.OBJ: {$(P)}QMAX_SYS.ASM $(QMAX_SYS_ADEP)
+
+$(O)QMAX_TIM.OBJ: {$(P)}QMAX_TIM.ASM $(QMAX_TIM_ADEP)
+
+$(O)QMAX_VCP.OBJ: {$(P)}QMAX_VCP.ASM $(QMAX_VCP_ADEP)
+
+$(O)QMAX_VME.OBJ: {$(P)}QMAX_VME.ASM $(QMAX_VME_ADEP)
+
+$(O)QMAX_VMM.OBJ: {$(P)}QMAX_VMM.ASM $(QMAX_VMM_ADEP)
+
+$(O)QMAX_XMS.OBJ: {$(P)}QMAX_XMS.ASM $(QMAX_XMS_ADEP)
+
+$(C)VERSION.ASM:  {$(P)}$(VERTP).ASM $(VERSRET_ADEP)
+	 xc /r/a/n %s $*.ASM
+
+$(C)VERSBETA.ASM: {$(P)}VERSBETA.ASM $(VERSBETA_ADEP)
+	 xc /r/a/n %s $*.ASM
+
+!IF "$(NEWDIR)" == "Y"
+$(O)VERSBETA.OBJ: {$(P)}VERSBETA.ASM
+	 xc /r/a/n $(Q)$(O)$(@F) $*.OBJ
+
+$(O)VERSION.OBJ:  {$(P)}$(VERTP).ASM
+	 xc /r/a/n $(Q)$(O)$(@F) $*.OBJ
+!ENDIF
+
+# Define all .OBJ's for the .SYS file
+SYSOBJS=$(O)QMAX.OBJ	 $(O)QMAX_ARG.OBJ $(O)QMAX_BCF.OBJ $(O)QMAX_CPQ.OBJ\
+	$(G)QMAX_DBG.OBJ $(O)QMAX_DM2.OBJ $(O)QMAX_DMA.OBJ $(O)QMAX_EEM.OBJ\
+	$(O)QMAX_EM2.OBJ $(O)QMAX_EM4.OBJ $(O)QMAX_EMX.OBJ $(O)QMAX_EVM.OBJ\
+	$(O)QMAX_FCN.OBJ $(O)QMAX_I09.OBJ $(O)QMAX_I0D.OBJ $(O)QMAX_I0E.OBJ\
+	$(O)QMAX_I15.OBJ $(O)QMAX_I21.OBJ $(O)QMAX_I31.OBJ $(O)QMAX_I4B.OBJ\
+	$(O)QMAX_I67.OBJ $(O)QMAX_IDT.OBJ $(O)QMAX_IN2.OBJ $(O)QMAX_INI.OBJ\
+	$(O)QMAX_IOP.OBJ $(G)QMAX_KEY.OBJ $(O)QMAX_LOD.OBJ $(O)QMAX_MAC.OBJ\
+	$(O)QMAX_MEM.OBJ $(O)QMAX_MSG.OBJ $(O)QMAX_OEM.OBJ $(O)QMAX_OSE.OBJ\
+	$(O)QMAX_OVR.OBJ $(O)QMAX_PDT.OBJ $(O)QMAX_PMR.OBJ $(O)QMAX_POS.OBJ\
+	$(O)QMAX_SCR.OBJ $(O)QMAX_SIZ.OBJ $(O)QMAX_STA.OBJ $(O)QMAX_SWP.OBJ\
+	$(O)QMAX_SYS.OBJ $(O)QMAX_TIM.OBJ $(O)QMAX_VCP.OBJ $(O)QMAX_XMS.OBJ\
+	 $(O)VERSION.OBJ $(O)VERSBETA.OBJ $(O)QMAX_D10.OBJ $(O)QMAX_D15.OBJ\
+	$(O)QMAX_D21.OBJ $(O)QMAX_D33.OBJ $(O)QMAX_DIF.OBJ $(O)QMAX_J31.OBJ\
+	$(O)QMAX_K31.OBJ $(O)QMAX_L31.OBJ $(O)QMAX_M31.OBJ $(O)QMAX_N31.OBJ\
+	$(O)QMAX_IM2.OBJ $(O)QMAX_MBT.OBJ $(O)QMAX_BSM.OBJ $(O)QMAX_LSM.OBJ\
+	$(O)QMAX_PPM.OBJ $(O)QMAX_VME.OBJ $(O)QMAX_VMM.OBJ $(O)QMAX_SHR.OBJ\
+	$(O)QMAX_RSP.OBJ $(O)QMAX_PNP.OBJ $(O)QMAX_O31.OBJ
+
+$(BIN)$(SYSNAME).SYS:	  $(SYSOBJS)	    {$(P)}QMAX.WSG    {$(P)}MAKEFILE
+!IF "$(NEWDIR)" == "Y"
+	 copy $(Q)$(O)$(@B).SYS $(O).
+	 copy $(Q)$(O)$(@B).SSF $(O).
+	 copy $(Q)$(O)QMAX.MAP	$(O).
+	 xc/r/a/n/t $(Q)QMAX.WSG
+!ELSE
+	 $(LNKCMD) @<<$(O)qmax.arf
+	   $(SYSOBJS: =+^
+)
+	   $*.SYS
+	   $(O)qmax /map
+	   /line /seg:240
+
+<<KEEP
+	 mapssf -wqmax -t$(O)qmax $(O)qmax
+	 xc /m/r $(O)qmax.ssf	$*.ssf
+!ENDIF
+
+$(BD)$(SYSNAME).SYS: $(BIN)$(SYSNAME).SYS
+!IF "$(NEWDIR)" != "Y"
+	 xc /r	 $(**R).SYS	$*.*
+	 xc /r	 $(**R).SSF	$*.*
+	 xc /r	 $(BIN)qmax.map $(BD).
+!ENDIF
+
+
+$(O)UTIL_ARG.OBJ: {$(P)}UTIL_ARG.ASM $(UTIL_ARG_ADEP)
+
+$(O)UTIL_AR2.OBJ: {$(P)}UTIL_AR2.ASM $(UTIL_AR2_ADEP)
+
+$(O)UTIL_COM.OBJ: {$(P)}UTIL_COM.ASM $(UTIL_COM_ADEP)
+
+$(O)UTIL_DDD.OBJ: {$(P)}UTIL_DDD.ASM $(UTIL_DDD_ADEP)
+
+$(O)UTIL_EMS.OBJ: {$(P)}UTIL_EMS.ASM $(UTIL_EMS_ADEP)
+
+$(O)UTIL_LOD.OBJ: {$(P)}UTIL_LOD.ASM $(UTIL_LOD_ADEP)
+
+$(O)UTIL_LST.OBJ: {$(P)}UTIL_LST.ASM $(UTIL_LST_ADEP)
+
+$(O)UTIL_MAP.OBJ: {$(P)}UTIL_MAP.ASM $(UTIL_MAP_ADEP)
+
+$(O)UTIL_MA2.OBJ: {$(P)}UTIL_MA2.ASM $(UTIL_MA2_ADEP)
+
+$(G)UTIL_MAC.OBJ: {$(P)}UTIL_MAC.ASM $(UTIL_MAC_ADEP)
+
+$(O)UTIL_MSG.OBJ: {$(P)}UTIL_MSG.ASM $(UTIL_MSG_ADEP)
+
+$(O)UTIL_MSG.HLO: {$(P)}UTIL_MSG.ASM $(UTIL_MSG_ADEP)
+
+$(G)UTIL_NUM.OBJ: {$(P)}UTIL_NUM.ASM $(UTIL_NUM_ADEP)
+
+$(O)UTIL_OFF.OBJ: {$(P)}UTIL_OFF.ASM $(UTIL_OFF_ADEP)
+
+$(O)UTIL_OPT.OPT: {$(P)}UTIL_OPT.ASM $(UTIL_OPT_ADEP)
+
+$(O)UTIL_POS.OBJ: {$(P)}UTIL_POS.ASM $(UTIL_POS_ADEP)
+
+$(O)UTIL_PTE.OBJ: {$(P)}UTIL_PTE.ASM $(UTIL_PTE_ADEP)
+
+$(O)UTIL_ROM.OBJ: {$(P)}UTIL_ROM.ASM $(UTIL_ROM_ADEP)
+
+$(O)UTIL_STK.OBJ: {$(P)}UTIL_STK.ASM $(UTIL_STK_ADEP)
+
+$(G)UTIL_STR.OBJ: {$(P)}UTIL_STR.ASM $(UTIL_STR_ADEP)
+
+$(O)UTIL_SUM.OPT: {$(P)}UTIL_SUM.ASM $(UTIL_SUM_ADEP)
+
+$(O)UTIL_TIM.OBJ: {$(P)}UTIL_TIM.ASM $(UTIL_TIM_ADEP)
+
+$(O)UTIL_USE.OBJ: {$(P)}UTIL_USE.ASM $(UTIL_USE_ADEP)
+
+$(O)UTIL_WIN.OBJ: {$(P)}UTIL_WIN.ASM $(UTIL_WIN_ADEP)
+
+$(O)UTIL_WTK.OBJ: {$(P)}UTIL_WTK.ASM $(UTIL_WTK_ADEP)
+
+!IF $(MAKEHILO)
+# Define all .OBJ's for the 386MAX.COM file
+UTLOBJS=$(O)UTIL_COM.OBJ $(O)UTIL_ARG.OBJ $(O)UTIL_EMS.OBJ $(O)UTIL_LOD.OBJ\
+	$(O)UTIL_LST.OBJ $(O)UTIL_MA2.OBJ $(G)UTIL_MAC.OBJ $(O)UTIL_MAP.OBJ\
+	$(O)UTIL_MSG.OBJ $(O)UTIL_NUM.OBJ $(O)UTIL_OFF.OBJ $(O)UTIL_ROM.OBJ\
+	$(G)UTIL_STR.OBJ $(O)UTIL_TIM.OBJ $(O)UTIL_WIN.OBJ $(O)UTIL_WTK.OBJ\
+	$(O)QMAX_SCR.OBJ $(O)VERSBETA.OBJ $(O)VERSION.OBJ
+
+$(BIN)$(UTLNAME).COM:	  $(UTLOBJS)
+!IF "$(NEWDIR)" == "Y"
+	 copy $(Q)$(O)$(@B).COM $(O).
+!ELSE
+	 $(LNKCMD) @<<$(O)util.arf
+	   $(UTLOBJS: =+^
+)
+	   $*
+	   $(O)util /map
+	   /line
+
+<<KEEP
+	 exe2bin $* $*.com
+	 del $*.exe
+!ENDIF
+!ENDIF
+
+!IF $(MAKEHILO)
+$(BD)$(UTLNAME).COM: $(BIN)$(UTLNAME).COM
+!IF "$(NEWDIR)" != "Y"
+	 xc /r	 $(**R).COM	$*.*
+	 xc /r	 $(BIN)UTIL.MAP $(BD).
+!ENDIF
+!ENDIF
+
+# Define all .OBJ's for the 386UTIL.COM file
+UT2OBJS=$(O)UTIL_COM.OBJ $(O)UTIL_AR2.OBJ $(O)UTIL_DDD.OBJ $(O)UTIL_EMS.OBJ\
+	$(O)UTIL_LST.OBJ $(O)UTIL_MAP.OBJ $(O)UTIL_MA2.OBJ $(G)UTIL_MAC.OBJ\
+	$(O)UTIL_MSG.OBJ $(G)UTIL_NUM.OBJ $(O)UTIL_OFF.OBJ $(O)UTIL_OPT.OPT\
+	$(O)UTIL_POS.OBJ $(O)UTIL_PTE.OBJ $(O)UTIL_ROM.OBJ $(O)UTIL_STK.OBJ\
+	$(G)UTIL_STR.OBJ $(O)UTIL_SUM.OPT $(O)UTIL_TIM.OBJ $(O)UTIL_USE.OBJ\
+	$(O)UTIL_WIN.OBJ $(O)UTIL_WTK.OBJ $(O)QMAX_SCR.OBJ $(O)VERSBETA.OBJ\
+	$(O)VERSION.OBJ
+
+$(BIN)$(UT2NAME).COM:	  $(UT2OBJS)
+!IF "$(NEWDIR)" == "Y"
+	 copy $(Q)$(O)$(@B).COM $(O).
+!ELSE
+	 $(LNKCMD) @<<$(O)$(UT2NAME).arf
+	   $(UT2OBJS: =+^
+)
+	   $*
+	   $(O)$(UT2NAME) /map
+	   /line
+
+<<KEEP
+	 mapssf -t$(O)$(UT2NAME) $(O)$(UT2NAME)
+	 exe2bin $* $*.com
+	 del $*.exe
+!ENDIF
+
+$(BD)$(UT2NAME).COM: $(BIN)$(UT2NAME).COM
+!IF "$(NEWDIR)" != "Y"
+	 xc /r	 $(**R).COM	$*.*
+	 xc /r	 $(BIN)$(UT2NAME).MAP $(BD).
+!ENDIF
+
+!IF $(MAKEHILO)
+$(O)HI.OBJ:	  {$(P)}HILO.ASM $(HILO_ADEP)
+!IF "$(NEWDIR)" == "Y"
+	 copy $(Q)$(O)$(@B).OBJ $(O).
+!ELSE
+	 set INCLUDE=$(ALLINC)
+	 masm %s $(MOPT) /dLOAD$(@B), $* $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+!ENDIF
+!ENDIF
+
+!IF $(MAKEHILO)
+$(O)LO.OBJ:	  {$(P)}HILO.ASM $(HILO_ADEP)
+!IF "$(NEWDIR)" == "Y"
+	 copy $(Q)$(O)$(@B).OBJ $(O).
+!ELSE
+	 set INCLUDE=$(ALLINC)
+	 masm %s $(MOPT) /dLOAD$(@B), $* $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+!ENDIF
+!ENDIF
+
+!IF $(MAKEHILO)
+# Define all .OBJ's for the MAXHI.COM and MAXLO.COM files
+HILOBJS=$(O)UTIL_LOD.OBJ $(G)UTIL_STR.OBJ $(O)UTIL_MSG.HLO\
+	$(O)UTIL_WIN.OBJ $(O)VERSION.OBJ  $(O)VERSBETA.OBJ
+HIOBJS =$(O)HI.OBJ	$(HILOBJS)
+LOOBJS =$(O)LO.OBJ	$(HILOBJS)
+
+$(BIN)$(HINAME).COM:	$(HIOBJS)
+!IF "$(NEWDIR)" == "Y"
+	 copy $(Q)$(O)$(@B).COM $(O).
+!ELSE
+	 $(LNKCMD) @<<$(O)$(HINAME).arf
+	   $(HIOBJS: =+^
+)
+	   $*
+	   $*/map
+	   /line
+
+<<KEEP
+	 exe2bin $* $*.com
+	 del $*.exe
+!ENDIF
+!ENDIF
+
+!IF $(MAKEHILO)
+$(BD)$(HINAME).COM: $(BIN)$(HINAME).COM
+!IF "$(NEWDIR)" != "Y"
+	 xc /r	 $(**R).COM	$*.*
+	 xc /r	 $(**R).MAP	$*.*
+!ENDIF
+!ENDIF
+
+!IF $(MAKEHILO)
+$(BIN)$(LONAME).COM:	$(LOOBJS)
+!IF "$(NEWDIR)" == "Y"
+	 copy $(Q)$(O)$(@B).COM $(O).
+!ELSE
+	 $(LNKCMD) @<<$(O)$(LONAME).arf
+	   $(LOOBJS: =+^
+)
+	   $*
+	   $*/map
+	   /line
+
+<<KEEP
+	 exe2bin $* $*.com
+	 del $*.exe
+!ENDIF
+!ENDIF
+
+!IF $(MAKEHILO)
+$(BD)$(LONAME).COM: $(BIN)$(LONAME).COM
+!IF "$(NEWDIR)" != "Y"
+	 xc /r	 $(**R).COM	$*.*
+	 xc /r	 $(**R).MAP	$*.*
+!ENDIF
+!ENDIF
+
+

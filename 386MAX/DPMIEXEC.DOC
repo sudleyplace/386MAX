@@ -1,0 +1,25 @@
+Fix DPMI Bug With DOS EXEC Calls
+
+As a customer has pointed out, when we EXEC a program from a DPMI
+client, we leave around three small data areas in low DOS (for a total
+of about 160 bytes) which aren't freed until the DPMI cient
+terminates.  This change fixes that.
+
+The data areas we allocate and don't free when the DOS EXEC call
+terminates are for the command line, and the two FCBs.	In a manner
+similar to that used to save and restore the environment in the same
+DOS EXEC sequence, we save the segments we allocate on the stack and
+free them upon termination.
+
+QMAX_D21.ASM	Move label for EXEC_LEFIX_ERR to precede the call to
+		  DOSFN EXEC_LETERM so if we fail in EXEC_LEFIX, we
+		  clean up the stack properly.
+		In DOSFN_EXEC_LEFIX, save on the PL0 stack the
+		  segments of the data areas we allocate to free later
+		  on.
+		In DOSFN_EXEC_LEFIX, delete the code which frees the
+		  allocated data areas as that's now done in
+		  DOSFN_EXEC_LETERM.
+		In DOSFN_EXEC_LETERM, free the allocated data areas.
+
+

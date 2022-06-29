@@ -1,0 +1,23 @@
+Workaround BIOS Bug When Rebooting
+
+On certain systems, the BIOS doesn't handle a warm boot well -- in
+fact, it locks up the system.  Once again, we try to accommodate such
+systems.  This time, I'm changing the reboot method from an 8042 reset
+to a jump to the reboot location preceded by clearing  the TLB and
+entering RM.
+
+The previous method can be restored via DEBUG=8042.  DEBUG=TRIP is
+another choice.
+
+386MAX		Document the new keyword.
+
+QMAX_DB3.INC	Define new bit for old warm boot method.
+
+QMAX_ARG.ASM	Define parse table entry for new keyword.
+
+QMAX_EM2.ASM	Define new method of handling warm boot, leaving the
+		  previous methods intact.
+
+QMAX_FCN.ASM	Define routine to handle new keyword.
+
+

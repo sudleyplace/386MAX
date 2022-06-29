@@ -1,0 +1,29 @@
+Fix Interrupt Bug, Part 2
+
+This TWT is the continuation of OVRCLI.
+
+Previously, we were trying to protect ourselves from being interrupted
+between when we save SS and SP.  It turns out that the point of
+interruption can also be in our INT 21h handler in extended memory
+(which starts off with a STI) when we restore the saved SS:SP.
+
+Also, it's possible that EXT_MACFNS can be re-entered because it calls
+the next INT 21h handler in sequence before calling our INT 21h
+handler in PM.
+
+The solution I'm using is to push the caller's SS:SP onto the stack in
+EXT_MACFNS before calling the next DOS handler and stripping it from
+within our DOS PM handler.  Also in our DOS PM handler, we surround
+the code which saves the caller's SS:SP onto the VM stack by CLI/STI
+to ensure that the operation is atomic.  It's this last operation
+which if interrupted can lead to a mismatched stack being used back in
+VM.
+
+QMAX_I21.ASM	Define new stack entry for saved SS:SP from
+		  EXT_MACFNS.
+		Ensure no interruption between restore of SS and SP.
+		Restore saved SS:SP from VM stack.
+
+QMAX_OVR.ASM	Allow re-entrancy of code by pushing STKPTR.
+
+

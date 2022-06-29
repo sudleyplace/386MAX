@@ -1,0 +1,9 @@
+Use PCI Memory Function Call To Get Extended Memory
+
+If the BIOS supports it, there's another function which returns the
+size of extended memory in kilobytes, this time handling > 64 MB.
+
+QMAX_INI.ASM	In CHECK_EXT, see if the BIOS supports the new
+		  function.
+
+

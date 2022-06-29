@@ -1,0 +1,22 @@
+Skip Using PnP RM Data Segment in First Megabyte If >= E000
+
+On some PnP BIOS systems (such as Gateways with an AMI BIOS) the PnP
+RM data segment is at ED00.  With a simple change to an equate, the
+previous code will create additional PTEs for the PnP BIOS in extended
+memory such that the RM data segment is addressible from PM as
+extended memory rather than memory in the first megabyte.
+
+Everything else just follows from the equate change because I had
+previously encountered PnP BIOSes with a RM data segment at F000 and
+took care to allow that to be addressed from PM in extended memory
+(because the BIOS code was already there).
+
+This means that the data block (on the systems I've tested it's marked
+as a 4KB ROM at ED00) can be overwritten with a USE= statement.  I
+have not as yet verified that that region isn't used for anything
+else, so we'll have to wait for a later TWT before automatically
+inserting a USE= statement.
+
+QMAX_DTE.INC	Change PnP BIOS start from F000 to E000.
+
+

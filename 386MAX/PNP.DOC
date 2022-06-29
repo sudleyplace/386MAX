@@ -1,0 +1,216 @@
+Support Plug 'n Play in 386MAX and Related Components
+
+As far as 386MAX and its related components are concerned, Plug 'n
+Play (PnP) is a BIOS service.  It is not a BIOS call, though, instead
+being recognized by a signature somewhere at or above F000 on a para
+boundary.  This means that at a minimum, ROMSRCH needs to exercise
+those services so that we don't map high DOS onto the code/data used
+for PnP.
+
+However, we take PnP support much farther.  Initially, I noticed that
+ROMSRCH was mistakenly recovering one or more 4KB blocks in the BIOS
+which were used for PnP.  This suggested that because PnP has a
+separate PM and RM/VM entry point that we should be able to convert VM
+calls into PM calls where the actual BIOS code being executed is at a
+linear address up in extended memory and not lose high DOS memory to
+PnP BIOS code/data.  Such proved to be the case.
+
+Note that late in the game, I discovered there was a earlier (and
+shorter) undocumented form of the PnP BIOS struc.  I have seen this
+struc length referenced while tracing through the PnP driver
+(DWCFGMG.SYS) on my Gateway, but thought it might be obsolete.	'Fraid
+not, as it can found on Atiq's Gateway at least.  Thus there's some
+code (and data) in this TWT devoted to handling the differences
+between these two strucs.  The new struc has several additional fields
+and, wouldn't you know it, the new fields were not inserted at the end
+of the struc so we have, among other things, two different offsets to
+(say) the RM Seg:Off entry point depending upon which struc it is.
+
+I also found it necessary on Pete's PnP system to ensure that the PnP
+data segment is not cached as a ROM.
+
+This TWT then consists of changes to several different parts of
+386MAX.
+
+1.  Common:
+
+PNP.INC 	Define common strucs and equates for PnP.
+
+
+2.  386MAX.SYS:
+
+* If there's a PnP BIOS, we ensure that the PnP struc in ROM is cached
+so we can patch the PnP data struc.
+
+* The system ROM PTEs (F000-FF00) are duplicated at the end of the
+Page Tables at a linear address for which we setup a code selector in
+the GDT so we can call the PnP functions in the BIOS at its PM entry
+point.
+
+* Other GDT entries are setup to handle the BIOS data selector as well
+as the several far pointer arguments passed in by various PnP function
+calls.	Care is taken in the PnP translation code to push and pop the
+argument selectors we're using onto/from the PL0 stack so our code can
+be re-entrant.
+
+* If the PnP call is made from VM in DOS, we have patched the RM entry
+point to point to code in low DOS which issues an EMM2CALL which
+switches to PM and invokes matching PnP translation code.  This code,
+knowing which PnP function was called, translates the segment:offset
+arguments to selector:offset arguments, pushes the new values onto the
+PL0 stack, calls the PnP BIOS at its PM entry point, strips the
+arguments from the stack upon return, and finally returns to the
+original caller.
+
+This mechanism is made easier by the fact that the PnP spec defines
+the caller as the one to pass far pointers (if any); the PnP BIOS
+itself never passes back a far pointer, although it may store data
+into the memory pointed to by one of the caller's far pointers.  Thus
+there is no need to perform any backend pointer translation.
+Moreover, the only return value from the PnP BIOS is in AX.
+Furthermore, there is no 32-bit PM interface, only a 16-bit one (which
+I'm sure annoys the hell out of USE32 callers).  Piece of cake for us,
+though.
+
+* If the PnP call is made from DPMI in DOS, we've carefully modified
+the PnP struc in the BIOS such that the PnP PM code segment base
+address is the linear address of the PnP BIOS PTEs we created at
+386MAX PM initialization time.
+
+* If the PnP call is made from VCPI in DOS, each time we enter and
+leave the VCPI client, we take care to modify the PnP PM code segment
+base address to point to a new set of PTEs which we copied into the
+VCPI client's page tables at its VM initialization time.  This means
+that a VCPI client who wishes to make PnP BIOS calls from PM must wait
+until entering PM before reading the PM code and data segment base
+addresses.
+
+Alas, note that no matter what we put into the PnP struc visible in VM
+for the PM code segment base address it's going to be wrong for either
+DPMI or VCPI clients.  Because Windows doesn't support VCPI in VM, I
+decided to make VCPI the odd one out in DOS's VM, too.
+
+* If the PnP call is made from VM in Windows, the VM entry point in
+low DOS detects this case and calls the VxD which handles the call.
+
+* If the PnP call is made from DPMI in Windows, the VxD has done a
+Phys2Lin on the system BIOS PTEs to obtain a new linear address which
+is then patched into the PnP struc in the BIOS.  This address can then
+be picked up by a DPMI client, selectors allocated to map it, and then
+called while running as a DPMI client under Windows.  It all just
+works.
+
+* An extensive testing program TESTPNP.COM was written which invokes
+the PnP BIOS in all of the above modes (VM, DPMI, and VCPI).  It can
+run run under Windows as well to test out VM and DPMI PnP calls from
+that context.
+
+
+386MAX		Document keyword to disable our PnP support.
+
+EMM2CALL.INC	Define EMM2CALL function # for PnP support.
+
+QMAXWIN3.INC	Bump the VxD structure version # as we're adding new
+		  fields.
+		Define additional PnP-specific fields.
+		Define new @REF_LENxxx value, although no one uses
+		  any but the first ones.
+
+QMAX_CM2.INC	Define new flag to indicate no PnP support is desired.
+
+QMAX_DTE.INC	Define new DTEs for PnP support.
+		Define BIOS equates for PnP support.
+
+MAKEFILE	Define LNKCMD=link unless it's already defined
+		  globally (guess which linker I use).	Use LNKCMD as
+		  the linker.  Define appropriate entries for new
+		  module QMAX_PNP.ASM.
+		Rename variable used to define util objects to match
+		  the utility program name (UTLxxxx for 386MAX.COM,
+		  UT2xxxx for 386UTIL.COM).
+		Insert more !IF $(MAKEHILO)/!ENDIFs.
+
+QMAX.ASM	Define routine (RESINT_PnP) in low DOS which handles
+		  all VM PNP calls.  Note that this change increases
+		  the size of the 386MAX footprint in both low and
+		  high DOS by 80 bytes.  MAXIMIZEr beware!
+
+QMAX_ARG.ASM	Define parse table entry for NOPNP keyword.
+
+QMAX_EM2.ASM	Define variables used for PnP support in Windows.
+		In UTL_VXD2MAX, handle PnP calls from a VM in Windows.
+		Define routine which performs all PnP translation
+		  services for any PnP calls from VM (in either DOS or
+		  Windows).
+
+QMAX_EVM.ASM	Define routine to recalculate the PnP struc checksum.
+		Define routine to patch the PnP struc in ROM.
+		During PM initialization, fill in PnP PTEs for the
+		  system BIOS as appropriate, as well as various other
+		  PnP values.
+		Upon return from Windows, repatch the BIOS as per
+		  386MAX being in control.
+
+QMAX_FCN.ASM	Define function to disable PnP support.
+
+QMAX_I67.ASM	Define EMM2 entry point for PnP EMM2CALL.
+
+QMAX_IN2.ASM	Define PDT entry offset for PnP BIOS PTEs.
+
+QMAX_INI.ASM	During RM initialization, check for PnP BIOS.
+
+QMAX_OVR.ASM	Define common routine to get VxD entry point.
+
+QMAX_PNP.ASM	Define new module to handle PnP-specific functions.
+
+QMAX_SIZ.ASM	If PnP BIOS present, make room for the BIOS's PTEs.
+
+QMAX_TIM.ASM	If PnP BIOS present, ensure that the one or two 4KB
+		  PTEs are cached.
+		Within the loop checking for ROMs, is the ROM start is
+		  that of the PnP RM DS, skip swapping it.
+
+QMAX_VCP.ASM	If PnP BIOS present, copy the system BIOS PTEs to the
+		  end of 386MAX's PTEs at VCPI GDT initialization
+		  time.
+		When entering and leaving VCPI client, modify the PnP
+		  struc entries as appropriate.
+
+
+3.  386MAX.VXD:
+
+* Handle entry to and from Windows w.r.t. PnP BIOS.
+
+MAKEFILE	Check for MAX7 value rather than presence as it's
+		  always defined.
+		Look for SWATVXD.MAP in $(SWATVXD)RET\ directory
+		  instead of $(SWATVXD) directory.
+
+VMAX.ASM	If PnP BIOS present, handle entry to and from Windows
+		  by allocating selectors as patching the PnP struc in
+		  the system BIOS.
+
+VMAX_MSG.ASM	Define new error message if Phys2Lin on PnP BIOS PTEs
+		  fails.
+
+
+4.  ROMSRCH.COM:
+
+* Detect a PnP BIOS and exercise all of the PnP functions.
+
+PROBE.INC	Define new flag for PnP BIOS.
+
+PROBE.ASM	Widen LCL_FLAG from word to dword to accommodate
+		  additional flags.
+		Check for PnP BIOS.
+		Exercise PnP functions if PnP BIOS.
+		Workaround bug in Matrox Millenium MGA video BIOS
+		  which signals a Divide Overflow when presented
+		  with INT 10h/AX=1111h.
+		Define routine to detect PnP BIOS.
+
+FUNCS.ASM	Delete slightly commented out include.
+		Define PnP local variables.
+		Define routine to exercise PnP functions.
+
+

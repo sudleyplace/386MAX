@@ -1,0 +1,7 @@
+Fix Bug In EMS30 Keyword
+
+Oops!  This procedure should return as a far rather than near call.
+
+QMAX_FCN.ASM	Change from near to far procedure.
+
+

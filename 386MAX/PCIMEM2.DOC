@@ -1,0 +1,66 @@
+Use Another Memory Function Call To Get Extended Memory
+
+If the BIOS supports it, there's another function which returns the
+size of extended memory in kilobytes, this time handling > 64 MB.
+
+At the same time, I found a longtime bug which occurs when we time
+memory.  Actually, there were two bugs.  The first one found was that
+if we mistakenly calculate a value for LMLTOP which is too small, we
+can calculate a starting address for the program which is below 1.1MB,
+the minimum starting address.  This bug is corrected in CALC_SIZE in
+QMAX_SIZ.ASM.  The other bug is that we aren't comparing the various
+timing values correctly, and thus can calculate a value for LMLTOP
+which is too small.  This bug is corrected in TIME_ALLMEM in
+QMAX_TIM.ASM.
+
+While debugging the above memory timing bug, I needed to slow down the
+CPD message display when in PM, so I changed it such that every such
+display (PM only) is forced to pause after each line.  The PM context
+is more likely to go poof, so this allows us to identify the last line
+displayed.
+
+MAKEFILE	For some reason, the "Set INCLUDE=" statement used by
+		  MAKEFILE on my system had multiple repeats of
+		  "$(MAXROOT);include" in it, so I changed the way in
+		  which this path is appended to the "Set INCLUDE="
+		  statement.
+
+QMAX_CPD.INC	Because we need to pass a third parameter to the CPD
+		  macro, rename it to CPDCOM and pass to it the full
+		  function name instead of either empty or "_PM".
+		In CPDCOM, if PAUSE is specified, insert -1 after text
+		  as pause indicator to the DISP_CPDMSGxxx functions.
+		Define CPDPMNP as no pause macro.
+		In CPDPM macro, force pause.
+		Define CPDP as macro for RM with pause.
+		Define CPD as macro for RM without pause (as before).
+
+QMAX_ARG.ASM	Clear temporary default of @NRD_CLR before calculating
+		  the real value.
+
+QMAX_EVM.ASM	In DISP_CPDMSG_PM, handle byte of -1 as pause
+		  indicator.
+		Use CPDPMNP as no pause macro.
+		Include more CPDPM calls for better debugging.
+
+QMAX_INI.ASM	In case we call CPD before @NRD_MDA/@NRD_CLR has been
+		  set, use color as the default (more likely than
+		  mono).
+		In DISP_CPDMSG, handle byte of -1 as pause indicator.
+		In CHECK_EXT, see if the BIOS supports the new 0E801h
+		  function (the real reason I started this TWT).
+
+QMAX_SIZ.ASM	If the start of the program is below 1.1MB, don't use
+		  low memory load.
+
+QMAX_TIM.ASM	For some reason, this code was really screwed up.  It
+		  should be comparing 1.5 x MEMTIME_MD against
+		  MEMTIME_HI and if the new time is smaller, that
+		  should indicate that the middle memory is faster
+		  than high memory.  The margin of an extra 0.5 is
+		  used to avoid small differences in timing such that
+		  if high memory is only maginally slower than middle
+		  memory we don't switch (that is use low memory
+		  load).
+
+

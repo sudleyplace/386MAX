@@ -1,0 +1,11 @@
+Avoid Extra ROM Swap If PnP In Effect
+
+If we're emulating PnP functions, we can mistakenly add an extra ROM
+entry for the PnP struc if there's an existing ROM entry.  This TWT
+introduces code which check for that.
+
+QMAX_TIM.ASM	In CACHE_PnP, check to see if the PnP struc overlaps
+		  an existing ROM entry.  If so, don't add the PnP
+		  struc as an additional swapped ROM entry.
+
+

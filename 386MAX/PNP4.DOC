@@ -1,0 +1,32 @@
+Emulate Additional PnP Functions
+
+A new addition to the PnP spec has come out in the guise of a BIOS
+Boot Specification from COMPAQ, Phoenix, and Intel which defines seven
+new functions.	This TWT implements our emulation of those functions.
+
+At the same time, I cleaned up the emulation code for the previous
+functions so as to use an extension struc for the variable arguments
+which are defined per function.
+
+Also, these tests are included in ROMSRCH (and TESTPNP).
+
+
+Common
+------
+
+PNP.INC 	Define equates for new functions.
+
+
+386MAX
+------
+
+QMAX_EM2.ASM	Define emulation of new functions.
+
+
+ROMSRCH
+-------
+
+FUNCS.ASM	Test new functions.
+
+
+

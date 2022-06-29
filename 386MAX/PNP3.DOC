@@ -1,0 +1,28 @@
+Fix Bug In PnP BIOS Support
+
+If all of the following occur
+
+1.  We detect a PnP BIOS, and
+2.  the signature struc overlaps an existing ROM entry, and
+3.  the ROM entry it overlaps is fast enough that it doesn't get
+    swapped,
+
+then, we mark it as to be swapped (because we need to patch the PnP
+signature struc), but don't add in the ROM length to MAPSIZE.  The
+effect of that omission is that we don't allocate extended memory for
+the swapped ROM and overwrite something else.
+
+At the same time, I fixed a bug in the ROM testing algorithm where we
+were copying ROMs to low DOS memory even if we weren't swapping them.
+This means we would take up more low DOS memory during initialization
+than necessary, a critical resource with Win95 and DriveSpace.
+
+QMAX_MAP.INC	Change MAP_STR flags to record format.
+
+QMAX_TIM.ASM	Avoid copying ROMs to low DOS memory if we're not
+		  swapping them.
+		If we find an existing ROM overlaps the PnP signature,
+		  but isn't marked as swappable, add in its size to
+		  MAPSIZE and copy it to low DOS memory.
+
+

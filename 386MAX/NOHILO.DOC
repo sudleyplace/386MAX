@@ -1,0 +1,11 @@
+Don't Create .COM Files MAXHI/MAXLO/386MAX By Default
+
+As we don't ship MAXHI.COM, MAXLO.COM, or 386MAX.COM any more, it
+seems silly to create them each time we run NMAKE.  This change limits
+creation of those files to when the keyword XUTIL is defined on the
+NMAKE command line.
+
+MAKEFILE	Surround all references to $(HINAME), $(LONAME), and
+		  $(UTLNAME) with checks for XUTIL.
+
+

@@ -1,0 +1,26 @@
+Fix Bug With Large Memory Systems
+
+When running 386MAX on a system with 66 Mb or more of EMS memory to
+manage (the actual amount of extended memory is larger), then the I/O
+ports we set aside for EMS 3.0 compatibility can overlap the reserved
+I/O ports we use for internal communications between VM and PM.
+Compatibility with EMS 3.0 isn't needed anymore, and in fact has been
+provided only when the EMS30 keyword is present in the profile.
+However, checking for these I/O ports was still being done.  Now, we
+skip around these checks unless EMS30 is specified which avoids the
+problem with overlapping I/O ports.
+
+At the same time, I deleted a test for load SWAT as to whether or not
+we trap certain debugging interrupts in the VME SIRB.  This helps when
+debugging on a VME-compatible CPU (i.e.  late model 486s and all
+Pentiums and later) with non-load (i.e.  device) SWAT.
+
+QMAX_IOP.ASM	Whenever the incoming I/O port is being checked in
+		  our GP Fault handler, skip around EMS 3.0 I/O ports
+		  unless the EMS30 keyword is specified.
+
+QMAX_EVM.ASM	Skip check for load SWAT when deciding to trap
+		  debugging interrupts in the VME SIRB.  Also, trap
+		  INTs 02h and 03h as well.
+
+

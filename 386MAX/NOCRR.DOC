@@ -1,0 +1,30 @@
+Workaround Hardware Intel Overdrive Incompatibility
+
+On some systems with an Intel Overdrive CPU (COMPAQ 466 XL comes to
+mind), if we set the Cache Disable bit on the tail of a ROM, the
+contents of the ROM can change out from underneath us.	COMPAQ says
+this is an incompatibility between their system and the Intel CPU.
+
+Our workaround is to define a new keyword (NOCRR) which when set
+avoids setting the Cache Disable bit in these circumstances (say a 10K
+ROM at C800-CA80, where we would set the Cache Dsiable bit on the 4KB
+page at CA00).
+
+MAKEFILE	Note dependency of QMAX_EVM.ASM and QMAX_MEM.ASM on
+		  QMAX_CM4.INC.
+
+386MAX		Document new keyword.
+
+QMAX_CM4.INC	Define bit for new keyword.
+
+QMAX_ARG.ASM	Place new keyword in parse table.
+
+QMAX_EVM.ASM	If NOCRR in effect, don't set Cache Disable bit for
+		  other RAM not on 4KB boundary.
+
+QMAX_FCN.ASM	Define routine to process new keyword.
+
+QMAX_MEM.ASM	In CHK_ALIGN, if we're aligning ROMs and NOCRR is in
+		  effect, don't mark the ROM tail as other RAM.
+
+

@@ -1,0 +1,16 @@
+Fix Interrupt Bug
+
+Although our INT 21h handler should be able to assume that it's called
+with interrupts disabled, we all know that that's not the real world.
+Alas, we have been bitten by this problem again and need to take on
+additional body armor.
+
+At the same time, I deleted some old code which supported 386MAX
+LOADHIGH and LOADLOW which we no longer use, thus lessening our high
+DOS memory footprint by about 60 bytes.
+
+QMAX_OVR.ASM	In EXT_MACFNS, ensure IF=0 before saving SS/SP.
+		In CHECK_ROOM, delete code to support 386MAX
+		   LOADHIGH/LOADLOW.
+
+

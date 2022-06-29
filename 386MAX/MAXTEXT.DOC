@@ -1,0 +1,25 @@
+* 386Max to Qualitas MAX text changes - 386Max.sys and 386Util.com.
+
+ Description: Change all text to reflect name change. DO NOT change
+     file names.
+
+ Who:  PETERJ
+ When: 24 Oct 95
+ SW/HW Environment: ALL
+ Symptom: NAB
+ Temporary Workaround: NAB
+ Test Procedure: view all screens and messages and ascertain that the text 
+     displays Qualitas Max unless it is a file name being displayed.
+ QA Testing Passed
+ Version:  386MAX.SYS 8.00.008.035, 386Util.COM 8.00.008.035
+
+
+Files affected.
+
+QMAX@BCF.OEM                changed OEM_TEXT from 386Max to Qualitas Max.
+
+UTIL_ARG.ASM
+UTIL_AR2.ASM
+UTIL_MSG.ASM
+QMAX_MSG.ASM
+HILO.ASM

@@ -1,0 +1,22 @@
+Fix Bug In Previous LOWSTK TWT
+
+In an earlier TWT, I corrected a problem with overflowing the low DOS
+stack by copying the entire low DOS data area from the original copy
+in extended memory.  At the time I said that
+
+"Because the low DOS stack (and the data below it) doesn't change over
+the PM initialization code, we can refresh it from the pristine copy
+in extended memory."
+
+One case skipped by, though -- PnP initialization of a RM vector to
+handle the DWCFGMG.SYS driver which enters RM through VM/VCPI and then
+calls the RM code.  This TWT fixes that.
+
+Also I checked all other references to DTE_DSLO, none of which occur
+during PM initialization.
+
+QMAX_EVM.ASM	Save the copy of the PnP RM entry point in extended
+		  memory knowing that it'll be copied to low DOS
+		  before we enter VM.
+
+

@@ -1,0 +1,74 @@
+Allow MAX To Handle Up To 256 MB Of RAM
+
+Previously, the presence of various 16-bit wide dynamically allocated
+structures limited the amount of memory MAX could handle to whatever
+size structures would fit in whatever was left in the 64KB data
+segment of MAX.  This value was approximately 92 MB.
+
+More accurately, the problem was two-fold.  There were some structures
+which were dynamically allocated, but 16-bit addressible only.	Thus
+the highest addressible offset was limited to 64KB which limited the
+size of those structures.  Allowing those structures to be allocated
+above 64KB freed us from that limitation, but then meant that other
+structures which contained offsets into the 16-bit structures had to
+have their contents widened from words to dwords (so as to accommodate
+a 32-bit offset).
+
+This change converts all of the 16-bit addressible structures to be
+32-bit addressible, and converts all but one of the structures which
+contained word values (offsets) to dword values.  This has the effect
+of moving the upper limit to a little above 256 MB; that is, MAX can
+run on a 256 MB system.
+
+The following files were changed and why:
+
+QMAX_EMM.INC	Widen PAGELINK (and related structures) from words to
+		  dwords.
+
+QMAX_EEM.ASM	Move 16-bit addressible structures to 32-bits, widen
+		  as appropriate.
+
+QMAX_EM2.ASM	Move 16-bit addressible structures to 32-bits, widen
+		  as appropriate.
+
+QMAX_EM4.ASM	Move 16-bit addressible structures to 32-bits, widen
+		  as appropriate.
+
+QMAX_EMX.ASM	Move 16-bit addressible structures to 32-bits, widen
+		  as appropriate.
+
+QMAX_EVM.ASM	Move 16-bit addressible structures to 32-bits, widen
+		  as appropriate.
+
+QMAX_I67.ASM	Move 16-bit addressible structures to 32-bits, widen
+		  as appropriate.
+
+QMAX_IM2.ASM	Move 16-bit addressible structures to 32-bits, widen
+		  as appropriate.
+
+QMAX_MEM.ASM	Move 16-bit addressible structures to 32-bits, widen
+		  as appropriate.
+
+QMAX_MSG.ASM	Omit stack full error message as it can't occur any
+		  more.
+
+QMAX_OSE.ASM	Move 16-bit addressible structures to 32-bits, widen
+		  as appropriate.
+
+QMAX_PMR.ASM	Move 16-bit addressible structures to 32-bits, widen
+		  as appropriate.
+
+QMAX_SIZ.ASM	Move 16-bit addressible structures to 32-bits, widen
+		  as appropriate.
+		Omit check for stack full as it can't occur any more.
+
+QMAX_VCP.ASM	Move 16-bit addressible structures to 32-bits, widen
+		  as appropriate.
+
+QMAX_VMM.ASM	Move 16-bit addressible structures to 32-bits, widen
+		  as appropriate.
+
+QMAX_XMS.ASM	Move 16-bit addressible structures to 32-bits, widen
+		  as appropriate.
+
+

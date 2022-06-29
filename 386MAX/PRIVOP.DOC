@@ -1,0 +1,12 @@
+Modify Priv Op Message
+
+Change the wording.  Update the copyright date.
+
+QMAX_MSG.ASM	Change the priv op msg wording.
+		Update the copyright date.
+
+QMAX_STA.ASM	Update the copyright date.
+
+UTIL_MSG.ASM	Update the copyright date.
+
+

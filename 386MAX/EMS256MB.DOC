@@ -1,0 +1,12 @@
+Increase EMS Shared Memory Limit
+
+As we run into more and more systems with more than 32MB, customers
+are confused by the 386UTIL (and our initialization screen) display of
+Shared Memory which is limited to 32MB.  In practice, we not so
+limited, but that value is actually the available EMS size.  The
+simplest approach to fix this is to change the maximum amount of EMS
+memory we manage.
+
+QMAX_SIZ.ASM	Change maximum EMS memory we manage to 256MB.
+
+

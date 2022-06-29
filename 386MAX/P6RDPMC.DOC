@@ -1,0 +1,30 @@
+Emulate RDPMC
+
+A new instruction on the P6 (Pentium Pro) allows a program to read the
+system's performance monitoring counters.  This instruction is
+ordinarily privileged (PL0), but can be made available to CPL > 0 code
+by setting CR4.PCE=1.  Alas, Intel isn't as yet too strongly behind
+this feature, as they have not assigned a CPUID feature bit to it;
+instead, they say it is "inherently model specific".  The good news is
+that it GP Faults if ((CPL > 0) && (CR4.PCE == 0)) or if ECX is out of
+range.
+
+Our emulation of this instruction first sets PCE in CR4 (presumably,
+we don't get a GP Fault unless the CPU recognizes the instruction),
+installs a temporary GP Fault handler (which skips over the
+instruction setting CF=1), executes the instruction at PL0, restores
+the temporary GP Fault handler, and tests CF, returning valid results
+to the caller if appropriate.  If there's an error, we send it down to
+the user as an INT 0Dh for them to handle.
+
+
+386.INC 	Define new flags in CR4.
+		Change the name of PTE_0 to PTE_G as that's its name
+		  on the P6 (the Page Global bit).
+		Define macros for some of the new P6 instructions.
+
+OPCODES.INC	Define new P6 opcodes.
+
+QMAX_I0D.ASM	Emulate RDPMC.
+
+

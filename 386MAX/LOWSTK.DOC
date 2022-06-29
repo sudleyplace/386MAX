@@ -1,0 +1,17 @@
+Fix Bug Using Too Much Low DOS Stck
+
+During initialization, depending upon timer ticks and other such
+events, we can use too much low DOS stack (which we like to keep
+limited so as to reduce our low DOS memory footprint).	Among other
+problems this generates is the fact that the name of our Windows VxD
+is overwritten, triggering the message "Qualitas MAX VxD not found".
+
+Because the low DOS stack (and the data below it) doesn't change over
+the PM initialization code, we can refresh it from the pristine copy
+in extended memory.
+
+QMAX_EVM.ASM	Just before entering VM from PM for the first time,
+		  memory.
+		  refresh our low DOS memory from the copy in extended
+
+

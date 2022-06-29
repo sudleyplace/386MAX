@@ -1,0 +1,121 @@
+Fix bug in LSEG for GETSIZEd programs that free themselves
+
+Fix file entry:
+
+* Fix bug in LSEG for GETSIZEd programs that free themselves
+
+ Description:
+	This bug is unpleasant but should be fairly hard to
+	reproduce.  I've had this configuration on my laptop
+	for about a year, and never had a problem until now
+	because I always ran Maximize with the docking station
+	attached.  I also happen to unload lsl if the hardware
+	driver fails, a very handy trick for running with or
+	without the network.
+
+	There are a series of "gotchas" here, and we're
+	basically plugging loopholes within loopholes.	See
+	LOWLSEG.DOC for a complete description of the changes.
+ Who:  HENRY
+ When: 11 Oct 95
+ SW/HW Environment: 1. Run Maximize on a system with (say)
+	lsl loading in autoexec.bat, followed by another
+	network tsr.  If the second program fails (say because
+	the system is not connected to the docking station)
+	use lsl u to unload.
+	2. Make sure the docking station is disconnected
+	while running Maximize to reproduce the problem (so
+	lsl will get unloaded).
+	3. Make sure no programs go resident after lsl tries
+	to go resident (and the other network program, smc9000
+	in my case, also tries to do so).
+	4. In Phase 2 of Maximize, make sure lsl is to be maximized
+	and no other programs come after it.
+ Symptom:  LSEG is broken after BATPROC terminates in Phase 3.
+	This usually causes the system to hang.  To verify, use
+	REBOOTCMD=command to get a DOS prompt before each reboot
+	and manually add lseg.exe to autoexec.bat just before
+	maximize.exe.  This will run even with a broken lseg
+	but will display garbage after the valid entries.
+ Temporary Workaround: Run Full Maximize and toggle low any
+	program known to unload itself after going resident.
+ Test Procedure: Reproduce the problem as described under environment
+	(all conditions may be required to reproduce).	Verify that
+	it works properly with the newer 386max.sys (substituting it
+	for the old one after breaking out of the Phase 3 AUTOEXEC.BAT
+	before running Maximize.exe).  Re-run Maximize with the new
+	386max.sys and verify that everything works as expected,
+	including the program that unloads itself.
+ QA Testing Passed:
+ Version:  386MAX.SYS 8.00.033
+
+Files affected:
+	QMAX_MAC.ASM
+		In CHECK_ORPHSUB, a @MAC_HOLE entry should be treated
+		identically to a @MAC_FREE (0) entry in terms of freeing
+		the LSEG.
+
+		This should have worked in almost all cases previously
+		because the holey entry's sanctity would have been
+		preserved were it in high DOS.
+
+		BUT-- here's what happens when we've GETSIZEd LSL.
+		The hex addresses are examples to clarify the
+		relative order:
+
+		0253 .dmac
+		...
+		0715 environment used by LSL u
+		0800 BATPROC
+		1B65 MOUSE
+		1F71 (free) environment from LSL
+		1F96 resident LSL LSEG
+		1F9A resident LSL
+		20D3 LSL u (current PSP)
+
+		While LSL u is still running (why not, it's an application)
+		it requests the resident LSL to unhook itself.	It then
+		frees segment 1F9A (the resident LSL's PSP).
+
+		When we free 1F9A, we note that it has an LSEG but defer
+		unhooking the LSEG until CHECK_ORPHSUB (note that
+		CHECK_ORPHAN has been defunct for some time, is dead
+		code, and so I've removed it).  Because block 1F9A is
+		_not_ the last in low DOS, we convert it to @MAC_HOLE.
+		Thus we now free LSEGs owned by @MAC_HOLE entries in
+		CHECK_ORPHSUB.
+
+		When LSL u terminates, 20D3 and 0715 are freed as one
+		might expect.  However, on the next allocate, 1F9A is
+		merged with the subsequent (and now free) entry 20D3
+		(_after_ calling CHECK_ORPHSUB).  There is now no
+		opportunity to recognize 1F96 as an orphaned LSEG
+		by our current algorithm of walking the LSEG chain
+		and examining the following MAC entry (which now no
+		longer exists).
+
+		Now why was this a problem before, since the LSEG
+		segment at 1F96 would have remained intact?  Another
+		oversight caused this to get zeroed in MAC_FREE, with
+		the IZITLSEG test failing because the owner failed
+		to meet the LSEG_OWNRHI test.  An inconsistent comment
+		now fits the changed action.
+
+		We've added a bit of extra paranoia here by checking
+		the LSEG_INSTLO value, which on ice as thin as this
+		I feel much better with.  Note that we should have
+		parity with respect to the size of PGROUP, having
+		eliminated CHECK_ORPHAN.
+
+		The final hole to plug here (as indicated by
+		another inconsistent comment in MAC_FREE) is to
+		properly handle conversion to a hole (rather than
+		@MAC_FREE or 0, which precludes giving CHECK_ORPHSUB
+		a crack at it).
+
+		Note that in both these cases the action of freeing
+		and unlinking an LSEG is guarded by a test for 386LOAD
+		in progress (in which case 386LOAD handles everything
+		responsibly).
+
+

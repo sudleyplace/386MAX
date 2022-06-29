@@ -1,0 +1,11 @@
+Fix Bug When Run On Cyrix 686 w/CPUID But No CR4
+
+In our routine which checks for the CPUID instruction, we read CR4 to
+see if debugging extensions are enabled rather than testing the
+feature flags to see if it's supported.  Because the Cyrix 686
+supports CPUID, but not CR4, we halt with an Invalid Opcode
+Exception.
+
+QMAX_INI.ASM	In CHECK_CPUID, test CPUFET_FLAG, rather than CR4.
+
+

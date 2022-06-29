@@ -1,0 +1,19 @@
+Remove Dependency On EGA As Minimum Video Adapter
+
+In CHECK_LINE, a routine common to 386LOAD.SYS, 386LOAD.COM, and
+386UTIL.COM, we get the number of rows on the screen from a variable
+(EGA_ROWS) in the BIOS data area.  On some systems where there is a
+monochrome adapter only present, this variable isn't filled in and is
+zero.
+
+Whenever one of the above utilities displays a line to the screen, it
+checks to see if the line count exceeds the number of lines on the
+screen.  In this case, because this variable is zero, it constantly
+displays the pause message of "Press any key to continue".
+
+The fix is to assume there are 25 lines on the screen if the EGA_ROWS
+value is zero.
+
+UTIL_STR.ASM	If EGA_ROWS is zero, assume 25 lines.
+
+

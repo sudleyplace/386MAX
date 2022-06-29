@@ -1,0 +1,11 @@
+Fix Bug In PnP Emulation
+
+In the original implementation of our PnP support, I mistakenly
+emulated functions 42h and 43h (Get/Set ESCD Data) as passing data in
+the format of Far, Far, Selector whereas the correct format is Far,
+Selector.  This TWT fixes that.
+
+QMAX_EM2.ASM	Change emulation of GET_ESCD and SET_ESCD from Far,
+		  far, selector to Far, selector.
+
+
