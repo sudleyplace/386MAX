@@ -1,0 +1,9 @@
+
+Device=c:\386max\386max.sys pro=c:\386max\386max.pro
+DEVICE=C:\386MAX\386load.sys size=11504 prgreg=2 prog=C:\DOS\SETVER.EXE
+SHELL=C:\COMMAND.COM C:\DOS\ /e:4096 /p
+DOS=HIGH
+BUFFERS = 20
+stacks=0,0
+FILES = 40
+lastdrive=z
