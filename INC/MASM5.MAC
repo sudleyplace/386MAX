@@ -1,0 +1,85 @@
+;' $Header:   P:/PVCS/MAX/INC/MASM5.MAV   1.1   15 Nov 1995 15:03:12   BOB  $
+
+; MASM 5 and later Macros
+
+
+.xcref ASPNOP
+ASPNOP	 macro			; Address size prefix with NOP
+	 db	 67h,90h
+	 endm			; ASPNOP
+
+
+.xcref FIJMP
+FIJMP	 macro	 LAB,SEL
+
+	 db	 0EAh		; Opcode for immediate far jump
+	 dw	 LAB,SEL	; ...to this label and selector
+
+	 endm			; FIJMP
+
+
+.xcref FIJMP32
+FIJMP32  macro	 LAB,SEL
+
+if @WordSize eq 2
+	 db	 066h		; Opcode for OSP
+endif				; IF @WordSize EQ 2
+	 db	 0EAh		; Opcode for immediate far jump
+	 dd	 offset LAB	; ...to this label
+	 dw	 SEL		; ...and selector
+
+	 endm			; FIJMP32
+
+
+.xcref FICALL
+FICALL	 macro	 LAB,SEL,RSEG
+	 local	 L1
+
+ifb <RSEG>
+	 db	 9Ah		; Opcode for immediate far call
+if @WordSize eq 2
+	 dw	 LAB		; ...to this label
+else
+	 dd	 LAB		; ...to this label
+endif				; IF @WordSize eq 2
+	 dw	 SEL		; ...and selector
+else
+	 push	 RSEG		; Save return segment
+	 push	 offset cs:L1	; ...	      offset
+
+	 db	 0EAh		; Opcode for immediate far jump
+if @WordSize eq 2
+	 dw	 LAB		; ...to this label
+else
+	 dd	 LAB		; ...to this label
+endif				; IF @WordSize eq 2
+	 dw	 SEL		; ...and selector
+L1:
+endif				; IFB <RSEG>
+	 endm			; FICALL
+
+
+.xcref FICALLD
+FICALLD  macro	 LAB,SEL
+
+	 db	 66h,9Ah	; Opcode for immediate far call
+	 dd	 LAB		; ...to this label
+	 dw	 SEL		; ...and selector
+
+	 endm			; FICALLD
+
+
+.xcref FICALL32
+FICALL32 macro	 LAB,SEL
+
+if @WordSize eq 2
+	 db	 066h		; Opcode for OSP
+endif				; IF @WordSize EQ 2
+	 db	 09Ah		; Opcode for immediate far call
+	 dd	 offset LAB	; ...to this label
+	 dw	 SEL		; ...and selector
+
+	 endm			; FICALL32
+
+
+
