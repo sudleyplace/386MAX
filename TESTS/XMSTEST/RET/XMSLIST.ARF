@@ -1,0 +1,4 @@
+		ret\XMSLIST.OBJ+
+ret\VERSION.OBJ
+		ret\XMSLIST.exe
+		ret\XMSLIST.map /map /line /nod ;

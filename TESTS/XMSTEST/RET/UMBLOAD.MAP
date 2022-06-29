@@ -1,0 +1,40 @@
+
+ Start  Stop   Length Name                   Class
+ 00000H 00000H 00000H STACK                  PROG
+ 00000H 00171H 00172H CODE                   PROG
+ 00174H 003DBH 00268H DATA                   DATA
+
+ Origin   Group
+ 0000:0   PGROUP
+
+  Address         Publics by Name
+
+ 0000:017A       BASNAM1
+ 0000:0183       BASNAM2
+ 0000:018C       INFO_CTL
+ 0000:01DA       LCLSTK
+ 0000:03DA       LCLSTKZ
+ 0000:018D       MSG_COPY
+ 0000:0080       PSP_PARM_COUNT
+ 0000:0081       PSP_PARM_STRING
+ 0000:0100       UMBLOAD
+ 0000:0178       UMBSEG1
+ 0000:01CA       XLAT_TAB
+ 0000:0174       XMSDRV_VEC
+
+  Address         Publics by Value
+
+ 0000:0080       PSP_PARM_COUNT
+ 0000:0081       PSP_PARM_STRING
+ 0000:0100       UMBLOAD
+ 0000:0174       XMSDRV_VEC
+ 0000:0178       UMBSEG1
+ 0000:017A       BASNAM1
+ 0000:0183       BASNAM2
+ 0000:018C       INFO_CTL
+ 0000:018D       MSG_COPY
+ 0000:01CA       XLAT_TAB
+ 0000:01DA       LCLSTK
+ 0000:03DA       LCLSTKZ
+
+Program entry point at 0000:0100

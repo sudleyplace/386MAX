@@ -1,0 +1,117 @@
+#' $Header:   P:/PVCS/MISC/XMSTEST/MAKEFILE.__V   1.1   06 Aug 1992 13:17:54   HENRY  $
+#
+# Makefile for XMSTEST
+#
+#' $Log:   P:/PVCS/MISC/XMSTEST/MAKEFILE.__V  $
+#' 
+#'    Rev 1.1   06 Aug 1992 13:17:54   HENRY
+#' Handle reallocation of XMS handle allocated with size 0
+#
+
+Q=$(MAXDIR)			# MAX source directory
+O=ret\				# Object directory
+I=$(INCDIR)			# path for generic includes
+
+OLDINC=$(INCLUDE)		# Previous INCLUDE value
+ALLINC=$(O);$(I);$(INCLUDE);$(Q) # INCLUDE search path
+
+# if LST is defined in the environment or on the command line,
+# define a macro we can tack onto the end of each MASM line
+!IFDEF LST
+LSTMAC=,$(LST)\$(@B)
+!ELSE
+LSTMAC=
+!ENDIF
+
+AFLAGS=/mu /p /r /t /w1 /DLANG_$(LANG) # MASM options
+LFLAGS=/map /line /nod		# Linker options
+
+.asm{$(O)}.obj:
+	 @ff /, $(R)$(@B).asm > $(O)dirntry.tmp
+	 @copy $(I)semicol.txt+$(O)dirntry.tmp $(O)dirntry.inc >NUL
+	 set INCLUDE=$(ALLINC)
+	 masm $(@B) $(AFLAGS), $(O) $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+	 @ff $*/,/#
+
+
+ALL:		ASMBIN	CBIN
+
+ASMBIN:		$(O)XMSTEST.COM	$(O)XMSLIST.COM	$(O)UMBLOAD.COM
+
+CBIN:		$(O)UMBTEST.EXE
+
+$(O)UMBTEST.EXE:
+	$(MAKE) -$(MAKEFLAGS) /f umbtest.mak
+
+$(O)XMSTEST.OBJ: XMSTEST.ASM	XMS_TEST.INC	XMS_CMD.INC
+
+$(O)XMS_ARG.OBJ: XMS_ARG.ASM			XMS_CMD.INC
+
+$(O)XMS_A20.OBJ: XMS_A20.ASM	XMS_TEST.INC
+
+$(O)XMS_EDG.OBJ: XMS_EDG.ASM	XMS_TEST.INC
+
+$(O)XMS_HMA.OBJ: XMS_HMA.ASM	XMS_TEST.INC
+
+$(O)XMS_LCK.OBJ: XMS_LCK.ASM	XMS_TEST.INC
+
+$(O)XMS_MOD.OBJ: XMS_MOD.ASM	XMS_TEST.INC
+
+$(O)XMS_MOV.OBJ: XMS_MOV.ASM	XMS_TEST.INC
+
+$(O)XMS_UMB.OBJ: XMS_UMB.ASM	XMS_TEST.INC
+
+$(O)XMS_XMB.OBJ: XMS_XMB.ASM	XMS_TEST.INC
+
+$(O)XMSTEST.COM: $(O)XMSTEST.OBJ	$(O)XMS_MOV.OBJ	$(O)XMS_HMA.OBJ	\
+		 $(O)XMS_XMB.OBJ	$(O)XMS_A20.OBJ	$(O)XMS_UMB.OBJ	\
+		 $(O)XMS_LCK.OBJ	$(O)XMS_MOD.OBJ	$(O)XMS_EDG.OBJ	\
+		 $(O)XMS_ARG.OBJ	$(O)VERSION.OBJ
+	link @<<$(O)xmstest.arf
+		$(**: =+^
+)
+		$*.exe
+		$*.map $(LFLAGS) ;
+<<KEEP
+	 ts $* /s /f_
+	 mapssf -t$* $*
+	 exe2bin $* $*.com
+	 del $*.exe
+	 @ff $*/,/#
+
+
+
+$(O)XMSLIST.OBJ: XMSLIST.ASM
+
+$(O)XMSLIST.COM: $(O)XMSLIST.OBJ	$(O)VERSION.OBJ
+	link @<<$(O)xmslist.arf
+		$(**: =+^
+)
+		$*.exe
+		$*.map $(LFLAGS) ;
+<<KEEP
+	 ts $* /s /f_
+	 mapssf -t$* $*
+	 exe2bin $* $*.com
+	 del $*.exe
+	 @ff $*/,/#
+
+
+$(O)UMBLOAD.OBJ: UMBLOAD.ASM		$(Q)QMAX_CTL.INC
+
+$(O)UMBLOAD.COM: $(O)UMBLOAD.OBJ
+	link @<<$(O)umbload.arf
+		$(**: =+^
+)
+		$*.exe
+		$*.map $(LFLAGS) ;
+<<KEEP
+	 ts $* /s /f_
+	 mapssf -t$* $*
+	 exe2bin $* $*.com
+	 del $*.exe
+	 @ff $*/,/#
+
+

@@ -1,0 +1,5 @@
+		ret\UMBTEST.obj	ret\XMSINFO.obj
+		ret\UMBTEST.exe
+		ret\UMBTEST.map
+		LLIBCA
+		/NOI /BATCH /FAR /PACKC /MAP;

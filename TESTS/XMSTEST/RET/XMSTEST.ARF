@@ -1,0 +1,13 @@
+		ret\XMSTEST.OBJ+
+ret\XMS_MOV.OBJ+
+ret\XMS_HMA.OBJ+
+ret\XMS_XMB.OBJ+
+ret\XMS_A20.OBJ+
+ret\XMS_UMB.OBJ+
+ret\XMS_LCK.OBJ+
+ret\XMS_MOD.OBJ+
+ret\XMS_EDG.OBJ+
+ret\XMS_ARG.OBJ+
+ret\VERSION.OBJ
+		ret\XMSTEST.exe
+		ret\XMSTEST.map /map /line /nod ;

@@ -1,0 +1,16 @@
+Update XMSTEST to check for broken UMB resize
+
+This XMSTEST checks for behavior exhibited by MAX.SYS prior
+to 7.01.040.
+
+Files affected:
+
+UMBTEST.MAK	Add line numbers to map file.
+
+XMS_UMB.ASM	Check for failed UMB resize.
+
+XMSINFO.ASM	Fix bug in free handle count where we always eat a handle.
+
+XMSTEST.ASM	Update version and copyright date.
+
+
