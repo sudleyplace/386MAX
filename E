@@ -1,0 +1,1211 @@
+DISPOBJ   -- Version 1.69 -- An Object Module Displayer
+   (C) Copyright 1985-1998 Qualitas, Inc.  All rights reserved.
+ðð Object module listing of R:\MAX\SETUP\W16\NDL\SETUNZIP.OBJ (14105 bytes) ðð
+THEADR:  Type 80, Offset 0000
+         Name setunzip.cpp
+COMENT:  Type 88, Offset 0011
+         Comment type A1 ==> Object module extensions present
+    0000:01 43 56                                        ð .CV
+LNAMES:  Type 96, Offset 001A
+            1: Name 
+            2: Name CODE
+            3: Name DATA
+            4: Name CONST
+            5: Name BSS
+            6: Name FAR_DATA
+            7: Name $$SYMBOLS
+            8: Name DEBSYM
+            9: Name $$TYPES
+           10: Name DEBTYP
+LNAMES:  Type 96, Offset 005C
+           11: Name SETUNZIP_TEXT
+           12: Name _DATA
+           13: Name CONST
+           14: Name _BSS
+           15: Name DGROUP
+SEGDEF:  Type 98, Offset 0086
+         Reloc word-aligned, combine type public, length 065C
+         Segment name SETUNZIP_TEXT, class CODE
+SEGDEF:  Type 98, Offset 0090
+         Reloc word-aligned, combine type public, length 002B
+         Segment name _DATA, class DATA
+SEGDEF:  Type 98, Offset 009A
+         Reloc word-aligned, combine type public, length 0000
+         Segment name CONST, class CONST
+SEGDEF:  Type 98, Offset 00A4
+         Reloc word-aligned, combine type public, length 0004
+         Segment name _BSS, class BSS
+SEGD32:  Type 99, Offset 00AE
+         Reloc byte-aligned, combine type none, length 00000B41
+         Segment name $$SYMBOLS, class DEBSYM
+SEGD32:  Type 99, Offset 00BA
+         Reloc byte-aligned, combine type none, length 00001A2C
+         Segment name $$TYPES, class DEBTYP
+GRPDEF:  Type 9A, Offset 00C6
+         Group DGROUP is Seg _DATA+Seg CONST+Seg _BSS
+FIXUPP:  Type 9C, Offset 00D1
+         TARGET thread #0, (T4 *Invalid*) segment SETUNZIP_TEXT
+         TARGET thread #1, (T4 *Invalid*) segment _DATA
+         TARGET thread #2, (T4 *Invalid*) segment CONST
+         TARGET thread #3, (T4 *Invalid*) segment _BSS
+         FRAME thread #0, (F1) group DGROUP
+COMENT:  Type 88, Offset 00DF
+         Comment type 9D ==> Compiler options
+         2l
+COMENT:  Type 88, Offset 00E7
+         Comment type 9F ==> Default library
+         OLDNAMES.LIB
+COMENT:  Type 88, Offset 00F9
+         Comment type 9F ==> Default library
+         LLIBCE
+LEDATA:  Type A0, Offset 0105
+         Segment $$SYMBOLS, offset 0000, length 01F7
+    0000:01 00 00 00 13 00 04 00-5D 10 0E 55 4E 5A 49 50 ð ........]..UNZIP
+    0010:43 4D 44 53 54 52 55 43-54 0C 00 04 00 53 10 07 ð CMDSTRUCT....S..
+    0020:5A 49 50 49 4E 46 4F 0C-00 04 00 70 02 07 4C 50 ð ZIPINFO....p..LP
+    0030:44 54 49 4D 45 0B 00 04-00 73 00 06 57 50 41 52 ð DTIME....s..WPAR
+    0040:41 4D 0F 00 04 00 82 10-0A 4C 50 46 4E 44 45 4C ð AM.......LPFNDEL
+    0050:4B 45 59 0B 00 04 00 12-00 06 4C 50 41 52 41 4D ð KEY.......LPARAM
+    0060:10 00 04 00 87 10 0B 57-4E 44 45 4E 55 4D 50 52 ð .......WNDENUMPR
+    0070:4F 43 0C 00 04 00 12 00-07 4C 52 45 53 55 4C 54 ð OC.......LRESULT
+    0080:10 00 04 00 8C 10 0B 47-4E 4F 54 49 46 59 50 52 ð .......GNOTIFYPR
+    0090:4F 43 09 00 04 00 70 01-04 50 53 54 52 14 00 04 ð OC....p..PSTR...
+    00A0:00 8F 10 0F 4C 50 46 4E-52 45 4E 41 4D 45 56 41 ð ....LPFNRENAMEVA
+    00B0:4C 55 45 0A 00 04 00 70-02 05 4C 50 53 54 52 0B ð LUE....p..LPSTR.
+    00C0:00 04 00 70 02 06 4C 50-43 53 54 52 0D 00 03 00 ð ...p..LPCSTR....
+    00D0:90 10 00 00 06 46 4D 54-5F 31 44 0B 00 04 00 20 ð .....FMT_1D.... 
+    00E0:02 06 4C 50 42 59 54 45-0D 00 03 00 90 10 01 00 ð ..LPBYTE........
+    00F0:06 46 4D 54 5F 32 44 0D-00 03 00 90 10 02 00 06 ð .FMT_2D.........
+    0100:46 4D 54 5F 34 44 0E 00-03 00 90 10 03 00 07 46 ð FMT_4D.........F
+    0110:4D 54 5F 54 58 54 0B 00-04 00 12 00 06 66 70 6F ð MT_TXT.......fpo
+    0120:73 5F 74 17 00 04 00 82-10 12 4C 50 46 4E 44 4F ð s_t.......LPFNDO
+    0130:45 53 56 41 4C 55 45 45-58 49 53 54 13 00 03 00 ð ESVALUEEXIST....
+    0140:90 10 04 00 0C 46 4D 54-5F 54 58 54 5F 4C 4F 4E ð .....FMT_TXT_LON
+    0150:47 0D 00 04 00 94 10 08-48 4F 4F 4B 50 52 4F 43 ð G.......HOOKPROC
+    0160:0C 00 04 00 98 10 07 4C-50 46 4E 44 55 5A 0E 00 ð .......LPFNDUZ..
+    0170:04 00 01 10 09 43 54 69-6D 65 44 61 74 65 0B 00 ð .....CTimeDate..
+    0180:04 00 03 02 06 4C 50 56-4F 49 44 13 00 04 00 8C ð .....LPVOID.....
+    0190:10 0E 4C 50 46 4E 33 44-52 45 47 49 53 54 45 52 ð ..LPFN3DREGISTER
+    01A0:0B 00 04 00 47 10 06 43-5A 6F 70 65 6E 11 00 04 ð ....G..CZopen...
+    01B0:00 9F 10 0C 52 53 52 43-48 44 4C 52 50 52 4F 43 ð ....RSRCHDLRPROC
+    01C0:11 00 04 00 A4 10 0C 50-52 4F 50 45 4E 55 4D 50 ð ....¤..PROPENUMP
+    01D0:52 4F 43 15 00 04 00 8C-10 10 4C 50 46 4E 33 44 ð ROC.......LPFN3D
+    01E0:55 4E 52 45 47 49 53 54-45 52 0B 00 04 00 03 01 ð UNREGISTER......
+    01F0:06 48 41 4E 44 4C 45                            ð .HANDLE
+LEDATA:  Type A0, Offset 0303
+         Segment $$SYMBOLS, offset 01F7, length 01FA
+    01F7:                     14-00 04 00 AB 10 0F 4F 4C ð        ....«..OL
+    0200:44 46 4F 4E 54 45 4E 55-4D 50 52 4F 43 11 00 04 ð DFONTENUMPROC...
+    0210:00 B4 10 0C 47 4F 42 4A-45 4E 55 4D 50 52 4F 43 ð .´..GOBJENUMPROC
+    0220:11 00 04 00 BB 10 0C 46-4F 4E 54 45 4E 55 4D 50 ð ....»..FONTENUMP
+    0230:52 4F 43 16 00 04 00 C5-10 11 4C 50 46 4E 33 44 ð ROC....Å..LPFN3D
+    0240:53 55 42 43 4C 41 53 53-44 4C 47 0C 00 04 00 03 ð SUBCLASSDLG.....
+    0250:01 07 48 47 4C 4F 42 41-4C 0B 00 04 00 03 01 06 ð ..HGLOBAL.......
+    0260:48 4C 4F 43 41 4C 0C 00-04 00 21 00 07 77 63 68 ð HLOCAL....!..wch
+    0270:61 72 5F 74 0E 00 04 00-C8 10 09 54 49 4D 45 52 ð ar_t....È..TIMER
+    0280:50 52 4F 43 18 00 04 00-CB 10 13 4C 50 46 4E 33 ð PROC....Ë..LPFN3
+    0290:44 53 55 42 43 4C 41 53-53 44 4C 47 45 58 09 00 ð DSUBCLASSDLGEX..
+    02A0:04 00 22 00 04 48 4B 45-59 09 00 04 00 73 00 04 ð .."..HKEY....s..
+    02B0:41 54 4F 4D 09 00 04 00-CD 10 04 48 57 4E 44 0C ð ATOM....Í..HWND.
+    02C0:00 04 00 CF 10 07 46 41-52 50 52 4F 43 0B 00 04 ð ...Ï..FARPROC...
+    02D0:00 88 10 06 48 57 4E 44-5F 5F 0E 00 04 00 D1 10 ð ....HWND__....Ñ.
+    02E0:09 5F 6F 6E 65 78 69 74-5F 74 13 00 04 00 D6 10 ð ._onexit_t....Ö.
+    02F0:0E 47 52 41 59 53 54 52-49 4E 47 50 52 4F 43 12 ð .GRAYSTRINGPROC.
+    0300:00 04 00 AD 10 0D 74 61-67 54 45 58 54 4D 45 54 ð ...­..tagTEXTMET
+    0310:52 49 43 0F 00 04 00 D1-10 0A 5F 66 6F 6E 65 78 ð RIC....Ñ.._fonex
+    0320:69 74 5F 74 17 00 04 00-8C 10 12 4C 50 46 4E 33 ð it_t.......LPFN3
+    0330:44 41 55 54 4F 53 55 42-43 4C 41 53 53 0D 00 04 ð DAUTOSUBCLASS...
+    0340:00 D1 10 08 6F 6E 65 78-69 74 5F 74 0E 00 04 00 ð .Ñ..onexit_t....
+    0350:DA 10 09 48 49 4E 53 54-41 4E 43 45 08 00 04 00 ð Ú..HINSTANCE....
+    0360:DC 10 03 48 44 43 10 00-04 00 64 10 0B 48 49 4E ð Ü..HDC....d..HIN
+    0370:53 54 41 4E 43 45 5F 5F-0A 00 04 00 D7 10 05 48 ð STANCE__....×..H
+    0380:44 43 5F 5F 0C 00 04 00-03 01 07 48 47 44 49 4F ð DC__.......HGDIO
+    0390:42 4A 0D 00 04 00 22 00-08 43 4F 4C 4F 52 52 45 ð BJ...."..COLORRE
+    03A0:46 1F 00 04 00 DF 10 1A-4C 50 46 4E 43 48 41 4E ð F....ß..LPFNCHAN
+    03B0:47 45 50 45 56 45 52 53-49 4F 4E 4E 55 4D 42 45 ð GEPEVERSIONNUMBE
+    03C0:52 53 0D 00 04 00 E0 10-08 43 41 54 43 48 42 55 ð RS....à..CATCHBU
+    03D0:46 10 00 04 00 E3 10 0B-4C 49 4E 45 44 44 41 50 ð F....ã..LINEDDAP
+    03E0:52 4F 43 0C 00 04 00 E6-10 07 57 4E 44 50 52 4F ð ROC....æ..WNDPRO
+    03F0:43                                              ð C
+PUBDEF:  Type 90, Offset 0504
+         Group DGROUP, Segment _BSS
+         Name ?lpfnDuz@@3P7CHPEUUNZIPCMDSTRUCT@@@ZE, offset 0000, typedef 109A
+THEADR:  Type 80, Offset 0534
+         Name setunzip.cpp
+PUBDEF:  Type 90, Offset 0545
+         Group DGROUP, Segment _DATA
+         Name ?szC_DUNZIPLib@@3PEDE, offset 000C, typedef 0270
+         Name ?szC_DUNZIP32Lib@@3PEDE, offset 001E, typedef 0270
+         Name _hlibDUNZIP, offset 0022, typedef 104A
+LEDATA:  Type A0, Offset 0591
+         Segment $$SYMBOLS, offset 03F1, length 01DC
+    03F1:   12 00 04 00 E8 10 0D-4C 50 46 4E 49 54 53 4F ð  ....è..LPFNITSO
+    0400:55 52 44 4C 4C 0B 00 04-00 12 00 06 74 69 6D 65 ð URDLL.......time
+    0410:5F 74 0C 00 04 00 EA 10-07 44 4C 47 50 52 4F 43 ð _t....ê..DLGPROC
+    0420:0C 00 04 00 12 00 07 63-6C 6F 63 6B 5F 74 0F 00 ð .......clock_t..
+    0430:04 00 ED 10 0A 4C 50 46-4E 41 44 44 52 45 47 0A ð ..í..LPFNADDREG.
+    0440:00 04 00 72 00 05 48 46-49 4C 45 0F 00 04 00 F6 ð ...r..HFILE....ö
+    0450:10 0A 4D 46 45 4E 55 4D-50 52 4F 43 09 00 04 00 ð ..MFENUMPROC....
+    0460:72 00 04 42 4F 4F 4C 0B-00 04 00 73 00 06 73 69 ð r..BOOL....s..si
+    0470:7A 65 5F 74 09 00 04 00-20 00 04 42 59 54 45 0E ð ze_t.... ..BYTE.
+    0480:00 04 00 FB 10 09 41 42-4F 52 54 50 52 4F 43 09 ð ...û..ABORTPROC.
+    0490:00 04 00 21 00 04 57 4F-52 44 10 00 04 00 E8 10 ð ...!..WORD....è.
+    04A0:0B 4C 50 46 4E 49 53 39-35 56 45 52 0A 00 04 00 ð .LPFNIS95VER....
+    04B0:22 00 05 44 57 4F 52 44-0C 00 04 00 70 02 07 76 ð "..DWORD....p..v
+    04C0:61 5F 6C 69 73 74 09 00-04 00 73 00 04 55 49 4E ð a_list....s..UIN
+    04D0:54 09 00 04 00 12 00 04-4C 4F 4E 47 13 00 04 00 ð T.......LONG....
+    04E0:EE 10 0E 74 61 67 48 41-4E 44 4C 45 54 41 42 4C ð î..tagHANDLETABL
+    04F0:45 1B 00 04 00 FE 10 16-4C 50 46 4E 43 4F 4D 50 ð E....þ..LPFNCOMP
+    0500:41 52 45 56 45 52 53 49-4F 4E 49 4E 46 4F 0F 00 ð AREVERSIONINFO..
+    0510:04 00 AC 10 0A 74 61 67-4C 4F 47 46 4F 4E 54 0A ð ..¬..tagLOGFONT.
+    0520:00 04 00 FF 10 05 44 54-49 4D 45 10 00 04 00 BC ð ...ÿ..DTIME....¼
+    0530:10 0B 45 4E 55 4D 4C 4F-47 46 4F 4E 54 13 00 04 ð ..ENUMLOGFONT...
+    0540:00 BC 10 0E 74 61 67 45-4E 55 4D 4C 4F 47 46 4F ð .¼..tagENUMLOGFO
+    0550:4E 54 0C 00 04 00 A0 10-07 48 52 53 52 43 5F 5F ð NT.... ..HRSRC__
+    0560:12 00 04 00 BE 10 0D 4E-45 57 54 45 58 54 4D 45 ð ....¾..NEWTEXTME
+    0570:54 52 49 43 0F 00 04 00-F1 10 0A 4D 45 54 41 52 ð TRIC....ñ..METAR
+    0580:45 43 4F 52 44 12 00 04-00 F1 10 0D 74 61 67 4D ð ECORD....ñ..tagM
+    0590:45 54 41 52 45 43 4F 52-44 15 00 04 00 BE 10 10 ð ETARECORD....¾..
+    05A0:74 61 67 4E 45 57 54 45-58 54 4D 45 54 52 49 43 ð tagNEWTEXTMETRIC
+    05B0:1B 00 09 00 00 00 00 00-14 57 31 36 5C 6E 64 4C ð .........W16\ndL
+    05C0:5C 53 45 54 55 4E 5A 49-50 2E 6F 62 6A          ð \SETUNZIP.obj
+LEDATA:  Type A0, Offset 0774
+         Segment _DATA, offset 0000, length 0024
+    0000:44 55 4E 5A 49 50 2E 44-4C 4C 00 00 00 00 00 00 ð DUNZIP.DLL......
+    0010:44 55 4E 5A 49 50 33 32-2E 44 4C 4C 00 00 00 00 ð DUNZIP32.DLL....
+    0020:00 00 00 00                                     ð ....
+FIXUPP:  Type 9C, Offset 079F
+         Segment-relative ptr16:16 location 00C (00C), Frame thread #0,
+           Target thread #1
+         Segment-relative ptr16:16 location 01E (01E), Frame thread #0,
+           Target thread #1, displacement 0010
+EXTDEF:  Type 8C, Offset 07AB
+            1: Name ?ZipPath@@ZAPFDPFD@Z
+            2: Name _memset
+            3: Name ?_CZopen@CZopen@@JECXI@Z
+            4: Name __ffree
+            5: Name ??1CZopen@@REC@XZ
+            6: Name LSTRLEN
+            7: Name __fmalloc
+LEDATA:  Type A0, Offset 0818
+         Segment SETUNZIP_TEXT, offset 0000, length 0200
+    0000:C8 00 00 00 56 57 C4 5E-06 26 8A 07 25 FF 00 3D ð È...VWÄ^.&..%ÿ.=
+    0010:00 00 75 03 E9 00 00 C4-5E 06 26 8A 47 01 25 FF ð ..u.é..Ä^.&.G.%ÿ
+    0020:00 3D 3A 00 74 03 E9 00-00 83 46 06 02 C4 5E 06 ð .=:.t.é...F..Ä^.
+    0030:26 8A 07 25 FF 00 3D 2F-00 75 03 E9 00 00 C4 5E ð &..%ÿ.=/.u.é..Ä^
+    0040:06 26 8A 07 25 FF 00 3D-5C 00 74 03 E9 00 00 83 ð .&..%ÿ.=\.t.é...
+    0050:46 06 01 8B 46 06 8B 56-08 E9 00 00 5F 5E C9 CB ð F...F..V.é.._^ÉË
+    0060:C8 00 00 00 56 57 C4 5E-06 26 C7 47 04 00 00 26 ð È...VWÄ^.&ÇG...&
+    0070:C7 47 06 00 00 8B 46 0A-C4 5E 06 26 89 47 02 6A ð ÇG....F.Ä^.&.G.j
+    0080:70 6A 00 B8 08 00 8B 4E-06 8B 56 08 03 C8 52 51 ð pj.¸...N..V..ÈRQ
+    0090:9A 00 00 00 00 83 C4 08-C4 5E 06 26 C7 47 08 70 ð ......Ä.Ä^.&ÇG.p
+    00A0:00 C4 5E 06 26 C7 47 24-01 00 C4 5E 06 26 C7 47 ð .Ä^.&ÇG$..Ä^.&ÇG
+    00B0:22 01 00 C4 5E 06 26 C7-47 2A 01 00 6A 28 68 FF ð "..Ä^.&ÇG*..j(hÿ
+    00C0:00 B8 78 00 8B 4E 06 8B-56 08 03 C8 52 51 9A 00 ð .¸x..N..V..ÈRQ..
+    00D0:00 00 00 83 C4 08 6A 50-6A 00 B8 A0 00 8B 4E 06 ð ....Ä.jPj.¸ ..N.
+    00E0:8B 56 08 03 C8 52 51 9A-00 00 00 00 83 C4 08 6A ð .V..ÈRQ......Ä.j
+    00F0:50 6A 00 B8 F0 00 8B 4E-06 8B 56 08 03 C8 52 51 ð Pj.¸ð..N..V..ÈRQ
+    0100:9A 00 00 00 00 83 C4 08-6A 28 6A 00 B8 40 01 8B ð ......Ä.j(j.¸@..
+    0110:4E 06 8B 56 08 03 C8 52-51 9A 00 00 00 00 83 C4 ð N..V..ÈRQ......Ä
+    0120:08 E9 00 00 5F 5E C9 CA-06 00 C8 00 00 00 56 57 ð .é.._^ÉÊ..È...VW
+    0130:C4 5E 06 26 83 7F 04 00-74 03 E9 00 00 26 83 7F ð Ä^.&...t.é..&.
+    0140:06 00 75 03 E9 00 00 C4-5E 06 26 FF 77 06 26 FF ð ..u.é..Ä^.&ÿw.&ÿ
+    0150:77 04 9A 00 00 00 00 83-C4 04 C4 5E 06 26 C7 47 ð w.......Ä.Ä^.&ÇG
+    0160:04 00 00 26 C7 47 06 00-00 E9 00 00 5F 5E C9 CA ð ...&ÇG...é.._^ÉÊ
+    0170:04 00 C8 00 00 00 56 57-C4 5E 06 26 83 7F 04 00 ð ..È...VWÄ^.&...
+    0180:74 03 E9 00 00 26 83 7F-06 00 75 03 E9 00 00 C4 ð t.é..&...u.é..Ä
+    0190:5E 06 26 FF 77 06 26 FF-77 04 9A 00 00 00 00 83 ð ^.&ÿw.&ÿw.......
+    01A0:C4 04 FF 76 0C FF 76 0A-9A 00 00 00 00 05 01 00 ð Ä.ÿv.ÿv.........
+    01B0:50 9A 00 00 00 00 83 C4-02 C4 5E 06 26 89 47 04 ð P......Ä.Ä^.&.G.
+    01C0:26 89 57 06 C4 5E 06 26-C7 87 68 01 FF FF C4 5E ð &.W.Ä^.&Ç.h.ÿÿÄ^
+    01D0:06 26 C7 87 6A 01 FF FF-C4 5E 06 26 83 7F 04 00 ð .&Ç.j.ÿÿÄ^.&...
+    01E0:74 03 E9 00 00 26 83 7F-06 00 74 03 E9 00 00 B8 ð t.é..&...t.é..¸
+    01F0:FF FF E9 00 00 C4 5E 06-26 8B 47 04 26 8B 57 06 ð ÿÿé..Ä^.&.G.&.W.
+FIXUPP:  Type 9C, Offset 0A1F
+         Segment-relative ptr16:16 location 091 (091), 
+           Frame & Target external _memset
+         Segment-relative ptr16:16 location 0CF (0CF), 
+           Frame & Target external _memset
+         Segment-relative ptr16:16 location 0E8 (0E8), 
+           Frame & Target external _memset
+         Segment-relative ptr16:16 location 101 (101), 
+           Frame & Target external _memset
+         Segment-relative ptr16:16 location 11A (11A), 
+           Frame & Target external _memset
+         Segment-relative ptr16:16 location 153 (153), 
+           Frame & Target external __ffree
+         Segment-relative ptr16:16 location 19B (19B), 
+           Frame & Target external __ffree
+         Segment-relative ptr16:16 location 1A9 (1A9), 
+           Frame & Target external LSTRLEN
+         Segment-relative ptr16:16 location 1B2 (1B2), 
+           Frame & Target external __fmalloc
+EXTDEF:  Type 8C, Offset 0A47
+            8: Name LSTRCPY
+            9: Name ?SetZip@CZopen@@RECHPFD@Z
+           10: Name ?GetFromZip@CZopen@@RECHPFD0H@Z
+           11: Name ?GetNext@CZopen@@RECHPEUZIPINFO@@@Z
+           12: Name ?GetFirst@CZopen@@RECHPEUZIPINFO@@@Z
+LEDATA:  Type A0, Offset 0ADB
+         Segment SETUNZIP_TEXT, offset 0200, length 0202
+    0200:C4 5E 06 26 89 47 0C 26-89 57 0E C4 5E 06 26 FF ð Ä^.&.G.&.W.Ä^.&ÿ
+    0210:77 06 26 FF 77 04 FF 76-0C FF 76 0A 9A 00 00 00 ð w.&ÿw.ÿv.ÿv.....
+    0220:00 B8 00 00 E9 00 00 5F-5E C9 CA 08 00 90 C8 00 ð .¸..é.._^ÉÊ...È.
+    0230:00 00 56 57 83 3E 00 00-00 74 03 E9 00 00 83 3E ð ..VW.>...t.é...>
+    0240:02 00 00 74 03 E9 00 00-B8 FF FF E9 00 00 C4 5E ð ...t.é..¸ÿÿé..Ä^
+    0250:06 26 C7 47 0A 08 00 C4-5E 06 26 C7 47 10 00 00 ð .&ÇG...Ä^.&ÇG...
+    0260:26 C7 47 12 00 00 FF 76-12 FF 76 10 9A 00 00 00 ð &ÇG...ÿv.ÿv.....
+    0270:00 83 C4 04 C4 5E 06 26-89 47 14 26 89 57 16 C4 ð ..Ä.Ä^.&.G.&.W.Ä
+    0280:5E 06 26 C7 47 18 FF FF-C4 5E 06 8B 46 0C 8B 56 ð ^.&ÇG.ÿÿÄ^..F..V
+    0290:0E 26 89 47 1A 26 89 57-1C 83 7E 0A 00 74 03 E9 ð .&.G.&.W..~..t.é
+    02A0:00 00 B8 01 00 E9 00 00-B8 00 00 C4 5E 06 26 89 ð ..¸..é..¸..Ä^.&.
+    02B0:47 28 C4 5E 06 26 C7 07-FF FF B8 08 00 8B 4E 06 ð G(Ä^.&Ç.ÿÿ¸...N.
+    02C0:8B 56 08 03 C8 52 51 FF-1E 00 00 89 46 FC C4 5E ð .V..ÈRQÿ....FüÄ^
+    02D0:06 26 C7 47 28 00 00 83-7E FC 00 74 03 E9 00 00 ð .&ÇG(...~ü.t.é..
+    02E0:B8 00 00 E9 00 00 B8 FF-FF E9 00 00 5F 5E C9 CA ð ¸..é..¸ÿÿé.._^ÉÊ
+    02F0:0E 00 C8 00 00 00 56 57-C4 5E 06 26 83 7F 04 00 ð ..È...VWÄ^.&...
+    0300:74 03 E9 00 00 26 83 7F-06 00 74 03 E9 00 00 B8 ð t.é..&...t.é..¸
+    0310:FF FF E9 00 00 C4 5E 06-26 C7 87 68 01 FF FF C4 ð ÿÿé..Ä^.&Ç.h.ÿÿÄ
+    0320:5E 06 26 C7 47 0A 01 00-C4 5E 06 26 C7 47 10 00 ð ^.&ÇG...Ä^.&ÇG..
+    0330:00 26 C7 47 12 00 00 C4-5E 06 26 C7 47 14 00 00 ð .&ÇG...Ä^.&ÇG...
+    0340:26 C7 47 16 00 00 C4 5E-06 26 C7 47 18 FF FF C4 ð &ÇG...Ä^.&ÇG.ÿÿÄ
+    0350:5E 06 26 C7 47 3E 00 00-B8 08 00 8B 4E 06 8B 56 ð ^.&ÇG>..¸...N..V
+    0360:08 03 C8 52 51 FF 1E 00-00 3D 00 00 75 03 E9 00 ð ..ÈRQÿ...=..u.é.
+    0370:00 B8 FF FF E9 00 00 C4-5E 06 26 8B 47 3E C4 5E ð .¸ÿÿé..Ä^.&.G>Ä^
+    0380:06 26 89 87 6A 01 C4 5E-06 26 83 BF 6A 01 01 7C ð .&..j.Ä^.&.¿j..|
+    0390:03 E9 00 00 B8 FF FF E9-00 00 FF 76 0C FF 76 0A ð .é..¸ÿÿé..ÿv.ÿv.
+    03A0:FF 76 08 FF 76 06 9A 00-00 00 00 E9 00 00 5F 5E ð ÿv.ÿv......é.._^
+    03B0:C9 CA 08 00 C8 00 00 00-56 57 C4 5E 06 26 83 7F ð ÉÊ..È...VWÄ^.&.
+    03C0:04 00 74 03 E9 00 00 26-83 7F 06 00 75 03 E9 00 ð ..t.é..&...u.é.
+    03D0:00 C4 5E 06 26 83 BF 6A-01 01 7C 03 E9 00 00 B8 ð .Ä^.&.¿j..|.é..¸
+    03E0:FF FF E9 00 00 C4 5E 06-26 C7 47 0A 02 00 C4 5E ð ÿÿé..Ä^.&ÇG...Ä^
+    03F0:06 8B 46 0A 8B 56 0C 26-89 47 10 26 89 57 12 C4 ð ..F..V.&.G.&.W.Ä
+    0400:5E 06                                           ð ^.
+FIXUPP:  Type 9C, Offset 0CE4
+         Segment-relative ptr16:16 location 01D (21D), 
+           Frame & Target external LSTRCPY
+         Segment-relative word offset location 036 (236), Frame thread #0,
+           Target thread #3
+         Segment-relative word offset location 040 (240), Frame thread #0,
+           Target thread #3
+         Segment-relative ptr16:16 location 06D (26D), 
+           Frame & Target external ?ZipPath@@ZAPFDPFD@Z
+         Segment-relative word offset location 0C9 (2C9), Frame thread #0,
+           Target thread #3
+         Segment-relative word offset location 167 (367), Frame thread #0,
+           Target thread #3
+         Segment-relative ptr16:16 location 1A7 (3A7), 
+           Frame & Target external ?GetNext@CZopen@@RECHPEUZIPINFO@@@Z
+LEDATA:  Type A0, Offset 0D00
+         Segment $$SYMBOLS, offset 05CD, length 01DF
+    05CD:                                       23 00 05 ð              #..
+    05D0:01 00 00 00 00 00 00 00-00 00 00 00 00 60 00 06 ð .............`..
+    05E0:00 5C 00 00 00 00 00 7A-10 04 07 5A 69 70 50 61 ð .\.....z...ZipPa
+    05F0:74 68 0D 00 00 01 06 00-70 02 06 6C 70 50 61 74 ð th......p..lpPat
+    0600:68 02 00 06 00 2B 00 05-01 00 00 00 00 00 00 00 ð h....+..........
+    0610:00 00 00 00 00 CA 00 06-00 C4 00 00 00 00 00 4E ð .....Ê...Ä.....N
+    0620:10 04 0F 43 5A 6F 70 65-6E 3A 3A 5F 43 5A 6F 70 ð ...CZopen::_CZop
+    0630:65 6E 0B 00 00 01 06 00-62 10 04 74 68 69 73 0C ð en......b..this.
+    0640:00 00 01 0A 00 73 00 05-77 49 6E 73 74 02 00 06 ð .....s..wInst...
+    0650:00 2B 00 05 01 00 00 00-00 00 00 00 00 00 00 00 ð .+..............
+    0660:00 48 00 06 00 42 00 00-00 00 00 4F 10 04 0F 43 ð .H...B.....O...C
+    0670:5A 6F 70 65 6E 3A 3A 7E-43 5A 6F 70 65 6E 0B 00 ð Zopen::~CZopen..
+    0680:00 01 06 00 62 10 04 74-68 69 73 02 00 06 00 2A ð ....b..this....*
+    0690:00 05 01 00 00 00 00 00-00 00 00 00 00 00 00 BB ð ...............»
+    06A0:00 06 00 B5 00 00 00 00-00 50 10 04 0E 43 5A 6F ð ...µ.....P...CZo
+    06B0:70 65 6E 3A 3A 53 65 74-5A 69 70 0B 00 00 01 06 ð pen::SetZip.....
+    06C0:00 62 10 04 74 68 69 73-10 00 00 01 0A 00 70 02 ð .b..this......p.
+    06D0:09 6C 70 5A 69 70 50 61-74 68 02 00 06 00 2E 00 ð .lpZipPath......
+    06E0:05 01 00 00 00 00 00 00-00 00 00 00 00 00 C4 00 ð ..............Ä.
+    06F0:06 00 BE 00 00 00 00 00-52 10 04 12 43 5A 6F 70 ð ..¾.....R...CZop
+    0700:65 6E 3A 3A 47 65 74 46-72 6F 6D 5A 69 70 0B 00 ð en::GetFromZip..
+    0710:00 01 06 00 62 10 04 74-68 69 73 11 00 00 01 10 ð ....b..this.....
+    0720:00 70 02 0A 6C 70 46 69-6C 65 4C 69 73 74 0F 00 ð .p..lpFileList..
+    0730:00 01 0C 00 70 02 08 6C-70 4F 75 74 44 69 72 0F ð ....p..lpOutDir.
+    0740:00 00 01 0A 00 72 00 08-4D 61 6B 65 44 69 72 73 ð .....r..MakeDirs
+    0750:0B 00 00 01 FC FF 72 00-04 6E 52 65 73 02 00 06 ð ....üÿr..nRes...
+    0760:00 2C 00 05 01 00 00 00-00 00 00 00 00 00 00 00 ð .,..............
+    0770:00 C2 00 06 00 BC 00 00-00 00 00 58 10 04 10 43 ð .Â...¼.....X...C
+    0780:5A 6F 70 65 6E 3A 3A 47-65 74 46 69 72 73 74 0B ð Zopen::GetFirst.
+    0790:00 00 01 06 00 62 10 04-74 68 69 73 0A 00 00 01 ð .....b..this....
+    07A0:0A 00 56 10 03 6C 70 5A-02 00 06 00             ð ..V..lpZ....
+FIXUPP:  Type 9C, Offset 0EE6
+         Segment-relative ptr16:16 location 016 (5E3), 
+           Frame & Target external ?ZipPath@@ZAPFDPFD@Z
+         Segment-relative ptr16:16 location 04E (61B), 
+           Frame & Target external ?_CZopen@CZopen@@JECXI@Z
+         Segment-relative ptr16:16 location 09A (667), 
+           Frame & Target external ??1CZopen@@REC@XZ
+         Segment-relative ptr16:16 location 0D8 (6A5), 
+           Frame & Target external ?SetZip@CZopen@@RECHPFD@Z
+         Segment-relative ptr16:16 location 127 (6F4), 
+           Frame & Target external ?GetFromZip@CZopen@@RECHPFD0H@Z
+         Segment-relative ptr16:16 location 1AA (777), 
+           Frame & Target external ?GetFirst@CZopen@@RECHPEUZIPINFO@@@Z
+LEDATA:  Type A0, Offset 0F02
+         Segment SETUNZIP_TEXT, offset 0402, length 004B
+    0402:      26 C7 47 14 00 00-26 C7 47 16 00 00 C4 5E ð   &ÇG...&ÇG...Ä^
+    0410:06 26 C7 47 18 FF FF B8-08 00 8B 4E 06 8B 56 08 ð .&ÇG.ÿÿ¸...N..V.
+    0420:03 C8 52 51 FF 1E 00 00-3D 00 00 75 03 E9 00 00 ð .ÈRQÿ...=..u.é..
+    0430:B8 FF FF E9 00 00 C4 5E-0A 26 8B 07 C4 5E 06 26 ð ¸ÿÿé..Ä^.&..Ä^.&
+    0440:89 87 68 01 E9 00 00 5F-5E C9 CA 08 00          ð ..h.é.._^ÉÊ..
+FIXUPP:  Type 9C, Offset 0F54
+         Segment-relative word offset location 024 (426), Frame thread #0,
+           Target thread #3
+LEDATA:  Type A0, Offset 0F5B
+         Segment $$SYMBOLS, offset 07AC, length 004A
+    07AC:                                    2B 00 05 01 ð             +...
+    07B0:00 00 00 00 00 00 00 00-00 00 00 00 99 00 06 00 ð ................
+    07C0:93 00 00 00 00 00 58 10-04 0F 43 5A 6F 70 65 6E ð ......X...CZopen
+    07D0:3A 3A 47 65 74 4E 65 78-74 0B 00 00 01 06 00 62 ð ::GetNext......b
+    07E0:10 04 74 68 69 73 0A 00-00 01 0A 00 56 10 03 6C ð ..this......V..l
+    07F0:70 5A 02 00 06 00                               ð pZ....
+FIXUPP:  Type 9C, Offset 0FAC
+         Segment-relative ptr16:16 location 016 (7C2), 
+           Frame & Target external ?GetNext@CZopen@@RECHPEUZIPINFO@@@Z
+EXTDEF:  Type 8C, Offset 0FB4
+           13: Name LOADLIBRARY
+           14: Name GETPROCADDRESS
+           15: Name FREELIBRARY
+LEDATA:  Type A0, Offset 0FE2
+         Segment _DATA, offset 0024, length 0007
+    0024:            64 75 6E 7A-69 70 00                ð     dunzip.
+EXTDEF:  Type 8C, Offset 0FF0
+           16: Name _LoadUnzipLibrary
+           17: Name ?lpWinPath@@3PEDE
+           18: Name ?szC_UnzipDLL@@3PEDE
+           19: Name ?lpProgPath@@3PEDE
+           20: Name ?szC_UnzipComp@@3PEDE
+           21: Name ?VerChkCopyFiles@@ZAHPED00000PEI01I@Z
+           22: Name ?CopyUnzipDll@@ZAHXZ
+           23: Name ?Close@CZopen@@RECXH@Z
+           24: Name ?CloseAll@CZopen@@RECXXZ
+           25: Name ?_Close@CZopen@@JECXHH@Z
+           26: Name ?CloseAbort@CZopen@@RECXH@Z
+LNAMES:  Type 96, Offset 1101
+           16: Name ?IsValid@CZopen@@RECHH@Z
+LINNUM:  Type 94, Offset 111E
+         Base Segment SETUNZIP_TEXT
+         Line #0029, offset 0000
+         Line #002A, offset 0006
+         Line #002C, offset 0029
+         Line #002F, offset 002D
+         Line #0031, offset 004F
+         Line #0033, offset 0053
+         Line #0034, offset 005C
+         Line #0000, offset 005F
+         Line #0039, offset 0060
+         Line #003A, offset 0066
+         Line #003B, offset 0075
+         Line #003D, offset 007F
+         Line #003E, offset 0098
+         Line #003F, offset 00A1
+         Line #0040, offset 00AA
+         Line #0041, offset 00B3
+         Line #0044, offset 00BC
+         Line #0047, offset 00D6
+         Line #004A, offset 00EF
+         Line #004B, offset 0108
+         Line #004C, offset 0121
+         Line #0000, offset 0129
+         Line #0051, offset 012A
+         Line #0052, offset 0130
+         Line #0054, offset 0147
+         Line #0055, offset 015A
+         Line #0057, offset 0169
+         Line #0000, offset 0171
+         Line #0062, offset 0172
+         Line #0064, offset 0178
+         Line #0066, offset 018F
+         Line #0069, offset 01A2
+         Line #006A, offset 01C4
+         Line #006B, offset 01CE
+         Line #006D, offset 01D8
+         Line #006F, offset 01EF
+         Line #0072, offset 01F5
+         Line #0073, offset 020B
+         Line #0074, offset 0221
+         Line #0075, offset 0227
+         Line #0000, offset 022C
+         Line #007E, offset 022E
+         Line #007F, offset 0234
+         Line #0081, offset 0248
+         Line #0084, offset 024E
+         Line #0085, offset 0257
+         Line #0086, offset 0266
+         Line #0087, offset 027F
+         Line #0088, offset 0288
+         Line #0089, offset 0299
+         Line #008B, offset 02B2
+         Line #008D, offset 02BA
+         Line #008F, offset 02CE
+         Line #0091, offset 02D7
+         Line #0093, offset 02E0
+         Line #0096, offset 02E6
+         Line #0097, offset 02EC
+         Line #0000, offset 02F1
+         Line #009B, offset 02F2
+         Line #009D, offset 02F8
+         Line #009F, offset 030F
+         Line #00A3, offset 0315
+         Line #00A6, offset 031F
+         Line #00A7, offset 0328
+         Line #00A8, offset 0337
+         Line #00A9, offset 0346
+         Line #00AA, offset 034F
+         Line #00AC, offset 0358
+         Line #00AE, offset 0371
+         Line #00B1, offset 0377
+         Line #00B4, offset 0386
+         Line #00B6, offset 0394
+         Line #00B9, offset 039A
+         Line #00BB, offset 03AE
+         Line #0000, offset 03B3
+         Line #00C2, offset 03B4
+         Line #00C4, offset 03BA
+         Line #00C6, offset 03DF
+         Line #00CA, offset 03E5
+         Line #00CB, offset 03EE
+         Line #00CC, offset 03FF
+         Line #00CD, offset 040E
+         Line #00CF, offset 0417
+         Line #00D1, offset 0430
+         Line #00D4, offset 0436
+         Line #00D5, offset 0447
+         Line #0000, offset 044C
+         Line #00D9, offset 044E
+         Line #00DF, offset 0454
+         Line #00E2, offset 046A
+         Line #00E6, offset 0470
+         Line #00E8, offset 0496
+         Line #00EB, offset 049C
+         Line #00EE, offset 04A2
+         Line #00EF, offset 04AA
+         Line #00F0, offset 04B0
+         Line #0000, offset 04B6
+         Line #00F6, offset 04B8
+         Line #00F7, offset 04BE
+         Line #00F9, offset 04C4
+         Line #00FA, offset 04C9
+         Line #00FE, offset 04CF
+         Line #00FF, offset 04D4
+         Line #010A, offset 04DA
+         Line #010D, offset 052F
+         Line #010F, offset 0540
+         Line #0112, offset 0546
+         Line #0113, offset 054D
+         Line #0000, offset 0550
+         Line #0118, offset 0552
+         Line #011B, offset 0558
+         Line #011D, offset 0560
+         Line #011F, offset 057D
+         Line #0121, offset 058B
+         Line #0123, offset 0598
+         Line #0000, offset 05A0
+         Line #0128, offset 05A2
+         Line #0129, offset 05A8
+         Line #012A, offset 05B8
+         Line #0000, offset 05C0
+         Line #012E, offset 05C2
+         Line #012F, offset 05C8
+         Line #0130, offset 05D8
+         Line #0000, offset 05E0
+         Line #0134, offset 05E2
+         Line #0135, offset 05E8
+         Line #0137, offset 05FE
+CEXTDEF:  Type BC, Offset 1320
+           27: Name ?IsValid@CZopen@@RECHH@Z
+EXTDEF:  Type 8C, Offset 1326
+           28: Name _LCLOSE
+LEDATA:  Type A0, Offset 1333
+         Segment SETUNZIP_TEXT, offset 044D, length 0201
+    044D:                                       90 C8 00 ð              .È.
+    0450:00 00 56 57 FF 76 08 FF-76 06 9A 00 00 00 00 89 ð ..VWÿv.ÿv.......
+    0460:46 FC 3D 20 00 72 03 E9-00 00 B8 00 00 E9 00 00 ð Fü= .r.é..¸..é..
+    0470:FF 76 FC B8 00 00 8C DA-52 50 9A 00 00 00 00 A3 ð ÿvü¸...ÚRP.....£
+    0480:00 00 89 16 02 00 3D 00-00 74 03 E9 00 00 83 FA ð ......=..t.é...ú
+    0490:00 74 03 E9 00 00 E9 00-00 E9 00 00 8B 46 FC E9 ð .t.é..é..é...Füé
+    04A0:00 00 FF 76 FC 9A 00 00-00 00 B8 00 00 E9 00 00 ð ..ÿvü.....¸..é..
+    04B0:E9 EF FF 5F 5E C9 CB 90-C8 00 00 00 56 57 C7 86 ð éïÿ_^ÉË.È...VWÇ.
+    04C0:EC FD 01 00 C7 46 FC 04-01 C7 86 EA FD 04 01 C7 ð ìý..ÇFü..Ç.êý..Ç
+    04D0:46 FC 04 01 C7 86 EA FD-04 01 6A 02 8D 86 EA FD ð Fü..Ç.êý..j...êý
+    04E0:8C D2 52 50 8D 86 F0 FD-8C D2 52 50 8D 46 FC 8C ð .ÒRP..ðý.ÒRP.Fü.
+    04F0:D2 52 50 8D 86 F6 FE 8C-D2 52 50 FF 36 02 00 FF ð ÒRP..öþ.ÒRPÿ6..ÿ
+    0500:36 00 00 FF 36 02 00 FF-36 00 00 FF 36 02 00 FF ð 6..ÿ6..ÿ6..ÿ6..ÿ
+    0510:36 00 00 FF 36 02 00 FF-36 00 00 FF 36 02 00 FF ð 6..ÿ6..ÿ6..ÿ6..ÿ
+    0520:36 00 00 9A 00 00 00 00-83 C4 26 89 86 EE FD C7 ð 6........Ä&..îýÇ
+    0530:86 EE FD 02 00 B8 02 00-3D 00 00 75 03 E9 00 00 ð .îý..¸..=..u.é..
+    0540:C7 86 EE FD 00 00 8B 86-EE FD E9 00 00 5F 5E C9 ð Ç.îý....îýé.._^É
+    0550:CB 90 C8 00 00 00 56 57-C7 46 FC 00 00 E9 00 00 ð Ë.È...VWÇFü..é..
+    0560:B8 78 00 8B 5E 06 8B 4E-08 03 D8 8B 46 FC D1 E0 ð ¸x..^..N..Ø.FüÑà
+    0570:03 D8 8E C1 26 83 3F FF-75 03 E9 00 00 FF 76 FC ð .Ø.Á&.?ÿu.é..ÿvü
+    0580:FF 76 08 FF 76 06 9A 00-00 00 00 83 46 FC 01 83 ð ÿv.ÿv.......Fü..
+    0590:7E FC 14 7D 03 E9 C8 FF-E9 00 00 5F 5E C9 CA 04 ð ~ü.}.éÈÿé.._^ÉÊ.
+    05A0:00 90 C8 00 00 00 56 57-FF 76 0A 6A 01 FF 76 08 ð ..È...VWÿv.j.ÿv.
+    05B0:FF 76 06 9A 00 00 00 00-E9 00 00 5F 5E C9 CA 06 ð ÿv......é.._^ÉÊ.
+    05C0:00 90 C8 00 00 00 56 57-FF 76 0A 6A 00 FF 76 08 ð ..È...VWÿv.j.ÿv.
+    05D0:FF 76 06 9A 00 00 00 00-E9 00 00 5F 5E C9 CA 06 ð ÿv......é.._^ÉÊ.
+    05E0:00 90 C8 00 00 00 56 57-FF 76 0C FF 76 08 FF 76 ð ..È...VWÿv.ÿv.ÿv
+    05F0:06 9A 00 00 00 00 3D 00-00 74 03 E9 00 00 E9 00 ð ......=..t.é..é.
+    0600:00 B8 78 00 8B 5E 06 8B-4E 08 03 D8 8B 46 0C D1 ð .¸x..^..N..Ø.F.Ñ
+    0610:E0 03 D8 8E C1 26 83 3F-00 7D 03 E9 00 00 B8 78 ð à.Ø.Á&.?.}.é..¸x
+    0620:00 8B 5E 06 8B 4E 08 03-D8 8B 46 0C D1 E0 03 D8 ð ..^..N..Ø.F.Ñà.Ø
+    0630:8E C1 26 FF 37 9A 00 00-00 00 B8 78 00 8B 5E 06 ð .Á&ÿ7.....¸x..^.
+    0640:8B 4E 08 03 D8 8B 46 0C-D1 E0 03 D8 8E C1       ð .N..Ø.F.Ñà.Ø.Á
+FIXUPP:  Type 9C, Offset 153B
+         Segment-relative ptr16:16 location 00E (45B), 
+           Frame & Target external LOADLIBRARY
+         Segment-relative word offset location 027 (474), Frame thread #0,
+           Target thread #1, displacement 0024
+         Segment-relative ptr16:16 location 02E (47B), 
+           Frame & Target external GETPROCADDRESS
+         Segment-relative word offset location 033 (480), Frame thread #0,
+           Target thread #3
+         Segment-relative word offset location 037 (484), Frame thread #0,
+           Target thread #3
+         Segment-relative ptr16:16 location 059 (4A6), 
+           Frame & Target external FREELIBRARY
+         Segment-relative word offset location 0B0 (4FD), 
+           Frame & Target external ?lpWinPath@@3PEDE
+         Segment-relative word offset location 0B4 (501), 
+           Frame & Target external ?lpWinPath@@3PEDE
+         Segment-relative word offset location 0B8 (505), 
+           Frame & Target external ?lpWinPath@@3PEDE
+         Segment-relative word offset location 0BC (509), 
+           Frame & Target external ?lpWinPath@@3PEDE
+         Segment-relative word offset location 0C0 (50D), 
+           Frame & Target external ?szC_UnzipDLL@@3PEDE
+         Segment-relative word offset location 0C4 (511), 
+           Frame & Target external ?szC_UnzipDLL@@3PEDE
+         Segment-relative word offset location 0C8 (515), 
+           Frame & Target external ?lpProgPath@@3PEDE
+         Segment-relative word offset location 0CC (519), 
+           Frame & Target external ?lpProgPath@@3PEDE
+         Segment-relative word offset location 0D0 (51D), 
+           Frame & Target external ?szC_UnzipComp@@3PEDE
+         Segment-relative word offset location 0D4 (521), 
+           Frame & Target external ?szC_UnzipComp@@3PEDE
+         Segment-relative ptr16:16 location 0D7 (524), 
+           Frame & Target external ?VerChkCopyFiles@@ZAHPED00000PEI01I@Z
+         Segment-relative ptr16:16 location 13A (587), 
+           Frame & Target external ?Close@CZopen@@RECXH@Z
+         Segment-relative ptr16:16 location 167 (5B4), 
+           Frame & Target external ?_Close@CZopen@@JECXHH@Z
+         Segment-relative ptr16:16 location 187 (5D4), 
+           Frame & Target external ?_Close@CZopen@@JECXHH@Z
+         Segment-relative ptr16:16 location 1A5 (5F2), 
+           Frame & Target external ?IsValid@CZopen@@RECHH@Z
+         Segment-relative ptr16:16 location 1E9 (636), 
+           Frame & Target external _LCLOSE
+LEDATA:  Type A0, Offset 1596
+         Segment $$SYMBOLS, offset 07F6, length 01E2
+    07F6:                  2C 00-05 01 00 00 00 00 00 00 ð       ,.........
+    0800:00 00 00 00 00 00 69 00-06 00 65 00 00 00 00 00 ð ......i...e.....
+    0810:7E 10 04 10 4C 6F 61 64-55 6E 7A 69 70 4C 69 62 ð ~...LoadUnzipLib
+    0820:72 61 72 79 10 00 00 01-06 00 70 02 09 6C 70 4C ð rary......p..lpL
+    0830:69 62 4E 61 6D 65 0E 00-00 01 FC FF 4A 10 07 68 ð ibName....üÿJ..h
+    0840:6C 69 62 52 65 74 14 00-09 01 54 00 00 00 00 0C ð libRet....T.....
+    0850:64 75 7A 5F 65 72 72 5F-65 78 69 74 02 00 06 00 ð duz_err_exit....
+    0860:28 00 05 01 00 00 00 00-00 00 00 00 00 00 00 00 ð (...............
+    0870:99 00 06 00 95 00 00 00-00 00 7F 10 04 0C 43 6F ð .............Co
+    0880:70 79 55 6E 7A 69 70 44-6C 6C 0E 00 00 01 FC FF ð pyUnzipDll....üÿ
+    0890:73 00 07 75 43 75 72 4C-65 6E 13 00 00 01 F6 FE ð s..uCurLen....öþ
+    08A0:79 10 0C 6C 70 43 75 72-44 69 72 42 75 66 66 14 ð y..lpCurDirBuff.
+    08B0:00 00 01 F0 FD 79 10 0D-6C 70 44 65 73 74 44 69 ð ...ðýy..lpDestDi
+    08C0:72 42 75 66 66 0D 00 00-01 EE FD 72 00 06 6E 56 ð rBuff....îýr..nV
+    08D0:43 52 65 74 0B 00 00 01-EC FD 72 00 04 62 52 65 ð CRet....ìýr..bRe
+    08E0:74 0F 00 00 01 EA FD 73-00 08 75 44 65 73 74 4C ð t....êýs..uDestL
+    08F0:65 6E 02 00 06 00 2C 00-05 01 00 00 00 00 00 00 ð en....,.........
+    0900:00 00 00 00 00 00 4F 00-06 00 49 00 00 00 00 00 ð ......O...I.....
+    0910:4F 10 04 10 43 5A 6F 70-65 6E 3A 3A 43 6C 6F 73 ð O...CZopen::Clos
+    0920:65 41 6C 6C 0B 00 00 01-06 00 62 10 04 74 68 69 ð eAll......b..thi
+    0930:73 08 00 00 01 FC FF 72-00 01 6E 02 00 06 00 29 ð s....üÿr..n....)
+    0940:00 05 01 00 00 00 00 00-00 00 00 00 00 00 00 1F ð ................
+    0950:00 06 00 19 00 00 00 00-00 59 10 04 0D 43 5A 6F ð .........Y...CZo
+    0960:70 65 6E 3A 3A 43 6C 6F-73 65 0B 00 00 01 06 00 ð pen::Close......
+    0970:62 10 04 74 68 69 73 0C-00 00 01 0A 00 72 00 05 ð b..this......r..
+    0980:6E 46 69 6C 65 02 00 06-00 2E 00 05 01 00 00 00 ð nFile...........
+    0990:00 00 00 00 00 00 00 00-00 1F 00 06 00 19 00 00 ð ................
+    09A0:00 00 00 59 10 04 12 43-5A 6F 70 65 6E 3A 3A 43 ð ...Y...CZopen::C
+    09B0:6C 6F 73 65 41 62 6F 72-74 0B 00 00 01 06 00 62 ð loseAbort......b
+    09C0:10 04 74 68 69 73 0C 00-00 01 0A 00 72 00 05 6E ð ..this......r..n
+    09D0:46 69 6C 65 02 00 06 00-                        ð File....
+FIXUPP:  Type 9C, Offset 177F
+         Segment-relative ptr16:16 location 016 (80C), 
+           Frame & Target external _LoadUnzipLibrary
+         Segment-relative ptr16:16 location 054 (84A), 
+           Frame & Target external _LoadUnzipLibrary
+         Segment-relative ptr16:16 location 080 (876), 
+           Frame & Target external ?CopyUnzipDll@@ZAHXZ
+         Segment-relative ptr16:16 location 116 (90C), 
+           Frame & Target external ?CloseAll@CZopen@@RECXXZ
+         Segment-relative ptr16:16 location 15F (955), 
+           Frame & Target external ?Close@CZopen@@RECXH@Z
+         Segment-relative ptr16:16 location 1A9 (99F), 
+           Frame & Target external ?CloseAbort@CZopen@@RECXH@Z
+LINNUM:  Type 94, Offset 179B
+         Base Segment SETUNZIP_TEXT
+         Line #013D, offset 0601
+         Line #0140, offset 061E
+         Line #0144, offset 063A
+         Line #0145, offset 0653
+         Line #0000, offset 065B
+THEADR:  Type 80, Offset 17B5
+         Name R:\MAX\include\setunzip.h
+LEDATA:  Type A0, Offset 17D3
+         Segment SETUNZIP_TEXT, offset 064E, length 000E
+    064E:                                          26 C7 ð               &Ç
+    0650:07 FF FF E9 00 00 5F 5E-C9 CA 08 00             ð .ÿÿé.._^ÉÊ..
+BAKPAT:  Type B2, Offset 17E8
+    0000:01 01 27 00 04 00 15 00-16 00 3C 00 11 00 4D 00 ð ..'.......<...M.
+    0010:04 00 01 00 02 00 61 00-02 00 3B 01 0A 00 45 01 ð ......a...;...E.
+    0020:22 00 2B 01 02 00 83 01-0A 00 8D 01 13 00 ED 01 ð ".+...........í.
+    0030:06 00 E3 01 10 00 F3 01-32 00 73 01 02 00 46 02 ð ..ã...ó.2.s...F.
+    0040:06 00 3C 02 10 00 A0 02-06 00 A6 02 03 00 DE 02 ð ..<... ...¦...Þ.
+    0050:06 00 E4 02 06 00 4C 02-9E 00 2F 02 04 00 0D 03 ð ..ä...L.../.....
+    0060:06 00 03 03 10 00 6F 03-06 00 92 03 06 00 98 03 ð ......o.........
+    0070:14 00 75 03 37 00 13 03-99 00 F3 02 02 00 C5 03 ð ..u.7.....ó...Å.
+    0080:0A 00 CF 03 0E 00 DD 03-06 00 2E 04 06 00 34 04 ð ..Ï...Ý.......4.
+    0090:11 00 E3 03 62 00 B5 03-02 00 68 04 06 00 94 04 ð ..ã.b.µ...h.....
+    00A0:06 00 8C 04 0E 00 9A 04-06 00 97 04 17 00 AE 04 ð ..............®.
+    00B0:03 00 A0 04 11 00 6E 04-43 00 4F 04 04 00 3E 05 ð .. ...n.C.O...>.
+    00C0:06 00 B9 04 16 02 7B 05-0E 00 5E 05 2F 00 53 05 ð ..¹...{...^./.S.
+    00D0:04 00 A3 05 02 00 C3 05-02 00 FC 05 03 00 1C 06 ð ..£...Ã...ü.....
+    00E0:1C 00 FF 05 55 00 E3 05-02 00                   ð ..ÿ.U.ã...
+LEDATA:  Type A0, Offset 18D6
+         Segment $$SYMBOLS, offset 09D8, length 0169
+    09D8:                        2A 00 05 01 00 00 00 00 ð         *.......
+    09E0:00 00 00 00 00 00 00 00-7A 00 06 00 74 00 00 00 ð ........z...t...
+    09F0:00 00 5C 10 04 0E 43 5A-6F 70 65 6E 3A 3A 5F 43 ð ..\...CZopen::_C
+    0A00:6C 6F 73 65 0B 00 00 01-06 00 62 10 04 74 68 69 ð lose......b..thi
+    0A10:73 0C 00 00 01 0C 00 72-00 05 6E 46 69 6C 65 0D ð s......r..nFile.
+    0A20:00 00 01 0A 00 72 00 06-43 6F 6D 6D 69 74 02 00 ð .....r..Commit..
+    0A30:06 00 2B 00 05 01 00 00-00 00 00 00 00 00 00 00 ð ..+.............
+    0A40:00 00 47 00 06 00 41 00-00 00 00 00 5A 10 04 0F ð ..G...A.....Z...
+    0A50:43 5A 6F 70 65 6E 3A 3A-49 73 56 61 6C 69 64 0B ð CZopen::IsValid.
+    0A60:00 00 01 06 00 62 10 04-74 68 69 73 0C 00 00 01 ð .....b..this....
+    0A70:0A 00 72 00 05 6E 46 69-6C 65 02 00 06 00 13 00 ð ..r..nFile......
+    0A80:02 01 00 00 00 00 70 02-0A 6C 70 50 72 6F 67 50 ð ......p..lpProgP
+    0A90:61 74 68 12 00 02 01 00-00 00 00 70 02 09 6C 70 ð ath........p..lp
+    0AA0:57 69 6E 50 61 74 68 15-00 02 01 00 00 00 00 70 ð WinPath........p
+    0AB0:02 0C 73 7A 43 5F 55 6E-7A 69 70 44 4C 4C 16 00 ð ..szC_UnzipDLL..
+    0AC0:02 01 00 00 00 00 70 02-0D 73 7A 43 5F 55 6E 7A ð ......p..szC_Unz
+    0AD0:69 70 43 6F 6D 70 16 00-02 01 00 00 00 00 70 02 ð ipComp........p.
+    0AE0:0D 73 7A 43 5F 44 55 4E-5A 49 50 4C 69 62 18 00 ð .szC_DUNZIPLib..
+    0AF0:02 01 00 00 00 00 70 02-0F 73 7A 43 5F 44 55 4E ð ......p..szC_DUN
+    0B00:5A 49 50 33 32 4C 69 62-10 00 02 01 00 00 00 00 ð ZIP32Lib........
+    0B10:9A 10 07 6C 70 66 6E 44-75 7A 13 00 02 01 00 00 ð ...lpfnDuz......
+    0B20:00 00 4A 10 0A 68 6C 69-62 44 55 4E 5A 49 50 10 ð ..J..hlibDUNZIP.
+    0B30:00 01 00 02 00 28 01 09-38 2E 30 30 63 20 20 20 ð .....(..8.00c   
+    0B40:20                                              ð  
+FIXUPP:  Type 9C, Offset 1A46
+         Segment-relative ptr16:16 location 016 (9EE), 
+           Frame & Target external ?_Close@CZopen@@JECXHH@Z
+         Segment-relative ptr16:16 location 070 (A48), 
+           Frame & Target external ?IsValid@CZopen@@RECHH@Z
+         Segment-relative ptr16:16 location 0AA (A82), 
+           Frame & Target external ?lpProgPath@@3PEDE
+         Segment-relative ptr16:16 location 0BF (A97), 
+           Frame & Target external ?lpWinPath@@3PEDE
+         Segment-relative ptr16:16 location 0D3 (AAB), 
+           Frame & Target external ?szC_UnzipDLL@@3PEDE
+         Segment-relative ptr16:16 location 0EA (AC2), 
+           Frame & Target external ?szC_UnzipComp@@3PEDE
+         Segment-relative ptr16:16 location 102 (ADA), Frame thread #0,
+           Target thread #1, displacement 000C
+         Segment-relative ptr16:16 location 11A (AF2), Frame thread #0,
+           Target thread #1, displacement 001E
+         Segment-relative ptr16:16 location 134 (B0C), Frame thread #0,
+           Target thread #3
+         Segment-relative ptr16:16 location 146 (B1E), Frame thread #0,
+           Target thread #1, displacement 0022
+COMDAT:  Type C2, Offset 1A74
+    0000:00 11 00 00 00 90 5A 10-C8 00 00 00 56 57 83 7E ð ......Z.È...VW.~
+    0010:0A 14 7C 03 E9 00 00 83-7E 0A 00 7D 03 E9 00 00 ð ..|.é...~..}.é..
+    0020:B8 78 00 8B 5E 06 8B 4E-08 03 D8 8B 46 0A D1 E0 ð ¸x..^..N..Ø.F.Ñà
+    0030:03 D8 8E C1 26 83 3F FF-75 03 E9 00 00 B8 01 00 ð .Ø.Á&.?ÿu.é..¸..
+    0040:E9 00 00 B8 00 00 E9 00-00 5F 5E C9 CA 06 00    ð é..¸..é.._^ÉÊ..
+NBKPAT:  Type C8, Offset 1AC7
+    0000:01 10 33 00 06 00 16 00-23 00 0D 00 2C 00 39 00 ð ..3.....#...,.9.
+    0010:03 00 01 00 02 00                               ð ......
+LINSYM:  Type C4, Offset 1AE1
+    0000:00 10 5F 00 00 00 00 00-46 00                   ð .._.....F.
+PUBDEF:  Type 90, Offset 1AEF
+         Segment SETUNZIP_TEXT
+         Name ?ZipPath@@ZAPFDPFD@Z, offset 0000, typedef 107A
+         Name ?_CZopen@CZopen@@JECXI@Z, offset 0060, typedef 104E
+         Name ??1CZopen@@REC@XZ, offset 012A, typedef 104F
+         Name ?SetZip@CZopen@@RECHPFD@Z, offset 0172, typedef 1050
+         Name ?GetFromZip@CZopen@@RECHPFD0H@Z, offset 022E, typedef 1052
+         Name ?GetFirst@CZopen@@RECHPEUZIPINFO@@@Z, offset 02F2, typedef 1058
+         Name ?GetNext@CZopen@@RECHPEUZIPINFO@@@Z, offset 03B4, typedef 1058
+         Name _LoadUnzipLibrary, offset 044E, typedef 107E
+         Name ?CopyUnzipDll@@ZAHXZ, offset 04B8, typedef 107F
+         Name ?CloseAll@CZopen@@RECXXZ, offset 0552, typedef 104F
+         Name ?Close@CZopen@@RECXH@Z, offset 05A2, typedef 1059
+         Name ?CloseAbort@CZopen@@RECXH@Z, offset 05C2, typedef 1059
+         Name ?_Close@CZopen@@JECXHH@Z, offset 05E2, typedef 105C
+COMENT:  Type 88, Offset 1C78
+         Comment type A2 ==> Linker pass 2 marker
+LEDATA:  Type A0, Offset 1C7F
+         Segment $$TYPES, offset 0000, length 01F8
+    0000:01 00 00 00 0A 00 03 00-70 00 11 00 01 00 00 F1 ð ........p......ñ
+    0010:1A 00 04 00 31 00 23 10-07 00 00 00 00 00 42 00 ð ....1.#.......B.
+    0020:09 43 54 69 6D 65 44 61-74 65 F2 F1 06 00 02 00 ð .CTimeDateòñ....
+    0030:01 04 01 10 06 00 02 00-21 00 01 10 06 00 01 02 ð ........!.......
+    0040:01 00 03 10 12 00 09 00-03 00 01 10 02 10 03 00 ð ................
+    0050:01 00 04 10 00 00 00 00-06 00 01 02 01 00 70 02 ð ..............p.
+    0060:12 00 09 00 03 00 01 10-02 10 03 00 01 00 06 10 ð ................
+    0070:00 00 00 00 06 00 01 02-00 00 F2 F1 12 00 09 00 ð ..........òñ....
+    0080:03 00 01 10 02 10 03 00-00 00 08 10 00 00 00 00 ð ................
+    0090:12 00 09 00 72 00 01 10-02 10 03 00 01 00 04 10 ð ....r...........
+    00A0:00 00 00 00 06 00 01 02-01 00 01 10 12 00 09 00 ð ................
+    00B0:72 00 01 10 02 10 03 00-01 00 0B 10 00 00 00 00 ð r...............
+    00C0:0A 00 03 00 70 00 11 00-0E 00 00 F1 06 00 01 02 ð ....p......ñ....
+    00D0:01 00 0D 10 12 00 09 00-03 00 01 10 02 10 03 00 ð ................
+    00E0:01 00 0E 10 00 00 00 00-12 00 09 00 70 02 01 10 ð ............p...
+    00F0:02 10 03 00 00 00 08 10-00 00 00 00 12 00 09 00 ð ................
+    0100:70 02 01 10 02 10 03 00-00 00 08 10 00 00 00 00 ð p...............
+    0110:0A 00 01 02 02 00 22 00-22 00 F2 F1 12 00 09 00 ð ......".".òñ....
+    0120:72 00 01 10 02 10 03 00-02 00 12 10 00 00 00 00 ð r...............
+    0130:12 00 09 00 72 00 01 10-02 10 03 00 00 00 08 10 ð ....r...........
+    0140:00 00 00 00 06 00 01 02-01 00 72 00 12 00 09 00 ð ..........r.....
+    0150:70 02 01 10 02 10 03 00-01 00 15 10 00 00 00 00 ð p...............
+    0160:12 00 09 00 70 02 01 10-02 10 03 00 01 00 15 10 ð ....p...........
+    0170:00 00 00 00 12 00 09 00-70 02 01 10 02 10 03 00 ð ........p.......
+    0180:01 00 15 10 00 00 00 00-12 00 09 00 70 02 01 10 ð ............p...
+    0190:02 10 03 00 01 00 15 10-00 00 00 00 12 00 09 00 ð ................
+    01A0:70 02 01 10 02 10 03 00-01 00 15 10 00 00 00 00 ð p...............
+    01B0:12 00 09 00 70 02 01 10-02 10 03 00 01 00 15 10 ð ....p...........
+    01C0:00 00 00 00 12 00 09 00-70 02 01 10 02 10 03 00 ð ........p.......
+    01D0:01 00 15 10 00 00 00 00-0A 00 01 02 03 00 72 00 ð ..............r.
+    01E0:72 00 72 00 12 00 09 00-22 00 01 10 02 10 03 00 ð r.r.....".......
+    01F0:03 00 1D 10 00 00 00 00-                        ð ........
+LEDATA:  Type A0, Offset 1E7E
+         Segment $$TYPES, offset 01F8, length 01B4
+    01F8:                        0A 00 01 02 02 00 70 02 ð         ......p.
+    0200:72 00 F2 F1 12 00 09 00-03 00 01 10 02 10 03 00 ð r.òñ............
+    0210:02 00 1F 10 00 00 00 00-0A 00 03 00 70 00 11 00 ð ............p...
+    0220:20 00 00 F1 06 00 02 00-01 04 01 10 06 01 04 02 ð  ..ñ............
+    0230:08 04 03 00 24 10 09 43-54 69 6D 65 44 61 74 65 ð ....$..CTimeDate
+    0240:08 04 01 00 25 10 0A 7E-43 54 69 6D 65 44 61 74 ð ....%..~CTimeDat
+    0250:65 F3 F2 F1 06 04 22 00-03 00 00 00 09 6D 5F 64 ð eóòñ.."......m_d
+    0260:77 45 70 6F 63 68 F2 F1-06 04 22 00 03 00 04 00 ð wEpochòñ..".....
+    0270:08 6D 5F 64 77 54 69 6D-65 F3 F2 F1 08 04 01 00 ð .m_dwTimeóòñ....
+    0280:26 10 04 43 6F 6D 70 F1-08 04 01 00 27 10 09 6F ð &..Compñ....'..o
+    0290:70 65 72 61 74 6F 72 3C-08 04 01 00 28 10 09 6F ð perator<....(..o
+    02A0:70 65 72 61 74 6F 72 3E-08 04 01 00 29 10 0A 6F ð perator>....)..o
+    02B0:70 65 72 61 74 6F 72 3D-3D F3 F2 F1 08 04 01 00 ð perator==óòñ....
+    02C0:2A 10 0A 6F 70 65 72 61-74 6F 72 21 3D F3 F2 F1 ð *..operator!=óòñ
+    02D0:08 04 01 00 2B 10 0A 6F-70 65 72 61 74 6F 72 3C ð ....+..operator<
+    02E0:3D F3 F2 F1 08 04 01 00-2C 10 0A 6F 70 65 72 61 ð =óòñ....,..opera
+    02F0:74 6F 72 3E 3D F3 F2 F1-08 04 03 00 2D 10 06 41 ð tor>=óòñ....-..A
+    0300:73 73 69 67 6E F3 F2 F1-08 04 01 00 2E 10 09 41 ð ssignóòñ.......A
+    0310:73 73 69 67 6E 4E 6F 77-08 04 01 00 2F 10 03 53 ð ssignNow..../..S
+    0320:74 72 F2 F1 08 04 01 00-30 10 05 44 54 69 6D 65 ð tròñ....0..DTime
+    0330:05 04 31 10 0E 00 07 02-03 00 05 10 03 00 07 10 ð ..1.............
+    0340:03 00 09 10 06 00 07 02-03 00 09 10 06 00 07 02 ð ................
+    0350:03 00 0A 10 06 00 07 02-03 00 0C 10 06 00 07 02 ð ................
+    0360:03 00 0C 10 06 00 07 02-03 00 0C 10 06 00 07 02 ð ................
+    0370:03 00 0C 10 06 00 07 02-03 00 0C 10 06 00 07 02 ð ................
+    0380:03 00 0C 10 0E 00 07 02-03 00 05 10 03 00 0F 10 ð ................
+    0390:03 00 07 10 06 00 07 02-03 00 09 10 06 00 07 02 ð ................
+    03A0:03 00 10 10 06 00 07 02-03 00 11 10             ð ............
+LEDATA:  Type A0, Offset 2039
+         Segment $$TYPES, offset 03AC, length 01A4
+    03AC:                                    0A 01 04 02 ð             ....
+    03B0:08 04 02 00 32 10 03 41-64 64 F2 F1 08 04 02 00 ð ....2..Addòñ....
+    03C0:33 10 08 53 75 62 74 72-61 63 74 F1 08 04 01 00 ð 3..Subtractñ....
+    03D0:34 10 04 59 65 61 72 F1-08 04 01 00 35 10 05 4D ð 4..Yearñ....5..M
+    03E0:6F 6E 74 68 08 04 01 00-36 10 03 44 61 79 F2 F1 ð onth....6..Dayòñ
+    03F0:08 04 01 00 37 10 06 49-73 4C 65 61 70 F3 F2 F1 ð ....7..IsLeapóòñ
+    0400:08 04 01 00 38 10 03 44-4F 57 F2 F1 08 04 01 00 ð ....8..DOWòñ....
+    0410:39 10 04 48 6F 75 72 F1-08 04 01 00 3A 10 06 4D ð 9..Hourñ....:..M
+    0420:69 6E 75 74 65 F3 F2 F1-08 04 01 00 3B 10 06 53 ð inuteóòñ....;..S
+    0430:65 63 6F 6E 64 F3 F2 F1-08 04 01 00 3C 10 07 46 ð econdóòñ....<..F
+    0440:6D 74 59 65 61 72 F2 F1-08 04 01 00 3D 10 08 46 ð mtYearòñ....=..F
+    0450:6D 74 4D 6F 6E 74 68 F1-08 04 01 00 3E 10 06 46 ð mtMonthñ....>..F
+    0460:6D 74 44 61 79 F3 F2 F1-08 04 01 00 3F 10 06 46 ð mtDayóòñ....?..F
+    0470:6D 74 44 4F 57 F3 F2 F1-08 04 01 00 40 10 07 46 ð mtDOWóòñ....@..F
+    0480:6D 74 48 6F 75 72 F2 F1-08 04 01 00 41 10 09 46 ð mtHouròñ....A..F
+    0490:6D 74 4D 69 6E 75 74 65-08 04 01 00 42 10 09 46 ð mtMinute....B..F
+    04A0:6D 74 53 65 63 6F 6E 64-08 04 01 00 43 10 05 53 ð mtSecond....C..S
+    04B0:70 6C 69 74 05 04 44 10-0A 00 07 02 03 00 13 10 ð plit..D.........
+    04C0:03 00 0A 10 0A 00 07 02-03 00 13 10 03 00 0A 10 ð ................
+    04D0:06 00 07 02 03 00 14 10-06 00 07 02 03 00 14 10 ð ................
+    04E0:06 00 07 02 03 00 14 10-06 00 07 02 03 00 14 10 ð ................
+    04F0:06 00 07 02 03 00 14 10-06 00 07 02 03 00 14 10 ð ................
+    0500:06 00 07 02 03 00 14 10-06 00 07 02 03 00 14 10 ð ................
+    0510:06 00 07 02 03 00 16 10-06 00 07 02 03 00 17 10 ð ................
+    0520:06 00 07 02 03 00 18 10-06 00 07 02 03 00 19 10 ð ................
+    0530:06 00 07 02 03 00 1A 10-06 00 07 02 03 00 1B 10 ð ................
+    0540:06 00 07 02 03 00 1C 10-06 00 07 02 02 00 09 10 ð ................
+LEDATA:  Type A0, Offset 21E4
+         Segment $$TYPES, offset 0550, length 0200
+    0550:B6 00 04 02 08 04 01 00-45 10 0A 59 4D 44 54 6F ð ¶.......E..YMDTo
+    0560:45 70 6F 63 68 F3 F2 F1-08 04 01 00 46 10 07 5F ð Epochóòñ....F.._
+    0570:41 73 73 69 67 6E F2 F1-06 04 72 00 02 00 08 00 ð Assignòñ..r.....
+    0580:07 6D 5F 6E 59 65 61 72-06 04 72 00 02 00 0A 00 ð .m_nYear..r.....
+    0590:08 6D 5F 6E 4D 6F 6E 74-68 F3 F2 F1 06 04 72 00 ð .m_nMonthóòñ..r.
+    05A0:02 00 0C 00 06 6D 5F 6E-44 61 79 F1 06 04 72 00 ð .....m_nDayñ..r.
+    05B0:02 00 0E 00 07 6D 5F 6E-48 6F 75 72 06 04 72 00 ð .....m_nHour..r.
+    05C0:02 00 10 00 09 6D 5F 6E-4D 69 6E 75 74 65 F2 F1 ð .....m_nMinuteòñ
+    05D0:06 04 72 00 02 00 12 00-09 6D 5F 6E 53 65 63 6F ð ..r......m_nSeco
+    05E0:6E 64 F2 F1 06 04 21 10-02 00 14 00 0A 6D 5F 73 ð ndòñ..!......m_s
+    05F0:7A 45 78 74 65 72 6E F1-06 04 0D 10 02 00 34 00 ð zExternñ......4.
+    0600:04 6D 5F 64 74 F3 F2 F1-06 00 07 02 02 00 1E 10 ð .m_dtóòñ........
+    0610:06 00 07 02 02 00 20 10-16 00 04 00 18 00 63 10 ð ...... .......c.
+    0620:07 00 00 00 00 00 6C 01-06 43 5A 6F 70 65 6E F1 ð ......l..CZopenñ
+    0630:06 00 02 00 01 04 47 10-06 00 01 00 01 00 64 10 ð ......G.......d.
+    0640:06 00 02 00 00 00 49 10-06 00 01 02 01 00 4A 10 ð ......I.......J.
+    0650:12 00 09 00 03 00 47 10-48 10 03 00 01 00 4B 10 ð ......G.H.....K.
+    0660:00 00 00 00 06 00 01 02-01 00 73 00 12 00 09 00 ð ..........s.....
+    0670:03 00 47 10 48 10 03 00-01 00 4D 10 00 00 00 00 ð ..G.H.....M.....
+    0680:12 00 09 00 03 00 47 10-48 10 03 00 00 00 08 10 ð ......G.H.......
+    0690:00 00 00 00 12 00 09 00-72 00 47 10 48 10 03 00 ð ........r.G.H...
+    06A0:01 00 06 10 00 00 00 00-0A 00 01 02 03 00 70 02 ð ..............p.
+    06B0:70 02 72 00 12 00 09 00-72 00 47 10 48 10 03 00 ð p.r.....r.G.H...
+    06C0:03 00 51 10 00 00 00 00-16 00 05 00 0C 00 65 10 ð ..Q...........e.
+    06D0:07 00 00 00 00 00 36 01-07 5A 49 50 49 4E 46 4F ð ......6..ZIPINFO
+    06E0:0A 00 03 00 70 00 11 00-12 00 00 F1 0A 00 03 00 ð ....p......ñ....
+    06F0:70 00 11 00 04 01 00 F1-06 00 02 00 01 00 53 10 ð p......ñ......S.
+    0700:06 00 01 02 01 00 56 10-12 00 09 00 72 00 47 10 ð ......V.....r.G.
+    0710:48 10 03 00 01 00 57 10-00 00 00 00 12 00 09 00 ð H.....W.........
+    0720:03 00 47 10 48 10 03 00-01 00 15 10 00 00 00 00 ð ..G.H...........
+    0730:12 00 09 00 72 00 47 10-48 10 03 00 01 00 15 10 ð ....r.G.H.......
+    0740:00 00 00 00 0A 00 01 02-02 00 72 00 72 00 F2 F1 ð ..........r.r.òñ
+LEDATA:  Type A0, Offset 23EB
+         Segment $$TYPES, offset 0750, length 0188
+    0750:12 00 09 00 03 00 47 10-48 10 03 00 02 00 5B 10 ð ......G.H.....[.
+    0760:00 00 00 00 1E 00 05 00-24 00 66 10 07 00 00 00 ð ........$.f.....
+    0770:00 00 70 00 0E 55 4E 5A-49 50 43 4D 44 53 54 52 ð ..p..UNZIPCMDSTR
+    0780:55 43 54 F1 0A 00 08 00-03 00 03 00 00 00 08 10 ð UCTñ............
+    0790:06 00 02 00 01 00 5E 10-0A 00 03 00 72 00 11 00 ð ......^.....r...
+    07A0:28 00 00 F1 0A 00 03 00-70 02 11 00 50 00 00 F1 ð (..ñ....p...P..ñ
+    07B0:06 00 02 00 01 04 47 10-02 01 04 02 08 04 02 00 ð ......G.........
+    07C0:67 10 06 43 5A 6F 70 65-6E F3 F2 F1 08 04 01 00 ð g..CZopenóòñ....
+    07D0:68 10 07 7E 43 5A 6F 70-65 6E F2 F1 08 04 01 00 ð h..~CZopenòñ....
+    07E0:69 10 06 53 65 74 5A 69-70 F3 F2 F1 08 04 01 00 ð i..SetZipóòñ....
+    07F0:6A 10 0A 47 65 74 46 72-6F 6D 5A 69 70 F3 F2 F1 ð j..GetFromZipóòñ
+    0800:08 04 01 00 6B 10 08 47-65 74 46 69 72 73 74 F1 ð ....k..GetFirstñ
+    0810:08 04 01 00 6C 10 07 47-65 74 4E 65 78 74 F2 F1 ð ....l..GetNextòñ
+    0820:08 04 01 00 6D 10 08 43-6C 6F 73 65 41 6C 6C F1 ð ....m..CloseAllñ
+    0830:08 04 01 00 6E 10 05 43-6C 6F 73 65 08 04 01 00 ð ....n..Close....
+    0840:6F 10 0A 43 6C 6F 73 65-41 62 6F 72 74 F3 F2 F1 ð o..CloseAbortóòñ
+    0850:08 04 01 00 70 10 07 49-73 56 61 6C 69 64 F2 F1 ð ....p..IsValidòñ
+    0860:08 04 01 00 71 10 0C 49-73 56 61 6C 69 64 57 72 ð ....q..IsValidWr
+    0870:69 74 65 F1 08 04 01 00-72 10 07 5F 43 5A 6F 70 ð iteñ....r.._CZop
+    0880:65 6E F2 F1 06 04 72 00-02 00 00 00 0A 6D 5F 6E ð enòñ..r......m_n
+    0890:43 75 72 46 69 6C 65 F1-06 04 4A 10 02 00 02 00 ð CurFileñ..J.....
+    08A0:07 6D 5F 68 49 6E 73 74-06 04 70 02 02 00 04 00 ð .m_hInst..p.....
+    08B0:07 6D 5F 6C 70 5A 69 70-05 04 73 10 1A 00 05 00 ð .m_lpZip..s.....
+    08C0:01 00 74 10 07 00 00 00-00 00 02 00 0B 48 49 4E ð ..t..........HIN
+    08D0:53 54 41 4E 43 45 5F 5F-                        ð STANCE__
+LEDATA:  Type A0, Offset 257A
+         Segment $$TYPES, offset 08D8, length 01FC
+    08D8:                        D6 00 04 02 06 04 21 00 ð         Ö.....!.
+    08E0:03 00 00 00 05 69 6E 64-65 78 F2 F1 06 04 22 00 ð .....indexòñ..".
+    08F0:03 00 02 00 05 6F 53 69-7A 65 F2 F1 06 04 22 00 ð .....oSizeòñ..".
+    0900:03 00 06 00 05 63 53 69-7A 65 F2 F1 06 04 21 00 ð .....cSizeòñ..!.
+    0910:03 00 0A 00 07 63 4D 65-74 68 6F 64 06 04 21 00 ð .....cMethod..!.
+    0920:03 00 0C 00 07 63 4F 70-74 69 6F 6E 06 04 21 00 ð .....cOption..!.
+    0930:03 00 0E 00 09 63 50 61-74 68 54 79 70 65 F2 F1 ð .....cPathTypeòñ
+    0940:06 04 22 00 03 00 10 00-06 63 72 63 5F 33 32 F1 ð .."......crc_32ñ
+    0950:06 04 54 10 03 00 14 00-0A 73 7A 44 61 74 65 54 ð ..T......szDateT
+    0960:69 6D 65 F1 06 04 55 10-03 00 26 00 0A 73 7A 46 ð imeñ..U...&..szF
+    0970:69 6C 65 4E 61 6D 65 F1-06 04 22 00 03 00 2A 01 ð ileNameñ.."...*.
+    0980:04 61 74 74 72 F3 F2 F1-06 04 22 00 03 00 2E 01 ð .attróòñ..".....
+    0990:08 6C 7A 69 52 65 73 76-31 F3 F2 F1 06 04 22 00 ð .lziResv1óòñ..".
+    09A0:03 00 32 01 08 6C 7A 69-52 65 73 76 32 F3 F2 F1 ð ..2..lziResv2óòñ
+    09B0:FE 00 04 02 06 04 72 00-03 00 00 00 0F 75 6E 7A ð þ.....r......unz
+    09C0:69 70 53 74 72 75 63 74-53 69 7A 65 06 04 72 00 ð ipStructSize..r.
+    09D0:03 00 02 00 08 66 75 6E-63 74 69 6F 6E F3 F2 F1 ð .....functionóòñ
+    09E0:06 04 70 02 03 00 04 00-0B 6C 70 73 7A 5A 49 50 ð ..p......lpszZIP
+    09F0:46 69 6C 65 06 04 56 10-03 00 08 00 05 7A 49 6E ð File..V......zIn
+    0A00:66 6F F2 F1 06 04 70 02-03 00 0C 00 0C 6C 70 73 ð foòñ..p......lps
+    0A10:7A 46 69 6C 65 73 70 65-63 F3 F2 F1 06 04 72 00 ð zFilespecóòñ..r.
+    0A20:03 00 10 00 05 69 6E 64-65 78 F2 F1 06 04 70 02 ð .....indexòñ..p.
+    0A30:03 00 12 00 0F 6C 70 73-7A 44 65 73 74 69 6E 61 ð .....lpszDestina
+    0A40:74 69 6F 6E 06 04 72 00-03 00 16 00 0B 66 72 65 ð tion..r......fre
+    0A50:73 68 65 6E 46 6C 61 67-06 04 72 00 03 00 18 00 ð shenFlag..r.....
+    0A60:0A 75 70 64 61 74 65 46-6C 61 67 F1 06 04 72 00 ð .updateFlagñ..r.
+    0A70:03 00 1A 00 0D 6F 76 65-72 57 72 69 74 65 46 6C ð .....overWriteFl
+    0A80:61 67 F2 F1 06 04 72 00-03 00 1C 00 09 71 75 69 ð agòñ..r......qui
+    0A90:65 74 46 6C 61 67 F2 F1-06 04 72 00 03 00 1E 00 ð etFlagòñ..r.....
+    0AA0:08 74 65 73 74 46 6C 61-67 F3 F2 F1 05 04 75 10 ð .testFlagóòñ..u.
+    0AB0:0A 00 07 02 03 00 4C 10-03 00 4E 10 06 00 07 02 ð ......L...N.....
+    0AC0:03 00 4F 10 06 00 07 02-03 00 50 10 06 00 07 02 ð ..O.......P.....
+    0AD0:03 00 52 10                                     ð ..R.
+LEDATA:  Type A0, Offset 277D
+         Segment $$TYPES, offset 0AD4, length 0200
+    0AD4:            06 00 07 02-03 00 58 10 06 00 07 02 ð     ......X.....
+    0AE0:03 00 58 10 06 00 07 02-03 00 4F 10 06 00 07 02 ð ..X.......O.....
+    0AF0:03 00 59 10 06 00 07 02-03 00 59 10 06 00 07 02 ð ..Y.......Y.....
+    0B00:03 00 5A 10 06 00 07 02-03 00 5A 10 06 00 07 02 ð ..Z.......Z.....
+    0B10:02 00 4E 10 A2 00 04 02-08 04 01 00 76 10 06 5F ð ..N.¢.......v.._
+    0B20:43 6C 6F 73 65 F3 F2 F1-06 04 5D 10 02 00 08 00 ð Closeóòñ..].....
+    0B30:06 6D 5F 75 7A 63 73 F1-06 04 60 10 02 00 78 00 ð .m_uzcsñ..`...x.
+    0B40:08 6D 5F 6E 46 69 6C 65-73 F3 F2 F1 06 04 61 10 ð .m_nFilesóòñ..a.
+    0B50:02 00 A0 00 0A 6D 5F 6C-70 46 4E 61 6D 65 73 F1 ð .. ..m_lpFNamesñ
+    0B60:06 04 61 10 02 00 F0 00-0B 6D 5F 6C 70 49 6E 42 ð ..a...ð..m_lpInB
+    0B70:75 66 66 73 06 04 60 10-02 00 40 01 0D 6D 5F 6E ð uffs..`...@..m_n
+    0B80:49 6E 42 75 66 66 4C 65-6E 73 F2 F1 06 04 72 00 ð InBuffLensòñ..r.
+    0B90:02 00 68 01 0B 6D 5F 6E-43 75 72 45 6E 74 72 79 ð ..h..m_nCurEntry
+    0BA0:06 04 72 00 02 00 6A 01-0F 6D 5F 6E 54 6F 74 61 ð ..r...j..m_nTota
+    0BB0:6C 45 6E 74 72 69 65 73-12 00 04 02 06 04 72 00 ð lEntries......r.
+    0BC0:03 00 00 00 06 75 6E 75-73 65 64 F1 FE 00 04 02 ð .....unusedñþ...
+    0BD0:06 04 72 00 03 00 20 00-14 6E 6F 44 69 72 65 63 ð ..r... ..noDirec
+    0BE0:74 6F 72 79 4E 61 6D 65-73 46 6C 61 67 F3 F2 F1 ð toryNamesFlagóòñ
+    0BF0:06 04 72 00 03 00 22 00-0B 72 65 63 75 72 73 65 ð ..r..."..recurse
+    0C00:46 6C 61 67 06 04 72 00-03 00 24 00 14 6E 6F 44 ð Flag..r...$..noD
+    0C10:69 72 65 63 74 6F 72 79-49 74 65 6D 73 46 6C 61 ð irectoryItemsFla
+    0C20:67 F3 F2 F1 06 04 5F 10-03 00 26 00 0D 6C 70 4D ð góòñ.._...&..lpM
+    0C30:69 6E 6F 72 53 74 61 74-75 73 F2 F1 06 04 03 02 ð inorStatusòñ....
+    0C40:03 00 2A 00 0F 6C 70 4D-69 6E 6F 72 55 73 65 72 ð ..*..lpMinorUser
+    0C50:44 61 74 61 06 04 5F 10-03 00 2E 00 0D 6C 70 4D ð Data.._......lpM
+    0C60:61 6A 6F 72 53 74 61 74-75 73 F2 F1 06 04 03 02 ð ajorStatusòñ....
+    0C70:03 00 32 00 0F 6C 70 4D-61 6A 6F 72 55 73 65 72 ð ..2..lpMajorUser
+    0C80:44 61 74 61 06 04 72 00-03 00 36 00 0B 72 65 74 ð Data..r...6..ret
+    0C90:75 72 6E 43 6F 75 6E 74-06 04 70 02 03 00 38 00 ð urnCount..p...8.
+    0CA0:10 6C 70 73 7A 52 65 74-75 72 6E 53 74 72 69 6E ð .lpszReturnStrin
+    0CB0:67 F3 F2 F1 06 04 72 00-03 00 3C 00 0B 62 44 69 ð góòñ..r...<..bDi
+    0CC0:61 67 6E 6F 73 74 69 63-05 04 77 10 06 00 07 02 ð agnostic..w.....
+    0CD0:02 00 5C 10                                     ð ..\.
+LEDATA:  Type A0, Offset 2984
+         Segment $$TYPES, offset 0CD4, length 01F4
+    0CD4:            F6 00 04 02-06 04 72 00 03 00 3E 00 ð     ö.....r...>.
+    0CE0:0C 62 4C 46 32 43 52 4C-46 46 6C 61 67 F3 F2 F1 ð .bLF2CRLFFlagóòñ
+    0CF0:06 04 72 00 03 00 40 00-0B 64 65 63 72 79 70 74 ð ..r...@..decrypt
+    0D00:46 6C 61 67 06 04 70 02-03 00 42 00 0F 6C 70 73 ð Flag..p...B..lps
+    0D10:7A 44 65 63 72 79 70 74-43 6F 64 65 06 04 5F 10 ð zDecryptCode.._.
+    0D20:03 00 46 00 10 6C 70 4D-65 73 73 61 67 65 44 69 ð ..F..lpMessageDi
+    0D30:73 70 6C 61 79 F3 F2 F1-06 04 03 02 03 00 4A 00 ð splayóòñ......J.
+    0D40:14 6C 70 4D 65 73 73 61-67 65 44 69 73 70 6C 61 ð .lpMessageDispla
+    0D50:79 44 61 74 61 F3 F2 F1-06 04 21 00 03 00 4E 00 ð yDataóòñ..!...N.
+    0D60:10 77 55 6E 7A 69 70 53-75 62 4F 70 74 69 6F 6E ð .wUnzipSubOption
+    0D70:73 F3 F2 F1 06 04 12 00-03 00 50 00 06 6C 52 65 ð sóòñ......P..lRe
+    0D80:73 76 31 F1 06 04 12 00-03 00 54 00 06 6C 52 65 ð sv1ñ......T..lRe
+    0D90:73 76 32 F1 06 04 5F 10-03 00 58 00 0C 6C 70 52 ð sv2ñ.._...X..lpR
+    0DA0:65 6E 61 6D 65 50 72 6F-63 F3 F2 F1 06 04 03 02 ð enameProcóòñ....
+    0DB0:03 00 5C 00 10 6C 70 52-65 6E 61 6D 65 55 73 65 ð ..\..lpRenameUse
+    0DC0:72 44 61 74 61 F3 F2 F1-05 04 78 10 62 00 04 02 ð rDataóòñ..x.b...
+    0DD0:06 04 70 02 03 00 60 00-10 6C 70 73 7A 45 78 74 ð ..p...`..lpszExt
+    0DE0:50 72 6F 67 54 69 74 6C-65 F3 F2 F1 06 04 03 02 ð ProgTitleóòñ....
+    0DF0:03 00 64 00 0A 6C 70 4D-65 6D 42 6C 6F 63 6B F1 ð ..d..lpMemBlockñ
+    0E00:06 04 12 00 03 00 68 00-0D 6C 4D 65 6D 42 6C 6F ð ......h..lMemBlo
+    0E10:63 6B 53 69 7A 65 F2 F1-06 04 12 00 03 00 6C 00 ð ckSizeòñ......l.
+    0E20:0F 6C 53 74 61 72 74 69-6E 67 4F 66 66 73 65 74 ð .lStartingOffset
+    0E30:0A 00 03 00 70 00 11 00-06 01 00 F1 0A 00 08 00 ð ....p......ñ....
+    0E40:70 02 01 00 01 00 06 10-06 00 01 00 01 00 64 10 ð p.............d.
+    0E50:06 00 02 00 00 00 7B 10-06 00 01 02 01 00 70 02 ð ......{.......p.
+    0E60:0A 00 08 00 7C 10 01 00-01 00 7D 10 0A 00 08 00 ð ....|.....}.....
+    0E70:72 00 01 00 00 00 08 10-0A 00 01 02 03 00 22 00 ð r.............".
+    0E80:70 02 70 02 0A 00 08 00-72 00 03 00 03 00 80 10 ð p.p.....r.......
+    0E90:06 00 02 00 01 00 81 10-06 00 01 00 01 00 88 10 ð ................
+    0EA0:06 00 02 00 00 00 83 10-0A 00 01 02 02 00 84 10 ð ................
+    0EB0:12 00 F2 F1 0A 00 08 00-72 00 03 00 02 00 85 10 ð ..òñ....r.......
+    0EC0:06 00 02 00 01 00 86 10-                        ð ........
+LEDATA:  Type A0, Offset 2B7F
+         Segment $$TYPES, offset 0EC8, length 01F4
+    0EC8:                        16 00 05 00 01 00 89 10 ð         ........
+    0ED0:07 00 00 00 00 00 02 00-06 48 57 4E 44 5F 5F F1 ð .........HWND__ñ
+    0EE0:12 00 04 02 06 04 72 00-03 00 00 00 06 75 6E 75 ð ......r......unu
+    0EF0:73 65 64 F1 06 00 01 02-01 00 03 01 0A 00 08 00 ð sedñ............
+    0F00:72 00 03 00 01 00 8A 10-06 00 02 00 01 00 8B 10 ð r...............
+    0F10:0E 00 01 02 04 00 22 00-70 02 70 02 70 02 F2 F1 ð ......".p.p.p.òñ
+    0F20:0A 00 08 00 72 00 03 00-04 00 8D 10 06 00 02 00 ð ....r...........
+    0F30:01 00 8E 10 16 00 07 00-05 00 72 00 91 10 00 00 ð ..........r.....
+    0F40:09 5F 5F 75 6E 6E 61 6D-65 64 F2 F1 56 00 04 02 ð .__unnamedòñV...
+    0F50:03 04 03 00 00 00 06 46-4D 54 5F 31 44 F3 F2 F1 ð .......FMT_1Dóòñ
+    0F60:03 04 03 00 01 00 06 46-4D 54 5F 32 44 F3 F2 F1 ð .......FMT_2Dóòñ
+    0F70:03 04 03 00 02 00 06 46-4D 54 5F 34 44 F3 F2 F1 ð .......FMT_4Dóòñ
+    0F80:03 04 03 00 03 00 07 46-4D 54 5F 54 58 54 F2 F1 ð .......FMT_TXTòñ
+    0F90:03 04 03 00 04 00 0C 46-4D 54 5F 54 58 54 5F 4C ð .......FMT_TXT_L
+    0FA0:4F 4E 47 F1 0A 00 01 02-03 00 72 00 73 00 12 00 ð ONGñ......r.s...
+    0FB0:0A 00 08 00 12 00 03 00-03 00 92 10 06 00 02 00 ð ................
+    0FC0:01 00 93 10 06 00 02 00-01 00 5D 10 06 00 01 02 ð ..........].....
+    0FD0:01 00 95 10 0A 00 08 00-72 00 03 00 01 00 96 10 ð ........r.......
+    0FE0:06 00 02 00 01 00 97 10-0A 00 08 00 72 00 03 00 ð ............r...
+    0FF0:01 00 96 10 06 00 02 00-01 00 99 10 06 00 01 00 ð ................
+    1000:01 00 A0 10 06 00 02 00-00 00 9B 10 0A 00 01 02 ð .. .............
+    1010:03 00 03 01 4A 10 9C 10-0A 00 08 00 03 01 03 00 ð ....J...........
+    1020:03 00 9D 10 06 00 02 00-01 00 9E 10 16 00 05 00 ð ................
+    1030:01 00 A1 10 07 00 00 00-00 00 02 00 07 48 52 53 ð ..¡..........HRS
+    1040:52 43 5F 5F 12 00 04 02-06 04 72 00 03 00 00 00 ð RC__......r.....
+    1050:06 75 6E 75 73 65 64 F1-0A 00 01 02 03 00 84 10 ð .unusedñ........
+    1060:70 02 03 01 0A 00 08 00-72 00 03 00 03 00 A2 10 ð p.......r.....¢.
+    1070:06 00 02 00 01 00 A3 10-06 00 01 00 01 00 AC 10 ð ......£.......¬.
+    1080:06 00 02 00 01 00 A5 10-06 00 01 00 01 00 AD 10 ð ......¥.......­.
+    1090:06 00 02 00 01 00 A7 10-0E 00 01 02 04 00 A6 10 ð ......§.......¦.
+    10A0:A8 10 72 00 12 00 F2 F1-0A 00 08 00 72 00 03 00 ð ¨.r...òñ....r...
+    10B0:04 00 A9 10 06 00 02 00-01 00 AA 10             ð ..©.......ª.
+LEDATA:  Type A0, Offset 2D7A
+         Segment $$TYPES, offset 10BC, length 0140
+    10BC:                                    1A 00 05 00 ð             ....
+    10C0:0E 00 AE 10 07 00 00 00-00 00 32 00 0A 74 61 67 ð ..®.......2..tag
+    10D0:4C 4F 47 46 4F 4E 54 F1-1E 00 05 00 14 00 AF 10 ð LOGFONTñ......¯.
+    10E0:07 00 00 00 00 00 1F 00-0D 74 61 67 54 45 58 54 ð .........tagTEXT
+    10F0:4D 45 54 52 49 43 F2 F1-02 01 04 02 06 04 72 00 ð METRICòñ......r.
+    1100:03 00 00 00 08 6C 66 48-65 69 67 68 74 F3 F2 F1 ð .....lfHeightóòñ
+    1110:06 04 72 00 03 00 02 00-07 6C 66 57 69 64 74 68 ð ..r......lfWidth
+    1120:06 04 72 00 03 00 04 00-0C 6C 66 45 73 63 61 70 ð ..r......lfEscap
+    1130:65 6D 65 6E 74 F3 F2 F1-06 04 72 00 03 00 06 00 ð ementóòñ..r.....
+    1140:0D 6C 66 4F 72 69 65 6E-74 61 74 69 6F 6E F2 F1 ð .lfOrientationòñ
+    1150:06 04 72 00 03 00 08 00-08 6C 66 57 65 69 67 68 ð ..r......lfWeigh
+    1160:74 F3 F2 F1 06 04 20 00-03 00 0A 00 08 6C 66 49 ð tóòñ.. ......lfI
+    1170:74 61 6C 69 63 F3 F2 F1-06 04 20 00 03 00 0B 00 ð talicóòñ.. .....
+    1180:0B 6C 66 55 6E 64 65 72-6C 69 6E 65 06 04 20 00 ð .lfUnderline.. .
+    1190:03 00 0C 00 0B 6C 66 53-74 72 69 6B 65 4F 75 74 ð .....lfStrikeOut
+    11A0:06 04 20 00 03 00 0D 00-09 6C 66 43 68 61 72 53 ð .. ......lfCharS
+    11B0:65 74 F2 F1 06 04 20 00-03 00 0E 00 0E 6C 66 4F ð etòñ.. ......lfO
+    11C0:75 74 50 72 65 63 69 73-69 6F 6E F1 06 04 20 00 ð utPrecisionñ.. .
+    11D0:03 00 0F 00 0F 6C 66 43-6C 69 70 50 72 65 63 69 ð .....lfClipPreci
+    11E0:73 69 6F 6E 06 04 20 00-03 00 10 00 09 6C 66 51 ð sion.. ......lfQ
+    11F0:75 61 6C 69 74 79 F2 F1-05 04 B0 10             ð ualityòñ..°.
+LEDATA:  Type A0, Offset 2EC1
+         Segment $$TYPES, offset 11FC, length 0134
+    11FC:                                    FE 00 04 02 ð             þ...
+    1200:06 04 72 00 03 00 00 00-08 74 6D 48 65 69 67 68 ð ..r......tmHeigh
+    1210:74 F3 F2 F1 06 04 72 00-03 00 02 00 08 74 6D 41 ð tóòñ..r......tmA
+    1220:73 63 65 6E 74 F3 F2 F1-06 04 72 00 03 00 04 00 ð scentóòñ..r.....
+    1230:09 74 6D 44 65 73 63 65-6E 74 F2 F1 06 04 72 00 ð .tmDescentòñ..r.
+    1240:03 00 06 00 11 74 6D 49-6E 74 65 72 6E 61 6C 4C ð .....tmInternalL
+    1250:65 61 64 69 6E 67 F2 F1-06 04 72 00 03 00 08 00 ð eadingòñ..r.....
+    1260:11 74 6D 45 78 74 65 72-6E 61 6C 4C 65 61 64 69 ð .tmExternalLeadi
+    1270:6E 67 F2 F1 06 04 72 00-03 00 0A 00 0E 74 6D 41 ð ngòñ..r......tmA
+    1280:76 65 43 68 61 72 57 69-64 74 68 F1 06 04 72 00 ð veCharWidthñ..r.
+    1290:03 00 0C 00 0E 74 6D 4D-61 78 43 68 61 72 57 69 ð .....tmMaxCharWi
+    12A0:64 74 68 F1 06 04 72 00-03 00 0E 00 08 74 6D 57 ð dthñ..r......tmW
+    12B0:65 69 67 68 74 F3 F2 F1-06 04 20 00 03 00 10 00 ð eightóòñ.. .....
+    12C0:08 74 6D 49 74 61 6C 69-63 F3 F2 F1 06 04 20 00 ð .tmItalicóòñ.. .
+    12D0:03 00 11 00 0C 74 6D 55-6E 64 65 72 6C 69 6E 65 ð .....tmUnderline
+    12E0:64 F3 F2 F1 06 04 20 00-03 00 12 00 0B 74 6D 53 ð dóòñ.. ......tmS
+    12F0:74 72 75 63 6B 4F 75 74-05 04 B1 10 32 00 04 02 ð truckOut..±.2...
+    1300:06 04 20 00 03 00 11 00-10 6C 66 50 69 74 63 68 ð .. ......lfPitch
+    1310:41 6E 64 46 61 6D 69 6C-79 F3 F2 F1 06 04 21 10 ð AndFamilyóòñ..!.
+    1320:03 00 12 00 0A 6C 66 46-61 63 65 4E 61 6D 65 F1 ð .....lfFaceNameñ
+LEDATA:  Type A0, Offset 2FFC
+         Segment $$TYPES, offset 1330, length 01C8
+    1330:D2 00 04 02 06 04 20 00-03 00 13 00 0B 74 6D 46 ð Ò..... ......tmF
+    1340:69 72 73 74 43 68 61 72-06 04 20 00 03 00 14 00 ð irstChar.. .....
+    1350:0A 74 6D 4C 61 73 74 43-68 61 72 F1 06 04 20 00 ð .tmLastCharñ.. .
+    1360:03 00 15 00 0D 74 6D 44-65 66 61 75 6C 74 43 68 ð .....tmDefaultCh
+    1370:61 72 F2 F1 06 04 20 00-03 00 16 00 0B 74 6D 42 ð aròñ.. ......tmB
+    1380:72 65 61 6B 43 68 61 72-06 04 20 00 03 00 17 00 ð reakChar.. .....
+    1390:10 74 6D 50 69 74 63 68-41 6E 64 46 61 6D 69 6C ð .tmPitchAndFamil
+    13A0:79 F3 F2 F1 06 04 20 00-03 00 18 00 09 74 6D 43 ð yóòñ.. ......tmC
+    13B0:68 61 72 53 65 74 F2 F1-06 04 72 00 03 00 19 00 ð harSetòñ..r.....
+    13C0:0A 74 6D 4F 76 65 72 68-61 6E 67 F1 06 04 72 00 ð .tmOverhangñ..r.
+    13D0:03 00 1B 00 12 74 6D 44-69 67 69 74 69 7A 65 64 ð .....tmDigitized
+    13E0:41 73 70 65 63 74 58 F1-06 04 72 00 03 00 1D 00 ð AspectXñ..r.....
+    13F0:12 74 6D 44 69 67 69 74-69 7A 65 64 41 73 70 65 ð .tmDigitizedAspe
+    1400:63 74 59 F1 0A 00 01 02-02 00 03 02 12 00 F2 F1 ð ctYñ..........òñ
+    1410:0A 00 08 00 72 00 03 00-02 00 B2 10 06 00 02 00 ð ....r.....².....
+    1420:01 00 B3 10 06 00 01 00-01 00 BC 10 06 00 02 00 ð ..³.......¼.....
+    1430:01 00 B5 10 06 00 01 00-01 00 BE 10 06 00 02 00 ð ..µ.......¾.....
+    1440:01 00 B7 10 0E 00 01 02-04 00 B6 10 B8 10 72 00 ð ..·.......¶.¸.r.
+    1450:12 00 F2 F1 0A 00 08 00-72 00 03 00 04 00 B9 10 ð ..òñ....r.....¹.
+    1460:06 00 02 00 01 00 BA 10-1E 00 05 00 03 00 BF 10 ð ......º.......¿.
+    1470:07 00 00 00 00 00 92 00-0E 74 61 67 45 4E 55 4D ð .........tagENUM
+    1480:4C 4F 47 46 4F 4E 54 F1-0A 00 03 00 70 00 11 00 ð LOGFONTñ....p...
+    1490:40 00 00 F1 22 00 05 00-18 00 C0 10 07 00 00 00 ð @..ñ".....À.....
+    14A0:00 00 29 00 10 74 61 67-4E 45 57 54 45 58 54 4D ð ..)..tagNEWTEXTM
+    14B0:45 54 52 49 43 F3 F2 F1-3E 00 04 02 06 04 AC 10 ð ETRICóòñ>.....¬.
+    14C0:03 00 00 00 0A 65 6C 66-4C 6F 67 46 6F 6E 74 F1 ð .....elfLogFontñ
+    14D0:06 04 BD 10 03 00 32 00-0B 65 6C 66 46 75 6C 6C ð ..½...2..elfFull
+    14E0:4E 61 6D 65 06 04 21 10-03 00 72 00 08 65 6C 66 ð Name..!...r..elf
+    14F0:53 74 79 6C 65 F3 F2 F1-                        ð Styleóòñ
+LEDATA:  Type A0, Offset 31CB
+         Segment $$TYPES, offset 14F8, length 0200
+    14F8:                        FE 00 04 02 06 04 72 00 ð         þ.....r.
+    1500:03 00 00 00 08 74 6D 48-65 69 67 68 74 F3 F2 F1 ð .....tmHeightóòñ
+    1510:06 04 72 00 03 00 02 00-08 74 6D 41 73 63 65 6E ð ..r......tmAscen
+    1520:74 F3 F2 F1 06 04 72 00-03 00 04 00 09 74 6D 44 ð tóòñ..r......tmD
+    1530:65 73 63 65 6E 74 F2 F1-06 04 72 00 03 00 06 00 ð escentòñ..r.....
+    1540:11 74 6D 49 6E 74 65 72-6E 61 6C 4C 65 61 64 69 ð .tmInternalLeadi
+    1550:6E 67 F2 F1 06 04 72 00-03 00 08 00 11 74 6D 45 ð ngòñ..r......tmE
+    1560:78 74 65 72 6E 61 6C 4C-65 61 64 69 6E 67 F2 F1 ð xternalLeadingòñ
+    1570:06 04 72 00 03 00 0A 00-0E 74 6D 41 76 65 43 68 ð ..r......tmAveCh
+    1580:61 72 57 69 64 74 68 F1-06 04 72 00 03 00 0C 00 ð arWidthñ..r.....
+    1590:0E 74 6D 4D 61 78 43 68-61 72 57 69 64 74 68 F1 ð .tmMaxCharWidthñ
+    15A0:06 04 72 00 03 00 0E 00-08 74 6D 57 65 69 67 68 ð ..r......tmWeigh
+    15B0:74 F3 F2 F1 06 04 20 00-03 00 10 00 08 74 6D 49 ð tóòñ.. ......tmI
+    15C0:74 61 6C 69 63 F3 F2 F1-06 04 20 00 03 00 11 00 ð talicóòñ.. .....
+    15D0:0C 74 6D 55 6E 64 65 72-6C 69 6E 65 64 F3 F2 F1 ð .tmUnderlinedóòñ
+    15E0:06 04 20 00 03 00 12 00-0B 74 6D 53 74 72 75 63 ð .. ......tmStruc
+    15F0:6B 4F 75 74 05 04 C1 10-FE 00 04 02 06 04 20 00 ð kOut..Á.þ..... .
+    1600:03 00 13 00 0B 74 6D 46-69 72 73 74 43 68 61 72 ð .....tmFirstChar
+    1610:06 04 20 00 03 00 14 00-0A 74 6D 4C 61 73 74 43 ð .. ......tmLastC
+    1620:68 61 72 F1 06 04 20 00-03 00 15 00 0D 74 6D 44 ð harñ.. ......tmD
+    1630:65 66 61 75 6C 74 43 68-61 72 F2 F1 06 04 20 00 ð efaultCharòñ.. .
+    1640:03 00 16 00 0B 74 6D 42-72 65 61 6B 43 68 61 72 ð .....tmBreakChar
+    1650:06 04 20 00 03 00 17 00-10 74 6D 50 69 74 63 68 ð .. ......tmPitch
+    1660:41 6E 64 46 61 6D 69 6C-79 F3 F2 F1 06 04 20 00 ð AndFamilyóòñ.. .
+    1670:03 00 18 00 09 74 6D 43-68 61 72 53 65 74 F2 F1 ð .....tmCharSetòñ
+    1680:06 04 72 00 03 00 19 00-0A 74 6D 4F 76 65 72 68 ð ..r......tmOverh
+    1690:61 6E 67 F1 06 04 72 00-03 00 1B 00 12 74 6D 44 ð angñ..r......tmD
+    16A0:69 67 69 74 69 7A 65 64-41 73 70 65 63 74 58 F1 ð igitizedAspectXñ
+    16B0:06 04 72 00 03 00 1D 00-12 74 6D 44 69 67 69 74 ð ..r......tmDigit
+    16C0:69 7A 65 64 41 73 70 65-63 74 59 F1 06 04 22 00 ð izedAspectYñ..".
+    16D0:03 00 1F 00 08 6E 74 6D-46 6C 61 67 73 F3 F2 F1 ð .....ntmFlagsóòñ
+    16E0:06 04 73 00 03 00 23 00-09 6E 74 6D 53 69 7A 65 ð ..s...#..ntmSize
+    16F0:45 4D F2 F1 05 04 C2 10-                        ð EMòñ..Â.
+LEDATA:  Type A0, Offset 33D2
+         Segment $$TYPES, offset 16F8, length 0200
+    16F8:                        2E 00 04 02 06 04 73 00 ð         ......s.
+    1700:03 00 25 00 0D 6E 74 6D-43 65 6C 6C 48 65 69 67 ð ..%..ntmCellHeig
+    1710:68 74 F2 F1 06 04 73 00-03 00 27 00 0B 6E 74 6D ð htòñ..s...'..ntm
+    1720:41 76 67 57 69 64 74 68-0A 00 01 02 02 00 84 10 ð AvgWidth........
+    1730:21 00 F2 F1 0A 00 08 00-72 00 03 00 02 00 C3 10 ð !.òñ....r.....Ã.
+    1740:06 00 02 00 01 00 C4 10-0E 00 01 02 04 00 84 10 ð ......Ä.........
+    1750:73 00 73 00 22 00 F2 F1-0A 00 08 00 03 00 03 00 ð s.s.".òñ........
+    1760:04 00 C6 10 06 00 02 00-01 00 C7 10 0A 00 01 02 ð ..Æ.......Ç.....
+    1770:02 00 84 10 22 00 F2 F1-0A 00 08 00 72 00 03 00 ð ....".òñ....r...
+    1780:02 00 C9 10 06 00 02 00-01 00 CA 10 06 00 01 00 ð ..É.......Ê.....
+    1790:01 00 88 10 06 00 02 00-00 00 CC 10 0A 00 08 00 ð ..........Ì.....
+    17A0:03 00 03 00 00 00 08 10-06 00 02 00 01 00 CE 10 ð ..............Î.
+    17B0:0A 00 08 00 72 00 01 00-00 00 08 10 06 00 02 00 ð ....r...........
+    17C0:01 00 D0 10 06 00 01 00-01 00 D7 10 06 00 02 00 ð ..Ð.......×.....
+    17D0:00 00 D2 10 0A 00 01 02-03 00 D3 10 12 00 72 00 ð ..Ò.......Ó...r.
+    17E0:0A 00 08 00 72 00 03 00-03 00 D4 10 06 00 02 00 ð ....r.....Ô.....
+    17F0:01 00 D5 10 16 00 05 00-01 00 D8 10 07 00 00 00 ð ..Õ.......Ø.....
+    1800:00 00 02 00 05 48 44 43-5F 5F F2 F1 12 00 04 02 ð .....HDC__òñ....
+    1810:06 04 72 00 03 00 00 00-06 75 6E 75 73 65 64 F1 ð ..r......unusedñ
+    1820:06 00 01 00 01 00 64 10-06 00 02 00 00 00 D9 10 ð ......d.......Ù.
+    1830:06 00 01 00 01 00 D7 10-06 00 02 00 00 00 DB 10 ð ......×.......Û.
+    1840:0A 00 01 02 03 00 70 02-70 02 70 02 0A 00 08 00 ð ......p.p.p.....
+    1850:72 00 03 00 03 00 DD 10-06 00 02 00 01 00 DE 10 ð r.....Ý.......Þ.
+    1860:0A 00 03 00 72 00 11 00-12 00 00 F1 0A 00 01 02 ð ....r......ñ....
+    1870:03 00 72 00 72 00 12 00-0A 00 08 00 03 00 03 00 ð ..r.r...........
+    1880:03 00 E1 10 06 00 02 00-01 00 E2 10 0E 00 01 02 ð ..á.......â.....
+    1890:04 00 84 10 73 00 73 00-12 00 F2 F1 0A 00 08 00 ð ....s.s...òñ....
+    18A0:12 00 03 00 04 00 E4 10-06 00 02 00 01 00 E5 10 ð ......ä.......å.
+    18B0:0A 00 08 00 72 00 03 00-01 00 7D 10 06 00 02 00 ð ....r.....}.....
+    18C0:01 00 E7 10 0A 00 08 00-72 00 03 00 04 00 E4 10 ð ..ç.....r.....ä.
+    18D0:06 00 02 00 01 00 E9 10-12 00 01 02 06 00 22 00 ð ......é.......".
+    18E0:70 02 70 02 20 02 22 00-22 00 F2 F1 0A 00 08 00 ð p.p. .".".òñ....
+    18F0:72 00 03 00 06 00 EB 10-                        ð r.....ë.
+LEDATA:  Type A0, Offset 35D9
+         Segment $$TYPES, offset 18F8, length 0134
+    18F8:                        06 00 02 00 01 00 EC 10 ð         ......ì.
+    1900:1E 00 05 00 01 00 F7 10-07 00 00 00 00 00 02 00 ð ......÷.........
+    1910:0E 74 61 67 48 41 4E 44-4C 45 54 41 42 4C 45 F1 ð .tagHANDLETABLEñ
+    1920:0A 00 03 00 03 01 11 00-02 00 00 F1 06 00 02 00 ð ...........ñ....
+    1930:01 00 EE 10 1E 00 05 00-03 00 F8 10 07 00 00 00 ð ..î.......ø.....
+    1940:00 00 08 00 0D 74 61 67-4D 45 54 41 52 45 43 4F ð .....tagMETARECO
+    1950:52 44 F2 F1 0A 00 03 00-73 00 11 00 02 00 00 F1 ð RDòñ....s......ñ
+    1960:06 00 02 00 01 00 F1 10-0E 00 01 02 05 00 D3 10 ð ......ñ.......Ó.
+    1970:F0 10 F3 10 72 00 12 00-0A 00 08 00 72 00 03 00 ð ð.ó.r.......r...
+    1980:05 00 F4 10 06 00 02 00-01 00 F5 10 1A 00 04 02 ð ..ô.......õ.....
+    1990:06 04 EF 10 03 00 00 00-0C 6F 62 6A 65 63 74 48 ð ..ï......objectH
+    19A0:61 6E 64 6C 65 F3 F2 F1-36 00 04 02 06 04 22 00 ð andleóòñ6.....".
+    19B0:03 00 00 00 06 72 64 53-69 7A 65 F1 06 04 73 00 ð .....rdSizeñ..s.
+    19C0:03 00 04 00 0A 72 64 46-75 6E 63 74 69 6F 6E F1 ð .....rdFunctionñ
+    19D0:06 04 F2 10 03 00 06 00-06 72 64 50 61 72 6D F1 ð ..ò......rdParmñ
+    19E0:0A 00 01 02 02 00 D3 10-72 00 F2 F1 0A 00 08 00 ð ......Ó.r.òñ....
+    19F0:72 00 03 00 02 00 F9 10-06 00 02 00 01 00 FA 10 ð r.....ù.......ú.
+    1A00:0A 00 01 02 02 00 70 02-70 02 F2 F1 0A 00 08 00 ð ......p.p.òñ....
+    1A10:72 00 03 00 02 00 FC 10-06 00 02 00 01 00 FD 10 ð r.....ü.......ý.
+    1A20:0A 00 03 00 70 00 11 00-0E 00 00 F1             ð ....p......ñ
+MODEND:  Type 8A, Offset 3714
+         Non-main module, no start address.

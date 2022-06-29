@@ -1,0 +1,591 @@
+
+			QUALITAS CONFIDENTIAL
+
+			   MAX 8.02 FIX FILE
+			      28 Mar 96
+		     Versions 8.02 and above
+
+*
+
+ Description:
+ Who:
+ When:
+ SW/HW Environment:
+ Symptom:
+ Temporary Workaround:
+ Test Procedure:
+ QA Testing Passed:
+ Version:
+
+
+* Use stripm95.pif to set DOSMAX=ON in toolbox.exe in Win95.
+
+Description: Use stripm95.pif to set DOSMAX=ON in Win95. This prevents
+	     a bug in the 386max.vxd from generating a page fault. The
+	     bug has been fixed, but it will trigger in previous versions
+	     during uninstall if DOSMAX is off and version 8.0 is still
+	     active ( install then uninstall without rebooting ).
+ Who: PETERJ
+ When: 19 Mar 1996
+ SW/HW Environment: Windows 95
+ Symptom: Stripmgr locks up during uninstall.
+ Temporary Workaround: Set DOSMAXDefault=ON in system.ini
+ Test Procedure: Install 8.02 over 8.0 then use toolbox uninstall
+		 without rebooting.
+ QA Testing Passed:
+ Version: toolbox.exe 8.01.25.16 or 8.02.1.16
+
+* Workaround Bug In Win95's Internal VPOWERD Driver
+
+ Description:  Because of an alignment bug in the internal VPOWERD
+	       driver in Win95's VMM32.VxD, we need to hook the
+	       _Allocate_Global_V86_Data_Area service and promote the
+	       alignment for at least their calls to this service from
+	       dword to para.  The VPOWERD code requests dword
+	       alignment, but their use of the resulting data area
+	       actually requires para alignment.
+
+	       We actually promote all calls with dword alignment to
+	       para alignment.
+ Who:  BOB
+ When:	22 Mar 96
+ SW/HW Environment:  Win95 running VPOWERD.
+ Symptom:  System crash during Windows startup.
+ Temporary Workaround:	Put DOSMAX=OFF in the [Qualitas] section of
+			SYSTEM.INI.
+ Test Procedure:  On a system running Win95 and VPOSERD, run Windows.
+ QA Testing Passed:
+ Version:  386MAX.VXD 8.01.008 (probably should be 8.02.001)
+
+
+* Remove 8.0 GoAhead from startup and MAX group if found.
+
+ Description: Remove GoAhead icons from Startup and MAX group and goahead.drv
+	      from the win\sys dir if found in Windows 95.
+ Who: PETERJ
+ When: 22 Mar. 1996
+ SW/HW Environment: Windows 95
+ Symptom: Installing over 8.0 with Goahead active leaves Icon in startup
+	  and in Max group, and driver in win\sys dir.
+ Temporary Workaround: Uninstall 8.0 before installing 8.01.
+ Test Procedure: Install 8.01 over 8.0 with Goahead active. Ensure that there
+	  are no Go Ahead icons in startup or Max group, and driver is removed
+	  from windows\system dir.
+ QA Testing Passed:
+ Version: Setup.exe 8.02.01.32
+
+* Syssaver.exe Initial entry.
+
+ Description: Syssaver.exe copies your Autoexec.bat, config.sys, win.ini and
+     system.ini and other specified files to a subdirectory where they can be
+     restored if something happens to the originals. The registry is
+     also saved to this directory, and differences from the original are also
+     saved. These files will be contained in a "zip" archive eventually.
+     For now they just reside in the sysdat16 subdirectory. The Registry
+     funtions for this initial version only work in Win3.1. The Win32 Reg
+     functions will be supported in a 32 bit version.
+
+ Who: PETERJ
+ When: April 2 1996 ( not April Fools Day )
+ SW/HW Environment: Windows
+ Symptom: NAB
+ Temporary Workaround: NAB
+ Test Procedure:
+ QA Testing Passed:
+ Version: SYSSAV16.EXE 1.0.0.1
+
+* Copy STATUTIL from Dispatch and add Zopen.cpp
+
+ Description:
+	This project now lives under the p:\max hierarchy and is available
+	for use by MAX 8 or any other new projects we add.
+ Who: HENRY
+ When: 4 Apr 96.
+ SW/HW Environment: All.
+ Symptom: NAB
+ Temporary Workaround: NAB
+ Test Procedure: None.
+ QA Testing Passed:
+ Version: None (static link library for use with multiple products).
+
+* Second set of major additions to Syssaver.exe
+
+ Description: (1) Added zip functionality.
+	      (2) Added undo functionality.
+	      (3) Added Registry base case reset functionality.
+	      (4) Added DDE to Progman to add / remove from startup group.
+
+ Who: PETERJ
+ When: 11 April, 1996
+ SW/HW Environment: Win16
+ Symptom: NAB
+ Temporary Workaround: NAB
+ Test Procedure: Complete check of all functionality.
+ QA Testing Passed:
+ Version: 1.001.001.2
+
+* Move FF under %MAXROOT% hierarchy
+
+ Description:
+	FF.COM and FFW.EXE (Windows) now live in the source directory
+	p:\max\ff.  There is no connection with the MAX 8 product.
+ Who: HENRY
+ When: 16 Apr 96
+ SW/HW Environment: All.
+ Symptom: NAB.
+ Temporary Workaround: NAB.
+ Test Procedure: None.	No changes.
+ QA Testing Passed:
+ Version: FF, FFW 1.0
+
+* Increase ZIP extract buffer
+
+ Description:
+	When doing buffered reads from text files, there's a considerable
+	amount of overhead.  The buffer has increased from 512 bytes to
+	16K, which should speed things up a bit.
+ Who: HENRY
+ When: 18 Apr 96.
+ SW/HW Environment: All.
+ Symptom: Too slow.
+ Temporary Workaround: None.
+ Test Procedure: None.
+ QA Testing Passed:
+ Version: LSTUTIL.LIB version ?
+
+* Update DEPSCAN to handle MASM source
+
+ Description:
+	All projects under $(MAXROOT) use standard definitions of the
+	$(I) (%MAXROOT%inc\) $(Q) (%MAXROOT%386max\) and
+	$(H) (%MAXROOT%include\) macros.  A DEPSCAN target has been
+	added to regenerate an (updated) dependency list using the
+	correct arguments.
+ Who: HENRY
+ When: 18 Apr 96.
+ SW/HW Environment: All.
+ Symptom: NAB.
+ Temporary Workaround: NAB.
+ Test Procedure: Verify that changing a header file properly causes
+	a rebuild of files that depend on it.
+ QA Testing Passed:
+ Version: None
+
+
+* Preliminary conversion of syssaver.exe to 32bit compile.
+
+ Description: Preliminary conversion of syssaver.exe to 32bit compile. The
+    registry functions are not implememted, but it compiles and
+    the interface works. Use WIN=32 with syssaver.mak to compile 32bit.
+ Who: PETERJ
+ When: 18 April, 1996
+ SW/HW Environment: Windows95
+ Symptom: NAB
+ Temporary Workaround:NAB
+ Test Procedure: Not yet suitable for test.
+ Version: 1.01.01.3
+
+
+* Add 32 bit RegDump function to syssav32.exe
+
+ Description: Add 32 bit RegDump function, the first function needed to
+     dump the registry base case to a file.
+ Who: PETERJ
+ When: 23 April, 1996
+ SW/HW Environment: Windows95
+ Symptom:NAB
+ Temporary Workaround: NAB
+ Test Procedure: Save base case and compare to regedit dump with vdiff
+     using the -b option.
+ QA Testing Passed:
+ Version: 1.01.01.4
+
+
+* Misc. changes to Syssaver.exe volume 1.
+
+ Description: (1) Fixed a bug in Add / Delete in Configuration. (2) Added
+     "Browse" to "Add" in Config. (3) Changed "Undo" to "Capture on Restore".
+     (4) Changed to new data/ini file format. (5) Changed name to System Saver.
+     (6) Change WalkWindowList to return TRUE if another instance is found.
+     All previous data and ini files and directories should be deleted before
+     using this new version. Filenames will now be a sequence of sysN.dat,
+     sysN.lst and sysN.zip, where N is the instance sequence number.
+ Who: PETERJ
+ When: 25 April, 1996
+ SW/HW Environment: Windows / Windows 95
+ Symptom: (1) Crash when you delete all files and then add more.
+ Temporary Workaround: (1) Don't do that.
+ Test Procedure: (1) Delete all files in the "Capture Files" list.
+     Then add other files.
+ QA Testing Passed:
+ Version: 1.01.01.005
+
+
+* Add print capability to Syssav16/32.exe
+
+ Description: Add print capability to Syssav16/32.exe
+ Who: PETERJ
+ When: 29 April, 1996
+ SW/HW Environment: Win3.x / Windows 95
+ Symptom:NAB
+ Temporary Workaround: NAB
+ Test Procedure: Print displayed differences.
+ QA Testing Passed:
+ Version: syssav16.exe 1.01.01.006
+
+
+* Replace the edit control in the difference dialog.
+
+ Description: Replace the edit control in the difference dialog with a
+     custom window so that the background can be colored. Also added the
+     color legend, improved the print routine and changed the name to
+     officially be "CYA" - CYA16.EXE
+ Who: PETERJ
+ When: 2 May, 1996
+ SW/HW Environment: Windows / Windows 95.
+ Symptom: NAB
+ Temporary Workaround: NAB
+ Test Procedure: View all difference files for correct operation.
+ QA Testing Passed:
+ Version: CYA16.EXE 1.01.01.007
+
+* Add single file restore to CYA.
+
+ Description: (1) Add single file restore to CYA. (2) Make scroll bars
+     keyboard accessible. (3) Change color coding. (4) Change print error
+     reporting. (5) Add View button to Files Changed dialog.
+ Who: PETERJ
+ When: 6 May 1996
+ SW/HW Environment: Windows / Windows 95
+ Symptom: NAB
+ Temporary Workaround: NAB
+ Test Procedure: Try restoring single files after viewing.
+ QA Testing Passed:
+ Version: CYA16.EXE 1.01.01.008
+
+* Added Multi-set selection to CYA.EXE
+
+ Description: Added Multi-set selection to CYA.EXE so that multiple deletions
+     can be marked. The Compare and Restore buttons are grayed for multiple
+     selections. Also added minimize buttons to the main dialogs.
+ Who: PETERJ
+ When: 8 May, 1996
+ SW/HW Environment: Windows / Windows 95
+ Symptom: NAB
+ Temporary Workaround: Single selection.
+ Test Procedure: Make multiple captures then select using shift or
+		 control click. Press Delete.
+ QA Testing Passed:
+ Version: CYA16.EXE 1.01.01.009
+
+
+* Replace the stolen PrintFile function with one that wraps lines.
+
+ Description: Replace the stolen PrintFile function with one that wraps lines.
+     I stole the aforesaid function for CYA and made it wrap lines. I have
+     moved that code, with a bit of retrofit, back into Maxedit so it now
+     wraps lines instead of truncating them. Also fixed (ala Bob) a bug in
+     GetSaveFileName call where the lpszFileTitle was not nulled before
+     the call.
+ Who: PETERJ
+ When: 9 May, 1996
+ SW/HW Environment: Windows.
+ Symptom: Printed lines truncate.
+ Temporary Workaround: Live with it.
+ Test Procedure: Print from files that have line lengths > 80.
+ QA Testing Passed:
+ Version: Maxedit.exe 8.02.??.010
+
+
+* Qualitas make (program maintenance) tool
+
+ Description:
+	This is a replacement for NMAKE.  It is still in early stages
+	of development, but most of the essential features are functional.
+	It doesn't currently:
+	- discriminate between implicit rules for different directories
+	- do path searching on implicit rules, e.g: {c:\max;c:\cat}.cpp.obj:
+	- have an -a switch to force a rebuild of all
+	- properly handle assignments spanning multiple lines with
+	  embedded conditions; for example:
+ALL:\
+!if $(WIN32)
+	foobar32.exe\
+!else
+	foobar.exe\
+!endif
+	foo2.exe
+
+	But then again, I'm not sure this works under NMAKE, either.
+ Who: HENRY
+ When: 14 May 96.
+ SW/HW Environment: Win95.
+ Symptom: NAB
+ Temporary Workaround: Use NMAKE, but all makefiles have to be changed
+	due to differences in passing the environment.	386MAX has to be
+	built partly by hand.
+ Test Procedure:
+ QA Testing Passed:
+ Version: QMAKE 0.23
+
+* Add auto-delete, roll base, set protection to CYA16.EXE
+
+ Description: (1) Add auto-delete functions and configuration.
+	      (2) Add roll base case to selection.
+	      (3) Add set protection / unprotection.
+	      (4) Fix bug in registry comparisons.
+ Who: PETERJ
+ When: 16 May, 1996
+ SW/HW Environment: Windows
+ Symptom: (1,2,3) NAB (4) Case sensitive keys.
+ Temporary Workaround: NAB (4) none.
+ QA Testing Passed:
+ Version: CYA16.EXE 1.01.01.010
+
+* Fix Bug With Large Memory Systems
+
+ Description:  When running 386MAX on a system with 66 Mb or more of
+	       EMS memory to manage (the actual amount of extended
+	       memory is larger), then the I/O ports we set aside for
+	       EMS 3.0 compatibility can overlap the reserved I/O
+	       ports we use for internal communications between VM and
+	       PM.  Compatibility with EMS 3.0 isn't needed anymore,
+	       and in fact has been provided only when the EMS30
+	       keyword is present in the profile.  However, checking
+	       for these I/O ports was still being done.  Now, we skip
+	       around these checks unless EMS30 is specified which
+	       avoids the problem with overlapping I/O ports.
+
+	       At the same time, I deleted a test for load SWAT as to
+	       whether or not we trap certain debugging interrupts in
+	       the VME SIRB.  This helps when debugging on a
+	       VME-compatible CPU (i.e.  late model 486s and all
+	       Pentiums and later) with non-load (i.e.	device) SWAT.
+ Who:  BOB
+ When:	21 May 96
+ SW/HW Environment:  Large memory systems (> 66 MB).
+ Symptom:  GP Fault after blue screen.
+ Temporary Workaround:	Use a smaller EXTSIZE=.
+ Test Procedure:  On a large memory systems, boot with 386MAX.
+ QA Testing Passed:
+ Version:  386MAX 8.02.001
+
+------------------- Build 2 on 21 May 1996 15:13:50 ---------------------
+
+* Fix Bug In Previous LOWSTK TWT
+
+ Description:  In an earlier TWT, I corrected a problem with
+	       overflowing the low DOS stack by copying the entire low
+	       DOS data area from the original copy in extended
+	       memory.	At the time I said that
+
+	       "Because the low DOS stack (and the data below it)
+	       doesn't change over the PM initialization code, we can
+	       refresh it from the pristine copy in extended memory."
+
+	       One case skipped by, though -- PnP initialization of a
+	       RM vector to handle the DWCFGMG.SYS driver which enters
+	       RM through VM/VCPI and then calls the RM code.  This
+	       TWT fixes that.
+
+	       Also I checked all other references to DTE_DSLO, none
+	       of which occur during PM initialization.
+ Who:  BOB
+ When:	22 May 96
+ SW/HW Environment:  PnP systems running DWCFGMG.SYS.
+ Symptom:  Lockup on DWCFGMG.SYS line.
+ Temporary Workaround:	Use NOPNP.
+ Test Procedure:  On such a system boot with 386MAX.SYS and
+		  DWCFGMG.SYS.
+ QA Testing Passed:
+ Version:  8.02.002
+
+
+------------------- Build 3 on 22 May 1996 10:40:59 ---------------------
+
+* Support Win32 registry in CYA32
+
+ Description:
+	The 32-bit version of CYA (CYA32) now supports basic operations
+	on the Windows 95 registry.  This has not been tested with NT.
+	There are still some kinks to be worked out, but this code is
+	in a workable state.
+	This TWT also moves some code from Winmxmz into Statutil in
+	preparation for new SETUP programs.
+ Who: HENRY
+ When: 23 May 96.
+ SW/HW Environment: Win32 (Windows 95; expect it not to work under NT yet).
+ Symptom: NAB.
+ Temporary Workaround: None.
+ Test Procedure: Under Windows 95, verify that registry save and
+	restore works.	Use RegEdit to view the registry after restoring.
+	Also use RegEdit to export the registry to text files and compare
+	the before and after using VDIFF with the comparison CYA32 does.
+	Keep track of the times required for the various actions, and
+	try to keep track of details like "how long reading base case,"
+	"how long generating differences," etc.  This will be useful in
+	looking for slow areas to optimize.  Keep alert for anything that
+	seems excessively slow.  Use PKUNZIP -v to dump the CYA*.ZIP file
+	and be alert to excessively large REGDIFF.??? files.
+ QA Testing Passed:
+ Version: CYA32.EXE 1.01.01.011
+
+* More changes to CYA 32-bit
+
+ Description:
+	Most of these changes were noted in reviewing the SSReg32.HG TWT.
+ Who: HENRY
+ When: 28 May 96.
+ SW/HW Environment: All.
+ Symptom: Won't compile.
+ Temporary Workaround: None.
+ Test Procedure: None.
+ QA Testing Passed:
+ Version: CYA*.exe, Statutil
+
+* More fixes and enhancements to QMAKE
+
+ Description:
+	The parade of problems building under Win32 continues.	Apparently
+	batch files no longer return the errorlevel of the last program
+	to execute.  We used to rely on this in the top level makefile.
+	Now we call make recursively using the predefined identifier
+	&make.	As this is currently implemented in QMAKE it should be
+	used carefully, as the called makefile will not restore the
+	previous macro settings from the calling makefile.  Overall this
+	is a much cleaner solution than calling batch files.
+
+	The text\text.mak makefile is now set up to handle different
+	sets of files according to product.  Each product has its own
+	top-level makefile, which passes different options to TEXT.MAK.
+	This is important as MAX 8 references some files not in the
+	text directory (shouldn't have been set up that way, but this
+	makes the build faster anyway).
+
+	For a description of fixes to QMAKE, see p:\max\tools\QMAKE2.DOC.
+ Who: HENRY
+ When: 31 May 96.
+ SW/HW Environment: Win32
+ Symptom: A makefile called by the top level CYA.MAK fails but the
+	top level makefile doesn't know about the failure, as COMMAND.COM
+	returns errorlevel 0 from CYACMD.BAT.
+ Temporary Workaround: None.  Nmake doesn't work with this either
+	under Win32.  A possible workaround would be to use 4DOS.
+ Test Procedure: Run QMAKE CYA.MAK from the %MAXROOT% directory
+	under Win95.
+ QA Testing Passed:
+ Version: QMAKE 0.26
+
+
+* CYA32 bug fixes and misc. changes.
+
+ Description:  (1) Bug fixes.
+	       (2) Add /R (auto restore), /D (auto compare), /K (keep diffs)
+		   cmd-line switches for QA testing.
+	       (3) Limit multiple instances.
+	       (4) Keep Diff list to restore from in ShowFiles dialog.
+	       (5) Dynamic storage allocation for Reg values.
+	       (6) Remove hard coded strings.
+	       (7) Change all _lwrites to sswrites (with error trap ).
+ Who: PETERJ
+ When: 5 June, 1996
+ SW/HW Environment: Windows 3.x / Windows 95
+ QA Testing Passed:
+ Version: 1.01.01.012
+
+------------------- Build 4 on 2 Jul 1996 10:09:28 ---------------------
+
+* Fix Bug In EMS30 Keyword
+
+ Description:  Oops!  This procedure should return as a far rather
+	       than near call.
+ Who:  BOB
+ When:	7 Oct 96.
+ SW/HW Environment:  EMS 3.0 compatibility.
+ Symptom:  "Memory manager not installed" with no reason given.
+ Temporary Workaround:	Don't use EMS30 keyword.
+ Test Procedure:  Try it.
+ QA Testing Passed:
+ Version:  386MAX 8.02.003
+
+* Allow MAX To Handle Up To 256 MB Of RAM
+
+ Description:  Previously, the presence of various 16-bit wide
+	       dynamically allocated structures limited the amount of
+	       memory MAX could handle to whatever size structures
+	       would fit in whatever was left in the 64KB data segment
+	       of MAX.	This value was approximately 92 MB.
+
+	       More accurately, the problem was two-fold.  There were
+	       some structures which were dynamically allocated, but
+	       16-bit addressible only.  Thus the highest addressible
+	       offset was limited to 64KB which limited the size of
+	       those structures.  Allowing those structures to be
+	       allocated above 64KB freed us from that limitation, but
+	       then meant that other structures which contained
+	       offsets into the 16-bit structures had to have their
+	       contents widened from words to dwords (so as to
+	       accommodate a 32-bit offset).
+
+	       This change converts all of the 16-bit addressible
+	       structures to be 32-bit addressible, and converts all
+	       but one of the structures which contained word values
+	       (offsets) to dword values.  This has the effect of
+	       moving the upper limit to a little above 256 MB; that
+	       is, MAX can run on a 256 MB system.
+ Who:  BOB
+ When:	8 Oct 96.
+ SW/HW Environment:  Large memory systems.
+ Symptom:  "Stack exceeds 64KB" during initialization.
+ Temporary Workaround:	Use EXTSIZE to reduce extended memory.
+ Test Procedure:  Create a system with more than 92MB and test before
+		  and after versions of MAX.
+ QA Testing Passed:
+ Version:  386MAX 8.02.004
+
+* Pass Invalid @RELMEM Call To DOS
+
+ Description:  We hook the DOS @RELMEM call in PM so as to free LSEGs
+	       at the appropriate time.  At the same time, we check
+	       for an invalid segment being freed and return the
+	       proper error code (MAC Not Found) to the caller.
+
+	       One customer is using this call in a very unusual way.
+	       They "free" segments, but ones in their format, a
+	       format which doesn't match the DOS MAC entry format.
+	       Without us in the system, they trap the @RELMEM call
+	       and handle it themselves without passing it on to DOS.
+	       With us in the system, the call doesn't get passed on
+	       to VM, so they don't get an opportunity to intercede.
+
+	       This change has us pass on the invalid segment
+	       situation to the next handler in sequence instead of
+	       returning the error code ourselves.  No good deed goes
+	       unpunished.
+ Who:  BOB
+ When:	6 Nov 1996
+ SW/HW Environment:  Oddball ones.
+ Symptom:  A user complains that his oddball system doesn't work.
+ Temporary Workaround:	None.
+ Test Procedure:  Get oddball system (see Diana).
+ QA Testing Passed:
+ Version:  386MAX 8.03.001
+
+
+************** Use the following as a template for a fix file entry ************
+************ Leave a clean copy of it in this file for the next person *********
+******* N.B. As with Dispatch, there's also a copy at the top of the file ******
+
+*
+
+ Description:
+ Who:
+ When:
+ SW/HW Environment:
+ Symptom:
+ Temporary Workaround:
+ Test Procedure:
+ QA Testing Passed:
+ Version:
+
+

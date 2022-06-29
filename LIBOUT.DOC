@@ -1,0 +1,45 @@
+* Put libraries in %MAXROOT%lib
+
+Fix file entry:
+
+* Put libraries in %MAXROOT%lib
+
+ Description:
+ 	This should not affect the product in any way.  The build procedure
+	should no longer copy any .lib files down to x:\apps\release\max8
+	or wherever the final destination is.
+ Who: HENRY
+ When: 24 Oct 95.
+ SW/HW Environment: All.
+ Symptom: Build fails on any module expecting a library in the
+	local library dir.  Bob made a recent change to work around
+	this, these changes should have all projects in the build
+	working the same way.
+ Temporary Workaround: NAB.
+ Test Procedure: Remove all .LIB files from x:\apps\release\max8
+ 	and run a build.
+ QA Testing Passed:
+ Version: Max 8, build 6
+
+New files:
+
+Files affected:
+
+MAX.MAK
+	Build DOS versions of expanded C run-time libraries (not currently
+	needed as we don't have any DOS apps that use more than 20 file
+	handles).
+
+ASQ\MAKEFILE
+ASQENG\MAKEFILE
+INSTALL\MAKEFILE
+MAX\MAKEFILE
+MAXIMIZE\MAKEFILE
+QUILIB\MAKEFILE
+SNAPSHOT\MAKEFILE
+	Use %MAXROOT%lib as output for .lib files.  Apps that use them
+	need to look in the right place now.
+
+TEXT\TEXT.MAK
+	Fix makefile oversight which didn't copy *.xus to *.lst
+

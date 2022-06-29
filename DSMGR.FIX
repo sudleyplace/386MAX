@@ -1,0 +1,35 @@
+
+			QUALITAS CONFIDENTIAL
+
+			  DSMGR 1.0 FIX FILE
+			       4 Apr 96
+		     Versions 1.0 and above
+
+*
+
+ Description:
+ Who:
+ When:
+ SW/HW Environment:
+ Symptom:
+ Temporary Workaround:
+ Test Procedure:
+ QA Testing Passed:
+ Version:
+
+* Disk space manager
+
+ Description:
+ 	This is the initial or baseline version of DSMgr.  This program
+	archives directories based on wasted space.  It will eventually
+	be a part of the Waste Watcher product (which currently does
+	not yet have a top-level makefile).
+ Who: HENRY
+ When: 4 Apr 96.
+ SW/HW Environment: All.
+ Symptom: NAB
+ Temporary Workaround: NAB
+ Test Procedure: Run on various types of hard drives.
+ QA Testing Passed:
+ Version: DSMgr 1.0
+

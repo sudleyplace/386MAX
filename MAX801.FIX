@@ -1,0 +1,2533 @@
+
+			QUALITAS CONFIDENTIAL
+
+			   MAX 8 FIX FILE
+			      7 Aug 95
+		     Versions 8 and above
+
+*
+
+ Description:
+ Who:
+ When:
+ SW/HW Environment:
+ Symptom:
+ Temporary Workaround:
+ Test Procedure:
+ QA Testing Passed:
+ Version:
+
+* Don't Create .COM Files MAXHI/MAXLO/386MAX By Default
+
+ Description:  As we don't ship MAXHI.COM, MAXLO.COM, or 386MAX.COM
+	       any more, it seems silly to create them each time we
+	       run NMAKE.  This change limits creation of those files
+	       to when the keyword XUTIL is defined on the NMAKE
+	       command line.
+ Who:  BOB
+ When:	14 Sep 95.
+ SW/HW Environment:  None.
+ Symptom:  None, it's not a bug.
+ Temporary Workaround:	None, it's not a bug.
+ Test Procedure:  Run NMAKE on 386MAX and notice that none of
+		  MAXLO.COM, MAXHI.COM, and 386MAX.COM are created.
+ QA Testing Passed:
+ Version:  386MAX 7.02.027
+
+* Fix DPMI Bug With DOS EXEC Calls
+
+ Description:  As a customer has pointed out, when we EXEC a program
+	       from a DPMI client, we leave around three small data
+	       areas in low DOS (for a total of about 160 bytes) which
+	       aren't freed until the DPMI cient terminates.  This
+	       change fixes that.
+ Who:  BOB
+ When:	14 Sep 95.
+ SW/HW Environment:  DPMI client which EXEC another program.
+ Symptom:  A small amount of low DOS memory remains after the EXECed
+	   program terminates.
+ Temporary Workaround:	None.
+ Test Procedure:  Run customer-provided DPMIBUG.EXE and confirm that
+		  the successive calls to MEM.EXE all return the same
+		  amount of available low DOS memory.
+ QA Testing Passed:
+ Version:  386MAX 7.02.028
+
+* Support Plug 'n Play in 386MAX and Related Components
+
+ Description:  As far as 386MAX and its related components are
+	       concerned, Plug 'n Play (PnP) is a BIOS service.  It is
+	       not a BIOS call, though, instead being recognized by a
+	       signature somewhere at or above F000 on a para
+	       boundary.  This means that at a minimum, ROMSRCH needs
+	       to exercise those services so that we don't map high
+	       DOS onto the code/data used for PnP.
+
+	       However, we take PnP support much farther.  Initially,
+	       I noticed that ROMSRCH was mistakenly recovering one or
+	       more 4KB blocks in the BIOS which were used for PnP.
+	       This suggested that because PnP has a separate PM and
+	       RM/VM entry point that we should be able to convert VM
+	       calls into PM calls where the actual BIOS code being
+	       executed is at a linear address up in extended memory
+	       and not lose high DOS memory to PnP BIOS code/data.
+	       Such proved to be the case.
+ Who:  BOB
+ When: 28 Sep 95.
+ SW/HW Environment:  Plug 'n Play BIOSes.
+ Symptom:  System crash when running a Plug 'n Play utility.
+ Temporary Workaround:	Remove the USE= statements which cover the PnP
+			code/data.
+ Test Procedure:  Run TESTPNP.COM outside and inside Windows on PnP
+		  BIOS systems.
+ QA Testing Passed:
+ Version:  386MAX 8.00.029 (not yet released as 8.00)
+
+* Increase EMS Shared Memory Limit
+
+ Description:  As we run into more and more systems with more than
+	       32MB, customers are confused by the 386UTIL (and our
+	       initialization screen) display of Shared Memory which
+	       is limited to 32MB.  In practice, we not so limited,
+	       but that value is actually the available EMS size.  The
+	       simplest approach to fix this is to change the maximum
+	       amount of EMS memory we manage.
+ Who:  BOB
+ When:	28 sep 95.
+ SW/HW Environment:  Systems with > 32MB.
+ Symptom:  The 386MAX initialization and 386UTIL/L displays show
+	   Shared Memory as limited to 32MB.
+ Temporary Workaround:	None, it's not a bug.
+ Test Procedure:  None, it's not a bug.
+ QA Testing Passed:
+ Version:
+
+* Workaround Overzealous Win95 With RAM Buffers
+
+ Description:  If the user places a RAM= statement in the 386MAX
+	       profile we avoid that region of high DOS (as well as
+	       set the Cache Disable bit in the corresponding PTE).
+
+	       When Win 3.1 comes up it also seems to avoid that
+	       region, but Win95 doesn't, instead allocating the
+	       corresponding linear addresses to itself.
+
+	       With this TWT, we take positive action to ensure
+	       Windows skips over the RAM buffer.
+
+	       Also, we set the Cache Disable bit in the corresponding
+	       PTE for Win 3.1 as well as Win95.
+
+	       Unrelated changes:
+
+	       * Fix register popping bug in ROM_AMM.
+	       * Fix backward compatibility bug in PATCH_PnP and
+		 REST_PnP.
+	       * Delete extraneous INT 03h left over from PnP TWT.
+	       * Add "Set NOLOW=IGNORE" wording to error message as
+		 requested by Tech Support.
+ Who:  BOB
+ When:	29 Sep 95.
+ SW/HW Environment:  Win95 with RAM= statements in 386MAX.PRO.
+ Symptom:  Win95 maps over the RAM= regions if it doesn't recognize
+	   the user of the RAM= region, thus an adapter board might
+	   fail to work because it's not mapped in.
+ Temporary Workaround:	There must be something akin to EMMEXCLUDE=
+			for Win95.
+ Test Procedure:  With a RAM= statement, boot Win95, go to a DOS box,
+		  bring up SWAT, and examine (using F5) the PTEs in
+		  high DOS to ensure that they are still one-to-one
+		  and that the Cache Disable bit is set (bit 4, mask
+		  10h).
+ QA Testing Passed:
+ Version:  386MAX.VXD 8.00.002
+
+* Delete Checks For Backfilled Systems
+
+ Description:  Because it causes more trouble than it solves, Tech
+	       Support would like the checking for backfilled systems
+	       to be removed.  Although it's true that Windows won't
+	       run in a backfilled system, there just aren't any more
+	       of them around.	Moreover, there are a number of false
+	       positives e.g.  where a boot utility allocates memory
+	       from the top of low DOS and the later relocates itself
+	       and re-adjusts the INT 12h value.
+ Who:  BOB
+ When:	29 Sep 95.
+ SW/HW Environment:  Systems running Extra Drive and similar boot
+		     utilities which allocate memory for themselves
+		     at boot time from the top of low DOS and then
+		     later on in the boot process (after 386MAX has
+		     initialized) re-adjusts the INT 12h value.
+ Symptom:  Our VxD complains about NOLOW needed.
+ Temporary Workaround:	Use Set NOLOW=IGNORE.
+ Test Procedure:  On an Extra Drive system, attempt to run Windows.
+ QA Testing Passed:
+ Version:  386MAX.VXD 8.00.003
+
+------------------- Build 2 on 6 Oct 1995 11:56:03 ---------------------
+
+* Avoid Extra ROM Swap If PnP In Effect
+
+ Description:  If we're emulating PnP functions, we can mistakenly add
+	       an extra ROM entry for the PnP struc if there's an
+	       existing ROM entry.  This TWT introduces code which
+	       check for that.
+ Who:  BOB
+ When:	9 Oct 95
+ SW/HW Environment:  PnP BIOSes.
+ Symptom:  An additional 4KB of BIOS is allocated.
+ Temporary Workaround:	Ignore it, it's harmless.
+ Test Procedure:  Run before and after on a PnP BIOS system.
+ QA Testing Passed:
+ Version:  386MAX.SYS 8.00.031
+
+* Use PCI Memory Function Call To Get Extended Memory
+
+ Description:  If the BIOS supports it, there's another function which
+	       returns the size of extended memory in kilobytes, this
+	       time handling > 64 MB.
+ Who:  BOB
+ When:	9 Oct 95
+ SW/HW Environment:  PCI bus systems with more than 64MB.
+ Symptom:  386MAX doesn't see memory beyond 64MB.
+ Temporary Workaround:	Use EXTSIZE.
+ Test Procedure:  On such a system, run before and after.  If you
+		  don't happen to have such a system in house, run
+		  the new EXTSIZE.COM to see the PCI extended memory
+		  report.
+ QA Testing Passed:
+ Version:  386MAX.SYS 8.00.032
+
+* Fix Near/Far Bug In Maximize
+
+ Description:  For some reason, the variables of UTIL_OPT.ASM which
+	       are referenced by the C code in MAXIMIZE were declared
+	       as near, even though they are far.  The MS-LINKer made
+	       a misguided attempt to make the error work, failed
+	       miserably, and then compounded this mistake by ignoring
+	       the problem.
+
+	       The net effect of this problem is (at least for one of
+	       the variables, BESTSIZE) that MAXIMIZE reports the
+	       number of bytes moved high as a random number (it once
+	       reported 920K going high on my system at home).	There
+	       might be other bugs fixed by this change, but I haven't
+	       investigated.
+
+	       At the same time, I noticed that a couple of variables
+	       in INTHELP.H weren't declared extern in a non-OWNER
+	       module, which caused the compiler to treat them as
+	       COMDEF records.	As there is a PUBDEF record for these
+	       variables, the linker should signal an error, but of
+	       course once again it ignored the problem.
+ Who:  BOB
+ When:	9 Oct 95.
+ SW/HW Environment:  All systems.
+ Symptom:  Note that the memory reported to be moved high is way off.
+ Temporary Workaround:	Ignore it, it's harmless.
+ Test Procedure:  Run MAXIMIZE before and after.
+ QA Testing Passed:
+ Version:  MAXIMIZE 8.00.004
+
+* Test For Advanced Power Management Functions
+
+ Description:  Include tests for various APM calls so we don't
+	       mistakenly recover the code/data they use.
+ Who:  BOB
+ When:	9 Oct 95.
+ SW/HW Environment:  BIOSes with APM functions.
+ Symptom:  System crash when APM functions are invoked.
+ Temporary Workaround:	Remove the offending USE=.
+ Test Procedure:  On systems with APM functions in the BIOS, run
+		  before and after.
+ QA Testing Passed:
+ Version:  ROMSRCH 8.00.001
+
+* Fix bug in LSEG for GETSIZEd programs that free themselves
+
+ Description:
+	This bug is unpleasant but should be fairly hard to
+	reproduce.  I've had this configuration on my laptop
+	for about a year, and never had a problem until now
+	because I always ran Maximize with the docking station
+	attached.  I also happen to unload lsl if the hardware
+	driver fails, a very handy trick for running with or
+	without the network.
+
+	There are a series of "gotchas" here, and we're
+	basically plugging loopholes within loopholes.	See
+	LOWLSEG.DOC for a complete description of the changes.
+ Who:  HENRY
+ When: 11 Oct 95
+ SW/HW Environment: 1. Run Maximize on a system with (say)
+	lsl loading in autoexec.bat, followed by another
+	network tsr.  If the second program fails (say because
+	the system is not connected to the docking station)
+	use lsl u to unload.
+	2. Make sure the docking station is disconnected
+	while running Maximize to reproduce the problem (so
+	lsl will get unloaded).
+	3. Make sure no programs go resident after lsl tries
+	to go resident (and the other network program, smc9000
+	in my case, also tries to do so).
+	4. In Phase 2 of Maximize, make sure lsl is to be maximized
+	and no other programs come after it.
+ Symptom:  LSEG is broken after BATPROC terminates in Phase 3.
+	This usually causes the system to hang.  To verify, use
+	REBOOTCMD=command to get a DOS prompt before each reboot
+	and manually add lseg.exe to autoexec.bat just before
+	maximize.exe.  This will run even with a broken lseg
+	but will display garbage after the valid entries.
+ Temporary Workaround: Run Full Maximize and toggle low any
+	program known to unload itself after going resident.
+ Test Procedure: Reproduce the problem as described under environment
+	(all conditions may be required to reproduce).	Verify that
+	it works properly with the newer 386max.sys (substituting it
+	for the old one after breaking out of the Phase 3 AUTOEXEC.BAT
+	before running Maximize.exe).  Re-run Maximize with the new
+	386max.sys and verify that everything works as expected,
+	including the program that unloads itself.
+ QA Testing Passed:
+ Version:  386MAX.SYS 8.00.033
+
+* Fix Bug In PnP BIOS Support
+
+ Description:  If all of the following occur
+
+	       1.  We detect a PnP BIOS, and
+	       2.  the signature struc overlaps an existing ROM entry,
+		   and
+	       3.  the ROM entry it overlaps is fast enough that it
+		   doesn't get swapped,
+
+	       then, we mark it as to be swapped (because we need to
+	       patch the PnP signature struc), but don't add in the
+	       ROM length to MAPSIZE.  The effect of that omission is
+	       that we don't allocate extended memory for the swapped
+	       ROM and overwrite something else.
+
+	       At the same time, I fixed a bug in the ROM testing
+	       algorithm where we were copying ROMs to low DOS memory
+	       even if we weren't swapping them.  This means we would
+	       take up more low DOS memory during initialization than
+	       necessary, a critical resource with Win95 and
+	       DriveSpace.
+
+ Who:  BOB
+ When:	12 Oct 95.
+ SW/HW Environment:  PnP BIOSes in a fast ROM.
+ Symptom:  System crash at initialization (before blue screen(.
+ Temporary Workaround:	Use NOPNP or put a ROM= on the part of the ROM
+			with the PnP signature struc.
+ Test Procedure:  On such a system (Pete's has this problem), attempt
+		  to boot before and after this change.
+ QA Testing Passed:
+ Version:  386MAX 8.00.034
+
+* Add new Windows Maximize program
+
+ Description:
+	This program is not in a finished stage but should offer all
+	the functionality to be offered in the shipping product.
+	Work is needed mostly on visual aspects and on error handling.
+ Who: HENRY
+ When: 13 Oct 95.
+ SW/HW Environment: Starting from Windows or Win95.
+ Symptom: NAB.
+ Temporary Workaround: Exit Windows and start Maximize from DOS.
+	For Win95, use F8 when booting and don't start Windows.
+ Test Procedure: Run Custom and Express Maximize from Windows.
+	Also test running Maximize from DOS.  Check Autoexec.bat
+	carefully for any apparent mishandling (we add a line so
+	we can show the summary under Windows).
+ QA Testing Passed:
+ Version: WinMaxim 8.0.3.001
+		  Maximize 8.0.005
+
+
+
+
+------------------- Build 3 on 13 Oct 1995 12:21:59 ---------------------
+
+
+------------------- Build 4 on 16 Oct 1995 13:17:21 ---------------------
+
+
+------------------- Build 5 on 17 Oct 1995 12:43:02 ---------------------
+
+
+*  Update MAXHELP.DOC and related help files.
+
+ Description:  Update to MAXHELP.DOC, .RTF, and .HPJ
+ Who:		 Beckyy
+ When:		 10/19/95
+ SW/HW Environment:	 None
+ Symptom:
+ Temporary Workaround:
+ Test Procedure:
+ QA Testing Passed:
+ Version:  MAXHELP.DOC 1.1, MAXHELP.HPJ 1.2, MAXHELP.RTF 1.2.
+
+
+ Description: Setup, Maxctrl, & MaxEdit changes from REX
+ Who: Rex (logged in by PETERJ)
+ When: 19 Oct. 95
+ SW/HW Environment:
+ Symptom:
+ Temporary Workaround:
+ Test Procedure:
+ QA Testing Passed:
+ Version:
+
+------------------- Build 6 on 19 Oct 1995 15:21:13 ---------------------
+
+ Description: Setup change from REX
+ Who: Rex (logged in by PETERJ)
+ When: 20 Oct. 95
+
+------------------- Build 7 on 20 Oct 1995 10:06:55 ---------------------
+
+ Description: Setup, toolbox changes from REX
+ Who: Rex (logged in by PETERJ)
+ When: 20 Oct. 95
+
+
+------------------- Build 8 on 20 Oct 1995 15:19:34 ---------------------
+
+* Put libraries in %MAXROOT%lib
+
+ Description:
+	This should not affect the product in any way.	The build procedure
+	should no longer copy any .lib files down to x:\apps\release\max8
+	or wherever the final destination is.
+ Who: HENRY
+ When: 24 Oct 95.
+ SW/HW Environment: All.
+ Symptom: Build fails on any module expecting a library in the
+	local library dir.  Bob made a recent change to work around
+	this, these changes should have all projects in the build
+	working the same way.
+ Temporary Workaround: NAB.
+ Test Procedure: Remove all .LIB files from x:\apps\release\max8
+	and run a build.
+ QA Testing Passed:
+ Version: Max 8, build 9
+
+
+* Add cversion.h to several projects.
+
+ Description: MaxMeter, Maxedit  and Maxsetup had no cversion.h for
+     version tagging and were picking cversion.h up from the include
+     directory. I individualized them. Adjusted Maxctrl's makefile to
+     make sure the resource was rebuilt.
+
+ Who: PETERJ
+ When: 24 Oct 95
+ SW/HW Environment: All
+ Symptom: Version numbers never change.
+ Temporary Workaround:none
+ Test Procedure: Check versions in about boxes for all programs.
+ QA Testing Passed:
+ Version:  MaxMeter.exe 8.00.009.002, MaxEdit.exe 8.00.009.002,
+	   Setup.exe 8.00.009.002,  Maxctrl.exe 8.00.009.002
+
+
+* 386Max to Qualitas MAX text changes - 386Max.sys and 386Util.com.
+
+ Description: Change all text to reflect name change. DO NOT change
+     file names. The first in a series of product name changes.
+
+ Who:  PETERJ
+ When: 24 Oct 95
+ SW/HW Environment: ALL
+ Symptom: NAB
+ Temporary Workaround: NAB
+ Test Procedure: view all screens and messages and ascertain that the text
+     displays Qualitas Max unless it is a file name being displayed.
+ QA Testing Passed
+ Version:  386MAX.SYS 8.00.009.035, 386Util.COM 8.00.009.035
+
+------------------- Build 9 on 24 Oct 1995 16:50:40 ---------------------
+
+*  Setup, toolbox changes from Rex to add registry stuff.
+ Who: Rex (logged in by PETERJ)
+ When: 25 Oct. 95
+
+*   Change names from 386Max to Qualitas Max.
+
+ Description: Changed names from 386Max to Qualitas Max where appropriate.
+     also changed current copyright dates to 19xx-95.
+ Who: PETERJ
+ When: 25 Oct. 95
+ SW/HW Environment: All
+ Symptom:nab
+ Temporary Workaround:nab
+ Test Procedure:
+ QA Testing Passed:
+ Version: Beta Build 10 386disk,
+	  386load 8.0.10.3,  Max 8.0.10.1,  MemLimit 1.19,
+	  QPopup  8.0.10.5,  Romsrch 8.0.10.2,	Xlat 104.0.0.5,
+
+
+------------------- Build 10 on 25 Oct 1995 13:29:09 ---------------------
+
+* More changes to WinMaxim
+
+ Description:
+	Quite a number of feature-type changes and a few bugs
+	have been fixed.  As the previous version was fairly
+	incomplete, I won't detail the changes here.  Still
+	remaining to be fixed are 1. Check Maximize.exe for
+	brand 2. Check for Max installed in selected MBoot
+	section 3. Hook up actual help (?need contexts).
+ Who: HENRY
+ When: 25 Oct 95
+ SW/HW Environment: Windows.
+ Symptom: Varies.
+ Temporary Workaround: None.
+ Test Procedure: Retest every facet of WinMaxim.
+ QA Testing Passed:
+ Version: WinMaxim 8.0.11.002
+
+
+------------------- Build 11 on 25 Oct 1995 22:10:42 ---------------------
+
+
+------------------- Build 12 on 25 Oct 1995 22:14:34 ---------------------
+
+*  Setup.exe - Always brand files, including /W command option.
+
+Description: File branding was turned off with the /W command option.
+    This behavior was changed to always brand the files.
+
+ Who: PETERJ
+ When: 26 Oct. 95
+ SW/HW Environment: Windows
+ Symptom: File branding was turned off with the /W command option.
+ Temporary Workaround:none
+ Test Procedure: Ascretain that files are branded with /W option.
+ QA Testing Passed:
+ Version: Setup.exe 8.00.013.005
+
+
+------------------- Build 13 on 26 Oct 1995 15:05:14 ---------------------
+
+
+------------------- Build 14 on 26 Oct 1995 17:44:44 ---------------------
+
+*  Workaround Hard Disk Crash If 386MAX.SYS In Memory, But No VxD
+
+ Description:  Due to a bug in our code or in Windows, if our VxD is
+	       not present (it's been erased), somebody hoses the hard
+	       disk.  Our bandaid fix of the moment is to check for
+	       the VxD at the point Windows is initializing and fail
+	       Windows initialization if not found.
+ Who:  BOB
+ When:	26 Oct 95
+ SW/HW Environment:  Windows
+ Symptom:  Hard disk is hosed
+ Temporary Workaround:	Reboot immediately after getting missing VxD
+			error.
+ Test Procedure:  Backup your hard disk, test with and without
+		  changes.
+ QA Testing Passed:
+ Version:  386MAX.SYS 8.00.036
+
+*  Fix Old Bug With Register Confusion
+
+ Description:  An old bug in GET_MACINFO has been exorcised.  The bug
+	       didn't use the correct registers for a @MACALG call and
+	       so was depending upon the value in AL being anything
+	       > 2.  The recent changes to the product name caused
+	       the low-order byte of the data with our copyright
+	       message to end at 02h.  This is one of the subfunctions
+	       to @MACALG which doesn't return CF=1, so the bug occurs.
+ Who:  BOB
+ When:	26 Oct 95
+ SW/HW Environment:  All.
+ Symptom:  ExtraDOS fails!
+ Temporary Workaround:	None.
+ Test Procedure:  Ensure ExtraDOS now loads.
+ QA Testing Passed:
+ Version:  386MAX.SYS 8.00.037
+
+
+------------------- Build 15 on 26 Oct 1995 21:50:40 ---------------------
+
+* Fixes to DOS Maximize in support of WinMaxim
+
+ Description:
+	Quite a number of bugs and features have been implemented
+	with respect to running Maximize starting from Windows.
+	1. Express and Custom are now used, with /E and /U the
+	   enabling command line options.
+	2. Force settings selected in WinMaxim to control
+	   Maximize's behaviour more fully (no dialogs).
+	3. Fix placement of Winmaxim statement in autoexec
+	   for final reboot.
+	4. Modify CONFIG.SYS to boot into the selected MultiConfig
+	   section for final reboot.
+	5. In WinMaxim, if enabling ROMSRCH when it has already
+	   been run, turn on "Remove ROMSRCH" by default (it can
+	   still be turned back off).
+ Who: HENRY
+ When: 26 Oct 95.
+ SW/HW Environment: WinMaxim (starting Maximize from Windows or
+	Win95)
+ Symptom: See MaxMzW2.DOC for details.
+ Temporary Workaround: None.
+ Test Procedure: Test Custom and Express Maximize, from DOS and
+	from WinMaxim, in Windows and Win95 environments.
+ QA Testing Passed:
+ Version: WinMaxim 8.0.16.003; Maximize 8.0.5
+
+
+* TOOLBOX.EXE - Don't leave evap.pif in Win95
+
+ Description: (1) In fact, don't even use Evap.com in Win95. The limitation
+     that evap.com was created to get around, that is, the inability to
+     delete the file you are in within Windows, does not exist in Win95.
+     So I just copied the delete functions from evap into misc.c (some
+     were already there ) and now call them from the toolbox program if
+     we are running in Win95. (2) Set NOFLEX in 386max.pro if RAM= changed.
+
+ Who: PETERJ
+ When: 30 Oct 95
+ SW/HW Environment: Win95
+ Symptom: Evap.pif remains running after Uninstall.
+ Temporary Workaround: manually close and delete evap.pif.
+ Test Procedure: (1) Uninstall Max 8 from Win95. No trace should remain.
+		 (2) Change RAM= via toolbox.exe and see that NOFLEX is
+		 added to the 386MAX.pro file.
+		 (3) Add /I to WinExec of winmaxim.exe
+ QA Testing Passed:
+ Version: TOOLBOX.EXE 8.000.016.003
+
+*  Setup changes from Rex
+ Who: Rex (logged in by PETERJ)
+ When: 30 Oct. 95
+
+
+------------------- Build 17 on 30 Oct 1995 16:09:24 ---------------------
+
+*   Change product names in 386max.vxd to Qualitas MAX
+
+ Description:  Include QMAX_OEM.INC from the object dir. Use @OEM_TEXT
+     and @OEM_FILE for @OEMTEXT strings in the program, depending on
+     whether it is a file or product name.
+
+ Who: PETERJ
+ When: 31 Oct.95
+ SW/HW Environment: All
+ Symptom: NAB
+ Temporary Workaround: NAB
+ Test Procedure:
+ QA Testing Passed:
+ Version: 386MAX.VXD - 8.000.017.005
+
+*  SETUP.EXE Trim splash screen and remove clipping.
+
+ Description: The qmax.bmp had ragged right and bottom edges. Rex was
+     apparently clipping these off in the BitBlt function. I trimmed
+     the bitmap edges. This plus the setup clipping resulted in the
+     bitmap edges being clipped off in setup. I removed the reduction in
+     the BitBlt call. This makes Setup.exe and Winmaxim.exe splash screens
+     uniform.
+
+ Who: PETERJ
+ When: 31 Oct. 95
+ SW/HW Environment: Windows.
+ Symptom: Splash screen on Winmaxim.exe has white tab on right and bottom.
+	  Correcting this made bitmap clip on setup.exe.
+ Temporary Workaround: none
+ Test Procedure: Run setup and winmaxim. Observe splash screens.
+ QA Testing Passed:
+ Version: Setup 8.000.017.007
+
+
+------------------- Build 18 on 31 Oct 1995 14:14:57 ---------------------
+
+
+------------------- Build 19 on 31 Oct 1995 15:55:29 ---------------------
+
+
+------------------- Build 20 on 1 Nov 1995 9:58:29 ---------------------
+
+*  Update SETUP and MAXHELP help files and source and 1 386load.cfg change
+
+ Description:	Update all Help and source.  Also, add CDROM.SYS to 386load.cfg
+ because it locks the Pentium system in testlab and no update is available.
+
+ Who: BECKYY
+ When: 2 NOV. 95
+ SW/HW Environment: Windows/DOS
+ Symptom:
+ Temporary Workaround: none
+ Test Procedure:
+
+
+*  HotKeys, Bitmaps, Clockfix, & Toolbox position.
+
+ Description: (1) Add more HotKeys to MaxMeter, Toolbox, GoAhead & Setup.
+	      (2) Black border around QMAX.BMP (both places).
+	      (3) Fix 12/24 hr. initialization on MaxMeter.
+	      (4) Center defalut toolbox position.
+	      (5) Rex changed setup.c and setupdif.c
+
+ Who: PETERJ
+ When:	2 Nov. 95
+ SW/HW Environment: Windows
+ Symptom: Self explanatory.
+ Temporary Workaround: none
+ Test Procedure: Check all modifications listed above.
+ QA Testing Passed:
+ Version: Setup.exe 8.0.21.8, MaxMeter 8.0.21.3,
+	  Toolbox.exe 8.0.21.4 Goahead.exe 8.0.21.83
+
+
+* Allow spaces in serial numbers in setup.exe.
+
+ Description: Added the SNPackStr function from Dispatch to remove all
+     non-digits from a serial number string. Modified the decode_serialno()
+     function to call SNPackStr.
+
+ Who: PETERJ
+ When: 3 Nov. 95
+ SW/HW Environment: Windows
+ Symptom: Spaces not allowed in serial numbers.
+ Temporary Workaround: no spaces
+ Test Procedure: Input valid serial numbers with spaces.
+ QA Testing Passed:
+ Version: SETUP.EXE 8.0.21.9
+
+
+* Update IN_Q_***.HLP files and QS_*.HLP files for new version
+
+ Description: changes references to Quick/full Maximize and updated
+ Windows information to current.
+
+ Who: BECKYY
+ When: 3 Nov. 95
+ SW/HW Environment: DOS
+ Symptom: none, not a bug
+ Temporary Workaround:	 none, not a bug
+ Test Procedure:
+ QA Testing Passed:
+
+
+* Use section name if no description in multiconfig list box in uninstall.
+
+ Description: If the multiconfig section has no description, use the name
+   in the list boxes on the uninstall tab.
+
+ Who: PETERJ
+ When: 3 Nov. 95.
+ SW/HW Environment: Windows
+ Symptom: Missing multiconfig names if no description.
+ Temporary Workaround:none
+ Test Procedure: Run toolbox on a multi-config system with no descriptions
+    for the sections. Check that section names appear in listboxes.
+ QA Testing Passed:
+ Version: toolbox.exe 8.0.21.5
+
+
+------------------- Build 21 on 3 Nov 1995 13:35:53 ---------------------
+
+
+------------------- Build 22 on 3 Nov 1995 15:53:39 ---------------------
+
+* Changes and fixes to Windows Maximize operations, part 3
+
+ Description:
+	Under certain circumstances we did not make it back into
+	Windows to run Winmaxim /summary at the end of Maximize
+	(winmaxim /summary is where we display the results).  MAXHELP.HLP
+	is now hooked up properly to Winmaxim.exe.
+ Who: HENRY
+ When: 4 Nov 95.
+ SW/HW Environment: Starting Maximize from Windows via WinMaxim.
+ Symptom: Varies; on some systems, we never make it back into
+	Windows for the summary.  This happens easily on Win95 systems
+	only coincidentally; to reproduce the problem, remove all
+	TSRs and UMB allocators from autoexec.bat.
+ Temporary Workaround: Run Winmaxim /summary from the DOS prompt.
+ Test Procedure: 1. Remove all TSRs and UMB allocators from autoexec,
+	both in Win95 and non-Win95 environments.  Verify that everything
+	works as expected and the summary is properly displayed when
+	Maximize is done.  2. Create a startup environment where the
+	first and last resident programs or UMB allocators are in batch
+	files other than autoexec.bat.	3. Also create a startup
+	environment where windows is started from autoexec.bat and from
+	a batch file called from autoexec.
+ QA Testing Passed:
+ Version: WinMaxim 8.0.23.004; Maximize 8.0.006
+
+
+* Use toolbox icon on task list.
+
+ Description: Register a class for the main dialogs in Toolbox to allow
+     us to specify the icon to be used on the taskbar.
+
+ Who: PETERJ
+ When: 6 Nov. 95
+ SW/HW Environment: Windows
+ Symptom: Icon on tasklist for Toolbox is MS Windows icon.
+ Temporary Workaround: none.
+ Test Procedure: Run Toolbox.exe. Use alt-tab to switch tasks. Icon for
+	 toolbox should be toolbox icon (hammer) not Windows window flag.
+
+ QA Testing Passed:
+ Version: Toolbox.exe 8.0.23.6
+
+
+* Put 386disk.sys, 386load.com and 386load.sys in IOS.INI
+
+ Description: Add the following lines to IOS.INI to tell Windows95
+	that these files are safe, to avoid trapping int21s and
+	to permit 386disk.sys as a pseudo disk drive.
+	Added to IOS.INI:
+	    386Load.com ; Qualitas Memory Manager
+	    386Load.sys ; Qualitas Memory Manager
+	    386Disk.sys, NON_DISK   ; Qualitas RAM Drive
+
+ Who: PETERJ
+ When: 7 Nov. 95
+ SW/HW Environment: Windows95.
+ Symptom: NAB
+ Temporary Workaround: Edit IOS.INI and add the lines given above.
+ Test Procedure: Install into Windows 95 and check IOS.INI in the
+     Windows sub-dir for the addition of the lines given above. Install
+     386disk.sys and try to access it.
+ QA Testing Passed:
+ Version: Setup.exe 8.0.23.10
+
+
+------------------- Build 23 on 7 Nov 1995 18:43:43 ---------------------
+
+
+------------------- Build 24 on 8 Nov 1995 11:24:46 ---------------------
+
+* Fix Interrupt Bug
+
+ Description:  Although our INT 21h handler should be able to assume
+	       that it's called with interrupts disabled, we all know
+	       that that's not the real world.  Alas, we have been
+	       bitten by this problem again and need to take on
+	       additional body armor.
+
+	       A customer reported a problem with this when executing
+	       a real-time OS with DOS calls occurring within HW ints.
+	       See message from Christos re Dan Geballe from Universal
+	       Avionics.
+
+	       At the same time, I deleted some old code which
+	       supported 386MAX LOADHIGH and LOADLOW which we no
+	       longer use, thus lessening our high DOS memory
+	       footprint by about 60 bytes.
+ Who:  BOB
+ When:	8 Nov 95.
+ SW/HW Environment:  All.
+ Symptom:  System crash at an obscure time.
+ Temporary Workaround:	None.
+ Test Procedure:  See the customer.
+ QA Testing Passed:
+ Version:  386MAX 8.00.039
+
+
+* Check Usage count on Stripmgr.exe and continue when it's done.
+
+ Description: (1) Stripmgr runs so fast on some systems that it finishes
+     before the toolhelp.dll notify callback set to trap completion is
+     installed. It then gets installed and waits forever for the notification.
+     (2) It was decided for now to simply trap the "Sharing error", which seems
+     to occur on re-installs, and rely on the error messages in our programs
+     if a real error occurs. (3) Increased serial number buffer in setup to
+     allow for storage and retrieval of serial numbers with a few spaces.
+
+ Who: PETERJ
+ When: 8 Nov. 95
+ SW/HW Environment: Windows.
+ Symptom: (1) Setup freezes on "Removing memory managers from Autoexec.bat
+	  and config.sys" dialog. (2) "Sharing error on drive c:" error
+	  during install or uninstall. (3) Serial number truncation when
+	  numbers are stored with spaces.
+ Temporary Workaround: None
+ Test Procedure: (1) On a system where previous versions failed, install
+     Max 8. (2) Install, re-install, uninstall. Watch for the errors.
+     (3) Input serial numbers with spaces, as 800 1010 200 80. On re-install,
+     watch numbers in registration box.
+ QA Testing Passed:
+ Version: Setup.exe 8.0.025.011, toolbox.exe 8.0.025.007
+
+
+------------------- Build 25 on 8 Nov 1995 15:41:39 ---------------------
+
+
+* Write options to Maximize.ini
+
+ Description: Set options in [Defaults] section of maximize.ini.
+    Set Custom=0 ( forces express maximize ). Other options set
+    are ROMSrch, VGASwap and ExtraDOS.
+    Addendum: Wait for stripmgr to finish before moving on and
+	      move evap call to very end of the program.
+
+ Who: PETERJ
+ When: 11 Nov. 95
+ SW/HW Environment: Windows
+ Symptom: Options not set when toolbox calls maximize.
+ Temporary Workaround: select options in maximize.
+ Test Procedure: Use toolbox.exe to set options that require maximize.
+     Maximize should be invoked and should not repeat the options dialog.
+ QA Testing Passed:
+ Version: 8.0.026.8
+
+
+------------------- Build 26 on 9 Nov 1995 14:15:51 ---------------------
+
+
+------------------- Build 27 on 9 Nov 1995 16:50:32 ---------------------
+
+* Fix bugs in 386max.pro updating and change display.
+
+ Description:  (1) Move bluemax strip code to after save old. (2) Alter
+     ModifyMaxPro to deal with multiple sections in 386max.pro with
+     the same name. (3) Alter ModifyMaxPro to deal with partial matches,
+     to remove fields with numeric trailers (i.e. FRAME=E000 ). (4)
+     Change File read to size of file only. (5) Arrange for one more
+     call to Resync() after end of old file in Diff(), to catch adds at
+     the end of file 1.
+
+ Who: PETERJ
+ When: 10 Nov. 95
+ SW/HW Environment: Windows
+ Symptom: (1) Files altered before save. (2) 386max.pro updates in wrong
+     section. (3) Can't remove FRAME= or EMS= where trailer is unknown.
+     (4) Safety. (5) Display of files incorrect if adds were last in file.
+ Temporary Workaround: Ignore display and edit files.
+ Test Procedure: Test multiconfig update and file changes display against
+     files viewed with an editor.
+ QA Testing Passed:
+ Version: Setup.exe 8.0.28.12
+
+* Handle more cases where we didn't make it up to Windows for Maximize summary
+
+ Description:
+	See Environment, Symptom, and Workaround sections, or better
+	yet see WMaxSumm.doc.
+ Who: HENRY
+ When: 10 Nov 95.
+ SW/HW Environment: 1. Nothing resident in autoexec.bat and no UMB
+	allocators (this is fairly common in Win95).  2. BATPROC.UMB
+	present in MAXIMIZE.OUT (this may happen with alternate command
+	processors, also apparently with Win95 DriveSpace).  3. Unreferenced
+	gotos or one-way chain calls to batch files in autoexec.bat
+	(batch file calls which don't return because "call" wasn't
+	used).	4. WIN.COM is not in the PATH and is not in one of
+	the few directories we checked previously.  5. WIN.COM is
+	called from AUTOEXEC and is followed by other statements
+	which need to be executed.  6. QMT.EXE or RAMEXAM.EXE is
+	the first statement in AUTOEXEC.BAT.  7. WinMaxim allows
+	one to type in a bogus MultiConfig name or none at all
+	and doesn't complain, though Maximize won't work.  8. No
+	MultiConfig.  9. All.
+ Symptom: 1-3. Final summary doesn't display  4. WINMAXIM.EXE is unable
+	to start Windows.  5. After successfully invoking Winmaxim /summary
+	from AUTOEXEC.BAT, execution of AUTOEXEC goes awry (possibly
+	skipping a following goto and acting quite strange).  6.  Same as
+	1-3 if QMT is the very _first_ line; if near the top, Winmaxim
+	/summary is run before QMT, which is also undesirable.	7. Maximize
+	won't run.  Even if a valid section name is typed in (not a
+	description, which will work) Maximize won't run.  8. WinMaxim
+	tells you Max is not installed (although it is).  9. Clicking
+	on background screen in Winmaxim /summary causes summary dialog
+	to disappear, also some programs that startup do this.	Also
+	fixed some visual stuff in dialogs.
+ Temporary Workaround: 1-3. Run Winmaxim /summary from the DOS prompt.
+	4. Add the directory containing WIN.COM to the path.  5. Add
+	several REM ---------------------------- statements after the
+	WIN.COM in AUTOEXEC.BAT.  6. None.  7. Don't do that.  Pick
+	a section from the list.  8. Set up a MultiConfig section.
+	9. Don't do that, or alt-tab back to the dialog.
+ Test Procedure: See Environment and Symptom.
+ QA Testing Passed:
+ Version: Maximize 8.0.007; Winmxmz 8.0.28.005
+
+
+------------------- Build 28 on 10 Nov 1995 18:21:48 ---------------------
+
+* Handle reboot for Maximize phase I from another memory manager's VM
+
+ Description:
+	We now handle the case where MAX is not active.  Unfortunately
+	there's no clean way to distinguish between real mode (just
+	HIMEM) and another memory manager from within Windows.	So
+	we let Maximize figure out which it is.  This TWT also fixes
+	a problem with not being able to view help on the Summary
+	dialog.
+ Who: HENRY
+ When: 11 Nov 95.
+ SW/HW Environment: Maximizing a section with MAX installed (possibly
+	the current one) but another memory manager is still active.
+ Symptom: Maximize bombs out.
+ Temporary Workaround: Reboot before starting Winmaxim.
+ Test Procedure: Boot under a Multiconfig section with Himem.
+	Run Winmaxim on a section with MAX installed.  Do the same
+	with EMM386, QEMM, and Netroom.
+ QA Testing Passed:
+ Version: Maximize 8.0.8; Winmaxim 8.0.29.006
+
+
+
+------------------- Build 29 on 11 Nov 1995 8:50:00 ---------------------
+
+
+------------------- Build 30 on 11 Nov 1995 15:12:17 ---------------------
+
+* More Winmaxim changes
+
+ Description:
+	Some minor changes, as well as a build fix for the 386LOAD version
+	(previously only the beta version was generated).  We no longer
+	add Winmaxim before QMT without the .exe.  This also fixes the
+	problem on some systems where the DOS truename function fails
+	under Windows.
+ Who: HENRY
+ When: 11 Nov 95.
+ SW/HW Environment: All.
+ Symptom: See WINMAX4.DOC.
+ Temporary Workaround: See WINMAX4.DOC.
+ Test Procedure: See WINMAX4.DOC
+ QA Testing Passed:
+ Version: WinMxmz 8.0.31.007; Maximize 8.0.009; 386LOAD, build 31 (no delete
+	needed for retail)
+
+
+------------------- Build 31 on 11 Nov 1995 20:29:42 ---------------------
+------------------------- Release candidate 1 ----------------------------
+
+* Fix old STRIPMGR bug with no SHELL= statement in CONFIG.SYS
+
+ Description:
+	If CONFIG.SYS has no SHELL= statement (or if MultiConfig,
+	the active section has no SHELL= statement) STRIPMGR (since
+	about version 6.03) would fail to process AUTOEXEC.BAT.
+ Who: HENRY
+ When: 13 Nov 95.
+ SW/HW Environment: No SHELL= statement in CONFIG.SYS (or none
+	in active part of CONFIG.SYS).
+ Symptom: AUTOEXEC.BAT is not processed at all.
+ Temporary Workaround: Add SHELL=c:\dos\command.com /e:256 /p
+	to CONFIG.SYS.
+ Test Procedure: REM any SHELL= statement from CONFIG.SYS and
+	run STRIPMGR /S with at least one 386LOAD / LOADHI statement
+	in AUTOEXEC.BAT.  Verify that statements are properly stripped
+	from AUTOEXEC.BAT.  Try this in a MultiConfig environment
+	also where there are SHELL= statements in CONFIG.SYS but none
+	in the active section.
+ QA Testing Passed:
+ Version: STRIPMGR 1.39
+
+
+
+------------------- Build 32 on 14 Nov 1995 11:48:35 ---------------------
+
+
+------------------- Build 33 on 14 Nov 1995 14:52:12 ---------------------
+****************************************************************************
+			Qualitas Max 8 Release version
+****************************************************************************
+
+
+* Post-8.0 ( d-id 330 ) Add fonts to Maxmeter ( 486 ) Fix Sharing Error.
+
+ Description: ( d-id 330 ) Add the capability to select fonts to Maxmeter.
+	      ( d-id 486 ) Fix Setup sharing violation. There was no test
+	      around the code copying goahead.drv or version checking
+	      ctl3dv2.dll. I added a test requiring program installation be
+	      enabled (checked) before the copying takes place. This will
+	      still not eliminate the problem on 8.1 upgrades caused by
+	      GoAhead running or by another program having ctl3dv2.dll loaded
+	      at install time.
+ Who: PETERJ
+ When: 21 Nov. 95
+ SW/HW Environment: Windows.
+ Symptom: (330) No font selection.
+	  (486) Sharing error when Setup is run from hard drive after initial
+	  installation, when GoAhead or other ctl3dv2 programs are active.
+ Temporary Workaround: (330) None. (486) Unload all other programs and
+	  GoAhead.drv before attempting to run Setup.exe.
+ Test Procedure: (330) try different fonts with Maxmeter.
+		 (486) Run setup from the program group after installation.
+		       Un-check Add Programs. Continue and watch for Sharing
+		       violaion errors.
+ QA Testing Passed:
+ Version: Setup.exe 8.1.1.14, Maxmeter.exe 8.1.1.5  ( or build 34 )
+
+* Emulate Additional PnP Functions
+
+ Description:  A new addition to the PnP spec has come out in the
+	       guise of a BIOS Boot Specification from COMPAQ,
+	       Phoenix, and Intel which defines seven new functions.
+	       This TWT implements our emulation of those functions.
+
+	       At the same time, I cleaned up the emulation code for
+	       the previous functions so as to use an extension struc
+	       for the variable arguments which are defined per
+	       function.
+
+	       Also, these tests are included in ROMSRCH (and
+	       TESTPNP).
+ Who:  BOB
+ When:	21 Nov 95.
+ SW/HW Environment:  PnP BIOSes not as yet released.
+ Symptom:  None, it's not a bug.
+ Temporary Workaround:	None, it's not a bug.
+ Test Procedure:  None, as we don't have access to any BIOS which
+		  supports these new functions.
+ QA Testing Passed:
+ Version:  386MAX 8.00.041, ROMSRCH 8.00.004
+
+* Fix Bug In PnP Emulation
+
+ Description:  In the original implementation of our PnP support, I
+	       mistakenly emulated functions 42h and 43h (Get/Set ESCD
+	       Data) as passing data in the format of Far, Far,
+	       Selector whereas the correct format is Far, Selector.
+	       This TWT fixes that.
+ Who:  BOB
+ When:	27 Nov 95.
+ SW/HW Environment:  PnP BIOSes which use the Get/Set ESCD calls.
+ Symptom:  System crash when running ROMSRCH.
+ Temporary Workaround:	Use NOPNP in 386MAX profile.
+ Test Procedure:  On such a system run ROMSRCH before and after.
+ QA Testing Passed:
+ Version:  386MAX 8.00.042
+
+
+------------------- Build 34 on 27 Nov 1995 11:52:30 ---------------------
+
+* Fix print function. Print more than one file. Save setup.
+
+ Description: The PrintDlg function was failing the second time because
+     the devmode and devname handles were being freed but the variables
+     were not being cleared to zero. On second thought, moved the freeing
+     to the program exit so changes made in Printer Setup are remembered
+     and you don't have to do a setup before printing each and every file.
+
+ Who: PETERJ
+ When: 27 Nov. 95
+ SW/HW Environment: Windows.
+ Symptom: Con only print one time / one file from maxedit.
+ Temporary Workaround: Exit program and restart to print next file.
+ Test Procedure: Print all files from maxedit.
+ QA Testing Passed:
+ Version: Maxedit.exe 8.1.1.003 ( or 8.0.35.003 )
+
+
+
+------------------- Build 35 on 27 Nov 1995 15:54:35 ---------------------
+
+* Change Quick and Full to Express and Custom.
+
+ Description: Change the text, hot-keys and option switches for max.exe
+     to call Maximize in express or custom mode.
+
+ Who: PETERJ
+ When: 28 Nov. 95
+ SW/HW Environment: All
+ Symptom: Menu entrys say Quick and Full. Option switches incorrect, causes
+     exec of maximize to fail.
+ Temporary Workaround: Run maximize from command prompt.
+ Test Procedure:Run maximize from max.exe
+ QA Testing Passed:
+ Version: 8.0.36.002
+------------------- Build 36 on 28 Nov 1995 13:21:13 ---------------------
+===========================================================================
+Proposed MAX 8.00a build for release candidate (which we elected not to release)
+===========================================================================
+
+
+* MAXEdit.exe Destroy the drawing objects when closing.
+
+ Description: Delete the brush and pen objects on exit.
+
+ Who: PETERJ
+ When: 28 Nov 95.
+ SW/HW Environment: Windows.
+ Symptom: Resource leak. GDI decreases on multiple use.
+ Temporary Workaround: Restart Windows when out of GDI resources.
+ Test Procedure: Start MAXmeter. Open MAXEdit many times. NOTE memory changes.
+ QA Testing Passed:
+ Version: 8.0.37.004
+
+* Out of sync with version control lost Bob's fixes v1.31 and v1.32
+
+ Description: File size changes and brackets around else for if (bEMS);
+
+ Who: PETERJ
+ When: 1 Dec. 95
+ SW/HW Environment: Windows
+ Symptom: Program sizes wrong.
+	  EMS=0 parameters always entered into 386max.pro.
+ Temporary Workaround: Set EMS with toolbox.
+ Test Procedure: Set EMS=1 with Setup. Check 386max.pro for EMS=0.
+ QA Testing Passed:
+ Version: setup.exe 8.0.37.15
+
+* Use Another Memory Function Call To Get Extended Memory
+
+ Description:  If the BIOS supports it, there's another function which
+	       returns the size of extended memory in kilobytes, this
+	       time handling > 64 MB.
+
+	       Also, this method is put in ahead of the previous one
+	       (which uses INT 15h/DA88) because we've found that
+	       Phoenix BIOSes v4.04 lockup when that call is made.
+
+	       At the same time, I found a longtime bug which occurs
+	       when we time memory.  Actually, there were two bugs.
+	       The first one found was that if we mistakenly calculate
+	       a value for LMLTOP which is too small, we can calculate
+	       a starting address for the program which is below
+	       1.1MB, the minimum starting address.  This bug is
+	       corrected in CALC_SIZE in QMAX_SIZ.ASM.	The other bug
+	       is that we aren't comparing the various timing values
+	       correctly, and thus can calculate a value for LMLTOP
+	       which is too small.  This bug is corrected in
+	       TIME_ALLMEM in QMAX_TIM.ASM.
+
+	       While debugging the above memory timing bug, I needed
+	       to slow down the CPD message display when in PM, so I
+	       changed it such that every such display (PM only) is
+	       forced to pause after each line.  The PM context is
+	       more likely to go poof, so this allows us to identify
+	       the last line displayed.
+ Who:  BOB
+ When:	4 Dec 95
+ SW/HW Environment:  Systems with > 64MB
+ Symptom:  1.  Systems with > 64MB recognize 1st 64MB only.
+	   2.  On systems with Phoenix BIOS v4.04, lockup at copyright
+	       message.
+	   3.  Certain other system lockups or reboots at the
+	       copyright line because of the bug when calculating
+	       timing values.
+ Temporary Workaround:	Use PHXBUG.SYS driver.
+ Test Procedure:  1.  On a system with > 64MB, see if we now recognize
+		      all of the memory.
+		  2.  On a system with Phoenix BIOS v4.04, see if
+		      don't lockup anymore.
+		  3.  On my Gateway P5-90, run MAX with RM Device SWAT
+		      installed (this seems to takes up enough ext
+		      memory to trigger the problem).
+ QA Testing Passed:
+ Version:  Qualitas MAX 8.00.043
+
+* Skip Using PnP RM Data Segment in First Megabyte If >= E000
+
+ Description:  On some PnP BIOS systems (such as Gateways with an AMI
+	       BIOS) the PnP RM data segment is at ED00.  With a
+	       simple change to an equate, the previous code will
+	       create additional PTEs for the PnP BIOS in extended
+	       memory such that the RM data segment is addressible
+	       from PM as extended memory rather than memory in the
+	       first megabyte.
+
+	       Everything else just follows from the equate change
+	       because I had previously encountered PnP BIOSes with a
+	       RM data segment at F000 and took care to allow that to
+	       be addressed from PM in extended memory (because the
+	       BIOS code was already there).
+
+	       This means that the data block (on the systems I've
+	       tested it's marked as a 4KB ROM at ED00) can be
+	       overwritten with a USE= statement.  I have not as yet
+	       verified that that region isn't used for anything else,
+	       so we'll have to wait for a later TWT before
+	       automatically inserting a USE= statement.
+ Who:  BOB
+ When:	4 Dec 95
+ SW/HW Environment:  PnP systems with oddly placed RM data segment.
+ Symptom:  There's a ROM in my soup!
+ Temporary Workaround:	None.
+ Test Procedure:  On such a system (Gateway's are a good test bed),
+		  run before and after with a USE= covering the ROM
+		  in the after case.
+ QA Testing Passed:
+ Version:  Qualitas MAX 8.00.044
+
+*
+ Description:  Add EIDE2300.SYS for Promise EIDE controller to SETUPDOS.CFG
+ Who:  BECKYY
+ When:	    12/7/95
+ SW/HW Environment:
+ Symptom:
+ Temporary Workaround:
+ Test Procedure:
+ QA Testing Passed:
+ Version:
+
+
+------------------- Build 1 on 14 Dec 1995 14:28:27 ---------------------
+
+
+* SETUP.EXE - Sharing violation code. Strip Strings.
+
+ Description: Implement a scheme to get around Windows not allowing
+     updates to files while they are in use. We make a temp directory
+     under the \qmax directory and put the files there, along with a
+     batch file to copy them to the proper place. We then extract a
+     DOS program, CLEAN.EXE, stored in Setup.exe as a resource, load
+     Setup.exe into the startup group with a /C parameter ( to continue),
+     call ExitWindowsExec which execs CLEAN.EXE, which runs the batch
+     file, removes the directory and removes itself. Control returns to
+     Windows and Setup is run. Setup continues at the "Maximize?" dialog.
+     I also extracted all strings to a messages.h file for later translation.
+
+ Who: PETERJ
+ When: 13 Dec. 95
+ SW/HW Environment: Windows
+ Symptom: Sharing Violation crash when updating Max 8.0. Usually caused by
+	  trying to copy over CTL3DV2.DLL or GOAHEAD.DRV while they are active.
+ Temporary Workaround: Hand copy from DOS.
+ Test Procedure: Tricky. Install newer versions of CTL3DV2.DLL or GOAHEAD.DRV
+	  over older copies. You may need to change the version numbers in the
+	  DLL in order to test the version updating.
+ QA Testing Passed:
+ Version: 8.01.2.16
+
+
+* Move strings to a central location.
+
+ Description: (1) Remove all strings from Windows progam's inline source and
+     move to include files as defines, stringtables, or variable initializers.
+     (2) Remove the help button from the Conflict Dialog in Toolbox.
+     (3) Use Depscan dependencies in makefiles.
+
+ Who: PETERJ
+ When: 15 Dec. 95
+ SW/HW Environment: Windows.
+ Symptom:NAB
+ Temporary Workaround:NAB
+ Test Procedure: Verify text in all programs.
+ QA Testing Passed:
+ Version: QPIFEDIT 8.01.2.2, MAXCTRL 8.01.2.9,
+	  MAXEDIT 8.01.2.5,  MAXMETER 8.01.2.6
+
+
+* TOOLBOX.EXE range fix on USE= RAM= overlap
+
+ Description: If you attempt to set contiguous memory blocks in USE= and
+     RAM= statements (i.e. USE=EC00-F000 & RAM=F000-F200 ), the program
+     will fail on the F000 overlap. Also discovered while fixing the
+     initial complaint, It would also fail if the RAM= endpoint was
+     greater than the USE= startpoint but not greater than the USE=
+     endpoint.
+
+ Who: PETERJ
+ When: 18 Dec. 95
+ SW/HW Environment: Windows
+ Symptom: Cannot set contiguous start and end points.
+ Temporary Workaround: Manual edit of 386max.pro.
+ Test Procedure: Set contiguous memory blocks and check that the conflicting
+		 memory dialog does not appear.
+ QA Testing Passed
+ Version: MAXCTRL 8.01.2.10
+
+* Reduce Disk Activity When Displaying Low DOS Memory
+
+ Description:  If MAXMETER is displaying low DOS memory through
+	       GoAhead, it opens and closes the driver every time it
+	       references the driver which generates a lot of extra
+	       disk activity, especially noticeable if there's no disk
+	       cache.
+
+	       This TWT fixes that by opening the driver once at the
+	       beginning of the program (in InitInstance), and closes
+	       it once (in response to WM_CLOSE).  The global variable
+	       hDriver contains the driver handle.
+ Who:  BOB
+ When:	18 Dec 95.
+ SW/HW Environment:  Windows running MAXMETER along with GOAHEAD.DRV.
+ Symptom:  Every two seconds, MAXMETER hits the disk.
+ Temporary Workaround:	Either use a disk cache or get earplugs.
+ Test Procedure:  Without a disk cache, run it before and after
+		  checking for disk activity every two seconds.
+ QA Testing Passed:
+ Version:  MAXMETER 8.01.007
+
+* Enable The Apply Button When A Change Is Made In DOSMAX Memory Tab
+
+ Description:  Because of an oversight, I didn't send a message to the
+	       dialog's parent when a change is made on the DOSMAX
+	       memory tab.  Now we do.
+ Who:  BOB
+ When:	18 Dec 95.
+ SW/HW Environment:  Win95 with DOSMAX enabled.
+ Symptom:  When a change is made in the DOSMAX memory tab, the Apply
+	   button is not enabled.
+ Temporary Workaround:	Click on OK, instead.
+ Test Procedure:  Try before and after, noting the above change in
+		  behavior.
+ QA Testing Passed:
+ Version:
+
+* Merge BCF Files Into DISK Generation
+
+ Description:  Now that we've merged BlueMAX into Qualitas MAX, we
+	       need to generate the disks with BCF files.  These files
+	       are put into a separate subdirectory called BCF\ on
+	       disk #2.
+ Who:  BOB
+ When:	27 Dec 95.
+ SW/HW Environment:  All.
+ Symptom:  BCF file now included on distribution disks.
+ Temporary Workaround:	None, it's not a bug.
+ Test Procedure:  Run it and see for yourself.
+ QA Testing Passed:
+ Version: Qualitas Max 8, build 2
+
+* Split QMAX_I31.ASM again
+
+ Description:
+	To work around limitations of the feeble MASM, once again more code
+	from QMAX_I31.ASM is split off into a new module (QMAX_O31.ASM).
+	This should have no effect on the final product (386MAX.SYS).
+ Who: HENRY
+ When: 27 Dec 95.
+ SW/HW Environment: All.
+ Symptom: Build fails with odd errors.	Restarting does no good.
+	Problem is worse when running top-level makefile or in low memory
+	conditions.
+ Temporary Workaround: Exit to DOS, run nmake /n @..\max.mrf >foo.bat
+	then execute foo.bat.  This doesn't work perfectly as errors won't
+	cause the batch file to terminate.
+ Test Procedure: Run GET DEL BUILD on the QA build machine.
+ QA Testing Passed:
+ Version: Qualitas MAX 8.01.002
+
+* Add code to get BIOS data and CRC under Windows
+
+ Description:
+	This new code allows the Windows SETUP.EXE for MAX 8
+	to determine whether the machine supports BIOS compression
+	and if so, what is the BIOS CRC.
+ Who: HENRY
+ When: 28 Dec 95.
+ SW/HW Environment: Any MicroChannel machine or IBM 386 or
+	higher.
+ Symptom: NAB
+ Temporary Workaround: NAB
+ Test Procedure: Run DPMICTST.EXE on various machines:
+	1. Non-IBM, non-MCA
+	2. Non-IBM MCA
+	3. IBM non-MCA
+	4. IBM MCA
+ QA Testing Passed:
+ Version: Max 8.01, build 2
+
+* Workaround Bug In Some IBM Value Point BIOSes
+
+ Description:  During normal processing of ROMSRCH, we exercise the
+	       NMI interrupt 02h.  The response to this software
+	       interrupt on some IBM Value Point systems is to display
+	       a message "Unexpected type 02 interrupt" and CLI/HLT
+	       which stops the processor dead in its tracks.
+
+	       Because HLT is a privileged instruction, it actually
+	       signals a GP Fault when executed in VM, so we have a
+	       means by which we can overcome this rude behavior.  In
+	       particular, we can tell 386MAX.SYS to reflect the
+	       CLI/HLT to VM as an INT 02h at which point our handler
+	       takes over and continues execution as if nothing
+	       happened.
+
+	       At the same time, I restricted the behavior of PnP
+	       testing so as to exercise the event notification
+	       functions only if that feature is supported.
+
+	       Also, I removed the separate version number from
+	       ROMSRCH so that it now tracks the version number of
+	       386MAX.
+ Who:  BOB
+ When:	2 Jan 96
+ SW/HW Environment:  Some IBM Value Point systems.
+ Symptom:  ROMSRCH stops on INT 02h.
+ Temporary Workaround:	Use /I02.
+ Test Procedure:  On an offending IBM Value Point, run before and
+		  after.  Nick knows of a customer or two.
+ QA Testing Passed:
+ Version:  ROMSRCH 8.01.005
+
+* Merge BlueMAX Into Qualitas MAX
+
+ Description:  The DOS setup program needs to include BlueMAX
+	       capabilities as part of Qualitas MAX instead of as a
+	       separate compile-time option.  For the most part, this
+	       means ensuring that REDUIT is set to 1, and copying the
+	       appropriate BCF file to the hard disk.
+
+	       Also, because the BCF files are present on Disk #2 in
+	       unpackaged form, we no longer copy them all to the hard
+	       disk (and then optionally delete all but the one we're
+	       going to use).
+
+	       If the current memory manager is not 386MAX, we need to
+	       use the VCPI form of entering PM in order to calculate
+	       the BIOS CRC.
+
+	       Finally, we fix a bug where we do not properly
+	       calculate whether or not there's a valid previous
+	       installation.  The proper way is to ensure that we have
+	       one file from either a valid 386MAX or BlueMAX
+	       installation for each of three categories (the device
+	       driver, the 386UTIL.COM, and 386LOAD.COM).  Previously,
+	       we had the inner and outer loops reversed.  Along with
+	       this, we mistakenly copy a previous installation's
+	       serial # as the new serial #, and if the new serial #
+	       displays on two line, the checksum becomes invalid and
+	       the user is told to run the install program again
+	       (which, of course, perpetuates the same mistake).
+ Who:  BOB
+ When:	2 Jan 96
+ SW/HW Environment:  BlueMAX
+ Symptom:  None, it's not a bug.
+ Temporary Workaround:	None, it's not a bug.
+ Test Procedure:  Run as usual on both BlueMAX and non-BlueMAX
+		  systems.
+ QA Testing Passed:
+ Version:  SETUPDOS.OVL 8.01.002
+
+* Add BCF support to SETUP.EXE
+
+ Description:
+	SETUP.EXE now recognizes and extracts the appropriate BCF file.
+	The previous behaviors of 1) always removing and re-inserting
+	386MAX.SYS and 2) always stripping all 386LOAD lines have been
+	removed.  We will only strip other memory managers' load high
+	lines.	We also now insert ourselves when there are no other
+	DEVICE= lines in CONFIG.SYS (as may be the case with Win95).
+ Who: HENRY
+ When: 4 Jan 96.
+ SW/HW Environment: All; machines supporting BIOS compression.
+ Symptom: All 386LOAD statements are stripped; 386MAX.SYS is removed
+	then re-added to CONFIG.SYS if it already exists.
+ Temporary Workaround: None.
+ Test Procedure: On a system with an existing 386MAX.SYS or BlueMAX.SYS
+	(test with both) make sure another device driver is present before
+	MAX.  Verify that SETUP doesn't relocate 386MAX.SYS.  In the BlueMAX
+	case Bluemax.sys should be changed to 386max.sys.  The existing
+	profile should always be recognized.  Run SETUP on machine(s)
+	supporting BIOS compression and verify that the correct BCF is
+	extracted, in Windows 3.1x, Win95, and with other memory managers.
+	Test problems with and without MultiConfig (make sure the MultiConfig
+	environment is complex).
+ QA Testing Passed:
+ Version: SETUP 8.01.2.017
+
+
+* Setup.exe - Fix backup routines to only backup when not identical d/t.
+
+ Description: Changed the backup scheme in the Windows Setup program so
+     that only files with the same name but a different date and time are
+     moved to the backup directory. Directories with sequential extensions
+     are created in the event of multiple install instances. Also moved
+     some additional strings to the messages.h file for translation.
+
+ Who: PETERJ
+ When: 5 Jan. 1996
+ SW/HW Environment: Windows
+ Symptom: Complete MAX directory was copied to backup dir every installation.
+     Second installation would overwrite first backup.
+ Temporary Workaround: none.
+ Test Procedure: Install over an older version. Verify proper files
+     are written to the backup dir. Abort an installation and ensure that
+     the backed up files are properly restored.
+ QA Testing Passed:
+ Version: SETUP 8.01.2.018
+
+
+*  Add Revised Windows MAXHELP files for 8.01 which include Bios Compression
+   info and corrections
+
+ Description:  Logged in a new MAXHELP.DOC, MAXHELP.RTF, and MAXHELP.HPJ for
+	       8.01 update.  This version includes info on Bios compression
+	       and any post 8.0 corrections.
+ Who:	Becky
+ When:	1/11/96
+ SW/HW Environment:
+ Symptom:
+ Temporary Workaround:
+ Test Procedure:
+ QA Testing Passed:
+ Version:
+
+*  Changed DOS help files to correct text for serial number location and length.
+
+ Description:  The help files said the serial number was 11 digits in
+	places.  In all places it misinformed the user of the location.  This
+	is now fixed.
+ Who:  BECKYY
+ When:	1/16/96
+ SW/HW Environment:
+ Symptom:
+ Temporary Workaround:
+ Test Procedure:
+ QA Testing Passed:
+ Version:  IN_H_HLP.RUS, IN_L_HLP.RUS, MI_H_HLP.RUS, MI_S_HLP.RUS, MI_L_HLP.RUS
+
+
+* Don't load GoAhead in Win95 and other adjustments.
+
+ Description: Don't load Go Ahead in Windows95.
+	      Don't allow Toolbox to enable Go Ahead in Win95.
+	      Don't use Low DOS option in memmeter in Win95.
+	      Don't report errors for missing BCF files.
+	      Get ADF files from resource disks if DPMI_Is_MCA.
+	      Trap other "resource managers", Don't load Go Ahead.
+	      Fix Win95 trap in qpifedit.exe.
+	      Fix "Replace Bluemax with 386MAX".
+
+ Who: PETERJ
+ When: 17 Jan. 96
+ SW/HW Environment: Windows95, Win3.1
+ Symptom: Go Ahead serves no purpose in Win95 and may conflict with other
+	  resource manager programs.
+ Temporary Workaround: Don't enable Go Ahead in Win95.
+		       Don't enable Go Ahead with other resource managers.
+		       Manually replace Bluemax line with 386max.sys.
+ Test Procedure:
+ QA Testing Passed:
+ Version: maxctrl 8.01.2.11, maxmeter 8.01.2.8,
+	  maxsetup 8.01.2.19, qpifedit 8.01.2.3
+
+
+* Allow Maximize to process DOSSTART.BAT for Win95
+
+ Description:
+	When exiting Win95, one has the option of "restarting
+	computer in MS-DOS mode."  This is Microsoft doublespeak
+	for exiting Windows.  However, before returning to the
+	DOS prompt (oh, joy!) DOSSTART.BAT (living in the Windows
+	directory) is executed.  Win95 SETUP would have put
+	programs it removed from AUTOEXEC (having superseded
+	their functionality with VxDs) into DOSSTART.BAT.
+
+	One can now check a box in Win95 Winmaxim.exe to
+	do optimization on AUTOEXEC.BAT plus DOSSTART.BAT.
+	To enable this, the command line syntax for BATPROC
+	has been extended to take multiple batch files (not
+	just AUTOEXEC) and Maximize now takes a new /O option
+	with one or more batch file paths as arguments.
+ Who: HENRY
+ When: 23 Jan 96
+ SW/HW Environment: Win95, though the /O option to Maximize
+	works in any DOS / Windows version.
+ Symptom: It is not possible to load programs in DOSSTART.BAT
+	high without doing it manually.
+ Temporary Workaround: Put 386load getsize prog= in front of
+	lines in DOSSTART.BAT, reboot, exit Win95 to DOS, 386util/sid,
+	... in other words, load high manually.
+ Test Procedure: On a Win95 system, verify that one or more
+	resident programs are loaded low in DOSSTART.BAT.  Run
+	Winmaxim, select Custom, and check the box to Maximize
+	DOSStart.  Verify that programs in DOSSTART are listed
+	at the end of Maximize as loaded high or left low.
+	Rename DOSSTART.BAT and re-run Winmaxim.  In the Custom
+	Options dialog, verify that the Maximize DOSStart check
+	box is greyed out.
+ QA Testing Passed:
+ Version: Winmaxim 8.01.2.009, Maximize 8.01.010, Batproc 1.63
+
+------------------- Build 2 on 24 Jan 1996 13:23:50 ---------------------
+
+* Use 386MAX Version As VXD Version
+
+ Description:  Change the VxD so that it tracks the version number of
+	       386MAX.
+ Who:  BOB
+ When:	25 Jan 96
+ SW/HW Environment:  All.
+ Symptom:  None, it's not a bug.
+ Temporary Workaround:	None, it's not a bug.
+ Test Procedure:  None, it's not a bug.
+ QA Testing Passed:
+ Version:  386MAX.VXD version 8.01
+
+------------------- Build 3 on 25 Jan 1996 13:59:13 ---------------------
+
+* Add subroutines from Install.exe to Setup.exe to parse config.sys
+
+ Description: Add subroutines from Install.exe to Setup.exe to parse
+     config.sys and divide drivers in the common section into multi-config
+     sections so that they may be individually maximized. Also make startup
+     group if it does not exist, and provide for the German "Autostart"
+     instead of "Startup".
+
+ Who: PETERJ
+ When: 25 Jan. 95
+ SW/HW Environment: Windows.
+ Symptom: (1) setup.exe does not behave like install.
+	  (2) Cannot put GoAhead and MaxMeter in startup if it does not exist.
+	  (3) Ditto, if it is named Autostart.
+ Temporary Workaround: Manual editing.
+ Test Procedure: (1) Run Setup and verify proper behavior in editing config.sys.
+		 (2) delete startup group and run setup. Verify that a startup
+		     group is created and that Goahead and Maxmeter get put in.
+		 (3) Run the German version of Windows and Run Setup. Goahead
+		     and Maxmeter should be put into Autostart.
+ QA Testing Passed:
+ Version: Setup.exe 8.01.4.20
+
+
+* Use GoAhead driver to test for Resource Mgr. conflicts, etc.
+
+ Description: (1) Use GoAhead driver to test for Resource Mgr. conflicts in
+     toolbox and setup. (2) Make allowances for a startup group named AutoStart
+     in Deutch Windows (Fensters?). (3) Allow a user to ignore the request for
+     a Microchannel Reference disk in setup.
+ Who: PETERJ
+ When: 29 Jan. 1996
+ SW/HW Environment: Windows.
+ Symptom: (1) NAB. Code reduction and unification.
+	  (2) No startup functionallity in German version.
+	  (3) Cannot continue installation without a reference disk.
+
+ Temporary Workaround: (1) none. (2) Manually drag startup icons to Autostart.
+		       (3) Must use reference disk or create an ADF file on
+		       a blank disk.
+ Test Procedure:
+ QA Testing Passed:
+ Version: Setup.exe 8.01.4.21, Toolbox.exe 8.01.4.12
+
+* Fix Bug Not Closing Go Ahead Driver
+
+ Description:  If MAX Meter opens the Go Ahead driver and for some reason finds that
+	       the dirver is not usable (because it's disabled or
+	       isn't installed), MAX Meter forgets to close the
+	       driver.	This presents a problem for later programs
+	       which inquire as to Go Ahead's status (such as
+	       GOAHEAD.EXE), making them think that Go Ahead is
+	       installed.  The fix is to close the driver if MAX Meter
+	       doesn't use it.
+
+	       At the same time, I deleted the check for whether or
+	       not Go Ahead is enabled as Go Ahead can now be disabled
+	       (due to the presence of incompatible drivers), but
+	       still be functional.
+ Who:  BOB
+ When:	29 Jan 96
+ SW/HW Environment:  When MAXMETER is started without Go AHead
+		     resident.
+ Symptom:  Although Go Ahead is not resident, subsequent programs
+	   (such as GOAHEAD.EXE) think it is.
+ Temporary Workaround:	None.
+ Test Procedure:  With Go AHead not resident, start MAXMETER.EXE (it
+		  should not report on DOS resources), and then
+		  GOAHEAD.EXE (it should not think Go Ahead is
+		  installed).
+ QA Testing Passed:
+ Version:  MAXMETER 8.01.009.
+
+* Modify Priv Op Message
+
+ Description:  Change the wording.  Update the copyright date.
+
+ Who:  BOB
+ When:	29 Jan 96.
+ SW/HW Environment:  All.
+ Symptom:  None, it's not a bug.
+ Temporary Workaround:	None, it's not a bug.
+ Test Procedure:  Boot and read the new (C) date.  Use PRIVOP.COM in
+		  X:\APPS\386MAX\TESTS to test GP Faults (and thus the
+		  new message text).
+ QA Testing Passed:
+ Version:
+
+
+* Turn off Utils ( GO Ahead and MaxMeter ) before copying.
+
+ Description: Turn off Utils ( GO Ahead and MaxMeter ) before copying
+     new versions during a setup. Restart them when setup is complete
+     if the user does not reboot or restart Windows.
+ Who: PETERJ
+ When: 30 Jan. 1996
+ SW/HW Environment: Windows.
+ Symptom: "Go Ahead cannot load goahead.drv" dialog. Caused by GA's driver
+     and exe file being of different versions. The exe copy failed, because
+     the old version was still active.
+ Temporary Workaround: Turn off Go Ahead and MaxMeter before running Setup.
+ Test Procedure:
+ QA Testing Passed:
+ Version: Setup.exe 8.01.4.22
+
+* Fix Bug When Calculating CRC
+
+ Description:  When we calculate a 128 KB CRC in a system in which
+	       386MAX is not present, we use a routine which depends
+	       upon the base address of the system ROM being set to
+	       E000.  Alas, this isn't done as yet, now it is.
+
+	       Also, if the BCF file isn't found, don't whine about
+	       it.
+
+	       And finally, if there's no EMS handler (INT 67h = 0:0),
+	       install a temporary handler in case the memory manager
+	       picks off the VCPI INT 67h calls from the PM IDT.
+ Who:  BOB
+ When:	30 Jan 96
+ SW/HW Environment:  BCF system running a memory manager other than
+		     386MAX.
+ Symptom:  SETUP complains about not finding the proper BCF, or it
+	   copies the wrong BCF.
+ Temporary Workaround:	Create a dummy BCF file for it to copy.
+ Test Procedure:  On a BCF system running (say) QEMM, run SETUP.
+ QA Testing Passed:
+ Version:  SETUPDOS 8.01.003
+
+
+* Put correct dir in 386max.sys line in config.sys edit.
+
+ Description:  Put correct dir in 386max.sys line in config.sys edit. I
+     left the wrong directory entry in the device= default line added
+     to config.sys. Added another parameter to pass in the correct
+     chosen directory entry.
+
+ Who: PETERJ
+ When: 30 Jan. 1996
+ SW/HW Environment: Windows.
+ Symptom: Device=386max.sys line always points to root boot dir.
+ Temporary Workaround: Manual edit.
+ Test Procedure: Check the device=386max.sys line in config.sys after install
+     for the correct driver and profile directory.
+ QA Testing Passed:
+ Version: Setup.exe 8.01.4.23
+
+* Remove Disabling Code For BIOS Mouse Calls
+
+ Description:  In the very beginning of ROMSRCH (back when it was
+	       still called PROBE), a test was put in to skip
+	       exercising the BIOS mouse calls unless a mouse driver
+	       was present.  We have a system in the testlab for which
+	       the BIOS code for these functions is in a separate 4KB
+	       block which we mistakenly recover.  This TWT deletes
+	       the disabling code so that we now always test these
+	       functions so as to mark as much of the BIOS as in use
+	       as possible.
+ Who:  BOB
+ When:	30 Jan 96.
+ SW/HW Environment:  Systems with a PS/2-style mouse for which ROMSRCH
+		     is run without a mouse driver present, and the
+		     BIOS mouse calls are in a separate 4KB block.
+ Symptom:  ROMSRCH might mistakenly recover a 4KB block in the BIOS.
+ Temporary Workaround:	Run ROMSRCH from within Win MAXIMIZE.
+ Test Procedure:  On the B0-Step system in the testlab, ensure that
+		  the new version doesn't recover FB00.
+ QA Testing Passed:
+ Version:  ROMSRCH 8.01.006.
+
+* Handle missing AUTOEXEC.BAT and QEMM 8 syntax in STRIPMGR
+
+ Description:
+	If there is no AUTOEXEC.BAT, or if another startup
+	batch file is specified but does not exist, STRIPMGR
+	now quietly ignores it and pretends everything's OK.
+	Also, STRIPMGR now handles some syntax new to QEMM 8
+	which we did not properly strip before.
+ Who: HENRY
+ When: 1 Feb 96
+ SW/HW Environment: 1. No AUTOEXEC.BAT (more likely in Win95).
+	2. QEMM 8 LOADHI (uses /switch=value /switch2=value progname)
+ Symptom: 1. STRIPMGR says "Insert disk with "" and press any key"
+	This may not be apparent when run from SETUP as a PIF.
+	2. Line is changed from device=loadhi /foo=bar setver.exe
+	to device==bar setver.exe
+ Temporary Workaround: 1. Create an empty AUTOEXEC.BAT.  2. None
+	(remove manually).
+ Test Procedure: Rename AUTOEXEC.BAT and run STRIPMGR /S.  It should
+	not complain about the missing AUTOEXEC.  Also verify that
+	QEMM 8, MemMaker LOADHIGH / DEVICEHIGH, and 386LOAD syntax
+	is all stripped correctly.  A simple way to do this is to
+	edit STRIPMGR.LST and add the appropriate lines under MAX.
+ QA Testing Passed:
+ Version: STRIPMGR 1.40, Max 8.01 build 004
+
+* Add Plug and Play detection to ASQ
+
+ Description:
+	ASQ now reports on Plug and Play devices (using a new text
+	file PNP.TXT to get the names) as well as PCI systems and
+	CD-ROM drives.	A bug in reporting environment in high DOS
+	has also been fixed.  If no mouse driver is installed, we
+	now report on the pointing device bit in equipment flags.
+	There's a BIOS call to check for a PS/2 mouse, but it's
+	unsafe to call as ROMSRCH has not been exercising it unless
+	a mouse driver was present.  CPU speed reporting has been
+	updated and now displays CPUID information (family, model,
+	and stepping).
+ Who: HENRY
+ When: 1 Feb 96
+ SW/HW Environment: Plug and Play machines, PCI machines, any
+	machine with one or more CD-ROM drives, any machine with
+	a PS/2 mouse (i.e. hooked up to the motherboard), and
+	any machine with the master environment loaded high (via
+	ExtraDOS).
+ Symptom: Most of these are not bugs.  If the master environment
+	is loaded high it may be garbage.  If no mouse driver is
+	present we say a mouse is "not installed" which is not
+	true.
+ Temporary Workaround: None.
+ Test Procedure: Run ASQ on any combination of machines mentioned
+	under Environment.  Verify that CPU speed is reported
+	correctly, genuine Intel processors are reported correctly,
+	CPUID family (the first number, a 4, 5, or 6) makes sense,
+	CD-ROM drives make sense (none reported unless MSCDEX is
+	loaded), PCI machines are detected, and Plug and Play
+	device information makes sense.
+ QA Testing Passed:
+ Version: ASQ 8.01.002 (MAX 8.01, build 004)
+
+* Handle GoAhead When Run On US Windows With German Country Code.
+
+ Description:  Go Ahead is now sensitive to being run on US Windows
+	       with a German country code in effect.  In particular,
+	       it checks for the latter and uses "AutoStart" as the
+	       startup group name.
+ Who:  BOB
+ When:	1 Feb 96
+ SW/HW Environment:  US Windows with German country code in effect.
+ Symptom:  When uninstalling Go Ahead on such a system, GOAHEAD.EXE is
+	   not deleted from the AUTOSTART.GRP file.
+ Temporary Workaround:	Do it yourself.
+ Test Procedure:  Setup such a system and try it.
+ QA Testing Passed:
+ Version:  GOAHEAD.DRV & .EXE 8.01.145
+
+* Bump more copyright years
+
+ Description:
+	This takes care of command line help for ASQ, SNAPSHOT and MAX.EXE.
+	Some DOS-based help topics are also updated (from 1994!).
+ Who: HENRY
+ When: 1 Feb 96.
+ SW/HW Environment: All.
+ Symptom: NAB.
+ Temporary Workaround: None.
+ Test Procedure:
+ QA Testing Passed:
+ Version: MAX 8.01 build 4.
+
+
+* Misc. fixes to Setup.exe
+
+ Description: (1) Only restart GoAhead / MAXmeter if they were running before.
+	      (2) Remove USE= lines from profile if AUTOBCF is added.
+	      (3) Use Windows file functions for FileCopy.
+	      (4) Fix UpdateError dialog hot keys by adding SetFocus(hDlg).
+	      (5) Change "[intl]" to "intl" in GetProfileInt for country.
+	      (6) Backup install files and GoAhead.drv.
+	      (7) Use TabbedTextOut in Maxedit.
+
+ Who: PETERJ
+ When: 1 FEB. 1996
+ SW/HW Environment: Windows.
+ Symptom: (1) Goahead can't load driver if it was not installed.
+	  (2) USE=conflicts with AUTOBCF.
+	  (3) Possibililty of "Too many files" error. Files not copied.
+	  (4) Hot keys don't work on UpdateError dialog.
+	  (5) Cannot retrieve country code for Germany.
+	  (6) The setup files and GoAhead.drv were not put in OLDMAX.1
+	  (7) No tab expansion.
+
+ Temporary Workaround:
+	  (1) Restart Windows.
+	  (2) Manual edit of 386max.pro to remove USE= statements.
+	  (3) Close all other programs before installation.
+	  (4) Use mouse.
+	  (5) None.
+	  (6) Manual backup before install.
+	  (7) None.
+
+ Test Procedure:  (1) Install with GoAhead running and not running.
+		      The state of GoAhead should be the same as when
+		      the installation began.
+		  (2) Install into a BCF system with USE= statements in
+		      386max.pro. Setup should remove these statements.
+		  (3) Install and ensure all files are copied.
+		  (4) Install Update version on a clean system (no MAX)
+		      Check hot keys on update error dialog.
+		  (5) Test on German version of Windows for proper installation
+		      into Autostart group ( instead of Startup ).
+		  (6) Install over 8.0 and ensure that the setup files and
+		      Goahead.drv are put into oldmax.1.
+		  (7) Print document with tabs and check expansion.
+
+ QA Testing Passed:
+ Version: Setup.exe 8.01.4.24, Maxedit.exe 8.01.4.6
+
+
+------------------- Build 2 on 1 Feb 1996 13:19:59 ---------------------
+
+
+------------------- Build 3 on 1 Feb 1996 16:23:07 ---------------------
+
+
+------------------- Build 4 on 2 Feb 1996 9:52:42 ---------------------
+
+
+------------------- Build 5 on 2 Feb 1996 17:05:31 ---------------------
+
+* Fix Bug With Comments in QMAX.INI
+
+ Description:  If a line in QMAX.INI immediately preceding the
+	       [MAXEdit - Files] section starts with one or more
+	       leading semicolons, the parsing algorithm in MAXEdit
+	       gets confused and miscalculates the next position in
+	       the file from which it should read data.  The effect is
+	       that MAXEdit complains about not being able to open a
+	       file.  The actual file name about which it complains is
+	       dependent upon the number of leading semicolons in the
+	       preceding line's comment, but is taken from the
+	       trailing characters in the section header.  For
+	       example, if the preceding line begins with two
+	       semicolons, the file it can't open is 's]', the last
+	       two characters from the section header.
+ Who:  BOB
+ When:	5 Feb 96
+ SW/HW Environment:  MAXEDIT w/comment lines in QMAX.INI preceding
+		     [MAXEdit - Files] section.
+ Symptom:  MAXEdit complains about not being able to open the file
+	   ']', or 's]', or 'es]', etc.
+ Temporary Workaround:	Ignore the complaint and/or remove the comment
+			line which precedes the section header.
+ Test Procedure:  Put a comment line preceding the section header.
+ QA Testing Passed:
+ Version:  MAXEDIT 8.01.007
+
+
+* Fix call to stripmgr and uninitialized pointer in setup.exe
+
+ Description: (1) The parameters were presented in the wrong order in
+	 the call to stripmgr. (2) An uninitialized pointer in the space
+	 calculation caused the 386max.sys line to be trashed sometimes.
+
+ Who: PETERJ
+ When: 5 Feb. 1996
+ SW/HW Environment: Windows
+ Symptom: (1) Stripmgr removed pre-existing 386max.sys lines in config.sys.
+	  (2) Trash was written when 386max.sys was inserted at the end
+	  of config.sys.
+ Temporary Workaround: Manual edit.
+ Test Procedure: (1) Install 386max over bluemax. Check config.sys.
+		 (2) Install 386MAX over Himem w. no multiconfig, no drivers.
+		     Check config.sys.
+ QA Testing Passed:
+ Version: Setup 8.01.6.25
+
+* Fix Bug Calculating Length of FMEMCPY
+
+ Description:  In a previous TWT, I limited the length of an FMEMCPY,
+	       but not sufficiently so.  This time, the length
+	       limitation code is moved inside of the loop (or as PVCS
+	       likes to portray it, the IF/FOR statement which
+	       controls the loop is moved above the length limitation
+	       code).  The loop searches through the result of
+	       DdeAccessData() which returns a CR/LF-separated list of
+	       the members of the StartUp group.
+ Who:  BOB
+ When:	6 Feb 96
+ SW/HW Environment:  Startup groups with more than one item.
+ Symptom:  Running TOOLBOX.EXE on a system with a StartUp group with
+	   more than one item GPs.
+ Temporary Workaround:	Reduce # items in StartUp group.
+ Test Procedure:  On such a system, try to run TOOLBOX.
+ QA Testing Passed:
+ Version:  TOOLBOX 8.01.014
+
+* Fix Another Parsing Bug Skipping Over Path
+
+ Description:  When skipping over the path on a driver, I didn't
+	       handle the cases correctly.  In particular, I searched
+	       for the first backslash instead of the last one.  This
+	       change actually simplifes the code by searching
+	       forwards through the string saving the offset of the
+	       last drive and path separator, and stopping on any line
+	       terminator (<=' ').
+
+	       At the same time, I fixed two bugs in the .EXE program.
+
+	       * Set fRID flag before displaying the dialog box so we
+		 avoid reentrancy problems (such as multiple displays
+		 of the dialog box).
+
+	       * If GOAHEAD.EXE is disabled due to incompatible
+		 drivers and it is invoked as a minimized app, we
+		 should ignore that and restore it to normal size.
+		 Without this change, a minimized StartUp group entry
+		 won't display the incompatible driver dialog box
+		 until the user restores the window to normal size.
+ Who:  BOB
+ When:	6 Feb 96
+ SW/HW Environment:  An incompatible driver on a line preceded by more
+		     than one backslash.
+ Symptom:  Driver is not recognized.
+ Temporary Workaround:	Remove the extra backslashes???
+ Test Procedure:  On such a system, run GOAHEAD.EXE.
+ QA Testing Passed:
+ Version:
+
+* Disable ROMSrch if BCF or AUTOBCF is present
+
+ Description:
+	If BCF=xxxx or AUTOBCF is present in the MAX profile, we
+	disable to "Run ROMSrch" checkbox.   Also, if running
+	WinMaxim for the very first time, Run ROMSrch should
+	be checked by default (unless USE=fxxx or NOROMSRCH already
+	exist).
+ Who:	HENRY
+ When:	6 Feb 96.
+ SW/HW Environment: BCF machines.
+ Symptom: User may elect to run ROMSrch, which will refuse to run.
+ Temporary Workaround: None.  Don't do that.
+ Test Procedure: On a BCF machine, run WinMaxim and verify that
+	in the Custom dialog, ROMSrch is completely disabled.
+	On a non-BCF machine, remove any USE= statements from
+	high DOS, remove any NOROMSRCH statements, and any ROMsrch
+	related statements in the QMAX.INI file, and run WINMAXIM.
+	Select the Custom dialog and verify that Run Romsrch is
+	checked by default.
+ QA Testing Passed:
+ Version: WinMaxim 8.01.6.010
+
+
+* Don't delete USE= less than E000. Remove Ignore= from qmax.ini
+
+ Description: Don't delete USE= less than E000.
+	      Remove Ignore= from qmax.ini to always force a recheck.
+	      Added Memory Multiplier to the Incompatable list.
+ Who: PETERJ
+ When: 6 Feb. 1996
+ SW/HW Environment: Windows
+ Symptom: All Use= statements were deleted on AUTOBCF.
+ Temporary Workaround: Manual replacement.
+ Test Procedure: Install on BCF system with USE= below E000.
+ QA Testing Passed:
+ Version: 8.01.06.26
+
+
+------------------- Build 6 on 6 Feb 1996 17:15:47 ---------------------
+
+
+* Rearrange the order of QMAX.INI creation and GALoadClearance in setup.exe.
+
+ Description:
+ Who: PETERJ
+ When: 7 Feb 1996
+ SW/HW Environment: Windows
+ Symptom: RAM Mgr conflicts not detected on initial install.
+ Temporary Workaround: none practical.
+ Test Procedure: Install MAX with other Ram Mgrs. Goahead should complain
+	 on the initial setup.
+ QA Testing Passed:
+ Version: 8.01.7.27
+
+------------------- Build 7 on 7 Feb 1996 9:50:08 ---------------------
+
+
+------------------- Build 8 on 7 Feb 1996 14:03:46 ---------------------
+
+* Workaround Stealth Bug In QEMM
+
+ Description:  When the user runs our DOS setup program on a system
+	       which has an ABIOS, we make some calls to see which
+	       adapters are installed (we're checking for a Kingston
+	       memory board).  Alas, their stealth doesn't properly
+	       emulate the ABIOS, so the system crashes.
+
+	       The workaround is to check for QEMM and skip the POS
+	       initialization, meaning we'll take our lumps if there
+	       is a Kingston memory board in the system.
+
+ Who:  BOB
+ When:	8 Feb 96
+ SW/HW Environment:  Systems with an ABIOS running QEMM w/stealth on
+		     which the user then runs DOS setup.
+ Symptom:  System crash after EMS question.
+ Temporary Workaround:	Run STRIPMGR /S, then SETUP.
+ Test Procedure:  On the model 65 in the testlab, try before and
+		  after.
+ QA Testing Passed:
+ Version:  8.01.004
+
+
+* Add Autoexec stripping functions from Install.exe
+
+ Description: (1)Added the functions from DOS Install to process Autoexec.bat
+     into Setup.exe. (2) Fixed a bug in the save to .add file function.
+     (3) Trap "Drive not Ready" from RefDskDlgProc().
+ Who: PETERJ
+ When: 8 Feb. 1996
+ SW/HW Environment: Windows.
+ Symptom: (1) LOADHIGH not being stripped from Autoexec.bat.
+	  (2) 386max.pro changes not saved to profile.add.
+	  (3) "System Error - Drive not ready" appears before our reference
+	      disk warning if disk is nott installed.
+ Temporary Workaround: Manual strip.
+ Test Procedure: (1) Test setup.exe on every type of configuration for
+     Autoexec.bat and config.sys. Ensure that lines are stripped properly.
+     (2) Install on new system. Save changes to .add files. Verify the
+     changes are saved and old 386max.pro is restored.
+     (3) Install on Microchannel system and don;t insert ref. disk. You
+     should only get our warning box.
+ QA Testing Passed:
+ Version: Setup.exe 8.01.9.29
+
+------------------- Build 9 on 8 Feb 1996 15:34:45 ---------------------
+
+* Remove forced limits on font size in maxmeter.
+
+ Description: The font pointsize was set to 10 and the size option was removed
+     from the dialog. This forced the Choosefont dialog to initialize to 10
+     and limited the selection. The default pointsize changes depending on the
+     Large font / Small font Windows selection. It is 8 for large fonts.
+     This caused an error from the ChooseFont dialog since the limits were
+     set to 10. Remove forced limits on font size in maxmeter. This results
+     in the fonts being set to the default size for the Large/Small selection.
+ Who: PETERJ
+ When: 12 Feb. 1996
+ SW/HW Environment: Windows.
+ Symptom: "Size must be between 10 and 10" error message.
+ Temporary Workaround: Don't change fonts.
+ Test Procedure:Try MAXmeter font selection in both Large and Small
+     font Windows and all screen resolutions.
+ QA Testing Passed:
+ Version: Maxmeter.exe 8.01.10.010
+
+* Fix Bug When Run On Cyrix 686 w/CPUID But No CR4
+
+ Description:  In our routine which checks for the CPUID instruction,
+	       we read CR4 to see if debugging extensions are enabled
+	       rather than testing the feature flags to see if it's
+	       supported.  Because the Cyrix 686 supports CPUID, but
+	       not CR4, we halt with an Invalid Opcode Exception.
+ Who:  BOB
+ When:	13 Feb 96
+ SW/HW Environment:  Cyrix 686 systems which have enabled the CPUID
+		     instruction via their CPUIDON program.
+ Symptom:  Hang at our copyright line.
+ Temporary Workaround:	Don't enable the CPUID instruction.
+ Test Procedure:  On the Cyrix 686 test system, run before and after
+		  using the CPUIDON.SYS driver.
+ QA Testing Passed:
+ Version:  386MAX.SYS 8.01.005.
+
+------------------- Build 10 on 15 Feb 1996 13:56:05 ---------------------
+
+* Fix Bug Using Too Much Low DOS Stck
+
+ Description:  During initialization, depending upon timer ticks and
+	       other such events, we can use too much low DOS stack
+	       (which we like to keep limited so as to reduce our low
+	       DOS memory footprint).  Among other problems this
+	       generates is the fact that the name of our Windows VxD
+	       is overwritten, triggering the message "Qualitas MAX
+	       VxD not found".
+
+	       Because the low DOS stack (and the data below it)
+	       doesn't change over the PM initialization code, we can
+	       refresh it from the pristine copy in extended memory.
+ Who:  BOB
+ When:	15 Feb 96
+ SW/HW Environment:  All.
+ Symptom:  "Qualitas MAX VxD not found"
+ Temporary Workaround:	Try using a shorter path name for the VxD.
+ Test Procedure:  On testlab system running Win95 (where it failed
+		  before), try again.
+ QA Testing Passed:
+ Version:  8.01.006
+
+* Fix Bug When Checking For Extended Memory
+
+ Description:  When I put in the code to check for extended memory
+	       using INT 15h, function E801 in order to workaround a
+	       bug in certain Phoenix BIOSes, I put the code in the
+	       wrong place.  It should precede the code which fails on
+	      the Phoenix BIOSes, not follow it.
+ Who:  BOB
+ When:	21 Feb 96
+ SW/HW Environment:  Early Phoenix 4.04 BIOSes.
+ Symptom:  System locks at startup of QMT/RAMEXAM.
+ Temporary Workaround:	Use PHXBUG.SYS.
+ Test Procedure:  On such a system, run RAMEXAM.
+ QA Testing Passed:
+ Version:  QMT/RAMEXAM 8.01.003
+
+------------------- Build 11 on 19 Feb 1996 13:13:13 ---------------------
+
+* German translations to Max 8 and utilities.
+
+ Description: Add German translations to Max 8 and utilities as well as
+     changes needed to enable them.
+ Who: PETERJ
+ When: Feb. 22, 1996
+ SW/HW Environment: All.
+ Symptom: NAB
+ Temporary Workaround: Speak English.
+ Test Procedure: Check all text in all programs.
+ QA Testing Passed:
+ Version: 8.01.012 build.
+
+* Doshelp German translations.
+
+ Description: The German text (RTF) files for MAX 8.01
+    Apparently these were saved in Word 6 RTF format which adds a few
+    new attributes that the old helpmake.exe does not understand. So
+    I used HMAKEL.exe to strip them out. Also added the .?GR translations
+    to the \text dir.
+
+ Who: PETERJ
+ When: 23 Feb. 1996
+ SW/HW Environment: DOS
+ Symptom: NAB
+ Temporary Workaround: NAB
+ Test Procedure:
+ QA Testing Passed:
+ Version: 8.01.012 build
+
+
+------------------- Build 12 on 23 Feb 1996 16:52:34 ---------------------
+
+
+------------------- Build 13 on 25 Feb 1996 16:48:17 ---------------------
+
+
+------------------- Build 14 on 25 Feb 1996 22:03:46 ---------------------
+
+
+------------------- Build 15 on 27 Feb 1996 12:47:22 ---------------------
+
+* Change alignment of config and config95 screens in Winmaxim.exe
+
+ Description:  Change alignment of config and config95 screens in Winmaxim.exe
+     Just like it says. For both English and German versions. Used AppStudio.
+
+ Who: PETERJ
+ When: 27 Feb. 1996
+ SW/HW Environment: Windows
+ Symptom: Field mis-alignment and invisible text.
+ Temporary Workaround: none.
+ Test Procedure: Install in Windows and Win95 and check text.
+ QA Testing Passed:
+ Version: 8.01.15.12
+
+
+------------------- Build 16 on 27 Feb 1996 16:22:27 ---------------------
+
+
+------------------- Build 17 on 28 Feb 1996 16:53:17 ---------------------
+
+
+------------------- Build 18 on 29 Feb 1996 11:32:18 ---------------------
+
+* Build QLOGO data from source
+
+ Description:
+	Recent changes introduced an umlaut (u with two dots) into the
+	string displayed during the Q or ASQ logos.  To accommodate this
+	and simplify any future changes in these logos (none anticipated,
+	but this was mainly required for these apparently simple changes)
+	QLOGO.OVL is now built from MASM source.  Binary constants provide
+	a way to visually manipulate the characters to be downloaded.
+ Who: HENRY
+ When: 4 Mar 96.
+ SW/HW Environment: DOS (not under Windows), VGA.
+ Symptom: International characters display as graphics.
+ Temporary Workaround: None.
+ Test Procedure: Use the following alt- characters beside their non-
+	diacritical counterparts in branding the product:
+	u (129), „a (132), ŽA (142), ”o (148), ™O (153), šU (154),
+	¤n (164), à (224), á (225).  Verify that they all look OK both
+	in MAX shell (max /e) and in asq.  To freeze these screens bring
+	up SWAT and use F10 to view the underlying screen.
+ QA Testing Passed:
+ Version: Max 8.01 German, post-CeBit edition.
+
+------------------- Build 19 on 5 Mar 1996 10:07:55 ---------------------
+
+* Workaround Hardware Intel Overdrive Incompatibility
+
+ Description:  On some systems with an Intel Overdrive CPU (COMPAQ 466
+	       XL comes to mind), if we set the Cache Disable bit on
+	       the tail of a ROM, the contents of the ROM can change
+	       out from underneath us.	COMPAQ says this is an
+	       incompatibility between their system and the Intel CPU.
+
+	       Our workaround is to define a new keyword (NOCRR) which
+	       when set avoids setting the Cache Disable bit in these
+	       circumstances (say a 10K ROM at C800-CA80, where we
+	       would set the Cache Dsiable bit on the 4KB page at
+	       CA00).
+ Who:  BOB
+ When:	5 Mar 96.
+ SW/HW Environment:  Intel Overdrive on COMPAQ 466 XL and possibly
+		     other systems.
+ Symptom:  Crash at startup.
+ Temporary Workaround:	None.
+ Test Procedure:  On a COMPAQ 466 XL, try with and without NOCRR
+		  keyword.
+ QA Testing Passed:
+ Version: 386MAX 8.01.007.
+
+------------------- Build 20 on 5 Mar 1996 16:05:17 ---------------------
+
+* Quit Silently If Running Under OS/2
+
+ Description:  For reasons I haven't bothered to determine, GoAhead
+	       doesn't run in a Windows box of OS/2 -- check for that
+	       and quit silently
+ Who:  BOB
+ When:	7 Mar 96.
+ SW/HW Environment:  Windows under OS/2.
+ Symptom:  System crash or misbehave.
+ Temporary Workaround:	Don't do that.
+ Test Procedure:  In a Windows session under OS/2, install GoAhead.
+ QA Testing Passed:
+ Version:  GoAhead 8.01.147
+
+* Fix Bug In VxD LoadHi Code
+
+ Description:  Long ago, we modified some code supplied by Microsoft
+	       with the LoadHi VxD kit.  The routine (Get_Device_Info)
+	       which determines the size of a device driver trundles
+	       through the DD chain looking for the DD and upon
+	       finding it, attempts to find its start and end, the
+	       difference being its size.  Within the loop which
+	       compares the DD names, the address of the last DD is
+	       saved for later comparison in case we're dealing with
+	       nested DDs.
+
+	       The problem occurs if the DD we're sizing is the first
+	       or second DD in the entire chain because the code
+	       neglects to initialize a register.  This register is
+	       used later on if the DD we're sizing is in a sequence
+	       of nested DDs to determine whether or not we can find
+	       the DD's size.
+
+	       Of course, this very scenario occurs when Novell's
+	       Client32 VxD is loaded and it links its network devices
+	       into the DD chain.  In the process, the Client32 code
+	       attempts to instance all of its network DDs (which is
+	       probably a bad idea), one of which (PRN) is the first
+	       one Client32 links into the DD chain, and as such is
+	       the second one in the entire chain.  When EMM386 and
+	       QEMM are presented with this scenario, they both fail
+	       to identify PRN, and hence fail to instance it.
+
+	       Because our code failed to initialize a register, we
+	       weren't so lucky, and we allow PRN to be instanced.
+	       This precipitates a long chain of events which
+	       eventually ends with a call to LinMapIntoV86() which
+	       fails because the page with the PRN DD is instanced.
+	       However, this leaves something else mapped onto the
+	       same page, which breaks the device driver (in a big
+	       way), and it's not a happy ending.
+
+ Who:  BOB
+ When:	11 Mar 96.
+ SW/HW Environment:  Win95 running Novell's Client32.
+ Symptom:  Unable to open DOS box, or if able to, erratic behavior
+	   because the device driver chain is broken.
+ Temporary Workaround:	None.
+ Test Procedure:  Run before, run after.
+ QA Testing Passed:
+ Version:  386MAX.VXD 8.01.006
+
+
+------------------- Build 21 on 11 Mar 1996 11:30:23 ---------------------
+
+* Add stripm95.pif to turn DOSMAX on in Win95.
+
+ Description: Add stripm95.pif to set DOSMAX=ON in Win95. This prevents
+	      a bug in the 386max.vxd from generating a page fault. The
+	      bug has been fixed, but it will trigger in previous versions
+	      during setup if DOSMAX is off.
+ Who: PETERJ
+ When: 13 Mar. 1996
+ SW/HW Environment: Windows 95
+ Symptom: Stripmgr hangs in setup.
+ Temporary Workaround: Uninstall MAX8 then install MAX8.01
+ Test Procedure: Install over MAX8 in Win95.
+ QA Testing Passed:
+ Version: Setup 8.01.22.31
+
+* Print button does not print on some systems.
+
+ Description: It's a wonder it printed anywhere. The buffer length was
+     not set on EM_GETLINE message. It must have been randomized. It
+     is now set as it should be.
+ Who: PETERJ
+ When: 13 Mar. 1996
+ SW/HW Environment: Windows
+ Symptom: Print button does not print on some systems.
+ Temporary Workaround: none
+ Test Procedure: Print both ways, button and menu.
+ QA Testing Passed:
+ Version: Maxedit 8.01.22.9
+
+* Fix Bug Clobbering Registers
+
+ Description:  When we run under Win95, there's a point at which we
+	       call some VMM functions which clobber some registers
+	       near and dear to us.  Put on more body armor.
+ Who:  BOB
+ When:	13 Mar 96.
+ SW/HW Environment:  Win95 running a non-DOSMAX PIF.
+ Symptom:  System crash, maybe with a Page fault.
+ Temporary Workaround:	In [Qualitas] section of SYSTEM.INI, put
+			either DOSMAX=OFF or DOSMAXDefault=ON .
+ Test Procedure:  On a Win95 system, install QMAX 8.01 -- running
+		  STRIPMGR is enough to trigger the bug.
+ QA Testing Passed:
+ Version:  386MAX.VXD 8.01.007
+
+
+* Keep Maxmeter from Overriding Taskman with GoAhead disabled.
+
+ Description: Keep Maxmeter from Overriding Taskman with GoAhead disabled.
+     SetWindowPos was not used correctly. Added SWP_NOZORDER | SWP_NOACTIVATE
+     in cases where Maxmeter is not always on top.
+ Who: PETERJ
+ When: 14 Mar. 1996
+ SW/HW Environment: Windows
+ Symptom: Taskman cannot be run from desktop when Maxmeter is on and GoAhead
+     is disabled.
+ Temporary Workaround: Turn off Maxmeter.
+ Test Procedure: Run maxmeter and Goahead. Disable goahead. Run taskman by
+		 double-clicking on desktop.
+ QA Testing Passed:
+ Version: 8.01.22.12
+
+
+------------------- Build 22 on 14 Mar 1996 8:45:57 ---------------------
+
+
+------------------- Build 23 on 14 Mar 1996 13:18:45 ---------------------
+
+
+------------------- Build 24 on 18 Mar 1996 13:17:33 ---------------------
+
+===========================================================================
+MARCH 19, 1996
+----------------
+GOLD RELEASE of Qualitas MAX 8.01 U.S.
+- Use label "MAX 8.01US Retail" to retrieve
+GOLD RELEASE of Qualitas MAX 8.01 German
+- Use label "MAX 8.01US Retail" and compile with GR for LANG
+===========================================================================
+
+
+------------------- Build 25 on 26 Mar 1996 8:59:12 ---------------------
+
+
+------------------- Build 26 on 26 Mar 1996 10:29:01 ---------------------
+
