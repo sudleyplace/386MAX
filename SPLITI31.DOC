@@ -1,0 +1,51 @@
+Split QMAX_I31.ASM again
+
+Fix file entry:
+
+* Split QMAX_I31.ASM again
+
+ Description:
+ 	To work around limitations of the feeble MASM, once again more code
+	from QMAX_I31.ASM is split off into a new module (QMAX_O31.ASM).
+	This should have no effect on the final product (386MAX.SYS).
+ Who: HENRY
+ When: 27 Dec 95.
+ SW/HW Environment: All.
+ Symptom: Build fails with odd errors.  Restarting does no good.
+ 	Problem is worse when running top-level makefile or in low memory
+	conditions.
+ Temporary Workaround: Exit to DOS, run nmake /n @..\max.mrf >foo.bat
+ 	then execute foo.bat.  This doesn't work perfectly as errors won't
+	cause the batch file to terminate.
+ Test Procedure: Run GET DEL BUILD on the QA build machine.
+ QA Testing Passed:
+ Version: Qualitas MAX 8.01.002
+
+New files:
+
+QMAX_O31.ASM
+	More code and data split off from QMAX_I31.ASM.  It seems the
+	real choke point for QMAX_I31.ASM is the INT31 procedure and
+	is caused by certain macros.
+
+	I can't think of any exception to "this is just stuff moved
+	out of QMAX_I31.ASM"  Things to watch out for should be in the
+	overall layout.
+
+	There's probably some needless externs; I did apply some effort
+	to eliminating many of them, but there are probably others I
+	missed.
+
+Files affected:
+
+MAKEFILE
+	Add new module.
+
+QMAX_I31.ASM
+	Move code and data into new module QMAX_O31.ASM.
+	Add some externs for newly relocated stuff.
+	Make @ENVLEN public so we can use it as extern:abs
+
+VERSBETA.ASM
+	Bump version to 2.
+
