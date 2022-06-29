@@ -1,0 +1,8 @@
+
+LIGHTS[=d:\path\filename.ext]
+			enable lights for certain events in RAMexam, optionally
+			specifying the lights to use in the named file.  See the
+			file LIGHTS.TXT for more details.  This feature requires a
+			special device attached to a parallel port.
+
+

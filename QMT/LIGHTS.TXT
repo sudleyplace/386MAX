@@ -1,0 +1,44 @@
+; This file contains the default light generations
+;	for various events encountered when running RAMexam.
+; To enable use of these lights, specify the keyword LIGHTS,
+;	followed (optionally) by the drive, path, filename,
+;	and extension of a file similar to this one.
+
+; The format of each set of lights is a sequence of one
+;	or more triplets of the form
+;	(value, duration, pause)
+;	followed by an optional repeat count (0 if none specified).
+; To cause the lights to repeat for a long time, use a large
+;	number (up to 65535).
+; You may specify up to 32 light triplets per event.
+; To terminate a light display, press any key.
+
+; The "value" is a number from 0 to 7 which is sent to the port
+;	identified in the "port=" statement.  The bit pattern of the number
+;	is as follows:
+;		001 = Red
+;		010 = Yellow
+;		100 = Green
+; The "duration" and "pause" numbers are in units of timer ticks
+;   (approx 18 per sec)
+; The grammar for the triplet is as follows:
+;	number	 := 0 to 65535
+;	value	 := number
+;	duration := number
+;	pause	 := number
+;	triplet  := (value, duration, pause)
+;	trips	 := triplet
+;		 := trips triplet
+;	repeat	 := number
+;	test	 := trips
+;		 := trips , repeat
+
+
+startup 		= (7,0,1),65535
+running 		= (2,1,0),65535
+memory-failure		= (1,0,1),65535
+parity-failure		= (1,0,1),65535
+all-tests-complete	= (4,2,1),65535
+port			= LPT1		 ; LPT1 (default) or LPT2
+
+
