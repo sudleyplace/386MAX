@@ -1,0 +1,137 @@
+;' $Header:   P:/PVCS/MAX/QMT/MEM_UTF.MAV   1.0   05 Sep 1995 16:56:10   HENRY  $
+;
+; (C) Copyright 1988-1999 Qualitas, Inc.  All rights reserved.
+;
+; MEM_UTF.MAC
+;
+; Macro for (Unlinked) Transition Fault testing
+;
+	include MEM_COM.MAC
+
+UTFMAC	macro	NAM,SHF,STR,REG,BWD
+
+COMMENT|
+
+NAM	=	Test name
+
+SHF	=	Shift amount to convert from Bytes to Units
+	=	0 for bytes
+	=	1 for words
+	=	2 for dwords
+
+STR	=	Structure suffix
+	=	'LO'  for bytes
+	=	'ELO' for words
+	=	'EDD' for dwords
+
+REG	=	Register name
+	=	AL  for bytes
+	=	AX  for words
+	=	EAX for dwords
+
+BWD	=	Byte/Word/Dword letter
+	=	'B' for bytes
+	=	'W' for words
+	=	'D' for dwords
+
+|
+
+	pushad			; Save all EGP registers
+
+; Set initial value for Read/Write 1s up
+
+	mov	REG1UP,-1	; Pattern is 111...111
+
+; Set initial value for Read/Write 0s up
+
+	mov	REG0UP,0	; Pattern is 000...000
+
+; Set initial value for Read/Write 1s down
+
+	mov	REG1DN,-1	; Pattern is 111...111
+
+; Set initial value for Read/Write 0s down
+
+	mov	REG0DN,0	; Pattern is 000...000
+
+CNTOPERS =	0		; Initialize macro operation count
+
+	mov	edx,ecx 	; Save N to restore from later
+
+; ************************** INITIALIZE ****************************************
+
+; Write 0s up
+
+	W0_MAC	NAM,SHF,STR,REG,BWD
+
+; ************************** SEQUENCE #1 ***************************************
+
+; Read 0s and Write 1s up
+
+	R0W1_MAC NAM,SHF,STR,REG,BWD
+
+; ************************** SEQUENCE #2 ***************************************
+
+; Read 1s, Write 0s, and Read 0s down
+
+	R1W0R0DN_MAC NAM,SHF,STR,REG,BWD,REG1UP
+
+@TOTOPERS equ	CNTOPERS + 0	; Save in equate
+
+NAM&BWD&_HALT:
+	clc			; Indicate all went well
+
+	jmp	short NAM&BWD&_EXIT ; Join common exit code
+
+
+; External NMI or halt
+
+NAM&BWD&_NMIERREXT:
+	test	CNT_FLAG,@CNT_HALT ; Did the user request a halt?
+	jnz	short NAM&BWD&_HALT ; Jump if so
+
+	mov	edi,NMIADDR	; Get the failing address
+
+;;;;;;; jmp	short NAM&BWD&_NMIERRCOM ; Join common error code
+
+
+; NMI reading/writing at ES:EDI
+
+NAM&BWD&_NMIERR:
+;;;;;;; jmp	short NAM&BWD&_NMIERRCOM ; Join common error code
+
+
+NAM&BWD&_NMIERRCOM:
+	call	DISP_NMIERR	; Display error
+
+	stc			; Indicate something went wrong
+
+	jmp	short NAM&BWD&_EXIT ; Join common exit code
+
+
+; Mismatch reading 0s at ES:EDI
+
+NAM&BWD&_ERR0:
+;;;;;;; jmp	short NAM&BWD&_ERRCOM ; Join common error code
+
+
+; Mismatch reading 1s at ES:EDI
+
+NAM&BWD&_ERR1X:
+;;;;;;; xchg	REG,es:[edi]	; Restore original value
+
+;;;;;;; jmp	short NAM&BWD&_ERRCOM ; Join common error code
+
+NAM&BWD&_ERRCOM:
+	call	DISP_ERR&BWD	; Display error data
+
+	stc			; Indicate something went wrong
+NAM&BWD&_EXIT:
+	mov	NMIOFF,0	; Clear NMI error addr
+
+	popad			; Restore all EGP registers
+
+	ret			; Return to caller
+
+	endm			; UTFMAC
+
