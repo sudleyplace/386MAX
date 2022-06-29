@@ -1,0 +1,15 @@
+* QPOPUP.INF
+* Bitte bearbeiten Sie diese Datei NICHT, wenn Sie deren Aufbau und Inhalt nicht verstehen.
+* INTERCEPTS=W warnt bei Grafikmodi, INTERCEPTS=F verweigert Programmstart bei Grafikmodi.
+* Wenn Sie neue Einträge hinzufügen, verwenden Sie z.B. den Windows-Editor.
+
+[INTERCEPTS]
+WP.EXE=W
+DOSSHELL.EXE=W
+VP.EXE=F
+
+[WP.EXE]
+WordPerfect benutzt einen Grafikmodus für die Druckbildvorschau. Wenn Sie WordPerfect in einer DOSMAX-Sitzung anwenden, dürfen Sie die Druckbildvorschau nicht benutzen.
+
+[DOSSHELL.EXE]
+DOSSHELL kann im Text- oder Grafikmodus ablaufen. Benutzen Sie DOSSHELL nicht im Grafikmodus, wenn Sie in einer DOSMAX-Sitzung arbeiten.

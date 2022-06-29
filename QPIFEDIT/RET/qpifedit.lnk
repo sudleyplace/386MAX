@@ -1,0 +1,5 @@
+		/NOD /MAP /ONERR:NOEXE /ALIGN:16 RET\qpifedit.obj
+		RET\qpifedit.exe
+		RET\qpifedit.map
+		libw slibcew commdlg oldnames ctl3dv2.lib
+		qpifedit.def

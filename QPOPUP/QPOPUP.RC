@@ -1,0 +1,326 @@
+/* qpopup.rc - Copyright (C) 1993-5 Qualitas, Inc.  All Rights Reserved. */
+
+#include <windows.h>
+
+#include "qpopup.h"
+#include "cversion.h"
+#include <mversion.h>
+
+QPOPUP_ICON	ICON	qpopup.ico
+
+IDD_MODESW DIALOG 10, 20, 181, 202
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "DOSMAX"
+FONT 8, "MS Sans Serif"
+BEGIN
+#ifdef LANG_GR
+	LTEXT "Die folgende DOS-Anwendung:", IDT_MSG, 8, 6, 102, 10
+	LTEXT "XXXXXXXX.XXX", IDT_NAME, 61, 18, 54, 8
+	LTEXT "hat versucht umzuschalten in:", 102, 8, 29, 95, 8
+	LTEXT "Grafikmodus ", 107, 16, 43, 52, 8
+	LTEXT "18 (12h) 320 x 200 x 4 Grau", IDT_MODE, 75, 43, 91, 8
+	LTEXT "Einige Anwendungen (z.B. DOSSHELL)", 109, 8, 78, 153, 8
+	LTEXT "schalten nur temporär in Grafikmodi.", 110, 8, 86, 125, 8
+	LTEXT "Diese können Sie gefahrlos akzeptieren.", 111, 8, 94, 146, 8
+	LTEXT "Bitte treffen Sie nun eine Auswahl:", 115, 8, 109, 114, 8
+	LTEXT "DOSMAX unterstützt nur Anwendungen", 116, 8, 58, 164, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+	LTEXT "im Textmodus.", 117, 8, 66, 62, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+	DEFPUSHBUTTON "Dieses DOS-Fenster &schließen...", IDB_TERMINATE, 8, 164, 165, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+	PUSHBUTTON "Diese Modus-Umschaltung über&gehen", IDB_IGNORE, 8, 128, 165, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+	PUSHBUTTON "Für dieses Programm &immer übergehen", IDB_ALWAYS, 8, 146, 165, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+	PUSHBUTTON "&Hilfe...", IDB_MODESWHELP, 8, 182, 165, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+#else
+	LTEXT "The following DOS application:", IDT_MSG, 8, 6, 102, 10
+	LTEXT "XXXXXXXX.XXX", IDT_NAME, 61, 18, 54, 8
+	LTEXT "has attempted to switch into:", 102, 8, 29, 95, 8
+	LTEXT "Graphics mode ", 107, 16, 43, 52, 8
+	LTEXT "18 (12h) 320 x 200 x 4 gray", IDT_MODE, 75, 43, 91, 8
+	LTEXT "Some applications (such as the MS-DOS Shell)", 109, 8, 78, 153, 8
+	LTEXT "switch into graphics mode temporarily.", 110, 8, 86, 125, 8
+	LTEXT "These mode switches may be safely ignored.", 111, 8, 94, 146, 8
+	LTEXT "Please select one of the following:", 115, 8, 109, 114, 8
+	LTEXT "DOSMAX supports only text mode", 116, 8, 58, 164, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+	LTEXT "applications.", 117, 8, 66, 62, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+	DEFPUSHBUTTON "&Terminate this DOS Window...", IDB_TERMINATE, 8, 164, 165, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+	PUSHBUTTON "&Ignore this mode switch", IDB_IGNORE, 8, 128, 165, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+	PUSHBUTTON "Al&ways ignore mode switches for this program", IDB_ALWAYS, 8, 146, 165, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+	PUSHBUTTON "&Help...", IDB_MODESWHELP, 8, 182, 165, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+#endif				// IFDEF LANG_GR
+END
+
+
+IDD_TERMINATE DIALOG 13, 20, 190, 164
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+#ifdef LANG_GR
+CAPTION "DOS Fenster schließen"
+#else
+CAPTION "Terminate DOS Window"
+#endif				// IFDEF LANG_GR
+FONT 8, "HELV"
+BEGIN
+#ifdef LANG_GR
+	LTEXT "ACHTUNG!", 100, 32, 10, 168, 10
+	LTEXT "Benutzen Sie die Schaltfläche ""Schließen""", 200, 32, 20, 168, 10
+	LTEXT "als letzten Ausweg zum Beenden einer", 300, 32, 30, 168, 10
+	LTEXT "Anwendung, die nicht mehr reagiert.", 400, 32, 40, 168, 10
+	LTEXT "Benutzen Sie immer den Befehl zum ""Beenden""", 500, 32, 55, 168, 10
+	LTEXT "in Ihrem Anwendungsprogramm.", 600, 32, 65, 168, 10
+	LTEXT "*", 900, 32, 80, 8, 10
+	LTEXT "Mit ""Abbrechen"" kehren Sie zu Ihrer", 910, 40, 80, 160, 10
+	LTEXT "nicht-Windows Anwendung zurück.", 920, 40, 90, 160, 10
+	LTEXT "*", 930, 32, 105, 8, 10
+	LTEXT "Mit OK beenden Sie diese Anwendung", 940, 40, 105, 160, 10
+	LTEXT "Sie verlieren dabei alle zur Zeit nicht", 950, 40, 115, 160, 10
+	LTEXT "gesicherten Informationen der Anwendung.", 960, 40, 125, 160, 10
+	ICON 32513, 970, 7, 14, 16, 21
+	DEFPUSHBUTTON "Abbrechen", IDCANCEL, 99, 144, 41, 14, WS_GROUP
+	PUSHBUTTON "OK", IDOK, 52, 144, 41, 14
+#else
+	LTEXT "WARNING!", 100, 32, 10, 168, 10
+	LTEXT "Use the Terminate button only as a last resort", 200, 32, 20, 168, 10
+	LTEXT "to quit an application that has stopped", 300, 32, 30, 168, 10
+	LTEXT "responding to the system.", 400, 32, 40, 168, 10
+	LTEXT "To quit an application, use the application's", 500, 32, 55, 168, 10
+	LTEXT "quit or exit command.", 600, 32, 65, 168, 10
+	LTEXT "*", 900, 32, 80, 8, 10
+	LTEXT "Choose Cancel to return to your non-", 910, 40, 80, 160, 10
+	LTEXT "Windows application.", 920, 40, 90, 160, 10
+	LTEXT "*", 930, 32, 105, 8, 10
+	LTEXT "Choose the OK button to terminate this", 940, 40, 105, 160, 10
+	LTEXT "application. You will lose any unsaved", 950, 40, 115, 160, 10
+	LTEXT "information in this application.", 960, 40, 125, 160, 10
+	ICON 32513, 970, 7, 14, 16, 21
+	DEFPUSHBUTTON "Cancel", IDCANCEL, 99, 144, 32, 14, WS_GROUP
+	PUSHBUTTON "OK", IDOK, 59, 144, 32, 14
+#endif				// IFDEF LANG_GR
+END
+
+
+IDD_REFUSE DIALOG DISCARDABLE  0, 0, 185, 81
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "DOSMAX"
+FONT 8, "MS Sans Serif"
+BEGIN
+#ifdef LANG_GR
+    LTEXT	    "Schließe",-1, 14,12,42,8
+    LTEXT	    "MMMMMMMM.MMM",IDT_REFUSE_FILENAME, 55,12,67,8
+
+    LTEXT	    "Soll DOSMAX dieses Programm für zukünftige",-1,
+		    17,31,157,8
+    LTEXT	    "DOSMAX-Sitzungen sperren?",-1,17,40,
+		    157,8
+
+    DEFPUSHBUTTON   "&Ja", IDYES, 13,60,41,14
+    PUSHBUTTON	    "&Nein", IDNO, 71,60,41,14
+    PUSHBUTTON	    "&Hilfe", IDB_MODESWHELP, 129,60,41,14
+#else
+    LTEXT	    "Terminating",-1, 14,12,42,8
+    LTEXT	    "MMMMMMMM.MMM",IDT_REFUSE_FILENAME, 55,12,67,8
+
+    LTEXT	    "Would you like DOSMAX to refuse to run this",-1,
+		    17,31,157,8
+    LTEXT	    "program in future DOSMAX sessions?",-1,17,40,
+		    157,8
+
+    DEFPUSHBUTTON   "&Yes", IDYES, 13,60,41,14
+    PUSHBUTTON	    "&No", IDNO, 71,60,41,14
+    PUSHBUTTON	    "&Help", IDB_MODESWHELP, 129,60,41,14
+#endif				// IFDEF LANG_GR
+END
+
+
+IDD_MODESWHELP DIALOG 20, 20, 183, 158
+STYLE DS_LOCALEDIT | WS_POPUP | WS_CAPTION
+#ifdef LANG_GR
+CAPTION "DOSMAX Hilfe"
+#else
+CAPTION "DOSMAX Help"
+#endif				// IFDEF LANG_GR
+FONT 8, "Helv"
+BEGIN
+#ifdef LANG_GR
+	PUSHBUTTON "OK", IDOK, 74, 134, 32, 14, WS_TABSTOP
+#else
+	PUSHBUTTON "OK", IDOK, 74, 134, 32, 14, WS_TABSTOP
+#endif				// IFDEF LANG_GR
+	CONTROL "", IDE_HELP, "EDIT", ES_LEFT | ES_MULTILINE | ES_AUTOVSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL, 7, 8, 169, 118
+END
+
+
+IDD_INSUF DIALOG 20, 20, 183, 112
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "DOSMAX"
+FONT 8, "Helv"
+BEGIN
+#ifdef LANG_GR
+	CONTROL "Qualitas DOSMAX erfordert", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 17, 128, 8
+	CONTROL "Windows 3.1 oder höher im", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 26, 121, 8
+	CONTROL "erweiterten 386 Modus.", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 35, 129, 8
+	PUSHBUTTON "OK", IDOK, 76, 91, 32, 14, WS_TABSTOP
+	CONTROL "Meldung in Zukunft &nicht mehr anzeigen.", IDB_EXPERT, "BUTTON", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 20, 59, 143, 14
+	ICON 32515, 971, 13, 19, 18, 20
+#else
+	CONTROL "Qualitas DOSMAX requires", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 17, 128, 8
+	CONTROL "Windows 3.1 or later running in 386", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 26, 121, 8
+	CONTROL "Enhanced mode.", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 35, 129, 8
+	PUSHBUTTON "OK", IDOK, 76, 91, 32, 14, WS_TABSTOP
+	CONTROL "&Don't display this message in the future.", IDB_EXPERT, "BUTTON", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 20, 59, 143, 14
+	ICON 32515, 971, 13, 19, 18, 20
+#endif				// IFDEF LANG_GR
+END
+
+
+IDD_CFGWARN DIALOG 6, 18, 178, 183
+STYLE DS_LOCALEDIT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+FONT 8, "MS Sans Serif"
+CAPTION "Qualitas DOSMAX"
+BEGIN
+#ifdef LANG_GR
+    LTEXT "MMMMMMMM.MMM", IDT_CFG_FILENAME, 3, 8, 69, 8
+
+    DEFPUSHBUTTON "OK", IDOK, 68, 162, 40, 14
+
+    CONTROL "Für dieses Programm &nicht mehr warnen.", IDB_CFG_FUTURE, "BUTTON", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 12, 146, 152, 10
+#else
+    LTEXT "MMMMMMMM.MMM", IDT_CFG_FILENAME, 3, 8, 69, 8
+
+    DEFPUSHBUTTON "OK", IDOK, 68, 162, 40, 14
+
+    CONTROL "&Don't warn about this program in the future.", IDB_CFG_FUTURE, "BUTTON", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 12, 146, 152, 10
+#endif				// IFDEF LANG_GR
+
+    EDITTEXT	IDE_CFG_HELPTEXT, 3, 19, 172, 123, ES_MULTILINE | WS_VSCROLL
+END
+
+
+STRINGTABLE
+BEGIN
+#ifdef LANG_GR
+  IDS_ERR_CREATE_WINDOW,	"Erstellen des Fensters fehlgeschlagen!"
+  IDS_ERR_REGISTER_CLASS,	"Fensterklasse konnte nicht registriert werden!"
+  IDS_ERR_INSTANCE,		"Programm darf zu einer Zeit nur einmal aktiv sein!"
+
+  IDS_386MAX_WARN,		"Qualitas MAX Warnung"
+  IDS_386MAX_VXDWARN,	"DOSMAX ist nicht verfügbar, weil der Qualitas MAX Windows virtuelle Gerätetreiber (386MAX.VXD) nicht geladen ist."
+#else
+  IDS_ERR_CREATE_WINDOW,	"Window creation failed!"
+  IDS_ERR_REGISTER_CLASS,	"Error registering window class!"
+  IDS_ERR_INSTANCE,		"Only one instance allowed!"
+
+  IDS_386MAX_WARN,		"Qualitas MAX Warning"
+  IDS_386MAX_VXDWARN,	"DOSMAX is not available because the Qualitas MAX Windows virtual device (386MAX.VXD) is not loaded."
+#endif				// IFDEF LANG_GR
+END
+
+
+ID_HELPTEXT	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Das Programm in einer DOSMAX-Sitzung hat die Umschaltung "
+	"in einen Grafikmodus ausgelöst. Dieser Konflikt mit DOSMAX "
+	"kann zu einem Verlust der bearbeiteten Daten führen.\r\n\r\n"
+
+	"DOS-Anwendungen können im Text- oder Grafikmodus ablaufen. "
+	"Grafik-Anwendungen benutzen zusätzlichen Speicher zwischen "
+	"640 KB und 1 MB. Dieser Speicher wird auch von Qualitas' DOSMAX "
+	"für Windows benutzt. Aus diesem Grund können Sie in DOSMAX- "
+	"Sitzungen nur Textmodus-Anwendungen ablaufen lassen.\r\n\r\n"
+
+	"Gelegentlich schalten DOS-Anwendungen vorübergehend in einen "
+	"Grafikmodus, ohne daß zusätzlicher Grafikspeicher belegt wird. "
+	"Für diese Programme können Sie den Grafikmodus akzeptieren. "
+	"Wählen Sie die Schaltfläche ""Diese Modus-Umschaltung übergehen"". "
+	"Wenn das Programm nach dem Umschalten in den Grafikmodus korrekt "
+	"abläuft, fällt es evtl. in diese Kategorie. Wenn Sie mit dem nächsten "
+	"Aufruf die Warnung für das Programm wieder erhalten, wählen Sie "
+	"""Für dieses Programm immer übergehen"" zur Unterdrückung "
+	"weiterer Warnungen.\r\n\r\n"
+
+	"Wenn Sie dieses DOS-Fenster schließen möchten, wählen Sie "
+	"""Dieses DOS-Fenster schließen"". In diesem Fall werden Sie "
+	"gefragt, ob DOSMAX dieses Programm für zukünftige DOSMAX-Sitzungen "
+	"sperren soll.\r\n\r\n"
+
+	"Einige Textmodus-Programme schalten nur für bestimmte Funktionen "
+	"in einen Grafikmodus. Ein Beispiel sind Programme mit einer "
+	"""Druckbild-Vorschau"". Solange der Anwender diese Funktionen "
+	"nicht benutzt, kann DOSMAX problemlos arbeiten. "
+	"Nur der Anwender kann entscheiden, ob der Verzicht auf diese "
+	"Funktionalität den Gewinn zusätzlichen Speichers wert ist. "
+	"DOSMAX bietet einen Mechanismus zur Warnung des Anwenders, "
+	"wenn eine Anwendung mit Grafikmodus-Funktionen aufgerufen wird. "
+	"Einzelheiten zur Einrichtung der Warnung für bestimmte Anwendungen "
+	"finden Sie im Handbuch."
+#else
+	"The program running in a DOSMAX session has initiated "
+	"a switch into graphics mode.  Doing so conflicts with "
+	"DOSMAX and may result in loss of work in progress.\r\n\r\n"
+
+	"DOS applications can run in either text or graphics mode.  "
+	"Graphics mode applications use additional memory between "
+	"640K and 1MB, memory that is also used by Qualitas's DOSMAX "
+	"for Windows.    For this reason, you may run only text mode "
+	"applications in DOSMAX sessions.\r\n\r\n"
+
+	"Occasionally, DOS applications switch temporarily into "
+	"graphics mode without ever accessing graphics memory.  "
+	"For these programs, you may allow the graphics mode switch "
+	"to occur by selecting the ""Ignore this mode switch"" button.  "
+	"If the program proceeds correctly after ignoring a graphics "
+	"mode switch, it may fall into this category.  The next time "
+	"you get this warning for this program you may select "
+	"""Always ignore mode switches for this program"" "
+	"to suppress further warnings.\r\n\r\n"
+
+	"If you wish to close this DOS window, select "
+	"""Terminate this DOS Window"".  If you select this option "
+	"you will be asked if you wish to have DOSMAX refuse to "
+	"run this program in future DOSMAX sessions.\r\n\r\n"
+
+	"Some text mode programs switch into graphics mode only "
+	"for certain features.  The most common examples are "
+	"programs with ""print preview"" features.  As long as the "
+	"user avoids these features, DOSMAX will function properly.  "
+	"Only the user can decide when giving up a feature is "
+	"worth the additional memory. DOSMAX provides a mechanism "
+	"to warn users when starting an application with graphic "
+	"mode features.  This can serve as a reminder when a user "
+	"starts one of these programs.  Refer to the documentation "
+	"for more information on adding a program to the warning list."
+#endif				// IFDEF LANG_GR
+END
+
+ID_WARNTEXT	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Sie haben ein DOS-Programm gestartet, daß möglicherweise "
+	"Funktionen im Grafikmodus verwendet. DOSMAX-Fenster unterstützen nur "
+	"Anwendungen im Textmodus. Wenn Sie das aktuelle Programm ablaufen lassen, "
+	"dürfen Sie keine Grafikfunktionen (z.B. Druckbild-Vorschau) benutzen.\r\n\r\n"
+	"Wenn Sie dennoch beabsichtigen, Funktionen im Grafikmodus zu benutzen, "
+	"beenden Sie die Anwendung jetzt sofort. Lassen Sie diese in einem "
+	"normalen DOS-Fenster ablaufen."
+#else
+	"You are about to run a DOS program which may have graphics "
+	"mode features.  DOSMAX windows support only text mode applications."
+	"  If you run this program you should not invoke graphics mode "
+	"capabilities (such as any print preview feature).\r\n\r\n"
+	"If you intend to invoke features which you believe operate "
+	"in graphics mode, please exit the application immediately "
+	"and restart it in a normal DOS window."
+#endif				// IFDEF LANG_GR
+END
+
+ID_FAILTEXT	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Dieses Programm wurde als Anwendung erkannt, die mit DOSMAX "
+	"für Windows NICHT verträglich ist. Bitte öffnen Sie ein normales DOS-Fenster, "
+	"wenn Sie diese Anwendung ausführen möchten."
+#else
+	"This program has been identified as incompatible with DOSMAX "
+	"for Windows.  Please open a standard DOS window if you wish "
+	"to execute this program."
+#endif				// IFDEF LANG_GR
+END
+

@@ -1,0 +1,608 @@
+/* qpifedit.rc - (C) Copyright 1993 Qualitas, Inc.  All Rights Reserved. */
+
+// Due to the fiddly nature of the dialog panes, always edit these dialog
+// resources by hand.  Don't use a dialog editor or resource workshop unless
+// you really understand what you're doing and you don't expect me to fix it.
+// WRL 18 MAR 93
+
+#include <windows.h>
+
+#include "qpifedit.h"
+
+#include "qpifhelp.rc"
+
+#include "cversion.h"
+#include <mversion.h>
+#include <common.ver>
+
+IDI_QIF 	ICON	qpifedit.ico
+IDI_DOSMAX	ICON	dosmax.ico
+
+MenuApp MENU PRELOAD MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+    POPUP "&Datei"
+    BEGIN
+	MENUITEM "&Neu",        IDM_F_NEW
+	MENUITEM "Ö&ffnen...",    IDM_F_OPEN
+	MENUITEM "&Speichern",       IDM_F_SAVE
+	MENUITEM "Speichern &unter...", IDM_F_SAVEAS
+	MENUITEM SEPARATOR
+	MENUITEM "&Beenden",       IDM_F_EXIT
+    END
+#else
+    POPUP "&File"
+    BEGIN
+	MENUITEM "&New",        IDM_F_NEW
+	MENUITEM "&Open...",    IDM_F_OPEN
+	MENUITEM "&Save",       IDM_F_SAVE
+	MENUITEM "Save &As...", IDM_F_SAVEAS
+	MENUITEM SEPARATOR
+	MENUITEM "E&xit",       IDM_F_EXIT
+    END
+#endif				/* IFDEF LANG_GR */
+
+#ifdef LANG_GR
+    POPUP "&Einstellungen"
+    BEGIN
+	MENUITEM "&Generell",    IDB_GENERAL
+	MENUITEM "&Speicher",    IDB_MEMORY
+	MENUITEM "&Video",       IDB_VIDEO
+	MENUITEM "&Multitask",   IDB_TASK
+	MENUITEM "S&onstiges",   IDB_OTHER
+	MENUITEM SEPARATOR
+	MENUITEM "PIF-&Test",    IDB_RUNPIF
+    END
+#else
+    POPUP "Sett&ings"
+    BEGIN
+	MENUITEM "&General",    IDB_GENERAL
+	MENUITEM "&Memory",     IDB_MEMORY
+	MENUITEM "&Video",      IDB_VIDEO
+	MENUITEM "Multi&task",  IDB_TASK
+	MENUITEM "&Other",      IDB_OTHER
+	MENUITEM SEPARATOR
+	MENUITEM "&Run PIF",    IDB_RUNPIF
+    END
+#endif				/* IFDEF LANG_GR */
+
+#ifdef LANG_GR
+    POPUP "&Hilfe"
+    BEGIN
+	MENUITEM "Üb&erblick", IDM_H_OVERVIEW
+	MENUITEM "&Hilfethema suchen...", IDM_H_SEARCH
+	MENUITEM SEPARATOR
+	MENUITEM "&Technischer Kundendienst", IDM_H_TECHSUP
+	MENUITEM SEPARATOR
+	MENUITEM "Inf&o über Qualitas PIF-Editor...", IDM_H_ABOUT
+    END
+#else
+    POPUP "&Help"
+    BEGIN
+	MENUITEM "&Overview", IDM_H_OVERVIEW
+	MENUITEM "&Search for Help on...", IDM_H_SEARCH
+	MENUITEM SEPARATOR
+	MENUITEM "&Technical Support", IDM_H_TECHSUP
+	MENUITEM SEPARATOR
+	MENUITEM "&About Qualitas PIF Editor...", IDM_H_ABOUT
+    END
+#endif				/* IFDEF LANG_GR */
+END
+
+IDD_FRAME DIALOG 0, 0, 270, 200
+STYLE DS_LOCALEDIT | WS_OVERLAPPED | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX
+MENU MenuApp
+FONT 8, "MS Sans Serif"
+BEGIN
+#ifdef LANG_GR
+	PUSHBUTTON "Generell",  IDB_GENERAL, 0, 0, 45, 20
+	PUSHBUTTON "Speicher",  IDB_MEMORY, 45, 0, 45, 20
+	PUSHBUTTON "Video",     IDB_VIDEO, 90, 0, 45, 20
+	PUSHBUTTON "Multitask", IDB_TASK, 135, 0, 45, 20
+	PUSHBUTTON "Sonstiges", IDB_OTHER, 180, 0, 45, 20
+	PUSHBUTTON "PIF-Test",  IDB_RUNPIF, 228, 3, 40, 14
+#else
+	PUSHBUTTON "General",   IDB_GENERAL, 0, 0, 45, 20
+	PUSHBUTTON "Memory",    IDB_MEMORY, 45, 0, 45, 20
+	PUSHBUTTON "Video",     IDB_VIDEO, 90, 0, 45, 20
+	PUSHBUTTON "Multitask", IDB_TASK, 135, 0, 45, 20
+	PUSHBUTTON "Other",     IDB_OTHER, 180, 0, 45, 20
+	PUSHBUTTON "Run PIF",   IDB_RUNPIF, 228, 3, 40, 14
+#endif				/* IFDEF LANG_GR */
+	CONTROL    "", IDD_HELP, "EDIT", ES_LEFT | ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL, 5, 100, 260, 95
+
+; New scheme that include all panes in the main dialog
+
+; General
+#ifdef LANG_GR
+    LTEXT	    "&Programmdateiname:", IDT_FILENAME, 12, 29, 69, 8,
+			NOT WS_GROUP
+    EDITTEXT	    IDE_FILENAME, 88, 29, 166, 12, ES_AUTOHSCROLL
+
+    LTEXT	    "Programm&titel:", IDT_TITLE, 12, 49, 46, 8, NOT WS_GROUP
+    EDITTEXT	    IDE_TITLE, 88, 49, 135, 12, ES_AUTOHSCROLL
+
+    LTEXT	    "P&rogrammparameter:", IDT_PARAMS, 12, 69, 69, 8,
+			NOT WS_GROUP
+    EDITTEXT	    IDE_PARAMS, 88, 69, 166, 12, ES_AUTOHSCROLL
+
+    LTEXT	    "&Anfangsverzeichnis:", IDT_DIRECTORY, 12, 89, 69, 8,
+			NOT WS_GROUP
+    EDITTEXT	    IDE_DIRECTORY, 88, 89, 166, 12, ES_AUTOHSCROLL
+#else
+    LTEXT	    "&Program Filename:", IDT_FILENAME, 12, 29, 61, 8,
+			NOT WS_GROUP
+    EDITTEXT	    IDE_FILENAME, 88, 29, 166, 12, ES_AUTOHSCROLL
+
+    LTEXT	    "&Window Title:", IDT_TITLE, 12, 49, 46, 8, NOT WS_GROUP
+    EDITTEXT	    IDE_TITLE, 88, 49, 135, 12, ES_AUTOHSCROLL
+
+    LTEXT	    "Optional Para&meters:", IDT_PARAMS, 12, 69, 69, 8,
+			NOT WS_GROUP
+    EDITTEXT	    IDE_PARAMS, 88, 69, 166, 12, ES_AUTOHSCROLL
+
+    LTEXT	    "&Start-up Directory:", IDT_DIRECTORY, 12, 89, 61, 8,
+			NOT WS_GROUP
+    EDITTEXT	    IDE_DIRECTORY, 88, 89, 166, 12, ES_AUTOHSCROLL
+#endif				/* IFDEF LANG_GR */
+
+; Memory
+#ifdef LANG_GR
+    GROUPBOX	"&Qualitas DOSMAX für Windows", IDG_SUPERDOS, 5, 24, 260, 25,
+		NOT WS_TABSTOP
+
+    CONTROL	"Voreinstellung", IDB_SUPERVM_DEF, "BUTTON",
+		BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 61, 33, 59, 12
+    CONTROL	"EIN", IDB_SUPERVM_ON, "BUTTON",
+		BS_AUTORADIOBUTTON | WS_TABSTOP, 132, 33, 25, 12
+    CONTROL	"AUS", IDB_SUPERVM_OFF, "BUTTON",
+		BS_AUTORADIOBUTTON | WS_TABSTOP, 174, 33, 27, 12
+
+    GROUPBOX	"Speicher-Optionen (Größe in KB)", IDG_MEMOPTS,
+		5, 53, 260, 70, NOT WS_TABSTOP
+
+    LTEXT	"&DOS:", IDT_DOSMEM, 15, 69, 19, 8, NOT WS_GROUP
+
+    LTEXT	"Min", IDT_DOSMIN, 46, 69, 13, 8, NOT WS_GROUP
+    EDITTEXT	IDE_DOSMIN, 75, 67, 19, 12, ES_AUTOHSCROLL | WS_GROUP
+
+    LTEXT	"Er&wünscht", IDT_DOSMAX, 101, 69, 36, 8, NOT WS_GROUP
+    EDITTEXT	IDE_DOSMAX, 140, 67, 19, 12, ES_AUTOHSCROLL | WS_GROUP
+
+    CONTROL	"&Sperren", IDB_DOSLOCK, "Button",
+		BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP, 167, 68, 40, 10
+
+    LTEXT	"&EMS:", IDT_EMSMEM, 15, 87, 19, 8, NOT WS_GROUP
+
+    LTEXT	"Min", IDT_EMSMIN, 46, 87, 13, 8, NOT WS_GROUP
+    EDITTEXT	IDE_EMSMIN, 68, 85, 26, 12, ES_AUTOHSCROLL | WS_GROUP
+
+    LTEXT	"&Max", IDT_EMSMAX, 103, 87, 16, 8, NOT WS_GROUP
+    EDITTEXT	IDE_EMSMAX, 130, 85, 29, 12, ES_AUTOHSCROLL | WS_GROUP
+
+    CONTROL	"S&perren", IDB_EMSLOCK, "Button",
+		BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP, 167, 86, 40, 10
+
+    LTEXT	"&XMS:", IDT_XMSMEM, 15, 105, 19, 8, NOT WS_GROUP
+
+    LTEXT	"Min", IDT_XMSMIN, 46, 105, 13, 8, NOT WS_GROUP
+    EDITTEXT	IDE_XMSMIN, 68, 103, 26, 12,
+		ES_AUTOHSCROLL | WS_GROUP | WS_TABSTOP
+
+    LTEXT	"M&ax", IDT_XMSMAX, 103, 105, 16, 8, NOT WS_GROUP
+    EDITTEXT	IDE_XMSMAX, 130, 103, 29, 12,
+		ES_AUTOHSCROLL | WS_GROUP | WS_TABSTOP
+
+    CONTROL	"Spe&rren", IDB_XMSLOCK, "Button",
+		BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP, 167, 104, 40, 10
+
+    CONTROL	"&Nutzt HMA", IDB_XMSHMA, "Button",
+		BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP, 213, 104, 47, 10
+#else
+    GROUPBOX	"&Qualitas DOSMAX for Windows", IDG_SUPERDOS, 5, 24, 260, 25,
+		NOT WS_TABSTOP
+
+    CONTROL	"Use Default", IDB_SUPERVM_DEF, "BUTTON",
+		BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 61, 33, 55, 12
+    CONTROL	"ON", IDB_SUPERVM_ON, "BUTTON",
+		BS_AUTORADIOBUTTON | WS_TABSTOP, 132, 33, 25, 12
+    CONTROL	"OFF", IDB_SUPERVM_OFF, "BUTTON",
+		BS_AUTORADIOBUTTON | WS_TABSTOP, 174, 33, 27, 12
+
+    GROUPBOX	"Memory Options (Sizes in KB)", IDG_MEMOPTS,
+		5, 53, 260, 70, NOT WS_TABSTOP
+
+    LTEXT	"&DOS:", IDT_DOSMEM, 15, 69, 19, 8, NOT WS_GROUP
+
+    LTEXT	"Min", IDT_DOSMIN, 46, 69, 13, 8, NOT WS_GROUP
+    EDITTEXT	IDE_DOSMIN, 75, 67, 19, 12, ES_AUTOHSCROLL | WS_GROUP
+
+    LTEXT	"De&sired", IDT_DOSMAX, 103, 69, 26, 8, NOT WS_GROUP
+    EDITTEXT	IDE_DOSMAX, 140, 67, 19, 12, ES_AUTOHSCROLL | WS_GROUP
+
+    CONTROL	"&Locked", IDB_DOSLOCK, "Button",
+		BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP, 167, 68, 40, 10
+
+    LTEXT	"&EMS:", IDT_EMSMEM, 15, 87, 19, 8, NOT WS_GROUP
+
+    LTEXT	"Min", IDT_EMSMIN, 46, 87, 13, 8, NOT WS_GROUP
+    EDITTEXT	IDE_EMSMIN, 68, 85, 26, 12, ES_AUTOHSCROLL | WS_GROUP
+
+    LTEXT	"Limi&t", IDT_EMSMAX, 103, 87, 16, 8, NOT WS_GROUP
+    EDITTEXT	IDE_EMSMAX, 130, 85, 29, 12, ES_AUTOHSCROLL | WS_GROUP
+
+    CONTROL	"Lo&cked", IDB_EMSLOCK, "Button",
+		BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP, 167, 86, 40, 10
+
+    LTEXT	"&XMS:", IDT_XMSMEM, 15, 105, 19, 8, NOT WS_GROUP
+
+    LTEXT	"Min", IDT_XMSMIN, 46, 105, 13, 8, NOT WS_GROUP
+    EDITTEXT	IDE_XMSMIN, 68, 103, 26, 12,
+		ES_AUTOHSCROLL | WS_GROUP | WS_TABSTOP
+
+    LTEXT	"Li&mit", IDT_XMSMAX, 103, 105, 16, 8, NOT WS_GROUP
+    EDITTEXT	IDE_XMSMAX, 130, 103, 29, 12,
+		ES_AUTOHSCROLL | WS_GROUP | WS_TABSTOP
+
+    CONTROL	"Loc&ked", IDB_XMSLOCK, "Button",
+		BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP, 167, 104, 40, 10
+
+    CONTROL	"&Uses HMA", IDB_XMSHMA, "Button",
+		BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP, 213, 104, 47, 10
+#endif				/* IFDEF LANG_GR */
+
+; Video
+#ifdef LANG_GR
+    GROUPBOX	    "&Anzeige", IDG_DISPLAY, 10, 25, 83, 37,
+			NOT WS_TABSTOP
+
+    CONTROL	    "Vollbild", IDB_FULLSCREEN, "Button",
+		    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 18, 37, 50, 10
+    CONTROL	    "Fenster", IDB_WINDOWED, "Button",
+		    BS_AUTORADIOBUTTON | WS_TABSTOP, 18, 47, 47, 10
+
+    GROUPBOX	    "Bildschirm&speicher", IDG_VIDEOMEM, 10, 65, 83, 46,
+			NOT WS_TABSTOP
+
+    CONTROL	    "Text", IDB_TEXT, "Button",
+		    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 19, 78, 27, 10
+    CONTROL	    "Niedrige Auflösung", IDB_LOW, "Button",
+		    BS_AUTORADIOBUTTON | WS_TABSTOP, 19, 88, 72, 10
+    CONTROL	    "Hohe Auflösung", IDB_HIGH, "Button",
+		    BS_AUTORADIOBUTTON | WS_TABSTOP, 19, 98, 63, 10
+
+    GROUPBOX	    "Bildschirm-Anschlüsse", IDG_MONITOR, 112, 25, 147, 45,
+			NOT WS_TABSTOP
+
+    CONTROL	    "Te&xt", IDB_MONTEXT, "Button", BS_AUTOCHECKBOX |
+		    WS_GROUP | WS_TABSTOP, 134, 35, 27, 10
+    CONTROL	    "&Niedrige Auflösung", IDB_MONLOW, "Button",
+		    BS_AUTOCHECKBOX | WS_TABSTOP, 134, 45, 85, 10
+    CONTROL	    "&Hohe Auflösung", IDB_MONHIGH, "Button",
+		    BS_AUTOCHECKBOX | WS_TABSTOP, 134, 55, 65, 10
+
+    GROUPBOX	    "Sonstiges", IDG_OTHER, 112, 75, 147, 36, NOT WS_TABSTOP
+
+    CONTROL	    "&Textmodus emulieren", IDB_EMULATE, "Button",
+		    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP, 134, 85, 108, 10
+    CONTROL	    "&Bildschirmspeicher erhalten", IDB_RETAIN, "Button",
+		    BS_AUTOCHECKBOX | WS_TABSTOP, 134, 95, 108, 10
+#else
+    GROUPBOX	    "&Display Usage", IDG_DISPLAY, 10, 25, 83, 37,
+			NOT WS_TABSTOP
+
+    CONTROL	    "Full Screen", IDB_FULLSCREEN, "Button",
+		    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 18, 37, 50, 10
+    CONTROL	    "Windowed", IDB_WINDOWED, "Button",
+		    BS_AUTORADIOBUTTON | WS_TABSTOP, 18, 47, 47, 10
+
+    GROUPBOX	    "&Video Memory", IDG_VIDEOMEM, 10, 65, 83, 46,
+			NOT WS_TABSTOP
+
+    CONTROL	    "Text", IDB_TEXT, "Button",
+		    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 19, 78, 27, 10
+    CONTROL	    "Low Graphics", IDB_LOW, "Button",
+		    BS_AUTORADIOBUTTON | WS_TABSTOP, 19, 88, 57, 10
+    CONTROL	    "High Graphics", IDB_HIGH, "Button",
+		    BS_AUTORADIOBUTTON | WS_TABSTOP, 19, 98, 59, 10
+
+    GROUPBOX	    "Monitor Ports", IDG_MONITOR, 112, 25, 147, 45,
+			NOT WS_TABSTOP
+
+    CONTROL	    "Te&xt", IDB_MONTEXT, "Button", BS_AUTOCHECKBOX |
+		    WS_GROUP | WS_TABSTOP, 134, 35, 27, 10
+    CONTROL	    "Low Gra&phics", IDB_MONLOW, "Button",
+		    BS_AUTOCHECKBOX | WS_TABSTOP, 134, 45, 57, 10
+    CONTROL	    "High Graphi&cs", IDB_MONHIGH, "Button",
+		    BS_AUTOCHECKBOX | WS_TABSTOP, 134, 55, 59, 10
+
+    GROUPBOX	    "Other", IDG_OTHER, 112, 75, 147, 36, NOT WS_TABSTOP
+
+    CONTROL	    "Em&ulate Text Mode", IDB_EMULATE, "Button",
+		    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP, 134, 85, 75, 10
+    CONTROL	    "Retain Video &Memory", IDB_RETAIN, "Button",
+		    BS_AUTOCHECKBOX | WS_TABSTOP, 134, 95, 82, 10
+#endif				/* IFDEF LANG_GR */
+
+; Multitask
+#ifdef LANG_GR
+    GROUPBOX	    "Priorität", IDG_PRIORITY, 5, 24, 260, 47, NOT WS_TABSTOP
+
+    LTEXT	    "&Hintergrund-Priorität:", IDT_BACKPRIO, 11, 36, 70, 8,
+			NOT WS_GROUP
+    EDITTEXT	    IDE_BACKPRIO, 86, 34, 29, 12, ES_AUTOHSCROLL | WS_GROUP
+
+    LTEXT	    "&Vordergrund-Priorität:", IDT_FOREPRIO, 133, 36, 90, 8,
+			NOT WS_GROUP
+    EDITTEXT	    IDE_FOREPRIO, 210, 34, 29, 12, ES_AUTOHSCROLL | WS_GROUP
+
+    CONTROL	    "&Leerlaufzeit entdecken", IDB_DETECTIDLE, "Button",
+		    BS_AUTOCHECKBOX | WS_TABSTOP, 102, 53, 95, 10
+
+    GROUPBOX	    "Ausführung", IDG_EXEC, 5, 77, 260, 28, NOT WS_TABSTOP
+
+    CONTROL	    "H&intergrund", IDB_BACKEXEC, "Button",
+		    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP, 24, 89, 52, 10
+    CONTROL	    "&Exklusiv", IDB_EXCLEXEC, "Button",
+		    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP, 138, 88, 44, 10
+#else
+    GROUPBOX	    "Priority", IDG_PRIORITY, 5, 24, 260, 47, NOT WS_TABSTOP
+
+    LTEXT	    "&Background Priority:", IDT_BACKPRIO, 11, 36, 67, 8,
+			NOT WS_GROUP
+    EDITTEXT	    IDE_BACKPRIO, 86, 34, 29, 12, ES_AUTOHSCROLL | WS_GROUP
+
+    LTEXT	    "Foreground &Priority:", IDT_FOREPRIO, 133, 36, 65, 8,
+			NOT WS_GROUP
+    EDITTEXT	    IDE_FOREPRIO, 210, 34, 29, 12, ES_AUTOHSCROLL | WS_GROUP
+
+    CONTROL	    "&Detect Idle Time", IDB_DETECTIDLE, "Button",
+		    BS_AUTOCHECKBOX | WS_TABSTOP, 102, 53, 67, 10
+
+    GROUPBOX	    "Execution", IDG_EXEC, 5, 77, 260, 28, NOT WS_TABSTOP
+
+    CONTROL	    "Bac&kground", IDB_BACKEXEC, "Button",
+		    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP, 24, 89, 52, 10
+    CONTROL	    "&Exclusive", IDB_EXCLEXEC, "Button",
+		    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP, 138, 88, 44, 10
+#endif				/* IFDEF LANG_GR */
+
+; Other
+#ifdef LANG_GR
+    GROUPBOX	    "Tastenkombination für Anwendung", IDG_SHORTCUT, 5, 24, 156, 33,
+			NOT WS_TABSTOP
+
+    CONTROL	    "&Alt", IDB_ALT, "Button", BS_AUTOCHECKBOX | WS_TABSTOP,
+		    11, 38, 22, 10
+    CONTROL	    "&Strg", IDB_CTRL, "Button", BS_AUTOCHECKBOX | WS_TABSTOP,
+		    39, 38, 24, 10
+    CONTROL	    "&Umsch.", IDB_SHIFT, "Button", BS_AUTOCHECKBOX |
+		    WS_TABSTOP, 69, 38, 34, 10
+    LTEXT	    "&Taste:", IDT_KEY, 106, 39, 22, 8, NOT WS_GROUP
+    EDITTEXT	    IDE_KEY, 128, 37, 30, 13, ES_AUTOHSCROLL
+
+    GROUPBOX	    "Optionen", IDG_OPTIONS, 5, 63, 156, 47, NOT WS_TABSTOP
+
+    CONTROL	    "Schnelles &Einfügen", IDB_FASTPASTE, "Button",
+		    BS_AUTOCHECKBOX | WS_TABSTOP, 21, 73, 72, 10
+    CONTROL	    "Schließen bei &Beenden von Windows", IDB_ALLOWCLOSE, "Button",
+		    BS_AUTOCHECKBOX | WS_TABSTOP, 21, 83, 129, 10
+    CONTROL	    "&Fenster schließen bei Beenden", IDB_CLOSEEXIT, "Button",
+		    BS_AUTOCHECKBOX | WS_TABSTOP, 21, 93, 111, 10
+
+    GROUPBOX	    "Tasten reservieren", IDG_RESERVE, 167, 24, 94, 86,
+			NOT WS_TABSTOP
+
+    CONTROL	    "Alt+Tabu&latortaste", IDB_ALTTAB, "Button", BS_AUTOCHECKBOX |
+		    WS_TABSTOP, 183, 36, 73, 10
+    CONTROL	    "&Druck", IDB_PRTSC, "Button", BS_AUTOCHECKBOX |
+		    WS_TABSTOP, 183, 46, 31, 10
+    CONTROL	    "Alt+E&ingabetaste", IDB_ALTENTER, "Button", BS_AUTOCHECKBOX |
+		    WS_TABSTOP, 183, 56, 68, 10
+    CONTROL	    "Alt+Es&c", IDB_ALTESC, "Button", BS_AUTOCHECKBOX |
+		    WS_TABSTOP, 183, 66, 36, 10
+    CONTROL	    "Str&g+Esc", IDB_CTRLESC, "Button", BS_AUTOCHECKBOX |
+		    WS_TABSTOP, 183, 76, 39, 10
+    CONTROL	    "Alt+Lee&rtaste", IDB_ALTSPACE, "Button", BS_AUTOCHECKBOX |
+		    WS_TABSTOP, 183, 86, 56, 10
+    CONTROL	    "Alt+Druc&k", IDB_ALTPRTSC, "Button", BS_AUTOCHECKBOX |
+		    WS_TABSTOP, 183, 96, 42, 10
+#else
+    GROUPBOX	    "Application Shortcut Key", IDG_SHORTCUT, 5, 24, 156, 33,
+			NOT WS_TABSTOP
+
+    CONTROL	    "&Alt", IDB_ALT, "Button", BS_AUTOCHECKBOX | WS_TABSTOP,
+		    11, 38, 22, 10
+    CONTROL	    "&Ctrl", IDB_CTRL, "Button", BS_AUTOCHECKBOX | WS_TABSTOP,
+		    39, 38, 24, 10
+    CONTROL	    "&Shift", IDB_SHIFT, "Button", BS_AUTOCHECKBOX |
+		    WS_TABSTOP, 69, 38, 28, 10
+    LTEXT	    "&Key:", IDT_KEY, 103, 39, 16, 8, NOT WS_GROUP
+    EDITTEXT	    IDE_KEY, 120, 37, 36, 12, ES_AUTOHSCROLL
+
+    GROUPBOX	    "Options", IDG_OPTIONS, 5, 63, 156, 47, NOT WS_TABSTOP
+
+    CONTROL	    "All&ow fast paste", IDB_FASTPASTE, "Button",
+		    BS_AUTOCHECKBOX | WS_TABSTOP, 21, 73, 64, 10
+    CONTROL	    "Allo&w close when active", IDB_ALLOWCLOSE, "Button",
+		    BS_AUTOCHECKBOX | WS_TABSTOP, 21, 83, 91, 10
+    CONTROL	    "Close Window on e&xit", IDB_CLOSEEXIT, "Button",
+		    BS_AUTOCHECKBOX | WS_TABSTOP, 21, 93, 83, 10
+
+    GROUPBOX	    "Reserve Shortcut Keys", IDG_RESERVE, 167, 24, 94, 86,
+			NOT WS_TABSTOP
+
+    CONTROL	    "Alt-Ta&b", IDB_ALTTAB, "Button", BS_AUTOCHECKBOX |
+		    WS_TABSTOP, 183, 36, 36, 10
+    CONTROL	    "&PrtSc", IDB_PRTSC, "Button", BS_AUTOCHECKBOX |
+		    WS_TABSTOP, 183, 46, 31, 10
+    CONTROL	    "Alt-E&nter", IDB_ALTENTER, "Button", BS_AUTOCHECKBOX |
+		    WS_TABSTOP, 183, 56, 41, 10
+    CONTROL	    "Alt-&Esc", IDB_ALTESC, "Button", BS_AUTOCHECKBOX |
+		    WS_TABSTOP, 183, 66, 36, 10
+    CONTROL	    "Ct&rl-Esc", IDB_CTRLESC, "Button", BS_AUTOCHECKBOX |
+		    WS_TABSTOP, 183, 76, 39, 10
+    CONTROL	    "A&lt-Space", IDB_ALTSPACE, "Button", BS_AUTOCHECKBOX |
+		    WS_TABSTOP, 183, 86, 44, 10
+    CONTROL	    "Al&t-PrtSc", IDB_ALTPRTSC, "Button", BS_AUTOCHECKBOX |
+		    WS_TABSTOP, 183, 96, 42, 10
+#endif				/* IFDEF LANG_GR */
+
+END
+
+
+IDD_ABOUT DIALOG DISCARDABLE  4, 4, 184, 119
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+#ifdef LANG_GR
+CAPTION "Info - Qualitas PIF Editor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",1,129,6,50,14
+    ICON	    IDI_QIF,-1,144,56,18,20
+    LTEXT	    "Qualitas PIF Editor\nVersion " VER_PRODUCTVERSION_STR,-1, 12,7,112,17
+    LTEXT	    VER_LEGALCOPYRIGHT2_STR,
+		    -1,12,36,125,18
+    LTEXT	    "Dieses Exemplar ist lizenziert für: ",101,12,68,112,8
+    LTEXT	    "",102,12,84,168,24
+END
+#else
+CAPTION "About Qualitas PIF Editor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",1,129,6,50,14
+    ICON	    IDI_QIF,-1,144,56,18,20
+    LTEXT	    "Qualitas PIF Editor\nVersion " VER_PRODUCTVERSION_STR,-1, 12,7,112,17
+    LTEXT	    VER_LEGALCOPYRIGHT2_STR,
+		    -1,12,36,125,18
+    LTEXT	    "This product is licensed to: ",101,12,68,112,8
+    LTEXT	    "",102,12,84,168,24
+END
+#endif				/* IFDEF LANG_GR */
+
+
+IDD_STANDARD DIALOG 20, 20, 183, 139
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+#ifdef LANG_GR
+CAPTION "Qualitas PIF Editor"
+BEGIN
+	CONTROL "Der Qualitas PIF Editor bearbeitet nur", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 17, 128, 8
+	CONTROL "PIF Funktionen zum erweiterten Modus", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 26, 121, 8
+	CONTROL "für 386-PCs. Sie können eine PIF Datei", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 35, 129, 8
+	ICON 32515, 971, 13, 19, 18, 20
+	CONTROL "bearbeiten, aber die Funktionen für", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 44, 127, 8
+	CONTROL "den erweiterten Modus werden im", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 53, 127, 8
+	CONTROL "Standardmodus nicht verfügbar sein.", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 62, 127, 8
+
+	PUSHBUTTON "OK", IDOK, 76, 115, 32, 14, WS_TABSTOP
+	CONTROL "Meldung in Zukunft &nicht mehr anzeigen.", IDB_EXPERT, "BUTTON", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 20, 83, 143, 14
+END
+#else
+CAPTION "Qualitas PIF Editor"
+BEGIN
+	CONTROL "The Qualitas PIF Editor will only edit", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 17, 128, 8
+	CONTROL "386 Enhanced mode PIF features.", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 26, 121, 8
+	CONTROL "You may edit a PIF file but the", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 35, 129, 8
+	ICON 32515, 971, 13, 19, 18, 20
+	CONTROL "enhanced mode features will not be", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 44, 127, 8
+	CONTROL "available while you remain in", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 53, 127, 8
+	CONTROL "Standard mode.", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 43, 62, 127, 8
+
+	PUSHBUTTON "OK", IDOK, 76, 115, 32, 14, WS_TABSTOP
+	CONTROL "&Don't display this message in the future.", IDB_EXPERT, "BUTTON", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 20, 83, 143, 14
+END
+#endif				/* IFDEF LANG_GR */
+
+
+STRINGTABLE PRELOAD MOVEABLE DISCARDABLE
+BEGIN
+    IDS_APPNAME, APPNAME
+    IDS_APPTITLE, APPTITLE
+    IDS_APPTITLETHE, APPTITLETHE
+
+#ifdef LANG_GR
+    1, "Für diese Steuerung ist keine Hilfe verfügbar\0"
+#else
+    1, "No help available for this control\0"
+#endif				/* IFDEF LANG_GR */
+
+#ifdef LANG_GR
+    IDE_DOSMIN, "KB Minimum"
+    IDE_DOSMAX, "KB Erwünscht"
+    IDE_EMSMIN, "EMS Minimum"
+    IDE_EMSMAX, "EMS Maximum"
+    IDE_XMSMIN, "XMS Minimum"
+    IDE_XMSMAX, "XMS Maximum"
+
+    IDE_BACKPRIO,	"Hintergrund-Priorität"
+    IDE_FOREPRIO,	"Vordergrund-Priorität"
+#else
+    IDE_DOSMIN, "KB Minimum"
+    IDE_DOSMAX, "KB Desired"
+    IDE_EMSMIN, "EMS Minimum"
+    IDE_EMSMAX, "EMS Limit"
+    IDE_XMSMIN, "XMS Minimum"
+    IDE_XMSMAX, "XMS Limit"
+
+    IDE_BACKPRIO,	"Background Priority"
+    IDE_FOREPRIO,	"Foreground Priority"
+#endif				/* IFDEF LANG_GR */
+
+#ifdef LANG_GR
+    IDS_FILEMASK,	"PIF Dateien(*.PIF)\n*.pif\n"
+
+    IDS_REGISTER_CLASS, "Klassen-Registrierung fehlgeschlagen"
+    IDS_REALMODE,	"QPIFEDIT erfordert Windows 3.x im Standard- oder erweiterten Modus für 386-PC"
+    IDS_MODE286,	"QPIFEDIT unterstützt nicht die Bearbeitung von Standardmodus .PIF-Dateien"
+    IDS_SAVECHANGES,	"Änderung speichern unter %s?"
+    IDS_UNTITLED,	"<OhneName>"
+
+    IDS_CANTOPEN,	"Kann %s nicht öffnen"
+    IDS_NOTVALIDPIF,	"%s ist keine gültige .PIF Datei"
+    IDS_TOOBIG, 	"Die Datei ist zu groß für eine gültige .PIF Datei"
+    IDS_OLDPIF, 	"Dies ist eine alte Windows PIF Datei"
+    IDS_BADCHECKSUM,	"Die interne .PIF Struktur ist wahrscheinlich zerstört"
+    IDS_NOTVALIDQPE,	"Die Qualitas PIF Erweiterungs-Datei, %s, zugehörig zu %s ist ungültig"
+
+    IDS_BADNUM, 	"'%s' Wert muß zwischen %d und %d liegen"
+    IDS_BADNUM2,	"'%s' Wert muß -1 sein oder zwischen %d und %d liegen"
+
+    IDS_FILENAMEREQ,	"Der benötigte Programm-Dateiname muß angegeben werden."
+    IDS_BADFILENAME,	"Ungültiger Dateiname. \n\r\rStellen Sie sicher, daß der Dateiname maximal 8 Zeichen lang ist und daß nach einem Punkt die 3-Zeichen Dateinamenerweiterung folgt. Wählen Sie OK zum Übergehen dieser Warnung."
+
+    IDS_COMMDLGERR,	"Problem bei Anwendung der COMMDLG.DLL für ÖFFNEN oder SPEICHERN"
+    IDS_OUTOFMEMORY,	"Nicht genügend Speicher"
+    IDS_OUTOFMEMORY2,	"Nicht genügend Speicher"
+    IDS_OUTOFMEMORY3,	"Nicht genügend Speicher"
+    IDS_NOWIN95,	"QPIFEDIT ist mit Windows 95 nicht kompatibel. In Win95 klicken Sie mit der rechten Maustaste auf das Symbol und bearbeiten dann die Registerkarte Einstellungen."
+#else
+    IDS_FILEMASK,	"PIF Files(*.PIF)\n*.pif\n"
+
+    IDS_REGISTER_CLASS, "Register class failed"
+    IDS_REALMODE,	"QPIFEDIT requires Windows 3.x running in Standard or 386 Enhanced mode"
+    IDS_MODE286,	"QPIFEDIT doesn't support the editting of Standard mode .PIFs"
+    IDS_SAVECHANGES,	"Save changes to %s?"
+    IDS_UNTITLED,	"<Untitled>"
+
+    IDS_CANTOPEN,	"Can't open %s"
+    IDS_NOTVALIDPIF,	"%s is not a valid .PIF file"
+    IDS_TOOBIG, 	"File is too big to be a valid .PIF"
+    IDS_OLDPIF, 	"This is an old Windows PIF"
+    IDS_BADCHECKSUM,	".PIF internal structure appears to be damaged"
+    IDS_NOTVALIDQPE,	"The Qualitas PIF Extension file, %s, associated with %s is invalid"
+
+    IDS_BADNUM, "'%s' value must be between %d and %d"
+    IDS_BADNUM2,	"'%s' value must be -1, or between %d and %d"
+
+    IDS_FILENAMEREQ,	"The required program filename is required."
+    IDS_BADFILENAME,	"Invalid filename. \n\r\rCheck to ensure the filename has no more than 8 characters followed by a period and a 3-letter extension.  Press OK to ignore this warning."
+
+    IDS_COMMDLGERR,	"Problem using COMMDLG.DLL for OPEN or SAVE"
+    IDS_OUTOFMEMORY,	"Out of memory"
+    IDS_OUTOFMEMORY2,	"Out of memory"
+    IDS_OUTOFMEMORY3,	"Out of memory"
+    IDS_NOWIN95,	"QPIFEDIT is not compatible with Windows 95.  To edit PIF values in Win95, right click on the icon and edit the Property sheets."
+#endif				/* IFDEF LANG_GR */
+END
+
+

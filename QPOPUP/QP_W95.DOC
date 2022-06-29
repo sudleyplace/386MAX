@@ -1,0 +1,34 @@
+Make Sensitive to W95
+
+The offset in WinOldAp's DGROUP of certain VM handles changed with
+Win95, a change which needs to be reflected in QPOPUP (who would've
+thought?).
+
+At the same time, I moved the .INI data from QPOPUP.INI to QMAX.INI so
+as to have one less file to manage (as well as uninstall).
+
+Also, I changed QPOPUP.VER to CVERSION.H thus eliminating duplicate
+information already in MVERSION.H (which file is now included in
+QPOPUP.RC).
+
+MAKEFILE	Replace references to QPOPUP.VER with CVERSION.H.
+		Note dependency of QPOPUP.RC on MVERSION.H.
+
+CVERSION.H	Define new module for QPOPUP version info.
+
+QPOPUP.H	Use QMAX.INI instead of QPOPUP.INI.
+
+QPOPUP.C	Move read of "Debug" switch to earlier point so we can
+		  use its value.
+		If "Debug" switch is TRUE, signal INT 1.
+		Delete code which creates the QPOPUP.INI (now
+		  QMAX.INI) profile in case it doesn't exist as it
+		  must (and it doesn't matter if it doesn't as that's
+		  what default values are for).
+		In GetWinOldApHWNDFromVMHandle(), make sensitive to
+		  Win95's offsets within the WinOldAp DGROUP.
+
+QPOPUP.RC	Replace references to QPOPUP.VER with CVERSION.H.
+		Note dependency of QPOPUP.RC on MVERSION.H.
+
+

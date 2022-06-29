@@ -1,0 +1,5 @@
+		/MAP /NOD RET\qpopup.obj
+		RET\qpopup.exe
+		RET\qpopup.map
+		slibcew libw toolhelp
+		qpopup.def

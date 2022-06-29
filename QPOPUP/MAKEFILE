@@ -1,0 +1,102 @@
+# $Header:   P:/PVCS/MAX/QPOPUP/MAKEFILE.__V   1.7   30 May 1997 12:32:24   BOB  $
+#
+# MAKEFILE for QPOPUP.EXE
+
+!include $(MAXROOT)include\maxnames.mak
+
+AS	= ml6
+H2INC	= h2inc
+
+# These switches should work for both C6 and C7
+CFLAGS	= -W3 -AS -G2 -Gs -Gw -Zp -Ze -D_DEBUG -DLANG_$(LANG)
+AFLAGS	= -Cp /DLANG_$(LANG)
+LFLAGS	= /MAP /NOD
+HFLAGS	= /Mn /Ni -DLANG_$(LANG)
+RCFLAGS = -DLANG_$(LANG)
+
+# Define directories.  Some of these are OEM-specific
+V=$(MAXROOT)vxd\	# VxD source dir
+ALLINC=-I$(I) -I$(V)
+O=RET\			# Temporaries and the results of the build
+BIN=$(O)		# Destination for binaries
+
+# Generic rules
+
+{$(R)}.asm{$(O)}.exe:
+	$(AS) $(AFLAGS) $(ALLINC) $(R)$(@B).asm /Fe$(O)$(@B).exe
+	del $(@B).obj
+
+{$(R)}.asm{$(O)}.obj:
+	$(AS) -c $(AFLAGS) $(ALLINC) $(R)$(@B).asm /Fo$(O)$(@B).obj
+
+.asm.exe:
+	$(AS) $(AFLAGS) $(ALLINC) $(@B).asm /Fe$(@B).exe
+	del $(@B).obj
+
+{$(R)}.c{$(O)}.obj:
+	@Set INCLUDE=$(INCLUDE)
+	$(CC) -c $(CFLAGS) $(ALLINC) /Fo$(O)$(@B).obj $(R)$(@B).c
+
+ALL: DIR	$(BIN)qpopup.exe	$(BD)qpopup.exe
+
+DEL:
+	-rm $(O)*.*
+
+DIR:
+	vdir -c $(O)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\qpopup\*
+VCSDIR = P:\PVCS\MAX\qpopup\*
+ALIAS ALL P:\PVCS\MAX\qpopup\*.*,p:\pvcs\max\qpopup\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+DEPSCAN: makefile
+	depscan -s$(V)=$$(V) *.c *.cpp *.rc *.asm >qpopdep.inc
+
+makefile: qpopdep.inc $(H)makefile.inc
+
+!include qpopdep.inc
+!include $(H)makefile.inc
+
+clean:
+	echo Y | del ret
+	del *.obj
+	del *.exe
+	del *.res
+	del *.map
+
+zip:
+	del *.zip
+	pkzip -r -p qpopup.zip
+
+LIBS	=	slibcew libw toolhelp
+
+$(BIN)qpopup.exe: $(O)qpopup.obj qpopup.def $(O)qpopup.res qpopstub.exe
+	@Set LIB=$(LIB)
+	$(LD) @<<$(O)qpopup.lnk
+		$(LFLAGS) $(O)qpopup.obj
+		$(BIN)qpopup.exe
+		$(BIN)qpopup.map
+		$(LIBS)
+		qpopup.def
+<<KEEP
+	$(RC) -30 $(RCFLAGS) /fe$(BIN)qpopup.exe $(O)qpopup.res
+
+$(BD)qpopup.exe:   $(BIN)qpopup.exe
+	xc /r $(**R).exe	$*.*
+	xc /r $(**R).map	$*.*
+
+$(O)qpopup.res: qpopup.rc	$(QPOPUP_RCDEP)
+	@Set INCLUDE=$(INCLUDE)
+	$(RC) -r $(RCFLAGS) /fo$(O)qpopup.res qpopup.rc
+
+$(O)qpopup.obj: qpopup.c	$(QPOPUP_DEP)
+
+qpopstub.exe:	qpopstub.asm	$(QPOPSTUB_ADEP)
+
+

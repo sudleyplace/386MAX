@@ -1,0 +1,1362 @@
+//' $Header:   P:/PVCS/MAX/QPIFEDIT/QPIFHELP.RCV   1.0   05 Sep 1995 16:59:30   HENRY  $
+/************************  The Qualitas PIF Editor  ***************************
+ *									      *
+ *	     (C) Copyright 1993 Qualitas, Inc.	All rights reserved.	      *
+ *									      *
+ *  MODULE   :	QPIFHELP.RC - Help string resource			      *
+ *									      *
+ *  HISTORY  :	Who	When		What				      *
+ *		---	----		----				      *
+ *		PAUL	1 MAR 93	Original revision		      *
+ *		WRL	31 MAR 93	Prepare for internationalization      *
+ *									      *
+ *									      *
+ ******************************************************************************/
+
+/* TEST PIF BUTTON ************************************************************/
+
+IDB_RUNPIF	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Sie starten hier eine neue DOS-Sitzung mit den aktuellen "
+	"Qualitas PIF-Editor Einstellungen.\r\n\r\n"
+	"Es ist nicht notwendig, die PIF-Datei (Program Information "
+	"File) vor dem Start der DOS-Sitzung zu speichern. "
+	"Die neuen Einstellungen sind für den Test der PIF-Datei sofort wirksam.\0"
+#else
+	"Begin a new DOS session using the current Qualitas PIF "
+	"editor settings.\r\n\r\n"
+	"Users do not need to save the Program Information File (PIF) "
+	"before starting the DOS session to use current PIF settings.  "
+	"This is useful for testing a new PIF.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+/*  GENERAL ******************************************************************/
+
+IDB_GENERAL	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Hier geben Sie den Programmdateinamen, Programmtitel, Anfangsverzeichnis "
+	"und wahlfreie Programmparameter an.\0"
+#else
+	"Specify program filename, window title, start-up directory "
+	"and any optional parameters.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Program Filename
+IDE_FILENAME	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Geben Sie den Namen des ausführbaren Programmes oder der Batch-Datei an, "
+	"die Sie mit dieser PIF-Datei aufrufen möchten. "
+	"Der Programmname muß eine Dateinamenerweiterung "
+	".BAT, .COM, oder .EXE haben.\r\n\r\n"
+	"Sie können den Pfad angeben, der die Position des Programmes "
+	"bestimmt (z.B. 'C:\\ANWEND\\WP.EXE'). Wenn Sie den Pfad nicht in "
+	"diesem Feld angeben und die Programmdatei nicht im DOS-Pfad "
+	"zu finden ist, müssen Sie den 'Lagerort' der Datei im "
+	"Startverzeichnis angeben.\r\n\r\n"
+	"Wenn Sie eine PIF-Datei für den Start einer DOS-Sitzung ohne "
+	"Aufruf einer bestimmten Anwendung einrichten möchten, geben Sie "
+	"in diesem Feld 'COMMAND.COM' ein.\r\n\r\n"
+	"Wenn Sie im Programm-Manager ein neues DOS-Programm einrichten möchten, "
+	"geben Sie den Namen der PIF-Datei an.\0"
+#else
+	"Enter the name of the executable program or batch file with "
+	"which this Program Information File (PIF) is to be "
+	"associated.  The program name must have one of the following "
+	"extensions: .BAT, .COM, or .EXE.\r\n\r\n"
+	"You may include the path indicating the location of the "
+	"program (i.e.'C:\\APPS\\WP.EXE').  If you do not include the "
+	"path in this field, and if the program file is not in the "
+	"DOS path, you must specify the location of the file in the "
+	"Start-up Directory.\r\n\r\n"
+	"If you wish to set up a PIF to start a DOS session without "
+	"running a particular application, enter 'COMMAND.COM' in "
+	"this field.\r\n\r\n"
+	"When adding a new program to Program Manager, you may "
+	"specify the name of a PIF.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Window Title
+IDE_TITLE	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Diese Bezeichnung wird in der Fenster-Titelleiste "
+	"einer DOS-Sitzung angezeigt, wenn diese in einem Fenster abläuft. "
+	"Der Text wird ebenso als Symbol-Bezeichnung angezeigt, wenn das "
+	"DOS-Fenster zum Symbol verkleinert ist.\r\n\r\n"
+	"Ein Text, den Sie im Programm-Manager Dialogfeld 'Programmeigenschaften' "
+	"Textfeld 'Beschreibung' eingeben, hat Vorrang vor dem PIF-Programmtitel.\0"
+#else
+	"Enter the text you would like to appear in the title bar "
+	"when the DOS session is run in a windowed state.  This text "
+	"is also used as the icon caption when the DOS session is "
+	"minimized.\r\n\r\n"
+	"Any text entered in the Description field in Program "
+	"Manager's Properties dialog box will override the PIF Window "
+	"Title.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Optional Parameters
+IDE_PARAMS	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Hier geben Sie Befehlszeilen-Parameter für das auszuführende "
+	"Programm an.\r\n\r\n"
+	"Wenn Sie z.B. eine PIF-Datei anlegen, die einen DOS-Editor mit "
+	"AUTOEXEC.BAT als Datei zur Bearbeitung aufruft, geben Sie EDIT.COM als "
+	"Programmdateiname und C:\\AUTOEXEC.BAT als wahlfreien Parameter an.\r\n\r\n"
+	"Wenn Sie möchten, daß Windows die Parameter bei jedem PIF-Aufruf "
+	"anfordert, geben Sie in diesem Feld ein Fragezeichen '?' ein.\0"
+#else
+	"Enter any command line options for the program you are "
+	"running.\r\n\r\n"
+	"For example, to create a PIF that runs the DOS editor with "
+	"AUTOEXEC.BAT as the file to edit, enter EDIT.COM as the "
+	"Program File Name and C:\\AUTOEXEC.BAT as the Optional "
+	"Parameter.\r\n\r\n"
+	"If you would like windows to prompt you for Optional "
+	"Parameters each time the PIF is invoked then enter a "
+	"question mark in this field.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Start-up Directory
+IDE_DIRECTORY	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Geben Sie den vollständigen Pfad (Laufwerk und Verzeichnis) an, "
+	"aus dem Windows die Anwendung starten soll.\r\n\r\n"
+	"Viele Anwendungen verwenden dieses Verzeichnis als Voreinstellung "
+	"in Befehlen zum Öffnen und Speichern von Dateien.\r\n\r\n"
+	"Wenn Sie den Pfad nicht direkt zum Programmnamen angeben "
+	"und die Programmdatei nicht im DOS Pfad zu finden ist, "
+	"müssen Sie den 'Lagerort' der Datei als Startverzeichnis angeben.\0"
+#else
+	"Enter the complete directory path indicating from where you "
+	"would like Windows to start the application.\r\n\r\n"
+	"Many applications use this directory as the default for File "
+	"Open and File Save commands.\r\n\r\n"
+	"If you do not include the path as part of the Program "
+	"Filename and if the program file is not in the DOS path, you "
+	"must specify the location of the file as the Start-up Directory.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+/* MEMORY ********************************************************************/
+
+IDB_MEMORY	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Geben Sie an, wieviel Speicher welchen Typs für die DOS-Sitzung "
+	"verfügbar sein soll.\0"
+#else
+	"Specify how much and what type(s) of memory should be made "
+	"available in the DOS session.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// DOSMAX
+IDB_SUPERVM_DEF RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"WICHTIG! Lesen Sie diesen Hilfetext vollständig durch. "
+	"Die Hinweise können Sie vor Datenverlust bewahren.\r\n\r\n"
+	"Diese Option schaltet die Qualitas DOSMAX Funktion ein. DOSMAX "
+	"stellt Textmodus-Anwendungen bis zu 736 KB konventionellen "
+	"Speicher zur Verfügung.\r\n\r\n"
+	"'Voreinstellung' legt fest, daß die DOSMAX-Funktion durch den "
+	"Eintrag 'DOSMAXDefault=' im Abschnitt [QUALITAS] der Datei "
+	"SYSTEM.INI geregelt wird. (Sie können diesen Schalter auf 'ON' oder 'OFF' "
+	"setzen.) 'EIN' aktiviert die DOSMAX-Unterstützung unabhängig vom Schalter "
+	"in der Datei SYSTEM.INI. "
+	"'AUS' deaktiviert die DOSMAX-Unterstützung unabhängig vom Schalter "
+	"in der Datei SYSTEM.INI.\r\n\r\n"
+	"Denken Sie daran, daß viele Anwendungen zwischen Text- und Grafikmodus "
+	"umschalten und damit unvorhersehbare Ergebnisse bewirken können "
+	"(einschließlich Datenverlust im Speicher oder Abbruch einer DOS-Sitzung.) "
+	"So ist z.B. WordPerfect DOS primär eine Textmodus-Anwendung, "
+	"obwohl sie für bestimmte Funktionen in den Grafikmodus "
+	"umschaltet (z.B. für die Druckbildvorschau).\0"
+#else
+	"IMPORTANT!  Read this entire help screen to prevent "
+	"accidental loss of work in memory.\r\n\r\n"
+	"This option enables Qualitas's DOSMAX feature.  DOSMAX "
+	"provides text mode applications with as much as 736K "
+	"conventional memory.\r\n\r\n"
+	"'Use Default' indicates that DOSMAX support is determined "
+	"by the 'DOSMAXDefault=' switch in the [QUALITAS] section of "
+	"SYSTEM.INI.  You may set this switch to 'ON' or 'OFF'. "
+	"'ON' enables DOSMAX support regardless of the SYSTEM.INI "
+	"switch setting. "
+	"'OFF' disables DOSMAX support regardless of the SYSTEM.INI "
+	"switch setting.\r\n\r\n"
+	"Keep in mind that many applications switch between graphics "
+	"and text modes which can cause unpredictable results "
+	"(including the loss of data in memory or a DOS session "
+	"crash).  For example, WordPerfect DOS version is primarily a "
+	"text mode application although it does switch into graphics "
+	"mode for certain features (i.e. Page Preview).\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+IDB_SUPERVM_ON	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"WICHTIG! Lesen Sie diesen Hilfetext vollständig durch. "
+	"Die Hinweise können Sie vor Datenverlust bewahren.\r\n\r\n"
+	"Diese Option schaltet die Qualitas DOSMAX Funktion ein. DOSMAX "
+	"stellt Textmodus-Anwendungen bis zu 736 KB konventionellen "
+	"Speicher zur Verfügung.\r\n\r\n"
+	"'Voreinstellung' legt fest, daß die DOSMAX-Funktion durch den "
+	"Eintrag 'DOSMAXDefault=' im Abschnitt [QUALITAS] der Datei "
+	"SYSTEM.INI geregelt wird. (Sie können diesen Schalter auf 'ON' oder 'OFF' "
+	"setzen.) 'EIN' aktiviert die DOSMAX-Unterstützung unabhängig vom Schalter "
+	"in der Datei SYSTEM.INI. "
+	"'AUS' deaktiviert die DOSMAX-Unterstützung unabhängig vom Schalter "
+	"in der Datei SYSTEM.INI.\r\n\r\n"
+	"Denken Sie daran, daß viele Anwendungen zwischen Text- und Grafikmodus "
+	"umschalten und damit unvorhersehbare Ergebnisse bewirken können "
+	"(einschließlich Datenverlust im Speicher oder Abbruch einer DOS-Sitzung.) "
+	"So ist z.B. WordPerfect DOS primär eine Textmodus-Anwendung, "
+	"obwohl sie für bestimmte Funktionen in den Grafikmodus "
+	"umschaltet (z.B. für die Druckbildvorschau).\0"
+#else
+	"IMPORTANT!  Read this entire help screen to prevent "
+	"accidental loss of work in memory.\r\n\r\n"
+	"This option enables Qualitas's DOSMAX feature.  DOSMAX "
+	"provides text mode applications with as much as 736K "
+	"conventional memory.\r\n\r\n"
+	"'Use Default' indicates that DOSMAX support is determined "
+	"by the 'DOSMAXDefault=' switch in the [QUALITAS] section of "
+	"SYSTEM.INI.  You may set this switch to 'ON' or 'OFF'. "
+	"'ON' enables DOSMAX support regardless of the SYSTEM.INI "
+	"switch setting. "
+	"'OFF' disables DOSMAX support regardless of the SYSTEM.INI "
+	"switch setting.\r\n\r\n"
+	"Keep in mind that many applications switch between graphics "
+	"and text modes which can cause unpredictable results "
+	"(including the loss of data in memory or a DOS session "
+	"crash).  For example, WordPerfect DOS version is primarily a "
+	"text mode application although it does switch into graphics "
+	"mode for certain features (i.e. Page Preview).\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+IDB_SUPERVM_OFF RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"WICHTIG! Lesen Sie diesen Hilfetext vollständig durch. "
+	"Die Hinweise können Sie vor Datenverlust bewahren.\r\n\r\n"
+	"Diese Option schaltet die Qualitas DOSMAX Funktion ein. DOSMAX "
+	"stellt Textmodus-Anwendungen bis zu 736 KB konventionellen "
+	"Speicher zur Verfügung.\r\n\r\n"
+	"'Voreinstellung' legt fest, daß die DOSMAX-Funktion durch den "
+	"Eintrag 'DOSMAXDefault=' im Abschnitt [QUALITAS] der Datei "
+	"SYSTEM.INI geregelt wird. (Sie können diesen Schalter auf 'ON' oder 'OFF' "
+	"setzen.) 'EIN' aktiviert die DOSMAX-Unterstützung unabhängig vom Schalter "
+	"in der Datei SYSTEM.INI. "
+	"'AUS' deaktiviert die DOSMAX-Unterstützung unabhängig vom Schalter "
+	"in der Datei SYSTEM.INI.\r\n\r\n"
+	"Denken Sie daran, daß viele Anwendungen zwischen Text- und Grafikmodus "
+	"umschalten und damit unvorhersehbare Ergebnisse bewirken können "
+	"(einschließlich Datenverlust im Speicher oder Abbruch einer DOS-Sitzung.) "
+	"So ist z.B. WordPerfect DOS primär eine Textmodus-Anwendung, "
+	"obwohl sie für bestimmte Funktionen in den Grafikmodus "
+	"umschaltet (z.B. für die Druckbildvorschau).\0"
+#else
+	"IMPORTANT!  Read this entire help screen to prevent "
+	"accidental loss of work in memory.\r\n\r\n"
+	"This option enables Qualitas's DOSMAX feature.  DOSMAX "
+	"provides text mode applications with as much as 736K "
+	"conventional memory.\r\n\r\n"
+	"'Use Default' indicates that DOSMAX support is determined "
+	"by the 'DOSMAXDefault=' switch in the [QUALITAS] section of "
+	"SYSTEM.INI.  You may set this switch to 'ON' or 'OFF'. "
+	"'ON' enables DOSMAX support regardless of the SYSTEM.INI "
+	"switch setting. "
+	"'OFF' disables DOSMAX support regardless of the SYSTEM.INI "
+	"switch setting.\r\n\r\n"
+	"Keep in mind that many applications switch between graphics "
+	"and text modes which can cause unpredictable results "
+	"(including the loss of data in memory or a DOS session "
+	"crash).  For example, WordPerfect DOS version is primarily a "
+	"text mode application although it does switch into graphics "
+	"mode for certain features (i.e. Page Preview).\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// DOS Min
+IDE_DOSMIN	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Legt fest, wieviel konventioneller Speicher zum Start des DOS "
+	"Fensters benötigt wird. Wenn der angegebene Speicherbetrag nicht "
+	"verfügbar ist, wird Windows die DOS-Sitzung nicht starten.\r\n\r\n"
+	"Mit dem Eintrag -1 weisen Sie Windows an, den gesamten verfügbaren "
+	"Speicher zu benutzen.\0"
+#else
+	"Specifies the minimum amount of conventional memory required "
+	"to start the DOS window.  If the indicated amount is not "
+	"available, Windows will fail to start the DOS session.\r\n\r\n"
+	"Use -1 to direct Windows to use as much memory as is available.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// DOS Max
+IDE_DOSMAX	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Legt fest, wieviel konventioneller Speicher bereitgestellt werden soll, "
+	"soweit dieser Betrag verfügbar ist. Wenn der angegebene Betrag nicht "
+	"verfügbar ist, wird Windows soviel Speicher wie möglich bereitstellen.\r\n\r\n"
+	"Mit dem Eintrag -1 weisen Sie Windows an, den gesamten verfügbaren "
+	"Speicher zu benutzen.\0"
+#else
+	"Specifies the amount of conventional memory to be provided "
+	"if available.  If the indicated amount is not available, "
+	"Windows will allocate as much as possible.\r\n\r\n"
+	"Use -1 to direct Windows to use as much memory as is available.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// DOS Locked
+IDB_DOSLOCK	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Windows stellt 'Speicher' zur Verfügung, indem inaktive Anwendungen "
+	"(sowohl Windows als auch DOS) auf die Platte ausgelagert werden. "
+	"Sperren des DOS-Speichers hält Windows davon ab, konventionellen "
+	"Speicher einer DOS-Sitzung auf die Platte auszulagern. "
+	"Diese Vorgehensweise kann das Antwortzeitverhalten einer DOS-Sitzung "
+	"deutlich verbessern - es kann aber gleichzeitig zu einem geringeren "
+	"Durchsatz für alle weiteren Windows-Anwendungen führen, da der "
+	"gemeinsam genutzte Speicher innerhalb Windows reduziert wird. "
+	"Sperren des Speichers begrenzt die Anzahl gleichzeitig ausführbarer "
+	"Anwendungen (sowohl Windows als auch DOS).\r\n\r\n"
+	"Sperren des Speichers ist für zeitkritische Anwendungen empfehlenswert "
+	"(z.B. Kommunikationsprogramme), für die eine Auslagerung auf "
+	"Platte zu nicht akzeptablen Verzögerungen führen müßte.\0"
+#else
+	"Windows provides 'memory' by swapping inactive applications "
+	"(both Windows and DOS) to disk. Locking DOS memory prevents "
+	"Windows from swapping conventional memory used for the DOS "
+	"session.  While this can improve performance within the DOS "
+	"session, it will tend to decrease performance of the rest of "
+	"Windows because it reduces the shared memory within Windows. "
+	"Locking memory will also limit the number of applications "
+	"(both Windows and DOS) which can be run at the same time.\r\n\r\n"
+	"It is appropriate to lock memory when the application is "
+	"performance sensitive (as with many communications programs) "
+	"and swapping to disk will create unacceptable delays.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// EMS Min
+IDE_EMSMIN	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Legt fest, wieviel Expanded Memory (EMS) zum Start des DOS "
+	"Fensters benötigt wird. Wenn der angegebene Speicherbetrag nicht "
+	"verfügbar ist, wird Windows die DOS-Sitzung nicht starten.\r\n\r\n"
+	"Mit dem Eintrag -1 weisen Sie Windows an, den gesamten verfügbaren "
+	"Speicher zu benutzen.\0"
+#else
+	"Specifies the minimum amount of Expanded (EMS) memory "
+	"required to start the DOS window.  If the indicated amount "
+	"is not available, Windows will fail to start the DOS session.\r\n\r\n"
+	"Use -1 to direct Windows to use as much memory as is available.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// EMS Max
+IDE_EMSMAX	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Legt fest, wieviel Expanded Memory (EMS) bereitgestellt werden soll, "
+	"soweit dieser Betrag verfügbar ist. Wenn der angegebene Betrag nicht "
+	"verfügbar ist, wird Windows soviel Speicher wie möglich bereitstellen.\r\n\r\n"
+	"Mit dem Eintrag -1 weisen Sie Windows an, den gesamten verfügbaren "
+	"Speicher zu benutzen.\0"
+#else
+	"Specifies the amount of Expanded (EMS) memory desired if "
+	"available.  If the indicated amount is not available, "
+	"Windows will allocate as much as possible.\r\n\r\n"
+	"Use -1 to direct Windows to use as much memory as is "
+	"available.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// EMS Locked
+IDB_EMSLOCK	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Windows stellt 'Speicher' zur Verfügung, indem inaktive Anwendungen "
+	"(sowohl Windows als auch DOS) auf die Platte ausgelagert werden. "
+	"Sperren des EMS-Speichers hält Windows davon ab, Expanded Memory "
+	"(EMS) einer DOS-Sitzung auf die Platte auszulagern. "
+	"Diese Vorgehensweise kann das Antwortzeitverhalten einer DOS-Sitzung "
+	"deutlich verbessern - es kann aber gleichzeitig zu einem geringeren "
+	"Durchsatz für alle weiteren Windows-Anwendungen führen, da der "
+	"gemeinsam genutzte Speicher innerhalb Windows reduziert wird. "
+	"Sperren des Speichers begrenzt die Anzahl gleichzeitig ausführbarer "
+	"Anwendungen (sowohl Windows als auch DOS).\r\n\r\n"
+	"Sperren des Speichers ist für zeitkritische Anwendungen empfehlenswert "
+	"(z.B. Kommunikationsprogramme), für die eine Auslagerung auf "
+	"Platte zu nicht akzeptablen Verzögerungen führen müßte.\0"
+#else
+	"Windows provides 'memory' by swapping inactive applications "
+	"(both Windows and DOS) to disk. Locking EMS memory prevents "
+	"Windows from swapping expanded memory used for the DOS "
+	"session.  While this can improve performance within the DOS "
+	"session, it will tend to decrease performance of the rest of "
+	"Windows because it decreases the shared memory within "
+	"Windows.  Locking memory will also limit the number of "
+	"applications (both Windows and DOS) which can be run at the "
+	"same time.\r\n\r\n"
+	"It is appropriate to lock memory when the application is "
+	"performance sensitive (as with many communications programs) "
+	"and swapping to disk will create unacceptable delays.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// XMS Min
+IDE_XMSMIN	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Legt fest, wieviel eXtended Memory (XMS) zum Start des DOS "
+	"Fensters benötigt wird. Wenn der angegebene Speicherbetrag nicht "
+	"verfügbar ist, wird Windows die DOS-Sitzung nicht starten.\r\n\r\n"
+	"Mit dem Eintrag -1 weisen Sie Windows an, den gesamten verfügbaren "
+	"Speicher zu benutzen.\0"
+#else
+	"Specifies the minimum amount of eXtended (XMS) memory "
+	"required to start the DOS window.  If the indicated amount "
+	"is not available, Windows will fail to start the DOS session.\r\n\r\n"
+	"Use -1 to direct Windows to use as much memory as is available.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// XMS Max
+IDE_XMSMAX	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Legt fest, wieviel eXtended Memory (XMS) bereitgestellt werden soll, "
+	"soweit dieser Betrag verfügbar ist. Wenn der angegebene Betrag nicht "
+	"verfügbar ist, wird Windows soviel Speicher wie möglich bereitstellen.\r\n\r\n"
+	"Mit dem Eintrag -1 weisen Sie Windows an, den gesamten verfügbaren "
+	"Speicher zu benutzen.\0"
+#else
+	"Specifies the amount of eXtended (XMS) memory desired if "
+	"available.  If the indicated amount is not available, "
+	"Windows will allocate as much as possible.\r\n\r\n"
+	"Use -1 to direct Windows to use as much memory as is available.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// XMS Locked
+IDB_XMSLOCK	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Windows stellt 'Speicher' zur Verfügung, indem inaktive Anwendungen "
+	"(sowohl Windows als auch DOS) auf die Platte ausgelagert werden. "
+	"Sperren des XMS-Speichers hält Windows davon ab, Extended Memory "
+	"(XMS) einer DOS-Sitzung auf die Platte auszulagern. "
+	"Diese Vorgehensweise kann das Antwortzeitverhalten einer DOS-Sitzung "
+	"deutlich verbessern - es kann aber gleichzeitig zu einem geringeren "
+	"Durchsatz für alle weiteren Windows-Anwendungen führen, da der "
+	"gemeinsam genutzte Speicher innerhalb Windows reduziert wird. "
+	"Sperren des Speichers begrenzt die Anzahl gleichzeitig ausführbarer "
+	"Anwendungen (sowohl Windows als auch DOS).\r\n\r\n"
+	"Sperren des Speichers ist für zeitkritische Anwendungen empfehlenswert "
+	"(z.B. Kommunikationsprogramme), für die eine Auslagerung auf "
+	"Platte zu nicht akzeptablen Verzögerungen führen müßte.\0"
+#else
+	"Windows provides 'memory' by swapping inactive applications "
+	"(both Windows and DOS) to disk. Locking XMS memory prevents "
+	"Windows from swapping extended memory used for the DOS "
+	"session.  While this can improve performance within the DOS "
+	"session, it will tend to decrease performance of the rest of "
+	"Windows because it decreases the shared memory within "
+	"Windows.  Locking memory will also limit the number of "
+	"applications (both Windows and DOS) which can be run at the "
+	"same time.\r\n\r\n"
+	"It is appropriate to lock memory when the application is "
+	"performance sensitive (as with many communications programs) "
+	"and swapping to disk will create unacceptable delays.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Uses HMA
+IDB_XMSHMA	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Die High Memory Area (HMA) ist ein 64 KB großer Bereich, der am oberen "
+	"Ende des gesamten DOS-Speichers (1 MB) beginnt. Wenn Sie in einer DOS-Sitzung"
+	"Software einsetzen, welche die HMA nutzen wird, sollten Sie "
+	"diese Option wählen.\r\n\r\n"
+	"Wenn Sie DOS Version 5.0 oder höher einsetzen und DOS = HIGH in "
+	"CONFIG.SYS eingeschaltet haben, wird die HMA bereits von DOS benutzt "
+	"und steht keinem weiteren Programm zur Verfügung. "
+	"In diesem Fall wählen Sie bitte NICHT diese Option.\0"
+#else
+	"The High Memory Area (HMA) is a 64K region which starts at "
+	"the very end of all DOS memory.  If you intend to use "
+	"software within a DOS session that will use the HMA then you "
+	"should select this option.\r\n\r\n"
+	"If you use DOS version 5.0 or later and enable DOS = HIGH in "
+	"your CONFIG.SYS then the HMA is already in use and may not "
+	"be used by other software.  In this case, do not select this option.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+/*  VIDEO ********************************************************************/
+
+IDB_VIDEO	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Hier geben Sie Informationen zum Anzeigemodus, Bildschirmspeicher "
+	"und andere Video-bezogene Daten an.\0"
+#else
+	"Specify information on display usage, video memory and other "
+	"video related information topics.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Display full screen
+IDB_FULLSCREEN	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Die Auswahl dieser Option startet Ihre DOS-Sitzung in der Vollbild-Anzeige. "
+	"Die Vollbild-Anzeige bietet gegenüber einem Fenster folgende Vorteile:\r\n\r\n"
+	"     -  benötigt weniger Speicher\r\n"
+	"     -  Anwendungen laufen schneller ab.\r\n\r\n"
+	"Wenn eine DOS-Sitzung bereits läuft, wechseln Sie mit ALT+EINGABETASTE "
+	"zwischen dem Fenster und der Vollbild-Anzeige.\0"
+#else
+	"Select this option to start your DOS session in full screen "
+	"mode.  Full screen mode has the following advantages over "
+	"windowed mode:\r\n\r\n"
+	"     -  requires less memory\r\n"
+	"     -  applications run faster\r\n\r\n"
+	"Once a DOS session is running, ALT-ENTER toggles the session "
+	"between windowed and full screen modes.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+//  Display windowed
+IDB_WINDOWED	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Die Auswahl dieser Option startet Ihre DOS-Sitzung als Fenster. "
+	"Dies bietet gegenüber der Vollbild-Anzeige folgende Vorteile:\r\n\r\n"
+	"     -  Anwender können die Funktion 'Ausschneiden und Einfügen'\r\n"
+	"        für Daten aus der bzw. in die Bildschirmanzeige benutzen;\r\n"
+	"        Tastenkombination ist ALT+LEERTASTE und dann R.\r\n"
+	"     -  Anwender können die Bildschirm-Schriftart ändern;\r\n"
+	"        Tastenkombination ist ALT+LEERTASTE und dann A.\r\n\r\n"
+	"Wenn eine DOS-Sitzung bereits läuft, wechseln Sie mit ALT+EINGABETASTE "
+	"zwischen dem Fenster und der Vollbild-Anzeige.\0"
+#else
+	"Select this option to start your DOS session in windowed "
+	"mode.  Windowed mode has the following advantages over full "
+	"screen mode:\r\n\r\n"
+	"     -  users may cut and paste to and from the screen\r\n"
+	"        by pressing ALT-SPACE and E.\r\n"
+	"     -  users may change the display font by pressing\r\n"
+	"        ALT-SPACE and then F.\r\n\r\n"
+	"Once a DOS session is running, ALT-ENTER toggles the session "
+	"between windowed and full screen modes.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Video memory - Text
+IDB_TEXT	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Wenn Windows eine DOS-Sitzung startet, reserviert es Speicher zur Ablage "
+	"der angezeigten Informationen in dieser DOS-Sitzung. "
+	"Grafikprogramme erfordern mehr Speicher als Programme im Textmodus. "
+	"Einige Grafikprogramme (z.B. EGA und VGA) werden als Anwendungen mit "
+	"'Hoher Auflösung' bezeichnet; sie erfordern mehr Speicher als Programme, die mit "
+	"'Niedriger Auflösung' (z.B. CGA) arbeiten.\r\n\r\n"
+
+	"Wählen Sie 'Text', wenn Windows nur soviel Bildschirmspeicher reservieren "
+	"soll, wie zum Speichern eines Textbildschirmes erforderlich ist. Wenn Sie "
+	"in einer Sitzung mit dieser Einstellung ein Grafikprogramm aufrufen, wird "
+	"Windows möglicherweise einen Fehler melden und das DOS-Fenster nicht öffnen.\0"
+#else
+	"When Windows starts a DOS session, it allocates memory in "
+	"which to store the information displayed in that DOS session.  "
+	"Graphics programs require more memory than do text programs.  "
+	"Some graphics programs (i.e. EGA and VGA) are referred to as "
+	"'high resolution' and require more memory than other 'low resolution' "
+	"programs (i.e. CGA).\r\n\r\n"
+
+	"Select 'Text' to instruct Windows to allocate only enough "
+	"video memory in which to store a text display.  If you attempt "
+	"to run a graphics program in a session with this setting "
+	"then Windows may display an error and fail to open the DOS window.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Video memory - Low Graphics
+IDB_LOW RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Wenn Windows eine DOS-Sitzung startet, reserviert es Speicher zur Ablage "
+	"der angezeigten Informationen in dieser DOS-Sitzung. "
+	"Grafikprogramme erfordern mehr Speicher als Programme im Textmodus. "
+	"Einige Grafikprogramme (z.B. EGA und VGA) werden als Anwendungen mit "
+	"'Hoher Auflösung' bezeichnet; sie erfordern mehr Speicher als Programme, die mit "
+	"'Niedriger Auflösung' (z.B. CGA) arbeiten.\r\n\r\n"
+
+	"Wählen Sie 'Niedrige Auflösung', wenn Windows nur soviel Bildschirmspeicher "
+	"reservieren soll, wie zum Speichern eines Bildschirms in niedriger "
+	"Grafikauflösung erforderlich ist. Wenn Sie in einer Sitzung mit dieser "
+	"Einstellung ein Programm mit hochauflösender Grafikanzeige aufrufen, "
+	"wird Windows möglicherweise einen Fehler melden und das DOS-Fenster "
+	"nicht öffnen. Wenn Sie in DOS-Sitzungen nur Anwendungen mit Textanzeige "
+	"benutzen und die Anwendungen mit dieser PIF-Datei starten, kann die Auswahl "
+	"'Niedrige Auflösung' mehr Speicher reservieren als tatsächlich benötigt wird.\0"
+#else
+	"When Windows starts a DOS session, it allocates memory in "
+	"which to store the information displayed in that DOS session.  "
+	"Graphics programs require more memory than do text programs.  "
+	"Some graphics programs (i.e. EGA and VGA) are referred to as "
+	"'high resolution' and require more memory than other 'low resolution'"
+	"programs (i.e. CGA).\r\n\r\n"
+
+	"Select 'Low Graphics' to instruct Windows to allocate only enough "
+	"video memory in which to store a low resolution graphics display.  "
+	"If you attempt to run a high resolution graphics program in a "
+	"session with this setting then Windows may display an error and "
+	"fail to open the DOS window.  If you intend to run only text "
+	"applications in DOS sessions started with this PIF then selecting "
+	"'Low Graphics' may waste memory.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Video memory - High Graphics
+IDB_HIGH	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Wenn Windows eine DOS-Sitzung startet, reserviert es Speicher zur Ablage "
+	"der angezeigten Informationen in dieser DOS-Sitzung. "
+	"Grafikprogramme erfordern mehr Speicher als Programme im Textmodus. "
+	"Einige Grafikprogramme (z.B. EGA und VGA) werden als Anwendungen mit "
+	"'Hoher Auflösung' bezeichnet; sie erfordern mehr Speicher als Programme, die mit "
+	"'Niedriger Auflösung' (z.B. CGA) arbeiten.\r\n\r\n"
+
+	"Wählen Sie 'Hohe Auflösung', wenn Windows ausreichend Bildschirmspeicher zur "
+	"Ablage eines Bildschirmes in hoher Grafikauflösung reservieren soll. "
+	"Wenn Sie in einer Sitzung mit anderer Einstellung ein Programm mit "
+	"hochauflösender Grafikanzeige aufrufen, wird Windows möglicherweise einen "
+	"Fehler melden und das DOS-Fenster nicht öffnen. Wenn Sie in DOS-Sitzungen "
+	"nur Anwendungen mit Textanzeige oder niedriger Grafikauflösung benutzen und "
+	"die Anwendungen mit dieser PIF-Datei starten, kann die Auswahl 'Hohe Auflösung' "
+	"mehr Speicher reservieren als tatsächlich benötigt wird.\0"
+#else
+	"When Windows starts a DOS session, it allocates memory in "
+	"which to store the information displayed in that DOS session.  "
+	"Graphics programs require more memory than do text programs.  "
+	"Some graphics programs (i.e. EGA and VGA) are referred to as "
+	"'high resolution' and require more memory than other 'low resolution'"
+	"programs (i.e. CGA).\r\n\r\n"
+
+	"Select 'High Graphics' to instruct Windows to allocate enough "
+	"video memory in which to store a high resolution graphics display.  "
+	"If you attempt to run a high resolution graphics program in a "
+	"session with this setting then Windows may display an error and "
+	"fail to open the DOS window.  If you intend to run only text or "
+	"low resolution graphics applications in DOS sessions started "
+	"with this PIF then selecting 'High Graphics' may waste memory.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Monitor Ports - Text
+IDB_MONTEXT	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Mit der Auswahl 'Bildschirm-Anschlüsse' überprüft Windows in der DOS "
+	"Vollbild-Anzeige, daß die für den Bildschirmadapter festgelegten "
+	"Werte mit den von der Anwendung benutzten Werten übereinstimmen. "
+	"In den meisten Fällen ist diese Überprüfung nicht notwendig. "
+	"Die Aktivierung dieser Option führt zu einem langsameren "
+	"Bildaufbau in der DOS-Sitzung.\r\n\r\n"
+
+	"Bei Problemen (z.B. Zeichen oder der Mauszeiger werden nicht "
+	"korrekt wiedergegeben), lassen Sie Windows die Bildschirm-Anschlüsse "
+	"überwachen. Dies sollte das Problem lösen. Wenn Sie in der DOS-Sitzung "
+	"keine Grafikprogramme ablaufen lassen, wählen Sie 'Text'. "
+	"Wenn Sie Grafikprogramme niedriger Auflösung (CGA) und Programme im "
+	"Textmodus benutzen, wählen Sie 'Niedrige Auflösung' zur Überwachung "
+	"von Text- und Grafikfunktionen niedriger Auflösung. Wenn Sie Programme "
+	"mit hochauflösender Grafikanzeige einsetzen (EGA und VGA), wählen Sie "
+	"'Hohe Auflösung'; diese Einstellung überwacht alle Video-Funktionen.\0"
+#else
+	"Select 'Monitor Ports' to instruct Windows to verify that "
+	"information displayed on your monitor, while in full screen "
+	"DOS mode, is as expected by the application.  Under most "
+	"circumstances it is unnecessary to monitor ports and doing so "
+	"will only slow down performance within the DOS session.\r\n\r\n"
+
+	"If you experience problems (i.e. characters or the mouse cursor "
+	"not appearing correctly), then instructing Windows to monitor "
+	"the video ports may correct the problem.  If you do not run "
+	"graphics programs in the DOS session then select 'Text'.  "
+	"If you run low resolution graphics (CGA) and text only then "
+	"select 'Low Graphics' to monitor both text and low resolution "
+	"graphics operations.  If you run high resolution graphics "
+	"(EGA and VGA) then select 'High Graphics', which will monitor "
+	"all video operations\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Monitor Ports - Low Graphics
+IDB_MONLOW	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Mit der Auswahl 'Bildschirm-Anschlüsse' überprüft Windows in der DOS "
+	"Vollbild-Anzeige, daß die für den Bildschirmadapter festgelegten "
+	"Werte mit den von der Anwendung benutzten Werten übereinstimmen. "
+	"In den meisten Fällen ist diese Überprüfung nicht notwendig. "
+	"Die Aktivierung dieser Option führt zu einem langsameren "
+	"Bildaufbau in der DOS-Sitzung.\r\n\r\n"
+
+	"Bei Problemen (z.B. Zeichen oder der Mauszeiger werden nicht "
+	"korrekt wiedergegeben), lassen Sie Windows die Bildschirm-Anschlüsse "
+	"überwachen. Dies sollte das Problem lösen. Wenn Sie in der DOS-Sitzung "
+	"keine Grafikprogramme ablaufen lassen, wählen Sie 'Text'. "
+	"Wenn Sie Grafikprogramme niedriger Auflösung (CGA) und Programme im "
+	"Textmodus benutzen, wählen Sie 'Niedrige Auflösung' zur Überwachung "
+	"von Text- und Grafikfunktionen niedriger Auflösung. Wenn Sie Programme "
+	"mit hochauflösender Grafikanzeige einsetzen (EGA und VGA), wählen Sie "
+	"'Hohe Auflösung'; diese Einstellung überwacht alle Video-Funktionen.\0"
+#else
+	"Select 'Monitor Ports' to instruct Windows to verify that "
+	"information displayed on your monitor, while in full screen "
+	"DOS mode, is as expected by the application.  Under most "
+	"circumstances it is unnecessary to monitor ports and doing so "
+	"will only slow down performance within the DOS session.\r\n\r\n"
+
+	"If you experience problems (i.e. characters or the mouse cursor "
+	"not appearing correctly), then instructing Windows to monitor "
+	"the video ports may correct the problem.  If you do not run "
+	"graphics programs in the DOS session then select 'Text'.  "
+	"If you run low resolution graphics (CGA) and text only then "
+	"select 'Low Graphics' to monitor both text and low resolution "
+	"graphics operations.  If you run high resolution graphics "
+	"(EGA and VGA) then select 'High Graphics', which will monitor "
+	"all video operations\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Monitor Ports - High Graphics
+IDB_MONHIGH	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Mit der Auswahl 'Bildschirm-Anschlüsse' überprüft Windows in der DOS "
+	"Vollbild-Anzeige, daß die für den Bildschirmadapter festgelegten "
+	"Werte mit den von der Anwendung benutzten Werten übereinstimmen. "
+	"In den meisten Fällen ist diese Überprüfung nicht notwendig. "
+	"Die Aktivierung dieser Option führt zu einem langsameren "
+	"Bildaufbau in der DOS-Sitzung.\r\n\r\n"
+
+	"Bei Problemen (z.B. Zeichen oder der Mauszeiger werden nicht "
+	"korrekt wiedergegeben), lassen Sie Windows die Bildschirm-Anschlüsse "
+	"überwachen. Dies sollte das Problem lösen. Wenn Sie in der DOS-Sitzung "
+	"keine Grafikprogramme ablaufen lassen, wählen Sie 'Text'. "
+	"Wenn Sie Grafikprogramme niedriger Auflösung (CGA) und Programme im "
+	"Textmodus benutzen, wählen Sie 'Niedrige Auflösung' zur Überwachung "
+	"von Text- und Grafikfunktionen niedriger Auflösung. Wenn Sie Programme "
+	"mit hochauflösender Grafikanzeige einsetzen (EGA und VGA), wählen Sie "
+	"'Hohe Auflösung'; diese Einstellung überwacht alle Video-Funktionen.\0"
+#else
+	"Select 'Monitor Ports' to instruct Windows to verify that "
+	"information displayed on your monitor, while in full screen "
+	"DOS mode, is as expected by the application.  Under most "
+	"circumstances it is unnecessary to monitor ports and doing so "
+	"will only slow down performance within the DOS session.\r\n\r\n"
+
+	"If you experience problems (i.e. characters or the mouse cursor "
+	"not appearing correctly), then instructing Windows to monitor "
+	"the video ports may correct the problem.  If you do not run "
+	"graphics programs in the DOS session then select 'Text'.  "
+	"If you run low resolution graphics (CGA) and text only then "
+	"select 'Low Graphics' to monitor both text and low resolution "
+	"graphics operations.  If you run high resolution graphics "
+	"(EGA and VGA) then select 'High Graphics', which will monitor "
+	"all video operations\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Emulate text mode
+IDB_EMULATE	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Die meisten DOS Textmodus-Anwendungen benutzen Standard BIOS-Services "
+	"für die Textanzeige. Für diese Anwendungen erzielen Sie mit Auswahl "
+	"dieser Option in Windows eine schnellere Emulation dieser Services.\r\n\r\n"
+	"Wenn Bildschirm-Textanzeige Ihrer Anwendung nicht korrekt arbeitet, "
+	"sollten Sie diese Option ausschalten.\0"
+#else
+	"Most DOS text applications use standard BIOS services for "
+	"displaying text.  For these applications, selecting this "
+	"option tells Windows to provide a faster emulation of these "
+	"services.\r\n\r\n"
+	"If your text based application does not appear on screen "
+	"correctly then you should try disabling this option.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Retain video memory
+IDB_RETAIN	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Normalerweise kann Windows unbenutzten Bildschirmspeicher an das "
+	"System zurückgeben. "
+	"Dies kann für Anwendungen, die während des Ablaufs in unterschiedliche "
+	"Video-Modi schalten, zu Problemen führen. Windows kann z.B. den "
+	"reservierten Bildschirmspeicher für ein Programm im Textmodus "
+	"reduzieren. Wenn dieses Programm in einen Grafikmodus umschaltet, "
+	"(z.B. in eine 'Druckbild-Vorschau'), ist dann möglicherweise nicht mehr "
+	"genügend Speicher verfügbar. Die Auswahl 'Bildschirmspeicher erhalten' weist "
+	"Windows an, für die DOS Anwendung soviel Bildschirmspeicher zu reservieren, "
+	"wie der nach dem Aufruf geschaltete erste Video-Modus erfordert.\0"
+#else
+	"Normally, Windows may return unused video memory to the system.  "
+	"This may cause problems for applications which switch between "
+	"different video modes while running.  For example, Windows may "
+	"reduce allocated video memory for a program running in text mode.  "
+	"When this program switches into graphics mode "
+	"(such as a in a 'page preview') then there may not be enough "
+	"available memory.  Selecting 'Retain Video Memory' instructs "
+	"Windows to maintain the amount of memory required for DOS "
+	"application based on its initial video mode.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+/*  MULTITASK *****************************************************************/
+
+IDB_TASK	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Hier geben Sie Informationen für Task-Prioritäten und "
+	"Hintergrund-Ausführung an.\0"
+#else
+	"Specify information on task prioritization and background "
+	"execution.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Background priority
+IDE_BACKPRIO	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Der Wert für die Hintergrund-Priorität gibt an, wie oft der Prozessor "
+	"zur Arbeit für die DOS-Sitzung aufgefordert wird, wenn die "
+	"DOS-Sitzung NICHT das aktive Fenster ist.\r\n\r\n"
+	"Dieser Wert wird übergangen, wenn:\r\n\r\n"
+	"     -  Hintergrund-Ausführung abgeschaltet ist bzw.\r\n"
+	"     -  für die aktive DOS-Sitzung 'exklusiv' gewählt ist.\r\n\r\n"
+	"Es ist ein Wert zwischen 1 und 10.000 erlaubt.\0"
+#else
+	"The background priority value indicates how often, when the "
+	"DOS session is NOT the active window, the processor is "
+	"directed to perform work for the DOS session.\r\n\r\n"
+	"This value is ignored:\r\n\r\n"
+	"     -  if background execution is disabled\r\n"
+	"     -  if a the active DOS session is set to exclusive.\r\n\r\n"
+	"The value must be between 1 and 10,000.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+
+// Foreground priority
+IDE_FOREPRIO	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Der Wert für die Vordergrund-Priorität gibt an, wie oft der Prozessor "
+	"zur Arbeit für die DOS-Sitzung aufgefordert wird, wenn die "
+	"DOS-Sitzung das aktive Fenster ist.\r\n\r\n"
+	"Es ist ein Wert zwischen 1 und 10.000 erlaubt.\0"
+#else
+	"The foreground priority value indicates how often, when the "
+	"DOS session is the active window, the processor is directed "
+	"to perform work for the DOS session.\r\n\r\n"
+	"The value must be between 1 and 10,000.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Detect idle time
+IDB_DETECTIDLE	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"DOS-Sitzungen mit eingeschalteter Option 'Leerlaufzeit entdecken' erhalten "
+	"weniger Prozessorzeit, wenn die Tastatur nicht betätigt wird. "
+	"Dies verbessert den Durchsatz anderer Anwendungen.\0"
+#else
+	"DOS sessions with 'detect idle time' enabled are allocated "
+	"less processor time while their keyboard is inactive.  "
+	"This improves performance for other applications.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Execute background
+IDB_BACKEXEC	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Ausführung im Hintergrund erlaubt Ihrer DOS-Anwendung die Fortsetzung der "
+	"Aktivität, während Sie mit anderen DOS- oder Windows-Anwendungen arbeiten.\r\n\r\n"
+	"Ein Beispiel für nützliche Ausführung im Hintergrund ist eine Anwendung, die "
+	"einen umfangreichen Vorgang ohne Eingriff des Anwenders bearbeitet "
+	"(z.B. Sortieren einer Datenbank). Die meisten DOS-Kommunikations-Programme "
+	"erfordern eine mögliche Ausführung im Hintergrund.\r\n\r\n"
+	"Ausführung im Hintergrund kann die System-Gesamtleistung deutlich herabsetzen. "
+	"Aktivieren Sie diese Option nur, wenn dies erforderlich ist.\r\n\r\n"
+	"Ausführung im Hintergrund kann für eine aktive DOS-Sitzung umgeschaltet werden. "
+	"Drücken Sie ALT+LEERTASTE und dann E. Nehmen Sie die entsprechenden "
+	"Änderungen vor.\0"
+#else
+	"Background execution allows your DOS application to continue "
+	"activity while you work in other DOS or Windows applications.\r\n\r\n"
+	"An example of when background execution is useful is an "
+	"application which performs an extended task, such as a "
+	"database sort, while unattended.  Most DOS communication "
+	"programs must also be allowed to execute in the background.\r\n\r\n"
+	"Background execution can significantly slow overall system "
+	"performance.  Do not enable the option unless required.\r\n\r\n"
+	"Background execution for an active DOS session can be "
+	"toggled by pressing ALT-SPACE and E and making the "
+	"appropriate change.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Execute exclusive
+IDB_EXCLEXEC	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Exklusive Ausführung bewirkt ein 'Einfrieren' sämtlicher anderen "
+	"Anwendungen (DOS und Windows), einschließlich derer, die Erlaubnis zur "
+	"Ausführung im Hintergrund haben. Anwendungen in exklusiven Sitzungen "
+	"laufen gewöhnlich schneller ab.\r\n\r\n"
+	"Die exklusive Ausführung für eine aktive DOS-Sitzung kann umgeschaltet werden. "
+	"Drücken Sie ALT+LEERTASTE und dann E. Nehmen Sie die entsprechenden "
+	"Änderungen vor.\0"
+#else
+	"Selecting exclusive execution causes all other applications "
+	"(DOS and Windows), including those designated to run in the "
+	"background, to 'freeze' while the exclusive session is "
+	"active.  Applications running in exclusive session usually "
+	"run faster.\r\n\r\n"
+	"Exclusive execution for an active DOS session can be toggled "
+	"by pressing ALT-SPACE and E and making the appropriate change.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+/*  OTHER ********************************************************************/
+
+IDB_OTHER	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Hier geben Sie Informationen an über Tastenkombinationen der Anwendung, "
+	"Einfügen in eine DOS-Anwendung sowie Vorgehensweise und Zeitpunkt "
+	"zum Schließen einer DOS-Sitzung.\0"
+#else
+	"Specify information on application shortcut keys, pasting "
+	"into a DOS session and how and when a DOS session may be "
+	"closed.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Allow fast paste
+IDB_FASTPASTE	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Bei Problemen mit dem Einfügen von Daten aus der Windows-Zwischenablage "
+	"in Ihre DOS-Anwendung sollten Sie diese Option ausschalten.\0"
+#else
+	"If you experience trouble pasting from the Windows clipboard "
+	"into your DOS application you should disable this option.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Allow close on exit
+IDB_ALLOWCLOSE	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"DOS-Sitzungen mit aktivierter Option 'Schließen bei Beenden von Windows' "
+	"werden AUTOMATISCH beendet, wenn Sie Windows verlassen.\r\n\r\n"
+	"Schalten Sie diese Option NIEMALS für Anwendungen ein, die "
+	"Informationen auf die Platte schreiben! "
+	"Dies betrifft die meisten Anwendungen.\0"
+#else
+	"DOS sessions with 'allow close on exit' enabled are closed "
+	"AUTOMATICALLY when exiting Windows.\r\n\r\n"
+	"NEVER enable this option for programs which write "
+	"information to disk.  This includes most applications.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Close win on exit
+IDB_CLOSEEXIT	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Wählen Sie diese Option, wenn mit Beenden des in der PIF-Datei "
+	"angegebenen Programmes auch die DOS-Sitzung beendet werden soll. "
+	"Wählen Sie diese Option nicht, wenn Sie nach dem Programm-Ende "
+	"die DOS-Eingabeaufforderung (Prompt) erhalten möchten.\r\n\r\n"
+	"Wenn Sie diese Option nicht wählen, müssen Sie zum Schließen des "
+	"Fensters an der DOS Eingabeaufforderung den Befehl 'EXIT' eingeben "
+	"und die EINGABETASTE drücken.\0"
+#else
+	"Select this option if you want the DOS session to end when "
+	"the program specified in the PIF file ends.  Do not select "
+	"this option if you would like to be at a DOS prompt when the "
+	"program ends.\r\n\r\n"
+	"If you do not select this option then you will need to type "
+	"'exit' at the DOS prompt and press enter to close the window.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Alt-Tab
+IDB_ALTTAB	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"ALT+TAB wechselt zwischen Anwendungen.\r\n\r\n"
+	"Windows reserviert bestimmte Tastenkombinationen für eigene Zwecke. "
+	"Diese Tastenkombinationen sind normalerweise auch in DOS-Sitzungen "
+	"unter Windows wirksam. Wenn Ihre DOS-Anwendung eigene "
+	"Tastenkombinationen benutzt, die zu Konflikten mit den für "
+	"Windows gültigen Tastenkombinationen hervorrufen, können Sie "
+	"die Benutzung durch Windows für die DOS-Sitzung gezielt abschalten. "
+	"Die Windows Tastenkombination wird nur während der Arbeit in der "
+	"DOS-Sitzung deaktiviert.\0"
+#else
+	"ALT-TAB switches among applications\r\n\r\n"
+	"Windows reserves certain keyboard combinations for its own "
+	"use.  Normally these shortcut keys are active during DOS "
+	"sessions under Windows.  If your DOS application has its own "
+	"shortcut keys which conflict with Windows, you may disable "
+	"Windows' use of this key combination while the DOS session "
+	"is active. The Windows shortcut key is disabled only while "
+	"you work in the DOS session.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Alt-Esc
+IDB_ALTESC	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"ALT+ESC verlegt das aktive Fenster in eine Ebene hinter allen anderen "
+	"Fenstern und weist die Tastatureingaben dem nächsten Fenster zu.\r\n\r\n"
+	"Windows reserviert bestimmte Tastenkombinationen für eigene Zwecke. "
+	"Diese Tastenkombinationen sind normalerweise auch in DOS-Sitzungen "
+	"unter Windows wirksam. Wenn Ihre DOS-Anwendung eigene "
+	"Tastenkombinationen benutzt, die zu Konflikten mit den für "
+	"Windows gültigen Tastenkombinationen hervorrufen, können Sie "
+	"die Benutzung durch Windows für die DOS-Sitzung gezielt abschalten. "
+	"Die Windows Tastenkombination wird nur während der Arbeit in der "
+	"DOS-Sitzung deaktiviert.\0"
+#else
+	"ALT-ESC sends the active window behind all others and gives "
+	"the next window the keyboard input focus\r\n\r\n"
+	"Windows reserves certain keyboard combinations for its own "
+	"use.  Normally these shortcut keys are active during DOS "
+	"sessions under Windows.  If your DOS application has its own "
+	"shortcut keys which conflict with Windows, you may disable "
+	"Windows' use of this key combination while the DOS session "
+	"is active. The Windows shortcut key is disabled only while "
+	"you work in the DOS session.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Ctrl-Esc
+IDB_CTRLESC	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"STRG+ESC ruft die Windows Task-Liste auf.\r\n\r\n"
+	"Windows reserviert bestimmte Tastenkombinationen für eigene Zwecke. "
+	"Diese Tastenkombinationen sind normalerweise auch in DOS-Sitzungen "
+	"unter Windows wirksam. Wenn Ihre DOS-Anwendung eigene "
+	"Tastenkombinationen benutzt, die zu Konflikten mit den für "
+	"Windows gültigen Tastenkombinationen hervorrufen, können Sie "
+	"die Benutzung durch Windows für die DOS-Sitzung gezielt abschalten. "
+	"Die Windows Tastenkombination wird nur während der Arbeit in der "
+	"DOS-Sitzung deaktiviert.\0"
+#else
+	"CTRL-ESC invokes the Windows Task List\r\n\r\n"
+	"Windows reserves certain keyboard combinations for its own "
+	"use.  Normally these shortcut keys are active during DOS "
+	"sessions under Windows.  If your DOS application has its own "
+	"shortcut keys which conflict with Windows, you may disable "
+	"Windows' use of this key combination while the DOS session "
+	"is active. The Windows shortcut key is disabled only while "
+	"you work in the DOS session.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Print Screen
+IDB_PRTSC	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"DRUCK (Bildschirm-Kopie) kopiert den Inhalt des gesamten Bildschirms "
+	"in die Windows Zwischenablage.\r\n\r\n"
+	"Windows reserviert bestimmte Tastenkombinationen für eigene Zwecke. "
+	"Diese Tastenkombinationen sind normalerweise auch in DOS-Sitzungen "
+	"unter Windows wirksam. Wenn Ihre DOS-Anwendung eigene "
+	"Tastenkombinationen benutzt, die zu Konflikten mit den für "
+	"Windows gültigen Tastenkombinationen hervorrufen, können Sie "
+	"die Benutzung durch Windows für die DOS-Sitzung gezielt abschalten. "
+	"Die Windows Tastenkombination wird nur während der Arbeit in der "
+	"DOS-Sitzung deaktiviert.\0"
+#else
+	"PrtSc (print screen) copies the contents of the entire "
+	"screen to the Windows clipboard.\r\n\r\n"
+	"Windows reserves certain keyboard combinations for its own "
+	"use.  Normally these shortcut keys are active during DOS "
+	"sessions under Windows.  If your DOS application has its own "
+	"shortcut keys which conflict with Windows, you may disable "
+	"Windows' use of this key combination while the DOS session "
+	"is active. The Windows shortcut key is disabled only while "
+	"you work in the DOS session.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Alt-Space
+IDB_ALTSPACE	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"ALT+LEERTASTE ruft das Systemmenü auf. Dieses ist die Schaltfläche "
+	"in der linken oberen Ecke der meisten Fenster.\r\n\r\n"
+	"Windows reserviert bestimmte Tastenkombinationen für eigene Zwecke. "
+	"Diese Tastenkombinationen sind normalerweise auch in DOS-Sitzungen "
+	"unter Windows wirksam. Wenn Ihre DOS-Anwendung eigene "
+	"Tastenkombinationen benutzt, die zu Konflikten mit den für "
+	"Windows gültigen Tastenkombinationen hervorrufen, können Sie "
+	"die Benutzung durch Windows für die DOS-Sitzung gezielt abschalten. "
+	"Die Windows Tastenkombination wird nur während der Arbeit in der "
+	"DOS-Sitzung deaktiviert.\0"
+#else
+	"ALT-Space invokes the system menu which is in the upper left "
+	"corner of most windows.\r\n\r\n"
+	"Windows reserves certain keyboard combinations for its own "
+	"use.  Normally these shortcut keys are active during DOS "
+	"sessions under Windows.  If your DOS application has its own "
+	"shortcut keys which conflict with Windows, you may disable "
+	"Windows' use of this key combination while the DOS session "
+	"is active. The Windows shortcut key is disabled only while "
+	"you work in the DOS session.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Alt-Enter
+IDB_ALTENTER	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"ALT+EINGABETASTE bewirkt für eine DOS-Sitzung den Wechsel zwischen "
+	"Fenster und Vollbild-Anzeige (bzw. umgekehrt).\r\n\r\n"
+	"Windows reserviert bestimmte Tastenkombinationen für eigene Zwecke. "
+	"Diese Tastenkombinationen sind normalerweise auch in DOS-Sitzungen "
+	"unter Windows wirksam. Wenn Ihre DOS-Anwendung eigene "
+	"Tastenkombinationen benutzt, die zu Konflikten mit den für "
+	"Windows gültigen Tastenkombinationen hervorrufen, können Sie "
+	"die Benutzung durch Windows für die DOS-Sitzung gezielt abschalten. "
+	"Die Windows Tastenkombination wird nur während der Arbeit in der "
+	"DOS-Sitzung deaktiviert.\0"
+#else
+	"ALT-Enter toggles a DOS session between windowed and full "
+	"screen modes.\r\n\r\n"
+	"Windows reserves certain keyboard combinations for its own "
+	"use.  Normally these shortcut keys are active during DOS "
+	"sessions under Windows.  If your DOS application has its own "
+	"shortcut keys which conflict with Windows, you may disable "
+	"Windows' use of this key combination while the DOS session "
+	"is active. The Windows shortcut key is disabled only while "
+	"you work in the DOS session.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// Alt-PrtSc
+IDB_ALTPRTSC	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"ALT+DRUCK kopiert den Inhalt des aktiven Fensters in die "
+	"Windows Zwischenablage.\r\n\r\n"
+	"Windows reserviert bestimmte Tastenkombinationen für eigene Zwecke. "
+	"Diese Tastenkombinationen sind normalerweise auch in DOS-Sitzungen "
+	"unter Windows wirksam. Wenn Ihre DOS-Anwendung eigene "
+	"Tastenkombinationen benutzt, die zu Konflikten mit den für "
+	"Windows gültigen Tastenkombinationen hervorrufen, können Sie "
+	"die Benutzung durch Windows für die DOS-Sitzung gezielt abschalten. "
+	"Die Windows Tastenkombination wird nur während der Arbeit in der "
+	"DOS-Sitzung deaktiviert.\0"
+#else
+	"ALT-PrtSc copies the contents of the active window to the "
+	"Windows clipboard.\r\n\r\n"
+	"Windows reserves certain keyboard combinations for its own "
+	"use.  Normally these shortcut keys are active during DOS "
+	"sessions under Windows.  If your DOS application has its own "
+	"shortcut keys which conflict with Windows, you may disable "
+	"Windows' use of this key combination while the DOS session "
+	"is active. The Windows shortcut key is disabled only while "
+	"you work in the DOS session.\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// App shortcut key - ALT
+IDB_ALT RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Sie können eine Tastenkombination (auch 'Hot Key' genannt) "
+	"für jede DOS-Sitzung festlegen. Drücken dieser Tastenkombination "
+	"bei beliebiger Gelegenheit in Windows (Ausnahmen siehe unten) "
+	"bewirkt einen Wechsel zu der DOS-Sitzung als aktive Anwendung.\r\n\r\n"
+	"Sie können die meisten Kombinationen aus STRG, ALT, UMSCH und einigen "
+	"anderen Tasten festlegen. Alle Tastenkombinationen müssen STRG oder ALT "
+	"enthalten. (Es dürfen auch beide Tasten zusammen enthalten sein.) "
+	"Tastenkombinationen dürfen die folgenden Tasten NICHT enthalten: "
+	"RÜCKTASTE, ESC, EINGABETASTE, DRUCK, LEERTASTE, TAB-TASTE.\r\n\r\n"
+	"Tastenkombinationen sind unter den folgenden Bedingungen nicht anwendbar:\r\n\r\n"
+	"     -  Die aktive Windows-Anwendung benutzt die gleiche\r\n"
+	"        Tastenkombination und diese ist eine aktive Auswahl\r\n"
+	"     -  Für das Programm wurde im Programm-Manager, Dialog\r\n"
+	"        Programmeigenschaften, eine andere Tastenkombination\r\n"
+	"        gewählt.\0"
+#else
+	"You may specify a shortcut or 'hot' key combination for any "
+	"DOS session.  Pressing the shortcut key combination from "
+	"anywhere in Windows (except as explained below) will cause "
+	"the DOS session to become the active application.\r\n\r\n"
+	"You may use most combinations of CTRL, ALT, SHIFT and some "
+	"other key.  All shortcut keys must include CTRL or ALT (and "
+	"may include both). Shortcut keys may NOT include any of the "
+	"following: BACKSPACE, ESC, ENTER, PRINT SCREEN, SPACEBAR or "
+	"TAB.\r\n\r\n"
+	"Shortcut keys will not work under the following circumstances:\r\n\r\n"
+	"     -  the active Windows application uses the same key\r\n"
+	"        combination and the key combination is an active choice\r\n"
+	"     -  a different shortcut key was specified in the program's\r\n"
+	"        Program Manager properties\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// App shortcut key - CTRL
+IDB_CTRL	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Sie können eine Tastenkombination (auch 'Hot Key' genannt) "
+	"für jede DOS-Sitzung festlegen. Drücken dieser Tastenkombination "
+	"bei beliebiger Gelegenheit in Windows (Ausnahmen siehe unten) "
+	"bewirkt einen Wechsel zu der DOS-Sitzung als aktive Anwendung.\r\n\r\n"
+	"Sie können die meisten Kombinationen aus STRG, ALT, UMSCH und einigen "
+	"anderen Tasten festlegen. Alle Tastenkombinationen müssen STRG oder ALT "
+	"enthalten. (Es dürfen auch beide Tasten zusammen enthalten sein.) "
+	"Tastenkombinationen dürfen die folgenden Tasten NICHT enthalten: "
+	"RÜCKTASTE, ESC, EINGABETASTE, DRUCK, LEERTASTE, TAB-TASTE.\r\n\r\n"
+	"Tastenkombinationen sind unter den folgenden Bedingungen nicht anwendbar:\r\n\r\n"
+	"     -  Die aktive Windows-Anwendung benutzt die gleiche\r\n"
+	"        Tastenkombination und diese ist eine aktive Auswahl\r\n"
+	"     -  Für das Programm wurde im Programm-Manager, Dialog\r\n"
+	"        Programmeigenschaften, eine andere Tastenkombination\r\n"
+	"        gewählt.\0"
+#else
+	"You may specify a shortcut or 'hot' key combination for any "
+	"DOS session.  Pressing the shortcut key combination from "
+	"anywhere in Windows (except as explained below) will cause "
+	"the DOS session to become the active application.\r\n\r\n"
+	"You may use most combinations of CTRL, ALT, SHIFT and some "
+	"other key.  All shortcut keys must include CTRL or ALT (and "
+	"may include both). Shortcut keys may NOT include any of the "
+	"following: BACKSPACE, ESC, ENTER, PRINT SCREEN, SPACEBAR or "
+	"TAB.\r\n\r\n"
+	"Shortcut keys will not work under the following circumstances:\r\n\r\n"
+	"     -  the active Windows application uses the same key\r\n"
+	"        combination and the key combination is an active choice\r\n"
+	"     -  a different shortcut key was specified in the program's\r\n"
+	"        Program Manager properties\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// App shortcut key - SHIFT
+IDB_SHIFT	RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Sie können eine Tastenkombination (auch 'Hot Key' genannt) "
+	"für jede DOS-Sitzung festlegen. Drücken dieser Tastenkombination "
+	"bei beliebiger Gelegenheit in Windows (Ausnahmen siehe unten) "
+	"bewirkt einen Wechsel zu der DOS-Sitzung als aktive Anwendung.\r\n\r\n"
+	"Sie können die meisten Kombinationen aus STRG, ALT, UMSCH und einigen "
+	"anderen Tasten festlegen. Alle Tastenkombinationen müssen STRG oder ALT "
+	"enthalten. (Es dürfen auch beide Tasten zusammen enthalten sein.) "
+	"Tastenkombinationen dürfen die folgenden Tasten NICHT enthalten: "
+	"RÜCKTASTE, ESC, EINGABETASTE, DRUCK, LEERTASTE, TAB-TASTE.\r\n\r\n"
+	"Tastenkombinationen sind unter den folgenden Bedingungen nicht anwendbar:\r\n\r\n"
+	"     -  Die aktive Windows-Anwendung benutzt die gleiche\r\n"
+	"        Tastenkombination und diese ist eine aktive Auswahl\r\n"
+	"     -  Für das Programm wurde im Programm-Manager, Dialog\r\n"
+	"        Programmeigenschaften, eine andere Tastenkombination\r\n"
+	"        gewählt.\0"
+#else
+	"You may specify a shortcut or 'hot' key combination for any "
+	"DOS session.  Pressing the shortcut key combination from "
+	"anywhere in Windows (except as explained below) will cause "
+	"the DOS session to become the active application.\r\n\r\n"
+	"You may use most combinations of CTRL, ALT, SHIFT and some "
+	"other key.  All shortcut keys must include CTRL or ALT (and "
+	"may include both). Shortcut keys may NOT include any of the "
+	"following: BACKSPACE, ESC, ENTER, PRINT SCREEN, SPACEBAR or "
+	"TAB.\r\n\r\n"
+	"Shortcut keys will not work under the following circumstances:\r\n\r\n"
+	"     -  the active Windows application uses the same key"
+	"        combination and the key combination is an active choice\r\n"
+	"     -  a different shortcut key was specified in the program's\r\n"
+	"        Program Manager properties\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+// App shortcut key - Key
+IDE_KEY RCDATA	LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+#ifdef LANG_GR
+	"Sie können eine Tastenkombination (auch 'Hot Key' genannt) "
+	"für jede DOS-Sitzung festlegen. Drücken dieser Tastenkombination "
+	"bei beliebiger Gelegenheit in Windows (Ausnahmen siehe unten) "
+	"bewirkt einen Wechsel zu der DOS-Sitzung als aktive Anwendung.\r\n\r\n"
+	"Sie können die meisten Kombinationen aus STRG, ALT, UMSCH und einigen "
+	"anderen Tasten festlegen. Alle Tastenkombinationen müssen STRG oder ALT "
+	"enthalten. (Es dürfen auch beide Tasten zusammen enthalten sein.) "
+	"Tastenkombinationen dürfen die folgenden Tasten NICHT enthalten: "
+	"RÜCKTASTE, ESC, EINGABETASTE, DRUCK, LEERTASTE, TAB-TASTE.\r\n\r\n"
+	"Tastenkombinationen sind unter den folgenden Bedingungen nicht anwendbar:\r\n\r\n"
+	"     -  Die aktive Windows-Anwendung benutzt die gleiche\r\n"
+	"        Tastenkombination und diese ist eine aktive Auswahl\r\n"
+	"     -  Für das Programm wurde im Programm-Manager, Dialog\r\n"
+	"        Programmeigenschaften, eine andere Tastenkombination\r\n"
+	"        gewählt.\0"
+#else
+	"You may specify a shortcut or 'hot' key combination for any "
+	"DOS session.  Pressing the shortcut key combination from "
+	"anywhere in Windows (except as explained below) will cause "
+	"the DOS session to become the active application.\r\n\r\n"
+	"You may use most combinations of CTRL, ALT, SHIFT and some "
+	"other key.  All shortcut keys must include CTRL or ALT (and "
+	"may include both). Shortcut keys may NOT include any of the "
+	"following: BACKSPACE, ESC, ENTER, PRINT SCREEN, SPACEBAR or "
+	"TAB.\r\n\r\n"
+	"Shortcut keys will not work under the following circumstances:\r\n\r\n"
+	"     -  the active Windows application uses the same key"
+	"        combination and the key combination is an active choice\r\n"
+	"     -  a different shortcut key was specified in the programs Program"
+	"        Manager properties\0"
+#endif				/* IFDEF LANG_GR */
+END
+
+
+

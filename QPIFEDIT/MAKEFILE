@@ -1,0 +1,112 @@
+#' $Header:   P:/PVCS/MAX/QPIFEDIT/MAKEFILE.__V   1.10   02 Jun 1997 13:24:38   BOB  $
+#
+# MAKEFILE for QPIFEDIT, The Qualitas PIF Editor
+#
+# Builds QPIFEDIT.EXE
+
+.SUFFIXES: .lib .exe .res .obj .asm .c .inc .h .rc
+
+!include $(MAXROOT)include\maxnames.mak
+
+AS	=	ml6
+H2INC	=	h2inc
+
+AFLAGS	=	-Cp /DLANG_$(LANG)
+HFLAGS	=	/Mn /Ni -DLANG_$(LANG)
+CFLAGS	=	-AS -W3 -G2 -Gs -Gw -Oaw -Zp1 -Z7 -DLANG_$(LANG)
+RCFLAGS =	-DLANG_$(LANG)
+LFLAGS	=	/NOD /MAP /ONERR:NOEXE
+
+!IF "$(DEBUG)"=="1"
+CFLAGS=$(CFLAGS) -DDEBUG
+LFLAGS=$(LFLAGS) /CO
+!ENDIF				# !IF DEBUG
+
+# Define directories.  Some of these are OEM-specific
+V=$(MAXROOT)vxd\	# VxD source dir
+L=$(MAXROOT)lib\	# .LIB directory
+ALLINC=-I$(I) -I$(V)
+ALLINCRC=-i$(V)
+O=RET\			# Temporaries and the results of the build
+
+# Inference rules
+
+{$(R)}.asm{$(O)}.exe:
+	$(AS) $(AFLAGS) $(ALLINC) $(R)$(@B).asm /Fe$(O)$(@B).exe
+	del $(@B).obj
+
+.asm.exe:
+	$(AS) $(AFLAGS) $(ALLINC) $(@B).asm /Fe$(@B).exe
+	del $(@B).obj
+
+{$(R)}.c{$(O)}.obj:
+	@Set INCLUDE=$(INCLUDE)
+	$(CC) -c $(CFLAGS) $(ALLINC) /Fo$(O)$(@B).obj $(R)$(@B).c
+
+.h.inc:
+	$(H2INC) $(HFLAGS) $(CFLAGS) /Fa$*.inc $?
+
+# Project targets
+
+ALL:	DIR		$(O)qpifedit.exe $(BD)qpifedit.exe
+
+DEL:
+	-rm $(O)*.*
+
+DIR:
+	vdir -c $(O)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\qpifedit\*
+VCSDIR = P:\PVCS\MAX\qpifedit\*
+ALIAS ALL P:\PVCS\MAX\qpifedit\*.*,p:\pvcs\max\qpifedit\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+DEPSCAN: makefile
+	depscan -s$(V)=$$(V) *.c *.rc *.asm >qpifedit.inc
+
+# Get Depscan-generated dependencies
+!include qpifedit.inc
+
+clean:
+	echo Y | del ret
+	del *.exe
+	del *.map
+	del *.res
+	del *.obj
+
+zip:
+	del *.zip
+	pkzip -x*.sym -r -p qpifedit.zip
+
+$(BD)qpifedit.exe:  $(O)qpifedit.exe
+	xc /r $** $@
+
+LIBS	=libw slibcew commdlg oldnames
+LIBS_EXT=ctl3dv2.lib
+
+$(O)qpifedit.exe:	$(O)qpifedit.obj qpifedit.def $(O)qpifedit.res \
+		makefile qpifstub.exe
+	@Set LIB=$(LIB)
+	$(LD) @<<$(O)qpifedit.lnk
+		$(LFLAGS) /ALIGN:16 $(O)qpifedit.obj
+		$(O)qpifedit.exe
+		$(O)qpifedit.map
+		$(LIBS) $(LIBS_EXT)
+		qpifedit.def
+<<KEEP
+	$(RC) -31 $(RCFLAGS) /fe$(O)qpifedit.exe $(O)qpifedit.res
+
+$(O)qpifedit.res:	qpifedit.rc $(QPIFEDIT_RCDEP)
+	@Set INCLUDE=$(INCLUDE)
+	$(RC) -r $(ALLINCRC) $(RCFLAGS) /fo$(O)qpifedit.res qpifedit.rc
+
+$(O)qpifedit.OBJ:	qpifedit.c $(QPIFEDIT_DEP)
+
+qpifstub.exe:	qpifstub.asm $(QPIFSTUB_ADEP)
+
+
