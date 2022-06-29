@@ -1,0 +1,76 @@
+[COMMON]
+    Break=ON
+    DOS=High
+    Files=150
+    Shell=c:\command.com c:\ /p /e:1024 /u:255 /l:1024
+    Stacks=0,0
+    Switches=/F
+
+    Device=c:\bin\extkbuf.sys
+
+[MENU]
+    menuitem=386MAX-SWAT, 386MAX w/SWAT
+    menuitem=386MAX-NOSWAT, 386MAX w/o SWAT
+    menuitem=HIMEM,  HIMEM w/SWAT
+    menuitem=EMM386, EMM386 w/SWAT
+    menuitem=ROM-DOS,ROM-DOS w/SWAT
+    menuitem=Nothing
+    menudefault=386MAX-NOSWAT,3
+
+[386MAX-SWAT]
+    Device=c:\util\qmax\386max.sys pro=c:\bin\386max.pro
+    Device=c:\d\source\lib\386swat.lod pro=c:\bin\386swat.pro
+REM Device=c:\d\source\lib\swatcmd.exe WKD NOISY
+
+    Device=C:\UTIL\QMAX\386load.sys size=81664 prgreg=2 prog=c:\tallscrn\tallscrn.sys /f=0 /a=256 /k=1300 /s=16000 /p=c:\tallscrn\tallscrn.pro
+
+    Device=C:\UTIL\QMAX\386load.sys size=16432 prog=c:\w\setver.exe
+    Device=C:\UTIL\QMAX\386load.sys size=27648 prog=C:\SBCD\DRV\SBIDE.SYS /D:MSCD001 /P:170,15 /V
+    Device=C:\UTIL\QMAX\386load.sys size=3712 prog=c:\w\ifshlp.sys
+
+REM MAXIMIZE: ExtraDOS must come at the end of CONFIG.SYS
+    Device=c:\util\qmax\ExtraDOS.MAX pro=c:\util\qmax\ExtraDOS.PRO
+    Install=c:\util\qmax\ExtraDOS.MAX
+
+[386MAX-NOSWAT]
+    Device=c:\util\qmax\386max.sys pro=c:\bin\386max.pro
+REM Device=c:\d\source\lib\386swat.lod pro=c:\bin\386swat.pro
+REM Device=c:\d\source\lib\swatcmd.exe WKD NOISY
+
+    Device=C:\UTIL\QMAX\386load.sys size=81664 prgreg=2 prog=c:\tallscrn\tallscrn.sys /f=0 /a=256 /k=1300 /s=16000 /p=c:\tallscrn\tallscrn.pro
+
+    Device=C:\UTIL\QMAX\386load.sys size=16432 prog=c:\w\setver.exe
+    Device=C:\UTIL\QMAX\386load.sys size=27648 prog=C:\SBCD\DRV\SBIDE.SYS /D:MSCD001 /P:170,15 /V
+    Device=C:\UTIL\QMAX\386load.sys size=3712 prog=c:\w\ifshlp.sys
+
+REM MAXIMIZE: ExtraDOS must come at the end of CONFIG.SYS
+    Device=c:\util\qmax\ExtraDOS.MAX pro=c:\util\qmax\ExtraDOS.PRO
+    Install=c:\util\qmax\ExtraDOS.MAX
+
+[HIMEM]
+    Device=c:\bin\sysload.sys /p=c:\d\source\lib\extsize.com 262144
+    Device=c:\w\himem.sys /TESTMEM:OFF
+    Device=c:\d\source\lib\386swat.lod pro=c:\bin\386swat.pro
+    Device=c:\d\source\lib\swatcmd.exe TS 6B8 * * 60
+    Device=c:\d\source\lib\swatcmd.exe TS 6C0 * * 68
+    Device=c:\w\setver.exe
+    Device=C:\SBCD\DRV\SBIDE.SYS /D:MSCD001 /P:170,15 /V
+
+[EMM386]
+    Device=c:\w\himem.sys /SHADOWRAM:OFF /TESTMEM:OFF
+    Device=c:\w\emm386.exe
+    Device=c:\d\source\lib\386swat.lod pro=c:\bin\386swat.pro
+    Device=c:\w\setver.exe
+    Device=C:\SBCD\DRV\SBIDE.SYS /D:MSCD001 /P:170,15 /V
+
+[ROM-DOS]
+    Device=c:\d\source\lib\386swat.lod pro=a:\386swat.pro
+    Device=c:\d\source\lib\swatcmd.exe
+    Device=c:\d\source\lib\386max.sys pro=a:\386max.pro
+
+[Nothing]
+    Device=c:\d\source\lib\386swat.lod pro=c:\bin\386swat.pro
+    Device=c:\bin\sysload.sys /p=c:\d\source\lib\extsize.com 262144
+    Device=c:\w\setver.exe
+
+

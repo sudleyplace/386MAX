@@ -1,0 +1,227 @@
+;  Default MAX profile
+;; load=d:\source\lib\386swat.lod pro=c:\bin\386swat.pro
+;; load=d:\source\lib\hpdaon.lod
+
+SWAPFILE=C:\UTIL\QMAX\386MAX.SWP /S=8192   ; SETUP
+NOWIN30   ; SETUP
+USE=B000-B800   ; SETUP
+;;;vgaswap		   ; Move the 32K VGA ROM to B000
+
+[386MAX]
+;; The following lines are for Mr. BIOS
+
+;; The following lines are for 1.00.10.BR0T
+;;;USE=ED00-EE00	   ; Recove ESCD area
+;;;USE=F800-F900	   ; MAXIMIZE ==> ROMSRCH recovers  4 KB.
+;;;USE=FC00-FE00	   ; MAXIMIZE ==> ROMSRCH recovers  8 KB.
+;;;PRGREG=4		   ; Load 386MAX.SYS into this program region
+;;;HPDAREG=80,3 	   ; MAXIMIZE ==> Move DPMI Host Private Data Area to region 3 for 80 bytes
+;;;STACKREG=944,1	   ; MAXIMIZE ==> Move Stack Overflow Protection to region 1 for 944 bytes
+
+  debug=dpmierr 	   ; Signal INT 01h on each DPMI error
+  istacks=64		   ; Define additional nn x 256 bytes of internal stack space
+
+;---------------------------------------------------
+; All possible options
+;---------------------------------------------------
+; 32bitdma	 ; System supports 32-bit EISA style DMA
+; amrs=nnn	 ; Define nnn additional Alternate Map Register Sets
+; auto		 ; Inactive state
+; autobcf [/d] [/i] [/s=nn] [/t] ; Automatic load BIOS Compression File
+;		   /t	if BCF file not found, display short message
+; bcf=d:\path\filename.ext [/d] [/i] [/s=nn] ; Load BIOS Compression File with
+;		   optional args
+;		   /d	display debugging information
+;		   /i	ignore errors during BCF interrupt searching
+;		   /s=nn[,nn,...] skip test of interrupt nn
+; cachesize=nnn  ; Specify external cache size in K (default:256)
+; cga		 ; Equivalent to VIDMEM=B800-C000
+; dma=nnn	 ; Set size of DMA transfer buffer to nnn KB
+; dos4		 ; Use PC-DOS 4.00 compatible EMS page numbering
+; dos5		 ; Use DOS 5 compatible MAC spanning entry
+; dpmimem=lll,sss,bbb,ccc,hhh,ppp,ddd ; Set DPMI memory options:     Min   Def
+;		   lll = # LDT entries				      32   616
+;		   sss = byte size of the HPDA stack		     512  1024
+;		   bbb = byte size of the HPDA buffer		     512  4096
+;		   ccc = # VM callbacks 			      16    32
+;		   hhh = # DPMI memory handles			       1    32
+;		   ppp = # page directories			       1     1
+;		   ddd = byte size of the dynamic save area	    1024  2048
+; eems		 ; Defunct option
+; ega		 ; Equivalent to VIDMEM=A000-C000
+; emm=nnnnn	 ; Synonym for EMS=
+; ems=nnnnn	 ; Reserve exactly nnnn KB of EMS memory
+; ems30 	 ; Include support for EMS 3.0 functions 10 and 11
+; exclude=xxxx-yyyy ; Exclude these as EMS-mappable pages
+; ext=nnnnn	 ; Reserve at least nnnn KB of extended memory
+; extsize=nnnnn  ; Set nnnn KB as the amount of extended memory in the system
+; fastram	 ; Recover AST fASTram memory
+; forcea20	 ; Trap I/O ports 60h and 64h in IO bit permission map
+; frame=xxxx	 ; Put EMS page frame at segment xxxx
+; highdos	 ; Allow high DOS memory (ILIM386 only w/ILIMLOAD)
+; hmamin=nn	 ; Require HMA users to request at least nn KB
+; hpdareg=nnnnn,r ; Put DPMI HPDA in high DOS region r.  If size n
+;		 ; doesn't match, force it low.
+; ignoreflexframe ; Tell 386LOAD to ignore the FLEXFRAME option
+; include=nnn	 ; Define up to an additional nnn KB of EMS-mappable pages
+; include=xxxx-yyyy ; Define additional EMS-mappable pages
+; iop=nnnn	 ; Default is F080
+; iowrap	 ; Trap wrapped I/O addresses on ISA systems
+; istacks=nn	 ; Define additional nn x 256 bytes of internal stack space
+; lmltop=xxxxxxxx ; Load program in extended memory ending at xxxxxxxx in hex
+; load=d:\path\filename.ext [args] ; Load API-compatible file
+; lowframe	 ; Allow low DOS memory EMS page frame (HPEMM386 only)
+; mono		 ; Equivalent to VIDMEM=B000-B800
+; ndpok 	 ; Defunct option
+; no4b		 ; Don't allow programs to load high using DOS function 4B
+; no58		 ; Don't emulate DOS=UMB support of DOS function 58
+; noabios	 ; Ignore ABIOS initialization error
+; nocache	 ; Don't disable 486 cache in TIME_ALLMEM
+; nocomprom	 ; Don't compress system ROM
+; nodma 	 ; EMS=0 SWAP=0 NOLOW NOHIGH NOROM NOWARMBOOT
+; nodpmi	 ; Disable DPMI services
+; noeisadma	 ; Do not utilize EISA DMA characteristics
+; noflex	 ; Synonym for IGNOREFLEXFRAME
+; noframe	 ; Omit EMS page frame, but install with EMS 4.0 services
+; nogate	 ; Don't use WBINVD, as on Gateway systems
+; nohigh	 ; Don't define high DOS memory
+; nohma 	 ; Don't define HMA (HPEMM386 only)
+; noiowrap	 ; All 16 bits of an I/O address are significant
+; noloadhi	 ; Don't load 386MAX.SYS into high DOS memory
+; noloadhigh	 ; Synonym for NOLOADHI
+; nolow 	 ; Don't define low DOS memory
+; noparity	 ; Don't enable parity check
+; nopulse	 ; Don't pulse 8042 after gating/de-gating A20
+; norom 	 ; Don't cache ROMs
+; noscan=xxxx-yyyy ; Don't scan (in 386UTIL /R) this region
+; noscrub	 ; Don't scrub shadow RAM
+; noscsi	 ; Don't check for SCSI bus masters
+; notime	 ; Skip TIME_ALLMEM and load MAX in highest extended memory
+; novgasig	 ; Don't copy video signature region when using VGASWAP
+; novme 	 ; Don't enable Virtual Mode Extensions
+; nowarmboot	 ; Don't steal 4KB of ROM at FF00-10000
+; nowin3	 ; Disable support for Windows 3 and save up to 1KB of low DOS
+; nowin30	 ; Disable support for Windows 3.0 (Support 3.1 and above)
+; noxbios	 ; Don't relocate XBIOS data area
+; noxram	 ; No extra (shadow/TOP384) RAM
+; numhandles=nn  ; Synonym for XMSHNDL (HPEMM386 only)
+; off		 ; Disabled state
+; on		 ; Enabled (default) state
+; prgreg=n	 ; Load 386MAX.SYS into program region n (1-9)
+; pro=d:\path\filename.ext ; Take keywords from profile (CONFIG.SYS line only)
+; prof=d:\path\filename.ext ; Synonym for PRO=
+; psmem=nnn[,ssss] ; Define nnn KB of periscope memory in a 32KB window
+;		   optionally at segment ssss
+; ram=xxxx-yyyy  ; Avoid using as high DOS memory
+; reboot	 ; Synonym for FORCEA20 (HPEMM386 and ILIM386 only)
+; resetkeyb	 ; Reset 8042 whenever going inactive
+; rom=xxxx-yyyy  ; Cache this ROM only
+; screen	 ; To support Omniview
+; shadowram	 ; AT/386 or NEAT CHIPSet
+; shadowrom	 ; Leave alone any ROM shadowed at E000 or E800
+; shortframe	 ; Synonym for NOFRAME
+; slowdma	 ; Trap DMA count and address registers
+; slowkeyb	 ; Disable/enable keyboard during INT 09h handler
+; stackreg=nnnnn,r ; Load SOP data in high DOS region r (0 to load low).
+;		 ; If size n doesn't match, force it low.
+; stacks=nn[,sss] [/h] [/i=ii[,ii,...]] ; Define nn DOS stacks with
+;		   optional args
+;		   sss	each of size sss (default size=128)
+;		   /h	locate in high DOS (superseded by STACKREG=)
+;		   /i=ii,[ii,...]  restrict intercepted interrupts to ii,...
+;		   The values nn and sss are in decimal, ii is in hex.
+; stacks=off	 ; Disable stacks at startup (disabled by default)
+; stacks=on	 ; Enable stacks at startup (disabled by default)
+; swap=nnn	 ; Swap nnn KB of low DOS memory with 32-bit memory at 1MB
+; swapfile [=d:\path\filename.ext] [/s=nnnn] [/t] ; Use a swapfile for DPMI VMM
+;		  optional args
+;		  d:\path\filename.ext	 Use this as permanent swapfile
+;		  /t			 On second thought, it's temporary
+;		  /s=nnnn		 Make it nnnn KB in size (default = 8192)
+;		  If no filename is specified, the SWAPFILE is temporary;
+;		  otherwise, it's permanent unless /T is specified.
+; sys=systype	 ; Note special system type
+; syst=systype	 ; Synonym for SYS=
+; terse 	 ; Suppress display of blue screen map during initialization
+; top384	 ; COMPAQ 16MB-384KB compatible
+; trace 	 ; Conditional-assembly option for I/O trace
+; unshadowrom	 ; Relocate video ROM from E000 or E800 back to C000
+; unshift	 ; Don't trap IO ports 60h and 64h (default)
+; use=xxxx-yyyy  ; Use as high DOS memory
+; vga		 ; Equivalent to VIDMEM=A000-C000
+; vgaswap	 ; Move the 32K VGA ROM to B000
+; vgaswap=xx,yy,zz ; Move the VGA ROM at para xx to para yy for zz bytes
+; vidmem=xxxx-yyyy ; Specify bounds of video memory
+; vxd=d:\path\filename.ext ; Load alternate 386MAX.VXD for Windows 3
+; w=off 	 ; Disable Weitek co-processor (HPEMM386 only)
+; w=on		 ; Enable ...
+; weitek=force	 ; Force recognition of Weitek co-processor
+; weitek=off	 ; Disable Weitek co-processor
+; weitek=on	 ; Enable ...
+; xbdareg=nnnnn,r ; Relocate XBIOS into high DOS region r (0 to load low)
+;		 ; If size n doesn't match, force it low.
+; xbioshi	 ; Attempt XBIOS relocation into high DOS memory (superseded
+;		 ; by xbdareg=)
+; xmshndl=nn	 ; Reserve nn XMS handles (default=32)
+
+; debug=abios	 ; Signal NMI on ABIOS calls if BCF in effect
+; debug=allrom	 ; Force all ROM to RAM
+; debug=bios	 ; Force entry to protected mode via BIOS method (cf. DEBUG=EPM)
+; debug=call	 ; Signal NMI after PGMAPCALL
+; debug=caps	 ; Signal NMI if CapsLock pressed at startup
+; debug=comprom  ; Display debugging info if COMPROM fails
+; debug=cr3	 ; Force high-order bit of CR3 on
+; debug=dpmi	 ; Signal INT 01h on each DPMI call
+; debug=dpmierr  ; Signal INT 01h on each DPMI error
+; debug=dpmilock ; Check for InDOS when paging
+; debug=dpminewsel ; Force new selector on all allocates
+; debug=dpmiphys ; Disable checks in DPMI_GETP2L
+; debug=dpmisel  ; Signal INT 01h on each LAST_DPMI_xS error
+; debug=dpmispurnt ; Signal INT 01h on spurious NT task switches
+; debug=dpmistd  ; Force KRNL386 to come up in standard mode
+; debug=dpmiterm ; Signal INT 01h if we free resources upon termination
+; debug=dpmiv100 ; Force DPMI version 1.00 even if Rational Systems-based app
+; debug=dpmixcopy ; Don't check DPMI copyright notices
+; debug=emserr	 ; Signal INT 01h on EMS errors
+; debug=emspte	 ; Test EMS PTEs
+; debug=emsrdwr  ; Catch reads from and/or writes into unmapped EMS pages
+; debug=emssave  ; Enable EMSRDWR and EMSWRIT for EMS save page maps
+; debug=emswrit  ; Catch writes into unmapped EMS pages
+; debug=epm	 ; Force entry to protected mode via our method (now the
+;		 ; default) (cf. DEBUG=BIOS)
+; debug=evm	 ; Debug Enter VM 8086 Mode
+; debug=fill	 ; Use ICE Int 1, NOPD, Int 3 for UMB filler pattern
+; debug=hlt	 ; Signal NMI on CLI/HLT
+; debug=i06	 ; Trap unemulated Invalid Opcodes
+; debug=i67	 ; Trap INT 67h calls
+; debug=int	 ; Signal INT 03h if CapsLock present at startup
+; debug=inv	 ; Not found ==> Invalid opcode (INT 06h)
+; debug=iowrap	 ; Trap I/O wraps at FFFF
+; debug=jmp	 ; Signal NMI after PGMAPJMP
+; debug=led	 ; Blink LEDs during initialization
+; debug=novcpi	 ; Disable VCPI presence detection
+; debug=nowrap	 ; Trap even boundary stack wraps at 0000
+; debug=pic	 ; Reprogram the PIC on EPM
+; debug=pmr	 ; Signal NMI on PMR I/O accesses
+; debug=rc	 ; Signal reason code for termination
+; debug=rom	 ; Signal NMI if write to ROM
+; debug=scrub	 ; Call SWAT in SCRUB_SHADOW
+; debug=sor	 ; Not found ==> Segment overrun (INT 0Dh)
+; debug=time	 ; Call SWAT in TIME_ALLMEM
+; debug=trip	 ; Use triple fault to reboot system (default uses 8042)
+; debug=unshadowrom ; Display debugging info if UNSHADOWROM fails
+; debug=vcpi	 ; Conditional-assembly option for debugging VCPI applications
+; debug=vds	 ; Call SWAT on VDS calls
+; debug=vms	 ; Call SWAT on erroneous VCPI VM86 to PM mode switches
+; debug=xdma	 ; Don't optimize DMA transfers with PTE checking
+; debug=x09	 ; Don't trap INT 09h from the IDT
+; debug=x67	 ; Don't trap INT 67h from the IDT
+; debug=xm	 ; Signal NMI on XMove interrupts
+; debug=xms	 ; Call SWAT on XMS calls
+; debug=xmspte	 ; Test XMS PTEs
+; debug=xr	 ; Allow block move from program region
+
+EMS=0   ; SETUP
+[386MAX]
+HPDAREG=80,1     ; MAXIMIZE ==> Move DPMI Host Private Data Area to region 1 for 80 bytes
+STACKREG=944,2     ; MAXIMIZE ==> Move Stack Overflow Protection to region 2 for 944 bytes

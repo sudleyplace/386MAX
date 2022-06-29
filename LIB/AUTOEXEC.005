@@ -1,0 +1,101 @@
+@echo off
+SET MGA=C:\MGA\SETUP\
+SET BLASTER=A220 I7 D1 H7 P330 T6
+SET SBPCI=C:\SBPCI
+SET SNDSCAPE=C:\W
+    Set PROMPT=$p$g
+
+    call c:\autosubs.bat
+
+    Set PATH=
+    Set PATH=C:\BIN;W:\;W:\COMMAND;R:\MAX\LIB;R:\LIB;C:\UTIL\DJGPP\BIN;M:\BIN
+    Set DJDIR=C:\UTIL\DJGPP\
+    Set DJGPP=C:\UTIL\DJGPP\DJGPP.ENV
+    Set TEMP=W:\TEMP
+    Set TMP=W:\TEMP
+    Set COPYCMD=/Y
+    Set INCLUDE=H:\;I:\;M:\INCLUDE
+    Set LNKCMD=QLINK
+    Set QLINK=/W:EXTMAT
+    Set CATROOT=R:\
+    Set MAXROOT=R:\MAX\
+    Set SRCROOT=R:\
+
+    Set BINDIR=%SRCROOT%LIB\
+    Set EMBDIR=R:\EMBLER\
+    Set GCCDIR=C:\UTIL\DJGPP\
+    Set HCDIR=C:\PROGRA~1\HELPWO~1\
+    Set HDIR=H:\
+    Set I01DIR=S:\INT1\
+    Set INCDIR=I:\
+    Set INIT=C:\BIN
+    Set LIB=M:\LIB
+    Set MAXDIR=Q:\
+    Set MAXINC=Q:\
+    Set MSVC=M:\
+    Set MSVC16=M:\
+    Set MSVC32=N:\
+    Set QLNKDIR=R:\QLINK\
+    Set RXMDIR=%MAXROOT%QMT\
+    Set DDKINC=N:\DDK\INC32\
+    Set SDKINC=M:\DDK\INCLUDE\
+    Set SUDIR=R:\MAX\STATUTIL\
+    Set SWATVXD=%SRCROOT%SWATVXD\
+    Set SWTDIR=S:\
+    Set SWTINC=S:\
+    Set SYSDIR=R:\LIB\
+    Set TWTEXT=BOB
+    Set WHDIR=R:\DPMIONE\
+    Set WINVXD=%MAXROOT%VXD\
+    Set WWWDIR=T:\FOLKWEB\DATA\
+    Set VCSID=BOB
+
+    Set KEDITW=NODIRCASE
+    Set KEDIT=DEFPROFILE C:\UTIL\KEDITD\USER\PROFILE.KEX
+
+    Set DEVMGR_SHOW_DETAILS=1
+
+    goto %CONFIG%
+
+:386MAX-SWAT
+:386MAX-NOSWAT
+REM r:\lib\BugSight
+REM r:\lib\BugSight /disable
+REM W:\COMMAND\MSCDEX.EXE /D:MSCD001 /V /M:8 /L:E /D:MSCD001 /M:12
+REM *** C:\UTIL\QMAX\386load size=5824 prog=c:\bin\autokeyb/c
+
+REM delay 3
+REM if not errorlevel 1 call c:\wininit.bat
+REM call rcd M2
+REM call lcd NE
+    cd r:\dpmione
+REM cd r:\embler
+REM cd r:\qlink\wntdpmi
+    r:
+    goto END
+
+:HIMEM-SWAT
+:HIMEM-NOSWAT
+:EMM386-SWAT
+:EMM386-NOSWAT
+REM r:\lib\BugSight
+REM r:\lib\BugSight /disable
+    W:\COMMAND\MSCDEX.EXE /D:MSCD001 /V /M:8 /L:E /D:ASPICD0 /M:12
+    C:\BIN\doskey
+
+REM cd r:\dpmione
+REM cd r:\embler
+REM cd r:\qlink\wntdpmi
+    r:
+
+:NOTHING-SWAT
+:NOTHING
+REM cd r:\dpmione
+REM cd r:\embler
+REM cd r:\qlink\wntdpmi
+    cd r:\dpmione\testing\jbs
+    Set LIB=R:\DPMIONE\BUGS\STAHNKE\LIB
+    r:
+:END
+
+
