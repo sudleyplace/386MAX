@@ -1,0 +1,22 @@
+* Turn off Utils ( GO Ahead and MaxMeter ) before copying.
+
+ Description: Turn off Utils ( GO Ahead and MaxMeter ) before copying
+     new versions during a setup. Restart them when setup is complete
+     if the user does not reboot or restart Windows.
+ Who: PETERJ
+ When: 30 Jan. 1996 
+ SW/HW Environment: Windows.
+ Symptom: "Go Ahead cannot load goahead.drv" dialog. Caused by GA's driver
+     and exe file being of different versions. The exe copy failed, because
+     the old version was still active.
+ Temporary Workaround: Turn off Go Ahead and MaxMeter before running Setup. 
+ Test Procedure:
+ QA Testing Passed:
+ Version: Setup.exe 8.01.5.22
+
+Files affected:
+
+SETUP.C             Turn off Goahead and Maxmeter before copy routine.
+                    Restart them before exit.
+
+CVERSION.H          Bump version to 22.

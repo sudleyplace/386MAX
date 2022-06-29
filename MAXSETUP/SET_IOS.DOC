@@ -1,0 +1,32 @@
+* Put 386disk.sys, 386load.com and 386load.sys in IOS.INI
+
+ Description: Add the following lines to IOS.INI to tell Windows95
+        that these files are safe, to avoid trapping int21s and
+        to permit 386disk.sys as a pseudo disk drive. 
+        Added to IOS.INI:
+            386Load.com ; Qualitas Memory Manager
+            386Load.sys ; Qualitas Memory Manager
+            386Disk.sys, NON_DISK   ; Qualitas RAM Drive
+     
+ Who: PETERJ
+ When: 7 Nov. 95 
+ SW/HW Environment: Windows95.
+ Symptom: NAB   
+ Temporary Workaround: Edit IOS.INI and add the lines given above.
+ Test Procedure: Install into Windows 95 and check IOS.INI in the
+     Windows sub-dir for the addition of the lines given above. Install
+     386disk.sys and try to access it.
+ QA Testing Passed:
+ Version: Setup.exe 8.0.23.10
+
+Files affected:
+
+SETUP.C             Added function to modify IOS.INI.
+                    Added IOS.INI to files changed dialog and
+                    preinst.bat construction.
+
+SETUP.RC            Changed all exit hot-keys to E&xit.
+
+CVERSION.H          Bump version to 10.
+
+

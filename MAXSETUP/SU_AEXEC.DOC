@@ -1,0 +1,30 @@
+* Add Autoexec stripping functions from Install.exe
+
+ Description: (1)Added the functions from DOS Install to process Autoexec.bat 
+     into Setup.exe. (2) Fixed a bug in the save to .add file function.
+     (3) Trap "Drive not Ready" from RefDskDlgProc().
+ Who: PETERJ
+ When: 8 Feb. 1996
+ SW/HW Environment: Windows.
+ Symptom: (1) LOADHIGH not being stripped from Autoexec.bat.
+          (2) 386max.pro changes not saved to profile.add.
+          (3) "System Error - Drive not ready" appears before our reference
+              disk warning if disk is nott installed.  
+ Temporary Workaround: Manual strip.
+ Test Procedure: (1) Test setup.exe on every type of configuration for 
+     Autoexec.bat and config.sys. Ensure that lines are stripped properly. 
+     (2) Install on new system. Save changes to .add files. Verify the 
+     changes are saved and old 386max.pro is restored.
+     (3) Install on Microchannel system and don;t insert ref. disk. You
+     should only get our warning box.
+ QA Testing Passed:
+ Version: Setup.exe 8.01.9.29
+
+Files affected:
+
+SETUP.C         Call autoexec functions. Trap Drive not ready error.
+                Save 386max.pro changes to profile.add.
+
+MULTI.C         Add edit_batfiles() functions from Install.exe.
+
+CVERSION.H      Bump version to 29.

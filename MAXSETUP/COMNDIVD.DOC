@@ -1,0 +1,49 @@
+* Add subroutines from Install.exe to Setup.exe to parse config.sys
+
+ Description: Add subroutines from Install.exe to Setup.exe to parse 
+     config.sys and divide drivers in the common section into multi-config
+     sections so that they may be individually maximized. Also make startup
+     group if it does not exist, and provide for the German "Autostart" 
+     instead of "Startup".
+
+ Who: PETERJ
+ When: 25 Jan. 95
+ SW/HW Environment: Windows.
+ Symptom: (1) setup.exe does not behave like install.
+          (2) Cannot put GoAhead and MaxMeter in startup if it does not exist.
+          (3) Ditto, if it is named Autostart.
+ Temporary Workaround: Manual editing.
+ Test Procedure: (1) Run Setup and verify proper behavior in editing config.sys.
+                 (2) delete startup group and run setup. Verify that a startup
+                     group is created and that Goahead and Maxmeter get put in.
+                 (3) Run the German version of Windows and Run Setup. Goahead
+                     and Maxmeter should be put into Autostart.
+ QA Testing Passed:
+ Version: Setup.exe 8.01.4.20
+
+New files:
+
+MULTI.C             Driver and routines from Install to edit config.sys.
+
+MULTICOM.H          Globals needed for multi.c, from common.h in \install.
+
+Files affected:
+
+SETUP.C             Remove old config.sys editing code and call MultiCfgEdit().
+                    Change ShowGroup DDE call to CreateGroup in some cases.
+                    Determine name of Strtup group by country code.
+
+SETUPDIF.C          Change added to _added to avoid redefinition error.
+
+SETUP.DEF           Lower heap size to avoid > 64K complaint.
+
+CVERSION.H          Bump version to 20.
+
+SETUP.RC            Change copyright.
+
+SETUP.INC           Add new deps.
+
+SETUP.MAK           Remove /Zp1 from compile switches. Quilib is not packed.
+                    Add quilib.lib and oldnames.lib.
+
+

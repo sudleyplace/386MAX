@@ -1,0 +1,34 @@
+* Fix bugs in 386max.pro updating and change display. 
+
+ Description:  (1) Move bluemax strip code to after save old. (2) Alter 
+     ModifyMaxPro to deal with multiple sections in 386max.pro with 
+     the same name. (3) Alter ModifyMaxPro to deal with partial matches, 
+     to remove fields with numeric trailers (i.e. FRAME=E000 ). (4)
+     Change File read to size of file only. (5) Arrange for one more 
+     call to Resync() after end of old file in Diff(), to catch adds at
+     the end of file 1.
+ 
+ Who: PETERJ
+ When: 10 Nov. 95   
+ SW/HW Environment: Windows
+ Symptom: (1) Files altered before save. (2) 386max.pro updates in wrong
+     section. (3) Can't remove FRAME= or EMS= where trailer is unknown. 
+     (4) Safety. (5) Display of files incorrect if adds were last in file.
+ Temporary Workaround: Ignore display and edit files.
+ Test Procedure: Test multiconfig update and file changes display against
+     files viewed with an editor.
+ QA Testing Passed:
+ Version: Setup.exe 8.0.28.12
+
+Files affected:
+
+SETUP.C             Move bluemax strip code to after save.
+                    Alter ModifyMaxPro to deal with multiple sections
+                    with the same name.
+                    Alter ModifyMaxPro to deal with partial matches.
+                    Change File read to size of file only.
+
+SETUPDIF.C          Arrange for one more call to Resync() after end of
+                    old file in Diff().
+
+CVERSION.H          Bump version to 12.

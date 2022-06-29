@@ -1,0 +1,57 @@
+* Don't load GoAhead in Win95 and other adjustments.
+
+ Description: Don't load Go Ahead in Windows95. 
+              Don't allow Toolbox to enable Go Ahead in Win95.
+              Don't use Low DOS option in memmeter in Win95.
+              Don't report errors for missing BCF files.
+              Get ADF files from resource disks if DPMI_Is_MCA.
+              Trap other "resource managers", Don't load Go Ahead.
+              Fix Win95 trap in qpifedit.exe.  
+              Fix "Replace Bluemax with 386MAX".  
+
+ Who: PETERJ
+ When: 17 Jan. 96
+ SW/HW Environment: Windows95, Win3.1
+ Symptom: Go Ahed serves no purpose in Win95 and may conflict with other
+          resource manager programs.
+ Temporary Workaround: Don't enable Go Ahead in Win95.
+                       Don't enable Go Ahead with other resource managers.
+                       Manually replace Bluemax line with 386max.sys.
+ Test Procedure:
+ QA Testing Passed:
+ Version: maxctrl 8.01.2.11, maxmeter 8.01.2.8, 
+          maxsetup 8.01.2.19, qpifedit 8.01.2.3 
+
+Files affected:
+
+MAXSETUP\SETUP.C            Don't load goahead in Win95.
+                            Don't load goahead with other resource mgrs.
+                            Add ADF support.
+
+MAXSETUP\EXTRACT.C          Don't report errors on missing BCF files.
+
+MAXSETUP\MISC.C             Fix BCF path construction.
+
+MAXSETUP\SETUP.H            Add IDs for RefDirDlg dialog.
+
+MAXSETUP\MESSAGES.H         Add error messages.
+
+MAXSETUP\SETUP.INC          New depscan includes.
+
+MAXSETUP\SETUP.RC           New RefDirDlg dialog.
+
+MAXSETUP\CVERSION.H         Bump version to 19.
+    
+MAXCTRL\TOOLBOX.C           Block Go Ahead selection in Win95.
+
+MAXCTRL\CVERSION.H          Bump version to 11.
+
+MAXMETER\MAXMETER.C         Block Low DOS selection in Win95.
+
+MAXMETER\CVERSION.H         Bump version to 8.
+
+QPIFEDIT\QPIFEDIT.C         Block operation if Win95. (Changed detection.)
+
+QPIFEDIT\CVERSION.H         Bump version to 3.
+
+

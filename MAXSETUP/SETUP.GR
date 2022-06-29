@@ -1,0 +1,392 @@
+#include "setup.h"
+
+#include <ctl3d.h>
+#include <dlgs.h>
+
+#include "cversion.h"
+#include <maxnames.h>
+#include <mversion.h>
+#include <common.ver>
+
+IDC_CLEAN RCDATA BEGIN
+#include "clean.rc"
+END
+
+CTL3D_3DCHECK BITMAP "3dcheck.bmp"
+SPLASH_BITMAP BITMAP PRELOAD qmax.bmp
+
+Icon    ICON        PRELOAD setup.ico
+IDC_SETUP   ICON    PRELOAD setup.ico
+
+
+SPLASHDLGBOX DIALOG PRELOAD 20, 20, 240, 120
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE
+FONT 8, "Helv"
+BEGIN
+    CTEXT           "", -1, 0, 0, 220, 110
+END
+
+
+WELCOMEDLGBOX DIALOG PRELOAD 75, 55, 205, 117
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_VISIBLE
+CAPTION "Willkommen"
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "&Weiter", IDC_CONTINUE, 25, 97, 45, 14
+    PUSHBUTTON      "&Beenden", IDC_EXIT, 80, 97, 45, 14
+    PUSHBUTTON      "&Hilfe", IDC_HELP, 135, 97, 45, 14
+    ICON            IDC_SETUP, IDC_SETUP, 12, 14, 18, 20
+    LTEXT           MAX8PRODUCT, -1, 42, 12, 150, 10, SS_NOPREFIX
+    LTEXT           "Copyright \251 1995-96 Qualitas Inc.", -1, 42, 22, 155, 10, SS_NOPREFIX
+
+    LTEXT           "Willkommen bei " MAX8PRODUCT ", dem intelligenten Memory Manager f\374r Windows 95, Windows 3.1x und DOS."
+    			-1, 10, 40, 180, 30
+    LTEXT           "Setup kopiert Programmdateien auf die Festplatte Ihres Computers und richtet Qualitas MAX f\374r Windows ein.",
+    			-1, 10, 70, 180, 20
+END
+
+
+REGISTERDLGBOX DIALOG PRELOAD 76, 56, 205, 120
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_VISIBLE
+CAPTION "Registrierung"
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "Die nachfolgend einzugebenden Informationen personalisieren Ihr Qualitas MAX Exemplar.", 
+                    -1, 36, 6, 156, 32, SS_NOPREFIX
+    RTEXT           "Name:", -1, 5, 36, 50, 8
+    EDITTEXT        IDC_NAME, 60, 34, 130, 12, ES_AUTOHSCROLL
+    RTEXT           "Firma:", -1, 5, 56, 50, 8
+    EDITTEXT        IDC_COMPANY, 60, 54, 130, 12, ES_AUTOHSCROLL
+    RTEXT           "Seriennummer:", -1, 5, 76, 50, 8
+    EDITTEXT        IDC_SERIAL,60,74,80,13,ES_AUTOHSCROLL
+
+    ICON            IDC_SETUP, IDC_SETUP, 10, 8, 18, 20
+    DEFPUSHBUTTON   "&Weiter", IDC_CONTINUE, 25, 100, 45, 14
+    PUSHBUTTON      "&Beenden", IDC_EXIT, 80, 100, 45, 14
+    PUSHBUTTON      "&Hilfe", IDC_HELP, 135, 100, 45, 14
+END
+
+
+CONFIRMDLGBOX DIALOG PRELOAD 76, 56, 205, 120
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_VISIBLE
+CAPTION "Registrierung"
+FONT 8, "Helv"
+BEGIN
+    ICON            IDC_SETUP, IDC_SETUP, 10, 8, 18, 20
+    LTEXT           "Bitte stellen Sie sicher, da\337 die eingegebenen Informationen korrekt sind. Bei Fehlern w\344hlen Sie \304ndern f\374r die R\374ckkehr zum vorherigen Dialog. Sind alle Eingaben korrekt, w\344hlen Sie Weiter.",
+                      -1, 36, 8, 156, 40
+    RTEXT           "Name:", -1, 10, 54, 55, 10
+    LTEXT           "",100,70,54,120,12,SS_NOPREFIX | NOT WS_GROUP
+    RTEXT           "Firma:", -1, 10, 66, 55, 10
+    LTEXT           "",101,70,66,120,12,SS_NOPREFIX | NOT WS_GROUP
+    RTEXT           "Seriennummer:", -1, 10, 78, 55, 10
+    LTEXT           "",102,70,78,120,12,SS_NOPREFIX | NOT WS_GROUP
+    DEFPUSHBUTTON   "&Weiter",IDC_CONTINUE,25,100,45,14
+    PUSHBUTTON      "\304&ndern",IDC_BACK, 80,100,45,14
+    PUSHBUTTON      "&Beenden", IDC_EXIT, 135, 100, 45, 14
+END
+
+
+PREBRANDEDDLGBOX DIALOG PRELOAD 76, 56, 200, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_VISIBLE
+CAPTION "Registrierung"
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "Dieses Qualitas MAX Exemplar ist registriert f\374r:",
+                      -1, 36, 8, 156, 10
+    RTEXT           "Name:", -1, 10, 24, 55, 10
+    LTEXT           "",100,70,24,120,12,SS_NOPREFIX | NOT WS_GROUP
+    RTEXT           "Firma:", -1, 10, 36, 55, 10
+    LTEXT           "",101,70,36,120,12,SS_NOPREFIX | NOT WS_GROUP
+    RTEXT           "Seriennummer:", -1, 10, 48, 55, 10
+    LTEXT           "",102,70,48,120,12,SS_NOPREFIX | NOT WS_GROUP
+    DEFPUSHBUTTON   "&OK",IDC_CONTINUE,77,70,45,14
+    ICON            IDC_SETUP, IDC_SETUP, 10, 8, 18, 20
+END
+
+
+PREREGISTEREDDLGBOX DIALOG PRELOAD 76, 56, 205, 120
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_VISIBLE
+CAPTION "Registrierung"
+FONT 8, "Helv"
+BEGIN
+    ICON            IDC_SETUP, IDC_SETUP, 10, 8, 18, 20
+    LTEXT           "Dieses Qualitas MAX Exemplar 8 ist registriert f\374r:",
+                      -1, 36, 8, 156, 40
+    RTEXT           "Name:", -1, 10, 54, 55, 10
+    LTEXT           "",100,70,54,160,12,SS_NOPREFIX | NOT WS_GROUP
+    RTEXT           "Firma:", -1, 10, 66, 55, 10
+    LTEXT           "",101,70,66,160,12,SS_NOPREFIX | NOT WS_GROUP
+    RTEXT           "Seriennummer:", -1, 10, 78, 55, 10
+    LTEXT           "",102,70,78,160,12,SS_NOPREFIX | NOT WS_GROUP
+    DEFPUSHBUTTON   "&Weiter",IDC_CONTINUE,45,100,45,14
+    PUSHBUTTON      "&Beenden", IDC_EXIT, 115, 100, 45, 14
+END
+
+
+MULTIDLGBOX DIALOG PRELOAD 76, 56, 200, 80
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_VISIBLE
+CAPTION "MultiConfig"
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "W\344hlen Sie den MultiConfig-Block, in dem Sie Qualitas MAX installieren m\366chten.", 
+                      -1, 40, 6, 148, 24, SS_NOPREFIX
+    COMBOBOX        IDC_MULTI, 8, 34, 182, 50, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+
+    ICON            IDC_SETUP, IDC_SETUP, 12, 6, 18, 20
+    DEFPUSHBUTTON   "&Weiter", IDC_CONTINUE, 8, 60, 40, 14
+    PUSHBUTTON      "&Zur\374ck", IDC_BACK, 56, 60, 40, 14
+    PUSHBUTTON      "&Beenden", IDC_EXIT, 104, 60, 40, 14
+    PUSHBUTTON      "&Hilfe", IDC_HELP, 152, 60, 40, 14
+END
+
+
+DIRECTORYDLGBOX DIALOG PRELOAD 49, 38, 254, 190
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+CAPTION "Pfad und Dateien"
+FONT 8, "Helv"
+BEGIN
+    GROUPBOX        "&Installation in:",2,7,6,238,28
+    EDITTEXT        IDC_PATH, 14, 17, 222, 12, ES_UPPERCASE | ES_AUTOHSCROLL | 
+                      ES_OEMCONVERT
+    LTEXT           "", 666, 14, 19, 222, 10
+    GROUPBOX        "Qualitas MAX Dateien",1,7,63,239,60,WS_GROUP
+    CTEXT           "W\344hlen Sie die gew\374nschten Optionen mit Aktivieren der Kontrollk\344stchen.",
+                      668,7,45,239,17
+    CONTROL         "&Programm-Dateien",IDC_PROGRAMS,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                      WS_TABSTOP,20,77,104,10
+    CONTROL         "&Online-Hilfe",IDC_ONLINEHELP,"Button",BS_AUTOCHECKBOX | 
+                      WS_TABSTOP,20,92,104,10
+    CONTROL         "&DOS Hilfe-Betrachter",IDC_DOSREADER,"Button",BS_AUTOCHECKBOX | 
+                      WS_TABSTOP,20,107,104,10
+    LTEXT           "Installations-Laufwerk:",3,10,134,81,8
+    LTEXT           "Plattenspeicher ben\366tigt:",4,10,144,90,8
+    LTEXT           "Plattenspeicher verf\374gbar:",5,10,154,95,8
+    RTEXT           "",IDC_IDISK,100,134,44,8
+    RTEXT           "",IDC_DISKNEEDED,100,144,44,8
+    RTEXT           "",IDC_DISKFREE,100,154,44,8
+
+    DEFPUSHBUTTON   "&Weiter",IDC_CONTINUE,16,172,45,14
+    PUSHBUTTON      "&Zur\374ck",IDC_BACK,75,172,45,14
+    PUSHBUTTON      "&Beenden",IDC_EXIT,134,172,45,14
+    PUSHBUTTON      "&Hilfe",IDC_HELP,189,172,45,14
+END
+
+
+EXTRACTDLGBOX DIALOG PRELOAD 49, 38, 220, 50
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION
+CAPTION "Dateien extrahieren"
+FONT 8, "Helv"
+BEGIN
+    CTEXT           "Dateien werden kopiert ...", 668, 10, 10, 200, 8
+    EDITTEXT        IDC_METER, 10, 26, 200, 14, ES_READONLY
+END
+
+
+CONFIGUREDLGBOX DIALOG PRELOAD 0, 0, 240, 160
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "MAX Einstellungen"
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "&Weiter",IDC_CONTINUE,30,140,45,14
+    PUSHBUTTON      "&Beenden",IDC_EXIT,97,140,45,14
+    PUSHBUTTON      "&Hilfe",IDC_HELP,164,140,45,14
+
+    GROUPBOX        "Windows-Optionen",-1,7,7,227,43
+    CONTROL         "&Go Ahead einschalten",IDC_GOAHEAD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,20,17,87,16
+    CONTROL         "MAXme&ter einschalten",IDC_MAXMETER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,20,32,85,15
+    GROUPBOX        "MAX Profil-Optionen",-1,7,57,227,43
+    CONTROL         "&MDA (B000h - B800h) nutzen",IDC_MDA,"Button",BS_AUTOCHECKBOX | 
+                      WS_TABSTOP,20,70,180,11
+    CONTROL         "EM&S bereitstellen",IDC_EMS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+			20,83,180,11
+    CONTROL         "&Qualitas Memory Tester beim Systemstart ausf\374hren",IDC_QMT,"Button",BS_AUTOCHECKBOX | 
+                      WS_TABSTOP,20,115,180,11
+END
+
+
+FILESDLGBOX DIALOG PRELOAD 74, 32, 222, 158
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Datei-Änderungen"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Weiter",IDC_CONTINUE,25,138,45,14,WS_GROUP
+    PUSHBUTTON      "&Beenden",IDC_EXIT,88,138,45,14
+    PUSHBUTTON      "&Hilfe",IDC_HELP,151,138,45,14
+    LTEXT           "Setup mu\337 in folgenden Dateien \304nderungen vornehmen. Doppelklicken auf den Dateinamen zeigt den Inhalt an.",
+                      -1,8,7,190,20,SS_NOPREFIX
+    GROUPBOX        "\304nderungen an&sehen",-1,8,28,202,58
+    LISTBOX         IDC_FILESLB, 12, 39, 193, 43, LBS_NOTIFY | LBS_NOINTEGRALHEIGHT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",-1,8,88,202,39,WS_GROUP
+    CONTROL         "\304nderungen von &Setup vornehmen lassen", IDC_UPDATEFILES, "Button",
+                      BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,16,97,155,12
+    CONTROL         "Als .&ADD Dateien im MAX Verzeichnis speichern",IDC_NEWFILES,"Button",
+                      BS_AUTORADIOBUTTON | WS_TABSTOP,16,110,175,12
+END
+
+
+SHOWDLGBOX DIALOG PRELOAD 0, 0, 240, 160
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Dateien"
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,90,140,50,14
+    EDITTEXT        IDC_DIF_FILE,5,5,230,128, ES_READONLY | ES_MULTILINE |
+		      WS_HSCROLL | WS_VSCROLL
+END
+
+
+ASKQUITDLGBOX DIALOG PRELOAD 88, 68, 200, 66
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_VISIBLE
+CAPTION "Setup beenden"
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "&Weiter mit Setup", IDC_CONTINUE, 30, 46, 60, 14
+    PUSHBUTTON      "&Beenden", IDC_EXIT, 110, 46, 60, 14
+    LTEXT           "Sie m\366chten Setup vor dem korrekten Abschlu\337 beenden? Sie k\366nnen Setup zu jeder Zeit erneut aufrufen und die Installation zu Ende f\374hren.",
+                      -1, 40, 8, 150, 32, SS_NOPREFIX
+    ICON            IDC_SETUP, IDC_SETUP, 14, 8, 18, 20
+END
+
+
+EXITSUCCESSDLGBOX DIALOG PRELOAD 76, 56, 200, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_VISIBLE
+CAPTION "Setup abgeschlossen"
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "&Maximize", IDC_CONTINUE, 25, 72, 45, 14
+    PUSHBUTTON      "&Beenden", IDC_EXIT, 80, 72, 45, 14
+    PUSHBUTTON      "&Hilfe", IDC_HELP, 135, 72, 45, 14
+    LTEXT   "Sie haben Qualitas MAX erfolgreich installiert. F\374r optimale Leistung sollten Sie die Diskette aus Laufwerk A: entnehmen und Maximize starten. Ohne Maximize m\374ssen Sie den Computer neu starten, soda\337 MAX aktiv wird. M\366chten Sie Maximize jetzt starten?",
+                      201, 40, 13, 150, 55
+    ICON            IDC_SETUP, IDC_SETUP, 10, 8, 18, 20
+END
+
+
+EXITREBOOTDLGBOX DIALOG PRELOAD 76, 56, 200, 80
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_VISIBLE
+CAPTION "Setup abgeschlossen"
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "&Neu starten", IDC_CONTINUE, 25, 62, 45, 14
+    PUSHBUTTON      "&Beenden", IDC_EXIT, 80, 62, 45, 14
+    PUSHBUTTON      "&Hilfe", IDC_HELP, 135, 62, 45, 14
+    LTEXT           "Sie haben Qualitas MAX erfolgreich installiert. Im Laufwerk A: darf sich keine Diskette befinden, wenn das System f\374r MAX neu startet. Rufen Sie danach Windows auf und starten Sie MAXIMIZE. M\366chten Sie den Computer jetzt neu starten?",
+                      201, 40, 6, 150, 55
+    ICON            IDC_SETUP, IDC_SETUP, 10, 8, 18, 20
+END
+
+EXITRESTARTDLGBOX DIALOG PRELOAD 76, 56, 200, 80
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_VISIBLE
+CAPTION "Setup abgeschlossen"
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "Windows &neu starten", IDC_CONTINUE, 13, 62, 72, 14
+    PUSHBUTTON      "&Beenden", IDC_EXIT, 90, 62, 45, 14
+    PUSHBUTTON      "&Hilfe", IDC_HELP, 145, 62, 45, 14
+    LTEXT           "Setup mu\337 jetzt Windows neu starten, da es einige von Windows gesperrte Dateien kopieren m\366chte.",
+                      201, 40, 6, 150, 55
+    ICON            IDC_SETUP, IDC_SETUP, 10, 8, 18, 20
+END
+
+
+EXITNEWDLGBOX DIALOG PRELOAD 76, 56, 200, 80
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_VISIBLE
+CAPTION "Setup abgeschlossen"
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "&Beenden", IDC_EXIT, 75, 62, 50, 14
+    LTEXT           "Sie haben die Qualitas MAX Dateien kopiert, aber das Programm ist nicht aktiv. Sie m\374ssen System- und .ADD-Dateien umbenennen bzw. kopieren und dann den Computer neu starten, soda\337 Qualitas MAX aktiv wird.", 
+                      201, 40, 6, 150, 55
+    ICON            IDC_SETUP, IDC_SETUP, 10, 8, 18, 20
+END
+
+
+EXITPARTIALDLGBOX DIALOG PRELOAD 76, 56, 160, 50
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_VISIBLE
+CAPTION "Setup abgeschlossen"
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "&Beenden", IDC_EXIT, 75, 32, 50, 14
+    LTEXT           "Setup ist abgeschlossen.", 
+                      201, 40, 10, 110, 10
+    ICON            IDC_SETUP, IDC_SETUP, 10, 8, 18, 20
+END
+
+
+EXITFAILUREDLGBOX DIALOG PRELOAD 75, 55, 200, 96
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_VISIBLE
+CAPTION "Setup-Fehler"
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "&OK", IDC_CONTINUE, 78, 76, 45, 14
+    LTEXT           "Qualitas MAX Setup konnte eine oder mehrere Dateien nicht installieren oder Systemdateien nicht ver\344ndern.", 
+                      -1, 18, 39, 176, 25, SS_NOPREFIX
+    LTEXT           "Qualitas MAX Setup ist fehlgeschlagen!", -1, 45, 16, 130, 13, SS_NOPREFIX
+    ICON            IDC_SETUP, IDC_SETUP, 14, 10, 18, 20
+END
+
+SOURCEDLGBOX DIALOG PRELOAD 49, 38, 200, 70
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+CAPTION "Quellen-Verzeichnis"
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "&Weiter",IDC_CONTINUE,15,50,50,14
+    PUSHBUTTON      "&Beenden",IDC_EXIT,75,50,50,14
+    PUSHBUTTON      "&Hilfe",IDC_HELP,135,50,50,14
+    LTEXT           "", IDC_TEXT, 8, 8, 184, 20, SS_NOPREFIX
+    EDITTEXT        IDC_PATH, 8, 30, 184, 12, ES_UPPERCASE | ES_AUTOHSCROLL | 
+                      ES_OEMCONVERT
+END
+
+REFSRCDLGBOX DIALOG PRELOAD DISCARDABLE  49, 38, 201, 76
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+CAPTION "Referenzdiskette einlegen"
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "&Weiter",IDC_CONTINUE,15,55,50,14
+    PUSHBUTTON      "&Beenden",IDC_EXIT,75,55,50,14
+    PUSHBUTTON      "&Hilfe",IDC_HELP,135,55,50,14
+    LTEXT           "", IDC_TEXT,8,4,184,26,SS_NOPREFIX
+    EDITTEXT        IDC_PATH,8,36,184,12,ES_UPPERCASE | ES_AUTOHSCROLL | 
+                    ES_OEMCONVERT
+END
+
+UPDATEDLGBOX DIALOG PRELOAD 49, 38, 200, 100
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+CAPTION "Update"
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "Dieses Produkt ist ein Upgrade f\374r eine vorhandene Version eines Qualitas Memory Management Produkts. Bitte geben Sie das Verzeichnis Ihrer vorhandenen Installation des Qualitas MAX, 386MAX oder BlueMAX ein.", 100, 40, 8, 150, 50, SS_NOPREFIX
+    EDITTEXT        IDC_PATH, 8, 60, 184, 12, ES_UPPERCASE | ES_AUTOHSCROLL | 
+                      ES_OEMCONVERT
+    DEFPUSHBUTTON   "&Weiter",IDC_CONTINUE,15,80,50,14
+    PUSHBUTTON      "&Beenden",IDC_EXIT,75,80,50,14
+    PUSHBUTTON      "&Hilfe",IDC_HELP,135,80,50,14
+    ICON            IDC_SETUP, IDC_SETUP, 14, 10, 18, 20
+END
+
+
+UPDATEERRORDLGBOX DIALOG PRELOAD 49, 38, 200, 85
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+CAPTION "Update"
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "&Weiter",IDC_CONTINUE,15,65,50,14
+    PUSHBUTTON      "&Beenden",IDC_EXIT,75,65,50,14
+    PUSHBUTTON      "&Zur\374ck",IDC_BACK,135,65,50,14
+    LTEXT           "Setup findet keinen Nachweis f\374r eine Lizenz eines vorherigen Qualitas Memory Management Produkts. Setup kann daher nicht garantieren, da\337 alle Funktionen der Upgrade-Version zufriedenstellend arbeiten. M\366chten Sie den Vorgang fortsetzen?",
+			100, 40, 8, 150, 50, SS_NOPREFIX
+    ICON            IDC_SETUP, IDC_SETUP, 14, 10, 18, 20
+END
+
+
+MODELESSDLGBOX DIALOG PRELOAD 20, 20, 180, 35
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE
+FONT 8, "Helv"
+BEGIN
+    CTEXT           "", 100, 10, 10, 160, 20
+END
+

@@ -1,0 +1,61 @@
+* SETUP.EXE - Sharing violation code. Strip Strings.
+
+ Description: Implement a scheme to get around Windows not allowing
+     updates to files while they are in use. We make a temp directory
+     under the \qmax directory and put the files there, along with a
+     batch file to copy them to the proper place. We then extract a
+     DOS program, CLEAN.EXE, stored in Setup.exe as a resource, load
+     Setup.exe into the startup group with a /C parameter ( to continue),
+     call ExitWindowsExec which execs CLEAN.EXE, which runs the batch
+     file, removes the directory and removes itself. Control returns to
+     Windows and Setup is run. Setup continues at the "Maximize?" dialog.
+     I also extracted all strings to a messages.h file for later translation. 
+
+ Who: PETERJ
+ When: 13 Dec. 95
+ SW/HW Environment: Windows
+ Symptom: Sharing Violation crash when updating Max 8.0. Usually caused by
+          trying to copy over CTL3DV2.DLL or GOAHEAD.DRV while they are active.
+ Temporary Workaround: Hand copy from DOS.
+ Test Procedure: Tricky. Install newer versions of CTL3DV2.DLL or GOAHEAD.DRV
+          over older copies. You may need to change the version numbers in the
+          DLL in order to test the version updating.   
+ QA Testing Passed:
+ Version: 8.0.37.16
+
+New files:
+
+CLEAN.C                 DOS program to copy Windows files.
+
+MESSAGES.H              Text strings from Setup moved to one location.
+
+EXTFILE.C               File resource extractor, stolen from Dispatch.
+
+EXTFILE.H               Header for file resource extractor.
+
+Files affected:
+
+SETUP.C                 Added code to call ExitWindowsExec for Clean.exe.
+
+                        Added re-entry code to WinExec WinMaxim.exe on return.
+
+                        Get version before calling VerInstallFile because it
+                        might not be necessary and VerInstallFile fails if 
+                        the file is locked.
+
+                        Stripped strings to messages.h
+
+EXTRACT.C               Added functions to make a copy directory, extract
+                        clean.exe from a resource and to create a batch 
+                        file to copy and delete files. 
+
+                        Stripped strings to messages.h
+
+SETUP.H                 Added function prototypes.
+
+SETUP.RC                Added new "Must Restart" dialog.
+
+SETUP.MAK               Added build clean.exe.
+
+CVERSION.H              Bump version to 16
+

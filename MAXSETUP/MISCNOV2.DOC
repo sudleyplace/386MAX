@@ -1,0 +1,39 @@
+*  HotKeys, Bitmaps, Clockfix, & Toolbox position.
+
+ Description: (1) Add more HotKeys to MaxMeter, Toolbox, & Setup.
+              (2) Black border around QMAX.BMP (both places).
+              (3) Fix 12/24 hr. initialization on MaxMeter.
+              (4) Center defalut toolbox position.
+
+ Who: PETERJ
+ When:  2 Nov. 95   
+ SW/HW Environment: Windows
+ Symptom: Self explanatory.
+ Temporary Workaround: none
+ Test Procedure: Check all modifications listed above.
+ QA Testing Passed:
+ Version: Setup.exe 8.0.21.8, MaxMeter 8.0.21.3, 
+          Toolbox.exe 8.0.21.4
+
+Files affected:
+
+MAXCTRL\CVERSION.H          Bump version to 4
+
+MAXCTRL\TOOLBOX.RC          Add hotkeys.
+
+MAXCTRL\TOOLBOX.C           Hotkeys and centering.
+
+MAXCTRL\MAXCTRL.MAK         remove all .c dependencies on toolbox.rc.
+
+MAXMETER\MAXMETER.C         Initialize fAmPm on startup.
+
+MAXMETER\CVERSION.H         Bump version to 3
+
+MAXMETER\MAXMETER.RC        Add hotkeys.
+
+MAXSETUP\CVERSION.H         Bump version to 8
+
+MAXSETUP\SETUP.RC           Add hotkeys.
+
+..\MAXSETUP\QMAX.BMP        Add 1 pixel black border to bitmaps.
+..\WINMXMZ\QMAX.BMP

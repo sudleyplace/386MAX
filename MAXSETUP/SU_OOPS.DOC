@@ -1,0 +1,26 @@
+* Put correct dir in 386max.sys line in config.sys edit.
+
+ Description:  Put correct dir in 386max.sys line in config.sys edit. I
+     left the wrong directory entry in the device= default line added 
+     to config.sys. Added another parameter to pass in the correct 
+     chosen directory entry.
+
+ Who: PETERJ
+ When: 30 Jan. 1996
+ SW/HW Environment: Windows.
+ Symptom: Device=386max.sys line always points to root boot dir.
+ Temporary Workaround: Manual edit.
+ Test Procedure: Check the device=386max.sys line in config.sys after install
+     for the correct driver and profile directory.
+ QA Testing Passed:
+ Version: Setup.exe 8.01.4.23
+
+Files affected:
+
+SETUP.C             Add destination dir. to MultiConfigEdit() call.
+
+MULTI.C             Add destination dir. to MultiConfigEdit(). Use this
+                    to construct the default device=386max.sys line.
+
+CVERSION.H          Bump version to 23.
+

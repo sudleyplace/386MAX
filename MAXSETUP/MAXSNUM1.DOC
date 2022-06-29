@@ -1,0 +1,23 @@
+* Allow spaces in serial numbers in setup.exe.
+
+ Description: Added the SNPackStr function from Dispatch to remove all
+     non-digits from a serial number string. Modified the decode_serialno()
+     function to call SNPackStr.
+ 
+ Who: PETERJ
+ When: 3 Nov. 95
+ SW/HW Environment: Windows
+ Symptom: Spaces not allowed in serial numbers.
+ Temporary Workaround: no spaces
+ Test Procedure: Input valid serial numbers with spaces.
+ QA Testing Passed:
+ Version: SETUP.EXE 8.0.21.9
+
+Files affected:
+
+SETUP.C         Remove serial number != 12 trap.
+
+SERIALNO.C      Add SNPackStr to strip non-numbers and prohibit all zeros.
+
+CVERSION.H      Bump version to 9
+

@@ -1,0 +1,40 @@
+* Check Usage count on Stripmgr.exe and continue when it's done.
+
+ Description: (1) Stripmgr runs so fast on some systems that it finishes
+     before the toolhelp.dll notify callback set to trap completion is
+     installed. It then gets installed and waits forever for the notification.
+     (2) It was decided for now to simply trap the "Sharing error", which seems
+     to occur on re-installs, and rely on the error messages in our programs
+     if a real error occurs. (3) Increased serial number buffer in setup to
+     allow for storage and retrieval of serial numbers with a few spaces.
+ 
+ Who: PETERJ
+ When: 8 Nov. 95
+ SW/HW Environment: Windows.
+ Symptom: (1) Setup freezes on "Removing memory managers from Autoexec.bat 
+          and config.sys" dialog. (2) "Sharing error on drive c:" error
+          during install or uninstall. (3) Serial number truncation when
+          numbers are stored with spaces.
+ Temporary Workaround: None
+ Test Procedure: (1) On a system where previous versions failed, install
+     Max 8. (2) Install, re-install, uninstall. Watch for the errors.
+     (3) Input serial numbers with spaces, as 800 1010 200 80. On re-install,
+     watch numbers in registration box.
+ QA Testing Passed:
+ Version: Setup.exe 8.0.024.011, toolbox.exe 8.0.024.007 
+
+Files affected:
+
+MAXSETUP\SETUP.C        Call GetModuleUsage() as a backup to determine 
+                        when Stripmgr has completed. Increased serial number
+                        buffer and read length.
+
+MAXSETUP\EXTRACT.C      Call SetErrorMode() around the file extraction to
+                        trap Windows' error box.
+
+MAXSETUP\CVERSION.H     Bump version to 11.
+
+MAXCTRL\TOOLBOX.C       Call SetErrorMode() around the file extraction to
+                        trap Windows' error box.
+
+MAXCTRL\CVERSION.H      Bump version to 7.

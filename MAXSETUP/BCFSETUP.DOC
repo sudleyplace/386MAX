@@ -1,0 +1,107 @@
+Add BCF support to SETUP.EXE
+
+Fix file entry:
+
+* Add BCF support to SETUP.EXE
+
+ Description:
+	SETUP.EXE now recognizes and extracts the appropriate BCF file.
+	The previous behaviors of 1) always removing and re-inserting
+	386MAX.SYS and 2) always stripping all 386LOAD lines have been
+	removed.  We will only strip other memory managers' load high
+	lines.  We also now insert ourselves when there are no other
+	DEVICE= lines in CONFIG.SYS (as may be the case with Win95).
+ Who: HENRY
+ When: 4 Jan 96.
+ SW/HW Environment: All; machines supporting BIOS compression.
+ Symptom: All 386LOAD statements are stripped; 386MAX.SYS is removed
+	then re-added to CONFIG.SYS if it already exists.
+ Temporary Workaround: None.
+ Test Procedure: On a system with an existing 386MAX.SYS or BlueMAX.SYS
+ 	(test with both) make sure another device driver is present before
+	MAX.  Verify that SETUP doesn't relocate 386MAX.SYS.  In the BlueMAX
+	case Bluemax.sys should be changed to 386max.sys.  The existing
+	profile should always be recognized.  Run SETUP on machine(s)
+	supporting BIOS compression and verify that the correct BCF is
+	extracted, in Windows 3.1x, Win95, and with other memory managers.
+	Test problems with and without MultiConfig (make sure the MultiConfig
+	environment is complex).
+ QA Testing Passed:
+ Version: SETUP 8.01.2.017
+
+New files:
+
+Files affected:
+
+MAX.MAK
+	Add RAMBASIC to normal distribution.
+
+	Note dependency of SETUP on QUILIB (for DPMI_CRC).
+
+INCLUDE\MAXNAMES.MAK
+	Bump version number used for volume label.
+
+	Define a default BCF directory (not used other than for
+	DISK.MAK, where it is explicitly defined).
+
+INCLUDE\TEXTNAME.MAK
+	Turn on BlueMAX compilation.
+
+	Define list of BCF files.  This is not currently used; whatever
+	is copied to x:\apps\bcf\*.bcf will be distributed.
+
+MAXSETUP\CVERSION.H
+	Bump version to 17.
+
+MAXSETUP\EXTRACT.C
+	Extract BCF file.
+
+MAXSETUP\MESSAGES.H
+	More messages moved out of source files.
+
+MAXSETUP\MISC.C
+	Call new DPMI_ functions for BIOS CRC and other info.
+
+MAXSETUP\SETUP.C
+	Add PVCS $Header$
+
+	Fix angle brackets on path include (only locals should have quotes).
+
+	Only STRIPMGR other memory managers.
+
+	Add AUTOBCF if BCF file is found.
+
+	Since we're no longer always stripping ourselves from CONFIG.SYS,
+	we need only add ourselves if we weren't there.  If Bluemax.sys was
+	previously there, we need to replace the line.
+
+	Recognize previously existing max.sys line in [common] section.
+
+	If previous 386MAX or BLUEMAX found, save name to not strip.
+	Also save line number of BLUEMAX.SYS line so we can replace it.
+
+	Support replacing a specified line number in InsertInConfigSys.
+
+	Add lots of FIXMEs (just the tip of the iceberg).
+
+	Handle case where we find no DEVICE= to add ourselves before.
+
+	Handle DEVICEHIGH as well as DEVICE=
+
+	Fix call to ParseInstallCfg(), which never compared the right
+	argument.
+
+	Read the correct file in ParseInstallCfg(), and note that we need
+	not re-read the entire damn file for every DEVICE= we might skip.
+	This is not a big issue as it's unlikely we'll find more than one
+	file to skip.
+
+MAXSETUP\SETUP.INC
+	Check for dependencies.
+
+MAXSETUP\SETUP.MAK
+	Add QUILIB for DPMI_ functions.
+
+MAXSETUP\SETUP.RC
+	Use angle brackets for include in search path.
+

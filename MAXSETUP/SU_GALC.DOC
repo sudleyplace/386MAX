@@ -1,0 +1,40 @@
+* Use GoAhead driver to test for Resource Mgr. conflicts, etc.
+
+ Description: (1) Use GoAhead driver to test for Resource Mgr. conflicts in
+     toolbox and setup. (2) Make allowances for a startup group named AutoStart
+     in Deutch Windows (Fensters?). (3) Allow a user to ignore the request for
+     a Microchannel Reference disk in setup.
+ Who: PETERJ
+ When: 29 Jan. 1996
+ SW/HW Environment: Windows.
+ Symptom: (1) NAB. Code reduction and unification.
+          (2) No startup functionallity in German version.
+          (3) Cannot continue installation without a reference disk.
+          
+ Temporary Workaround: (1) none. (2) Manually drag startup icons to Autostart.
+                       (3) Must use reference disk or create a .ADF file on
+                       a blank disk.
+ Test Procedure:
+ QA Testing Passed:
+ Version: Setup.exe 8.01.5.21, Toolbox.exe 8.01.5.12  
+
+Files affected:
+
+MAXCTRL\TOOLBOX.C           Detect Deutch version of Windows. Rename Startup
+                            to Autostart.
+                            Use Go Ahead routines to check for conflicts.
+
+MAXCTRL\CVERSION.H          Bump version to 12.
+
+MAXSETUP\SETUP.C            Ad more drivers to conflict list.
+                            Use Go Ahead routines to check for conflicts.
+                            Move Go Ahead move to \windows\system until after
+                            we check for conflicts.
+                            Allow continuation if no Ref. Disk.
+
+MAXSETUP\MESSAGES.H         Add error report and confirmation
+
+MAXSETUP\CVERSION.H         Bump version to 21.
+
+
+

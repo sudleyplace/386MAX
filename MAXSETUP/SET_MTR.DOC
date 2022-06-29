@@ -1,0 +1,43 @@
+* Post-8.0 ( d-id 330 ) Add fonts to Maxmeter ( 486 ) Fix Sharing Error.
+
+ Description: ( d-id 330 ) Add the capability to select fonts to Maxmeter.
+              ( d-id 486 ) Fix Setup sharing violation. There was no test
+              around the code copying goahead.drv or version checking 
+              ctl3dv2.dll. I added a test requiring program installation be
+              enabled (checked) before the copying takes place. This will
+              still not eliminate the problem on 8.1 upgrades caused by
+              GoAhead running or by another program having ctl3dv2.dll loaded
+              at install time.
+ Who: PETERJ
+ When: 21 Nov. 95
+ SW/HW Environment: Windows.
+ Symptom: (330) No font selection. 
+          (486) Sharing error when Setup is run from hard drive after initial
+          installation, when GoAhead or other ctl3dv2 programs are active.
+ Temporary Workaround: (330) None. (486) Unload all other programs and 
+          GoAhead.drv before attempting to run Setup.exe.
+ Test Procedure: (330) try different fonts with Maxmeter.
+                 (486) Run setup from the program group after installation.
+                       Un-check Add Programs. Continue and watch for Sharing
+                       violaion errors.   
+ QA Testing Passed:
+ Version: Setup.exe 8.1.1.14, Maxmeter.exe 8.1.1.5
+
+New files:
+MAXMETER\FONTDLG.RC         Replacement Dialog template for Font Dialog.
+
+Files affected:
+
+MAXMETER\MAXMETER.MAK       Add fontdlg.rc.
+
+MAXMETER\MAXMETER.RC        Include fontdlg.rc.
+
+MAXMETER\RESOURCE.H         ID for fontdlg.
+
+MAXMETER\MAXMETER.C         Add font selection capability.
+
+MAXMETER\CVERSION.H         Bump version to 5.
+
+MAXSETUP\SETUP.C            Add if (bProgram) to copy code.
+
+MAXSETUP\CVERSION.H         Bump version to 14.

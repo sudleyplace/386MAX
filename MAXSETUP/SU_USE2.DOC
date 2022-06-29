@@ -1,0 +1,23 @@
+* Don't delete USE= less than E000. Remove Ignore= from qmax.ini
+
+ Description: Don't delete USE= less than E000. 
+              Remove Ignore= from qmax.ini to always force a recheck.
+              Added Memory Multiplier to the Incompatable list.
+ Who: PETERJ
+ When: 6 Feb. 1996
+ SW/HW Environment: Windows
+ Symptom: All Use= statements were deleted on AUTOBCF.
+ Temporary Workaround: Manual replacement.
+ Test Procedure: Install on BCF system with USE= below E000.
+ QA Testing Passed:
+ Version: 8.01.07.26
+
+Files affected:
+
+SETUP.C             Add routines to selectively delete USE=.
+                    Remove Ignore= from QMAX.INI
+
+MESSAGES.H          Remove line breaks from message.
+
+CVERSION.H          Bump version to 26.
+

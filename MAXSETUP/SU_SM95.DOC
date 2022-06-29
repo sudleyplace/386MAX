@@ -1,0 +1,24 @@
+* Add stripm95.pif to turn DOSMAX on in Win95.
+
+ Description: Add stripm95.pif to set DOSMAX=ON in Win95. This prevents
+              a bug in the 386max.vxd from generating a page fault. The
+              bug has been fixed, but it will trigger in previous versions
+              during setup if DOSMAX is off.
+ Who: PETERJ
+ When: 13 Mar. 1996
+ SW/HW Environment: Windows 95
+ Symptom: Stripmgr hangs in setup.
+ Temporary Workaround: Uninstall MAX8 then install MAX8.01
+ Test Procedure: Install over MAX8 in Win95.
+ QA Testing Passed:
+ Version: Setup 8.01.22.31
+
+New files:
+\text\stripm95.pif      Stripmgr.pif for win95 with DOSMAX=ON.
+
+Files affected:
+
+SETUP.C                 Select stripmgr.pif or stripm95.pif depending
+                        on Win31 or Win95.
+
+CVERSION.H              Bump version to 31.

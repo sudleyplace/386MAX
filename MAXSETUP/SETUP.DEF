@@ -1,0 +1,15 @@
+NAME	     SETUP
+EXETYPE      WINDOWS
+PROTMODE
+
+DESCRIPTION  "Qualitas MAX Setup Application"
+
+STUB	     'ret\w16\setupdos.exe'
+
+CODE	     PRELOAD MOVEABLE
+DATA	     PRELOAD MOVEABLE MULTIPLE
+
+HEAPSIZE     8192
+STACKSIZE    16384
+
+

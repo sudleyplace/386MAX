@@ -1,0 +1,31 @@
+* Setup.exe - Fix backup routines to only backup when not identical d/t.
+
+ Description: Changed the backup scheme in the Windows Setup program so 
+     that only files with the same name but a different date and time are 
+     moved to the backup directory. Directories with sequential extensions
+     are created in the event of multiple install instances. Also moved
+     some additional strings to the messages.h file for translation.
+ 
+ Who: PETERJ
+ When: 5 Jan. 1996
+ SW/HW Environment: Windows
+ Symptom: Complete MAX directory was copied to backup dir every installation.
+     Second installation would overwrite first backup.
+ Temporary Workaround: none.
+ Test Procedure: Install over an older version. Verify proper files
+     are written to the backup dir. Abort an installation and ensure that
+     the backed up files are properly restored.
+ QA Testing Passed:
+ Version: SETUP 8.01.2.018
+
+Files affected:
+
+SETUP.C             Remove backup code. Add variables.
+
+EXTRACT.C           Add new backup functions.
+
+MISC.C              Add error messages.
+
+MESSAGES.H          Add more strings.
+
+CVERSION.H          Bump version to 18.

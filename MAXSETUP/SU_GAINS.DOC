@@ -1,0 +1,19 @@
+* Rearrange the order of QMAX.INI creation and GALoadClearance in setup.exe.
+
+ Description:
+ Who: PETERJ
+ When: 7 Feb 1996
+ SW/HW Environment: Windows
+ Symptom: RAM Mgr conflicts not detected on initial install.
+ Temporary Workaround: none practical.
+ Test Procedure: Install MAX with other Ram Mgrs. Goahead should complain
+         on the initial setup.
+ QA Testing Passed:
+ Version: 8.01.8.27
+
+Files affected:
+
+SETUP.C             Move QMAX.INI creation to after call to GALoadClearance.
+
+CVERSION.H          Bump version to 27.
+

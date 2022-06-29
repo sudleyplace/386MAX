@@ -1,0 +1,27 @@
+*  Trim splash screen and remove clipping from setup.exe.
+
+ Description: The qmax.bmp had ragged right and bottom edges. Rex was
+     apparently clipping these off in the BitBlt function. I trimmed
+     the bitmap edges. This plus the setup clipping resulted in the
+     bitmap edges being clipped off in setup. I removed the reduction in
+     the BitBlt call. This makes Setup.exe and Winmaxim.exe splash screens
+     uniform.
+
+ Who: PETERJ    
+ When: 31 Oct. 95   
+ SW/HW Environment: Windows.
+ Symptom: Splash screen on Winmaxim.exe has white tab on right and bottom.
+          Correcting this made bitmap clip on setup.exe.
+ Temporary Workaround: none
+ Test Procedure: Run setup and winmaxim. Observe splash screens.
+ QA Testing Passed:
+ Version: Setup 8.000.017.007
+
+Files affected:
+
+SETUP.C                     Increase window size and eliminate -8 clipping.
+
+CVERSION.H                  bump version to 7.
+
+QMAX.BMP &
+..\winmxmz\qmax.bmp         trim white overlap off of right and bottom.

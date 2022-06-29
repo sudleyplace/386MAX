@@ -1,0 +1,63 @@
+* Misc. fixes to Setup.exe 
+
+ Description: (1) Only restart GoAhead / MAXmeter if they were running before.
+              (2) Remove USE= lines from profile if AUTOBCF is added.
+              (3) Use Windows file functions for FileCopy.
+              (4) Fix UpdateError dialog hot keys by adding SetFocus(hDlg).
+              (5) Change "[intl]" to "intl" in GetProfileInt for country.
+              (6) Backup install files and GoAhead.drv.
+ 
+ Who: PETERJ
+ When: 31 Jan. 1996
+ SW/HW Environment: Windows.
+ Symptom: (1) Goahead can't load driver if it was not installed.
+          (2) USE=conflicts with AUTOBCF.
+          (3) Possibililty of "Too many files" error. Files not copied.
+          (4) Hot keys don't work on UpdateError dialog.
+          (5) Cannot retrieve country code for Germany.
+          (6) The setup files and GoAhead.drv were not put in OLDMAX.1  
+ 
+ Temporary Workaround:
+          (1) Restart Windows.
+          (2) Manual edit of 386max.pro to remove USE= statements.
+          (3) Close all other programs before installation.
+          (4) Use mouse.
+          (5) None.
+          (6) Manual backup before install.
+          
+ Test Procedure:  (1) Install with GoAhead running and not running. 
+                      The state of GoAhead should be the same as when
+                      the installation began.   
+                  (2) Install into a BCF system with USE= statements in 
+                      386max.pro. Setup should remove these statements.
+                  (3) Install and ensure all files are copied.
+                  (4) Install Update version on a clean system (no MAX)
+                      Check hot keys on update error dialog.
+                  (5) Test on German version of Windows for proper installation
+                      into Autostart group ( instead of Startup ).
+                  (6) Install over 8.0 and ensure that the setup files and
+                      Goahead.drv are put into oldmax.1.  
+ QA Testing Passed:
+ Version: Setup.exe 8.01.5.24
+
+New File:
+
+MAXTIME.H       DOS time structures into a common header.
+
+Files affected:
+
+SETUP.C         Only restart GoAhead / MAXmeter if they were running before.
+                Remove USE= lines from profile if AUTOBCF is added.
+                Fix UpdateError dialog hot keys by adding SetFocus(hDlg).
+                Change "[intl]" to "intl" in GetProfileInt for country.
+                Backup install files and GoAhead.drv.
+                
+FILECOPY.C      Use Windows file functions for FileCopy.
+
+EXTRACT.C       Remove time structures into maxtime.h.
+
+MESSAGES.H      Append USE= message to AUTOBCF message in profile_add.
+
+SETUP.INC       New Depscan for includes.
+
+CVERSION.H      Bump version to 24.

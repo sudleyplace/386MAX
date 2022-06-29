@@ -1,0 +1,88 @@
+* German translations to Max 8 and utilities.
+
+ Description: Add German translations to Max 8 and utilities as well as
+     changes needed to enable them.
+ Who: PETERJ
+ When: Feb. 22, 1996
+ SW/HW Environment: All.
+ Symptom: NAB
+ Temporary Workaround: Speak English.
+ Test Procedure: Check all text in all programs.
+ QA Testing Passed:
+ Version: 8.01.012 build.
+
+New files:  All Translations to German.
+
+GOAHEAD\APPELSE.GR
+
+GOAHEAD\DRVELSE.GR
+
+MAXCTRL\TOOLBOX.GR
+
+MAXEDIT\MAXEDIT.GR
+
+MAXMETER\MAXMETER.GR
+
+MAXMETER\FONTDLG.GR
+
+MAXSETUP\SETUP.GR
+
+WINMXMZ\WINMXMZ.GR
+
+Files affected: Translations, Makefile modifications or version increments 
+                except where noted.
+
+INCLUDE\MVERSION.H
+
+386MAX\QMAX_MSG.ASM
+
+QPIFEDIT\CVERSION.H
+
+QPIFEDIT\QPIFEDIT.RC
+
+QPIFEDIT\QPIFEDIT.H
+
+GOAHEAD\MAKEFILE
+
+MAXCTRL\MAXCTRL.MAK
+
+MAXCTRL\TOOLBOX.C       Fixed duplication bug in system menu.
+
+MAXCTRL\MESSAGES.H
+
+MAXCTRL\CVERSION.H
+
+MAXEDIT\MESSAGES.H
+
+MAXEDIT\MAXEDIT.MAK
+
+MAXEDIT\CVERSION.H
+
+MAXMETER\FONTDLG.RC
+
+MAXMETER\MAXMETER.MAK
+
+MAXMETER\MESSAGES.H
+
+MAXMETER\CVERSION.H
+
+MAXSETUP\SETUP.MAK
+
+MAXSETUP\MESSAGES.H
+
+MAXSETUP\SETUP.C
+
+MAXSETUP\SETUPDIF.C
+
+MAXSETUP\CVERSION.H
+
+WINMXMZ\MESSAGES.H
+
+WINMXMZ\WINMXMZ.INC
+
+WINMXMZ\SUMMARY.CPP         Removed hard-coded strings to header.
+
+WINMXMZ\CVERSION.H
+
+WINMXMZ\WINMXMZ.MAK
+

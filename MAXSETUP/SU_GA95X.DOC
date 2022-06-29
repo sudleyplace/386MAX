@@ -1,0 +1,21 @@
+* Remove 8.0 GoAhead from startup and MAX group if found.
+
+ Description: Remove GoAhead icons from Startup and MAX group and goahead.drv
+              from the win\sys dir if found in Windows 95.
+ Who: PETERJ
+ When: 22 Mar. 1996
+ SW/HW Environment: Windows 95
+ Symptom: Installing over 8.0 with Goahead active leaves Icon in startup
+          and in Max group, and driver in win\sys dir. 
+ Temporary Workaround: Uninstall 8.0 before installing 8.01.
+ Test Procedure: Install 8.01 over 8.0 with Goahead active. Ensure that there
+          are no Go Ahead icons in startup or Max group, and driver is removed
+          from windows\system dir. 
+ QA Testing Passed:
+ Version: Setup.exe 8.02.01.32
+
+Files affected:
+
+SETUP.C             Check for goahead in Win95 and remove it if found.
+
+CVERSION.H          Bump version to 32.

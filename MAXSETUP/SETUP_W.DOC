@@ -1,0 +1,21 @@
+*  Setup.exe - Always brand files, including /W command option.
+
+Description: File branding was turned off with the /W command option.
+    This behavior was changed to always brand the files.
+    
+ Who: PETERJ
+ When: 26 Oct. 95
+ SW/HW Environment: Windows
+ Symptom: File branding was turned off with the /W command option.
+ Temporary Workaround:none
+ Test Procedure: Ascretain that files are branded with /W option.
+ QA Testing Passed:
+ Version: Setup.exe 8.00.013.005
+
+Files affected:
+
+SETUP.C             Remove if( fRefresh ) {} from file branding.
+
+CVERSION.H          Bump version to 5.
+
+

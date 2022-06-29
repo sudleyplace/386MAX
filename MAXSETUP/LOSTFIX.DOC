@@ -1,0 +1,20 @@
+* Out of sync with version control lost Bob's fixes v1.31 and v1.32
+
+ Description: File size changes and brackets around else for if (bEMS);
+
+ Who: PETERJ
+ When: 1 Dec. 95
+ SW/HW Environment: Windows
+ Symptom: Program sizes wrong. 
+          EMS=0 parameters always entered into 386max.pro.
+ Temporary Workaround: Set EMS with toolbox.
+ Test Procedure: Set EMS=1 with Setup. Check 386max.pro for EMS=0.
+ QA Testing Passed:
+ Version: setup.exe 8.0.37.15
+
+Files affected:
+
+SETUP.C             replaced changes from ver 131 and 132.
+
+CVERSION.H          Bump ver to 15.
+

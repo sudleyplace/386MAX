@@ -1,0 +1,27 @@
+* Fix call to stripmgr and uninitialized pointer in setup.exe
+
+ Description: (1) The parameters were presented in the wrong order in
+         the call to stripmgr. (2) An uninitialized pointer in the space
+         calculation caused the 386max.sys line to be trashed sometimes.
+         
+ Who: PETERJ
+ When: 5 Feb. 1996
+ SW/HW Environment: Windows
+ Symptom: (1) Stripmgr removed pre-existing 386max.sys lines in config.sys.
+          (2) Trash was written when 386max.sys was inserted at the end
+          of config.sys.  
+ Temporary Workaround: Manual edit.
+ Test Procedure: (1) Install 386max over bluemax. Check config.sys.
+                 (2) Install 386MAX over Himem w. no multiconfig, no drivers.
+                     Check config.sys.   
+ QA Testing Passed:
+ Version: Setup 8.01.5.25
+
+Files affected:
+
+SETUP.C             Change parameter order in stripmgr call.
+                    Add .sys to ~386MAX or ~BLUEMAX in stripmgr call.
+
+MULTI.C             Initialize buffer[0] to null if InsertLine is NULL.
+
+CVERSION.H          Bump version to 25.
