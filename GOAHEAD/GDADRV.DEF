@@ -1,0 +1,19 @@
+; This MUST BE different from the app's NAME
+LIBRARY 	 GAH_DRV
+DESCRIPTION	 'Go Ahead Driver'
+EXETYPE 	 WINDOWS 3.1
+
+CODE		 PRELOAD FIXED
+DATA		 PRELOAD FIXED SINGLE
+
+HEAPSIZE	 0
+
+; Note that an installable driver MUST have a stub -- do not use STUB NONE.
+
+EXPORTS
+   WEP		 @1	RESIDENTNAME
+   DriverProc	 @2
+   GALoadClear	 @3
+   GADialog	 @4
+
+

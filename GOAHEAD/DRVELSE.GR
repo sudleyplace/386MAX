@@ -1,0 +1,119 @@
+//Microsoft App Studio generated resource script.
+//
+#include "resdrv.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+GADLG DIALOG DISCARDABLE  0, 0, 230, 128
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Konflikt mit Ressourcen-Manager"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,90,110,50,14
+    LTEXT           "Go Ahead hat das folgende Programm entdeckt:", IDC_STATIC,35,5,185,20
+    CTEXT           "Product Name Here",IDC_DRVNAME,35,25,160,10
+    LTEXT           "Go Ahead ist aufgrund eines evtl. Konflikts mit oben genanntem Programm nicht aktiv. Sie sollten dieses Programm entfernen und Go Ahead anwenden.",
+                    IDC_STATIC,15,40,200,25
+    GROUPBOX        "Aktion",IDC_STATIC,15,70,200,35
+    CONTROL         "Go Ahead entfernen",IDC_REMOVE,"Button",
+                    BS_AUTORADIOBUTTON,20,80,190,10
+    CONTROL         "Go Ahead &inaktiv bis anderes Programm entfernt wird",
+                    IDC_NOWARN,"Button",BS_AUTORADIOBUTTON,20,90,190,10
+    ICON            IDI_ICONSTOP,IDC_STATIC,5,5,18,20
+END
+
+TBDLG DIALOG DISCARDABLE  0, 0, 226, 143
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Konflikt mit Ressourcen-Manager"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,88,125,50,14
+    LTEXT           "Go Ahead hat das folgende Programm entdeckt:",
+                    IDC_STATIC,35,5,185,20
+    CTEXT           "Product Name Here",IDC_DRVNAME,35,25,160,10
+    LTEXT           "Für Go Ahead mit das Programm ein Problem darstellen. Wir empfehlen, dieses Programm zu entfernen und Go Ahead zu nutzen. Sie können beide Programme einsetzen, aber Qualitas unterstützt die Konfiguration nicht.",
+                    IDC_STATIC,15,40,200,35
+    GROUPBOX        "Action",IDC_STATIC,15,80,195,35
+    CONTROL         "Go Ahead &nicht laden",IDC_NOLOAD,"Button",
+                    BS_AUTORADIOBUTTON,20,90,185,10
+    CONTROL         "Go Ahead trotzdem &laden und nicht mehr warnen",
+                    IDC_NOWARN,"Button",BS_AUTORADIOBUTTON,20,100,185,10
+    ICON            IDI_ICONSTOP,IDC_STATIC,5,5,18,20
+END
+
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resdrv.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDI_ICONSTOP            ICON    DISCARDABLE     "STOPAHED.ICO"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_US_STARTUPGRP       "StartUp"
+    IDS_DE_STARTUPGRP       "AutoStart"
+END
+
+
+#ifndef APSTUDIO_INVOKED
+////////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

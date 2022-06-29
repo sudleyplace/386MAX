@@ -1,0 +1,19 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+#include <ver.h>					// Version resource definitions from DDK
+#include "VERSION.RC"
+
+#define VER_FILETYPE				VFT_DRV
+#define VER_FILESUBTYPE 			VFT2_DRV_INSTALLABLE
+#define VER_FILEDESCRIPTION_STR 		"Go Ahead Driver"
+#define VER_INTERNALNAME_STR			"GOAHEAD"
+#define VER_ORIGINALFILENAME_STR		"GOAHEAD.DRV"
+#define VER_PRODUCTNAME 			"Go Ahead"
+
+#include <mversion.h>
+#include <common.ver>
+
+

@@ -1,0 +1,160 @@
+#' $Header:   P:/PVCS/MAX/GOAHEAD/MAKEFILE.__V   1.15   02 Jun 1997 14:52:02   BOB  $
+#
+# GOAHEAD.DRV makefile
+#
+# HG, 9/4/95: Modified to work with VC++ 1.5 NMAKE, LINK, libraries
+#			  and integrated into build process.
+#
+# From Bob Smith, Aug 95:
+# This Make file is very basic.  It has been written for MASM v5.1
+# (& later) and NMAKE.EXE.  The LINK.EXE used here is from C v6.0,
+# and RC.EXE, SLIBCEW.LIB & LIBW.LIB came from the SDK v3.0.
+# Note that LIBW provides access to the Windows functions, while
+# SLIBCEW gives our program the necessary start-up code, however...
+
+!include $(MAXROOT)include\maxnames.mak
+
+OEM=ret 		# default OEM
+O=$(OEM)\		# define include directory for OEM-specifics
+L=$(MAXROOT)lib\	# Archived .LIB and .OBJ directory
+T=$(MAXROOT)maxctrl\	# Toolbox source
+
+fn = GOAHEAD
+drv= GDADRV
+app= GOAHEAD
+DEBUG=0 		# Set to 1 to enable debugging code
+CFLAGS = /nologo /W3 /WX /AS /O1 /D "NDEBUG" /GA /c
+ASM=masm
+AFLAGS=/Mu
+!IF "$(LANG)" == "US"
+APPTEXTRC=appelse.rc
+DRVTEXTRC=drvelse.rc
+!ELSE
+APPTEXTRC=appelse.$(LANG)
+DRVTEXTRC=drvelse.$(LANG)
+!ENDIF
+
+
+ALL:	DIR		    \
+	VERSION.RC	\
+!ifndef NODRV
+	$(O)$(fn).DRV	$(BD)$(fn).DRV \
+!endif
+	$(O)$(fn).EXE	$(BD)$(fn).EXE
+
+DEL:
+	-rm $(O)*.*
+
+DIR:
+	@vdir -c $(O)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\goahead\*
+VCSDIR = P:\PVCS\MAX\goahead\*
+ALIAS ALL P:\PVCS\MAX\goahead\*.*,p:\pvcs\max\goahead\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+DEPSCAN: makefile
+	depscan -s$(T)=$$(T) *.asm *.c $(T)setupdde.c *.rc >goahdep.inc
+
+makefile: goahdep.inc $(H)makefile.inc
+
+!include goahdep.inc
+!include $(H)makefile.inc
+
+COPYBIN: $(O)$(fn).DRV
+	xc/r	$(O)$(fn).DRV	    $(WINDIR)\SYSTEM\.
+
+$(BD)$(fn).exe:     $(O)$(fn).exe
+	xc /r	$(**R).EXE     $*.*
+
+$(BD)$(fn).drv:     $(O)$(fn).drv
+	xc /r	$(**R).DRV     $*.*
+
+$(O)$(drv).OBJ: $(drv).ASM	$(GDADRV_ADEP)
+	$(ASM) $(AFLAGS) $(drv) /I$(I) /I$(I2) /DDEBUG=$(DEBUG), $(O)$(@B);
+
+$(O)gdarid.OBJ: gdarid.ASM	$(GDARID_ADEP)
+	$(ASM) $(AFLAGS) gdarid /I$(I) /I$(I2) /DDEBUG=$(DEBUG), $(O)$(@B);
+
+$(O)miscfns.OBJ: miscfns.ASM	$(MISCFNS_ADEP)
+	$(ASM) $(AFLAGS) miscfns /I$(I) /DDEBUG=$(DEBUG), $(O)$(@B);
+
+$(O)strfns.OBJ: strfns.ASM	$(STRFNS_ADEP)
+	$(ASM) $(AFLAGS) strfns /I$(I) /DDEBUG=$(DEBUG), $(O)$(@B);
+
+$(O)setupdde.obj: $(T)setupdde.c $(SETUPDDE_DEP)
+	@Set INCLUDE=$(H);$(INCLUDE)
+	$(CC) $(CFLAGS) /Fo$@ /DLANG_$(LANG) /Gs %s
+
+$(O)DRVVERS.RES:	DRVVERS.RC	 $(DRVVERS_RCDEP)
+	@Set INCLUDE=$(H);$(INCLUDE)
+	$(RC) -nologo -r -fo$@ -dLANG_$(LANG) DRVVERS.RC
+
+$(O)DRVELSE.RES:	$(DRVTEXTRC)	 $(DRVELSE_RCDEP)
+	$(RC) -nologo -r -fo$@ -dLANG_$(LANG) $(DRVTEXTRC)
+
+$(O)$(drv).RES: $(O)DRVELSE.RES $(O)DRVVERS.RES
+	@if exist $@ del $@
+	@copy $(O)DRVELSE.RES/b+$(O)DRVVERS.RES/b $@/b >NUL
+
+OBJS=$(O)$(drv).obj   \
+     $(O)gdarid.obj   \
+     $(O)miscfns.obj  \
+     $(O)strfns.obj   \
+     $(O)setupdde.obj
+LIBS=libw sdllcew toolhelp ddeml slibcew
+LIBS_EXT=
+
+$(O)$(fn).DRV:	$(OBJS) makefile $(drv).DEF $(O)$(drv).RES
+	@Set LIB=$(LIB)
+	$(LD) /NOLOGO /NOD /PACKC:61440 /ALIGN:16 /ONERROR:NOEXE @<<$(O)$(drv).LRF
+$(OBJS: =+^
+)
+$@
+$(O)$(drv) /map
+$(LIBS: =+^
+) $(LIBS_EXT: =+^
+)
+$(drv).def
+<<KEEP
+	$(RC) -nologo -31 -t -fe$@ $(O)$(drv).RES
+
+$(O)$(app).OBJ: $(app).C   \
+		$(app).h   \
+		resapp.h
+	$(CC) $(CFLAGS) /Fo$@ $(app).C
+
+$(O)APPVERS.RES:	APPVERS.RC	$(APPVERS_RCDEP)
+	@Set INCLUDE=$(H);$(INCLUDE)
+	$(RC) -nologo -r -fo$@ -dLANG_$(LANG) APPVERS.RC
+
+$(O)APPELSE.RES:	$(APPTEXTRC)	$(APPELSE_RCDEP)
+	$(RC) -nologo -r -fo$@ -dLANG_$(LANG) $(APPTEXTRC)
+
+$(O)$(app).RES: $(O)APPELSE.RES $(O)APPVERS.RES
+	@if exist $@ del $@
+	@copy $(O)APPELSE.RES/b+$(O)APPVERS.RES/b $@/b >NUL
+
+LIBS2=oldnames libw slibcew ver
+LIBS2_EXT=ctl3dv2.lib
+
+$(O)$(app).EXE: $(O)$(app).OBJ makefile $(app).DEF \
+		$(O)$(app).RES
+	@Set LIB=$(LIB)
+	$(LD) /NOLOGO /NOD /PACKC:61440 /ALIGN:16 /ONERROR:NOEXE @<<$(O)$(app).LRF
+$*
+$*
+$* /map
+$(LIBS2: =+^
+) $(LIBS2_EXT: =^
+)
+$(app).def
+<<KEEP
+	$(RC) -nologo -31 -t -fe$@ $*.RES
+
+

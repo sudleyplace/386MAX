@@ -1,0 +1,246 @@
+//Microsoft App Studio generated resource script.
+//
+#include "resapp.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+DLGINCLUDE RCDATA DISCARDABLE 
+BEGIN
+    "goahead.h"
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINWINDOW DIALOG DISCARDABLE  0, 0, 216, 183
+STYLE WS_MINIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CLASS "GAHD_CLS"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,15,155,45,14
+    PUSHBUTTON      "&Programme",IDC_PROGRAMS,85,155,45,14
+    PUSHBUTTON      "&Hilfe",IDC_HELP,155,155,45,14
+    PUSHBUTTON      "Ausschalten",IDC_ABLE,85,30,45,14
+    EDITTEXT        IDC_MEMBAR,30,90,130,20,WS_DISABLED | NOT WS_TABSTOP
+    RTEXT           "nnn KB",IDC_MEMCNT,165,95,25,8,NOT WS_GROUP
+    LTEXT           "",IDC_TASKCNT,30,120,165,8,NOT WS_GROUP
+    CTEXT           "Go Ahead ist zur Zeit eingeschaltet",IDC_STATUS,40,15,
+                    135,11,NOT WS_GROUP
+    ICON            IDI_ICONGO,IDC_ICON1,15,10,18,20,NOT WS_VISIBLE
+    GROUPBOX        "Go Ahead",IDC_STATIC,15,55,185,85
+    LTEXT           "F\374r Anwendungen verf\374gbare LoDOS Ressourcen :",
+                    IDC_STATIC,30,75,160,8,NOT WS_GROUP
+END
+
+IDD_DEBUG DIALOG DISCARDABLE  0, 0, 206, 182
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Debug"
+FONT 9, "Fixedsys"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,185,15,15,120
+    LISTBOX         IDC_SEGLEN,10,15,165,120,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           " Seg  Sel  ELen  TLen   Adj  .",IDC_STATIC,10,5,195,8
+    LTEXT           "Total # bytes free:  nnn,nnn",IDC_TOTAL,10,140,195,8
+    LTEXT           "CS=xxxx, DS=xxxx, CNT=nnn, WGH=xxxx",IDC_REGS,10,160,
+                    195,8,NOT WS_GROUP
+END
+
+IDD_SAVEFILE DIALOG DISCARDABLE  0, 0, 191, 63
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Datei speichern"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Ja",IDOK,10,35,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,130,35,50,14
+    PUSHBUTTON      "&Nein",IDIGNORE,70,35,50,14
+    LTEXT           "Die .INI Datei wurde ge\344ndert, aber der neue Stand ist noch nicht gesichert. M\366chten Sie die \304nderungen vor dem Beenden speichern?",
+                    IDC_STATIC,10,5,170,25
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  4, 4, 184, 119
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Info über Qualitas Go Ahead"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,5,50,14
+    ICON            IDI_ICONGO,IDI_ICONGO,145,55,18,20
+    LTEXT           "Qualitas Go Ahead\nVersion nn.nn.nn.nn",IDC_VERSION,10,
+                    5,115,17,NOT WS_GROUP
+    LTEXT           "Copyright \251 1995-96 Qualitas, Inc.\nAlle Rechte vorbehalten.",
+                    IDC_STATIC,10,35,125,18,NOT WS_GROUP
+    LTEXT           "Dieses Exemplar ist lizenziert f\374r: ",IDC_STATIC,10,
+                    70,115,8
+    LTEXT           "",IDC_REGISTRATION,10,85,170,25,NOT WS_GROUP
+END
+
+IDD_PROGRAMS DIALOG DISCARDABLE  0, 0, 261, 218
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Go Ahead Ausschlußliste"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Einige Programme k\366nnen evtl. nicht von Go Ahead profitieren, da sie LoDOS-Ressourcen in ungew\366hnlicher Weise beanspruchen. ",
+                    IDC_STATIC,10,10,231,21,NOT WS_GROUP
+    LTEXT           "Sie k\366nnen Go Ahead f\374r diese Programme automatisch ausschalten. Die Liste links zeigt die zuletzt ausgef\374hrten Programme, wobei das letzte Programm an oberster Position eingetragen ist.",
+                    IDC_STATIC,10,35,240,25,NOT WS_GROUP
+    LTEXT           "Zuletzt ausgef\374hrte\rProgramme:",IDC_STATIC,30,65,68,
+                    19,NOT WS_GROUP
+    LTEXT           "Go Ahead\rAusschlu\337liste:",IDC_STATIC,165,65,65,19,
+                    NOT WS_GROUP
+    LISTBOX         IDC_MODCUR,30,85,65,80,WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Hin&zuf\374gen",IDC_ADD,105,100,50,14,WS_DISABLED
+    PUSHBUTTON      "Ent&fernen",IDC_REMOVE,105,125,50,14,WS_DISABLED
+    LISTBOX         IDC_MODFILE,165,85,65,80,LBS_SORT | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Speichern",IDC_SAVE,45,185,50,15
+    PUSHBUTTON      "&Beenden",IDC_EXIT,105,185,50,15
+    PUSHBUTTON      "&Hilfe",IDC_HELP,165,185,50,15
+END
+
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resapp.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDI_ICONGO              ICON    DISCARDABLE     "GOAHEAD.ICO"
+IDI_ICONSTOP            ICON    DISCARDABLE     "STOPAHED.ICO"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAPTIONMAX          "Go Ahead"
+    IDS_CAPTIONMINENA       "%ld KB\r%ld Tasks"
+    IDS_CAPTIONMINDIS       "Ausgeschaltet\r%ld Tasks"
+    IDS_CAPTIONUNL          "Nicht geladen"
+    IDS_STATUSUNL           "Go Ahead ist nicht geladen"
+    IDS_STATUSDIS           "Go Ahead ist geladen und ausgeschaltet"
+    IDS_STATUSENA           "Go Ahead ist geladen und eingeschaltet"
+    IDS_HELPKEYMAIN         "Go Ahead Hauptfenster"
+    IDS_HELPKEYPROG         "Go Ahead Ausschlu\337liste"
+    IDS_TASKCNT             "Sie haben %ld Programme mit Go Ahead ge\366ffnet"
+    IDS_INIREGSECT          "Registration"
+    IDS_NOREGCLASS          "Kann Klasse nicht registrieren"
+    IDS_NOCREATEDLGMAIN     "Kann Hauptfenster-Dialogfeld nicht erstellen"
+    IDS_NOCREATEDLGPROG     "Kann Programm-Dialogfeld nicht erstellen"
+    IDS_MENUABOUT           "Inf&o \374ber Go Ahead..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_NOFINDDRVR          "Kann den Treiber GOAHEAD.DRV nicht finden"
+    IDS_BUTTONENABLE        "&Einschalten"
+    IDS_BUTTONDISABLE       "&Ausschalten"
+    IDS_NOCLOSEDRVR         "Kann den Treiber GOAHEAD.DRV nicht schlie\337en"
+    IDS_NOOPENDRVR          "Kann den Treiber GOAHEAD.DRV nicht \366ffnen"
+    IDS_TOTMEM              "%3ld KB"
+    IDS_FREEMEM             "%3ld"
+    IDS_MEMTEXTDISABLEDCMD  "Mit Befehl ausgeschaltet"
+    IDS_MEMTEXTNOTLOADED    "Nicht geladen"
+    IDS_DEBUGDOSMEM         " %04X %04X %4X  %4X  %4d   ."
+    IDS_DEBUGTOTAL          "Total # bytes free:  %ld  ."
+    IDS_INIREGNAME          "Name"
+    IDS_INIREGCOMPANY       "Company"
+    IDS_NOWRITEINIFILE      "Kann nicht in .INI Datei schreiben"
+    IDS_INIFILENAME         "QMAX.INI"
+    IDS_INIMAXHELP          "Qualitas MAX Help"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_INIMAXPATH          "Qualitas MAX Path"
+    IDS_APPNAME             "Go Ahead"
+    IDS_DRVNAME             "GOAHEAD.DRV"
+    IDS_INICFGSECT          "CONFIG"
+    IDS_FILECLASS           "GAHD_CLS"
+    IDS_CAPTIONMINENA95     "%ld KB/%d Tasks"
+    IDS_CAPTIONMINDIS95     "Ausgeschaltet/%d Tasks"
+    IDS_MEMTEXTDISABLEDPROG "F\374r Programm ausgeschaltet"
+    IDS_MEMTEXTDISABLEDFAIL "Zur Sicherheit ausgeschaltet"
+    IDS_VERSIONMISMATCH     "Treiber-Version und Anwendung passen nicht zusammen. Bitte installieren Sie das Programm und rufen es dann erneut auf."
+    IDS_MENUONTOP           "Symbol immer im Vo&rdergrund"
+    IDS_INIPROGSECT         "Go Ahead - Programs"
+    IDS_INIGENSECT          "Go Ahead - General"
+    IDS_INIXPOSNAME         "xpos"
+    IDS_INIYPOSNAME         "ypos"
+    IDS_INIONTOPNAME        "ontop"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_VERSION             "Qualitas Go Ahead\nVersion %s"
+    IDS_INIREGSN            "S/N"
+    IDS_MENUOVERVIEW        "\334b&erblick"
+    IDS_MENUSEARCH          "&Hilfethema suchen..."
+    IDS_MENUTECHSUPP        "&Technischer Kundendienst"
+    IDS_HELPKEYOVERVIEW     "Go Ahead - \334berblick"
+    IDS_HELPKEYTECHSUPP     "Kundendienst in Deutschland"
+    IDS_LEADSN              "\nS/N  "
+    IDS_MEMTEXTDISABLEDRID  "Wegen inkompatiblem Treiber ausgeschaltet"
+    IDS_GADIALOG            "GADialog"
+END
+
+
+#ifndef APSTUDIO_INVOKED
+////////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

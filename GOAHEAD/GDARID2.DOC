@@ -1,0 +1,80 @@
+Handle Incompatible Drivers, Part II
+
+
+New dialogs are defined for Toolbox and MAX Setup as well as changes
+to the one for when GOAHEAD.EXE encounters Go Ahead in a disabled
+state.
+
+* When uninstalling Go Ahead, delete the .EXE from the user's startup
+  group.  This involves using SETUPDDE.C from Toolbox.
+
+* The dialogs for Toolbox and MAX Setup are now made available as
+  DLL entry points in GOAHEAD.DRV.
+
+* Define new return value (4) to LCLDRV_QUERYENABLE for disabled due
+  to incompatible drivers.
+
+* When uninstalling GOAHEAD.DRV, delete GOAHEAD.EXE from StartUp
+  group.
+
+
+
+
+MAKEFILE	Define dependencies for SETUPDDE.C.
+
+GDADRV.DEF	Define export for Dialog display entry point.
+		Remove leading underscore from GALoadClear() as C
+		  provides for that automatically.
+
+GDADRV.INC	Define additional flags for whether or not various
+		  hooks are installed so we may call FN_DRV_FREE at
+		  all times.
+		Include flag for disabled due to incompatible drivers
+		  in other disabled flags.
+
+GDADRV.ASM	In FN_DRV_FREE, test flags to see if we should
+		  uninstall/unhook each feature.
+		Move call to ReadIncompat() to follow NotifyRegister()
+		  so we can track the # tasks even if we're disabled.
+		Delete test around call to FN_DRV_FREE as we now use
+		  individual tests.
+		Return 4 if disabled due to incompatible driver.
+		Delete test for installed in response to DRV_LOAD msg
+		  so we can stay resident, but disabled.
+
+GDARID.ASM	Define separate dialogs for GOAHEAD.EXE, SETUP.EXE,
+		  and TOOLBOX.EXE (the latter two share the same
+		  dialog).
+		Fill in CenterWindow() function.
+		Use DialogBoxParm() instead of DialogBox() so we can
+		  handle multiple dialog windows.
+		Parametrize dialog box procedure for multiple windows.
+		When uninstalling, delete GOAHEAD.EXE from the StartUp
+		  group.
+		Rename SkipString() to SkipPath() and check for CR. LF
+		  in tests.
+		Delete call to GADialog() from within ReadIncompat()
+		  as that's now a separate call.
+
+GOAHEAD.C	Handle case of disabled due to incompatible driver.
+
+RESAPP.H	Define equates for disabled due to incompatible
+		  driver.
+
+RESDRV.H	Define equate for StartUp group string.
+
+APPELSE.RC	Define value for StartUp group string.
+
+DRVELSE.RC	Change dialog used by GOAHEAD.EXE for incompatible
+		  drivers.
+		Define new dialog used by Toolbox and Setup for
+		  incompatible drivers.
+
+Toolbox
+-------
+
+SETUPDDE.C	Replace unneeded "toolbox.h" with needed <windows.h>.
+		In order to allow this module to be complied as Small
+		  model, use local variable as argument to sscanf.
+
+

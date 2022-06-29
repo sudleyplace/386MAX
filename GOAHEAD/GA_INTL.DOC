@@ -1,0 +1,18 @@
+Handle GoAhead When Run On US Windows With German Contry Code.
+
+Goa Ahead is now sensitive to being run on US Windows with a German
+country code in effect.  In particular, it checks for the latter and
+uses "AutoStart" as the startup group name.
+
+GDARID.ASM	Define variables for [intl] iCountry=nn.
+		Test country code to see which startup group string to
+		  use.
+
+DRVELSE.RC	Define strings for US and German startup group names.
+
+GDADRV.INC	Define equates (same as is RESDRV.H) for startup
+		  groups strings.
+
+RESDRV.H	Define equates for startup group strings.
+
+

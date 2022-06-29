@@ -1,0 +1,31 @@
+Fix Another Parsing Bug Skipping Over Path
+
+When skipping over the path on a driver, I didn't handle the cases
+correctly.  In particular, I searched for the first backslash instead
+of the last one.  This change actually simplifes the code by searching
+forwards through the string saving the offset of the last drive and
+path separator, and stopping on any line terminator (<=' ').
+
+At the same time, I fixed two bugs in the .EXE program.
+
+* Set fRID flag before displaying the dialog box so we avoid
+  reentrancy problems (such as multiple displays of the dialog box).
+
+* If GOAHEAD.EXE is disabled due to incompatible drivers and it is
+  invoked as a minimized app, we should ignore that and restore it to
+  normal size.	Without this change, a minimized StartUp group entry
+  won't display the incompatible driver dialog box until the user
+  restores the window to normal size.
+
+
+GDARID.ASM	In SkipPath() search forwards saving the offset of the
+		  character after any driver separator (=':') or path
+		  separator (='\') and stopping at any line terminator
+		  (<=' ').
+
+GOAHEAD.C	Move set of fRID flag to precede call to DialogBox.
+		Move call to ShowWindow() to follow read of enable
+		  state and test for disabled due to incompatible
+		  drivers.
+
+

@@ -1,0 +1,11 @@
+Return Proper Result
+
+A function which should return a result didn't.  This didn't matter on
+Win 3.1, but can on Win95 as the function which is called after
+setting the result variable clobbers a different set of registers.
+However, as GOAHEAD isn't used on Win95, this isn't too serious a
+problem.  Nonetheless, in the interests of good housekeeping...
+
+GOAHEAD.C	In LclFileVersion(), end with "return ret".
+
+

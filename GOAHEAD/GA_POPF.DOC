@@ -1,0 +1,16 @@
+Remove Interrupt Disabling Code
+
+Originally, I coded GDADRV.ASM to handle the case where its hooks
+could be called re-entrantly.  This meant disabling interrupts for
+what proved to be unacceptably long periods of time.  As it turns out,
+the routines we hook cannot be called re-entrantly, so I've removed
+the PUSHF/CLI/.../POPF_MAC code.  Speaking of which, there was a bug
+in POPF_MAC which clobbered AH if the register into which it was
+popped wasn't AX.
+
+GDADRV.ASM	Fix bug in POPF_MAC by using a different algorithm
+		  which doesn't use a user-designated register into
+		  which it pops the flags.
+		Delete PUSHF/CLI/.../POPF_MAC code.
+
+

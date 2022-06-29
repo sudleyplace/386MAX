@@ -1,0 +1,55 @@
+Workaround Bug In SNDBLST2.DRV
+
+When GOAHEAD.DRV loads before MMSYSTEM.DLL and that driver further
+loads an early Sound Blaster driver (SNDBLST2.DRV which ships with
+Windows), there is an incompatibility (no sound).  When Go Ahead is
+loaded first, it sucks up all low DOS, and so fixed memory is always
+allocated in extended memory.  When the Sound Blaster driver is
+loaded, it GlobalAlloc()s fixed memory and fails if the base linear
+address if >= 16MB which is the case with Go Ahead.  Of course the
+driver should be checking for the PHYSICAL address >= 16MB, but that
+detail escaped them.
+
+Because of this, we need to install our driver after MMSYSTEM.DLL
+under certain curcumstances, which works around this problem.  Also,
+to handle future cases, the following algorithm is used:
+
+1.  If there is a "LoadAfter=" line in the [Go Ahead - General]
+    section of QMAX.INI, or
+
+2.  If SNDBLST2.DRV is present in the [Drivers] section of SYSTEM.INI
+    for any of the keywords "wave=", "wavenn=" (where nn can range
+    from 0 to 99), "midi=", "midinn=" (nn has the same range),
+
+then we load our driver after the file named in the "LoadAfter=" line
+in the [Go Ahead - General] section of QMAX.INI or "mmsystem.dll" if
+there is no "LoadAfter=" line.
+
+
+MAKEFILE	Define dependencies for new modules.
+
+MISCFNS.INC	Define equates for MISCFNS.ASM
+
+GDADRV.ASM	Instead of having assemble time debugging code, a
+		  "debug=1" keyword is checked for in the [Go Ahead -
+		  General] section of QMAX.INI.
+		Numerous new keywords are defined to support the above
+		  changes.
+		String functions as well as some previously local
+		  functions are now in external modules.
+		If GFAlloc=1 is not present in [Go Ahead - General]
+		  section of QMAX.INI, don't bother to hook or free
+		  a local GlobalFree() function.
+		Define new routine FindDriver() to locate our driver
+		  in the "drivers=" line of [boot] section of
+		  SYSTEM.INI.
+		Define new routines GPPS_Blast() and FindBlaster() to
+		  search for SNDBLST2.DRV in various lines in
+		  [drivers] section of SYSTEM.INI.
+		In UpdateDrivers(), implement the above rules.
+
+MISCFNS.ASM	Separate out miscellaneous functions.
+
+STRFNS.ASM	Define common string functions.
+
+

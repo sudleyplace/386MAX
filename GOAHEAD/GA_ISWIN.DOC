@@ -1,0 +1,31 @@
+Ensure Handle Is That Of A Window
+
+When a program such as MAXMETER wishes to be kept informed of low DOS
+memory changes from GoAhead, it register a window handle with GoAhead
+to which GoAhead posts messages when things change.  If the program
+which registers with GoAhead crashes, or otherwise terminates without
+unregistering itself with GoAhead, there might be an invalid window
+handle in GoAhead's table.  To avoid such a problem, this TWT changes
+the GoAhead driver to ensure that a handle is that of a valid window
+before posting a message to it.  If the handle is invalid, the entry
+is zeroed so it won't be used the next time.
+
+At the same time, I changed the MAKEFILE to use SDLLCEW.LIB instead of
+SLIBCEW.LIB when building the .DRV file which links in only those
+routines needed for DLLs.  Also, LIBENTRY.OBJ is unnecessary if we put
+the .DRV file's entry point (LibMain) on the END statement in the file
+(thus establishing an entry point).  All in all, this saves about
+3,000 bytes in the file size.
+
+MAKEFILE	Use SDLLCEW.LIB instead of SLIBCEW.LIB as we're
+		  creating a DLL not a LIB file.
+		Omit LIBENTRY.OBJ as it is handled automatically by
+		  using SDLLCEW.LIB.
+
+GDADRV.ASM	Ensure handle is valid (by calling IsWindow) before
+		  using it.
+		If handle is invalid, zero it.
+		No need to PUSH/POP SI as W is supposed to keep its
+		  grubby hands off that one.
+
+

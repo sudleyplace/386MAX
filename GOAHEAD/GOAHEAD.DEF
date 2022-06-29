@@ -1,0 +1,19 @@
+; This MUST BE different from the driver's LIBRARY name
+NAME		 GAH_APP
+DESCRIPTION	 'Go Ahead WinApp'
+EXETYPE 	 WINDOWS 3.1
+STUB		 'WINSTUB.EXE'
+
+CODE		 LOADONCALL MOVEABLE DISCARDABLE
+DATA		 PRELOAD MOVEABLE SINGLE
+
+SEGMENTS
+		 _TEXT PRELOAD MOVEABLE DISCARDABLE
+
+HEAPSIZE	 8192
+STACKSIZE	 8192
+
+EXPORTS
+		 DlgProc	@1  ; main window processing function
+		 About		@2  ; "About" processing function
+

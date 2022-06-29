@@ -1,0 +1,7 @@
+[disks]
+1 = .\, "GOAHEAD Disk 1"
+
+[Installable.Drivers]
+goahead=1:goahead.drv,"GOAHEAD","Go Ahead Installable Driver",,
+
+

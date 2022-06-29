@@ -1,0 +1,130 @@
+//{{NO_DEPENDENCIES}}
+// App Studio generated include file.
+// Used by APPELSE.RC
+//
+#define IDS_CAPTIONMAX                  1
+#define IDS_CAPTIONMINENA               2
+#define IDS_CAPTIONMINDIS               3
+#define IDS_CAPTIONUNL                  4
+#define IDS_STATUSUNL                   5
+#define IDS_STATUSDIS                   6
+#define IDS_STATUSENA                   7
+#define IDS_HELPKEYMAIN                 8
+#define IDS_HELPKEYPROG                 9
+#define IDS_TASKCNT                     10
+#define IDS_INIREGSECT                  11
+#define IDS_NOREGCLASS                  12
+#define IDS_NOCREATEDLGMAIN             13
+#define IDS_NOCREATEDLGPROG             14
+#define IDS_MENUABOUT                   15
+#define IDS_NOFINDDRVR                  16
+#define IDS_BUTTONENABLE                17
+#define IDS_BUTTONDISABLE               18
+#define IDS_NOCLOSEDRVR                 19
+#define IDS_NOOPENDRVR                  20
+#define IDS_TOTMEM                      21
+#define IDS_FREEMEM                     22
+#define IDS_MEMTEXTDISABLED             23
+#define IDS_MEMTEXTDISABLEDCMD          23
+#define IDS_MEMTEXTNOTLOADED            24
+#define IDS_DEBUGDOSMEM                 25
+#define IDS_DEBUGTOTAL                  26
+#define IDS_NOINIFILE                   27
+#define IDS_INIREGNAME                  27
+#define IDS_NOCREATEINIFILE             28
+#define IDS_INIREGCOMPANY               28
+#define IDS_NOWRITEINIFILE              29
+#define IDS_INIFILENAME                 30
+#define IDS_INISECTNAME                 31
+#define IDS_INIMAXHELP                  31
+#define IDS_INILINENAME                 32
+#define IDS_INIMAXPATH                  32
+#define IDS_APPNAME                     33
+#define IDS_DRVNAME                     34
+#define IDS_FILEHELP                    35
+#define IDS_INICFGSECT                  35
+#define IDS_FILECLASS                   36
+#define IDS_CAPTIONMINENA95             37
+#define IDS_CAPTIONMINDIS95             38
+#define IDS_MEMTEXTDISABLEDPROG         39
+#define IDS_MEMTEXTDISABLEDFAIL         40
+#define IDS_VERSIONMISMATCH             41
+#define IDS_MENUONTOP                   42
+#define IDS_INIPROGSECT                 43
+#define IDS_INIGENSECT                  44
+#define IDS_INIXPOSNAME                 45
+#define IDS_INIYPOSNAME                 46
+#define IDS_INIONTOPNAME                47
+#define IDS_VERSION                     48
+#define IDS_INIREGSN                    49
+#define IDS_MENUOVERVIEW                50
+#define IDS_MENUSEARCH                  51
+#define IDS_MENUTECHSUPP                52
+#define IDS_HELPKEYOVERVIEW             53
+#define IDS_HELPKEYTECHSUPP             54
+#define IDS_LEADSN                      55
+#define IDS_MEMTEXTDISABLEDRID          56
+#define IDS_GADIALOG                    57
+#define IDD_SAVEFILE                    122
+#define IDI_ICONGO                      123
+#define IDD_MAINWINDOW                  1000
+#define IDI_ICONSTOP                    1000
+#define IDC_MODCUR                      1001
+#define IDC_MODFILE                     1002
+#define IDC_ADD                         1003
+#define IDC_REMOVE                      1005
+#define IDC_EXIT                        1006
+#define IDC_ABOUT                       1008
+#define IDC_SAVE                        1008
+#define IDC_PROGRAMS                    1009
+#define IDD_ABOUT                       1010
+#define IDC_SEGLEN                      1015
+#define IDC_TOTAL                       1017
+#define IDC_HELP                        1018
+#define IDC_MEMCHANGED                  1019
+#define IDD_DEBUG                       1020
+#define IDC_TASKCHANGED                 1020
+#define IDC_ABLE                        1024
+#define IDC_STATUS                      1028
+#define IDD_PROGRAMS                    1030
+#define IDC_MEMCNT                      1035
+#define IDC_MEMBAR                      1038
+#define IDC_TASKCNT                     1041
+#define IDC_VERSION                     1058
+#define IDC_ICON1                       1059
+#define IDC_REGS                        1060
+#define LCLDRV_GETBUFADDR               0x0800
+#define LCLDRV_REGISTER                 0x0801
+#define LCLDRV_UNREGISTER               0x0802
+#define LCLDRV_QUERYCLOSE               0x0803
+#define LCLDRV_QUERYENABLE              0x0804
+#define LCLDRV_QUERYINSTALL             0x0805
+#define LCLDRV_QUERYLOWSEG              0x0806
+#define LCLDRV_DISABLE                  0x0807
+#define LCLDRV_ENABLE                   0x0808
+#define LCLDRV_GETHISTORY               0x0809
+#define LCLDRV_GETMEMHISTORY            0x0809
+#define LCLDRV_GETMODHISTORY            0x080A
+#define LCLDRV_QUERYGORE                0x080B
+#define LCLDRV_GETMODFILE               0x080C
+#define LCLDRV_READPROFILE              0x080D
+#define LCLDRV_GETCSDS                  0x080E
+#define IDM_ABOUT                       0x1000
+#define IDM_ONTOP                       0x1010
+#define IDM_OVERVIEW                    0x1020
+#define IDM_SEARCH                      0x1030
+#define IDM_TECHSUPP                    0x1040
+#define IDC_REGISTRATION                6017
+#define IDC_STATIC                      -1
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+
+#define _APS_NEXT_RESOURCE_VALUE        124
+#define _APS_NEXT_COMMAND_VALUE         107
+#define _APS_NEXT_CONTROL_VALUE         1062
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif

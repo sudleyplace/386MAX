@@ -1,0 +1,45 @@
+Workaround Bug in NDW 3.0
+
+It appears that NDW 3.0 has a bug in which they rely upon a stale
+selector.  That is, they allocate a valid selector for a certain
+purpose (something to do with the Task Queue), tuck it away, free the
+memory for this selector, allocate the memory again and expect to get
+back the same selector.  When Go Ahead is hooking more DOS memory
+after a GlobalFree(), we use for a different purpose the selector NDW
+has tucked away, and subsequently their code fails waiting for an
+event which never happens.
+
+This TWT puts a test for the keyword GFAlloc=TRUE in the [Go Ahead -
+General] section of QMAX.INI in our local GlobalFree() hander.	If
+this keyword is not present, the default value is FALSE.
+
+At the same time, the following changes were made:
+
+1.  I fixed a bug in Go Ahead where we were reading the wrong variable
+    when accumulating module names and could generate a GP Fault at a
+    certain point.
+
+2.  When trying to figure out the NDW bug, I changed the owner entry
+    for the DOS memory Go Ahead allocates from Windows to ourselves as
+    opposed to the handle of the program which loaded us.  This would
+    be NDW and so I thought there might be a difference there -- no
+    luck.  This makes no difference to the programs, but it looks
+    better in a HeapWalk display.
+
+
+GDADRV.ASM	Delete references to PDBs as we're using our owner
+		  entry.
+		Define new local flag to hold GFAlloc= value.
+		Define variables to read GFAlloc= value.
+		Put code to find a memory block's owner into a
+		  subroutine.
+		Find our owner entry and save for later use.
+		Read GFAlloc= value from QMAX.INI.
+		In CHECK_TASK, fix bug when checking for duplicate
+		  module names.
+		In ChangeOwner, use subroutine to find the memory
+		  block's owner.
+		In LCL_GFProc, hook more DOS memory only if
+		  GFAlloc=TRUE.
+
+

@@ -1,0 +1,9 @@
+Quit Silently If Running Under OS/2
+
+For reasons I haven't bothered to determine, GoAhead doesn't run in a
+Windows box of OS/2 -- check for that and quit silently
+
+GDADRV.ASM	In LibMain(), check for DOS version # for OS/2 and
+		  quit if present.
+
+

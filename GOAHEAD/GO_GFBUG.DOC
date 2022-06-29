@@ -1,0 +1,10 @@
+Fix Bug When Installing/Uninstalling GlobalFree Hook
+
+In a previous TWT, I optimized the code so as not to hook GlobalFree()
+unless we need to.  Alas, I missed some places where this is
+referenced, which this TWT corrects.
+
+GDADRV.ASM	Put tests around install/uninstall of local
+		  GlobalFree() routine.
+
+

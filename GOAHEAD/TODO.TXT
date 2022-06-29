@@ -1,0 +1,28 @@
+Things To Do For Go Ahead
+-----------------------
+
+* Use VDS and Phys-to-Lin to patch KERNEL
+
+* Test with Win95
+
+* Write help file
+
+* Put into RUN= or LOAD= line, or put into startup group?
+
+
+To Install Go Ahead
+-------------------
+
+* Copy the files GOAHEAD.DRV, GOAHEAD.EXE, and GOAHEAD.INI to
+  the GetSystemDirectory() directory.
+
+* Open the driver
+
+* SendMessage(hDriver, DRV_INSTALL, NULL, NULL)
+
+* Close the driver
+
+* If the response is DRVCNF_RESTART, restart Windows
+
+* If the response is DRVCNF_CANCEL, something went wrong
+
