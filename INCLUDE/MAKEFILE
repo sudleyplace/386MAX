@@ -1,0 +1,21 @@
+#' $Header:   P:/PVCS/MAX/INCLUDE/MAKEFILE.__V   1.2   30 May 1997 11:19:44   BOB  $
+#
+#	Makefile for header dependencies
+#
+#	This makefile does nothing.  It lists interdependencies for all
+#	QUI\include header files, and is included by all QUI makefiles.
+#
+
+!if "$(Q)" == ""
+INCLUDE=$(MAXROOT)include;$(INCLUDE)
+!include <maxnames.mak>
+!endif
+
+GENMAKE.INC: $(H)makefile
+	cd $(MAXROOT)quilib
+	depscan -enli *.c *.cpp *.asm *.rc >$(H)makefile.inc
+	cd $(MAKEDIR)
+
+!include $(H)makefile.inc
+
+

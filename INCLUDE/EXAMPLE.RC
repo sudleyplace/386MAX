@@ -1,0 +1,14 @@
+// $Header:   P:/PVCS/MAX/INCLUDE/EXAMPLE.RCV   1.0   02 Oct 1995 10:29:36   HENRY  $
+//
+// VERSION.RC - Example version resource script for MAX 8.
+//	This could be compiled as-is or included in a compile-only
+//	section of an App-Studio script.
+//
+//	These things aren't handled well by AppStudio so are isolated here
+//	and conditionally included by main resource file only when 
+//	APPSTUDIO_INVOKED is not defined.
+
+#include "cversion.h"
+#include <mversion.h>
+#include <common.ver>
+
