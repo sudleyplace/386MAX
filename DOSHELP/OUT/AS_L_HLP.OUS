@@ -1,0 +1,230 @@
+{\rtf1\ansi \deff0{\fonttbl{\f0\froman Times New Roman;}{\f1\froman Symbol;}{\f2\fswiss Arial;}{\f3\froman CG Times (W1);}{\f4\fswiss Univers (W1);}{\f5\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;
+\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;
+\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;\red192\green192\blue192;}{\stylesheet{\f5 \snext0 Normal;}{\s2\fi-288\li576 \f5 \sbasedon0\snext2 Outdent4;}{\s3 \f5\fs28\cf6 \sbasedon0\snext3 Context;}{
+\s4\fi-1584\li1872 \f5 \sbasedon0\snext4 Outdent13;}{\s5\li288 \f5 \sbasedon0\snext5 Indent2;}}{\info{\title asq help system, learn special topics}{\author Stan}{\operator Victoria L. Borton}{\creatim\yr1991\mo5\dy8\hr16\min43}
+{\revtim\yr1993\mo5\dy18\hr13\min40}{\printim\yr1993\mo5\dy5\hr13\min55}{\version31}{\edmins550}{\nofpages6}{\nofwords67291}{\nofchars76547}{\vern16417}}\paperw12240\paperh15840\margl1440\margr1008\margt1440\margb1440\gutter0 \deftab0\widowctrl\ftnbj 
+\sectd \linex0\endnhere \pard\plain \f5 {\cf2 ASQ Learn Menu Misc. Topics
+\par }{\cf2 by Stan Leszynski}{\cf2 
+\par }{\cf2 No index or browsing, just random weird topics}{\cf2 
+\par }{\cf2 These notes are not a live context}{\cf2 
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 68}{\cf2 
+\par }{\cf2 Context strings begin with >>}{\cf2 
+\par }{\cf2 Center the title of each block}{\cf2 
+\par }{\cf2 First line is @ plus P (print) or N (noprint) plus stop markers for Prev/Next, not all topics qualify for this treatment}{\cf2 
+\par }\pard {\cf2 MSWord file use:}{\cf2 
+\par }{\cf2  Set Printer to Generic/Text only on File:}{\cf2 
+\par }{\cf2  Set View to Page mode to see wrapping}{\cf2 
+\par }{\cf2  Default tabs 0}{\cf2 
+\par }{\cf2  Left margin 0}{\cf2 
+\par }{\cf2  Right margin 1.7"}{\cf2 
+\par }{\cf2  Top margin 0}{\cf2 
+\par }{\cf2  Bottom margin 0}{\cf2 
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns}{\cf2 
+\par }{\cf2 Text highlighting:}{\cf2 
+\par }{\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text}{\cf2 
+\par }{\cf2  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text}{\cf2 
+\par }{\cf2  use }{\i\cf2 UNDERLINE}{\cf2  for context jump= red text}{\cf2 
+\par }{\cf2  use }{\b\i\cf2 BOLD ITALICS}{\cf2  for bullets= yellow text}{\cf2 
+\par }\pard \fi-288\li288\ri-2700 
+\par \pard\plain \s3 \f5\fs28\cf6 >>H.L_Abt_Q
+\par \pard\plain \f5 @P H.Products H.Tuning
+\par                        {\i About Qualitas Products}
+\par 
+\par Qualitas provides a variety of {\b memory management products} to enhance computer performance.  The products provide support for:
+\par 
+\par   * computers with 80386 or 80486 processors
+\par   * IBM PS/2 models with 80386 or 80486 processors
+\par   * some computers with 80286 processors
+\par 
+\par {\b ASQ Recommends}
+\par 
+\par ASQ has detected an #PROC___# in this computer system.  If the system is not currently using a memory manager, ASQ recommends that you install the {\b #RECPROD#}
+ program from Qualitas.  #RECPROD# will extract the maximum performance from this computer's configuration.  #RECPROD# and other Qualitas products are described below.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6 >>H.L_Abt_386
+\par \pard\plain \f5 @P H.Products H.Tuning
+\par {\b Qualitas MAX}
+\par 
+\par Qualitas MAX is a memory management program for {\b 80386 and 80486} computers that:
+\par 
+\par   * Moves pop-up utilities, network drivers and other memory
+\par     resident programs out of conventional memory into previously
+\par     unused areas above 640 KB.
+\par   * Provides a fast, state-of-the-art EMS manager.
+\par   * Supports LIM 4.0 EMS, XMS 2.0, VCPI 1.0, DPMI 0.9, and Virtual
+\par     DMA Services 1.0.
+\par   * Moves slow ROM into faster RAM for improved system performance.
+\par   * Allows you to mix and match extended and EMS memory to suit the
+\par     needs of your application programs.
+\par   * Automatically analyzes and configures your system for maximum
+\par     performance and efficiency.
+\par   * Automatically analyzes and reconfigures Micro Channel adapters
+\par     to yield the largest possible areas for usable high DOS memory.
+\par \pard \ri-2700 
+\par \pard\plain \s3 \f5\fs28\cf6 >>H.L_Abt_MAX
+\par \pard\plain \f5 @P H.Products H.Tuning
+\par {\b BlueMAX}
+\par 
+\par BlueMAX is a memory management program specifically designed for {\b IBM PS/2 80386 and 80486} computers that:
+\par 
+\par   * Moves pop-up utilities, network drivers and other memory
+\par     resident programs out of conventional memory into previously
+\par     unused areas above 640 KB.
+\par   * Provides a fast, state-of-the-art EMS manager.
+\par   * Supports LIM 4.0 EMS, XMS 2.0, VCPI 1.0, DPMI 0.9, and Virtual
+\par     DMA Services 1.0.
+\par   * Moves slow ROM into faster RAM for improved system performance.
+\par   * Allows you to mix and match extended and EMS memory to suit the
+\par     needs of your application programs.
+\par   * Automatically analyzes and configures your system for maximum
+\par     performance and efficiency.
+\par   * Uses proprietary technology to recover more high DOS memory than
+\par     any other memory manager - an additional 80 KB or more!
+\par   * Automatically analyzes and reconfigures Micro Channel adapters
+\par     to yield the largest possible areas for usable high DOS memory.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6 >>H.L_Abt_MOVE
+\par \pard\plain \f5 @P H.Products H.Tuning
+\par {\b 80286 Support}
+\par 
+\par Both Qualitas MAX and BlueMAX include support for {\b 80286} computers that use the NEAT CHIPSet, or any PC computer with an EMS 4.0 hardware memory board.  80286 support:
+\par 
+\par   * Backfills low DOS to 640 KB from expanded memory.
+\par   * Expands low DOS to 704 KB or 736 KB on systems with monochrome
+\par     or CGA video adapters.
+\par   * Moves pop-up utilities, network drivers and other memory
+\par     resident programs out of conventional memory into previously
+\par     unused areas above 640 KB.
+\par \pard \ri-2700 
+\par \pard\plain \s3 \f5\fs28\cf6 >>H.L_Tun_Int
+\par \pard\plain \f5 @P H.Products H.Tuning
+\par                             {\i System Tuning}
+\par 
+\par ASQ has analyzed this system's environment size and settings and {\b suggests}
+ the following system enhancements for improved performance.  (NOTE: These suggestions are general.  Always follow any specific recommendations from your software or hardware suppliers.)
+\par \pard \ri-2700 
+\par \pard\plain \s3 \f5\fs28\cf6 >>H.L_Tun_Mem
+\par \pard\plain \f5 @P H.Products H.Tuning
+\par {\b Memory Management}
+\par 
+\par This system currently loads some memory resident drivers and/or TSR programs into low DOS memory.
+\par 
+\par {\b Some or all} of these programs could be moved from low DOS memory to high DOS memory using a Qualitas memory management product.  The resulting savings of low DOS memory could be as much as {\b #TSR# KB}, depending on several factors:
+\par 
+\par   * the hardware bus type
+\par   * the video display adapter
+\par   * high DOS memory fragmentation
+\par   * load characteristics of the drivers and TSRs
+\par 
+\par (The memory savings estimate is a summation of the resident sizes of TSR programs and device drivers larger than 512 bytes.)
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6 >>H.L_Tun_Ver
+\par \pard\plain \f5 @P H.Products H.Tuning
+\par {\b DOS Version}
+\par 
+\par This system's DOS Version is {\b #DOSVER#}.
+\par 
+\par Versions {\b earlier} than DOS 3.30 do not contain several features used by some newer programs.  In particular, DOS versions earlier than 3.10 do not support network connections.
+\par 
+\par DOS 3.30 is the oldest version {\b recommended} for general use to
+day.  Versions of DOS 4.x include additional features which may or may not be of use to you, and may require more low DOS memory space.  Versions of DOS 5.x provide some high DOS program loading, but do not offer the memory analysis and optimization featu
+res found in Qualitas memory management software products.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6 >>H.L_Tun_FILLow
+\par \pard\plain \f5 @P H.Products H.Tuning
+\par {\b FILES}
+\par 
+\par This system's CONFIG.SYS has the setting {\b FILES=#FILES#}.
+\par 
+\par This setting determines the maximum number of files that DOS can have {\b open} at any one
+ time.  The default value is 8, but DOS uses three of them and many applications need more than the remaining five.  A common setting for this parameter is FILES=20, which is adequate for most programs except multitasking and network software.  Your setti
+ng is below this value and may not be adequate for some software products - you may want to increase it.
+\par 
+\par Since each file handle above the first 8 uses {\b 48 bytes} of low DOS memory, you should not use a number of files greater than the minimum required by the software on this system.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6 >>H.L_Tun_FILMed
+\par \pard\plain \f5 @P H.Products H.Tuning
+\par {\b FILES}
+\par 
+\par This system's CONFIG.SYS has the setting {\b FILES=#FILES#}.
+\par 
+\par This setting determines the maximum number of files that DOS can have {\b open}
+ at any one time.  The default value is 8, but DOS uses three of them and many applications need more than the remaining five.  A common setting for this parameter is FILES=20 to FILES=30, which is adequate for most programs except multitasking and networ
+k software.  Your setting is within this range.
+\par 
+\par Since each file handle above the first 8 uses {\b 48 bytes} of low DOS memory, you should not use a number of files greater than the minimum required by the software on this system.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6 >>H.L_Tun_FILHi
+\par \pard\plain \f5 @P H.Products H.Tuning
+\par {\b FILES}
+\par 
+\par This system's CONFIG.SYS has the setting {\b FILES=#FILES#}.
+\par 
+\par This setting determines the maximum number of files that DOS can have {\b open} at any one time.  The default value is 8, but DOS uses three of them and many applications need more than the remaining fiv
+e.  A common setting for this parameter is FILES=20 to FILES=30, which is adequate for most programs except multitasking and network software.  Your setting exceeds the normal range and may consume memory that could be used by software products - you may 
+want to decrease it.
+\par 
+\par Since each file handle above the first 8 uses {\b 48 bytes} of low DOS memory, you may want to reduce the number of files to the minimum required by the software on this system.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6 >>H.L_Tun_BUF
+\par \pard\plain \f5 @P H.Products H.Tuning
+\par {\b BUFFERS}
+\par 
+\par This system's CONFIG.SYS has the setting {\b BUFFERS=#B_#} or is using the DOS default.
+\par 
+\par This setting determines the number of disk {\b data buffers} that DOS will establish when your system starts up.  The system default for this parameter is 2.
+\par 
+\par There is no optimum setting for the number of buffers in a system, because each application program reads from and writes to disk differently.  In general, a higher number of buffers will often help database programs run more efficiently, but will probabl
+y have little effect on most word processing programs.  A {\b common setting} for this parameter is between 10 and 20.
+\par 
+\par Each buffer uses {\b 528 bytes} of low DOS memory, so a setting of BUFFERS=20 will use about 10 KB.  You may want to change the number of buffers to the minimum required by the software on this system.
+\par 
+\par A {\b disk cache} provides benefits similar to the BUFFERS parameter by providing memory space for data to be temporarily stored on its way to and from the disk.  If this system uses a disk cache device driver, it will not
+ need as large a setting for BUFFERS (usually 10 is sufficient).  However, disk caches also use memory.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6 >>H.L_Tun_FCB
+\par \pard\plain \f5 @P H.Products H.Tuning
+\par {\b FCBs}
+\par 
+\par This system's CONFIG.SYS has the setting {\b FCBs=#FX#,#FY#}.
+\par 
+\par Some older application programs require a setting for this parameter, but most newer applications do not.  You should {\b only}
+ use the FCBs parameter if you run an application that requires it, in which case the values should be as specified by the application.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6 >>H.L_Tun_ENV
+\par \pard\plain \f5 @P H.Products H.Tuning
+\par {\b ENVIRONMENT}
+\par 
+\par This system's DOS environment size is {\b #ES__#} bytes, with {\b #EU__#} bytes used.
+\par 
+\par The DOS environment size is set with the {\b SHELL=}
+ statement in CONFIG.SYS.  The environment uses memory in low DOS to hold current values for the PATH, PROMPT, and COMSPEC settings, and any temporary variables set by application programs.  Each byte of environment space is a byte not available to your s
+ystem for application program execution, so the environment should not be set larger than necessary.  The default environment size is typically 160 bytes.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6 >>H.L_Tun_STA
+\par \pard\plain \f5 @P H.Products H.Tuning
+\par {\b STACKS}
+\par 
+\par This system's CONFIG.SYS has the setting DOS {\b STACKS=#SX#,#SY#} or is using the DOS default.
+\par 
+\par This CONFIG.SYS parameter uses approximately 1 KB of low DOS memory in its default setting of STACKS=9,128 except on PC and XT computers, where it does not apply.  Except for unusual system usage, the command {\b STACKS=0,0}
+ in the CONFIG.SYS file will recover this 1 KB of memory without any effect on system performance or efficiency. 
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6 >>H.L_Tun_FAS
+\par \pard\plain \f5 @P H.Products H.Tuning
+\par {\b FASTOPEN}
+\par 
+\par This system has loaded the DOS {\b FASTOPEN}
+ program, a resident program usually loaded by AUTOEXEC.BAT.  Applications that open and close many files frequently may run more efficiently if this program is used.  FASTOPEN cannot be used when running on a network.
+\par 
+\par Since FASTOPEN uses about {\b 1.5 KB} plus 40 bytes per file, you may want to reduce the number of files to the minimum required by the software on this system.
+\par 
+\par \pard\plain \s3 \f5\fs28\cf6 >>H.L_Tun_PRI
+\par \pard\plain \f5 @P H.Products H.Tuning
+\par {\b PRINT}
+\par 
+\par This system has loaded the DOS {\b PRINT} program, a resident program that performs background printing and allows the computer to be used for other work while printing.
+\par 
+\par Since the PRINT program uses more than {\b 5 KB} of low DOS memory, and remains in memory even when not printing, you may want to remove the program from the configuration if it is used infrequently.
+\par 
+\par }

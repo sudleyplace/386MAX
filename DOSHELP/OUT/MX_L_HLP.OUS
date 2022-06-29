@@ -1,0 +1,120 @@
+{\rtf1\ansi \deff0{\fonttbl{\f0\fmodern Courier;}{\f1\froman Symbol;}{\f2\fswiss Arial;}{\f3\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;\red127\green127\blue127;
+\red192\green192\blue192;}{\stylesheet{\f3 \snext0 Normal;}{\s2\fi-288\li576 \f3 \sbasedon0\snext2 Outdent4;}{\s3 \f3\fs28\cf6 \sbasedon0\snext3 Context;}{\s4\fi-1584\li1872 \f3 \sbasedon0\snext4 Outdent13;}{\s5\li288 
+\f3 \sbasedon0\snext5 Indent2;}}{\info{\title max messge system, large msgs.}{\author Stan}{\operator Henry A. Groover}{\creatim\yr1991\mo5\dy21\hr15\min29}{\revtim\yr1995\mo10\dy25\hr13\min10}{\printim\yr1992\mo6\dy16\hr8\min45}{\version41}
+{\edmins359}{\nofpages3}{\nofwords1000}{\nofchars5629}{\vern16431}}\paperw12240\paperh15840\margl1440\margr1008\margt1440\margb1440\gutter0 \deftab0\widowctrl\ftnbj \sectd \linex0\endnhere \pard\plain \f3 {\cf2 
+Maximize Message Text, Large Messages
+\par }{\cf2 by Stan Leszynski
+\par }\pard \fi-288\li270\ri-2700 {\cf2 These notes are not a live context
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Some topics need work, search for }{\cf2 !
+\par }{\cf2 Line width 68
+\par }{\cf2 Context strings begin with >>
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Use ## to surround replaceable parameters, tag _ at end of parameter to reserve spaces for attribute if ## block not big enough to properly wrap
+\par }\pard {\cf2 MSWord file use:
+\par }{\cf2  Set Printer to Generic/Text only on File:
+\par }{\cf2  Set View to Page mode to see wrapping
+\par }{\cf2  Default tabs 0
+\par }{\cf2  Left margin 1
+\par }{\cf2  Right margin 0.7"
+\par }{\cf2  Top margin 1
+\par }{\cf2  Bottom margin 1
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns
+\par }{\cf2 Text highlighting:
+\par }\pard {\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= yellow text
+\par }\pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>L.CacheWarn
+\par \pard\plain \f3 
+#PRODNAME# has detected a busmastering disk controller that might not properly translate memory addresses when they have been re-mapped, which may occur in EMS memory or under a multitasking environment (e.g. Windows).  (Consult the Busmastering Devices s
+ection of README for more information.)
+\par \pard 
+\par \pard Because disk caches may buffer data transfers into their local memory, we recommend that you do NOT load them into high DOS memory.  You should load this program high only if you have loaded a hard disk 
+device driver which supports Virtual DMA Services (VDS).
+\par \pard 
+\par \pard {\b LOADING THIS PROGRAM INTO HIGH DOS MEMORY MIGHT RESULT IN THE LOSS OF YOUR DATA.  Are you certain that you want to load high?}
+\par \pard\plain \s3 \f3\fs28\cf6 >>L.EMSHelp
+\par \pard\plain \f3 {\b We are not able to configure your adapters such that the EMS page frame fits into high DOS memory.}
+\par \pard 
+\par \pard If you choose to continue with EMS support enabled it will require 64 KB of conventional memory.
+\par \pard 
+\par \pard Press: {\b C} to continue with the EMS frame in low memory,
+\par        {\b N} to provide EMS support without a page frame,
+\par        {\b D} to disable EMS support,
+\par        {\b R} to reconfigure other adapters.
+\par \pard\plain \s3 \f3\fs28\cf6 >>L.IntroP1
+\par \pard\plain \f3 {\b Welcome to Maximize.}
+\par \pard 
+\par \pard 
+Maximize automatically and optimally configures your system and the #PRODNAME# program loader.  By doing so, Maximize frees up as much conventional memory as possible by moving memory resident device drivers and programs into an alternative storage area c
+alled high DOS memory.
+\par \pard 
+\par \pard If you are a first time user of Maximize or would like to refresh your knowledge of Maximize, you will want to view the Maximize overview now.
+\par \pard 
+\par \pard {\b Select the Help button to read the Maximize overview.}
+\par \pard\plain \s3 \f3\fs28\cf6 >>L.NoFit
+\par \pard\plain \f3 Maximize was not able to move all of the selected device drivers and programs into high DOS memory during this Express Maximize operation.
+\par \pard 
+\par \pard By {\b changing the order}
+ of high DOS loading, Maximize may find more memory and load more drivers and programs high.  To have Maximize reorder the device drivers and programs to obtain a best fit, Maximize must be run again using the Custom option.  A maximum of #ARG2__# additio
+nal bytes may be moved from low DOS into high DOS by reordering.
+\par \pard 
+\par \pard Reordering is an advanced option.  Depending on your configuration, reordering may require significant processing time.  {\b Please read the discussion on reordering in the User's Manual before attempting to use this feature.}
+\par \pard\plain \s3 \f3\fs28\cf6 >>L.Reboot
+\par \pard\plain \f3 {\b The Maximize process causes several reboots of the computer.}
+\par \pard 
+\par \pard After each reboot, Maximize needs to load itself again and continue where it left off.  If AUTOEXEC.BAT loads a shell program, network login, or 
+other utility that causes you not to return immediately to a DOS prompt after a reboot, you must interact with the computer {\b after each reboot}
+ to get past or exit from the control program and return to DOS.  Once back at the DOS prompt, Maximize will load itself and resume execution automatically.
+\par \pard 
+\par \pard {\b Maximize will tell you when it is done} and force a final reboot, at which time you may resume normal use of the computer.
+\par \pard\plain \s3 \f3\fs28\cf6 >>L.RefDsk
+\par \pard\plain \f3 Please insert a working copy of your Reference Diskette.  {\b DO NOT USE YOUR ORIGINAL REFERENCE DISKETTE.}
+\par \pard 
+\par \pard Maximize uses the Reference Diskette to identify, protect, and if necessary, reorganize adapter RAM and ROM in order to provide the maximum amount of high DOS memory.
+\par \pard 
+\par \pard Though Maximize allows you to continue without the Reference Diskette, we strongly recommend that you insert the working copy and press {\b Enter}
+ so that any installed adapters can be protected and the maximum amount of high DOS memory can be provided. 
+\par \pard 
+\par \pard If you have copied your Reference Diskette to a different drive and/or path, please enter it below:
+\par \pard 
+\par 
+\par \pard\plain \s3 \f3\fs28\cf6 >>L.RefDsk2
+\par \pard\plain \f3 
+Qualitas Technical Support will require you to have a working copy of the Reference Diskette available if a problem arises during or after Maximize.  #PRODNAME# may not be able to properly identify and protect adapters without the working copy of the Refe
+rence Diskette, thus causing an adapter or related software to fail.
+\par \pard 
+\par \pard {\b Are you sure that you want to skip this valuable step?}
+\par \pard\plain \s3 \f3\fs28\cf6 >>L.Static3270
+\par \pard\plain \f3 Please be aware that adapters for 3270 emulation often have an associated software driver which may require a change to the command line if the adapter RAM or ROM were to be relocated.
+\par \pard 
+\par \pard The software drivers can obtain this information under program control from the adapter, but not all such software drivers do.  If you are unsure about your 3270 adapter, leave its state as {\b STATIC}
+ and contact the adapter vendor for the most recent version of the software driver, which should not require the locations of the adapter RAM and ROM to be specified on the command line.
+\par \pard 
+\par \pard {\b Are you sure that you want to Maximize this adapter?}
+\par \pard\plain \s3 \f3\fs28\cf6 >>L.Static6001
+\par \pard\plain \f3 {\b BEWARE:}  With certain versions of this adapter's ADF, the IO port and IRQ number must change at the same time the adapter's ROM is relocated.  Because Maximize can't determine what these other settings should be, {\b 
+WE STRONGLY RECOMMEND} that you {\b DO NOT} change the state of this adapter unless you have contacted the adapter vendor and determined that this version of the ADF does not have this problem.  If you do allow Maximize to relo
+cate this adapter's ROM and the other settings are not made at the same time, you may place your system in an unusable state.  If this happens, you might need to disconnect the system's battery and wait about twenty minutes before reconnecting it.
+\par \pard 
+\par \pard {\b Are you sure that you want to Maximize this adapter?
+\par }\pard\plain \s3 \f3\fs28\cf6 >>L.StaticUser
+\par \pard\plain \f3 You have marked this adapter as "STATIC" by default in the MAXIMIZE.CFG file.
+\par \pard 
+\par \pard {\b Are you sure that you want to Maximize this adapter?
+\par }\pard\plain \s3 \f3\fs28\cf6 >>L.ABIOSErr
+\par \pard\plain \f3 Maximize was unable to initialize the ABIOS.  Some files were copied from your reference diskette which #PRODNAME# may need at boot time.
+\par \pard 
+\par \pard We suggest that you reboot the system now, then re-run Maximize by typing
+\par \pard #ARG1#
+\par at the MS-DOS prompt.
+\par 
+\par \pard {\b Reboot the system?
+\par }\pard\plain \s3 \f3\fs28\cf6 >>L.DelBackup
+\par \pard\plain \f3 Maximize has detected backup files in your #PRODNAME# directory.  Deleting these files may free some disk space.
+\par \pard 
+\par \pard Maximize will automatically detect backup copies and perform clean up when you run Maximize in the future.
+\par \pard 
+\par Number of backup files to allow before cleanup:
+\par 
+\par Number of old backup files to keep:
+\par 
+\par }

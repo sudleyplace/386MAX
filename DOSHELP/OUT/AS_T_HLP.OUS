@@ -1,0 +1,1168 @@
+{\rtf1\ansi \deff11{\fonttbl{\f0\froman\fcharset0\fprq2 Tms Rmn;}{\f1\froman\fcharset2\fprq2 Symbol;}{\f2\fswiss\fcharset0\fprq2 Helv;}{\f3\fmodern\fcharset0\fprq1 Courier;}
+{\f4\froman\fcharset0\fprq2 Times New Roman;}{\f5\fswiss\fcharset0\fprq2 Arial;}{\f6\froman\fcharset0\fprq2 MS Serif;}{\f7\fswiss\fcharset0\fprq2 MS Sans Serif;}{\f8\froman\fcharset0\fprq2 Times;}{\f9\fswiss\fcharset0\fprq2 Helvetica;}
+{\f10\fswiss\fcharset0\fprq2 System;}{\f11\fmodern\fcharset0\fprq1 Courier New;}{\f12\fmodern\fcharset0\fprq1 LinePrinter;}{\f13\froman\fcharset0\fprq2 CG Times;}{\f14\fswiss\fcharset0\fprq2 Univers;}{\f15\fswiss\fcharset0\fprq2 Univers Condensed;}
+{\f16\fswiss\fcharset0\fprq2 Antique Olive;}{\f17\froman\fcharset0\fprq2 Garamond;}{\f18\fswiss\fcharset0\fprq2 CG Omega;}{\f19\fswiss\fcharset0\fprq2 Albertus Medium;}{\f20\fswiss\fcharset0\fprq2 Albertus Extra Bold;}
+{\f21\froman\fcharset0\fprq2 Clarendon Condensed;}{\f22\fscript\fcharset0\fprq2 Coronet;}{\f23\fmodern\fcharset0\fprq1 Letter Gothic;}{\f24\fscript\fcharset0\fprq2 Marigold;}{\f25\fnil\fcharset2\fprq2 Wingdings;}{\f26\fnil\fcharset2\fprq2 Marlett;}
+{\f27\froman\fcharset0\fprq2 Book Antiqua;}{\f28\fnil\fcharset2\fprq2 Monotype Sorts;}{\f29\fswiss\fcharset0\fprq2 Arial Narrow;}{\f30\froman\fcharset0\fprq2 Bookman Old Style;}{\f31\fswiss\fcharset0\fprq2 Century Gothic;}
+{\f32\fscript\fcharset0\fprq2 Monotype Corsiva;}{\f33\froman\fcharset0\fprq2 Century Schoolbook;}{\f34\froman\fcharset2\fprq2 MT Extra;}{\f35\fmodern\fcharset2\fprq1 MS LineDraw;}{\f36\fdecor\fcharset0\fprq2 Algerian;}
+{\f37\fswiss\fcharset0\fprq2 Arial Rounded MT Bold;}{\f38\fdecor\fcharset0\fprq2 Braggadocio;}{\f39\fswiss\fcharset0\fprq2 Britannic Bold;}{\f40\fscript\fcharset0\fprq2 Brush Script MT;}{\f41\fdecor\fcharset0\fprq2 Colonna MT;}
+{\f42\fdecor\fcharset0\fprq2 Desdemona;}{\f43\froman\fcharset0\fprq2 Footlight MT Light;}{\f44\fswiss\fcharset0\fprq2 Impact;}{\f45\fdecor\fcharset0\fprq2 Kino MT;}{\f46\froman\fcharset0\fprq2 Wide Latin;}
+{\f47\fscript\fcharset0\fprq2 Matura MT Script Capitals;}{\f48\fdecor\fcharset0\fprq2 Playbill;}{\f49\fscript\fcharset0\fprq2 Comic Sans MS;}{\f50\fswiss\fcharset0\fprq2 Arial Black;}{\f51\fswiss\fcharset0\fprq2 Verdana;}
+{\f52\fnil\fcharset0\fprq2 MICRSSK;}{\f53\fswiss\fcharset0\fprq2 Monstroula;}{\f54\fswiss\fcharset0\fprq2 Tahoma;}{\f55\fmodern\fcharset255\fprq2 Modern;}{\f56\fswiss\fcharset0\fprq1 MS Dialog;}{\f57\froman\fcharset0\fprq2 New York;}
+{\f58\fswiss\fcharset0\fprq2 Geneva;}{\f59\fswiss\fcharset0\fprq2 TektoMM_240 RG 564 NO;}{\f60\fswiss\fcharset0\fprq2 TektoMM;}{\f61\fswiss\fcharset0\fprq2 Anna;}{\f62\fswiss\fcharset0\fprq2 Poppl-Laudatio Regular;}{\f63\fswiss\fcharset0\fprq2 Boulevard;}
+{\f64\froman\fcharset0\fprq2 Roman;}{\f65\froman\fcharset0\fprq2 Boton Regular;}{\f66\froman\fcharset0\fprq2 Baskerville BE Regular;}{\f67\fdecor\fcharset0\fprq2 Giddyup Thangs;}{\f68\fswiss\fcharset0\fprq2 Giddyup;}
+{\f69\fswiss\fcharset0\fprq2 TektoMM_100 LT 250 CN;}{\f70\fswiss\fcharset0\fprq2 TektoMM_100 LT 564 NO;}{\f71\fswiss\fcharset0\fprq2 TektoMM_100 LT 850 EX;}{\f72\fswiss\fcharset0\fprq2 TektoMM_240 RG 250 CN;}
+{\f73\fswiss\fcharset0\fprq2 TektoMM_240 RG 850 EX;}{\f74\fswiss\fcharset0\fprq2 TektoMM_503 BD 250 CN;}{\f75\fswiss\fcharset0\fprq2 TektoMM_503 BD 488 NO;}{\f76\fswiss\fcharset0\fprq2 TektoMM_503 BD 850 EX;}{\f77\fswiss\fcharset0\fprq2 Optima;}
+{\f78\fswiss\fcharset0\fprq2 StoneSans;}{\f79\fswiss\fcharset0\fprq2 StoneSansSemibold;}{\f80\fdecor\fcharset2\fprq2 ZapfDingbats;}{\f81\fswiss\fcharset0\fprq2 Haettenschweiler;}{\f82\fswiss\fcharset0\fprq2 News Gothic MT;}
+{\f83\fscript\fcharset0\fprq2 Lucida Handwriting;}{\f84\fswiss\fcharset0\fprq2 Lucida Sans;}{\f85\fswiss\fcharset0\fprq2 Lucida Sans Unicode;}{\f86\fmodern\fcharset0\fprq1 OCR A Extended;}{\f87\froman\fcharset0\fprq2 Calisto MT;}
+{\f88\fswiss\fcharset0\fprq2 Abadi MT Condensed Light;}{\f89\fswiss\fcharset0\fprq2 Copperplate Gothic Bold;}{\f90\fswiss\fcharset0\fprq2 Copperplate Gothic Light;}{\f91\fmodern\fcharset0\fprq1 Lucida Console;}{\f92\froman\fcharset0\fprq2 LotusWP Int A;}
+{\f93\froman\fcharset0\fprq2 LotusWP Int B;}{\f94\fmodern\fcharset2\fprq1 LotusWP Box;}{\f95\froman\fcharset0\fprq2 LotusWP Type;}{\f96\froman\fcharset0\fprq2 LotusWP Icon;}{\f97\froman\fcharset2\fprq2 Math A;}{\f98\fnil\fcharset2\fprq2 Math B;}
+{\f99\fnil\fcharset2\fprq2 Math C;}{\f100\fnil\fcharset0\fprq2 Lotus Postal Barcode;}{\f101\froman\fcharset0\fprq2 Baskerville;}{\f102\fnil\fcharset0\fprq2 Binner Gothic;}{\f103\froman\fcharset0\fprq2 Centaur;}{\f104\fswiss\fcharset0\fprq2 Gill Sans;}
+{\f105\fnil\fcharset0\fprq2 Gill Sans Condensed;}{\f106\fswiss\fcharset0\fprq2 Gill Sans Ultra Bold;}{\f107\fswiss\fcharset0\fprq2 News Gothic;}{\f108\froman\fcharset0\fprq2 Nimrod;}{\f109\froman\fcharset0\fprq2 Onyx;}
+{\f110\fnil\fcharset2\fprq2 Botanical;}{\f111\froman\fcharset0\fprq2 Rockwell;}{\f112\froman\fcharset0\fprq2 Rockwell Condensed;}{\f113\froman\fcharset0\fprq2 Rockwell Light;}{\f114\fnil\fcharset0\fprq2 Snowy;}{\f115\fnil\fcharset0\fprq2 Code 128;}
+{\f116\fswiss\fcharset0\fprq2 Aardvark;}{\f117\fswiss\fcharset0\fprq2 Adelaide;}{\f118\fswiss\fcharset2\fprq2 Alefbet;}{\f119\fswiss\fcharset0\fprq2 Algiers;}{\f120\fswiss\fcharset0\fprq2 Alto;}{\f121\fswiss\fcharset0\fprq2 Amherst;}
+{\f122\fswiss\fcharset0\fprq2 Amy;}{\f123\fswiss\fcharset0\fprq2 Arabia;}{\f124\fswiss\fcharset0\fprq2 Architecture;}{\f125\fswiss\fcharset0\fprq2 Avalon;}{\f126\fswiss\fcharset0\fprq2 Bahamas;}{\f127\fswiss\fcharset0\fprq2 BahamasHeavy;}
+{\f128\fswiss\fcharset0\fprq2 BahamasLight;}{\f129\fswiss\fcharset0\fprq2 BallroomTango;}{\f130\fswiss\fcharset0\fprq2 Banff;}{\f131\fswiss\fcharset0\fprq2 Bangkok;}{\f132\fswiss\fcharset0\fprq2 Bard;}{\f133\fswiss\fcharset0\fprq2 Bassoon;}
+{\f134\fswiss\fcharset0\fprq2 Bedrock;}{\f135\fnil\fcharset0\fprq2 Beehive;}{\f136\fswiss\fcharset0\fprq2 BigTop;}{\f137\fswiss\fcharset0\fprq2 Bodnoff;}{\f138\fswiss\fcharset0\fprq2 Bosanova;}{\f139\fswiss\fcharset0\fprq2 Bravo;}
+{\f140\fswiss\fcharset0\fprq2 BravoEngraved;}{\f141\fswiss\fcharset0\fprq2 Briquet;}{\f142\fswiss\fcharset0\fprq2 Brisk;}{\f143\fswiss\fcharset0\fprq2 Brochure;}{\f144\fswiss\fcharset0\fprq2 Brooklyn;}{\f145\fswiss\fcharset0\fprq2 Busker;}
+{\f146\fswiss\fcharset0\fprq2 Campaign;}{\f147\fswiss\fcharset0\fprq2 Cancun;}{\f148\fnil\fcharset0\fprq2 Carino;}{\f149\fswiss\fcharset0\fprq2 Carleton;}{\f150\fswiss\fcharset0\fprq2 Casablanca;}{\f151\fswiss\fcharset0\fprq2 CasablancaAntique;}
+{\f152\fswiss\fcharset0\fprq2 CasperOpenFace;}{\f153\fswiss\fcharset0\fprq2 Castanet;}{\f154\fswiss\fcharset0\fprq2 CenturionOld;}{\f155\fswiss\fcharset0\fprq2 Chalk;}{\f156\fswiss\fcharset0\fprq2 Charlesworth;}
+{\f157\fswiss\fcharset2\fprq2 CommonBullets;}{\f158\fswiss\fcharset0\fprq2 CopperPot;}{\f159\fswiss\fcharset0\fprq2 Cosmic;}{\f160\fswiss\fcharset0\fprq2 CosmicTwo;}{\f161\fswiss\fcharset0\fprq2 Cottage;}{\f162\fswiss\fcharset0\fprq2 Crescent;}
+{\f163\fswiss\fcharset0\fprq2 Cupertino;}{\f164\fswiss\fcharset0\fprq2 Czar;}{\f165\fswiss\fcharset0\fprq2 Dauphin;}{\f166\fswiss\fcharset0\fprq2 DawnCastle;}{\f167\fswiss\fcharset2\fprq2 Dixieland;}{\f168\fswiss\fcharset0\fprq2 Eklektic;}
+{\f169\fswiss\fcharset0\fprq2 Envision;}{\f170\fswiss\fcharset0\fprq2 Erie;}{\f171\fswiss\fcharset0\fprq2 ErieBlack;}{\f172\fswiss\fcharset0\fprq2 ErieContour;}{\f173\fswiss\fcharset0\fprq2 ErieLight;}{\f174\fswiss\fcharset0\fprq2 Euromode;}
+{\f175\fswiss\fcharset0\fprq2 Expo;}{\f176\fswiss\fcharset0\fprq2 Florence;}{\f177\fswiss\fcharset0\fprq2 France;}{\f178\fswiss\fcharset0\fprq2 Frankenstein;}{\f179\fswiss\fcharset0\fprq2 FrankfurtGothic;}
+{\f180\fswiss\fcharset0\fprq2 FrankfurtGothicHeavy;}{\f181\fswiss\fcharset0\fprq2 FrankHighlight;}{\f182\fswiss\fcharset0\fprq2 Freeport;}{\f183\fswiss\fcharset0\fprq2 Fujiyama;}{\f184\fswiss\fcharset0\fprq2 Fujiyama2;}
+{\f185\fswiss\fcharset0\fprq2 FujiyamaBlack;}{\f186\fswiss\fcharset0\fprq2 FujiyamaExtraBold;}{\f187\fswiss\fcharset0\fprq2 FujiyamaLight;}{\f188\fswiss\fcharset0\fprq2 Galleria;}{\f189\fswiss\fcharset0\fprq2 Gatineau;}
+{\f190\fswiss\fcharset2\fprq2 GeographicSymbols;}{\f191\fswiss\fcharset0\fprq2 GilbertUltraBold;}{\f192\fswiss\fcharset0\fprq2 Glacier;}{\f193\fswiss\fcharset0\fprq2 GoldenOldStyle;}{\f194\fswiss\fcharset0\fprq2 GoldMine;}
+{\f195\fswiss\fcharset2\fprq2 GreekMathSymbols;}{\f196\fnil\fcharset0\fprq2 Griffon;}{\f197\fswiss\fcharset0\fprq2 GriffonShadow;}{\f198\fswiss\fcharset0\fprq2 Harpoon;}{\f199\fswiss\fcharset0\fprq2 Heidelberg;}{\f200\fswiss\fcharset0\fprq2 Hollow;}
+{\f201\fswiss\fcharset0\fprq2 HomewardBound;}{\f202\fswiss\fcharset0\fprq2 Indiana;}{\f203\fswiss\fcharset0\fprq2 IndianaSolid;}{\f204\fswiss\fcharset0\fprq2 Ireland;}{\f205\fswiss\fcharset0\fprq2 Jupiter;}{\f206\fswiss\fcharset0\fprq2 KabanaBold;}
+{\f207\fswiss\fcharset0\fprq2 KabanaBook;}{\f208\fswiss\fcharset0\fprq2 Kastler;}{\f209\fswiss\fcharset0\fprq2 Keypunch;}{\f210\fswiss\fcharset2\fprq2 Keystroke;}{\f211\fswiss\fcharset0\fprq2 Kids;}{\f212\fswiss\fcharset0\fprq2 Koala;}
+{\f213\fswiss\fcharset0\fprq2 Korinthia;}{\f214\fswiss\fcharset0\fprq2 Lincoln;}{\f215\fswiss\fcharset0\fprq2 Linus;}{\f216\fswiss\fcharset0\fprq2 LiquidCrystal;}{\f217\fswiss\fcharset0\fprq2 Lithograph;}{\f218\fswiss\fcharset0\fprq2 LithographLight;}
+{\f219\fswiss\fcharset0\fprq2 Memorandum;}{\f220\fswiss\fcharset0\fprq2 Merlin;}{\f221\fswiss\fcharset0\fprq2 Monospaced;}{\f222\fswiss\fcharset0\fprq2 Motor;}{\f223\fswiss\fcharset2\fprq2 MusicalSymbols;}{\f224\fswiss\fcharset0\fprq2 Mystical;}
+{\f225\fswiss\fcharset0\fprq2 Nebraska;}{\f226\fswiss\fcharset0\fprq2 NewBrunswick;}{\f227\fswiss\fcharset0\fprq2 Newfoundland;}{\f228\fswiss\fcharset0\fprq2 NewOrder;}{\f229\fnil\fcharset0\fprq2 NewOrderEngraved;}{\f230\fswiss\fcharset0\fprq2 Nuance;}
+{\f231\fswiss\fcharset0\fprq2 Ottawa;}{\f232\fswiss\fcharset0\fprq2 Palette;}{\f233\fswiss\fcharset0\fprq2 PalmSprings;}{\f234\fswiss\fcharset0\fprq2 Paradise;}{\f235\fswiss\fcharset0\fprq2 Paragon;}{\f236\fswiss\fcharset0\fprq2 Penguin;}
+{\f237\fswiss\fcharset0\fprq2 PenguinLight;}{\f238\fswiss\fcharset0\fprq2 Pepper;}{\f239\fswiss\fcharset0\fprq2 Pipeline;}{\f240\fswiss\fcharset0\fprq2 Playwright;}{\f241\fswiss\fcharset0\fprq2 Posse;}{\f242\fswiss\fcharset0\fprq2 PowerLine;}
+{\f243\fswiss\fcharset0\fprq2 President;}{\f244\fswiss\fcharset0\fprq2 ProseAntique;}{\f245\fswiss\fcharset0\fprq2 Quantum;}{\f246\fswiss\fcharset0\fprq2 Renfrew;}{\f247\fswiss\fcharset0\fprq2 Scott;}{\f248\fswiss\fcharset0\fprq2 Scribe;}
+{\f249\fswiss\fcharset0\fprq2 Shogun;}{\f250\fswiss\fcharset0\fprq2 Southern;}{\f251\fswiss\fcharset0\fprq2 Stamp;}{\f252\fswiss\fcharset0\fprq2 Surreal;}{\f253\fswiss\fcharset0\fprq2 Switzerland;}{\f254\fswiss\fcharset0\fprq2 SwitzerlandBlack;}
+{\f255\fswiss\fcharset0\fprq2 SwitzerlandCondBlack;}{\f256\fnil\fcharset0\fprq2 SwitzerlandCondensed;}{\f257\fswiss\fcharset0\fprq2 SwitzerlandCondLight;}{\f258\fswiss\fcharset0\fprq2 SwitzerlandInserat;}{\f259\fswiss\fcharset0\fprq2 SwitzerlandLight;}
+{\f260\fswiss\fcharset0\fprq2 SwitzerlandNarrow;}{\f261\fswiss\fcharset0\fprq2 Technical;}{\f262\fswiss\fcharset0\fprq2 ThunderBay;}{\f263\fswiss\fcharset0\fprq2 Timpani;}{\f264\fswiss\fcharset0\fprq2 TimpaniHeavy;}{\f265\fswiss\fcharset0\fprq2 Toronto;}
+{\f266\fswiss\fcharset0\fprq2 Trafalgar;}{\f267\fswiss\fcharset0\fprq2 Umbrella;}{\f268\fswiss\fcharset0\fprq2 Unicorn;}{\f269\fswiss\fcharset0\fprq2 Uptown;}{\f270\fswiss\fcharset0\fprq2 USABlack;}{\f271\fswiss\fcharset0\fprq2 USALight;}
+{\f272\fswiss\fcharset0\fprq2 Viking;}{\f273\fswiss\fcharset0\fprq2 Vivienne;}{\f274\fswiss\fcharset0\fprq2 Vogue;}{\f275\fswiss\fcharset0\fprq2 ZurichCalligraphic;}{\f276\fswiss\fcharset0\fprq2 AvantGarde;}{\f277\froman\fcharset0\fprq2 Bookman;}
+{\f278\fswiss\fcharset0\fprq2 Helvetica-Narrow;}{\f279\froman\fcharset0\fprq2 NewCenturySchlbk;}{\f280\froman\fcharset0\fprq2 Palatino;}{\f281\froman\fcharset0\fprq2 ZapfChancery;}{\f282\froman\fcharset0\fprq0 CG Times (W1);}
+{\f283\fswiss\fcharset0\fprq0 Univers (W1);}{\f284\fmodern\fcharset0\fprq0 pica;}{\f285\fmodern\fcharset0\fprq0 elite;}{\f286\fmodern\fcharset0\fprq0 prestige;}{\f287\fswiss\fcharset0\fprq2 LetterGothic;}{\f288\fmodern\fcharset0\fprq0 gothicPS;}
+{\f289\fmodern\fcharset0\fprq0 cubicPS;}{\f290\fmodern\fcharset0\fprq0 avantegarde;}{\f291\fmodern\fcharset0\fprq0 spartan;}{\f292\fmodern\fcharset0\fprq0 metro;}{\f293\fmodern\fcharset0\fprq0 presentation;}{\f294\fmodern\fcharset0\fprq0 APL;}
+{\f295\fmodern\fcharset0\fprq0 OCRA;}{\f296\fmodern\fcharset0\fprq0 OCRB;}{\f297\froman\fcharset0\fprq0 boldPS;}{\f298\froman\fcharset0\fprq0 emperorPS;}{\f299\froman\fcharset0\fprq0 madaleine;}{\f300\froman\fcharset0\fprq0 zapf humanist;}
+{\f301\froman\fcharset0\fprq0 classic;}{\f302\froman\fcharset0\fprq0 roman f;}{\f303\froman\fcharset0\fprq0 roman g;}{\f304\froman\fcharset0\fprq0 roman h;}{\f305\froman\fcharset0\fprq0 timesroman;}{\f306\froman\fcharset0\fprq0 century;}
+{\f307\froman\fcharset0\fprq0 souvenir;}{\f308\froman\fcharset0\fprq0 caledonia;}{\f309\froman\fcharset0\fprq0 bodini;}{\f310\froman\fcharset0\fprq0 university;}{\f311\fscript\fcharset255\fprq2 Script;}{\f312\fscript\fcharset0\fprq0 scriptPS;}
+{\f313\fscript\fcharset0\fprq0 script c;}{\f314\fscript\fcharset0\fprq0 script d;}{\f315\fscript\fcharset0\fprq0 commercial script;}{\f316\fscript\fcharset0\fprq0 park avenue;}{\f317\fscript\fcharset0\fprq0 script h;}{\f318\fscript\fcharset0\fprq0 greek;}
+{\f319\froman\fcharset0\fprq0 kana;}{\f320\froman\fcharset0\fprq0 hebrew;}{\f321\froman\fcharset0\fprq0 roman s;}{\f322\froman\fcharset0\fprq0 russian;}{\f323\froman\fcharset0\fprq0 roman u;}{\f324\froman\fcharset0\fprq0 roman v;}
+{\f325\froman\fcharset0\fprq0 roman w;}{\f326\fdecor\fcharset0\fprq0 narrator;}{\f327\fdecor\fcharset0\fprq0 emphasis;}{\f328\fdecor\fcharset0\fprq0 zapf chancery;}{\f329\fdecor\fcharset0\fprq0 decor d;}{\f330\fdecor\fcharset0\fprq0 old english;}
+{\f331\fdecor\fcharset0\fprq0 decor f;}{\f332\fdecor\fcharset0\fprq0 decor g;}{\f333\fdecor\fcharset0\fprq0 cooper black;}{\f334\fnil\fcharset0\fprq0 linedraw;}{\f335\fnil\fcharset0\fprq0 math7;}{\f336\fnil\fcharset0\fprq0 math8;}
+{\f337\fnil\fcharset0\fprq0 bar3of9;}{\f338\fnil\fcharset0\fprq0 EAN;}{\f339\fnil\fcharset0\fprq0 pcline;}{\f340\fnil\fcharset0\fprq0 tech h;}{\f341\fnil\fcharset0\fprq0 winlinedraw;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;
+\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;
+\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\f11 \snext0 Normal;}{\s1\sb240 \b\f283\ul \sbasedon0\snext0 heading 1;}{\*\cs10 \additive Default Paragraph Font;}{\s15\fi-288\li576 \f11 \sbasedon0\snext15 Outdent4;}
+{\s16 \f11\fs28\cf6 \sbasedon0\snext16 Context;}{\s17\fi-1584\li1872 \f11 \sbasedon0\snext17 Outdent13;}{\s18\li288 \f11 \sbasedon0\snext18 Indent2;}}{\info{\title asq help system, tutorial topics}{\author Henry A. Groover}{\operator Henry A. Groover}
+{\creatim\yr1996\mo2\dy1\hr12\min20}{\revtim\yr1996\mo2\dy1\hr12\min20}{\version1}{\edmins2}{\nofpages0}{\nofwords0}{\nofchars0}{\vern49203}}\margl1440\margr1008 \deftab0\widowctrl\ftnbj0 0\sectd \linex0\endnhere {\*\pnseclvl1
+\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}5
+\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}8\pnlcltr\pnstart1\pnindent720\pnhang
+{\pntxtb (}{\pntxta )}9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \f11 {\cf2 ASQ Tutorial Topics
+\par by Stan Leszynski
+\par These notes are not a live context
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 68
+\par Context strings begin with >>
+\par Center the title of each block
+\par First line is @ plus P (print) or N (noprint) plus stop markers for Prev/Next
+\par }\pard {\cf2 MSWord file use:
+\par  Set Printer to Generic/Text only on File:
+\par  Set View to Page mode to see wrapping
+\par  Default tabs 0
+\par  Left margin 0
+\par  Right margin 1.7"
+\par  Top margin 0
+\par  Bottom margin 0
+\par For indented lines or to get desired wrapping, use hard returns
+\par Text highlighting:
+\par  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text
+\par  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text
+\par  use }{\ul\cf2 UNDERLINE}{\cf2  for context jump= red text
+\par  use }{\b\i\cf2 BOLD ITALICS}{\cf2  for bullets= yellow text
+\par }\pard \fi-288\li288\ri-2700 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.Contents
+\par \pard\plain \f11 @P H.Contents H.T_Hdw_BIOS
+\par {\i                          ASQ Tutorial Topics
+\par }
+\par ASQ tutorial topics displayed in red are context jumps that allow you to move directly to another topic.  Scroll up and down through the text to find a desired topic, then use the {\b Right} or {\b Left }
+arrow key to highlight a context jump topic and press {\b Enter}.
+\par 
+\par             - These topics help you to learn {\ul About ASQ}{\v H.Default} -
+\par                           {\ul Welcome to ASQ!}{\v H.T_Welcome}
+\par                      {\ul Distribution and Trademarks}{\v H.T_Register}
+\par                             {\ul ASQ Features}{\v H.T_Features}
+\par                              {\ul Using ASQ}{\v H.T_Using}
+\par                         {\ul Command Line Options}{\v H.T_Command}
+\par                         {\ul Snapshot Information}{\v H.T_Snapshot}
+\par       - These topics provide hints on {\b enhancing this system} -
+\par                       {\ul About Qualitas Products}{\v H.Products}
+\par                            {\ul System Tuning}{\v H.Tuning}
+\par               - These topics explain {\b memory} concepts -
+\par                     {\ul Memory Tutorial Introduction}{\v H.T_Mem_Lsn_01}
+\par                              {\ul RAM Memory}{\v H.T_Mem_RAM}
+\par                              {\ul ROM Memory}{\v H.T_Mem_ROM}
+\par                           {\ul Extended Memory}{\v H.T_Mem_Ext}
+\par                        {\ul Expanded (EMS) Memory}{\v H.T_Mem_Exp}
+\par                              {\ul XMS Memory}{\v H.T_Mem_XMS}
+\par                          {\ul VCPI, DPMI, and VDS}{\v H.T_VCPI}
+\par                            {\ul Memory Regions}{\v H.T_Mem_Lsn_02}
+\par                            {\ul Low DOS Memory}{\v H.T_Mem_Low}
+\par                           {\ul High DOS Memory}{\v H.T_Mem_Hi}
+\par                      {\ul Memory Management Concepts}{\v H.T_Mem_Lsn_03}
+\par                           {\ul Holes in Memory}{\v H.T_Mem_Holes}
+\par                             {\ul Memory Speed}{\v H.T_Mem_Tim}
+\par                              {\ul Interrupts}{\v H.T_Mem_Int}
+\par        - These topics explain {\b system configuration} concepts -
+\par                 {\ul Configuration Tutorial Introduction}{\v H.T_Cfg_Lsn_01}
+\par                        {\ul Configuration Summary}{\v H.T_Cfg_Sum}
+\par                           {\ul CONFIG.SYS File}{\v H.T_Cfg_CFG}
+\par                          {\ul AUTOEXEC.BAT File}{\v H.T_Cfg_AUT}
+\par                           {\ul MAXIMIZE PROfile}{\v H.T_Cfg_PRO}
+\par                           {\ul ExtraDOS PROfile}{\v H.T_Cfg_EPro}
+\par                           {\ul SYSTEM.INI File}{\v H.T_Cfg_SYSINI}
+\par                          {\ul Qualitas Products}{\v H.T_Cfg_Qualit}
+\par                              {\ul Windows}{\v H.T_Cfg_Window}
+\par                             {\ul CMOS Detail}{\v H.T_Cfg_CMO}
+\par             - These topics explain {\b equipment} concepts -
+\par                   {\ul Equipment Tutorial Introduction}{\v H.T_Hdw_Lsn_01}
+\par                          {\ul Equipment Summary}{\v H.T_Hdw_Sum}
+\par                              {\ul Components}{\v H.T_Hdw_Sum_C}
+\par                           {\ul CPU (Processor)}{\v H.T_Hdw_Sum_P}
+\par                            {\ul Input Devices}{\v H.T_Hdw_Sum_I}
+\par                           {\ul Installed Memory}{\v H.T_Hdw_Sum_M}
+\par                                 {\ul Bus}{\v H.T_Hdw_Sum_B}
+\par                               {\ul Adapters}{\v H.T_Hdw_Sum_A}
+\par                                {\ul Video}{\v H.T_Hdw_Vid}
+\par                                {\ul Drives}{\v H.T_Hdw_Drv}
+\par                         {\ul Communication Ports}{\v H.T_Hdw_Por}
+\par                             {\ul BIOS Detail}{\v H.T_Hdw_BIOS}
+\par             - The topics provide {\b related information} -
+\par                          {\ul ASQ Tutorial Index}{\v H.Index}
+\par                         {\ul ASQ Glossary Topics}{\v As_G_Hlp.Hlp!H.Contents}
+\par                           {\ul ASQ Help Topics}{\v As_H_Hlp.Hlp!H.Contents}
+\par 
+\par You can browse sequentially through all topics on the list above by using the {\b Next} button now.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.Default
+\par \pard\plain \f11 @N H.Default H.T_Snapshot
+\par                               {\i About ASQ}
+\par 
+\par There are several topics for this lesson.  Select a topic or use the {\b Next} button to view each About ASQ topic in sequence:
+\par 
+\par  {\ul Welcome to ASQ!}{\v H.T_Welcome}
+\par  {\ul Distribution and Trademarks}{\v H.T_Register}
+\par  {\ul ASQ Features}{\v H.T_Features}
+\par  {\ul Using ASQ}{\v H.T_Using}
+\par  {\ul Command Line Options}{\v H.T_Command}
+\par  {\ul Snapshot Information}{\v H.T_Snapshot}
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Welcome
+\par \pard\plain \f11 @P H.Default H.T_Snapshot
+\par                            {\i Welcome to ASQ!}
+\par 
+\par ASQ is a system analysis and memory management tool.  ASQ will:
+\par 
+\par   * analyze your computer system
+\par   * display useful information about its configuration
+\par   * teach you memory management, system configuration, and hardware
+\par     concepts
+\par 
+\par ASQ shows how your computer's memory resources are currently being used, and introduces the concept of {\b memory management}
+.  Memory management is necessary in today's powerful personal computers to work around the limitations imposed by DOS and to provide complex application programs with the memory they need.  ASQ helps you learn 
+how a memory management program might make your system more productive.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Register
+\par \pard\plain \f11 @P H.Default H.T_Snapshot
+\par                     {\i Distribution and Trademarks}
+\par 
+\par {\b Distribution}
+\par 
+\par The ASQ utility is an integral part of Qualitas products.  ASQ is copyright Qualitas, Incorporated and is not public domain software.  Unlike previous releases of ASQ, this version is {\b not} shareware and may not be distributed to other users.
+\par 
+\par      (C) Copyright 1987-96 Qualitas, Inc.  All rights reserved.
+\par 
+\par {\b Trademarks}
+\par 
+\par Qualitas, Qualitas MAX, BlueMAX, MOVE'EM, ROMsearch, QCache, SmartMemory, and VGAswap are trademarks of Qualitas, Inc.
+\par 
+\par All other company and product names are registered trademarks or trademarks of their respective companies.
+\par 
+\par                            {\b Qualitas, Inc.}
+\par                      {\b 8601 Georgia Avenue, Suite 908}
+\par                      {\b Silver Spring, Maryland  20910}
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Features
+\par \pard\plain \f11 @P H.Default H.T_Snapshot
+\par                             {\i ASQ Features}
+\par 
+\par ASQ includes the following features:
+\par 
+\par   * over 20 different system analysis topics:
+\par       Memory summary    EMS usage           CMOS detail
+\par       Low DOS memory    XMS memory          Equipment summary
+\par       High DOS memory   Access timing       Video
+\par       ROM scan          Config summary      Drives
+\par       Interrupts        CONFIG.SYS file     Ports
+\par       Extended memory   AUTOEXEC.BAT file   BIOS detail
+\par       Expanded memory   MAX PROfile file    Qualitas information
+\par       ExtraDOS profile  SYSTEM.INI          Windows information
+\par   * On-line help, available for any menu topic and for related
+\par     subjects.
+\par   * A {\ul help index}{\v As_H_Hlp.Hlp!H.Index} for direct access to any help screen.
+\par   * On-line {\ul tutorial lessons}{\v H.Contents}, available for any menu topic and for
+\par     related subjects.
+\par   * A {\ul glossary}{\v As_G_Hlp.Hlp!H.Contents} of memory management terms and acronyms.
+\par   * {\ul Print routines}{\v As_H_Hlp.Hlp!H.U_Print} to print any analysis topic, help screen, or
+\par     tutorial lesson.
+\par   * System configuration capture/redisplay with Snapshot options.
+\par   * A system tuning facility able to make specific recommendations
+\par     on improving system performance.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Using
+\par \pard\plain \f11 @P H.Default H.T_Snapshot
+\par \pard \li1                               {\i Using ASQ}
+\par \pard 
+\par ASQ can be used as a learning tool, an analysis tool, or both.  To receive the most value from ASQ, you may want to use the features in this order:
+\par 
+\par   * Finish reading these About ASQ sections.
+\par   * Read {\ul Using the Tutorial System}{\v As_H_Hlp.Hlp!H.U_Tutor} in the Help system to learn about 
+\par     the Tutorial system.  
+\par   * To learn keyboard and mouse usage, see {\ul Using the Menu System}{\v As_H_Hlp.Hlp!H.Default} in
+\par     the Help system.
+\par   * Scan the {\ul Glossary}{\v As_G_Hlp.Hlp!H.Contents} topics to refresh your knowledge of computer 
+\par     terms used in the tutorial lessons and data displays.
+\par   * Read all the tutorial lessons on computer memory, configuration,
+\par     and equipment for a study of these topics ({\ul Tutorial Topics}{\v H.Contents}).
+\par   * Using the ASQ menu options, learn about your computer system's
+\par     components, configuration, and technical attributes.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Command
+\par \pard\plain \f11 @P H.Default H.T_Snapshot
+\par                         {\i Command Line Options}
+\par 
+\par From DOS, these command line option switches are available when using ASQ:
+\par 
+\par   * {\b ASQ /?} - Display the command line help message.
+\par   * {\b ASQ /B} - Start ASQ in the Monochrome (B&W) mode.
+\par   * {\b ASQ /C} - Start ASQ and force it into color mode; use this if
+\par     ASQ treats your color system as monochrome.
+\par   * {\b ASQ /F drive:} - Read CONFIG.SYS and AUTOEXEC.BAT from the drive
+\par     letter specified; use this if you boot from a floppy on a system
+\par     with a hard disk.
+\par   * {\b ASQ /G [filename][,L][,H]} - Save memory image to a file; if no
+\par     filename is entered, MEMIMAGE.ASQ is used.  The ,L switch saves
+\par     only low memory (0:0 to start of ASQ) while ,H saves only high
+\par     memory (A000:0 to 10000:0).  The default is all memory (0:0 to
+\par     10000:0).  This option is for use when debugging in conjunction
+\par     with Qualitas technical support personnel.
+\par   * {\b ASQ /L [filename]} - Start ASQ and load a saved snapshot file; if
+\par     no filename is entered, SNAPSHOT.ASQ is used.
+\par   * {\b ASQ /S [filename] [/D "descrip"] -} Start ASQ and save the
+\par     system configuration to a snapshot file; use a .ASQ extension if
+\par     you want the file to display on the ASQ Snapshot Load menu; if
+\par     no filename is entered, SNAPSHOT.ASQ is used; the /D option adds
+\par     a description to the file (enclose description in quotes).
+\par   * {\b ASQ /V} - Do not toggle the screen into graphic mode to display
+\par     the ASQ introductory logo.
+\par   * {\b ASQ /X} - Automatic exit from ASQ, for use with /G or /S.
+\par 
+\par Multiple command line switches can be used.  Separate command line options with spaces, for example {\b ASQ /L MYSNAP.ASQ /B}.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Snapshot
+\par \pard\plain \f11 @P H.Default H.T_Snapshot
+\par                         {\i Snapshot Information
+\par }
+\par An ASQ snapshot file stores all information about the current system that is displayable on ASQ data displays in a file that can be loaded and viewed by ASQ at another time or on another system.  Snapshot files are created in a non-editable ASCII format b
+y ASQ and given a default extension of {\b .ASQ}.
+\par 
+\par Saving the system configuration to a snapshot file stores all ASQ information about the current system to a file.  The current operating mode of ASQ is {\b not}
+ affected.  When saving to a snapshot file, a comment can be added to the file to provide future reference.
+\par 
+\par Assigning relevant names and comments to snapshot files allows you to create a {\b catalog} of system status snapshots before, during and after system equipment or configuration changes, or to catalog information about systems belonging to other users. 
+ Providing your snapshot file to another ASQ user or to Qualitas technical support allows someone else to look into your system remotely.
+\par 
+\par Snapshotting your system is recommended anytime you are about to install new software.  Comparing before and after snapshots of the system can help you find changes made during installation or diagnose problems that sometimes result from a new installatio
+n.
+\par 
+\par Loading an ASQ snapshot file brings a saved system configuration into ASQ's memory.  All screen displays and printer reports made by ASQ after a snapshot is loaded reflect the status of the system that was snapshotted, {\b not}
+ the current system running ASQ.
+\par 
+\par The Snapshot Info menu option displays information about the currently {\b loaded} snapshot file, if any, including date and time of creation and the snapshot comment.
+\par 
+\par Snapshot files should {\b not} be modified or viewed by any product other than ASQ.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.Products
+\par \pard\plain \f11 @P H.Products H.Tuning
+\par This topic is assembled by code
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.Tuning
+\par \pard\plain \f11 @P H.Products H.Tuning
+\par This topic is assembled by code
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Mem_Lsn_01
+\par \pard\plain \f11 @P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                     {\i Memory Tutorial Introduction
+\par }
+\par A computer's memory provides it with:
+\par 
+\par   * A {\b storage area} for instructions that explain how to communicate
+\par     with hardware devices and software programs.
+\par   * A {\b work area} for executing software programs and manipulating
+\par     their data.
+\par 
+\par {\b Memory Types and Specifications}
+\par 
+\par There are two different types of computer memory, each with a different use or purpose:
+\par 
+\par   * {\b RAM} - Random Access (read/write) Memory
+\par   * {\b ROM} - Read Only Memory
+\par 
+\par DOS was originally designed for the one megabyte of address space in the original 8088 PC.  For the sake of compatibility, this limitation has been maintained to the present day, even though 80286/386/486/++ processors have evolved to address larger amoun
+ts of memory.  To overcome the DOS limitation, a variety of memory specifications have been devised:
+\par 
+\par   * extended memory
+\par   * expanded (EMS) memory
+\par   * DPMI memory
+\par   * VCPI memory
+\par   * XMS memory
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Mem_RAM
+\par \pard\plain \f11 @P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                              {\i RAM Memory
+\par }
+\par RAM ({\b Random Access Memory}) provides the work areas for transient storage where DOS and software applications perform operations.  Most software instructions and data are stored on disk and transferred to RAM when needed.
+\par 
+\par RAM memory can be read from, so that program code loaded here can be executed repeatedly.  It can also be written to, so that program data can be altered and saved to disk.  RAM is {\b volatile} memory, storing information a
+s electrical charges, so the contents are lost when the power is turned off.
+\par 
+\par RAM is measured in {\b KB} (1024 bytes).  The current standard system configuration is 640 KB of RAM for conventional DOS workspace.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Mem_ROM
+\par \pard\plain \f11 @P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                              {\i ROM Memory
+\par }
+\par ROM ({\b Read Only Memory}) refers to actual memory chips into which software and data are permanently written, usually by the hardware manufacturer.  ROM is reserved for use by the operating system and hardware devices.  It 
+contains the instructions used by the operating system and software programs to manage resources.  It cannot be written to by software programs and is not used for work space.
+\par 
+\par All personal computers include a ROM {\b BIOS}
+ (Basic Input/Output System) encoded in 64 KB of ROM (128 KB of ROM for Micro Channel machines).  Additional ROM can consume from 64 KB to 300 KB, most commonly for ROMs that control video, fixed disks, and network adapters.
+\par 
+\par ROM memory usually appears in the {\b top} 384 KB of the DOS addressable megabyte and reduces available high DOS.
+\par 
+\par Information in a ROM is permanent and is not lost when the computer is turned off.
+\par 
+\par Reading information from ROM is almost always {\b slower}
+ than reading information from RAM.  Whenever possible, ROM contents should be copied into RAM where they can be accessed more quickly (this is called shadowing).  Some systems have this capability built in, but it can also be achieved on any 80386/486 sy
+stem with capable memory management software.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Mem_Ext
+\par \pard\plain \f11 @P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                            {\i Extended Memory
+\par }
+\par Extended memory is memory addressed at {\b 1 MB and above}
+.  Although DOS cannot address memory above one megabyte in its default mode, beginning with 80286 machines a scheme was devised to use interrupt 15 in the ROM BIOS to copy blocks of data between extended and DOS memory.  80286/386/486++ processors can ad
+dress extended memory directly in a special mode (protected mode) used by some non-DOS operating systems and some recent DOS application programs.
+\par 
+\par This method, however, is not very efficient, and provides the application with no information on memory block usage.  Thus this technique places significant limitations on the ability of one program to release memory to another.  Two newer, more efficient
+ schemes have been developed to remap extended memory: {\b expanded} memory and {\b XMS} memory.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Mem_Exp
+\par \pard\plain \f11 @P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                         {\i Expanded (EMS) Memory}
+\par 
+\par The Lotus-Intel-Microsoft ({\b LIM}) Expanded Memory Specification ({\b EMS}) defines a protocol for making extended memory available to EMS-aware DOS applications.  Expanded memory maps 16 KB of memory (a {\b page}
+) from a non-DOS addressable area into a specific memory address in the first megabyte.  EMS-aware products use this memory for temporary work and data storage.
+\par 
+\par The technique for swapping pages of memory above and below the 1 MB limit is called {\b bank switching}; up to 32 MB of memory can be addressed this way.  This technique works because physical addresses (permanent locatio
+ns) and logical addresses (assigned locations) do not have to coincide.  Both EMS hardware and 80386/486/++ processors share the ability to change memory's logical address; doing this selectively makes a page of EMS memory available to a DOS application w
+ithout copying or moving the memory's contents.
+\par 
+\par EMS creates a range of DOS addresses (called a {\b page frame}) into which to map EMS memory; typically the page frame uses 64 KB in high DOS.  Multitasking and program switching software use the EMS services to s
+wap RAM containing entire programs in and out of the DOS address range.  In such environments, the EMS page frame is often much larger than 64 KB and uses addresses within conventional memory rather than high DOS.
+\par 
+\par EMS memory can be implemented through memory board hardware or by using software drivers that emulate EMS.
+\par 
+\par {\b EMS vs. Extended}
+\par 
+\par Expanded and extended memory are contrasted below.
+\par 
+\par   {\b Expanded Memory---------   Extended Memory----------}
+\par   Requires memory manager    Non-managed memory
+\par   Requires page frame        No page frame
+\par   DOS can address it         DOS cannot address it
+\par   Doesn't copy to/from RAM   Copies to/from DOS RAM
+\par   Available for 8088/86      Not available for 8088/86
+\par 
+\par Many application programs use extended memory and others use  expanded memory, if available; some programs are discerning and use whichever is available.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Mem_XMS
+\par \pard\plain \f11 @P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                              {\i XMS Memory}
+\par 
+\par The {\b eXtended Memory Specification} (XMS), developed by Microsoft, allow
+s programs to request memory above the conventional memory area for program storage and use.  Only XMS-aware programs use XMS memory.  XMS memory can be allocated from three locations:
+\par 
+\par   * {\b UMBs} - memory recovered from the top of the 384 KB high DOS area.
+\par     The UMB portion of the XMS provides a standard for managing the
+\par     high DOS region.
+\par   * {\b HMA} - the High Memory Area, a specific 64 KB area in extended
+\par     memory at address 1024 KB (1 MB).  By disabling a feature called
+\par     the A20 line, properly written DOS software can address this
+\par     region by specifying a memory segment beginning at the last DOS
+\par     byte.  Only one program can use the HMA at a time.
+\par   * {\b EMBs} - extended memory in blocks, managed by copying blocks of
+\par     memory into DOS-addressable memory.  XMS improves on the BIOS
+\par     interrupt 15 service by tracking ownership and location of
+\par     extended memory in use.  Thus XMS memory released by one program
+\par     becomes immediately available for another program's use.
+\par 
+\par XMS memory from the High Memory Area is available due to the way the 80286 chip emulates the 8086 chip.  This was retained in the 80386 for compatibility, but the A20 address line control feature was added to turn the feature on and off.
+\par 
+\par {\b EMS vs. XMS}
+\par 
+\par Expanded and XMS memory are contrasted below.
+\par 
+\par   {\b Expanded Memory---------   XMS Memory---------------}
+\par   Requires memory manager    Requires memory manager
+\par   Requires page frame        No page frame
+\par   DOS can address it         DOS cannot address it
+\par   Doesn't copy to/from RAM   Copies to/from DOS RAM
+\par   Available for 8088/86      Not available for 8088/86
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_VCPI
+\par \pard\plain \f11 @P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                         {\i VCPI, DPMI, and VDS}
+\par 
+\par {\b VCPI}
+\par 
+\par Much of the power of 80386/486/++ processors is derived from the {\b memory page tables}
+ which allow them to manipulate the logical address of any system memory.  If two applications intend to manipulate the processor's memory page table, then they must have protocols w
+hich prevent them from getting in each other's way.  The VCPI specification defines an interface that allows multiple protected mode programs to share a single processor as well as control of EMS memory without interfering with each other.
+\par 
+\par The most common VCPI scenario involves an EMS memory manager and a DOS extender.  {\b DOS extenders} take over operating system tasks for memory beyond one megabyte.
+\par 
+\par {\b DPMI}
+\par 
+\par The DOS Protected Mode Interface (DPMI) Specification is similar to the VCPI specification.  It provides DOS and BIOS services to DOS programs running in protected mode, and allows such programs to communicate with programs running in real mode.
+\par 
+\par {\b VDS}
+\par 
+\par Programmers have always been able to take control of the system's Direct Memory Access ({\b DMA}
+) controller, through which data can be moved within system memory without the help or knowledge of the processor.  With the introduction of the 80386 processor's memory page tables (see above), the DMA controller is no longer able to know where informati
+on is stored without help from the processor.
+\par 
+\par The Virtual DMA Specification ({\b VDS}) solves this by providing a mechanism through which program requests for DMA services can be translated to reflect accurate memory addresses.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Mem_Lsn_02
+\par \pard\plain \f11 @P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                            {\i Memory Regions
+\par }
+\par Memory regions fall into three major groupings:
+\par 
+\par   * {\b Low DOS} - memory from 0 to 640 KB
+\par   * {\b High DOS} - memory from 640 KB to 1 MB
+\par   {\b *} {\b Extended} - memory above 1 MB
+\par 
+\par A {\b typical} computer's memory regions are:
+\par 
+\par    {\b Address--}  {\b Usage-----------}  {\b KB------}  {\b Region--}
+\par        1024+  Extended + XMS     64-4 GB  Extended
+\par    960-1024   System ROM         64       High DOS
+\par     896-960   EMS page frame     64
+\par     768-896   Misc. addresses   128
+\par     640-768   Video RAM/ROM     128
+\par       0-640   Low DOS memory +  640       Low DOS
+\par               DOS +
+\par               device drivers +
+\par               TSR programs
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Mem_Low
+\par \pard\plain \f11 @P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                            {\i Low DOS Memory}
+\par 
+\par The {\b first 640 KB} is called low DOS.  In this area, DOS loads itself and device drivers it may use.  The user may also add resident programs (TSRs) such as keyboard enhancers, notepads, etc. and an application program and its data.
+\par 
+\par    {\b Address}  {\b Usage----------------}  {\b KB-}  {\b Region-}
+\par      0-640  Low DOS memory +       640  Low DOS
+\par             DOS +
+\par             BIOS data +
+\par             interrupts +
+\par             device drivers +
+\par             TSR programs +
+\par             application program +
+\par             application data
+\par 
+\par {\b Crowded Low DOS}
+\par 
+\par The low DOS area is the most crowded in the computer.  DOS itself uses a portion of it, device drivers use a portion of it, and TSR (Terminate and Stay Resident) utilities use a portion of it.  After configuring DOS and loading device drivers and resident
+ programs, low DOS may have from 400 to 600 KB of free space for applications.  This may {\b not} be enough memory to run some applications, and those applications that do run may not be as efficient as they would be with more memory available.
+\par 
+\par {\b Networks}
+\par 
+\par Low DOS memory is especially at a premium when the computer is running on a network, where the {\b drivers}
+ can consume 100 KB or more of low DOS memory.  Some computers on local area networks have under 500 KB of their 640 KB low DOS memory available for applications.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Mem_Hi
+\par \pard\plain \f11 @P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                            {\i High DOS Memory}
+\par 
+\par The 384 KB of address space {\b above 640 KB} is called high DOS and is reserved for use by the system for video, networking, and system ROM.  Normally, application programs cannot address this area.
+\par 
+\par    {\b Address-}  {\b Usage------------}  {\b KB-}  {\b Region--}
+\par    960-1024  System ROM BIOS     64  High DOS
+\par     896-960  EMS page frame      64
+\par     768-896  Misc. addresses +
+\par              adapter cards      128
+\par     640-768  Video RAM/ROM      128
+\par 
+\par Even on systems with many adapters, the 384 KB of high DOS is rarely fully occupied.  By moving {\b resident} programs (network software and TSR utilities) out of low DOS and into available high DOS, users can gain valuable memory for applications.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Mem_Lsn_03
+\par \pard\plain \f11 @P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                      {\i Memory Management Concepts
+\par }
+\par {\b CPU}
+\par 
+\par Built into the CPU ({\b Central Processing Unit}
+) are limitations on how much memory the computer can use.  In 1981, IBM introduced their first personal computer, based on the Intel 8088 CPU, which can only see one megabyte of memory address space.  When Microsoft wrote an operating system (DOS) for th
+is system, it built the memory limitation into the operating system.
+\par 
+\par Subsequent processors {\b overcame}
+ the one megabyte limitation while DOS retains the limitation for the sake of maintaining software compatibility.  Fortunately for the user, today there are a variety of hardware and software technologies available that help the DOS user break the one meg
+abyte boundary.
+\par 
+\par The Intel 80286/386/486/++ CPU chips used in today's desktop computers have expanded addressing capabilities, and can overcome the one megabyte limitation by switching between two different modes of operation: {\b protected mode} and {\b real mode}.
+
+\par 
+\par {\b Real Mode Limits}
+\par 
+\par In protected mode, CPUs can address {\b more}
+ than one megabyte of memory directly.  Unfortunately, when executing DOS they must run in real mode, which emulates the 8088/86 CPUs DOS was developed for.  Since the 8088/86 chips had a one megabyte address limit, 80286/386/486/++ chips running in real 
+mode inherit this limitation as well.
+\par 
+\par {\b Beating the Limits}
+\par 
+\par Starting with the 80386, a new processor mode created the opportunity for memory management programs running on these CPUs to deal with some of the constraints of DOS and the real mode.  (Some application programs can {\b switch}
+ between real and protected modes; memory management programs must also satisfy the needs of these programs.)
+\par 
+\par Since DOS was not designed to utilize more than 1 MB of memory, the first megabyte was allocated for use by DOS and programs, and the rest is unused by DOS.  Of the first megabyte, 640 KB is available for DOS and application programs.  To use memory beyon
+d 1 MB, a variety of techniques have been developed, including EMS and XMS, described elsewhere in the tutorial.
+\par 
+\par {\b TSRs}
+\par 
+\par Terminate and Stay Resident (TSR) software programs {\b remain} in memory while other applications are running, waiting for a particular keystroke or event to activate them.  Common TSRs are:
+\par 
+\par   * {\b Pop-up utilities} - including calculators, notepads, and address
+\par     books.
+\par   * {\b System enhancement utilities} - including disk caches and memory
+\par     managers.
+\par   * {\b Network drivers} - resident programs that allow computers to run
+\par     as network workstations.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Mem_Holes
+\par \pard\plain \f11 @P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                            {\i Holes in Memory}
+\par 
+\par On 80386/486/++ computers (and some 80286 models), some {\b unused}
+ address regions are always available within the upper 384 KB of the first one megabyte (high DOS).  Extended memory beyond the one megabyte address limit of DOS can be relocated to fill the holes in the high DOS area.  Device drivers and TSRs from the lo
+w DOS area can then be relocated to these new memory areas within the first megabyte of address space.  This frees up valuable memory in the first 640 KB for application programs.
+\par 
+\par {\b Where Are Holes?}
+\par 
+\par The 384 KB of high DOS address space is reserved for video, ROM and adapter card use.  Depending on the combination of options installed, many computers use less than {\b half} of the reserved area, leaving holes in the high DOS address space.
+\par 
+\par The {\b first 128 KB} of high DOS is used by video boards.  Some space is usually available in the video region, depending on the type of board (MDA, CGA, EGA, VGA) and the manufacturer.
+\par 
+\par Above the video region is the {\b RAM/ROM area}
+ where add-in boards such as local area network interface cards use address regions to communicate with their device drivers loaded in low DOS.  Space is almost always available in the add-in region; the amount depends on the type and quantity of add-in b
+oards installed.
+\par 
+\par {\b Holes in ROM}
+\par 
+\par At the top of the high DOS area, another potentially available area is the address region for the system BIOS ROM itself.  Within the ROM may be unused areas that can be detected and u
+sed by a sophisticated memory management program.  The ROM itself is not affected; only the {\b addresses} of unused BIOS areas are used to provide additional high DOS memory.
+\par 
+\par Available addresses in the BIOS area include routines such as the POST (Power On Self Test), the ROM BASIC interpreter, advanced BIOS for OS/2, and filler patterns.  In many systems, the last 128 KB of the first megabyte is reserved for BIOS.  Of this, as
+ much as {\b 80 KB} can be recovered for use as high DOS memory by Qualitas' BlueMAX program.
+\par 
+\par Finding holes is a task shared by the memory management software and the computer owner.  It may involve some investigation, especially on a complex system.  This ASQ program can help you discover some of these holes; sophisticated memory management progr
+ams may be able to discover and use even more.
+\par 
+\par {\b Using the Holes}
+\par 
+\par Physical memory is not actually {\b moved} into unused high DOS address areas.  The 80386/486/++ CPUs can trans
+late physical addresses into logical addresses, then present the logical addresses to application programs, which can't tell the difference.  When unused address regions are found in the high DOS area, the actual addresses of physical memory are {\b 
+mapped} to the regions by the memory management program.  A somewhat different technique with similar results can be used on some 80286 computers, using the 80286 support provided in Qualitas products.
+\par 
+\par DOS versions earlier than 5.00 will not directly load programs into high DOS areas, so {\b memory management}
+ programs must load the designated programs there.  In addition, there may be three or more separate holes of various sizes, since high DOS holes are usually fragmented, so good memory management software will help the user allocate wisely among the avail
+able regions.
+\par 
+\par {\b Startup Problems}
+\par 
+\par To complicate matters, resident programs often require {\b more} memory to initialize themselves than they do once they go resident.  For example, a TSR claiming that it occupies only 4 KB 
+when resident may require 10 to 50 KB or more (the initialization size) as it is first loading.  Thus, TSR programs that will load into conventional memory may not have enough initialization space when loaded into high DOS, and should be loaded in a seque
+nce that will maximize available high DOS space.  Qualitas' MAXIMIZE program uses a {\b FlexFrame} technology that allows high DOS loading of many programs which could not initialize previously in small memory segments beyond 640 KB.
+\par 
+\par {\b Other Problems}
+\par 
+\par Other complications include programs that can't run in high DOS, or that must be loaded in a specific sequence.  These must be handled on a case by case basis.  Older systems may require memory to be {\b physically}
+ installed as a particular type.  (On newer machines, a memory management program can divide the existing physical memory into the various logical types.)
+\par 
+\par Memory management software should be able to support {\b many} memory specifications to provide the greatest freedom during system configuration.  For example, Qu
+alitas MAX from Qualitas supports EMS, XMS, VCPI, DPMI, and VDS to meet both current and future needs.
+\par 
+\par {\b How Much Gain?}
+\par 
+\par The amount of memory to be gained by memory management is not fixed; it is a function of the hardware and software configuration and of the memory management technique used.  {\b Optimized}
+ program loading results in the highest gain.  As implemented by Qualitas products, reordering optimization involves testing possible load orders before relocating software and finding the combination which l
+oads the most software high.  Obviously, as the number of programs and drivers to optimize grows, the process becomes exponentially more complex.
+\par 
+\par Depending on the computer setup, memory management may be able to free up as much as {\b 200 KB}
+ of low DOS area.  Such gains can enable an application to run that previously would not while connected to a local area network, or allow for bigger spreadsheets and databases.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Mem_Tim
+\par \pard\plain \f11 @P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                             {\i Memory Speed
+\par }
+\par Memory chip speed has an effect on the efficiency of work performed by different memory regions.  Memory chip speeds are often measured by the number of {\b nanoseconds}
+ (ns) required to read one bit of information from the memory chip.  This is also called memory access time.
+\par 
+\par To compensate for the fact that the processor may complete a cycle of data transfer faster than the memory chip can accommodate it, the processor may have to introduce a pause, called a {\b wait state}.
+\par 
+\par In some older machines, particularly PC, XT, and AT systems that have been upgraded to a faster 80386 or 80486 processor, {\b different}
+ speeds of RAM memory may be present.  Typically, the upgrade hardware includes memory faster than the original RAM.  In this case, a capable memory manager can reorganize the memory so that the faster RAM appears in regions which are accessed most freque
+ntly.
+\par 
+\par Although faster memory chips do speed up the computer, performance depends more on the {\b width} of the data path (from 8 bits in 8088 up to 32 bits in 80386) and the efficiency of the memory management program.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Mem_Int
+\par \pard\plain \f11 @P H.T_Mem_Lsn_01 H.T_Mem_Int
+\par                              {\i Interrupts}
+\par 
+\par A special use of memory is for operating system interrupts.  These are locations that the operating system, devices, and software programs use to regularly {\b update} each other regarding the status of important resources and conditions.
+\par 
+\par For example, the keyboard is a resource that is managed by interrupts.  Programmers can gather information about the keyboard by looking at selected interrupts.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Cfg_Lsn_01
+\par \pard\plain \f11 @P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                  {\i Configuration Tutorial Introduction}
+\par 
+\par The computer's operating configuration is defined by:
+\par 
+\par   * Programs that run {\b automatically} each time you start the
+\par     computer.  These programs include device drivers that configure
+\par     the hardware in the system and memory resident software.
+\par   * The {\b settings} for operating system parameters.  These parameters
+\par     also remain resident and help guide other software programs
+\par     while they operate.
+\par 
+\par The components of the computer's operating configuration and their functions are listed in the next lesson.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Cfg_Sum
+\par \pard\plain \f11 @P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                         {\i Configuration Summary}
+\par 
+\par {\b Operating System}
+\par 
+\par The first program loaded when the computer is started is called the  operating system.  An operating system {\b interprets} instructions sent to the computer by hardware devices and software applications.
+\par 
+\par {\b DOS}
+\par 
+\par DOS ({\b Disk Operating System}) is a common operating system for IBM-compatible personal c
+omputers.  Computer hardware manufacturers often provide variations of DOS tuned specifically for their systems, but these variations are virtually indistinguishable except at a detailed programming level.
+\par 
+\par {\b Configuring DOS}
+\par 
+\par When DOS loads, it allocates memory for work space and for configuration settings.  DOS' configuration information helps it work with files (how many are open and can be opened), work with disk drives (buffer
+ing disk data, how many drives are available, file search path), work with hardware devices (through drivers), and work with the screen (screen prompt).  
+\par 
+\par There are countless ways an individual computer can be configured, by placing commands in the CONFIG.SYS and AUTOEXEC.BAT files described in the next lessons.  To take control of one's PC, it is {\b important} to understand these files and their options.
+
+\par 
+\par Since installing new software commonly updates the CONFIG.SYS and/or AUTOEXEC.BAT file, making regular {\b backups} of these files provides insurance in case of installation problems.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Cfg_CFG
+\par \pard\plain \f11 @P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                            {\i CONFIG.SYS File}
+\par 
+\par After loading DOS, the computer reads from a file called CONFIG.SYS, located in the {\b root directory}
+ of the boot disk, and automatically executes the statements in the file.  CONFIG.SYS is used to load device drivers, to define important DOS environment settings, and to change the settings from DOS' default values.  Some of the most important CONFIG
+.SYS commands include:
+\par 
+\par   * {\b DEVICE} - install a device driver into memory (see below).
+\par   * {\b FILES} - sets the number of files DOS can have open at once.
+\par     FILES defaults to 8 if no setting is found.
+\par   * {\b BUFFERS} - sets the number of 512 byte memory buffers to use for
+\par     temporary data storage.  A DOS RAM buffer holds recently
+\par     accessed data in the hope that subsequent calls made to the same
+\par     data will benefit by finding the data in RAM.
+\par   * {\b LASTDRIVE} - sets the maximum allowable accessible drive letter.
+\par   * {\b BREAK} - defines how to check Ctrl-Break keyboard sequence.
+\par   * {\b STACKS} - defines the quantity and size of memory areas for use
+\par     when storing transient information.  STACKS defaults to nine
+\par     stacks of 128 bytes if no setting is found.
+\par   * {\b SHELL} - allows the user to identify the command processor.  The
+\par     command processor evaluates commands typed at DOS and initiates
+\par     the appropriate action.
+\par 
+\par {\b Drivers}
+\par 
+\par CONFIG.SYS also tells DOS which device drivers to load.  Device drivers remain in memory and act as custom {\b extensions}
+ to DOS, performing functions such as changing the keyboard's characteristics or establishing basic communication with a local area network.  Device drivers are often provided as a part of certain hardware and software products.  Drivers are usually desig
+nated with a .SYS filename extension.
+\par 
+\par {\b Changing CONFIG}
+\par 
+\par By changing the CONFIG.SYS file with an editor, the computer's configuration can easily be modified to accommodate newly installed hardware drivers and software applications.  Because the CONFIG.SYS file is {\b only}
+ executed upon boot up, changes to the file will not take effect until the computer is restarted (booted).
+\par 
+\par The CONFIG.SYS file can be modified using any standard text editor or the MAX Editor from Qualitas.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Cfg_AUT
+\par \pard\plain \f11 @P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                           {\i AUTOEXEC.BAT File
+\par }
+\par After processing CONFIG.SYS and loading DOS, the computer looks for a file called AUTOEXEC.BAT, and automatically executes the commands in the file.  Like any {\b batch file}
+, AUTOEXEC.BAT is a script of DOS commands executed sequentially when the batch file is run.  Some of the most important AUTOEXEC.BAT commands include:
+\par 
+\par   * {\b COMSPEC} - informs DOS where to find the required COMMAND.COM
+\par     command interpreter file, if not the default (root directory of
+\par     the boot drive).
+\par \pard \li1   * {\b PROMPT} - allows the user to change the appearance of the DOS
+\par \pard     command prompt.
+\par   * {\b PATH} - tells the DOS command interpreter where to search for
+\par     files to be executed that may not be in the current directory.
+\par   * {\b SET} - creates DOS environment variables used by DOS and
+\par     applications.  SET can be entered by users or issued by software
+\par     products to create their own variables.  Issuing SET at DOS will
+\par     display environment variables.
+\par   * {\b CALL} - beginning with DOS 3.30, allows AUTOEXEC.BAT (or any
+\par     batch file) to call other batch files, providing an effective
+\par     method for organizing related commands and branching.
+\par 
+\par {\b Resident Programs}
+\par 
+\par AUTOEXEC.BAT is also used to tell DOS to automatically load special software that you would like to stay resident for use at any time.  Such programs, called Terminate and Stay Resident ({\b TSRs}
+), stay resident until the computer is reset, and include mouse control, menu programs, network software, and other utilities.
+\par 
+\par {\b Changing AUTOEXEC}
+\par 
+\par By changing the AUTOEXEC.BAT file with an editor, the computer's configuration can easily be modified to accommodate newly installed application programs.  Many programs will
+ modify the AUTOEXEC.BAT file as part of their installation process.  After changing the AUTOEXEC file, the computer should be {\b restarted} (booted) to cause the changes to take effect.
+\par 
+\par The AUTOEXEC.BAT file can be modified using any standard text editor or the MAX Editor from Qualitas.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Cfg_PRO
+\par \pard\plain \f11 @P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                           {\i MAXIMIZE PROfile
+\par }
+\par When a Qualitas product is installed on the system, a PROfile is created.  The file, named {\b 386MAX.PRO}, {\b BLUEMAX.PRO}, or {\b MOVE'EM.PRO}, contains commands used during system bootup and configuration.
+\par 
+\par Commands in the PROfile are documented in Qualitas User Guides and can be changed using any standard text editor.  The MAX Editor contains an Option Editor feature that provides help in the creation of PROfile options.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Cfg_EPro
+\par \pard\plain \f11 @P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                           {\i ExtraDOS PROfile
+\par }
+\par When MAXIMIZE is run, an ExtraDOS profile is created.  This file, called ExtraDOS.PRO contains instructions on how to load DOS subsegments into 
+memory. DOS subsegments include Files, Buffers, FCBs, LASTDRIVE and Stacks. Subsegments are loaded via a Device= statement in CONFIG.SYS with the profile referenced via a PRO= statement.
+\par 
+\par For certain versions of DOS, COMMAND.COM may also be loaded high.  MAXIMIZE will determine if this is possible and add an INSTALL= line to CONFIG.SYS to load COMMAND.COM into high DOS.
+\par 
+\par References to ExtraDOS must be the last active drivers in CONFIG.SYS
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Cfg_SYSINI
+\par \pard\plain \f11 @P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                           {\i SYSTEM.INI File
+\par }
+\par The SYSTEM.INI file is displayed if Windows is in the path. SYSTEM.INI contains information used by Windows during startup, including specific hardware drivers. 
+\par 
+\par INSTALL will add the options SystemROMBreakPoint=FALSE and VCPIWarning=FALSE to SYSTEM.INI.  These ensure compatibility between Qualitas products and Windows, and are harmless if Qualitas products are not active in the system.
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Cfg_Qualit
+\par \pard\plain \f11 @P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                           {\i Qualitas Products
+\par }
+\par Information on version number and product are obtained from file name, date, time, and file size of Qualitas products. 
+\par 
+\par The names of resident programs are shown with the name on the left, followed by:
+\par 
+\par   * Program initialization size
+\par   * Program resident size
+\par   * The program environment, in either case, where applicable
+\par   * The region of memory where the program loads
+\par   * Grouping information if applicable
+\par   * UMB allocators requested size
+\par   * Flags
+\par 
+\par Programs moved into high DOS by MAXIMIZE are listed, including their optimal loading order, along with total bytes moved into high DOS.
+\par 
+\par This information is intended primarily for troubleshooting purposes and is included in the ASQ Snapshot.
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Cfg_Window
+\par \pard\plain \f11 @P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                                {\i Windows
+\par }
+\par If Windows is found in the path, the location of Windows on the hard drive (or network) and the Windows version is shown.  Windows-specific drivers and files are also listed for troubleshooting purposes.  
+\par 
+\par This information is intended primarily for troubleshooting purposes and is included in the ASQ Snapshot.
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Cfg_CMO
+\par \pard\plain \f11 @P H.T_Cfg_Lsn_01 H.T_Cfg_CMO
+\par                              {\i CMOS Detail
+\par }
+\par In 80286/386/486/++ machines, a {\b CMOS} (Complimentary Metal Oxide Semiconductor) memory area stores information about the computer's configuration:
+\par 
+\par   * date and time
+\par   * fixed disk quantity and type
+\par   * diskette quantity and type
+\par   * low DOS memory
+\par   * extended memory
+\par 
+\par This information is protected by a battery and is {\b saved} when the computer is turned off and restored each time the computer restarts.  Since the CMOS memory is not ROM (read-only memory), the data in it can be updated by a setup program.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Hdw_Lsn_01
+\par \pard\plain \f11 @P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                    {\i Equipment Tutorial Introduction
+\par }
+\par Each year the pace of change in computer hardware design quickens.  As component prices decrease and software requirements increase, the average personal computer may have {\b twice} the throughput (total p
+roductivity) of the previous year's average model.
+\par 
+\par One of the factors which fueled the success of the IBM compatible family of personal computers is the computer's {\b open architecture}
+.  Open architecture allows a computer to adapt to new needs by using interchangeable and upgradeable parts.  For example, as video technology advanced, users who wanted better video could replace components of their system for enhanced performance.
+
+\par 
+\par Open architecture has resulted in the abundance of hardware options available today.  Still, the {\b basic} hardware configuration has not changed over the years.  Each system needs:
+\par 
+\par   * a system unit, to house the CPU
+\par   * memory chips, for work space
+\par   * a keyboard, to communicate with the computer
+\par   * a fixed disk drive, for storage
+\par   * a floppy disk drive, for data interchange
+\par   * a video adapter and monitor
+\par   * communication ports, for modems and printers
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Hdw_Sum
+\par \pard\plain \f11 @N H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                           {\i Equipment Summary
+\par }
+\par There are several topics for this lesson.  Select a topic or use the {\b Next} button to view each Equipment Summary topic in sequence:
+\par 
+\par  {\ul Components}{\v H.T_Hdw_Sum_C}
+\par  {\ul CPU (Processor)}{\v H.T_Hdw_Sum_P}
+\par  {\ul Input Devices}{\v H.T_Hdw_Sum_I}
+\par  {\ul Installed Memory}{\v H.T_Hdw_Sum_M}
+\par  {\ul Bus}{\v H.T_Hdw_Sum_B}
+\par  {\ul Adapters}{\v H.T_Hdw_Sum_A}
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Hdw_Sum_C
+\par \pard\plain \f11 @P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                              {\i Components}
+\par 
+\par The computer's hardware configuration is defined by the physical components that make up the system and their attributes:
+\par 
+\par   {\b Equipment------    Attributes---------------}
+\par   CPU                speed, address space
+\par   hard disk(s)       speed, capacity
+\par   floppy disk(s)     speed, capacity
+\par   video board        speed, resolution, memory
+\par   video monitor      resolution
+\par   memory             speed
+\par   ports              quantity and type
+\par   network adapter    speed
+\par 
+\par A system's configuration changes when components are installed, removed, or replaced.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Hdw_Sum_P
+\par \pard\plain \f11 @P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                            {\i CPU (Processor)}
+\par 
+\par Computers are often identified by the CPU ({\b Central Processing Unit}
+) around which they are designed.  The CPU is the brain of the computer, performing calculations and managing resources.  All information processing occurs within the microprocessor, thus a system's most significant abilities and liabilities can usually b
+e traced to the CPU.  Recent CPUs are the Intel 80486, 80386, and 80286.  The 8088 and 8086 processors were used in the original PCs of several years ago.
+\par 
+\par CPU speed, measured in {\b megahertz} (m
+illions of cycles per second), is an important factor in productivity.  Math co-processor chips such as the 80287 or 80387 can also be installed in PCs to boost the speed of applications requiring substantial mathematical operations.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Hdw_Sum_I
+\par \pard\plain \f11 @P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                            {\i Input Devices}
+\par 
+\par {\b Keyboard}
+\par 
+\par A keyboard provides {\b input} to the computer.  There are several popular keyboard layouts available, with differing key locations and capacities.  Beginning with the IBM A
+T style keyboard, two way communication between the keyboard and the computer allows the computer to control the settings for:
+\par 
+\par   * Caps Lock key
+\par   * Num Lock key
+\par   * Scroll Lock key
+\par   * repeat speed when keys are held down
+\par 
+\par {\b Mouse}
+\par 
+\par The mouse is a device rolled across the desktop that moves the cursor proportionally, enabling {\b one-handed}
+ cursor movement and item selection.  Mice are growing in popularity, since they are required for working in some graphical software products and environments.
+\par 
+\par Mice connect to the PC through a serial port or using an adapter card plugged into the PC bus.  Depending on the software application, a mouse may require resident {\b driver} software to be loaded to support it.
+\par 
+\par A variety of mouse movement technologies exist today.  The most popular uses a rubber ball enclosed in a plastic case where sensors detect the ball's motion and translate it into cursor movements.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Hdw_Sum_M
+\par \pard\plain \f11 @P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                           {\i Installed Memory}
+\par 
+\par Computer {\b RAM} (Random Access Memory) consists of chips installed on the computer's system board or on an add-in board.  There are several logical {\ul memory types}{\v H.T_Mem_Lsn_01}
+.  80386/486/++ machines may use software to allocate different types of memory.  The Qualitas MAX and BlueMAX products provide this support.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Hdw_Sum_B
+\par \pard\plain \f11 @P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                                  {\i Bus}
+\par 
+\par All communication within the computer between the CPU, devices, and memory occurs in the bus.  Unlike most other components, the bus is built into the system {\b motherboard} and cannot be removed from a PC.
+\par 
+\par The bus is like a multi-lane highway, with several lanes along which information travels.  Since the original IBM PC, each subsequent version of the Intel microprocessor has {\b widened}
+ the bus to allow for more lanes of data and addressing traffic, adding speed to the computer.  There are three common bus architectures:
+\par 
+\par   * The classic AT (or {\b ISA}, for Industry Standard Architecture) bus
+\par     has a 16-bit data channel and accepts ISA adapter cards only.
+\par   * The Micro Channel ({\b MC}) bus was introduced with the IBM PS/2 line
+\par     of computers.  It added intelligence to the bus and adapters,
+\par     allowing easier configuration and multiple processors within a
+\par     single PS/2.  It is now also offered by other manufacturers, but
+\par     accepts MC adapters only.
+\par \pard \li3   * The {\b EISA} (Extended Industry Standard Architecture) bus was
+\par \pard     designed to offer an intelligent bus that accepts both ISA and
+\par     EISA adapters.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Hdw_Sum_A
+\par \pard\plain \f11 @P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                               {\i Adapters}
+\par 
+\par Adapters are {\b cards} which plug into slots in the PC bus and allow external devices to communicate with the computer.  Devices which use adapters include:
+\par 
+\par   * video monitors
+\par \pard \li1   * scanners
+\par \pard   * external disk drives
+\par 
+\par Additionally, most {\b networked} PCs are attached to the network via network adapter cards.
+\par 
+\par Many adapters are equipped with RAM or ROM that is addressed in the PC in the high DOS area between 640 KB and one megabyte.  It
+ is often possible to select specific memory addresses with switches on the adapter or via software.  Users who take advantage of high DOS for resident program loading often gain additional memory by {\b rearranging}
+ adapter RAM and ROM to yield more contiguous high DOS regions.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Hdw_Vid
+\par \pard\plain \f11 @P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                                 {\i Video
+\par }
+\par Video output has seen substantial evolution since the early monochrome PC systems.  The current standard for color, graphic, and text output is called {\b VGA}
+.  Within the VGA standard are several display modes (e.g. 80x25 text, 640x480 graphics in multiple color capacities, etc.) that allow software developed for other standards to be upward compatible.
+\par 
+\par Enhancements beyond VGA are now being introduced, but some systems still use the older display mode standards:
+\par 
+\par   * {\b MDA} (monochrome)
+\par   * {\b CGA} (color graphics)
+\par   * {\b EGA} (enhanced graphics)
+\par 
+\par The video output subsystem consists of two components: the video {\b adapter} and the {\b monitor}.  The video adapter is either an a
+dd-in board or built into the computer's main system board.  This adapter determines the display standard (e.g. VGA) available to your software.  The available display modes are determined by the video adapter, not the attached monitor.
+\par 
+\par {\b Video Memory and High DOS}
+\par 
+\par Video memory occupies various regions of high DOS in the top 384 KB of the DOS megabyte, depending on the video display format:
+\par 
+\par   * {\b MDA} uses 64 KB from B000-C000
+\par   * {\b CGA} uses 32 KB from B800-C000
+\par   * {\b EGA} uses 96 KB from A000-B000 and B800-C000
+\par   * {\b VGA} uses 96 KB from A000-B000 and B800-C000
+\par 
+\par Additionally, {\b EGA} systems have an additional 16 KB of video ROM at C000, and non PS/2 VGA systems have a 32 KB ROM.
+\par 
+\par Properly configured memory management software can {\b recover} unused memory addresses within the video regions for use as high DOS.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Hdw_Drv
+\par \pard\plain \f11 @P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                                {\i Drives
+\par }
+\par {\b Fixed Disks}
+\par 
+\par Fixed disk (also non-removable or hard) drives provide {\b storage} for data and programs, 
+and are available in a variety of speeds, physical sizes, and capacities.  The capacity of a hard disk drive is a function of the number and density of magnetic platters, and the way in which each platter is partitioned into cylinders and sectors.  Fixed 
+disk capacities range from under 20 MB to over 300 MB.  Fixed disk speeds depend on the rotational speed and the number of read/write heads.  Common fixed disk drive types are assigned identification numbers used by the operating system during its configu
+ration.
+\par 
+\par Hard disk performance is second only to processor speed as the greatest influence on overall system {\b performance}
+, so performance is often enhanced through the use of disk caches and disk defragmenting utilities.  Hard disks use a variety of different interface technologies, called:
+\par 
+\par   * ESDI
+\par   * IDE
+\par   * MFM
+\par   * RLL
+\par   * SCSI
+\par 
+\par {\b Removable Disks}
+\par 
+\par Small, removable magnetic storage devices called {\b diskettes} use disk (also called floppy) drives.  They provide storage, backup, and a method of exchanging data be
+tween computers.  Diskette drives are available in a variety of sizes and storage capacities, including these common formats:
+\par 
+\par   * 5-1/4" with 360 KB capacity
+\par   * 5-1/4" with 1.2 MB capacity
+\par   * 3-1/2" with 720 KB capacity
+\par   * 3-1/2" with 1.44 MB capacity
+\par   * 3-1/2" with 2.88 MB capacity
+\par 
+\par Usually, floppy disk drives of a given physical size and storage capacity can read and write diskettes of the {\b same} physical size and equal or lesser storage capacity.
+\par 
+\par Very large capacity removable drives are also available.  These do {\b not} use floppy diskette technology.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Hdw_Por
+\par \pard\plain \f11 @P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                          {\i Communication Ports
+\par }
+\par Ports allow standard {\b peripherals} to be attached to the computer.  Communication ports are hardware devices and should not be confused with memory ports used internally by a PC.
+\par 
+\par Parallel ports allow the computer to be connected to {\b output devices}, most commonly printers.  A computer usually has one or two parallel ports, designated LPT1 and LPT2.
+\par 
+\par Serial ports allow the computer to be connected to:
+\par 
+\par   * {\b input devices} - mouse, light pen, scanner
+\par   * {\b output devices} - printer, plotter
+\par   * {\b communication devices} - modem, another computer
+\par 
+\par A computer usually has from one to four serial ports, designated COM1 through COM4.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.T_Hdw_BIOS
+\par \pard\plain \f11 @P H.T_Hdw_Lsn_01 H.T_Hdw_BIOS
+\par                              {\i BIOS Detail
+\par }
+\par The {\b BIOS} (Basic Input Output System) is the built-in program that starts up the computer.  It contains fundamental system routines that:
+\par 
+\par   * test the PC at power-up
+\par   * display text
+\par   * read and write to disk
+\par   * report on system configuration
+\par   * provide other hardware support
+\par 
+\par BIOS routines are stored on a computer {\b chip}
+ and are not lost when the power is turned off.  Although written as a computer program, the BIOS routines are considered a part of the computer's hardware rather than software because they are stored in ROM (Read Only Memory).  The ROM BIOS hardware is b
+uilt into the PC by the manufacturer.
+\par 
+\par BIOS routines supervise the {\b low-level} input and output functions of the computer hardware, such as reading the keyboard and writing characters to the screen.  Various manufacturers produce BIOS programs for computer makers.
+\par 
+\par The system BIOS occupies the {\b upper} 64 KB of high DOS on most machines, or the upper 128 KB on PS/2 and other Micro Channel machines  The PS/2 BIOS includes ABIOS routines for the OS/2 operating system which are not used by DOS.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>H.Index
+\par \pard\plain \f11 @P H.Index H.Index
+\par                          {\i ASQ Tutorial Index
+\par }
+\par Use the {\b Right/Left} arrow keys to select a subject, then press Enter.
+\par 
+\par {\b Subject--------------------  Tutorial Topic------------------------}
+\par {\ul 386MAX.PRO file}{\v H.T_Cfg_PRO}              MAXIMIZE PROfile
+\par {\ul Qualitas MAX product}{\v H.Products}               About Qualitas Products
+\par {\ul Adapter memory}{\v H.T_Hdw_Sum_A}               Adapters
+\par {\ul Add-in board region}{\v H.T_Mem_Holes}          Holes in Memory
+\par {\ul ASQ distribution}{\v H.T_Register}             Registration and Distribution
+\par {\ul ASQ features}{\v H.T_Features}                 ASQ Features
+\par {\ul ASQ introduction}{\v H.T_Welcome}             Welcome to ASQ!
+\par {\ul ASQ registration}{\v H.T_Register}             Registration and Distribution
+\par {\ul ASQ topics}{\v H.Default}                   About ASQ
+\par {\ul AUTOEXEC.BAT file}{\v H.T_Cfg_AUT}            AUTOEXEC.BAT File
+\par {\ul Bank switching}{\v H.T_Mem_Exp}               Expanded (EMS) Memory
+\par {\ul BIOS}{\v H.T_Hdw_BIOS}                         BIOS Detail
+\par {\ul BLUEMAX.PRO file}{\v H.T_Cfg_PRO}             MAXIMIZE PROfile
+\par {\ul BlueMAX product}{\v H.Products}              About Qualitas Products
+\par {\ul BREAK command}{\v H.T_Cfg_CFG}                CONFIG.SYS File
+\par {\ul BUFFERS command}{\v H.T_Cfg_CFG}              CONFIG.SYS File
+\par {\ul BUFFERS setting}{\v H.Tuning}              System Tuning
+\par {\ul Bus}{\v H.T_Hdw_Sum_B}                          Bus
+\par {\ul CALL command}{\v H.T_Cfg_AUT}                 AUTOEXEC.BAT File
+\par {\ul CMOS}{\v H.T_Cfg_CMO}                         CMOS Detail
+\par {\ul Components}{\v H.T_Hdw_Sum_C}                   Components
+\par {\ul COMSPEC command}{\v H.T_Cfg_AUT}              AUTOEXEC.BAT File
+\par {\ul CONFIG.SYS file}{\v H.T_Cfg_CFG}              CONFIG.SYS File
+\par {\ul CPU}{\v H.T_Hdw_Sum_P}                          CPU (Processor)
+\par {\ul DEVICE command}{\v H.T_Cfg_CFG}               CONFIG.SYS File
+\par {\ul Device drivers}{\v H.T_Cfg_CFG}               CONFIG.SYS File
+\par {\ul DOS}{\v H.T_Cfg_Sum}                          Configuration Summary
+\par {\ul DOS configuration}{\v H.T_Cfg_Sum}            Configuration Summary
+\par {\ul DOS switches}{\v H.T_Command}                 Command Line Options
+\par {\ul DPMI}{\v H.T_VCPI}                         VCPI, DPMI, and VDS
+\par {\ul Editing AUTOEXEC.BAT}{\v H.T_Cfg_AUT}         AUTOEXEC.BAT File
+\par {\ul Editing CONFIG.SYS}{\v H.T_Cfg_CFG}           CONFIG.SYS File
+\par {\ul EISA bus}{\v H.T_Hdw_Sum_B}                     Bus
+\par {\ul EMBs}{\v H.T_Mem_XMS}                         XMS Memory
+\par {\ul EMS memory}{\v H.T_Mem_Exp}                   Expanded (EMS) Memory
+\par {\ul EMS vs. extended memory}{\v H.T_Mem_Exp}      Expanded (EMS) Memory
+\par {\ul EMS vs. XMS memory}{\v H.T_Mem_XMS}           XMS Memory
+\par {\ul Equipment topics}{\v H.T_Hdw_Sum}             Equipment Summary
+\par {\ul Expanded memory}{\v H.T_Mem_Exp}              Expanded (EMS) Memory
+\par {\ul Extended memory}{\v H.T_Mem_Ext}              Extended Memory
+\par {\ul ExtraDOS.PRO file}{\v\ul H.T_Cfg_EPro}            ExtraDOS Profile{\ul 
+\par FILES command}{\v H.T_Cfg_CFG}                CONFIG.SYS File
+\par {\ul FILES setting}{\v H.Tuning}                System Tuning
+\par {\ul Fixed disk drives}{\v H.T_Hdw_Drv}            Drives
+\par {\ul FlexFrame technology}{\v H.T_Mem_Holes}         Holes in Memory
+\par {\ul Floppy disk drives}{\v H.T_Hdw_Drv}           Drives
+\par {\ul High DOS memory}{\v H.T_Mem_Hi}              High DOS Memory
+\par {\ul HMA}{\v H.T_Mem_XMS}                          XMS Memory
+\par {\ul Interrupts}{\v H.T_Mem_Int}                   Interrupts
+\par {\ul ISA bus}{\v H.T_Hdw_Sum_B}                      Bus
+\par {\ul KB (kilobyte)}{\v H.T_Mem_RAM}                RAM Memory
+\par {\ul Keyboard}{\v H.T_Hdw_Sum_I}                     Input Devices
+\par {\ul LASTDRIVE command}{\v H.T_Cfg_CFG}            CONFIG.SYS File
+\par {\ul LIM memory}{\v H.T_Mem_Exp}                   Expanded (EMS) Memory
+\par {\ul Low DOS memory}{\v H.T_Mem_Low}               Low DOS Memory
+\par {\ul Low DOS usage}{\v H.T_Mem_Low}                Low DOS Memory
+\par {\ul MC bus}{\v H.T_Hdw_Sum_B}                       Bus
+\par {\ul Megahertz}{\v H.T_Hdw_Sum_P}                    CPU (Processor)
+\par {\ul Memory access time}{\v H.T_Mem_Tim}           Memory Speed
+\par {\ul Memory holes}{\v H.T_Mem_Holes}                 Holes in Memory
+\par {\ul Memory management gains}{\v H.T_Mem_Holes}      Holes in Memory
+\par {\ul Memory management tips}{\v H.Tuning}       System Tuning
+\par {\ul Memory regions}{\v H.T_Mem_Lsn_02}               Memory Regions
+\par {\ul Memory types}{\v H.T_Mem_Lsn_01}                 Memory Tutorial Introduction
+\par {\ul Mode switching}{\v H.T_Mem_Lsn_03}               Memory Management Concepts
+\par {\ul Mouse}{\v H.T_Hdw_Sum_I}                        Input Devices
+\par {\ul MOVE'EM.PRO file}{\v H.T_Cfg_PRO}             MAXIMIZE PROfile
+\par {\ul Nanosecond (ns)}{\v H.T_Mem_Tim}              Memory Speed
+\par {\ul Networks and low DOS}{\v H.T_Mem_Low}         Low DOS Memory
+\par {\ul Open architecture}{\v H.T_Hdw_Lsn_01}            Equipment Tutorial Introduction
+\par {\ul Operating configuration}{\v H.T_Cfg_Lsn_01}      Configuration Tutorial Introduction
+\par {\ul Operating system}{\v H.T_Cfg_Sum}             Configuration Summary
+\par {\ul Page frame}{\v H.T_Mem_Exp}                   Expanded (EMS) Memory
+\par {\ul Parallel port}{\v H.T_Hdw_Por}                Communication Ports
+\par {\ul PATH command}{\v H.T_Cfg_AUT}                 AUTOEXEC.BAT File
+\par {\ul POST}{\v H.T_Mem_Holes}                         Holes in Memory
+\par {\ul PROMPT command}{\v H.T_Cfg_AUT}               AUTOEXEC.BAT File
+\par {\ul Qualitas information}{\v\ul H.T_Cfg_Qualit}         Qualitas Products{\ul 
+\par Qualitas products}{\v H.Products}            About Qualitas Products
+\par {\ul Qualitas trademarks}{\v H.T_Register}          Registration and Distribution
+\par {\ul RAM memory}{\v H.T_Mem_RAM}                   RAM Memory
+\par {\ul Real mode}{\v H.T_Mem_Lsn_03}                    Memory Management Concepts
+\par {\ul Remapping memory}{\v H.T_Mem_Holes}             Holes in Memory
+\par {\ul ROM BIOS}{\v H.T_Mem_ROM}                     ROM Memory
+\par {\ul ROM memory}{\v H.T_Mem_ROM}                   ROM Memory
+\par {\ul Serial port}{\v H.T_Hdw_Por}                  Communication Ports
+\par {\ul SET command}{\v H.T_Cfg_AUT}                  AUTOEXEC.BAT File
+\par {\ul SHELL command}{\v H.T_Cfg_CFG}                CONFIG.SYS File
+\par {\ul Snapshot file information}{\v H.T_Snapshot}    Snapshot Information
+\par {\ul STACKS command}{\v H.T_Cfg_CFG}               CONFIG.SYS File
+\par {\ul SYSTEM.INI}{\v\ul H.T_Cfg_Window}                   SYSTEM.INI{\ul 
+\par Topics}{\v\ul H.Contents}                       ASQ Tutorial Topics{\ul 
+\par TSR initialization}{\v H.T_Mem_Holes}           Holes in Memory
+\par {\ul TSR programs}{\v H.T_Mem_Lsn_03}                 Memory Management Concepts
+\par {\ul Tuning for performance}{\v H.Tuning}       System Tuning
+\par {\ul UMBs}{\v H.T_Mem_XMS}                         XMS Memory
+\par {\ul Using ASQ features}{\v H.T_Using}           Using ASQ
+\par {\ul Using the holes}{\v H.T_Mem_Holes}              Holes in Memory
+\par {\ul VCPI}{\v H.T_VCPI}                         VCPI, DPMI, and VDS
+\par {\ul VDS}{\v H.T_VCPI}                          VCPI, DPMI, and VDS
+\par {\ul Video}{\v H.T_Hdw_Vid}                        Video
+\par {\ul Video memory}{\v H.T_Hdw_Vid}                 Video
+\par {\ul XMS memory}{\v H.T_Mem_XMS}                   XMS Memory
+\par 
+\par }

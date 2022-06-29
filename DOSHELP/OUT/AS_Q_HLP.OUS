@@ -1,0 +1,357 @@
+{\rtf1\ansi \deff0{\fonttbl{\f0\froman CG Times (W1);}{\f1\froman Symbol;}{\f2\fswiss Univers (W1);}{\f3\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;
+\red127\green127\blue127;\red192\green192\blue192;}{\stylesheet{\f3 \snext0 Normal;}{\s2\fi-288\li576 \f3 \sbasedon0\snext2 Outdent4;}{\s3 \f3\fs28\cf6 \sbasedon0\snext3 Context;}{\s4\fi-1584\li1872 \f3 
+\sbasedon0\snext4 Outdent13;}{\s5\li288 \f3 \sbasedon0\snext5 Indent2;}{\s6\ri-5760 \f3\cf2 \sbasedon0\snext6 Comment;}}{\info{\title asq help system, quick ref topics}{\author Stan Leszynski}{\operator Victoria L. Borton}
+{\creatim\yr1991\mo5\dy11\hr9\min32}{\revtim\yr1993\mo5\dy19\hr16\min45}{\printim\yr1993\mo5\dy5\hr14\min11}{\version32}{\edmins551}{\nofpages10}{\nofwords1249}{\nofchars7972}{\vern16417}}
+\paperw12240\paperh15840\margl1440\margr8064\margt720\margb720\gutter0 \deftab0\widowctrl\ftnbj \sectd \linex0\endnhere \pard\plain \s6\ri-5760 \f3\cf2 ASQ Quick Ref Topics
+\par by Stan Leszynski
+\par These notes are not a live context
+\par \pard \s6\ri-5760 Hard returns are required in quick ref files when a space occurs in column 19 to get around help compiler bug
+\par \pard \s6\ri-5760 Line width 19
+\par Topic height 17 lines
+\par Context strings begin with >>
+\par MSWord file use:
+\par  Set Printer to Generic/Text only on File:
+\par  Set View to Page mode to see wrapping
+\par  Default tabs 0
+\par  Left margin 0
+\par  Right margin 6.6"
+\par  Top margin 0
+\par  Bottom margin 0
+\par \pard \s6\ri-5760 For indented lines or to get desired wrapping, use hard returns
+\par \pard \s6\ri-5760 Text highlighting:
+\par \pard \s6\ri-5760  use {\b BOLD} for accenting= blue text
+\par  use {\i ITALICS} for subject headers= white text
+\par \pard \s6\ri-5760  use {\ul UNDERLINE} for context jump= red text
+\par \pard \s6\ri-5760  use {\b\i BOLD ITALICS} for bullets= yellow text
+\par \pard \s6\ri-5760 
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Cfg_AUT
+\par \pard\plain \f3 AUTOEXEC.BAT contains commands that must execute automatically upon boot up.
+\par \pard 
+\par \pard This option shows the contents of AUTOEXEC.BAT, if found in path C:\\.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Cfg_CFG
+\par \pard\plain \f3 CONFIG.SYS contains commands to install drivers and configure environment set-
+\par \pard tings at boot up.
+\par 
+\par \pard This option shows the contents of CONFIG.SYS, if found in path C:\\.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Cfg_EPRO
+\par \pard\plain \f3 The profile contains options used during loading and configuration of the ExtraDOS feature.
+\par \pard 
+\par \pard This option shows the contents of ExtraDOS.PRO as specified in CONFIG.SYS.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Cfg_SYSINI
+\par \pard\plain \f3 SYSTEM.INI contains Windows startup information.
+\par \pard 
+\par \pard This option shows the contents of SYSTEM.INI if found in the path or if specified during INSTALL.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Cfg_Qualitas
+\par \pard\plain \f3 This option shows:
+\par 
+\par  * Qualitas product
+\par  * Integral file
+\par    dates
+\par  * Resident
+\par    programs 
+\par  * Programs moved
+\par    high by Maximize
+\par    including size,
+\par    region and load
+\par \pard    order
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Cfg_Windows
+\par \pard\plain \f3 This options shows information about Windows if found in the path or specified during Install.
+\par \pard 
+\par This option shows:
+\par 
+\par  * Win directory
+\par  * Windows path
+\par  * Integral files
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Cfg_CMO
+\par \pard\plain \f3 The Complimentary Metal Oxide Semi-
+\par \pard conductor (CMOS) chip stores the computer's config-
+\par uration for date/ time, memory, and attached devices.
+\par \pard 
+\par \pard This option shows the descriptions, addresses and contents of the CMOS memory.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Cfg_PRO
+\par \pard\plain \f3 The PROfile contains options used during loading and configuration of Qualitas memory management products.
+\par \pard 
+\par \pard This option shows the contents of the PROfile as specified in CONFIG.SYS with DEVICE= and PRO= commands.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Cfg_Sum
+\par \pard\plain \f3 The computer's work
+\par \pard environment is configured by DOS commands and other
+\par \pard software products.
+\par 
+\par \pard This option shows the DOS version and
+\par \pard settings for:
+\par 
+\par  * files, buffers
+\par  * FCBs, stacks
+\par  * lastdrive, break
+\par  * environment
+\par  * path, prompt
+\par  * open files
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Exit
+\par \pard\plain \f3 Exit ASQ and return
+\par \pard to DOS or the calling program.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Hdw_BIO
+\par \pard\plain \f3 The Basic Input/ Output System (BIOS) supervises communication between input and output devices, such as keyboard, diskettes, and video display.
+\par \pard 
+\par This option shows
+\par \pard the descriptions, addresses and contents of the ROM
+\par \pard BIOS area.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Hdw_Drv
+\par \pard\plain \f3 Disk drives allow the computer to permanently store information and to
+\par \pard exchange informa-
+\par \pard tion with other computers.
+\par \pard 
+\par \pard This option shows the attached drives
+\par \pard and their:
+\par 
+\par  * capacity
+\par  * description
+\par  * drive type
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Hdw_Por
+\par \pard\plain \f3 Communication ports
+\par allow the computer
+\par \pard to receive data from and send data
+\par \pard to attached devices
+\par for printing, file
+\par transfer, etc.
+\par 
+\par This option shows
+\par attached communica-
+\par tion port data:
+\par 
+\par  * serial ports
+\par  * parallel ports
+\par  * port addresses
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Hdw_Sum
+\par \pard\plain \f3 The computer is a collection of hardware devices and components attached to a processor.
+\par \pard 
+\par This option lists:
+\par 
+\par  * computer type
+\par  * CPU, BIOS
+\par  * disk drives
+\par  * video details
+\par  * ports, adapters
+\par  * physical memory
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Hdw_Vid
+\par \pard\plain \f3 The video adapter defines the capabilities of the computer to display data on a screen.
+\par \pard 
+\par This option shows
+\par the video setup:
+\par 
+\par  * adapter type
+\par  * adapter memory
+\par  * display mode
+\par  * display size
+\par  * graphics memory
+\par  * text memory
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Help
+\par \pard\plain \f3 The ASQ Help system
+\par \pard provides context sensitive, indexed,
+\par \pard and topic-linked help for ASQ usage and data.
+\par \pard 
+\par \pard This option loads the Help system at
+\par \pard the named topic.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Mem_EMS
+\par \pard\plain \f3 Expanded Memory Specification (EMS)
+\par \pard makes memory above the 1 megabyte limit accessible through bank switching.
+\par \pard 
+\par \pard This option shows EMS memory usage:
+\par \pard 
+\par  * EMS pages
+\par  * unused EMS
+\par  * page frame
+\par  * ROM locations
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Mem_Exp
+\par \pard\plain \f3 Expanded Memory Specification (EMS)
+\par \pard makes memory above the 1 megabyte limit accessible through bank switching.
+\par \pard 
+\par This option shows:
+\par 
+\par  * EMS version
+\par  * VCPI version
+\par  * frame address
+\par  * mappable pages
+\par  * handles
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Mem_Ext
+\par \pard\plain \f3 Extended memory is
+\par memory addressed at
+\par \pard one megabyte and above.
+\par \pard 
+\par This option shows
+\par \pard information about extended memory:
+\par \pard 
+\par  * total memory
+\par  * usage of memory
+\par    by address and
+\par    size
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Mem_Hi
+\par \pard\plain \f3 High DOS address space is the last 384 KB of the first megabyte, and is usually reserved for system functions and hardware.
+\par \pard 
+\par \pard This option shows the usage of high DOS address space:
+\par \pard 
+\par  * user name
+\par  * address
+\par  * size
+\par  * environment
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Mem_Int
+\par \pard\plain \f3 Interrupts are memory locations that allow the hardware and software to communicate.
+\par \pard 
+\par \pard This option lists the interrupts in two formats:
+\par \pard 
+\par  * by user program
+\par  * by interrupt
+\par    number
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Mem_Low
+\par \pard\plain \f3 Low DOS memory is the first 640 KB of
+\par \pard memory and is the main work area used by the operating system and applications.
+\par \pard 
+\par \pard This option shows the current usage of low DOS memory:
+\par \pard 
+\par  * user name
+\par  * address
+\par  * size
+\par  * environment
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Mem_ROM
+\par \pard\plain \f3 Read Only Memory (ROM) stores the instructions that are used by the operating system and software programs to access
+\par \pard computer resources.
+\par 
+\par \pard This option maps the location of ROM
+\par \pard against other types
+\par of memory by region
+\par and size.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Mem_Sum
+\par \pard\plain \f3 The computer memory address space may contain several different types of memory.
+\par \pard 
+\par This option locates
+\par all memory types:
+\par 
+\par  * DOS system
+\par  * low/high DOS
+\par  * video, ROM
+\par  * expanded
+\par  * extended
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Mem_Tim
+\par \pard\plain \f3 Computer efficiency
+\par is affected by the
+\par \pard speed of memory chips and the width
+\par \pard of the data bus.
+\par 
+\par \pard This option runs memory timing tests
+\par \pard for different blocks of memory and graphs:
+\par \pard 
+\par  * block address
+\par  * size
+\par  * access time
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Mem_XMS
+\par \pard\plain \f3 eXtended Memory Specification (XMS)
+\par \pard allows programs to
+\par \pard request memory above the conven-
+\par \pard tional memory area.
+\par 
+\par This option shows:
+\par 
+\par  * version number
+\par  * driver number
+\par  * UMB memory
+\par  * EMB memory
+\par  * HMA status
+\par  * A20 status
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Snp_Clear
+\par \pard\plain \f3 If an ASQ snapshot
+\par file is loaded, all
+\par displays and print-
+\par outs show data from
+\par \pard the file, not the current system.
+\par \pard 
+\par This option clears
+\par the loaded snapshot
+\par \pard file from ASQ's memory and loads the current system
+\par \pard configuration into
+\par ASQ.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Snp_Info
+\par \pard\plain \f3 A snapshot file stores all system analysis informa-
+\par \pard tion about the current system in a
+\par \pard file that can be loaded and viewed by ASQ at another time or on another
+\par \pard system.
+\par 
+\par \pard This option shows information about the currently loaded snapshot file, if any.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Snp_Load
+\par \pard\plain \f3 If an ASQ snapshot
+\par file is loaded, all
+\par displays and print-
+\par outs show data from
+\par \pard the file, not the current system.
+\par \pard 
+\par This option clears
+\par \pard ASQ's memory and loads into ASQ the
+\par system analysis information stored
+\par \pard in a snapshot file.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_Snp_Sav
+\par \pard\plain \f3 An ASQ snapshot file stores all ASQ
+\par information about the current system
+\par \pard in a file that can
+\par \pard be loaded and viewed by ASQ at another time or on
+\par \pard another system.
+\par 
+\par \pard This option saves all system analysis
+\par \pard information from ASQ's memory to a snapshot file.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_L_Abt_ASQ
+\par \pard\plain \f3 This option describes ASQ and how you can benefit from its features.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_L_Cfg
+\par \pard\plain \f3 The ASQ Tutorial system provides lessons on computer
+\par \pard system hardware and
+\par optimization.
+\par 
+\par \pard This option loads the Tutorial system
+\par beginning at the system configura-
+\par \pard tion topics.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_L_Contents
+\par \pard\plain \f3 The ASQ Tutorial system provides lessons on computer
+\par \pard system hardware and
+\par optimization.
+\par 
+\par \pard This option loads the Tutorial system
+\par beginning at the topics list.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_L_Gloss
+\par \pard\plain \f3 The ASQ Glossary system defines common memory management terms.
+\par \pard 
+\par \pard This option loads the Glossary system
+\par \pard topics list.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_L_Hdw
+\par \pard\plain \f3 The ASQ Tutorial system provides lessons on computer
+\par \pard system hardware and
+\par optimization.
+\par 
+\par \pard This option loads the Tutorial system
+\par beginning at the computer equipment
+\par \pard topics.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_L_Index
+\par \pard\plain \f3 The ASQ Tutorial system provides lessons on computer
+\par \pard system hardware and
+\par optimization.
+\par 
+\par \pard This option loads the Tutorial system
+\par beginning at the subject index.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_L_Mem
+\par \pard\plain \f3 The ASQ Tutorial system provides lessons on computer
+\par \pard system hardware and
+\par optimization.
+\par 
+\par \pard This option loads the Tutorial system
+\par \pard beginning at the memory management topics.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_L_Q
+\par \pard\plain \f3 ASQ analyzes this system and suggests
+\par \pard the Qualitas memory
+\par management product
+\par \pard that may be suited for the system.
+\par \pard\plain \s3 \f3\fs28\cf6 >>Q_L_Tune
+\par \pard\plain \f3 Depending on the computer's configu-
+\par ration, specific hardware and soft-
+\par \pard ware changes may increase system performance.
+\par \pard 
+\par \pard ASQ analyzes this system and suggests
+\par configuration changes.
+\par \pard 
+\par }

@@ -1,0 +1,923 @@
+{\rtf1\ansi \deff0{\fonttbl{\f0\froman CG Times (W1);}{\f1\froman Symbol;}{\f2\fswiss Univers (W1);}{\f3\fmodern Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue127;\red0\green127\blue127;\red0\green127\blue0;\red127\green0\blue127;\red127\green0\blue0;\red127\green127\blue0;
+\red127\green127\blue127;\red192\green192\blue192;}{\stylesheet{\f3 \snext0 Normal;}{\s2\fi-288\li576 \f3 \sbasedon0\snext2 Outdent4;}{\s3 \f3\fs28\cf6 \sbasedon0\snext3 Context;}{\s4\fi-1584\li1872 \f3 
+\sbasedon0\snext4 Outdent13;}{\s5\li288 \f3 \sbasedon0\snext5 Indent2;}}{\info{\title asq help system, help topics}{\author Stan Leszynski}{\operator Victoria L. Borton}{\creatim\yr1991\mo5\dy21\hr15\min8}{\revtim\yr1993\mo5\dy20\hr17\min20}
+{\printim\yr1993\mo5\dy5\hr14\min36}{\version84}{\edmins2216}{\nofpages23}{\nofwords6495}{\nofchars44560}{\vern16417}}\paperw12240\paperh15840\margl1440\margr1008\margt1440\margb1440\gutter0 \deftab0\widowctrl\ftnbj \sectd \linex0\endnhere \pard\plain 
+\f3 {\cf2 ASQ General Help
+\par }{\cf2 by Stan Leszynski
+\par }{\cf2 These notes are not a live context
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 68
+\par }{\cf2 Context strings begin with >>
+\par }{\cf2 Center th}{\cf2 e title of each block
+\par }{\cf2 First line is @ plus P (print) or N (noprint) plus stop markers for Prev/Next
+\par }\pard {\cf2 MSWord file use: 
+\par }{\cf2  Set Printer to Generic/Text only on File:
+\par }{\cf2  Set View to Page mode to see wrapping 
+\par }{\cf2  Default tabs 0
+\par }{\cf2  Left margin 0
+\par }{\cf2  Right margin 1.7"
+\par }{\cf2  Top margin 0
+\par }{\cf2  Bottom margin 0
+\par }{\cf2 For indented lines or to get desired wrapping, use hard returns
+\par }{\cf2 Text highlighting:
+\par }\pard {\cf2  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text
+\par }{\cf2  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text
+\par }\pard {\cf2  use }{\ul\cf2 UNDERLINE}{\cf2  for context jump= red text
+\par }\pard {\cf2  use }{\b\i\cf2 BOLD ITALICS}{\cf2  for bullets= yellow text
+\par }\pard \fi-288\li288\ri-2700 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Contents
+\par \pard\plain \f3 @P H.Contents H.Hdw_BIOS
+\par \pard                            {\i ASQ Help Topics
+\par }\pard 
+\par \pard Help system topics displayed in red are context jumps that allow you to move directly to another help topic.  Scroll up and down through the text to find a desired topic, then use the {\b Right} or{\b  Left }
+arrow key to highlight a context jump topic and press {\b Enter}.
+\par \pard 
+\par \pard          - These topics help you understand and use {\b ASQ} -
+\par \pard                        {\ul Using the Menu System}{\v H.Default}
+\par                        {\ul Using the Help System}{\v H.U_Help}
+\par                      {\ul Using the Glossary System}{\v H.U_Gloss}
+\par                      {\ul Using the Tutorial System}{\v H.U_Tutor}
+\par                          {\ul Using a Dialog Box}{\v H.U_Dial}
+\par                        {\ul Using the Print System}{\v H.U_Print}
+\par \pard    - These topics explain how to create and use ASQ {\b snapshots} -
+\par \pard                       {\ul Loading a Snapshot File}{\v H.Snp_Load}
+\par                      {\ul Saving to a Snapshot File}{\v H.Snp_Save}
+\par                  {\ul Snapshot File Information Display}{\v H.Snp_Info}
+\par                      {\ul Clearing a Loaded Snapshot}{\v H.Snp_Clear}
+\par \pard     - These topics explain the {\b memory analysis} data displays -
+\par \pard                        {\ul Memory Summary Display}{\v H.Mem_Sum}
+\par                  {\ul Low DOS Memory Information Display}{\v H.Mem_Low}
+\par                 {\ul High DOS Memory Information Display}{\v H.Mem_Hi}
+\par                     {\ul ROM Scan Information Display}{\v H.Mem_ROM}
+\par                    {\ul Interrupt Information Display}{\v H.Mem_Int}
+\par                 {\ul Extended Memory Information Display}{\v H.Mem_Ext}
+\par              {\ul Expanded (EMS) Memory Information Display}{\v H.Mem_Exp}
+\par                    {\ul EMS Usage Information Display}{\v H.Mem_EMS}
+\par                    {\ul XMS Memory Information Display}{\v H.Mem_XMS}
+\par                     {\ul Memory Access Timing Display}{\v H.Mem_Tim}
+\par \pard  - These topics explain the {\b configuration analysis} data displays -
+\par \pard                    {\ul Configuration Summary Display}{\v H.Cfg_Sum}
+\par                       {\ul CONFIG.SYS File Display}{\v H.Cfg_CFG}
+\par                      {\ul AUTOEXEC.BAT File Display}{\v H.Cfg_AUT}
+\par                          {\ul .PRO File Display}{\v H.Cfg_PRO}
+\par                      {\ul EXTRADOS.PRO File Display}{\v H.Cfg_EPro}
+\par                       {\ul SYSTEM.INI File Display}{\v H.Cfg_SYSINI}
+\par                        {\ul Using the File Browser}{\v H.U_Browse}
+\par                 {\ul Qualitas Product Information Display}{\v H.Cfg_Qualitas}
+\par                      {\ul Windows Information Display}{\v H.Cfg_Windows}
+\par \pard    - These topics explain the {\b equipment analysis} data displays -
+\par \pard                   {\ul CMOS Detail Information Display}{\v H.Cfg_CMO}
+\par                      {\ul Equipment Summary Display}{\v H.Hdw_Sum}
+\par                      {\ul Video Information Display}{\v H.Hdw_Vid}
+\par                      {\ul Drive Information Display}{\v H.Hdw_Drv}
+\par                {\ul Communication Port Information Display}{\v H.Hdw_Por}
+\par                   {\ul BIOS Detail Information Display}{\v H.Hdw_BIOS}
+\par \pard             - These topics provide {\b related information} -
+\par \pard                            {\ul ASQ Help Index}{\v H.Index}
+\par                         {\ul ASQ Glossary Topics}{\v As_G_Hlp.Hlp!H.Contents}
+\par                         {\ul ASQ Tutorial Topics}{\v As_T_Hlp.Hlp!H.Contents}
+\par \pard 
+\par \pard You can browse sequentially through all topics on the list above by using the {\b Next} button now.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Default
+\par \pard\plain \f3 @P H.Default H.U_Print
+\par \pard                         {\i Using the Menu System}
+\par \pard 
+\par \pard The menu system consists of a bar menu at the top of the screen with menu titles that refer to associated pulldown menus.
+\par \pard 
+\par These keys maneuver on the bar menu:
+\par 
+\par \pard   * {\b Alt-Highlighted Letter} - Display the pulldown associated with
+\par \pard     the menu option containing the highlighted letter.
+\par \pard   * {\b Right, Left} - Move to a new bar menu option and display the
+\par \pard     associated pulldown.{\b 
+\par }\pard   * {\b Tab, Shift-Tab} - Move to a new bar menu option and display the
+\par \pard     associated pulldown.{\b 
+\par }\pard   * {\b Esc} - Jump to the Exit option.
+\par \pard \fi-288\li288 
+\par These keys maneuver on the pulldown menus:
+\par \pard 
+\par \pard   * {\b Enter} - Execute the highlighted option.
+\par   * {\b Highlighted Letter} - Execute the menu option containing the
+\par \pard     highlighted letter.
+\par \pard   * {\b Up, Down} - Move the highlight to a new pulldown menu selection.
+\par   * {\b Esc} - Jump to the Exit option.
+\par \pard 
+\par \pard The {\b data display window} behind the pulldown menus shows some of the data associated with the current men
+u option.  If you are moving very quickly through the menu options, the data display window may not be refreshed until cursor movement stops.
+\par \pard 
+\par \pard To work with menus using a {\b mouse}
+, drag the menu highlight across the bar menu and up or down through the pulldown menus.  Then click the left button once on a highlighted option to select the option, or double-click the left button on a non-highlighted option.
+\par \pard \ri-2700 
+\par \pard {\b Buttons} are used in ASQ to denote important keystrokes available during a function and to allow mouse u
+sers to execute the keystrokes.  A button is a small shadowed box at the bottom of the screen, data display window, or dialog box.  The key to press to select the button's function is highlighted in the button text, or mouse users can click on the button.
+  Buttons that appear inside a dialog box can also be selected using the Tab and Enter keys (see {\ul Using a Dialog Box}{\v H.U_Dial} for more information).
+\par \pard 
+\par These buttons are available throughout the menu system:
+\par 
+\par \pard   * {\b Esc} - Return to the menu system (from a data display) or jump to
+\par \pard     the Exit option (from a menu).
+\par \pard   * {\b Help F1} - Display topical help information.
+\par \pard   * {\b Print F2} - Display the {\ul Print Dialog Box}{\v H.U_Print}, where available.
+\par   * {\b Tutor F3} - Show the {\ul Tutorial Lesson}{\v H.U_Tutor} associated with the
+\par \pard     highlighted option, where available.
+\par 
+\par \pard \fi-1\li1 Not all function key buttons are available for each menu option.  Buttons that are active have a {\b highlighted} key designation on them; inactive buttons have low intensity text.
+\par \pard 
+\par \pard When {\b Enter} is pressed on a data display 
+menu option, the menu disappears and the display window becomes active.  In some cases the window may be widened to show more data.  If the data is deeper or wider than the display window, scroll bars will be shown at the window border.
+\par \pard 
+\par Use these keys to move in the displayed data:
+\par 
+\par \pard   * {\b Ctrl-End} - Display the last screen of data.
+\par   * {\b Ctrl-Home} - Display the first screen of data.
+\par   * {\b Ctrl-PgDn} - Display the next screen of data to the right (file
+\par \pard     browser only).
+\par \pard   * {\b Ctrl-PgUp} - Display the next screen of data to the left (file
+\par \pard     browser only).
+\par \pard   * {\b Home} - Scroll the data to display the first column.
+\par   * {\b End} - Scroll the data to display the last column.
+\par   * {\b PgUp, PgDn} - Move up and down through the data one screen at a
+\par \pard     time.
+\par \pard   * {\b Up, Down, Right, Left} - Scroll the data by rows and columns
+\par \pard     within the window.
+\par 
+\par \pard Two buttons are also available when data is displayed: {\b Prev F7} and {\b Next F8}.  These buttons provide a shortcut to move in sequence through each of the data display options without returning to the menu system each time.
+\par \pard 
+\par \pard When using a {\b mouse}
+ in the data display windows, clicking inside the scroll bars on one side of the thumbnail marker simulates PgUp, PgDn, Ctrl-PgUp, and Ctrl-PgDn.  Clicking on an arrow simulates Up, Down, Right, and Left.  Single-clicking on a triangle simulates PgUp, PgD
+n, Ctrl-PgUp, and Ctrl-PgDn, and double-clicking on a triangle simulates Ctrl-Home and Ctrl-End.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.U_Help
+\par \pard\plain \f3 @P H.Default H.U_Print
+\par \pard                         {\i Using the Help System
+\par }\pard 
+\par \pard The Help system provides topical information on ASQ menus and features.
+\par \pard 
+\par \pard During an ASQ activity, if the {\b Help button}
+ at the bottom of the screen is active, pressing the help function key or clicking the mouse on the button will display the help associated with the activity.  Help information that is larger than the display window can be scrolled using PgDn, PgUp, Ctrl-
+Home, Ctrl-End, the arrow keys, or the scroll bars in conjunction with the mouse.
+\par \pard 
+\par \pard When the Help system is displayed, these options are available on buttons:
+\par \pard 
+\par \pard   * {\b Topics} - Displays the topics list for the Help system.  Topics
+\par \pard     are listed in the order that they are traversed when browsing
+\par     the Help system with Next button.
+\par \pard   * {\b Index} - Displays the subject index for the Help system.  Topics
+\par \pard     are listed in alphabetical order by their primary subject(s).
+\par \pard   * {\b Next} - Move to the next help topic in the current browse list
+\par \pard     (see below).
+\par \pard   * {\b Back} - Move sequentially backwards through previously viewed
+\par \pard     topics.  Each time Back is chosen, a previously viewed screen is
+\par     shown, until the original topic chosen with the Help button is
+\par     reached or the limit of 20 backtracks is attained.
+\par 
+\par \pard When a help topic is chosen with the Help button and displayed, a {\b browse list}
+ for the topic becomes active.  The browse list links the topic to other related topics.  To walk the browse list and view related topics, select Next.  Once the Help system is activated, the browse list is reset only when Topics or Index are chosen, or w
+hen a new topic is chosen through a context jump (see below).  Browsing to a related topic does not reset the browse list.  The browse list for the Topics list includes every help topic in the system.
+\par \pard 
+\par \pard Help system text displayed in red is a {\b context jump}
+ that allows you to jump directly to a related help topic.  To select a context jump topic, use the Right or Left arrow key to move to (highlight) the topic then press Enter.  With a mouse, click on the topic to highlight it, or double-click on a highligh
+ted or non-highlighted topic to jump.  To reverse a context jump, choose the Back button to return to the topic that you jumped from.
+\par \pard 
+\par \pard Help information can be printed using the {\ul Print System}{\v H.U_Print}.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.U_Gloss
+\par \pard\plain \f3 @P H.Default H.U_Print
+\par \pard                       {\i Using the Glossary System
+\par }\pard 
+\par \pard The Glossary system contains brief {\b definitions} for commonly used memory management terms.  Select a term from the Topics list or browse the topics with Next.
+\par \pard 
+\par \pard Navigating the Glossary system is the same as {\ul Using the Help System}{\v H.U_Help}.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.U_Tutor
+\par \pard\plain \f3 @P H.Default H.U_Print
+\par \pard                       {\i Using the Tutorial System
+\par }\pard 
+\par \pard The Tutorial system provides informational {\b lessons} for ASQ data displays and memory management concepts.
+\par \pard 
+\par \pard During an ASQ activity, if the {\b Tutor button}
+ at the bottom of the screen is active, pressing the named function key or clicking the mouse on the button will display the tutorial lesson(s) associated with the activity.  Tutorial lessons that are larger than the display window can be scrolled using P
+gDn, PgUp, Ctrl-Home, Ctrl-End, the arrow keys, or the scroll bars in conjunction with the mouse.
+\par \pard \fi-1\li1 
+\par \pard When the Tutorial system is displayed, these options are available:
+\par 
+\par \pard   * {\b Topics} - Displays the topics list for the Tutorial system.
+\par \pard     Topics are listed in the order that they are traversed when
+\par     browsing the Tutorial system with the Next button.
+\par \pard   * {\b Index} - Displays the subject index for the Tutorial system.
+\par \pard     Topics are listed in alphabetical order by their primary
+\par     subject(s). 
+\par \pard   * {\b Next} - Move to the next tutorial topic in the current browse
+\par \pard     list (see below).
+\par \pard   * {\b Back} - Move sequentially backwards through previously viewed
+\par \pard     topics.  Each time Back is chosen, a previously viewed screen is
+\par     shown, until the original topic chosen with the Tutor button is
+\par     reached.
+\par 
+\par \pard When a tutorial topic is chosen with the Tutor button and displayed, a {\b browse list} for the topic becomes active.  The browse list links the topic to other related topics.  To walk the browse list and view related topics, select Next
+.  Once the tutorial system is activated, the browse list is reset only when Topics or Index are chosen, or when a new topic is chosen through a context jump (see below).  Browsing to a related topic does not reset the browse list.  The browse list for th
+e Topics list includes every tutorial topic in the system.
+\par \pard 
+\par \pard Tutorial system text displayed in red is a {\b context jump} that allows you to jump directly to a related tutorial topic.  To select a context jump topic, use the Right or Left arrow key to move to (
+highlight) the topic then press Enter.  With a mouse, click on the topic to highlight it, or double-click on a highlighted or non-highlighted topic to jump.  To reverse a context jump, choose the Back button to return to the topic that you jumped from.
+
+\par \pard 
+\par \pard Tutorial information can be printed using the {\ul Print System}{\v H.U_Print}.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.U_Dial
+\par \pard\plain \f3 @P H.Default H.U_Print
+\par \pard                           {\i Using a Dialog Box
+\par }\pard 
+\par \pard Dialog boxes appear on top of the current screen information and contain some or all of the following elements.
+\par \pard 
+\par \pard {\b Message Text
+\par }\pard 
+\par \pard Dialog box messages provide current {\b status} information or {\b prompts} for an action required by the user.
+\par \pard 
+\par \pard {\b Subwindows}
+\par \pard 
+\par \pard If the dialog box contains more than one work area or display area, each area will be in a subwindow with a separate title.  The title is highlighted in bold white if the subwindow is active.  To activate a subwindow:
+\par \pard 
+\par \pard   * Use the {\b Tab} and {\b Shift-Tab} keys to move between subwindows; or
+\par   * Use the {\b Alt} key with the highlighted letter in the subwindow
+\par \pard     title; or
+\par \pard   * {\b Click} anywhere in the subwindow with the mouse.
+\par \pard 
+\par \pard {\b Field Editor}
+\par \pard 
+\par \pard A field editor provides an area for {\b text entry}.  Use the Left and Right arrow keys, Backspace, and alphanumeric keys to complete the required entry.  If text values longer than the field editor are allowed, the text will scroll.
+\par \pard 
+\par \pard {\b Checkboxes}
+\par \pard 
+\par \pard A checkbox is an option that is either {\b on or off} as indicated by a check mark enclosed in brackets [].  Within one subwindow, multiple checkboxes can be selected.  To toggle checkboxes on and off, move to the checkbox and press the {\b Spacebar
+} to toggle, or click in the checkbox with the mouse.
+\par \pard 
+\par \pard To move to a checkbox, tab to the subwindow then use the {\b Up} and {\b Down} arrow keys, or use the {\b Alt} key in conjunction with the highlighted letter in the checkbox description.  Moving to a checkbox with the arrow keys does {\b not}
+ toggle the checkbox; moving with the Alt key or the mouse toggles the checkbox.
+\par \pard \fi-1\li1 
+\par \pard \fi-1\li1 {\b Radio Buttons}
+\par \pard \fi-1\li1 
+\par \pard A radio button, enclosed in parentheses (), is either {\b on or off} as indicated by a dot.  Only one radio button in a subwindow can be selected at one time.  Move to the radio button and press the {\b Spacebar}
+ to toggle, or click in the radio button with the mouse.
+\par \pard 
+\par \pard To move to a radio button, tab to the subwindow, then use the {\b Up} and {\b Down} arrow keys, or use the {\b Alt} key in conjunction with the highlighted letter in the button description.  Moving to a radio button with the arrow keys does {\b not}
+ toggle the option; moving with the Alt key or the mouse toggles the option.
+\par \pard 
+\par \pard {\b Buttons}
+\par \pard 
+\par \pard Action butt
+ons at the bottom of the dialog box display important available keystrokes.  The key to press to select the button's function is highlighted in the button; press the key alone or in conjunction with the Alt key.  Mouse users can click on the button itself
+.
+\par \pard 
+\par \pard Most dialog boxes contain an {\b OK} button which executes the dialog box feature, and a {\b Cancel}
+ button which cancels the dialog box with no action.  To select the OK button, press O, Alt-O, or the Enter key.  To select the Cancel button, press C, Alt-C, or the Esc key.
+\par \pard 
+\par \pard When a dialog box is opened, one button is shown as the {\b default} button by enclosing the button name in brackets; this button is chosen when Enter is pressed.  In addition to moving the subwindow highlight, the {\b Tab} and {\b Shift-Tab}
+ keys also allow you to highlight a button other than the default button and then press Enter to select it.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.U_Print
+\par \pard\plain \f3 @P H.Default H.U_Print
+\par \pard                        {\i Using the Print System
+\par }\pard 
+\par \pard The ASQ Print system allows for printing of data displays, tutorial lessons, glossary definitions, and help text.
+\par \pard 
+\par \pard The first subwindow on the print dialog box describes which {\b options} are currently available for printing.  Each option has a checkbox, so multiple options can be selected for printing.
+\par \pard 
+\par \pard The second subwindow on the print dialog box lists the output {\b destinations}.  Each destination has a radio button, so only one destination can be selected.
+\par \pard 
+\par \pard When printing to a {\b file}, ASQ suggests an output filename or you can enter a valid file specification in the field editor.
+\par \pard 
+\par \pard Use the {\b Tab} key to move between the subwindows and the field editor.  The filename field editor cannot be accessed if the output destination is the printer.
+\par \pard 
+\par \pard When printing {\b All help topics}, the Help Topics list provides the list of topics that will be printed and their print order.
+\par \pard 
+\par \pard Other information relevant to using the print dialog box can be found in {\ul Using a Dialog Box}{\v H.U_Dial}.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Snp_Load
+\par \pard\plain \f3 @P H.Snp_Load H.Snp_Clear
+\par \pard                        {\i Loading a Snapshot File
+\par }\pard 
+\par \pard An ASQ {\b snapshot} file store
+s all information about the current system that is displayable on ASQ data displays in a file that can be loaded and viewed by ASQ at another time or on another system.  Snapshot files are created in a non-editable ASCII format by ASQ and given a default 
+extension of .ASQ.
+\par \pard 
+\par \pard Loading an ASQ snapshot file brings a saved system configuration into ASQ's memory.  All screen displays and printer reports made by ASQ after a snapshot is loaded reflect the status of the system that was snapshot, {\b not} the current sys
+tem running ASQ.  When ASQ is using a loaded snapshot file for its configuration information, the loaded snapshot filename is displayed on each page header of the printouts and on the {\ul Snapshot File Information Display}{\v H.Snp_Info} menu option.
+
+\par \pard 
+\par \pard When loading a snapshot, snapshot files in the current directory are listed on a menu.  To see the comment attached to a listed file, select the {\b Descr}
+ button.  If the number of files in the current directory is greater than can be shown on one menu, or to load a file from another drive or directory, choose {\b Other file...}
+ and enter the file specification in the dialog box.  Information on using the snapshot file specification dialog box is in {\ul Using a Dialog Box}{\v H.U_Dial}.
+\par \pard 
+\par \pard Snapshot files can also be loaded automatically into ASQ when ASQ is started by entering {\b ASQ /L filename}
+ at the DOS prompt.  Instead of scanning the current system, the snapshot file with the chosen filename is loaded into ASQ.  If no filename is used, the file named SNAPSHOT.ASQ is loaded, if available.
+\par \pard 
+\par \pard Snapshot files should {\b not} be modified or viewed by any product other than ASQ.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Snp_Save
+\par \pard\plain \f3 @P H.Snp_Load H.Snp_Clear
+\par \pard                       {\i Saving to a Snapshot File
+\par }\pard 
+\par \pard An ASQ {\b snapshot}
+ file stores all information about the current system that is displayable on ASQ data displays in a file that can be loaded and viewed by ASQ at another time or on another system.  Snapshot files are created in a non-editable ASCII format by ASQ and given
+ a default extension of .ASQ.
+\par \pard 
+\par \pard Saving the system configuration to a snapshot file stores all ASQ information about the current system to a file.  The current operating mode of ASQ is not affected.  When saving to a snapshot file, a {\b comment}
+ can be added to the file for future reference.
+\par \pard 
+\par \pard Assigning relevant names and comments to snapshot files allows you to create a {\b catalog}
+ of system status snapshots before, during and after system equipment or configuration changes, or to catalog information about systems belonging to other users.  Providing your snapshot file to an
+other ASQ user or to Qualitas Technical Support allows someone else to review the characteristics of your system.
+\par \pard 
+\par \pard Snapshotting your system is recommended anytime you are about to {\b install}
+ new software.  Comparing before and after snapshots of the system can help you find changes made during installation or diagnose problems that sometimes result from a new installation.
+\par \pard 
+\par \pard Before creating a snapshot file from ASQ, you should select {\b Clear} from the File menu to remove any loaded snapshot and refresh ASQ's a
+nalysis of the system.  If you save a snapshot with another snapshot loaded, the information in the new snapshot is based on the loaded snapshot, not the current system configuration.  (You can use this feature to change a snapshot file description by loa
+ding the snapshot, then immediately saving a snapshot with the same name and a different comment.)
+\par \pard 
+\par \pard Snapshot files can also be created and saved from DOS without loading ASQ by entering {\b SNAPSHOT [filename] [/D description]} at the DOS prompt.  A snapshot f
+ile with the chosen filename is written to disk.  If no filename is used, a file named SNAPSHOT.ASQ is created.  Use the /D option to add a description (comment) to the snapshot file.
+\par \pard 
+\par \pard Snapshot files should {\b not} be modified or viewed by any product other than ASQ.
+\par \pard 
+\par \pard Information on using the snapshot file specification dialog box can be found in {\ul Using a Dialog Box}{\v H.U_Dial}.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Snp_Info
+\par \pard\plain \f3 @P H.Snp_Load H.Snp_Clear
+\par \pard                   {\i Snapshot File Information Display
+\par }\pard 
+\par \pard The Snapshot Info menu option displays information about the currently {\b loaded} snapshot file, if any, including date and time of creation and the snapshot comment.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Snp_Clear
+\par \pard\plain \f3 @P H.Snp_Load H.Snp_Clear
+\par \pard                      {\i Clearing a Loaded Snapshot
+\par }\pard 
+\par \pard Clearing a loaded snapshot file removes the loaded data from ASQ's memory and scans into ASQ the {\b current} configuration of this system.
+\par \pard 
+\par \pard This option does {\b not} delete the snapshot file from the disk it is stored on.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Mem_Sum
+\par \pard\plain \f3 @P H.Mem_Sum H.Mem_Tim
+\par \pard                        {\i Memory Summary Display
+\par }\pard 
+\par \pard A {\b memory usage} summary is shown, organized sequentially by loaded order.
+\par \pard 
+\par \pard The name of the memory {\b user} is shown at the left, then the size used in kilobytes.  Some users may be individual programs, while other users may be system overhead such as drivers, video memory, and EMS page frame.
+\par \pard 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Mem_Low
+\par \pard\plain \f3 @P H.Mem_Sum H.Mem_Tim
+\par \pard                  {\i Low DOS Memory Information Display
+\par }\pard 
+\par \pard Usage of {\b low DOS} memory is shown, organized by starting address.
+\par \pard 
+\par The name of the memory user is shown at the left, followed by:
+\par 
+\par \pard   * The {\b starting address} location.
+\par   * The {\b length} in bytes.
+\par \pard   * The program environment or other string (if any) that denotes
+\par \pard     the {\b user} of the memory.  If the user is a device driver, the
+\par \pard     attribute bits of the driver are shown instead.  All active bit 
+\par     numbers are shown.
+\par 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Mem_Hi
+\par \pard\plain \f3 @P H.Mem_Sum H.Mem_Tim
+\par \pard                  {\i High DOS Memory Information Display
+\par }\pard 
+\par \pard Usage of {\b high DOS} memory is shown, organized by starting address.
+\par \pard 
+\par The name of the memory user is shown at the left, followed by:
+\par 
+\par \pard   * The {\b starting address} location.
+\par   * The {\b length} in bytes.
+\par \pard   * The program environment or other string (if any) that denotes
+\par \pard     the {\b user} of the memory.
+\par \pard 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Mem_ROM
+\par \pard\plain \f3 @P H.Mem_Sum H.Mem_Tim
+\par \pard                     {\i ROM Scan Information Display
+\par }\pard 
+\par \pard ROM memory is shown in relation to the location of other types of high DOS memory:
+\par \pard 
+\par \pard   * {\b RAM} memory (physical RAM on an adapter board)
+\par   * {\b high DOS} memory in use
+\par   * {\b EMS} (expanded memory)
+\par   * {\b unused} (unallocated) memory
+\par \pard 
+\par \pard The address location and size in kilobytes for each memory type is shown.  Sizes in {\b []} brackets denote overlapping memory.
+\par \pard 
+\par \pard {\b NOTE:} ROM and RAM on certain adapter cards (especially local area network cards) cannot be detected if the card is inactive.  ROM and/or RAM for such adapters may not be correctly located on the diagram.
+\par \pard 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Mem_Int
+\par \pard\plain \f3 @P H.Mem_Sum H.Mem_Tim
+\par \pard                     {\i Interrupt Information Display
+\par }\pard 
+\par \pard {\b Interrupt information} is displayed in two formats.
+\par \pard 
+\par \pard The first display shows the {\b user} of the interrupt at the left margin, ordered by address, followed by the starting address of the user and all interrupt numbers used by the module.
+\par \pard 
+\par \pard The second display conveys the same information tabulated {\b sequentially}, ordered by interrupt number, including:
+\par \pard 
+\par \pard   * The {\b description} of the interrupt.
+\par   * The {\b interrupt number}.
+\par   * The name of the {\b user} of the interrupt.
+\par   * The {\b address} of the user of the interrupt.
+\par \pard 
+\par \pard Interrupts that are referred to as {\b Reserved} are unused and provide additional capacity for use by future hardware and operating system enhancements.
+\par \pard 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Mem_Ext
+\par \pard\plain \f3 @P H.Mem_Sum H.Mem_Tim
+\par \pard                  {\i Extended Memory Information Display
+\par }\pard 
+\par \pard The total amount of extended memory is shown, including the amount of extended memory used and available by:
+\par \pard 
+\par \pard   * The {\b starting address} location.
+\par   * The {\b total size} in kilobytes.
+\par \pard 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Mem_Exp
+\par \pard\plain \f3 @P H.Mem_Sum H.Mem_Tim
+\par \pard               {\i Expanded (EMS) Memory Information Display
+\par }\pard 
+\par Expanded memory information is shown:
+\par 
+\par \pard   {\b Prompt-----------------  What is Displayed------------------------}
+\par \pard   EMS Version              The LIM version of the EMS driver, if
+\par                            installed.
+\par   Windows Version          The version of Windows running, if called
+\par                            from Windows.
+\par   VCPI Version             The VCPI specification version number.
+\par   Frame                    The address location of the EMS page
+\par                            frame.
+\par   Mappable Physical Pages  The total number of EMS pages defined.
+\par   EMS Handles              The total number of handles defined.
+\par   AMRS                     The total number of Alternate Map
+\par                            Register Sets.
+\par 
+\par \pard Next, each {\b EMS handle} is shown with its corresponding installed size and description.
+\par \pard 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Mem_EMS
+\par \pard\plain \f3 @P H.Mem_Sum H.Mem_Tim
+\par \pard                     {\i EMS Usage Information Display
+\par }\pard 
+\par \pard A graphic display shows {\b EMS usage} by showing the first megabyte of memory with the memory page numbers listed across the top.
+\par \pard 
+\par The various symbols on the graphic bar locate:
+\par 
+\par \pard   * Memory areas that are {\b unused} for EMS mapping.
+\par   * Memory that is used by {\b DOS}.
+\par   * The EMS {\b page frame} location.
+\par   * Memory that is used by {\b video} adapters.
+\par   * Memory that is used by the {\b system ROM}.
+\par   * Reserved areas of {\b RAM} memory.
+\par \pard 
+\par \pard Below the graphic bar, EMS {\b page numbers} are shown at their mapped locations.
+\par \pard 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Mem_XMS
+\par \pard\plain \f3 @P H.Mem_Sum H.Mem_Tim
+\par \pard                    {\i XMS Memory Information Display
+\par }\pard 
+\par XMS memory information is shown:
+\par 
+\par \pard   {\b Prompt---------------------  What is Displayed--------------------}
+\par \pard   Version                      The version of XMS installed.
+\par   Driver                       The XMS driver version number.
+\par   Total Upper Memory (UMB)     The total Upper Memory Block memory
+\par                                assigned by XMS.
+\par   Largest Available UMB Area   The largest contiguous UMB block area
+\par                                assigned.
+\par   Total Extended Memory (EMB)  The total Extended Memory Block
+\par                                memory assigned by XMS.
+\par   Largest Available EMB Area   The largest contiguous EMB block area
+\par                                assigned.
+\par   High Memory Area (HMA)       Whether the High Memory Area exists 
+\par                                or is not available to XMS.
+\par   EMB Handles Available        The number of EMB handles available.
+\par   A20 Address Line             Whether the A20 address line is
+\par                                enabled or disabled.  Enabling the 
+\par                                A20 line allows XMS access to the  
+\par                                High Memory Area (HMA).
+\par   DPMI Version                 The version of the current DOS
+\par                                Protected Mode Interface.
+\par   32-bit Programs Supported    Whether or not 32-bit programs are
+\par                                currently supported.
+\par 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Mem_Tim
+\par \pard\plain \f3 @P H.Mem_Sum H.Mem_Tim
+\par \pard                     {\i Memory Access Timing Display
+\par }\pard 
+\par \pard Access {\b timing test results} are shown for all memory, organized by memory speed and/or these functional blocks:
+\par \pard 
+\par \pard   * The {\b low DOS} area below 640 KB.
+\par   * The three reserved {\b video memory} areas starting at A000, B000,
+\par \pard     and B800.
+\par \pard   * The {\b video ROM} area, if available.
+\par   * The EMS {\b page frame}, if available.
+\par   * The {\b system ROM} area.
+\par \pard 
+\par The display shows:
+\par 
+\par \pard   * The starting address location of the memory block in {\b hex.}
+\par   * The starting address location of the memory block in {\b kilobytes}.
+\par   * The {\b size} of the memory block in kilobytes.
+\par   * The average {\b access time} for the block in microseconds.
+\par   * The {\b speed ratio} is a relative measurement.  Access speed of each
+\par \pard     memory block is shown as a percentage of the speed of the 
+\par     fastest memory in the system (shown as 100%).
+\par 
+\par Extended memory is not timed.
+\par 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Cfg_Sum
+\par \pard\plain \f3 @P H.Cfg_Sum H.Cfg_CMO
+\par \pard                     {\i Configuration Summary Display
+\par }\pard 
+\par \pard The configuration summary shows DOS {\b environment settings} that have been set by CONFIG.SYS or are using the DOS default:
+\par \pard 
+\par \pard   {\b Prompt-----  What is Displayed------------------------------------}
+\par \pard   DOS Version  Version of DOS loaded
+\par   Files        Setting of FILES command from DOS
+\par   Buffers      Setting of BUFFERS command from DOS
+\par   FCBs         Setting of FCBS command from DOS
+\par   Stacks       Setting of STACKS command from DOS
+\par   Lastdrive    Setting of LASTDRIVE command from DOS
+\par   Break        Setting of BREAK command from DOS
+\par   COUNTRY=     Setting of COUNTRY if in CONFIG.SYS
+\par   DRIVPARM=    Setting of DRIVPARM if in CONFIG.SYS
+\par   SHELL=       Setting of SHELL if in CONFIG.SYS
+\par 
+\par   Environment:
+\par 
+\par   Size         Space allocated for the DOS environment
+\par   Used         Space actually used by DOS environment
+\par 
+\par \pard DOS {\b environment settings} set with AUTOEXEC.BAT or from the DOS prompt are shown next.  These are the same commands that would be displayed with the DOS SET command.
+\par \pard 
+\par \pard The configuration presentation is completed with the display of the number of open File Control Blocks, and a list of the currently open files managed by DOS.
+\par \pard 
+\par \pard For more information on the items in this display, see the computer's DOS operating system manual.
+\par \pard 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Cfg_CFG
+\par \pard\plain \f3 @P H.Cfg_Sum H.Cfg_CMO
+\par \pard                        {\i CONFIG.SYS File Display
+\par }\pard 
+\par \pard The {\b CONFIG.SYS} file found in path C:\\ is displayed in the file browser.  If the system has a drive C: but boots from a floppy drive, you can tell ASQ to read CONFIG.SYS from the floppy by loading ASQ using {\b ASQ /F A:}
+ from DOS.  If the file resides on a different drive or path, it will not be shown.  
+\par \pard 
+\par \pard The CONFIG.SYS file can be modified using the {\b MAX Editor} or any standard text editor, but not by the file browser.
+\par \pard 
+\par \pard \fi-2\li2 See {\ul Using the File Browser}{\v H.U_Browse} for information on viewing this file.
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Cfg_AUT
+\par \pard\plain \f3 @P H.Cfg_Sum H.Cfg_CMO
+\par \pard                       {\i AUTOEXEC.BAT File Display
+\par }\pard 
+\par \pard The {\b AUTOEXEC.BAT} file found in path C:\\ is displayed in the file browser.  If the system has a drive C: but boots from a floppy drive, you can tell ASQ to read AUTOEXEC.BAT from the floppy by loading ASQ using {\b ASQ /F A:}
+ from DOS.  If the file resides on a different drive or path, it will not be shown.  
+\par \pard 
+\par \pard The AUTOEXEC.BAT file can be modified using the {\b MAX Editor} or any standard text editor, but not by the file browser.
+\par \pard 
+\par \pard \fi-2\li2 See {\ul Using the File Browser}{\v H.U_Browse} for information on viewing this file.
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Cfg_PRO
+\par \pard\plain \f3 @P H.Cfg_Sum H.Cfg_CMO
+\par \pard                           {\i .PRO File Display
+\par }\pard 
+\par \pard The {\b 386MAX.PRO, BLUEMAX.PRO, or MOVE'EM.PRO} file is displayed, if one is referenced in CONFIG.SYS.  During the i
+nstallation of a Qualitas memory management product, one of these files is created on the system and its location is installed automatically in CONFIG.SYS using DEVICE= and PRO= commands.  If a PROfile resides on the system but is not specified in CONFIG.
+SYS it will not be shown.
+\par \pard 
+\par \pard The PROfile can be modified using the {\b MAX Editor} or any standard text editor, but not by the file browser.
+\par \pard \fi-2\li2 
+\par \pard \fi-2\li2 See {\ul Using the File Browser}{\v H.U_Browse} for information on viewing this file.
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Cfg_EPro
+\par \pard\plain \f3 @P H.Cfg_Sum H.Cfg_CMO
+\par \pard                        {\i EXTRADOS.PRO File Display
+\par }\pard 
+\par \pard 
+The ExtraDOS.PRO file is displayed, if one is referenced in CONFIG.SYS.  During the installation of a Qualitas memory management product, this file is created on the system and its location is installed automatically in CONFIG.SYS using DEVICE= and PRO= c
+ommands.  If a profile resides on the system but is not specified in CONFIG.SYS, it will not be shown.
+\par \pard 
+\par \pard The profile can be modified using the {\b MAX Editor} or any standard text editor, but not by the file browser.
+\par \pard \fi-2\li2 
+\par \pard \fi-2\li2 See {\ul Using the File Browser}{\v H.U_Browse} for information on viewing this file.
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Cfg_SYSINI
+\par \pard\plain \f3 @P H.Cfg_Sum H.Cfg_CMO
+\par \pard                        {\i SYSTEM.INI File Display
+\par }\pard 
+\par \pard The SYSTEM.INI file found in the Windows directory by searching the path, or specified during Install is displayed in the file browser.  If the file resides on a different drive or path, or was not specified during Install, it will not be displayed.
+
+\par \pard 
+\par \pard The SYSTEM.INI file can be modified using the {\b MAX Editor} or any standard text editor, but not by the file browser.
+\par \pard \fi-2\li2 
+\par \pard \fi-2\li2 See {\ul Using the File Browser}{\v H.U_Browse} for information on viewing this file.
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.U_Browse
+\par \pard\plain \f3 @P H.Cfg_Cfg H.U_Browse
+\par \pard                        {\i Using the File Browser}
+\par \pard 
+\par \pard {\b Browser Screen}
+\par \pard 
+\par \pard The browser displays the current {\b filename} in the center of the browse window.  At the upper right of the browse window, a row/colu
+mn counter is displayed.  The first number is the current line position of the cursor, the second number is the total number of lines in the file, and the third number is the current column position.
+\par \pard 
+\par \pard The browser is {\b 256}
+ characters wide (loading files with lines wider than 256 characters may result in some data loss).  The maximum number of lines in a file is limited by memory and varies by system.  On most systems, the limit is at least several thousand lines.
+\par \pard 
+\par \pard {\b Using the Keyboard}
+\par \pard 
+\par \pard The cursor (not visible) sticks to the first line in the display window, even when the text is scrolled down or up.
+\par \pard 
+\par Use the following keys to move within the text:
+\par 
+\par \pard   * {\b Ctrl-End} - Jump to the bottom of the file.
+\par   * {\b Ctrl-Home} - Jump to the top of the file.
+\par   * {\b Ctrl-PgDn} - Jump right one screen (74 columns).
+\par   * {\b Ctrl-PgUp} - Jump left one screen (74 columns).
+\par   * {\b Down }- Scroll the text up one line within the display window.
+\par   * {\b End} - Jump to the end of the first line in the display window.
+\par \pard \fi-1\li1   * {\b Esc} - Exit the browser.
+\par \pard   * {\b Home} - Jump to the beginning of the first line in the display
+\par \pard     window.
+\par \pard   * {\b Left }- Scroll the text one character left.
+\par   * {\b PgDn} - Jump down one screen.
+\par   * {\b PgUp} - Jump up one screen.
+\par   * {\b Right }- Scroll the text one character right.
+\par   * {\b Up }- Scroll the text down one line within the display window.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Cfg_Qualitas
+\par \pard\plain \f3 @P H.Cfg_Sum H.Cfg_CMO
+\par \pard                  {\i Qualitas Product Information Display
+\par }\pard 
+\par \pard \fi-2\li2 The Qualitas Product Information displays information about necessary Qualitas program files, their sizes and file dates.  Information regarding resident programs is also listed for troubleshooting purposes.  
+\par \pard \fi-2\li2 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Cfg_Windows
+\par \pard\plain \f3 @P H.Cfg_Sum H.Cfg_CMO
+\par \pard                     {\i Windows Information Display
+\par }\pard 
+\par \pard This Windows information is displayed if Windows is specified in the path.  This information includes Windows drivers that are currently loaded via the SYSTEM.INI and is used for troubleshooting purposes.
+\par \pard \fi-2\li2 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Cfg_CMO
+\par \pard\plain \f3 @P H.Cfg_Sum H.Cfg_CMO
+\par \pard                    {\i CMOS Detail Information Display
+\par }\pard 
+\par System CMOS data is shown:
+\par 
+\par \pard   {\b Prompt---  What is Displayed--------------------------------------}
+\par \pard   CMOS Item  A description of what is stored at the specific CMOS 
+\par              address.
+\par   Byte       The offset address into the CMOS area from the CMOS
+\par              start location.
+\par   Value      The actual numeric values stored in the CMOS item.
+\par 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Hdw_Sum
+\par \pard\plain \f3 @P H.Hdw_Sum H.Hdw_BIOS
+\par \pard                       {\i Equipment Summary Display
+\par }\pard 
+\par Hardware device summary information is shown:
+\par 
+\par \pard   {\b Prompt------------------  What is Displayed-----------------------}
+\par \pard   Computer Type             The general computer model (e.g. AT, 
+\par                             PS/2, 386, etc.) or specific model, if
+\par                             known.
+\par   DOS Operating System      The current version of DOS loaded.
+\par   Main Processor (CPU)      The CPU type and speed.
+\par   Co-Processor              The math co-processor type, if 
+\par                             installed.
+\par   CPU Speed (megahertz)     The approximate speed of the main
+\par                             processor.
+\par   Bus Type                  ISA (Industry Standard Architecture),
+\par                             EISA (Extended ISA) or MC (Micro 
+\par                             Channel).
+\par   BIOS Manufacturer         The company name stamp in the BIOS chip.
+\par   BIOS Date Stamp           The manufacturing date stamp in the BIOS
+\par                             chip.
+\par   BIOS Model                The BIOS's identifier for computer type
+\par                             (usually found through interrupt 15).
+\par   BIOS Submodel             Further clarification of the BIOS model
+\par                             code.
+\par   BIOS Revision             Revision level of the BIOS software.
+\par   BIOS CRC                  The value of the BIOS CRC, followed by 
+\par                             the size of the BIOS in KB (usually 64 
+\par                             or 128).The BIOS CRC may not be useful 
+\par                             if ROM locations have been captured by 
+\par                             memory management software.
+\par   Chipset                   The Chips & Technologies chipset in use 
+\par                             (e.g. AT/386, NEAT, NEAT w/ < 1 MB), if 
+\par                             any.
+\par   Diskettes Seen by BIOS    The number of diskette drives recognized
+\par                             by the BIOS.
+\par   Fixed Disks Seen by BIOS  The number of fixed disks recognized by
+\par                             the BIOS.
+\par   Logical Disk Drives       The number and letters of all drives
+\par                             installed.
+\par   Video Adapter             The type of video adapter and its
+\par                             reported memory size.
+\par   Video Mode                The current video display mode.
+\par   Serial Ports              The quantity and designations of all
+\par                             serial ports installed.
+\par   Parallel Ports            The quantity and designations of all
+\par                             parallel ports installed.
+\par   Keyboard                  The keyboard model, standard or
+\par                             enhanced.
+\par   Mouse                     Mouse connection information, the driver
+\par                             version, and the interrupt used
+\par   Game Adapter              Whether or not a game adapter is found.
+\par   LIM Standard              The EMS LIM version, if installed.
+\par   System Time               The current system time.
+\par   System Date               The current system date.
+\par   System Base Memory        The total amount of base memory as
+\par                             configured in CMOS.
+\par   Extended Memory           The total amount of extended memory as
+\par                             configured in CMOS.
+\par   Diskette Drives           The storage capacity of each disk drive
+\par                             installed.
+\par   Fixed Disk                The storage capacity of each fixed disk
+\par                             installed.
+\par 
+\par For Micro Channel machines only, adapter data is shown:
+\par 
+\par \pard   {\b Prompt------  What is Displayed-----------------------------------}
+\par \pard   Slot          The system board slot where the device is located.
+\par   ID            The Micro Channel device identifier.
+\par   Adapter Name  A description of the adapter from the ADF file, or
+\par                 Unknown if the file was not provided at startup.
+\par 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Hdw_Vid
+\par \pard\plain \f3 @P H.Hdw_Sum H.Hdw_BIOS
+\par \pard                       {\i Video Information Display
+\par }\pard 
+\par Video output device information is shown:
+\par 
+\par \pard   {\b Prompt---------  What is Displayed--------------------------------}
+\par \pard   Adapter Type     The video adapter display standard, e.g. MDA, 
+\par                    CGA, EGA, VGA.
+\par   Adapter Vendor   The video adapter manufacturer.
+\par   Adapter Model    The adapter manufacturer's model identification.
+\par   Adapter Memory   The amount of memory reported by the video
+\par                    adapter.
+\par   Display Mode     The current display color mode: Color or
+\par                    Monochrome.
+\par   Display Size     The current display size, in columns and rows.
+\par   Graphics Memory  The address locations of the graphics memory in 
+\par                    high DOS address space.
+\par   Text Memory      The address locations of the text memory in high
+\par                    DOS address space.
+\par   ROM Region       The address locations of the video ROM in high
+\par                    DOS address space.
+\par 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Hdw_Drv
+\par \pard\plain \f3 @P H.Hdw_Sum H.Hdw_BIOS
+\par \pard                       {\i Drive Information Display
+\par }\pard 
+\par \pard Drive information is shown for removable drives, fixed drives, and RAM drives:
+\par \pard 
+\par \pard   {\b Prompt-  What is Displayed----------------------------------------}
+\par \pard   Drive    The type of drive.
+\par   Size     The storage capacity in kilobytes or megabytes.
+\par   Heads    The number of read/write heads on the drive.
+\par   Cyls     The number of logical cylinders the drive is formatted or
+\par            designed for.
+\par   Sectors  The number of sectors the drive is formatted or designed
+\par            for.
+\par   Type     The drive type ID as stored in the CMOS.  For more 
+\par            information on drive IDs, see the computer's operating
+\par            manual.
+\par 
+\par  Next, partition table information is shown for fixed disk drives:
+\par 
+\par \pard   {\b Prompt---  What is Displayed--------------------------------------}
+\par \pard   Partition  The partition number.
+\par   Type       The partition type identifier code.  Values are: 00=no 
+\par              partition defined; 01=12-bit FAT entries (DOS 2.x 
+\par              compatible); 04=16-bit FAT entries (DOS 3.x 
+\par              compatible); 05=extended partition (DOS 3.3 or higher); 
+\par              and 06=huge partition (DOS 4.0 and higher).
+\par   Begin      The beginning cylinder of the partition.
+\par   End        The ending cylinder of the partition.
+\par   Active     Shows which partition is currently active.
+\par 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Hdw_Por
+\par \pard\plain \f3 @P H.Hdw_Sum H.Hdw_BIOS
+\par \pard                {\i Communication Port Information Display
+\par }\pard 
+\par \pard A listing of available {\b input/output ports} (serial and parallel) is shown, along with the device address for each port.
+\par \pard 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Hdw_BIOS
+\par \pard\plain \f3 @P H.Hdw_Sum H.Hdw_BIOS
+\par \pard                    {\i BIOS Detail Information Display
+\par }\pard 
+\par ROM BIOS data is shown:
+\par 
+\par \pard   {\b Prompt---  What is Displayed--------------------------------------}
+\par \pard   BIOS Item  A description of what is stored at the specific BIOS 
+\par              data area address.
+\par   Hex Start  The offset into the BIOS data area.
+\par   Contents   The actual values stored at the specified address.
+\par 
+\par \pard See the {\b Tutorial} for more information on this topic.
+\par \pard 
+\par \pard\plain \s3 \f3\fs28\cf6 >>H.Index
+\par \pard\plain \f3 @P H.Index H.Index
+\par \pard                            {\i ASQ Help Index
+\par }\pard 
+\par \pard Use the {\b Right/Left} arrow keys to select a subject, then press Enter.
+\par \pard 
+\par \pard {\b Subject--------------------  Help Topic----------------------------}
+\par {\ul 386MAX.PRO file}{\v H.Cfg_PRO}              .PRO File Display
+\par {\ul AUTOEXEC.BAT file}{\v H.Cfg_AUT}            AUTOEXEC.BAT File Display
+\par {\ul BIOS}{\v H.Hdw_BIOS}                         BIOS Detail Information Display
+\par {\ul BLUEMAX.PRO file}{\v H.Cfg_PRO}             .PRO File Display
+\par {\ul Browser keys}{\v H.U_Browse}                 Using the File Browser
+\par {\ul Browser screen}{\v H.U_Browse}               Using the File Browser
+\par {\ul Browsing help}{\v H.U_Help}                Using the Help System
+\par {\ul Browsing tutorial lessons}{\v H.U_Tutor}    Using the Tutorial System
+\par {\ul Checkboxes}{\v H.U_Dial}                   Using a Dialog Box
+\par {\ul Clearing a snapshot}{\v H.Snp_Clear}          Clearing a Loaded Snapshot
+\par {\ul CMOS}{\v H.Cfg_CMO}                         CMOS Detail Information Display
+\par {\ul Communication ports}{\v H.Hdw_Por}          Communication Port Information
+\par {\ul CONFIG.SYS file}{\v H.Cfg_CFG}              CONFIG.SYS File Display
+\par {\ul Configuration analysis}{\v H.Cfg_Sum}       Configuration Summary Display
+\par {\ul Data display keys}{\v H.Default}            Using the Menu System
+\par {\ul Dialog box buttons}{\v H.U_Dial}           Using a Dialog Box
+\par {\ul Disk drives}{\v H.Hdw_Drv}                  Drive Information Display
+\par {\ul EMS memory usage}{\v H.Mem_EMS}             EMS Usage Information Display
+\par {\ul EMS memory}{\v H.Mem_Exp}                   Expanded (EMS) Memory Information
+\par {\ul Equipment analysis}{\v H.Hdw_Sum}           Equipment Summary Display
+\par {\ul Expanded memory usage}{\v H.Mem_EMS}        EMS Usage Information Display
+\par {\ul Expanded memory}{\v H.Mem_Exp}              Expanded (EMS) Memory Information
+\par {\ul Extended memory}{\v H.Mem_Ext}              Extended Memory Information Display
+\par {\ul ExtraDOS.PRO file}{\v\ul H.Cfg_Pro}            ExtraDOS.PRO file display{\ul 
+\par Field editor}{\v H.U_Dial}                 Using a Dialog Box
+\par {\ul Glossary system}{\v H.U_Gloss}              Using the Glossary System
+\par {\ul Help context jumps}{\v H.U_Help}           Using the Help System
+\par {\ul Help system buttons}{\v H.U_Help}          Using the Help System
+\par {\ul High DOS memory}{\v H.Mem_Hi}              High DOS Memory Information Display
+\par {\ul Interrupts}{\v H.Mem_Int}                   Interrupt Information Display
+\par {\ul Loading a snapshot}{\v H.Snp_Load}           Loading a Snapshot File
+\par {\ul Low DOS memory}{\v H.Mem_Low}               Low DOS Memory Information Display
+\par {\ul Memory analysis}{\v H.Mem_Sum}              Memory Summary Display
+\par {\ul Memory timing}{\v H.Mem_Tim}                Memory Access Timing Display
+\par {\ul Menu keys}{\v H.Default}                    Using the Menu System
+\par {\ul Menu system buttons}{\v H.Default}          Using the Menu System
+\par {\ul Message text}{\v H.U_Dial}                 Using a Dialog Box
+\par {\ul MOVE'EM.PRO file}{\v H.Cfg_PRO}             .PRO File Display
+\par {\ul Print dialog box}{\v H.U_Print}             Using the Print System
+\par {\ul Qualitas Product information}{\v\ul H.Cfg_Qualitas} Qualitas Product Information Display{\ul 
+\par Radio buttons}{\v H.U_Dial}                Using a Dialog Box
+\par {\ul ROM information}{\v H.Mem_ROM}              ROM Scan Information Display
+\par {\ul Saving a snapshot}{\v H.Snp_Save}            Loading a Snapshot File
+\par {\ul Snapshot description}{\v H.Snp_Save}         Loading a Snapshot File
+\par {\ul Snapshot information}{\v H.Snp_Info}         Snapshot File Information Display
+\par {\ul Subwindows}{\v H.U_Dial}                   Using a Dialog Box
+\par {\ul SYSTEM.INI file}{\v\ul H.Cfg_SYSINI}              SYSTEM.INI File Display{\ul 
+\par Topics}{\v H.Contents}                       ASQ Help Topics
+\par {\ul Tutorial context jumps}{\v H.U_Tutor}       Using the Tutorial System
+\par {\ul Tutorial system buttons}{\v H.U_Tutor}      Using the Tutorial System
+\par {\ul Video}{\v H.Hdw_Vid}                        Video Information Display
+\par {\ul Windows information}{\v\ul H.Cfg_Windows}          Windows Information Display{\ul 
+\par XMS memory}{\v H.Mem_XMS}                   XMS Memory Information Display
+\par \pard 
+\par }

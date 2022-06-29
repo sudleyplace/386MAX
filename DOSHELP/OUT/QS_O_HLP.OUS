@@ -1,0 +1,1177 @@
+{\rtf1\ansi \deff11{\fonttbl{\f0\froman\fcharset0\fprq2 Tms Rmn;}{\f1\froman\fcharset2\fprq2 Symbol;}{\f2\fswiss\fcharset0\fprq2 Helv;}{\f3\fmodern\fcharset0\fprq1 Courier;}
+{\f4\froman\fcharset0\fprq2 Times New Roman;}{\f5\fswiss\fcharset0\fprq2 Arial;}{\f6\froman\fcharset0\fprq2 MS Serif;}{\f7\fswiss\fcharset0\fprq2 MS Sans Serif;}{\f8\froman\fcharset0\fprq2 Times;}{\f9\fswiss\fcharset0\fprq2 Helvetica;}
+{\f10\fswiss\fcharset0\fprq2 System;}{\f11\fmodern\fcharset0\fprq1 Courier New;}{\f12\fmodern\fcharset0\fprq1 LinePrinter;}{\f13\froman\fcharset0\fprq2 CG Times;}{\f14\fswiss\fcharset0\fprq2 Univers;}{\f15\fswiss\fcharset0\fprq2 Univers Condensed;}
+{\f16\fswiss\fcharset0\fprq2 Antique Olive;}{\f17\froman\fcharset0\fprq2 Garamond;}{\f18\fswiss\fcharset0\fprq2 CG Omega;}{\f19\fswiss\fcharset0\fprq2 Albertus Medium;}{\f20\fswiss\fcharset0\fprq2 Albertus Extra Bold;}
+{\f21\froman\fcharset0\fprq2 Clarendon Condensed;}{\f22\fscript\fcharset0\fprq2 Coronet;}{\f23\fmodern\fcharset0\fprq1 Letter Gothic;}{\f24\fscript\fcharset0\fprq2 Marigold;}{\f25\fnil\fcharset2\fprq2 Wingdings;}{\f26\fnil\fcharset2\fprq2 Marlett;}
+{\f27\froman\fcharset0\fprq2 Book Antiqua;}{\f28\fnil\fcharset2\fprq2 Monotype Sorts;}{\f29\fswiss\fcharset0\fprq2 Arial Narrow;}{\f30\froman\fcharset0\fprq2 Bookman Old Style;}{\f31\fswiss\fcharset0\fprq2 Century Gothic;}
+{\f32\fscript\fcharset0\fprq2 Monotype Corsiva;}{\f33\froman\fcharset0\fprq2 Century Schoolbook;}{\f34\froman\fcharset2\fprq2 MT Extra;}{\f35\fmodern\fcharset2\fprq1 MS LineDraw;}{\f36\fdecor\fcharset0\fprq2 Algerian;}
+{\f37\fswiss\fcharset0\fprq2 Arial Rounded MT Bold;}{\f38\fdecor\fcharset0\fprq2 Braggadocio;}{\f39\fswiss\fcharset0\fprq2 Britannic Bold;}{\f40\fscript\fcharset0\fprq2 Brush Script MT;}{\f41\fdecor\fcharset0\fprq2 Colonna MT;}
+{\f42\fdecor\fcharset0\fprq2 Desdemona;}{\f43\froman\fcharset0\fprq2 Footlight MT Light;}{\f44\fswiss\fcharset0\fprq2 Impact;}{\f45\fdecor\fcharset0\fprq2 Kino MT;}{\f46\froman\fcharset0\fprq2 Wide Latin;}
+{\f47\fscript\fcharset0\fprq2 Matura MT Script Capitals;}{\f48\fdecor\fcharset0\fprq2 Playbill;}{\f49\fscript\fcharset0\fprq2 Comic Sans MS;}{\f50\fswiss\fcharset0\fprq2 Arial Black;}{\f51\fswiss\fcharset0\fprq2 Verdana;}
+{\f52\fnil\fcharset0\fprq2 MICRSSK;}{\f53\fswiss\fcharset0\fprq2 Monstroula;}{\f54\fswiss\fcharset0\fprq2 Tahoma;}{\f55\fmodern\fcharset255\fprq2 Modern;}{\f56\fswiss\fcharset0\fprq1 MS Dialog;}{\f57\froman\fcharset0\fprq0 CG Times (W1);}
+{\f58\fswiss\fcharset0\fprq0 Univers (W1);}{\f59\fswiss\fcharset0\fprq0 Aardvark;}{\f60\fswiss\fcharset0\fprq0 ProseAntique;}{\f61\fswiss\fcharset0\fprq0 Arabia;}{\f62\fswiss\fcharset0\fprq0 Avalon;}{\f63\fswiss\fcharset0\fprq0 Bahamas;}
+{\f64\fswiss\fcharset0\fprq0 Banff;}{\f65\fswiss\fcharset0\fprq0 Bangkok;}{\f66\fswiss\fcharset0\fprq0 Bodnoff;}{\f67\fswiss\fcharset0\fprq0 Brooklyn;}{\f68\fswiss\fcharset0\fprq0 NewBrunswick;}{\f69\fswiss\fcharset0\fprq0 Casablanca;}
+{\f70\fswiss\fcharset0\fprq0 DawnCastle;}{\f71\fswiss\fcharset0\fprq0 CommonBullets;}{\f72\fswiss\fcharset0\fprq0 Cottage;}{\f73\fswiss\fcharset0\fprq0 Cupertino;}{\f74\fswiss\fcharset0\fprq0 Dixieland;}{\f75\fswiss\fcharset0\fprq0 ErieLight;}
+{\f76\fswiss\fcharset0\fprq0 Erie;}{\f77\fswiss\fcharset0\fprq0 France;}{\f78\fswiss\fcharset0\fprq0 FrankfurtGothicHeavy;}{\f79\fswiss\fcharset0\fprq0 FrankfurtGothic;}{\f80\fswiss\fcharset0\fprq0 Freeport;}{\f81\fswiss\fcharset0\fprq0 Frankenstein;}
+{\f82\fswiss\fcharset0\fprq0 Fujiyama2;}{\f83\fswiss\fcharset0\fprq0 FujiyamaLight;}{\f84\fswiss\fcharset0\fprq0 Fujiyama;}{\f85\fswiss\fcharset0\fprq0 Gatineau;}{\f86\fswiss\fcharset0\fprq0 HomewardBound;}{\f87\fswiss\fcharset0\fprq0 Ireland;}
+{\f88\fswiss\fcharset0\fprq0 Jupiter;}{\f89\fswiss\fcharset0\fprq0 Koala;}{\f90\fswiss\fcharset0\fprq0 Lincoln;}{\f91\fswiss\fcharset0\fprq0 Linus;}{\f92\fswiss\fcharset0\fprq0 Memorandum;}{\f93\fswiss\fcharset0\fprq0 Monospaced;}
+{\f94\fswiss\fcharset0\fprq0 Motor;}{\f95\fswiss\fcharset0\fprq0 MusicalSymbols;}{\f96\fswiss\fcharset0\fprq0 Mystical;}{\f97\fswiss\fcharset0\fprq0 Nebraska;}{\f98\fswiss\fcharset0\fprq0 Ottawa;}{\f99\fswiss\fcharset0\fprq0 PalmSprings;}
+{\f100\fswiss\fcharset0\fprq0 Paradise;}{\f101\fswiss\fcharset0\fprq0 Paragon;}{\f102\fswiss\fcharset0\fprq0 Penguin;}{\f103\fswiss\fcharset0\fprq0 Posse;}{\f104\fswiss\fcharset0\fprq0 President;}{\f105\fswiss\fcharset0\fprq0 Quantum;}
+{\f106\fswiss\fcharset0\fprq0 Renfrew;}{\f107\fswiss\fcharset0\fprq0 Southern;}{\f108\fswiss\fcharset0\fprq0 Stamp;}{\f109\fswiss\fcharset0\fprq0 SwitzerlandBlack;}{\f110\fswiss\fcharset0\fprq0 GreekMathSymbols;}{\f111\fswiss\fcharset0\fprq0 Technical;}
+{\f112\fswiss\fcharset0\fprq0 Timpani;}{\f113\fswiss\fcharset0\fprq0 TimpaniHeavy;}{\f114\fswiss\fcharset0\fprq0 Toronto;}{\f115\fswiss\fcharset0\fprq0 Umbrella;}{\f116\fswiss\fcharset0\fprq0 Unicorn;}{\f117\fswiss\fcharset0\fprq0 USABlack;}
+{\f118\fswiss\fcharset0\fprq0 Vogue;}{\f119\fswiss\fcharset0\fprq0 ZurichCalligraphic;}{\f120\fnil\fcharset0\fprq0 LotusWPSet;}{\f121\fswiss\fcharset0\fprq0 LotusLineDraw;}{\f122\fswiss\fcharset0\fprq0 Arial Condensed Bold;}
+{\f123\froman\fcharset0\fprq0 Bodoni Black;}{\f124\froman\fcharset0\fprq0 Bodoni Book;}{\f125\fnil\fcharset0\fprq0 Botanical;}{\f126\fscript\fcharset0\fprq0 New Berolina;}{\f127\fdecor\fcharset0\fprq0 Old Style Bold Outline;}
+{\f128\fscript\fcharset0\fprq0 Palace Script;}{\f129\froman\fcharset0\fprq0 Photina;}{\f130\froman\fcharset0\fprq0 Rockwell;}{\f131\froman\fcharset0\fprq0 Rockwell Light;}{\f132\fscript\fcharset0\fprq0 Brush Script;}
+{\f133\fswiss\fcharset0\fprq0 Gill Sans;}{\f134\fswiss\fcharset0\fprq0 News Gothic;}{\f135\froman\fcharset0\fprq0 Perpetua;}{\f136\froman\fcharset0\fprq0 Photina Casual Black;}{\f137\fnil\fcharset0\fprq0 WP Greek Helve;}
+{\f138\fnil\fcharset0\fprq0 WP OverflowSet;}{\f139\fnil\fcharset0\fprq0 WP Greek Courier;}{\f140\fscript\fcharset0\fprq0 Ribbon131 Bd BT;}{\f141\froman\fcharset0\fprq0 Humanst521 Lt BT;}{\f142\froman\fcharset0\fprq0 GeoSlab703 Lt BT;}
+{\f143\fswiss\fcharset0\fprq0 Swis721 BlkEx BT;}{\f144\fswiss\fcharset0\fprq0 Humanst521 Cn BT;}{\f145\fdecor\fcharset0\fprq0 Onyx BT;}{\f146\fdecor\fcharset0\fprq0 CaslonOpnface BT;}{\f147\fswiss\fcharset0\fprq0 EngraversGothic BT;}
+{\f148\fscript\fcharset0\fprq0 ShelleyVolante BT;}{\f149\froman\fcharset0\fprq0 BernhardMod BT;}{\f150\fscript\fcharset0\fprq0 Brush738 BT;}{\f151\fscript\fcharset0\fprq0 Blackletter686 BT;}{\f152\froman\fcharset0\fprq0 Arrus BT;}
+{\f153\froman\fcharset0\fprq0 Arrus Blk BT;}{\f154\fscript\fcharset0\fprq0 OzHandicraft BT;}{\f155\fswiss\fcharset0\fprq0 AvantGarde Bk BT;}{\f156\fswiss\fcharset0\fprq0 AvantGarde Md BT;}{\f157\fdecor\fcharset0\fprq0 Bauhaus 93;}
+{\f158\fscript\fcharset0\fprq0 Gradl;}{\f159\fscript\fcharset0\fprq0 Mistral;}{\f160\fdecor\fcharset0\fprq0 Stencil;}{\f161\fscript\fcharset0\fprq0 Vivaldi;}{\f162\fswiss\fcharset0\fprq0 WP Phonetic;}{\f163\fnil\fcharset0\fprq0 WP MathExtendedB;}
+{\f164\fnil\fcharset0\fprq0 WP BoxDrawing;}{\f165\fnil\fcharset0\fprq0 WP IconicSymbolsB;}{\f166\fnil\fcharset0\fprq0 WP MathExtendedA;}{\f167\froman\fcharset0\fprq0 WP CyrillicA;}{\f168\fnil\fcharset0\fprq0 WP Japanese;}
+{\f169\fnil\fcharset0\fprq0 WP MathB;}{\f170\fnil\fcharset0\fprq0 WP IconicSymbolsA;}{\f171\fnil\fcharset0\fprq0 WP Arabic Sihafa;}{\f172\fnil\fcharset0\fprq0 WP MultinationalA Roman;}{\f173\fnil\fcharset0\fprq0 WP CyrillicB;}
+{\f174\fnil\fcharset0\fprq0 WP MultinationalB Roman;}{\f175\fnil\fcharset0\fprq0 WP MathA;}{\f176\fnil\fcharset0\fprq0 WP ArabicScript Sihafa;}{\f177\fnil\fcharset0\fprq0 WP Greek Century;}{\f178\fnil\fcharset0\fprq0 WP TypographicSymbols;}
+{\f179\fnil\fcharset0\fprq0 WP Hebrew David;}{\f180\fnil\fcharset0\fprq0 Arial MT Black;}{\f181\fscript\fcharset0\fprq0 Benguiat Frisky ATT;}{\f182\froman\fcharset0\fprq0 Poster Bodoni ATT;}{\f183\fswiss\fcharset0\fprq0 Gill Sans MT Shadow;}
+{\f184\froman\fcharset0\fprq0 Goudy Old Style ATT;}{\f185\fscript\fcharset0\fprq0 Graphite Light ATT;}{\f186\fscript\fcharset0\fprq0 Graphite Light Narrow ATT;}{\f187\fscript\fcharset0\fprq0 Lucida Casual;}{\f188\fnil\fcharset0\fprq0 Milestones;}
+{\f189\fscript\fcharset0\fprq0 Phyllis ATT;}{\f190\fscript\fcharset0\fprq0 Signet Roundhand ATT;}{\f191\fswiss\fcharset0\fprq0 Expert-Rounded;}{\f192\fswiss\fcharset0\fprq0 AvantGarde;}{\f193\froman\fcharset0\fprq0 Bookman;}
+{\f194\fswiss\fcharset0\fprq0 Helvetica-Narrow;}{\f195\froman\fcharset0\fprq0 NewCenturySchlbk;}{\f196\froman\fcharset0\fprq0 Palatino;}{\f197\fscript\fcharset0\fprq0 ZapfChancery;}{\f198\fdecor\fcharset0\fprq0 ZapfDingbats;}
+{\f199\fscript\fcharset0\fprq0 Script;}{\f200\froman\fcharset0\fprq0 Roman;}{\f201\froman\fcharset0\fprq0 New York;}{\f202\fswiss\fcharset0\fprq0 Geneva;}{\f203\fswiss\fcharset0\fprq0 TektoMM_240 RG 564 NO;}{\f204\fswiss\fcharset0\fprq0 TektoMM;}
+{\f205\fswiss\fcharset0\fprq0 Anna;}{\f206\fswiss\fcharset0\fprq0 Poppl-Laudatio Regular;}{\f207\fswiss\fcharset0\fprq0 Boulevard;}{\f208\froman\fcharset0\fprq0 Boton Regular;}{\f209\froman\fcharset0\fprq0 Baskerville BE Regular;}
+{\f210\fdecor\fcharset0\fprq0 Giddyup Thangs;}{\f211\fswiss\fcharset0\fprq0 Giddyup;}{\f212\fswiss\fcharset0\fprq0 TektoMM_100 LT 250 CN;}{\f213\fswiss\fcharset0\fprq0 TektoMM_100 LT 564 NO;}{\f214\fswiss\fcharset0\fprq0 TektoMM_100 LT 850 EX;}
+{\f215\fswiss\fcharset0\fprq0 TektoMM_240 RG 250 CN;}{\f216\fswiss\fcharset0\fprq0 TektoMM_240 RG 850 EX;}{\f217\fswiss\fcharset0\fprq0 TektoMM_503 BD 250 CN;}{\f218\fswiss\fcharset0\fprq0 TektoMM_503 BD 488 NO;}
+{\f219\fswiss\fcharset0\fprq0 TektoMM_503 BD 850 EX;}{\f220\fswiss\fcharset0\fprq0 Optima;}{\f221\fswiss\fcharset0\fprq0 StoneSans;}{\f222\fswiss\fcharset0\fprq0 StoneSansSemibold;}{\f223\fswiss\fcharset0\fprq0 Haettenschweiler;}
+{\f224\fswiss\fcharset0\fprq0 News Gothic MT;}{\f225\fscript\fcharset0\fprq0 Lucida Handwriting;}{\f226\fswiss\fcharset0\fprq0 Lucida Sans;}{\f227\fswiss\fcharset0\fprq0 Lucida Sans Unicode;}{\f228\fmodern\fcharset0\fprq0 OCR A Extended;}
+{\f229\froman\fcharset0\fprq0 Calisto MT;}{\f230\fswiss\fcharset0\fprq0 Abadi MT Condensed Light;}{\f231\fswiss\fcharset0\fprq0 Copperplate Gothic Bold;}{\f232\fswiss\fcharset0\fprq0 Copperplate Gothic Light;}
+{\f233\fmodern\fcharset0\fprq0 Lucida Console;}{\f234\froman\fcharset0\fprq0 LotusWP Int A;}{\f235\froman\fcharset0\fprq0 LotusWP Int B;}{\f236\fmodern\fcharset0\fprq0 LotusWP Box;}{\f237\froman\fcharset0\fprq0 LotusWP Type;}
+{\f238\froman\fcharset0\fprq0 LotusWP Icon;}{\f239\froman\fcharset0\fprq0 Math A;}{\f240\fnil\fcharset0\fprq0 Math B;}{\f241\fnil\fcharset0\fprq0 Math C;}{\f242\fnil\fcharset0\fprq0 Lotus Postal Barcode;}{\f243\froman\fcharset0\fprq0 Baskerville;}
+{\f244\fnil\fcharset0\fprq0 Binner Gothic;}{\f245\froman\fcharset0\fprq0 Centaur;}{\f246\fnil\fcharset0\fprq0 Gill Sans Condensed;}{\f247\fswiss\fcharset0\fprq0 Gill Sans Ultra Bold;}{\f248\froman\fcharset0\fprq0 Nimrod;}
+{\f249\froman\fcharset0\fprq0 Onyx;}{\f250\froman\fcharset0\fprq0 Rockwell Condensed;}{\f251\fnil\fcharset0\fprq0 Snowy;}{\f252\fnil\fcharset0\fprq0 Code 128;}{\f253\fswiss\fcharset0\fprq0 Adelaide;}{\f254\fswiss\fcharset0\fprq0 Alefbet;}
+{\f255\fswiss\fcharset0\fprq0 Algiers;}{\f256\fswiss\fcharset0\fprq0 Alto;}{\f257\fswiss\fcharset0\fprq0 Amherst;}{\f258\fswiss\fcharset0\fprq0 Amy;}{\f259\fswiss\fcharset0\fprq0 Architecture;}{\f260\fswiss\fcharset0\fprq0 BahamasHeavy;}
+{\f261\fswiss\fcharset0\fprq0 BahamasLight;}{\f262\fswiss\fcharset0\fprq0 BallroomTango;}{\f263\fswiss\fcharset0\fprq0 Bard;}{\f264\fswiss\fcharset0\fprq0 Bassoon;}{\f265\fswiss\fcharset0\fprq0 Bedrock;}{\f266\fnil\fcharset0\fprq0 Beehive;}
+{\f267\fswiss\fcharset0\fprq2 BigTop;}{\f268\fswiss\fcharset0\fprq2 Bosanova;}{\f269\fswiss\fcharset0\fprq2 Bravo;}{\f270\fswiss\fcharset0\fprq2 BravoEngraved;}{\f271\fswiss\fcharset0\fprq2 Briquet;}{\f272\fswiss\fcharset0\fprq2 Brisk;}
+{\f273\fswiss\fcharset0\fprq2 Brochure;}{\f274\fswiss\fcharset0\fprq2 Busker;}{\f275\fswiss\fcharset0\fprq2 Campaign;}{\f276\fswiss\fcharset0\fprq2 Cancun;}{\f277\fnil\fcharset0\fprq2 Carino;}{\f278\fswiss\fcharset0\fprq2 Carleton;}
+{\f279\fswiss\fcharset0\fprq2 CasablancaAntique;}{\f280\fswiss\fcharset0\fprq2 CasperOpenFace;}{\f281\fswiss\fcharset0\fprq2 Castanet;}{\f282\fswiss\fcharset0\fprq2 CenturionOld;}{\f283\fswiss\fcharset0\fprq2 Chalk;}
+{\f284\fswiss\fcharset0\fprq2 Charlesworth;}{\f285\fswiss\fcharset0\fprq2 CopperPot;}{\f286\fswiss\fcharset0\fprq2 Cosmic;}{\f287\fswiss\fcharset0\fprq2 CosmicTwo;}{\f288\fswiss\fcharset0\fprq2 Crescent;}{\f289\fswiss\fcharset0\fprq2 Czar;}
+{\f290\fswiss\fcharset0\fprq2 Dauphin;}{\f291\fswiss\fcharset0\fprq2 Eklektic;}{\f292\fswiss\fcharset0\fprq2 Envision;}{\f293\fswiss\fcharset0\fprq2 ErieBlack;}{\f294\fswiss\fcharset0\fprq2 ErieContour;}{\f295\fswiss\fcharset0\fprq2 Euromode;}
+{\f296\fswiss\fcharset0\fprq2 Expo;}{\f297\fswiss\fcharset0\fprq2 Florence;}{\f298\fswiss\fcharset0\fprq2 FrankHighlight;}{\f299\fswiss\fcharset0\fprq2 FujiyamaBlack;}{\f300\fswiss\fcharset0\fprq2 FujiyamaExtraBold;}
+{\f301\fswiss\fcharset0\fprq2 Galleria;}{\f302\fswiss\fcharset2\fprq2 GeographicSymbols;}{\f303\fswiss\fcharset0\fprq2 GilbertUltraBold;}{\f304\fswiss\fcharset0\fprq2 Glacier;}{\f305\fswiss\fcharset0\fprq2 GoldenOldStyle;}
+{\f306\fswiss\fcharset0\fprq2 GoldMine;}{\f307\fnil\fcharset0\fprq2 Griffon;}{\f308\fswiss\fcharset0\fprq2 GriffonShadow;}{\f309\fswiss\fcharset0\fprq2 Harpoon;}{\f310\fswiss\fcharset0\fprq2 Heidelberg;}{\f311\fswiss\fcharset0\fprq2 Hollow;}
+{\f312\fswiss\fcharset0\fprq2 Indiana;}{\f313\fswiss\fcharset0\fprq2 IndianaSolid;}{\f314\fswiss\fcharset0\fprq2 KabanaBold;}{\f315\fswiss\fcharset0\fprq2 KabanaBook;}{\f316\fswiss\fcharset0\fprq2 Kastler;}{\f317\fswiss\fcharset0\fprq2 Keypunch;}
+{\f318\fswiss\fcharset2\fprq2 Keystroke;}{\f319\fswiss\fcharset0\fprq2 Kids;}{\f320\fswiss\fcharset0\fprq2 Korinthia;}{\f321\fswiss\fcharset0\fprq2 LiquidCrystal;}{\f322\fswiss\fcharset0\fprq2 Lithograph;}{\f323\fswiss\fcharset0\fprq2 LithographLight;}
+{\f324\fswiss\fcharset0\fprq2 Merlin;}{\f325\fswiss\fcharset0\fprq2 Newfoundland;}{\f326\fswiss\fcharset0\fprq2 NewOrder;}{\f327\fnil\fcharset0\fprq2 NewOrderEngraved;}{\f328\fswiss\fcharset0\fprq2 Nuance;}{\f329\fswiss\fcharset0\fprq2 Palette;}
+{\f330\fswiss\fcharset0\fprq2 PenguinLight;}{\f331\fswiss\fcharset0\fprq2 Pepper;}{\f332\fswiss\fcharset0\fprq2 Pipeline;}{\f333\fswiss\fcharset0\fprq2 Playwright;}{\f334\fswiss\fcharset0\fprq2 PowerLine;}{\f335\fswiss\fcharset0\fprq2 Scott;}
+{\f336\fswiss\fcharset0\fprq2 Scribe;}{\f337\fswiss\fcharset0\fprq2 Shogun;}{\f338\fswiss\fcharset0\fprq2 Surreal;}{\f339\fswiss\fcharset0\fprq2 Switzerland;}{\f340\fswiss\fcharset0\fprq2 SwitzerlandCondBlack;}
+{\f341\fnil\fcharset0\fprq2 SwitzerlandCondensed;}{\f342\fswiss\fcharset0\fprq2 SwitzerlandCondLight;}{\f343\fswiss\fcharset0\fprq2 SwitzerlandInserat;}{\f344\fswiss\fcharset0\fprq2 SwitzerlandLight;}{\f345\fswiss\fcharset0\fprq2 SwitzerlandNarrow;}
+{\f346\fswiss\fcharset0\fprq2 ThunderBay;}{\f347\fswiss\fcharset0\fprq2 Trafalgar;}{\f348\fswiss\fcharset0\fprq2 Uptown;}{\f349\fswiss\fcharset0\fprq2 USALight;}{\f350\fswiss\fcharset0\fprq2 Viking;}{\f351\fswiss\fcharset0\fprq2 Vivienne;}
+{\f352\fmodern\fcharset0\fprq0 pica;}{\f353\fmodern\fcharset0\fprq0 elite;}{\f354\fmodern\fcharset0\fprq0 prestige;}{\f355\fswiss\fcharset0\fprq2 LetterGothic;}{\f356\fmodern\fcharset0\fprq0 gothicPS;}{\f357\fmodern\fcharset0\fprq0 cubicPS;}
+{\f358\fmodern\fcharset0\fprq0 avantegarde;}{\f359\fmodern\fcharset0\fprq0 spartan;}{\f360\fmodern\fcharset0\fprq0 metro;}{\f361\fmodern\fcharset0\fprq0 presentation;}{\f362\fmodern\fcharset0\fprq0 APL;}{\f363\fmodern\fcharset0\fprq0 OCRA;}
+{\f364\fmodern\fcharset0\fprq0 OCRB;}{\f365\froman\fcharset0\fprq0 boldPS;}{\f366\froman\fcharset0\fprq0 emperorPS;}{\f367\froman\fcharset0\fprq0 madaleine;}{\f368\froman\fcharset0\fprq0 zapf humanist;}{\f369\froman\fcharset0\fprq0 classic;}
+{\f370\froman\fcharset0\fprq0 roman f;}{\f371\froman\fcharset0\fprq0 roman g;}{\f372\froman\fcharset0\fprq0 roman h;}{\f373\froman\fcharset0\fprq0 timesroman;}{\f374\froman\fcharset0\fprq0 century;}{\f375\froman\fcharset0\fprq0 souvenir;}
+{\f376\froman\fcharset0\fprq0 caledonia;}{\f377\froman\fcharset0\fprq0 bodini;}{\f378\froman\fcharset0\fprq0 university;}{\f379\fscript\fcharset0\fprq0 scriptPS;}{\f380\fscript\fcharset0\fprq0 script c;}{\f381\fscript\fcharset0\fprq0 script d;}
+{\f382\fscript\fcharset0\fprq0 commercial script;}{\f383\fscript\fcharset0\fprq0 park avenue;}{\f384\fscript\fcharset0\fprq0 script h;}{\f385\fscript\fcharset0\fprq0 greek;}{\f386\froman\fcharset0\fprq0 kana;}{\f387\froman\fcharset0\fprq0 hebrew;}
+{\f388\froman\fcharset0\fprq0 roman s;}{\f389\froman\fcharset0\fprq0 russian;}{\f390\froman\fcharset0\fprq0 roman u;}{\f391\froman\fcharset0\fprq0 roman v;}{\f392\froman\fcharset0\fprq0 roman w;}{\f393\fdecor\fcharset0\fprq0 narrator;}
+{\f394\fdecor\fcharset0\fprq0 emphasis;}{\f395\fdecor\fcharset0\fprq0 zapf chancery;}{\f396\fdecor\fcharset0\fprq0 decor d;}{\f397\fdecor\fcharset0\fprq0 old english;}{\f398\fdecor\fcharset0\fprq0 decor f;}{\f399\fdecor\fcharset0\fprq0 decor g;}
+{\f400\fdecor\fcharset0\fprq0 cooper black;}{\f401\fnil\fcharset0\fprq0 linedraw;}{\f402\fnil\fcharset0\fprq0 math7;}{\f403\fnil\fcharset0\fprq0 math8;}{\f404\fnil\fcharset0\fprq0 bar3of9;}{\f405\fnil\fcharset0\fprq0 EAN;}
+{\f406\fnil\fcharset0\fprq0 pcline;}{\f407\fnil\fcharset0\fprq0 tech h;}{\f408\fnil\fcharset0\fprq0 winlinedraw;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;
+\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\f11 
+\snext0 Normal;}{\s1\sb240 \b\f58\ul \sbasedon0\snext0 heading 1;}{\*\cs10 \additive Default Paragraph Font;}{\s15\fi-288\li576 \f11 \sbasedon0\snext15 Outdent4;}{\s16 \f11\fs28\cf6 \sbasedon0\snext16 Context;}{\s17\fi-1584\li1872 \f11 \sbasedon0\snext17 
+Outdent13;}{\s18\li288 \f11 \sbasedon0\snext18 Indent2;}{\s19 \f11\cf2 \sbasedon0\snext19 Comments;}}{\info{\title qshell help system, option editor topics}{\author Stan}{\operator Victoria L. Borton}{\creatim\yr1991\mo5\dy21\hr15\min9}
+{\revtim\yr1993\mo5\dy19\hr16\min40}{\printim\yr1993\mo5\dy11\hr18\min24}{\version1}{\edmins1}{\nofpages0}{\nofwords0}{\nofchars0}{\vern49203}}\margl1440\margr3312 \deftab0\widowctrl\ftnbj0 0\sectd \linex0\endnhere {\*\pnseclvl1
+\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}5
+\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}8\pnlcltr\pnstart1\pnindent720\pnhang
+{\pntxtb (}{\pntxta )}9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \f11 {\cf2 QShell (MAX Shell) Option Editor Description Text
+\par by Stan Leszynski
+\par These notes are not a live context
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 52
+\par Context strings begin with >>
+\par This file does not have context jumps
+\par }\pard {\cf2 MSWord file use:
+\par  Set Printer to Generic/Text only on File:
+\par  Set View to Page mode to see wrapping
+\par  Default tabs 0
+\par  Left margin 0
+\par  Right margin 3.3"
+\par  Top margin 0
+\par  Bottom margin 0
+\par For indented lines or to get desired wrapping, use hard returns
+\par Text highlighting:
+\par  use }{\b\cf2 BOLD}{\cf2  for accenting= blue text
+\par  use }{\i\cf2 ITALICS}{\cf2  for subject headers= white text
+\par  use }{\ul\cf2 UNDERLINE}{\cf2  for context jump= red text
+\par  use }{\b\i\cf2 BOLD ITALICS}{\cf2  for bullets= yellow text
+\par }\pard\plain \s19 \f11\cf2 
+\par >>;(COMMENT)
+\par Changes since pre-beta version:
+\par New options:
+\par  AUTOBCF
+\par  NODPMI
+\par  NOWIN3
+\par  PRO 
+\par  PSMEM
+\par  VGASWAP
+\par  VXD
+\par Removed options:
+\par  EMM
+\par  FASTRAM
+\par  IOP
+\par  LOAD 
+\par  NDPOK 
+\par  NODMA 
+\par  NOLOADHIGH 
+\par  NOPULSE 
+\par  NOSCRUB 
+\par  RESETKEYB 
+\par  SCREEN 
+\par  SHORTFRAME 
+\par  SLOWDMA 
+\par  SLOWKEYB 
+\par  STACKS 
+\par  SYST 
+\par  TERSE 
+\par  TRACE 
+\par  UNSHIFT 
+\par Second beta removed:
+\par  NODPMI
+\par New MOVE'EM options:
+\par  DISPLAY
+\par  EMS
+\par  FASTROM
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>AMRS
+\par \pard\plain \f11                        {\i AMRS=}
+\par 
+\par {\b Purpose:} Emulates EMS Alternate Map Register Sets
+\par  {\b Syntax:} AMRS=n where n is a decimal value between 0
+\par          and 255
+\par {\b Default:} Same as AMRS=0
+\par 
+\par When this option is present, Qualitas MAX provides an EMS Alternate Map Register Set (AMRS) for each application running in a multitasking environment.  The alternative is a single map for all applications.  It is more efficient for Qualitas MAX to switch
+ between multiple EMS maps than to update a single map.  Use of this option may improve performance in multitasking environments.
+\par 
+\par {\b Example:} You plan to have at most five active Desqview windows.  Add the following line to the Qualitas MAX profile:
+\par 
+\par  AMRS=5
+\par 
+\par {\b See Also:} INCLUDE=
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>AUTO
+\par \pard\plain \f11                     {\i AUTO, ON, OFF}
+\par 
+\par {\b Purpose:} Controls active feature sets
+\par  {\b Syntax:} AUTO or ON or OFF 
+\par {\b Default:} ON
+\par 
+\par Qualitas MAX has two groups of features.  The AUTO, ON, and OFF options select these features.  These options are useful when running a protected mode program that conflicts with Qualitas MAX.
+\par 
+\par  * Group A features include EMS and XMS support,
+\par    ROM caching, and Weitek FPA processor support;
+\par  * Group B features include low DOS memory back-
+\par    filling and high DOS memory topfilling.
+\par 
+\par By default, Qualitas MAX starts with both Group A and Group B features enabled.  The AUTO option disables the Group B f
+eatures.  If a protected mode program conflicts with Qualitas MAX, turn off the Group B features using AUTO.  When the AUTO option is active, the ON and OFF parameters respectively enable and disable the Group A features.
+\par 
+\par The OFF option turns off the Group A and Group B features.  If any feature of either group is in use, the OFF option does not work.  After using OFF, the ON option reenables the Group A features. 
+\par 
+\par {\b Example: }You are going to run a protected mode program that does not conform to the Virtual Control Program Interface (VCPI).  To disable Qualitas MAX prior to running the program, type the following:
+\par 
+\par  386MAX OFF
+\par  (program name)
+\par  386MAX ON
+\par 
+\par {\b See Also:} ON and OFF
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>AUTOBCF
+\par \pard\plain \f11                       {\i AUTOBCF}
+\par 
+\par {\b Purpose:} Automatically loads appropriate BIOS
+\par          compression file
+\par  {\b Syntax:} AUTOBCF
+\par {\b Default:} None
+\par 
+\par This option automatically determines the appropriate BIOS Compression File (BCF) for IBM PS/2 386 and 486 machines.  This feature assumes that the correct BCF file is in the same subdirectory as BlueMAX.
+\par 
+\par {\b Example: }The Install program adds AUTOBCF to the BlueMAX profile.
+\par 
+\par {\b See Also:} BCF=
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>BCF
+\par \pard\plain \f11                         {\i BCF=}
+\par 
+\par {\b Purpose:} Loads a specific BCF file
+\par  {\b Syntax:} BCF=drive:\\path\\filename.bcf
+\par {\b Default:} See discussion
+\par 
+\par This option loads a specified BIOS Compression File (BCF) for IBM 386 and 486 PS/2s.  The only valid purpose of BCF is to override the AUTOBCF option.
+\par 
+\par Note that IBM Models 50 and 60 with certain 386 accelerator cards are also supported.
+\par 
+\par {\b Example: }To manually load the BCF for an IBM PS/2 Model 80 111, add the following line to the BlueMAX profile:
+\par 
+\par  BCF=C:\\BlueMAX\\@1D0A.BCF
+\par 
+\par {\b See Also:} AUTOBCF
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>CGA
+\par \pard\plain \f11                          {\i CGA}
+\par 
+\par {\b Purpose:} Backfills low DOS memory on CGA systems
+\par  {\b Syntax:} CGA
+\par {\b Default:} Automatic detection
+\par 
+\par This option increases total low DOS memory to 736 KB on CGA systems.
+\par 
+\par {\b Example: }To increase the top of low DOS memory to 736 KB on a CGA system, add CGA to the Qualitas MAX profile.
+\par 
+\par {\b See Also:} VIDMEM=
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>DMA
+\par \pard\plain \f11                         {\i DMA=}
+\par 
+\par {\b Purpose:} Sets the Direct Memory Access (DMA) buffer
+\par  {\b Syntax:} DMA=n, where n is a decimal value between 8
+\par          and 128
+\par {\b Default:} Same as DMA=64 if the hard disk uses DMA;
+\par          DMA=16 if not
+\par 
+\par This option adjusts the size of the direct memory access (DMA) buffer.  The size of this buffer defaults to 64 KB if the hard disk uses DMA and 16 KB otherwise.
+\par 
+\par {\b Example: }You receive the message "DMA transfer limit exceeded; use DMA=32".  Place the option DMA=32 in the Qualitas MAX profile.
+\par 
+\par {\b See Also:} NOSCSI
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>DOS4
+\par \pard\plain \f11                {\i DOS4} (advanced option)
+\par 
+\par {\b Purpose:} Resolves problems with early versions of MS
+\par          DOS 4.0
+\par  {\b Syntax:} DOS4
+\par {\b Default:} Do not enable special DOS 4 support
+\par 
+\par Qualitas MAX may need this option to resolve erratic behavior caused by a problem with early versions of MS DOS 4.0.  The problem is due to the relocation of buffers into EMS memory.
+\par 
+\par {\b Example: }If you have BUFFERS=20 /x in CONFIG.SYS and you are running an early version of MS DOS 4.0, place the following options in the Qualitas MAX profile:
+\par 
+\par  INCLUDE=32
+\par  DOS4
+\par 
+\par {\b See Also:} INCLUDE=
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>EGA
+\par \pard\plain \f11                          {\i EGA}
+\par 
+\par {\b Purpose:} Prevents Qualitas MAX from backfilling on EGA
+\par          systems
+\par  {\b Syntax:} EGA
+\par {\b Default: }Automatic detection
+\par 
+\par Qualitas MAX automatically detects EGA hardware.  Use this option on systems which Qualitas MAX does not recognize as EGA, but which use the memory region A000H-C000H.
+\par 
+\par {\b Example: }If video output is erratic on a nonstandard EGA system, add EGA to the Qualitas MAX profile.
+\par 
+\par {\b See Also:} VIDMEM=
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>EMS
+\par \pard\plain \f11                        {\i EMS}
+\par 
+\par {\b Purpose:} Use EMS memory for high DOS memory
+\par  {\b Syntax:} EMS
+\par {\b Default:} Use C&T CHIPSet to remap high DOS memory
+\par 
+\par In a system with both EMS 4.0 hardware and a C&T CHIPSet, MOVE'EM uses the C&T CHIPSet to remap high DOS memory.  This option tells MOVE'EM to use the EMS memory for high DOS memory.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>EMS=
+\par \pard\plain \f11                         {\i EMS=}
+\par 
+\par {\b Purpose:} Reserves a specified amount of EMS memory
+\par  {\b Syntax:} EMS=n where n is the decimal number of
+\par          kilobytes
+\par {\b Default:} See discussion below
+\par 
+\par By default, Qualitas MAX allocates memory as needed from  SmartMemory.  SmartMemory eliminates the need to preconfigure portions of memory as EMS or extended memory.  The EMS option disables SmartMemory and reserves all remaining memory as extended and XM
+S memory.
+\par 
+\par Qualitas MAX allocates EMS memory in multiples of 16 KB.  If the specified value for the EMS option is not a multiple of 16 KB, Qualitas MAX rounds down to the nearest 16 KB.
+\par 
+\par You cannot use the EMS= option at the same time as the EXT option.
+\par 
+\par The EMS=0 option is useful when there is no need for expanded memory.  This option adds an extra 64 KB of high DOS memory to the system.  The extra memory comes from the high DOS memory region normally reserved for the EMS page frame.
+\par 
+\par {\b Example: }You have no applications that use EMS and want the maximum amount of high DOS memory.  Add the following line to the Qualitas MAX profile:
+\par 
+\par  EMS=0
+\par 
+\par {\b See Also:} EXT=, FRAME=, NOFRAME
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>EXCLUDE
+\par \pard\plain \f11                       {\i EXCLUDE=}
+\par 
+\par {\b Purpose:} Limits the EMS swapping region
+\par  {\b Syntax:} EXCLUDE=xxxx-yyyy where xxxx and yyyy are
+\par          hexadecimal addresses on 16 KB boundaries
+\par {\b Default:} See discussion below
+\par 
+\par This option decreases the size of the EMS swapping region by excluding the region between the specified addresses.  In addition to the EMS page frame, Qualitas MAX normally allows EMS swapping in any part of the region from 64 KB to 640 KB (addresses 1000
+H to A000H).  Depending on the video adapter, this region may extend to B000H or B800H (on monochrome or CGA systems, respectively). 
+\par 
+\par To exclude multiple regions, use the EXCLUDE= option more than once.
+\par 
+\par {\b Example: }If an EMS-aware application is failing to use EMS properly, add the following option to the Qualitas MAX profile:
+\par 
+\par  EXCLUDE=1000-A000
+\par 
+\par {\b See Also:} INCLUDE=, EMS=
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>EXT
+\par \pard\plain \f11                         {\i EXT=}
+\par 
+\par {\b Purpose:} Reserves a specified amount of extended
+\par          memory
+\par  {\b Syntax:} EXT=n where n is a decimal number of
+\par          kilobytes
+\par {\b Default:} See discussion below
+\par 
+\par By default, Qualitas MAX allocates memory as needed from  SmartMe
+mory.  SmartMemory eliminates the need to preconfigure portions of memory as extended or EMS memory.  The use of the EXT= option specifies the maximum amount of extended memory that can be allocated using BIOS allocation calls.
+\par 
+\par You cannot use the EXT= option at the same time as the EMS= option.
+\par  
+\par The eXtended Memory Specification (XMS) requires 64 KB of extended memory.  If there is less than 64 KB available, XMS support is disabled.  When determining the value for EXT=, add 64 to the amount of memory the software requires.
+\par 
+\par {\b Example:} To reserve 1 MB of extended or XMS memory for a disk cache, set extended memory to 1088 (1024+64) by adding the following line to the Qualitas MAX profile:
+\par 
+\par  EXT=1088
+\par 
+\par This option reserves the remaining memory for use as EMS memory.
+\par 
+\par {\b See Also:} EMS=
+\par \pard\plain \s16 \f11\fs28\cf6 >>EXTSIZE
+\par \pard\plain \f11                  {\i EXTSIZE= (Advanced Option)}
+\par 
+\par {\b Purpose:} Limits the amount of extended memory 
+\par          visible to Qualitas MAX
+\par {\b  Syntax:} EXTSIZE=nnnn where nnnn is a decimal 
+\par          number of kilobytes
+\par {\b Default:} See discussion below
+\par 
+\par By default, Qualitas MAX will allocate all extended memory in the system for use as high DOS memory, XMS memory, etc. Some systems have faulty memory at the top of extended memory. This keyword changes the amount of memory Qualitas MAX uses.
+\par 
+\par {\b Example:} On a 20 MB system where the top 4 MB is known to be faulty, add EXTSIZE=15360 to limit extended memory to 15 MB.
+\par 
+\par {\b See Also:} NOXRAM
+\par \pard\plain \s16 \f11\fs28\cf6 >>FASTROM
+\par \pard\plain \f11                       {\i FASTROM}
+\par 
+\par {\b Purpose:} Enables ROM caching
+\par  {\b Syntax:} FASTROM
+\par {\b Default:} Disable ROM caching
+\par 
+\par On a system with a C&T CHIPSet, the BIOS ROM and the video ROMs move into fast RAM with a corresponding increase in performance.  A side effect is that the 64 KB segment taken by each ROM is no longer available as high DOS memory.
+\par 
+\par By default, MOVE'EM recovers this extra high DOS memory.  The video ROM slows down accordingly.  Use the FASTROM option if a fast video ROM is more important than the extra high DOS memory.
+\par 
+\par {\b Example:} On a C&T system with EGA ROM in the address range C000-C400, MOVE'EM maps C400-D000 as high DOS memory.  It also disables EGA shadowing.  To maintain EGA performance, add the following line to the MOVE'EM.MGR device line in CONFIG.SYS:
+
+\par 
+\par  DEVICE=C:\\MOVE'EM\\MOVE'EM.MGR FASTROM
+\par 
+\par This technique disables high DOS memory in the range
+\par C400-D000.
+\par \pard\plain \s16 \f11\fs28\cf6 >>FORCEA20
+\par \pard\plain \f11              {\i FORCEA20} (advanced option)
+\par 
+\par {\b Purpose:} Controls the A20 gate
+\par  {\b Syntax:} FORCEA20 
+\par {\b Default:} No A20 gate virtualization
+\par 
+\par This option virtualizes the A20 gate.  Use this option if a program attempts to change the state of the A20 address line.  This behavior is most common with system-specific utilities.
+\par 
+\par {\b Example: }SETSYS.COM is a utility provided with your system.  If it causes your system to lock, add FORCEA20 to the Qualitas MAX profile.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>FRAME
+\par \pard\plain \f11                        {\i FRAME=}
+\par 
+\par {\b Purpose:} Sets EMS page frame address
+\par  {\b Syntax:} FRAME=xxxx where xxxx is a hexadecimal
+\par          address; it must lie on a 16 KB boundary
+\par {\b Default:} Highest valid region
+\par 
+\par This option specifies the base address for the EMS page frame.  The page frame is a 64 KB range of high DOS addresses reserved for accessing EMS memory.
+\par 
+\par Qualitas MAX automatically installs the EMS page frame in the highest available 64 KB region in the high DOS memory area.  In most cases, this region is just below the system BIOS ROM, at E000H (or E400H for systems running BlueMAX).
+\par 
+\par If Qualitas MAX cannot find a contiguous 64 KB region in high DOS memory, it installs the EMS page frame in low DOS memory.  In general, it is best to let Qualitas MAX automatically select the location for the EMS page frame. 
+\par 
+\par {\b Example: }You are running an EMS-aware application that requires the EMS page frame start at D000.  Add the following option to the Qualitas MAX profile:
+\par 
+\par  FRAME=D000
+\par 
+\par {\b See Also:} EMS=, NOFRAME, INCLUDE=
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>HMAMIN
+\par \pard\plain \f11                        {\i HMAMIN=}
+\par 
+\par {\b Purpose:} Controls access to the HMA
+\par  {\b Syntax:} HMAMIN=n where n is a decimal number
+\par {\b Default:} Same as HMAMIN=4
+\par 
+\par Only one program can control the HMA.  This option spec
+ifies the minimum amount of memory in kilobytes that a program must request in order to gain access to the HMA.  If a program asks for less than the designated amount, it is denied access to the HMA.  This option reserves the HMA for efficient use.
+\par 
+\par {\b Example: }You have two programs that request HMA services.  The program that loads first requests 38 KB.  The second program requests 45 KB.  Setting HMAMIN=45 will reserve the HMA for the second program.
+\par 
+\par {\b See Also:} XMSHNDL=, EXT=
+\par \pard\plain \s16 \f11\fs28\cf6 >>HPDAREG
+\par \pard\plain \f11               {\i HPDAREG= (Advanced Option)}
+\par 
+\par {\b Purpose:} Loads the Host Private Data Area (HPDA)
+\par          into a specified program region
+\par  {\b Syntax:} HPDAREG=nnn,r where nnn is the size of the
+\par          data used for the HPDA and r is the program
+\par          region
+\par {\b Default:} Determined by Maximize
+\par 
+\par Qualitas MAX has support for a DPMI Host Private Data Area (HPDA), an eXtended BIOS Data Area (XBDA) and MAX Stacks (all called Qualitas MAX subsegments).  Maximize determines the optimal region of high DOS in which to load each of these subsegments. 
+
+\par 
+\par {\b Example: }To place an HPDA into program region 1, add the following option to the Qualitas MAX profile:
+\par 
+\par  HPDAREG=1
+\par 
+\par {\b See Also:} STACKREG=, XBDAREG=, PRGREG=
+\par \pard\plain \s16 \f11\fs28\cf6 >>INCLUDE
+\par \pard\plain \f11                       {\i INCLUDE=}
+\par 
+\par {\b Purpose:} Defines additional EMS mappable pages
+\par  {\b Syntax:} INCLUDE=n where n is a decimal number; or
+\par          INCLUDE=xxxx-yyyy where xxxx-yyyy is a
+\par          hexadecimal range (xxxx and yyyy must lie
+\par          on a 16 KB boundary); or INCLUDE=xxxx-
+\par          yyyy,n where xxxx-yyyy is a hexadecimal
+\par          range (xxxx and yyyy must lie on a 16 KB
+\par          boundary, n is a decimal number)
+\par {\b Default:} See discussion below
+\par 
+\par This option increases the size of the EMS swapping region.  In addition to the EMS page frame, Qualitas MAX normally allows EMS swapping in any part of the region from 64 KB to 640 KB (addresses 1000H to A000H).  Depending on the video adapter, the region
+ may extend to B000H or B800H (on monochrome or CGA equipped systems respectively). 
+\par 
+\par This option may improve the performance of a system running multitasking programs (such as Windows 286 or DesqView) or programs such as Paradox which use the extra EMS swapping pages.
+\par 
+\par {\b Example: }To allow two additional EMS-mappable pages, add the following option to the Qualitas MAX profile:
+\par 
+\par  INCLUDE=32
+\par 
+\par where Qualitas MAX selects the location of the two 16 KB EMS pages, or:
+\par 
+\par  INCLUDE=B000-B800
+\par 
+\par which includes the monochrome adapter region (on an EGA or VGA system).
+\par 
+\par A single INCLUDE= option can use both forms of notation, for example: INCLUDE=B000-B800,64.  This option tells Qualitas MAX to use the monochrome video display region for swapping and to mark an additional 64 KB region as EMS-mappable.
+\par 
+\par {\b Note:} Using INCLUDE= to add extra EMS pages reduces the amount of high DOS memory for device drivers and memory resident programs.
+\par 
+\par {\b See Also:} EXCLUDE=, EMS=, DOS4
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>MONO
+\par \pard\plain \f11                         {\i MONO}
+\par 
+\par {\b Purpose:} Backfills low DOS memory on monochrome
+\par          systems
+\par  {\b Syntax:} MONO
+\par {\b Default:} Automatic detection
+\par 
+\par On monochrome systems, this option increases total low DOS memory to 704 KB.
+\par 
+\par {\b Example: }To increase the top of low DOS memory to 704 KB on a monochrome system, add MONO to the Qualitas MAX profile.
+\par 
+\par {\b See Also:} VIDMEM=
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>NOCOMPROM
+\par \pard\plain \f11                       {\i NOCOMPROM}
+\par 
+\par {\b Purpose:} Suppress compression of system BIOS ROM
+\par  {\b Syntax:} NOCOMPROM
+\par {\b Default:} See discussion below
+\par 
+\par By default, Qualitas MAX attempts to compress
+ system BIOS ROM to create more high DOS memory.  This technique is effective on almost all COMPAQ systems and some other machines.  It can provide as much as 32 KB of additional high DOS memory.  In certain situations, compression can cause failures.  
+
+\par 
+\par {\b Example: }If floppy access is erratic and Qualitas MAX is compressing system BIOS ROM, try the following option in the Qualitas MAX profile:
+\par 
+\par  NOCOMPROM
+\par 
+\par {\b Note:} NOCOMPROM is not related to the BIOS file compression technique used in Qualitas' BlueMAX.
+\par 
+\par {\b See Also:} BCF=, NOROM
+\par \pard\plain \s16 \f11\fs28\cf6 >>NODPMI
+\par \pard\plain \f11                 NODPMI (Advanced Option)  
+\par 
+\par {\b Purpose: }Disables DPMI support
+\par  {\b Syntax:} NODPMI
+\par {\b Default:} DPMI support enabled
+\par 
+\par Qualitas MAX supports the DOS Protected Mode Interface (DPMI) Specification version 1.0. This keyword disables this support.
+\par 
+\par {\b Example: }An application fails if DPMI 1.0 support is active in the system; add NODPMI to the Qualitas MAX profile.
+\par 
+\par {\b See Also:} The MEMLIMIT program included with Qualitas MAX
+\par \pard\plain \s16 \f11\fs28\cf6 >>NOFLEX
+\par \pard\plain \f11                 NOFLEX (Advanced Option)  
+\par 
+\par {\b Purpose: }Tells 386LOAD to ignore the FLEXFRAME
+\par          option
+\par  {\b Syntax:} NOFLEX
+\par {\b Default:} FLEXFRAME enabled
+\par 
+\par 386LOAD uses FLEXFRAME technology in order to provide more high DOS memory while TSRs are loading. FLEXFRAME temporarily borrows the EMS page frame addresses during TSR load time. Some TSRs incorrectly report their resident size. In these cases, the TSR w
+ill load "into" the EMS page frame, causing an error on boot. NOFLEX tells 386LOAD not to use the FLEXFRAME feature.
+\par 
+\par {\b Example: }NET.EXE appears to go resident at 30 KB, but actually uses 50 KB once in high DOS memory, causing a "Resident portion of program exceeds available storage!" error message. Add NOFLEX to the Qualitas MAX profile to disable FLEXFRAME.
+\par  
+\par {\b See Also:} FLEXFRAME
+\par \pard\plain \s16 \f11\fs28\cf6 >>NOFRAME
+\par \pard\plain \f11                         {\i NOFRAME}
+\par 
+\par {\b Purpose:} Install Qualitas MAX with EMS support but without
+\par          an EMS page frame
+\par  {\b Syntax:} NOFRAME
+\par {\b Default:} EMS page frame enabled
+\par 
+\par This option allocates EMS memory without the usual 64 KB EMS page frame.  NOFRAME recovers an additional 64 KB of high DOS memory normally reserved for the EMS page frame. 
+\par 
+\par Use NOFRAME with applications that can access EMS memory without an EMS page frame.  Such applications include Lotus 1-2-3 Release 3.0 and some other VCPI software. 
+\par 
+\par {\b Example: }You are running Lotus 1-2-3 Release 3.0 and no EMS-aware applications.  To obtain the maximum amount of high DOS memory add the following option to the Qualitas MAX profile:
+\par 
+\par  NOFRAME
+\par  
+\par {\b See Also:} EMS=, FRAME=
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>NOHIGH
+\par \pard\plain \f11                        {\i NOHIGH}
+\par 
+\par {\b Purpose:} Prevents Qualitas MAX from creating high DOS
+\par          memory
+\par  {\b Syntax:} NOHIGH
+\par {\b Default:} Create high DOS memory
+\par 
+\par The NOHIGH option tells Qualitas MAX not to remap memory into the high DOS area.  This option is useful for troubleshooting conflicts with hardware adapters.  Since hardware adapters can use regions in the high DOS memory area, NOHIGH can help pinpoint pr
+oblems that may occur when Qualitas MAX remaps high DOS memory.  When no programs are loaded into high memory, NOHIGH can free additional space for SmartMemory.
+\par 
+\par {\b Example: }You have installed a network adapter and it fails to initialize.  Add NOHIGH to the Qualitas MAX profile to see if disabling Qualitas MAX from mapping high DOS memory eliminates the problem.
+\par 
+\par If the problem goes away, it is likely that Qualitas MAX is mapping high DOS memory into the adapter's memory address.  Consult your hardware documentation to determine this address.
+\par 
+\par {\b See Also:} NOLOW, RAM=
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>NOLOADHI
+\par \pard\plain \f11                        {\i NOLOADHI}
+\par 
+\par {\b Purpose:} Prevents xxx.SYS from loading into high
+\par          DOS memory
+\par  {\b Syntax:} NOLOADHI
+\par {\b Default:} Load xxx.SYS into high DOS memory
+\par 
+\par This option forces the Qualitas MAX driver (386MAX.SYS, 
+\par BlueMAX.SYS, or MOVE'EM.MGR, noted here as xxx.SYS) to load itself into low DOS memory.
+\par 
+\par By default, Qualitas MAX loads itself into high DOS memory, using approximately 1 KB of low DOS and 3.5 KB of high DOS memory.  With NOLOADHI, the portion of xxx.SYS that usually resides in high DOS memory goes into low memory.  The remainder resides in e
+xtended memory.
+\par 
+\par Note that this option only affects the position of the 3.5 KB portion of Qualitas MAX that resides in DOS memory.  It does not change the way Qualitas MAX stores itself in extended memory.
+\par 
+\par {\b Example: }By loading 386MAX.SYS into low DOS memory you free up more high DOS memory in order to load a large memory resident program. Add the following option to the Qualitas MAX profile:
+\par 
+\par  NOLOADHI
+\par 
+\par {\b See Also:} PRGREG=
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>NOLOW
+\par \pard\plain \f11                          {\i NOLOW}
+\par 
+\par {\b Purpose:} Prevents Qualitas MAX from adding low DOS memory
+\par  {\b Syntax:} NOLOW
+\par {\b Default:} Create low DOS memory
+\par 
+\par This option tells Qualitas MAX not to add low DOS memory.  Qualitas MAX by default will lowfill on 512 KB systems to 640 KB and will backfill to 704 KB and 736 KB on monochrome and CGA systems respectively.  NOLOW overrides this default action.  On monoch
+rome and CGA systems where NOLOW is in effect, Qualitas MAX adds high DOS memory from 640 KB to the bottom of the video address region.
+\par 
+\par {\b Example: }If you are experiencing erratic behavior on a 512 KB system, try adding the following option to the Qualitas MAX profile:
+\par 
+\par  NOLOW
+\par 
+\par {\b See Also:} VIDMEM=, MONO, CGA, EGA, VGA
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>NOROM
+\par \pard\plain \f11                         {\i NOROM}
+\par 
+\par \pard \li1 {\b Purpose:} Prevents Qualitas MAX from caching ROMs
+\par \pard  {\b Syntax:} NOROM
+\par {\b Default:} ROM caching enabled
+\par 
+\par This option tells Qualitas MAX not to rewrite slow ROMs into fast RAM.  NOROM is primarily a troubleshooting option. 
+\par 
+\par System BIOS ROM and hardware adapter ROM run faster after Qualitas MAX copies them into fast RAM.  Some ROMs may be sensitive to timing and will not operate at the faster speed. 
+\par 
+\par {\b Example: }Your floppy drive access is erratic and Qualitas MAX is caching the system BIOS ROM.  Try adding the following option to the Qualitas MAX profile:
+\par 
+\par  NOROM
+\par   
+\par {\b See Also:} ROM=, NOCOMPROM
+\par \pard\plain \s16 \f11\fs28\cf6 >>NOSCAN
+\par \pard\plain \f11                   {\i NOSCAN= (Advanced Option)}
+\par 
+\par \pard \li1 {\b Purpose:} Tells 386UTIL to avoid scanning a specified
+\par          region of high DOS
+\par \pard  {\b Syntax:} NOSCAN=xxxx-yyyy where xxxx-yyyy is a
+\par          hexidecimal address range; xxxx and yyy
+\par          must lie of 4 KB boundaries
+\par {\b Default:} All high DOS scanned
+\par 
+\par Some systems with memory mapped I/O fail when high DOS memory is scanned via 386UTIL/R. NOSCAN tells 386UTIL to avoid these areas.
+\par 
+\par {\b Example: }Your machine has a network card from CC00-D000. Every time 386UTIL/R is run (either from the command line or during MAXIMIZE), the machine reboots.  Add the following option to the Qualitas MAX profile:
+\par 
+\par  NOSCAN=CC00-D000
+\par   
+\par {\b See Also:} RAM=, NOHIGH
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>NOSCSI
+\par \pard\plain \f11               {\i NOSCSI} (advanced option)
+\par 
+\par {\b Purpose:} Prevents checking for SCSI devices
+\par  {\b Syntax:} NOSCSI
+\par {\b Default:} Check for SCSI devices
+\par 
+\par This option tells Qualitas MAX not to check for the presence of Small Computer Serial Interface (SCSI) busmaster devices.   
+\par 
+\par By default, Qualitas MAX checks for the presence of SCSI hardware.  Under rare circumstances, Qualitas MAX may freeze the system when it performs this check, whether or not a SCSI device is present. 
+\par 
+\par {\b Example: }Your system locks up when it starts.  Furthermore, you know that your system contains no SCSI busmastering adapter.  Add the following option to the Qualitas MAX profile:
+\par 
+\par  NOSCSI
+\par 
+\par {\b See Also:} DMA=
+\par \pard\plain \s16 \f11\fs28\cf6 >>NOVGASIG
+\par \pard\plain \f11             {\i NOVGASIG} (advanced option)
+\par 
+\par {\b Purpose:} Informs Qualitas MAX not to leave a 512 byte 
+\par          video ROM signature
+\par  {\b Syntax:} NOVGASIG
+\par {\b Default:} Leave video ROM signature
+\par 
+\par When VGASWAP moves a VGA ROM from C000 to B000, it leaves the 512 byte VGA ROM signature. This is done for those programs that look for the VGA ROM signature at C000. NOVGASIG disables this behavior.
+\par 
+\par {\b Example: }If none of your applications look for VGA ROMs at C000 and you want 512 bytes additional high DOS memory, add NOVGASIG to the Qualitas MAX profile.
+\par 
+\par {\b See Also:} NOROM
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>NOWARMBOOT
+\par \pard\plain \f11             {\i NOWARMBOOT} (advanced option)
+\par 
+\par {\b Purpose:} Prevents Qualitas MAX from intercepting warm
+\par          boots
+\par  {\b Syntax:} NOWARMBOOT
+\par {\b Default:} Intercept warm boots
+\par 
+\par This option prevents Qualitas MAX from intercepting warm boots.  Normally, Qualitas MAX intercepts warm boots so it can shut itself down prior to rebooting.
+\par 
+\par {\b Example: }You are using one of the early Intel systems.  Your documentation suggests the use of this option.  Add NOWARMBOOT to the Qualitas MAX profile.
+\par 
+\par {\b See Also:} NOROM
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>NOWIN3
+\par \pard\plain \f11                        {\i NOWIN3}
+\par 
+\par {\b Purpose:} Disables Windows 3 support
+\par  {\b Syntax:} NOWIN3
+\par {\b Default:} Windows 3 support enabled
+\par 
+\par This option disables Windows 3 support and reduces the low DOS memory required by Qualitas MAX from approximately 1 KB to 80 bytes.  The Qualitas MAX Install program asks if Windows 3 support is required.
+\par 
+\par {\b Example: }If Windows 3 support is not required and you want to reduce Qualitas MAX's memory requirements in low DOS memory, add NOWIN3 to the Qualitas MAX profile.
+\par \pard\plain \s16 \f11\fs28\cf6 >>NOWIN30
+\par \pard\plain \f11                        {\i NOWIN30}
+\par 
+\par {\b Purpose:} Eliminates 16 MB boundary needed for
+\par          Windows 3.0
+\par  {\b Syntax:} NOWIN30
+\par {\b Default:} Break at 16 MB physical boundary
+\par 
+\par Windows 3.0 has a limitation that does not allow for Extended Memory Blocks (EMBs) that span over the 16 MB phsical boundary. Because of this limitation, Qualitas MAX adds an artificial barrier at
+ 16 MB. This limitation is not needed for Windows 3.1. If INSTALL does not detect Windows 3.0, it will add NOWIN30 to the Qualitas MAX profile.
+\par 
+\par {\b Example: }If Windows 3.0 support is not required, add NOWIN30 to the Qualitas MAX profile.
+\par 
+\par {\b See Also:} NOWIN3
+\par \pard\plain \s16 \f11\fs28\cf6 >>NOXBIOS
+\par \pard\plain \f11                        {\i NOXBIOS}
+\par 
+\par {\b Purpose:} Prevents Qualitas MAX from relocating XBIOS area
+\par  {\b Syntax:} NOXBIOS
+\par {\b Default:} Relocate XBIOS
+\par 
+\par This option tells Qualitas MAX to leave the extended BIOS (XBIOS) data area in its default location, between 639 KB and 640 KB.
+\par 
+\par Qualitas MAX automatically detects the presence of the XBIOS area on Micro Channel (MC) machines and some other systems, such as the Compaq 386S.  At startup, the system BIOS allocates 1 KB of low DOS memory between 639 KB and 640 KB.  The result is a hol
+e which prevents Qualitas MAX from backfilling memory on monochrome or CGA systems.  For this reason, Qualitas MAX normally relocates the XBIOS area into the low part of low DOS memory. 
+\par 
+\par If a SCSI hard disk does not work correctly with Qualitas MAX, try NOXBIOS.  Some SCSI controllers do not obey the Virtual DMA Services (VDS) specification and assume the XBIOS will be located at 639 KB.
+\par 
+\par {\b Example: }You have a SCSI hard disk controller that fails during disk access.  Try NOXBIOS in the Qualitas MAX profile.
+\par 
+\par {\b See Also:} XBIOSHI
+\par \pard\plain \s16 \f11\fs28\cf6 {\fs20\cf0 
+\par }>>NOXRAM
+\par \pard\plain \f11                        {\i NOXRAM}
+\par 
+\par {\b Purpose:} Do not recover shadow RAM
+\par  {\b Syntax:} NOXRAM
+\par {\b Default:} Recover shadow RAM
+\par 
+\par This option prevents Qualitas MAX from recovering the extra 384 KB of RAM in machines that use this memory for shadowing system and video ROMs.  By default, Qualitas MAX attempts to recover all system memory for use in SmartMemory.
+\par 
+\par {\b Example: }On a shadow RAM system, Qualitas MAX locks on startup.  Try the NOXRAM option in the Qualitas MAX profile.
+\par 
+\par {\b See Also:} SHADOWRAM, TOP384
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>OFF
+\par \pard\plain \f11                          {\i OFF}
+\par 
+\par {\b See AUTO.}
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>ON
+\par \pard\plain \f11                          {\i ON}
+\par 
+\par {\b See AUTO.}
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>PRGREG
+\par \pard\plain \f11                        {\i PRGREG=}
+\par 
+\par {\b Purpose:} Loads xxx.SYS into a specified program
+\par          region
+\par  {\b Syntax:} PRGREG=n where n is a decimal number
+\par          between 0 and 9
+\par {\b Default:} Same as PRGREG=1
+\par 
+\par This option loads the Qualitas MAX driver (386MAX.SYS, 
+\par BlueMAX.SYS, or MOVE'EM.MGR, noted here as xxx.SYS) into a specific region of high DOS memory.  By default, xxx.SYS stores itself in the first available region of high memory.  The regions are numbered sequentially.  The lowest addressable region of high 
+DOS memory is number one.  The option PRGREG=0 indicates low DOS memory.
+\par 
+\par {\b Example: }If loading 386MAX.SYS into region two of high DOS memory allows a larger program to load into region one, add the following option to the Qualitas MAX profile:
+\par 
+\par  PRGREG=2
+\par 
+\par {\b See Also:} NOLOADHI
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>PRO
+\par \pard\plain \f11                          {\i PRO=}
+\par 
+\par {\b Purpose:} Specifies the location of the Qualitas MAX
+\par          profile
+\par  {\b Syntax:} PRO=drive:\\path\\filename
+\par {\b Default:} PRO=C:\\xxx\\xxx.PRO
+\par 
+\par This option gives the location of the Qualitas MAX profile (386MAX.PRO, BlueMAX.PRO, or MOVE'EM.PRO, noted here as xxx.PRO), a text file containing Qualitas MAX options.  The Install program automatically creates the Qualitas MAX profile.  This file must 
+be present in order to run the Maximize program. 
+\par 
+\par {\b Example: }The device line in CONFIG.SYS for Qualitas MAX should read as follows:
+\par 
+\par DEVICE=C:\\QMAX\\386MAX.SYS PRO=C:\\QMAX\\386MAX.PRO
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>PSMEM
+\par \pard\plain \f11               {\i PSMEM=} (advanced option)
+\par 
+\par {\b Purpose:} Provide QPMS memory
+\par  {\b Syntax:} PSMEM=n[,xxxx] where n is a decimal number,
+\par          and xxxx is a hexadecimal address
+\par {\b Default:} Do not provide QPMS memory
+\par 
+\par The Qualitas/Periscope Memory Management Specification (QPMS) is a standard that increases the reliability of software debuggers.  QPMS provides debugger programs with extended memory, making more low DOS memory available for applications.  Only the debug
+ger can write to the extended memory that QPMS provides.
+\par 
+\par Use PSMEM=n,xxxx.  The number n specifies the amount of extended
+ memory in kilobytes.  The optional value xxxx specifies the address of a region in high DOS memory.  The QPMS debugger loads into this region.  If there is no value for n or xxxx, the debugger loads in the first valid region.
+\par 
+\par Currently, Periscope/EM supports QPMS.  To use Periscope, a system needs 300 KB of available extended RAM and a 32 KB contiguous block in high DOS memory.  See the Periscope (or other QPMS compliant product) manual for complete information.  Together, Per
+iscope/EM software and Qualitas MAX provide the functionality of a Periscope Model I board.
+\par 
+\par {\b Example: }To reserve 512 KB for Periscope/EM with the Periscope software loaded at C000H, add the following line to your Qualitas MAX profile:
+\par 
+\par  PSMEM=512,C000
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>RAM
+\par \pard\plain \f11                         {\i RAM=
+\par }
+\par {\b Purpose:} Prevents Qualitas MAX from mapping memory into a
+\par          specified high DOS region
+\par  {\b Syntax:} RAM=xxxx-yyyy where xxxx-yyyy is a
+\par          hexadecimal address range; xxxx and yyyy
+\par          must lie on 4 KB boundaries
+\par {\b Default:} Determined by Maximize
+\par 
+\par This option prevents Qualitas MAX from mapping memory into a particular high DOS region.
+\par 
+\par Many adapter boards use specific addresses in the high DOS memory area for ROM and buffer RAM.  A particular board may not access these memory addresses before Qualitas MAX starts.  In such a case, Qualitas MAX may map memory into addresses reserved for t
+he board.  The result is a memory conflict.
+\par 
+\par The adapter documentation should specify address requirements.
+\par 
+\par On Micro Channel systems, Qualitas MAX determines adapter addresses from ADF and ADP files on the system's Reference Diskette.  Qualitas MAX adds appropriate RAM options to the Qualitas MAX profile.
+\par 
+\par A single RAM option can include multiple address ranges separated by commas.  The Qualitas MAX profile can contain more than one RAM option.
+\par 
+\par {\b Example: }A system contains an IBM Token Ring adapter card.  The card addresses 16 KB of buffer RAM at D800H and an 8 KB ROM at CC00H.  To accommodate this card, add the following option to the Qualitas MAX profile:
+\par 
+\par  RAM=D800-DC00, CC00-CE00 
+\par 
+\par {\b See Also:} NOHIGH, VIDMEM=
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>ROM
+\par \pard\plain \f11                           {\i ROM=}
+\par 
+\par {\b Purpose:} Caches ROMs at a specified address
+\par  {\b Syntax:} ROM=xxxx-yyyy where xxxx-yyyy is a
+\par          hexadecimal address range; xxxx and yyyy
+\par          must lie on a 4 KB boundary
+\par {\b Default:} ROM caching enabled
+\par 
+\par This option tells Qualitas MAX to copy the contents of the ROM in the specified address range into RAM.  The ROM= option disables automatic ROM caching.  This option can be useful in situations where one ROM acts erratically at a faster speed.
+\par 
+\par By default, Qualitas MAX tests the speed of each ROM in the computer.  If the ROM is not as fast as the system RAM, Qualitas MAX copies the contents of each ROM into RAM.  This technique is known as ROM caching.  It can provide a significant improvement i
+n performance.
+\par 
+\par A single ROM= option can include multiple address ranges separated by commas.  The Qualitas MAX profile can include more than one ROM option.
+\par 
+\par {\b Example: }Your machine
+ has a hard disk controller ROM at address C800H and a system BIOS ROM at F000H.  Sometimes, the computer stops working during a disk operation.  Add the following option to the Qualitas MAX profile.  This option disables automatic ROM caching and caches 
+only the system BIOS ROM:
+\par 
+\par  ROM=F000-10000
+\par 
+\par {\b See Also:} NOROM
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>SHADOWRAM
+\par \pard\plain \f11                       {\i SHADOWRAM}
+\par 
+\par {\b Purpose:} Recovers additional memory on shadow RAM
+\par          systems
+\par  {\b Syntax:} SHADOWRAM
+\par {\b Default:} Recover shadow RAM
+\par 
+\par This option tells Qualitas MAX to re
+cover additional RAM in systems containing the Chips and Technologies NEAT, AT/386, or compatible CHIPSet hardware.  Such computers have 384 KB of RAM on the system board that parallels the high DOS area from 640 KB to one megabyte.  This memory is known 
+as shadow RAM.  The CHIPSet hardware remaps slow ROMs, such as system BIOS ROM, into shadow RAM.  The result is faster performance.
+\par 
+\par After remapping, there may be shadow RAM left over.  The SHADOWRAM option tells Qualitas MAX to reclaim this memory for SmartMemory.
+\par 
+\par {\b Example: }With C&T CHIPSet compatible hardware, add SHADOWRAM to the Qualitas MAX profile.
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>SHADOWROM
+\par \pard\plain \f11                       {\i SHADOWROM}
+\par 
+\par {\b Purpose:} Allows the system to perform video
+\par          shadowing
+\par  {\b Syntax:} SHADOWROM
+\par {\b Default:} Override video shadowing
+\par 
+\par On some computers, the system BIOS automatically relocates the EGA/VGA ROM at address C000H into the high DOS region at E000H.  This technique fragments high DOS memory and reduces the amount of high DOS address space available to Qualitas MAX.  
+By default, Qualitas MAX prevents these systems from remapping video ROM.  Qualitas MAX then performs the remapping function itself.  The result is additional high DOS memory without a decrease in performance.
+\par 
+\par The SHADOWROM option turns off the video remapping function of Qualitas MAX.  It allows the system to perform remapping.
+\par 
+\par {\b Example: }The video display behaves erratically on a shadow ROM system.  This system normally copies video ROM into RAM at address E000H.  As a solution, try adding SHADOWROM to the Qualitas MAX profile.
+\par 
+\par {\b See Also:} NOROM, ROM=, RAM=
+\par \pard\plain \s16 \f11\fs28\cf6 >>STACKREG
+\par \pard\plain \f11                  {\i STACKREG= (Advanced Option)}
+\par 
+\par {\b Purpose:} Loads the MAX Stacks support into a
+\par          specified program region
+\par  {\b Syntax:} STACKREG=nnn,r where nnn is the size of the
+\par          Stack Overflow Protection data area and r
+\par          is the program region
+\par {\b Default:} Determined by MAXIMIZE
+\par 
+\par This option specifies the size and region of the MAX Stack Overflow Protection support. The size and program region is determined by MAXIMIZE.
+\par 
+\par {\b Example: }To load MAX Stack Overflow Protection support in region 2 of high DOS, add STACKREG=2 to the Qualitas MAX profile.
+\par 
+\par {\b See Also:} STACKS=, PRGREG=
+\par \pard\plain \s16 \f11\fs28\cf6 >>STACKS
+\par \pard\plain \f11                  {\i STACKS= (Advanced Option)}
+\par 
+\par {\b Purpose:} Specifies the size of the MAX Stacks 
+\par          support
+\par  {\b Syntax:} STACKS=n,n where n is a decimal number
+\par {\b Default:} Same as STACKS=6,128
+\par 
+\par Qualitas MAX offers Stack Overflow Protection by managing DOS Stacks at the protected mode level as opposed to real mode. This can create a better environment for stack-hungry TSRs that mususe DOS Stacks. By default, Qualitas MAX uses the setting 6,128.
+
+\par 
+\par {\b Example: }To disable MAX Stack Overflow Protection support, add STACKS=0 to the Qualitas MAX profile.
+\par 
+\par {\b See Also:} STACKS=, PRGREG=
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>SWAP
+\par \pard\plain \f11                         {\i SWAP=}
+\par 
+\par {\b Purpose:} Replaces slow system board memory with the
+\par          faster memory on a 386 accelerator card
+\par  {\b Syntax:} SWAP=n where n is a decimal number in
+\par          increments of 4
+\par {\b Default:} Swapping enabled for all slow memory
+\par          in the low DOS area
+\par 
+\par This option exchanges slow memory on the system board for fast extended memory on a 386 (or greater) accelerator card.  The SWAP= option applies to both 8 and 16 bit memory.
+\par 
+\par Qualitas MAX swaps the first n KB of system memory starting at address 0000H with the same amount of fast extended memory.  The SWAP= option is only necessary if the main system memory is significantly slower than extended memory.  This condition occurs o
+n computers that contain a 386 accelerator board.
+\par 
+\par {\b Example:} An XT system has 640 KB of system memory.  It also has a 386 accelerator card that Qualitas MAX does not automatically recognize.  Add the following option to the Qualitas MAX profile:
+\par 
+\par  SWAP=640
+\par \pard\plain \s16 \f11\fs28\cf6 >>SWAPFILE
+\par \pard\plain \f11                 {\i SWAPFILE= (Advanced Option)}
+\par 
+\par {\b Purpose:} Creates a virtual memory swapfile
+\par  {\b Syntax:} SWAPFILE=[d:\\path\\swapfile.ext][/s=nnnn]
+\par          [/p] where nnnn is a decimal number of
+\par          kilobytes and p specifies a permanent
+\par          swapfile
+\par {\b Default:} Temporary swapfile named 386MAX.SWP
+\par          for 8 MB
+\par 
+\par By default, 
+INSTALL will designate a non-removeable drive with at least 8 MB for use as a temporary swapfile. This swapfile is only created when a DPMI application is run, and is deleted when the application terminates. A 10 byte hidden file will remain. If 8 MB is n
+ot available, the swapfile will be created for 4 MB, 2 MB or 1 MB, depending on avialable disk space.
+\par 
+\par {\b Example:} To create a permanent swapfile with the name, SWAP.FIL for 8 MB, add the following line to the Qualitas MAX profile:
+\par 
+\par  SWAPFILE=C:\\QMAX\\SWAP.FIL /S=8192 /P
+\par 
+\par {\b See Also: }The MEMLIMIT utility included with Qualitas MAX
+\par \pard\plain \s16 \f11\fs28\cf6 >>SYS
+\par \pard\plain \f11                         {\i SYS=}
+\par 
+\par {\b Purpose:} Identifies special systems
+\par  {\b Syntax:} SYS=sysname
+\par {\b Default:} Qualitas MAX identifies most systems auto-
+\par          matically
+\par 
+\par Qualitas MAX needs this option to identify certain 386 accelerator cards.  It recognizes most other systems automatically.  At this time, only the Intel Inboard and Orchid Jet 386 require the SYS option.  For the Inboard, the syntax is SYS=INBOARD.  For t
+he Orchid Jet 386, use SYS=JET386.
+\par 
+\par {\b Example:} An IBM PC machine contains an Intel Inboard PC.  Add the following option to the Qualitas MAX profile:
+\par 
+\par  SYS=INBOARD
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>TOP384
+\par \pard\plain \f11                        {\i TOP384}
+\par 
+\par {\b Purpose:} Recovers additional memory on unrecognized
+\par          Compaq compatible computers
+\par  {\b Syntax:} TOP384
+\par {\b Default:} Recover additional memory on any computer
+\par          recognized as a Compaq
+\par 
+\par On Compaq-compatible machines, this option reclaims 384 KB of unused shadow RAM and adds it to SmartMemory.
+\par 
+\par {\b Example: }You have a Compaq-compatible computer and you want to increase the size of SmartMemory by 384 KB.  Add TOP384 to the Qualitas MAX profile.
+\par \pard\plain \s16 \f11\fs28\cf6 >>UMB
+\par \pard\plain \f11                           {\i UMB}
+\par {\b Purpose:} Provide Upper Memory Block (UMB) support
+\par {\b Syntax:}  UMB
+\par {\b Default:} No UMB support
+\par 
+\par This option enables support for eXtended Memory Specification (XMS) Upper Memory Blocks (UMBs).  Some programs can load themselves into Upper Memory Blocks or use UMBs for other purposes.
+\par 
+\par {\b Example: }To ensure XMS UMB support, add the UMB keyword to the MOVE'EM.MGR line in CONFIG.SYS.  This option allows a disk cache to load itself into high DOS memory.
+\par \pard\plain \s16 \f11\fs28\cf6 >>USE
+\par \pard\plain \f11                          {\i USE=}
+\par 
+\par {\b Purpose:} Map memory into the specified high DOS
+\par          region
+\par  {\b Syntax:} USE=xxxx-yyyy where xxxx-yyyy is a
+\par          hexadecimal address range
+\par {\b Default:} Qualitas MAX maps memory into all available
+\par          regions in high DOS memory
+\par 
+\par This option maps high DOS memory into an address range which Qualitas MAX would not normally use.
+\par 
+\par Some systems have regions in the high DOS area that appear to be in use but are actually free.  The USE option tells Qualitas MAX to use these addresses as additional high DOS memory.
+\par 
+\par A single USE option can include multiple address ranges separated by commas.  The Qualitas MAX profile can contain more than one USE option.
+\par 
+\par {\b Example: }On a system equipped with an EGA or VGA video adapter and no monochrome display, add the following option to the Qualitas MAX profile.  This option increases high DOS memory by 32 KB:
+\par 
+\par  USE=B000-B800
+\par 
+\par {\b See Also:} NOHIGH, RAM=
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>VGA
+\par \pard\plain \f11                          {\i VGA}
+\par 
+\par {\b Purpose:} Prevents Qualitas MAX from backfilling on systems
+\par          with nonstandard VGA hardware
+\par  {\b Syntax:} VGA
+\par {\b Default:} Backfill if Qualitas MAX does not recognize the
+\par          presence of a VGA adapter
+\par 
+\par Qualitas MAX automatically detects VGA hardware.  On systems which are not recognized as VGA, but which use the memory region A000H-C000H, use this option.
+\par 
+\par {\b Example: }If video output is erratic on a nonstandard VGA system, add the VGA option to the Qualitas MAX profile.
+\par 
+\par {\b See Also:} VIDMEM=
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>VGASWAP
+\par \pard\plain \f11              {\i VGASWAP=} (advanced option)
+\par 
+\par {\b Purpose:} Relocates VGA BIOS
+\par  {\b Syntax:} VGASWAP [=xxxx],[yyyy],[zzzz] where xxxx
+\par          and yyyy are hexadecimal addresses, and
+\par          zzzz is a hexadecimal number
+\par {\b Default:} No VGA BIOS relocation
+\par 
+\par VGASWAP reduces fragmentation in high DOS memory.  It increases the size of the largest contiguous region of high DOS memory.  In many cases, the VGASWAP option increases the number of resident programs that Maximize loads into high memory.
+\par 
+\par By default, VGASWAP relocates a 32 KB VGA BIOS from C000H to B000H.  To override the default values, use xxxx to specify the actual starting address of the VGA BIOS.  Use yyyy to specify the target address of the relocated VGA BIOS.  Use zzzz to specify t
+he length of the VGA BIOS in hexadecimal bytes. 
+\par 
+\par Please note the following:
+\par 
+\par   * The VGASWAP option overrides the USE= option.
+\par     (If the target address in a VGASWAP option
+\par     conflicts with an address in a USE= option,
+\par     VGASWAP takes precedence.)
+\par   * Since the VGASWAP option uses ROM caching, it
+\par     assumes that the code in the VGA ROM will run in
+\par     RAM.  Caching does not work with all ROMs.  If a
+\par     VGA ROM fails to run after caching, do not use
+\par     the VGASWAP option.
+\par   * The NOROM option overrides VGASWAP.
+\par 
+\par {\b Example: }You have a 32 KB VGA BIOS located at C000H.  Furthermore, your system has 32 KB of available high DOS memory.  This free region starts at F400H.  Use the following option to relocate your VGA BIOS to F400H:
+\par 
+\par  VGASWAP=,F400,8000
+\par 
+\par {\b See Also:} VGA, VIDMEM=
+\par \pard\plain \s16 \f11\fs28\cf6 {\fs20\cf0 
+\par }>>VIDMEM
+\par \pard\plain \f11                        {\i VIDMEM=}
+\par 
+\par {\b Purpose:} Specifies the address range of video memory
+\par  {\b Syntax:} VIDMEM=xxxx-yyyy where xxxx-yyyy is a
+\par          hexadecimal address range
+\par {\b Default:} Qualitas MAX automatically determines the appro-
+\par          priate address range for most video
+\par          adapters
+\par 
+\par This option specifies the range of addresses reserved for the video adapter.  It prevents Qualitas MAX from managing this memory. 
+\par 
+\par Qualitas MAX can extend the low DOS memory area to the beginning of the video region.  For CGA and monochrome systems, this technique can extend low DOS memory beyond 640 KB.
+\par 
+\par Qualitas MAX recognizes the display adapters in the following list.  The second column in the list shows the appropriate range of addresses for each kind of adapter.  The third column shows the amount of low DOS memory that the VIDMEM option reclaims.
+
+\par 
+\par {\b  Adapter  VIDMEM=   Adds}
+\par   CGA    B800-C000  96 KB
+\par   EGA    A000-C000   0 KB
+\par   MONO   B000-C000  64 KB
+\par   VGA    A000-C000   0 KB
+\par 
+\par Some video adapters may not use the memory addresses shown above.  Refer to the adapter documentation for the correct range and include this range in the VIDMEM option.
+\par 
+\par {\b Example: }A high resolution monochrome system normally uses video addresses in the range B000H-C000H.  The system be
+haves erratically when Qualitas MAX backfills memory to 704 KB.  Add the following VIDMEM option to the Qualitas MAX profile.  The option tells Qualitas MAX not to backfill the video region:
+\par 
+\par  VIDMEM=A000-C000
+\par 
+\par {\b See Also:} CGA, EGA, MONO, VGA
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>VXD
+\par \pard\plain \f11                         {\i VXD=}
+\par 
+\par {\b Purpose:} Specifies the location of the VxD file
+\par  {\b Syntax:} VXD=drive:\\path\\386MAX.VXD
+\par {\b Default:} Qualitas MAX looks for 386MAX.VXD in the \tab \tab \tab  Qualitas MAX
+\par          directory
+\par 
+\par This option specifies the location of the VxD file necessary for Windows 3 support.  The VXD option is useful when running Qualitas MAX on a diskless workstation.
+\par 
+\par {\b Example: }On a diskless workstation, the Qualitas MAX files reside in a boot image along with CONFIG.SYS and AUTOEXEC.BAT.  This image disappears after startup.  The Qualitas MAX files are located in G:\\
+MAX on the network.  Add the following option to the Qualitas MAX profile:
+\par 
+\par  VXD=G:\\MAX\\386MAX.VXD
+\par 
+\par {\b See Also:} NOWIN3
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>WEITEK
+\par \pard\plain \f11                        {\i WEITEK=}
+\par 
+\par {\b Purpose:} Controls Weitek 1167 coprocessor support
+\par  {\b Syntax:} WEITEK=ON, OFF or FORCE
+\par {\b Default:} Automatically recognize and support the
+\par          Weitek 1167 coprocessor
+\par 
+\par Qualitas MAX does a routine inspection of the system BIOS to look for a Weitek coprocessor.  On some systems the BIOS does not correctly report Weitek information.  Use the WEITEK=FORCE option to tell Qualitas MAX that the system has a coprocessor.
+\par 
+\par When WEITEK=FORCE has been specified in the Qualitas MAX profile, WEITEK=ON and WEITEK=OFF may be used to turn Weitek support on and off.  This may be done from the Qualitas MAX profile or using 386UTIL at the DOS command line.
+\par 
+\par {\b Example: }Your program does not recognize the WEITEK coprocessor.  Add the following line to the Qualitas MAX profile:
+\par 
+\par  WEITEK=FORCE
+\par 
+\par Prior to running your program, enable Weitek support from the DOS prompt with the following command:
+\par 
+\par  386UTIL WEITEK=ON
+\par \pard\plain \s16 \f11\fs28\cf6 >>XBDAREG
+\par \pard\plain \f11                {\i XBDAREG= (Advanced Option)}            
+\par 
+\par {\b Purpose:} Loads the eXtended BIOS Data Area (XBDA)
+\par          into a specified program region
+\par  {\b Syntax:} XBDAREG=nnn,r where nnn is the size of
+\par          the XBDA and r is the program region
+\par {\b Default:} Determined by MAXIMIZE
+\par 
+\par Qualitas MAX relocates the eXtended BIOS Data Area that normally resides at the top of low DOS memory into high DOS memory. The size and region of XBDA is determined by MAXIMIZE>
+\par  
+\par {\b Example: }To load an XBDA into region 2, add XBDAREG=2 to the Qualitas MAX profile.
+\par 
+\par {\b See Also:} PRGREG=, HPDAREG=, STACKREG=
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>XBIOSHI
+\par \pard\plain \f11                        {\i XBIOSHI}
+\par 
+\par {\b Purpose:} Relocate XBIOS into high DOS memory 
+\par  {\b Syntax:} XBIOSHI
+\par {\b Default:} Do not relocate XBIOS into high DOS memory
+\par 
+\par This option directs Qualitas MAX to relocate the eXtended BIOS Data Area (XBIOS) from low DOS memory into high DOS memory.  By default, Qualitas MAX relocates the XBIOS to a low address in low DOS memory.  The XBIOS uses approximately 1 KB of memory.  Whe
+n XBIOSHI is in effect, the XBIOS is appended to the Qualitas MAX device driver in high DOS memory.
+\par 
+\par {\b Example: }To free up an additional 1 KB of low DOS memory on a system with an XBIOS data area, add XBIOSHI to the Qualitas MAX profile:
+\par 
+\par  XBIOSHI   
+\par 
+\par {\b See Also:} NOXBIOS
+\par 
+\par \pard\plain \s16 \f11\fs28\cf6 >>XMSHNDL
+\par \pard\plain \f11              {\i XMSHNDL=} (advanced option)
+\par 
+\par {\b Purpose:} Change the number of available XMS handles
+\par  {\b Syntax:} XMSHNDL=n where n is a decimal number
+\par          between 2 and 65535
+\par {\b Default:} Same as XMSHNDL=32
+\par 
+\par This option changes the number of available XMS handles from the default of 32.  Each handle occupies six bytes of extended memory.
+\par 
+\par {\b Example: }A program requires 512 XMS handles.  Add the following option to the Qualitas MAX profile:
+\par 
+\par  XMSHNDL=512
+\par  
+\par {\b See Also:} HMAMIN=
+\par 
+\par }

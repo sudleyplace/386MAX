@@ -1,0 +1,43 @@
+.comment file Mx_D_Hlp.Asc
+.comment ascii source for maximize static displays
+.comment line width max 76, compile at 76 wide
+.comment \b = hi cyan, \b\i = hi yellow
+.comment \i = inverse (blue on white)
+.context M_D_Complete
+.comment maximize complete screen background
+
+  \b\ifrom low DOS\b\i			  \b\ito high DOS\b\i
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿		ÚÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+		      \bÄÄÄÄÄÄÄÄÂÄÄ¯\b		  ³
+			      \b³\b ³  VIDEO	  ³
+			      \bÃÄÄ¯\b		  ³
+			      \b³\b ³  PAGE FRAME ³
+			      \bÀÄÄ¯\b		  ³
+				³  ROM	      ³
+				ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+.context M_D_Progress
+.comment Maximize/reorder progress screen
+.comment DO NOT make any changes here which will affect placement of data
+.comment WITHOUT making corequisite changes to show_progress() in screens.c.
+.comment First line below this comment is #2.  Columns are numbered from 1.
+.comment |    .    |	.    |	  .    |    .	 |    .    |	.    |	  .
+.comment 10...5....20...5....30...5....40...5....50...5....60...5....70...5.
+.comment	   _______Combinations considered   __Time__   Bytes moved
+
+
+
+       \b\i% Complete:\b\i \i°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°\i
+		   \b\i0	  25	       50	    75	       100\b\i
+    (Note: Progress is not linear and might not occur in regular jumps)
+
+		   \b\i        Number of combinations\b\i   \b\i  Time	\b\i   \b\iBytes\b\i
+
+  \b\iTotal\b\i
+
+  \b\iTested\b\i
+
+  \b\iBest fit so far\b\i
+
+
+  Press Ctrl-Break to cancel.
+.comment end

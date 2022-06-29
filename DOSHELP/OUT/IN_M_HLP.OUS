@@ -1,0 +1,151 @@
+{\rtf1\ansi \deff11{\fonttbl{\f3\fmodern\fcharset0\fprq1 Courier;}{\f11\fmodern\fcharset0\fprq1 Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;
+\red192\green192\blue192;}{\stylesheet{\f11 \snext0 Normal;}{\*\cs10 \additive Default Paragraph Font;}{\s15\fi-288\li576 \f11 \sbasedon0\snext15 Outdent4;}{\s16\keepn \f11\fs28\cf6 \sbasedon0\snext16 Context;}{\s17\fi-1584\li1872 \f11 \sbasedon0\snext17 
+Outdent13;}{\s18\li288 \f11 \sbasedon0\snext18 Indent2;}}{\info{\title install messge system, medium msgs.}{\author Stan}{\operator Qualitas, Inc.}{\creatim\yr1991\mo5\dy19\hr11\min33}{\revtim\yr1993\mo6\dy2\hr14\min55}{\printim\yr1992\mo8\dy5\hr15\min1}
+{\version1}{\edmins3}{\nofpages0}{\nofwords0}{\nofchars0}{\vern49203}}\margl1440\margr3456 \deftab0\widowctrl\ftnbj0 0\sectd \linex0\endnhere {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}2
+\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}6
+\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}8\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}9\pnlcrm\pnstart1\pnindent720\pnhang
+{\pntxtb (}{\pntxta )}}\pard\plain \f11 {\cf2 Install Message Text, Medium Messages
+\par by Stan Leszynski
+\par }\pard \fi-288\li270\ri-2700 {\cf2 These notes are not a live context
+\par }\pard \fi-288\li288\ri-2700 {\cf2 Line width 51
+\par Context strings begin with >>
+\par Use ## to surround replaceable parameters, tag _ at end of parameter to reserve spaces for attribute if ## block not big enough to properly wrap
+\par }\pard {\cf2 MSWord file use:
+\par  Set Printer to Generic/Text only on File:
+\par  Set View to Page mode to see wrapping
+\par  Default tabs 0
+\par  Left margin 0
+\par  Right margin 3.4"
+\par  Top margin 0
+\par  Bottom margin 0
+\par For indented lines or to get desired wrapping, use hard returns
+\par Text highlighting:
+\par  use }{\b\cf2 BOLD}{\cf2  for accenting= yellow text
+\par 
+\par }\pard\plain \s16\keepn \f11\fs28\cf6 >>M.BadDOSSubdir
+\par \pard\plain \f11 #PROGNAME# did not detect DOS 5.x help files in:
+\par   #ARG1#
+\par 
+\par {\b Would you like to enter a new subdirectory?}
+\par \pard\plain \s16\keepn \f11\fs28\cf6 >>M.BadUpdSubdir
+\par \pard\plain \f11 #PROGNAME# cannot confirm that you have a previous license for a Qualitas Memory Management product.  If you continue, #PROGNAME# cannot guarantee that all features of this upgrade version will operate properly.
+\par 
+\par {\b Would you like to continue?
+\par }
+\par {\b Press Back to re-enter the subdirectory of your previous installation.}
+\par \pard\plain \s16\keepn \f11\fs28\cf6 >>M.BadWinSubdir
+\par \pard\plain \f11 #PROGNAME# did not detect Windows files in:
+\par   #ARG1#
+\par 
+\par {\b Would you like to enter a new subdirectory?}
+\par \pard\plain \s16\keepn \f11\fs28\cf6 >>M.DestDir
+\par \pard\plain \f11 {\b Enter a directory specification for the location of the program files after installation:}
+\par 
+\par 
+\par \pard\plain \s16\keepn \f11\fs28\cf6 >>M.DOSHelp
+\par \pard\plain \f11 #PROGNAME# has detected DOS 5.x on this system and can add help text for installed Qualitas products to the DOS help file.
+\par 
+\par {\b Would you like #PROGNAME# to add help text to the DOS help file?
+\par }\pard\plain \s16\keepn \f11\fs28\cf6 >>M.DOSPath
+\par \pard\plain \f11 #PROGNAME# needs to know the location of your DOS directory so that it can add help text for Qualitas products.
+\par 
+\par {\b Specify the drive and path of the DOS subdirectory:
+\par }
+\par 
+\par \pard\plain \s16\keepn \f11\fs28\cf6 >>M.GetMono
+\par \pard\plain \f11 We have detected available regions in the monochrome display adapter area (MDA).
+\par 
+\par #PROGNAME# can add statements to the #FLENMEXT# profile to recover the available regions in the MDA as high DOS memory.
+\par 
+\par {\b Would you like #PROGNAME# to allow use of the MDA region as high DOS memory?}
+\par \pard\plain \s16\keepn \f11\fs28\cf6 >>M.MaxBack
+\par \pard\plain \f11 Standard #PROGNAME# is complete.  Existing installation has been saved in
+\par 
+\par #ARG1#.
+\par 
+\par Run #ARG2# to delete.
+\par 
+\par Maximize is a program that automatically and optimally configures your system and the program loader 386LOAD to make available the maximum amount of conventional memory.
+\par 
+\par {\b Would you like to run Maximize now?}
+\par \pard\plain \s16\keepn \f11\fs28\cf6 >>M.Maximize
+\par \pard\plain \f11 Standard #PROGNAME# is complete.
+\par 
+\par Maximize is a program that automatically and optimally configures your system and the program loader 386LOAD to make available the maximum amount of conventional memory.
+\par 
+\par {\b Would you like to run Maximize now?}
+\par \pard\plain \s16\keepn \f11\fs28\cf6 >>M.NoInstall
+\par \pard\plain \f11 #PROGNAME# has not detected hardware in this machine that will support a Qualitas product and cannot continue.  One of these is required:
+\par 
+\par   {\b\i *} an 80386 processor; or
+\par   {\b\i *} a Chips & Technologies chipset; or
+\par   {\b\i *} hardware LIM 4.0 EMS support.
+\par 
+\par {\b Press Enter to end #PROGNAME#.}
+\par \pard\plain \s16\keepn \f11\fs28\cf6 >>M.NoMaximize
+\par \pard\plain \f11 You chose to exit #PROGNAME# without running Maximize.
+\par 
+\par Maximize optimally configures your system to make available the maximum amount of conventional memory possible.
+\par 
+\par {\b Do you want #PROGNAME# to run Maximize now?}
+\par \pard\plain \s16\keepn \f11\fs28\cf6 >>M.NoWinSupp
+\par \pard\plain \f11 You have run the DOS version of Setup for Qualitas MAX.  If you continue with this program, no Windows features will be installed.  If you would like to install Windows features, you should run the Windows version of this setup program.
+
+\par 
+\par {\b Would you like to run the Windows version of Setup for Qualitas MAX?}
+\par \pard\plain \s16\keepn \f11\fs28\cf6 >>M.NoWin
+\par \pard\plain \f11 #PROGNAME# has not detected Windows files by searching in your system's PATH.
+\par 
+\par {\b Do you plan to use Windows with #FLENME____#?}
+\par \pard\plain \s16\keepn \f11\fs28\cf6 >>M.UpdateDir
+\par \pard\plain \f11 This product is an upgrade to previous versions of Qualitas Memory Management products.
+\par {\b 
+\par Please enter the directory of a previous installation of #FLENME____#, 386MAX or BlueMAX:}
+\par 
+\par \pard\plain \s16\keepn \f11\fs28\cf6 >>M.SrcDrv
+\par \pard\plain \f11 Place the working copy of #FLENME____# in a floppy drive and enter the drive letter, or enter the drive and path specifying the location of the distribution files:
+\par 
+\par \pard\plain \s16\keepn \f11\fs28\cf6 >>M.WinPath
+\par \pard\plain \f11 {\b Specify the drive and path of the Windows subdirectory:}
+\par 
+\par \pard\plain \s16\keepn \f11\fs28\cf6 >>M.SVGAWarn
+\par \pard\plain \f11 #PROGNAME# has detected a
+\par #ARG1# #ARG2#
+\par super VGA card with #ARG3#K or more of video memory.  This device adapter is CAPABLE of using the monochrome display area (MDA).
+\par 
+\par #PROGNAME# can add statements to the #FLENMEXT# profile to recover the available regions in the MDA as high DOS memory.  Although there are available regions in your monochrome display adapter area, you may not want to recover them if any of your software
+ applications use this area for super VGA modes, or if you use monochrome display emulation.
+\par 
+\par {\b Do you want #PROGNAME# to allow use of the MDA region as high DOS memory?}
+\par \pard\plain \s16\keepn \f11\fs28\cf6 >>M.BootSwap_A
+\par \pard\plain \f11 You have requested drive swapping environment support.  #PROGNAME# needs to ask a few questions.  If a drive designation is not applicable, leave it blank by pressing the space bar.
+\par 
+\par {\b\f3 Disk compression/swapping detected:}{\f3  #ARG3____#
+\par }{\b Boot drive:} #ARG1#
+\par {\b Actual boot drive:
+\par Drive to copy CONFIG.SYS and AUTOEXEC to:
+\par 
+\par #FLENME____# directory:
+\par }#ARG2#
+\par {\b Drive to use for #FLENME____# in CONFIG.SYS:
+\par Drive to copy essential #FLENME____# files to:
+\par Alternate drive for essential #FLENME____# files:
+\par }\pard\plain \s16\keepn \f11\fs28\cf6 >>M.BootSwap
+\par \pard\plain \f11 You are installing #FLENME____# to
+\par #ARG2#
+\par 
+\par Is #ARG4_# compressed?
+\par 
+\par This drive may also be a swapped drive.  What is the drive designation of #ARG4_# at boot time (If this drive did not exist at boot time, leave this space blank)?
+\par 
+\par Your boot drive is #ARG1#:.  The previous drive designation for drive #ARG1#: is#ARG3#
+\par \pard\plain \s16\keepn \f11\fs28\cf6 >>M.QMT
+\par \pard\plain \f11 #FLENME____# includes the Qualitas Memory Tester (QMT).  QMT uses advanced memory checking to find problems in your PC's memory system.  Memory problems can cause system crashes and data loss.
+\par 
+\par QMT may be added to your AUTOEXEC.BAT so that memory is quickly tested each time you boot your system.  Running QMT this way adds approximately #ARG1# seconds to system start-up.
+\par 
+\par {\b Would you like #PROGNAME# to add QMT to your
+\par AUTOEXEC.BAT?}
+\par 
+\par }
