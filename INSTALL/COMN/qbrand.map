@@ -1,0 +1,392 @@
+
+ Start  Stop   Length Name                   Class
+ 00000H 004BFH 004C0H QBRAND_TEXT            CODE
+ 004C0H 0205FH 01BA0H _TEXT                  CODE
+ 02060H 02061H 00002H EMULATOR_TEXT          CODE
+ 02062H 020D3H 00072H SERIAL_TEXT            CODE
+ 020D4H 020D4H 00000H C_ETEXT                ENDCODE
+ 020E0H 020E0H 00000H EMULATOR_DATA          FAR_DATA
+ 020E0H 02121H 00042H NULL                   BEGDATA
+ 02122H 029B7H 00896H _DATA                  DATA
+ 029B8H 029B9H 00002H XIQC                   DATA
+ 029BAH 029C5H 0000CH DBDATA                 DATA
+ 029C6H 029D3H 0000EH CDATA                  DATA
+ 029D4H 029D4H 00000H XIFB                   DATA
+ 029D4H 029D4H 00000H XIF                    DATA
+ 029D4H 029D4H 00000H XIFE                   DATA
+ 029D4H 029D4H 00000H XIB                    DATA
+ 029D4H 029D4H 00000H XI                     DATA
+ 029D4H 029D4H 00000H XIE                    DATA
+ 029D4H 029D4H 00000H XPB                    DATA
+ 029D4H 029D7H 00004H XP                     DATA
+ 029D8H 029D8H 00000H XPE                    DATA
+ 029D8H 029D8H 00000H XCB                    DATA
+ 029D8H 029D8H 00000H XC                     DATA
+ 029D8H 029D8H 00000H XCE                    DATA
+ 029D8H 029D8H 00000H XCFB                   DATA
+ 029D8H 029D8H 00000H XCFCRT                 DATA
+ 029D8H 029D8H 00000H XCF                    DATA
+ 029D8H 029D8H 00000H XCFE                   DATA
+ 029D8H 029D8H 00000H XIFCB                  DATA
+ 029D8H 029D8H 00000H XIFU                   DATA
+ 029D8H 029D8H 00000H XIFL                   DATA
+ 029D8H 029D8H 00000H XIFM                   DATA
+ 029D8H 029D8H 00000H XIFCE                  DATA
+ 029D8H 029D8H 00000H CONST                  CONST
+ 029D8H 029DFH 00008H HDR                    MSG
+ 029E0H 02AB5H 000D6H MSG                    MSG
+ 02AB6H 02AB7H 00002H PAD                    MSG
+ 02AB8H 02AB8H 00001H EPAD                   MSG
+ 02ABAH 02AC5H 0000CH _BSS                   BSS
+ 02AC6H 02AC6H 00000H XOB                    BSS
+ 02AC6H 02AC6H 00000H XO                     BSS
+ 02AC6H 02AC6H 00000H XOE                    BSS
+ 02AC6H 02AC6H 00000H XOFB                   BSS
+ 02AC6H 02AC6H 00000H XOF                    BSS
+ 02AC6H 02AC6H 00000H XOFE                   BSS
+ 02AD0H 02B20H 00051H c_common               BSS
+ 02B30H 0332FH 00800H STACK                  STACK
+
+ Origin   Group
+ 020E:0   DGROUP
+
+  Address         Publics by Name
+
+ 0206:0002       _decrypt_serialno
+ 020E:09DA       _edata
+ 0000:0024       _encrypt
+ 020E:0A50       _end
+ 020E:0484       _errno
+ 0000:0000       _error
+ 004C:01EB       _exit
+ 004C:0636       _fclose
+ 004C:0A32       _fflush
+ 020E:0042       _force
+ 004C:1450       _gets
+ 0000:0414       _main
+ 004C:1578       _memset
+ 020E:0774       _Pattern
+ 004C:0704       _printf
+ 0000:005E       _process_file
+ 004C:19C4       _remove
+ 020E:09F0       _serial_data
+ 004C:14B4       _sprintf
+ 020E:04CA       _STKHQQ
+ 004C:1318       _strcat
+ 004C:136C       _strcpy
+ 004C:13D2       _strncmp
+ 004C:13A8       _strncpy
+ 020E:04C6       __aaltstkovr
+ 020E:0468       __acfinfo
+ 0000:9876  Abs  __acrtmsg
+ 0000:9876  Abs  __acrtused
+ 0000:D6D6  Abs  __aDBdoswp
+ 020E:04C2       __adbgmsg
+ 020E:044A       __aexit_rtn
+ 004C:02C6       __aFchkstk
+ 004C:1662       __aFlshl
+ 004C:166E       __aFulshr
+ 0000:1000  Abs  __AHINCR
+ 0000:000C  Abs  __AHSHIFT
+ 020E:0476       __aintdiv
+ 020E:073E       __amblksiz
+ 004C:00F4       __amsg_exit
+ 020E:0042       __anullsize
+ 020E:0462       __aseghi
+ 020E:0464       __aseglo
+ 020E:044C       __asizds
+ 020E:0760       __asizeC
+ 020E:0761       __asizeD
+ 004C:0010       __astart
+ 020E:0448       __atopsp
+ 004C:01FA       __cexit
+ 020E:0740       __cfltcvt_tab
+ 020E:04E8       __cflush
+ 020E:04B9       __child
+ 004C:02C6       __chkstk
+ 004C:0122       __cinit
+ 004C:00E5       __cintDIV
+ 004C:1078       __close
+ 004C:15C0       __cltoasub
+ 004C:151E       __commit
+ 020E:0491       __cpumode
+ 004C:0272       __ctermsub
+ 004C:1B8F       __cXENIXtoDOSmode
+ 004C:15CD       __cxtoa
+ 004C:0204       __c_exit
+ 004C:0120       __dataseg
+ 020E:0492       __doserrno
+ 004C:05DE       __dosret0
+ 004C:05F3       __dosretax
+ 004C:05E6       __dosreturn
+ 004C:1624       __dos_commit
+ 004C:1632       __dos_getftime
+ 004C:164E       __dos_setftime
+ 020E:09DA       __edata
+ 0206:0000       __EmDataSeg
+ 020E:0A50       __end
+ 004C:0748       __endstdio
+ 020E:04B0       __environ
+ 004C:01F2       __exit
+ 020E:04C1       __exitflag
+ 020E:047A       __fac
+ 004C:0634       __farstub
+ 004C:142A       __fcloseall
+ 020E:0466       __fDosExt
+ 004C:17EE       __ffree
+ 004C:029E       __FF_MSGBANNER
+ 020E:0766       __fheap
+ 004C:075E       __filbuf
+ 004C:12F8       __findlast
+ 004C:07FA       __flsbuf
+ 004C:0A8A       __flush
+ 004C:0B0A       __flushall
+ 004C:1801       __fmalloc
+ 020E:08D6       __fmode
+ 020E:08E8       __fpinit
+ 004C:02C0       __fptrap
+ 004C:08E6       __freebuf
+ 004C:09EB       __ftbuf
+ 004C:091E       __getbuf
+ 004C:1218       __growseg
+ 004C:12A7       __incseg
+ 004C:189A       __initseg
+ 020E:04BC       __intno
+ 020E:04EA       __iob
+ 020E:05DA       __iob2
+ 020E:08D6       __iomode
+ 004C:140E       __itoa
+ 020E:06CA       __lastiob
+ 004C:18CE       __linkseg
+ 004C:1098       __lseek
+ 020E:073C       __lseekchk
+ 004C:0600       __maperror
+ 004C:05B8       __myalloc
+ 004C:1980       __newseg
+ 020E:0494       __nfile
+ 020E:044E       __nheap_desc
+ 004C:0556       __NMSG_TEXT
+ 004C:0581       __NMSG_WRITE
+ 004C:02EA       __nullcheck
+ 004C:19EE       __open
+ 020E:0492       __oserr
+ 020E:0496       __osfile
+ 020E:048D       __osmajor
+ 020E:048C       __osminor
+ 020E:0490       __osmode
+ 020E:048C       __osver
+ 020E:048E       __osversion
+ 004C:0B8E       __output
+ 020E:04BB       __ovlflag
+ 020E:04BD       __ovlvec
+ 020E:04B4       __pgmptr
+ 020E:0762       __pnhFarHeap
+ 020E:048A       __psp
+ 020E:0488       __pspadr
+ 004C:111A       __read
+ 004C:1904       __searchseg
+ 004C:030E       __setargv
+ 004C:04B6       __setenvp
+ 020E:075E       __sigintoff
+ 020E:075C       __sigintseg
+ 004C:19D4       __sopen
+ 004C:17DA       __stackavail
+ 004C:096A       __stbuf
+ 020E:0486       __umaskval
+ 004C:19C4       __unlink
+ 004C:167A       __write
+ 020E:08E0       ___aDBexit
+ 020E:08DE       ___aDBrterr
+ 020E:08DC       ___aDBswpchk
+ 020E:08DA       ___aDBswpflg
+ 020E:04AA       ___argc
+ 020E:04AC       ___argv
+ 020E:08D8       ___qczrinit
+
+  Address         Publics by Value
+
+ 0000:0000       _error
+ 0000:000C  Abs  __AHSHIFT
+ 0000:0024       _encrypt
+ 0000:005E       _process_file
+ 0000:0414       _main
+ 004C:0010       __astart
+ 004C:00E5       __cintDIV
+ 004C:00F4       __amsg_exit
+ 004C:0120       __dataseg
+ 004C:0122       __cinit
+ 004C:01EB       _exit
+ 004C:01F2       __exit
+ 004C:01FA       __cexit
+ 004C:0204       __c_exit
+ 004C:0272       __ctermsub
+ 004C:029E       __FF_MSGBANNER
+ 004C:02C0       __fptrap
+ 004C:02C6       __chkstk
+ 004C:02C6       __aFchkstk
+ 004C:02EA       __nullcheck
+ 004C:030E       __setargv
+ 004C:04B6       __setenvp
+ 004C:0556       __NMSG_TEXT
+ 004C:0581       __NMSG_WRITE
+ 004C:05B8       __myalloc
+ 004C:05DE       __dosret0
+ 004C:05E6       __dosreturn
+ 004C:05F3       __dosretax
+ 004C:0600       __maperror
+ 004C:0634       __farstub
+ 004C:0636       _fclose
+ 004C:0704       _printf
+ 004C:0748       __endstdio
+ 004C:075E       __filbuf
+ 004C:07FA       __flsbuf
+ 004C:08E6       __freebuf
+ 004C:091E       __getbuf
+ 004C:096A       __stbuf
+ 004C:09EB       __ftbuf
+ 004C:0A32       _fflush
+ 004C:0A8A       __flush
+ 004C:0B0A       __flushall
+ 0000:1000  Abs  __AHINCR
+ 004C:0B8E       __output
+ 004C:1078       __close
+ 004C:1098       __lseek
+ 004C:111A       __read
+ 004C:1218       __growseg
+ 004C:12A7       __incseg
+ 004C:12F8       __findlast
+ 004C:1318       _strcat
+ 004C:136C       _strcpy
+ 004C:13A8       _strncpy
+ 004C:13D2       _strncmp
+ 004C:140E       __itoa
+ 004C:142A       __fcloseall
+ 004C:1450       _gets
+ 004C:14B4       _sprintf
+ 004C:151E       __commit
+ 004C:1578       _memset
+ 004C:15C0       __cltoasub
+ 004C:15CD       __cxtoa
+ 004C:1624       __dos_commit
+ 004C:1632       __dos_getftime
+ 004C:164E       __dos_setftime
+ 004C:1662       __aFlshl
+ 004C:166E       __aFulshr
+ 004C:167A       __write
+ 004C:17DA       __stackavail
+ 004C:17EE       __ffree
+ 004C:1801       __fmalloc
+ 004C:189A       __initseg
+ 004C:18CE       __linkseg
+ 004C:1904       __searchseg
+ 004C:1980       __newseg
+ 004C:19C4       _remove
+ 004C:19C4       __unlink
+ 004C:19D4       __sopen
+ 004C:19EE       __open
+ 004C:1B8F       __cXENIXtoDOSmode
+ 0206:0000       __EmDataSeg
+ 0206:0002       _decrypt_serialno
+ 020E:0042       __anullsize
+ 020E:0042       _force
+ 020E:0448       __atopsp
+ 020E:044A       __aexit_rtn
+ 020E:044C       __asizds
+ 020E:044E       __nheap_desc
+ 020E:0462       __aseghi
+ 020E:0464       __aseglo
+ 020E:0466       __fDosExt
+ 020E:0468       __acfinfo
+ 020E:0476       __aintdiv
+ 020E:047A       __fac
+ 020E:0484       _errno
+ 020E:0486       __umaskval
+ 020E:0488       __pspadr
+ 020E:048A       __psp
+ 020E:048C       __osver
+ 020E:048C       __osminor
+ 020E:048D       __osmajor
+ 020E:048E       __osversion
+ 020E:0490       __osmode
+ 020E:0491       __cpumode
+ 020E:0492       __doserrno
+ 020E:0492       __oserr
+ 020E:0494       __nfile
+ 020E:0496       __osfile
+ 020E:04AA       ___argc
+ 020E:04AC       ___argv
+ 020E:04B0       __environ
+ 020E:04B4       __pgmptr
+ 020E:04B9       __child
+ 020E:04BB       __ovlflag
+ 020E:04BC       __intno
+ 020E:04BD       __ovlvec
+ 020E:04C1       __exitflag
+ 020E:04C2       __adbgmsg
+ 020E:04C6       __aaltstkovr
+ 020E:04CA       _STKHQQ
+ 020E:04E8       __cflush
+ 020E:04EA       __iob
+ 020E:05DA       __iob2
+ 020E:06CA       __lastiob
+ 020E:073C       __lseekchk
+ 020E:073E       __amblksiz
+ 020E:0740       __cfltcvt_tab
+ 020E:075C       __sigintseg
+ 020E:075E       __sigintoff
+ 020E:0760       __asizeC
+ 020E:0761       __asizeD
+ 020E:0762       __pnhFarHeap
+ 020E:0766       __fheap
+ 020E:0774       _Pattern
+ 020E:08D6       __iomode
+ 020E:08D6       __fmode
+ 020E:08D8       ___qczrinit
+ 020E:08DA       ___aDBswpflg
+ 020E:08DC       ___aDBswpchk
+ 020E:08DE       ___aDBrterr
+ 020E:08E0       ___aDBexit
+ 020E:08E8       __fpinit
+ 020E:09DA       __edata
+ 020E:09DA       _edata
+ 020E:09F0       _serial_data
+ 020E:0A50       __end
+ 020E:0A50       _end
+ 0000:9876  Abs  __acrtused
+ 0000:9876  Abs  __acrtmsg
+ 0000:D6D6  Abs  __aDBdoswp
+
+Line numbers for comn\qbrand.obj(qbrand.c) segment QBRAND_TEXT
+
+    41 0000:0000    42 0000:0003    43 0000:0015    44 0000:001f
+    49 0000:0024    54 0000:0026    56 0000:002a    57 0000:0045
+    58 0000:0047    61 0000:0056    63 0000:005a    66 0000:005e
+    81 0000:006a    82 0000:006f    83 0000:0086    84 0000:0097
+    86 0000:009a    88 0000:00ad    89 0000:00c9    90 0000:00dd
+    93 0000:00e0    94 0000:00f5    98 0000:00fe   100 0000:011a
+   101 0000:0131   105 0000:013a   106 0000:014f   110 0000:0159
+   111 0000:0160   113 0000:0172   114 0000:018d   118 0000:0197
+   119 0000:01ac   123 0000:01b6   124 0000:01bd   125 0000:01d4
+   126 0000:01e5   135 0000:01ed   137 0000:020c   138 0000:0227
+   143 0000:0231   145 0000:024b   146 0000:025c   152 0000:025f
+   153 0000:026c   154 0000:0271   156 0000:0290   157 0000:02a7
+   161 0000:02ab   162 0000:02bc   163 0000:02c1   165 0000:02da
+   166 0000:02f1   170 0000:02f5   171 0000:0306   172 0000:030b
+   174 0000:0324   175 0000:033f   178 0000:0343   181 0000:0357
+   183 0000:035e   184 0000:0380   186 0000:0382   187 0000:039e
+   190 0000:03a2   191 0000:03bf   194 0000:03c9   195 0000:03e0
+   200 0000:03ea   202 0000:03fb   205 0000:0400   209 0000:0409
+   211 0000:040c   214 0000:0414   218 0000:041f   220 0000:042c
+   221 0000:0431   223 0000:043d   225 0000:045a   236 0000:046c
+   237 0000:0481   239 0000:0482   227 0000:0484   234 0000:0489
+   233 0000:048e   234 0000:049a   230 0000:049c   223 0000:04a2
+   241 0000:04aa   243 0000:04b8   244 0000:04ba
+
+Program entry point at 004C:0010
+
+Line numbers for R:\MAX\lib\Lquilibr.lib(serial.c) segment SERIAL_TEXT
+
+    40 0206:0002    47 0206:000a    48 0206:000c    50 0206:0018
+    53 0206:0024    56 0206:002f    57 0206:0036    58 0206:003e
+    62 0206:004a    63 0206:0055    64 0206:0068    65 0206:006a
+    66 0206:006d     0 0206:0073
