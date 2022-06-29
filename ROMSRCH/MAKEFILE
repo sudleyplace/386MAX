@@ -1,0 +1,97 @@
+#' $Header:   P:/PVCS/MAX/ROMSRCH/MAKEFILE.__V   1.6   30 May 1997 12:32:50   BOB  $
+#
+# Makefile for ROMSRCH
+#
+
+!include $(MAXROOT)include\maxnames.mak
+
+OEM=ret 			# Default 3-letter OEM name
+PRODNAME=romsrch		# Product file basename
+
+O=$(OEM)\			# OEM-specific files
+R=				# Source directory
+
+OLDINC=$(INCLUDE)		# Previous INCLUDE value
+ALLINC=$(O);$(I);$(Q);$(INCLUDE) # INCLUDE search path
+
+# if LST is defined in the environment or on the command line,
+# define a macro we can tack onto the end of each MASM line
+!IFDEF LST
+LSTMAC=,$(LST)\$(@B)
+!ELSE
+LSTMAC=
+!ENDIF
+
+AFLAGS=/mu /p /r /t /w1 /DLANG_$(LANG) # MASM options
+LFLAGS=/map /line /nod		# Linker options
+
+!IF "$(LNKCMD)" == ""
+LNKCMD=link
+!ENDIF
+
+{$(R)}.asm{$(O)}.obj:
+	 set INCLUDE=$(ALLINC)
+	 masm $(R)$(@B) $(AFLAGS), $(O) $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+
+{$(Q)}.asm{$(O)}.obj:
+	 set INCLUDE=$(ALLINC)
+	 masm $(Q)$(@B) $(AFLAGS), $(O) $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+	 @dispobj $*/w
+
+OBJS=	$(O)PROBE.OBJ	$(O)FUNCS.OBJ	$(O)VERSION.OBJ $(O)VERSRET.OBJ
+
+ALL:	 DIR	$(O)$(PRODNAME).COM	$(BD)$(PRODNAME).COM
+
+DEL:
+	-rm $(O)*.*
+
+DIR:
+	vdir -c $(O)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\romsrch\*
+VCSDIR = P:\PVCS\MAX\romsrch\*
+ALIAS ALL P:\PVCS\MAX\romsrch\*.*,p:\pvcs\max\romsrch\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+DEPSCAN: makefile
+	depscan *.asm $(Q)versret.asm >romsdep.inc
+
+makefile: romsdep.inc
+
+!include romsdep.inc
+
+$(O)$(PRODNAME).COM:	 $(OBJS)	makefile
+	 $(LNKCMD) @<<$(O)$(PRODNAME).arf
+		$(OBJS: =+^
+)
+		$*.exe
+		$*.map
+		$(LFLAGS)
+		NUL.def
+<<KEEP
+	 mapssf -t$* $*
+	 exe2bin $* $*.com
+	 del $*.exe
+
+$(BD)$(PRODNAME).COM: $(O)$(PRODNAME).COM
+	 xc /r	 $(**R).COM	$*.*
+	 xc /r	 $(**R).SSF	$*.*
+	 xc /r	 $(**R).MAP	$*.*
+
+$(O)PROBE.OBJ:	 PROBE.ASM	  $(PROBE_ADEP)
+
+$(O)FUNCS.OBJ:	 FUNCS.ASM	  $(FUNCS_ADEP)
+
+$(O)VERSION.OBJ: VERSION.ASM	  $(VERSION_ADEP)
+
+$(O)VERSRET.OBJ: $(Q)VERSRET.ASM  $(VERSRET_ADEP)
+
+

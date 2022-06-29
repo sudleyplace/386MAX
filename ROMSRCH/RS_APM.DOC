@@ -1,0 +1,8 @@
+Test For Advanced Power Management Functions
+
+Include tests for various APM calls so we don't mistakenly recover
+the code/data they use.
+
+FUNCS.ASM	In the INT 15h section, include sets of calls to APM.
+
+

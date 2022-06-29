@@ -1,0 +1,11 @@
+Workaround Bug In Phoenix BIOS
+
+The Advanced Power Management (APM) function 530Ch should return the
+Power Status of system devices.  Instead, on the Phoenix BIOS version
+4.03 (copyright 1987-1994), it crashes the system.
+
+Like the proverbial doctor, the solution is don't walk that way.
+
+FUNCS.ASM	Omit testing APM function 530Ch.
+
+

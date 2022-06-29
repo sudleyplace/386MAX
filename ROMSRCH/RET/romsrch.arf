@@ -1,0 +1,6 @@
+		ret\PROBE.OBJ	ret\FUNCS.OBJ	ret\VERSION.OBJ+
+ret\VERSRET.OBJ
+		ret\romsrch.exe
+		ret\romsrch.map
+		/map /line /nod
+		NUL.def

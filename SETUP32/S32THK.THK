@@ -1,0 +1,51 @@
+// $Header:   P:/PVCS/MAX/SETUP32/S32THK.THV   1.1   25 Sep 1996 09:19:04   PETERJ  $
+//------------------------------------------------------------------
+// 16 to 32 thunk source for setup32.dll
+// Copyright (C) 1996 Qualitas, Inc.  All rights reserved
+//------------------------------------------------------------------
+
+enablemapdirect1632 = true;
+preload32=true;
+
+typedef int BOOL;
+typedef unsigned char BYTE;
+typedef unsigned long DWORD;
+typedef char *LPSTR;
+typedef unsigned char *LPBYTE;
+typedef unsigned long HKEY;
+
+BOOL ChangePEVersionNumbers32( LPSTR szSrc, LPSTR szDst, LPSTR szImage )
+    {
+    }
+
+BOOL AddReg32( HKEY hkRootKey, LPSTR szKey, LPSTR szValName,
+               LPBYTE szVal, DWORD dwType, DWORD dwLen )
+    {
+    }
+
+DWORD CompareVersionInfo32( LPSTR szOld, LPSTR szNew )
+    {
+    }
+
+DWORD Is95Ver32( LPSTR szOld )
+    {
+    }
+
+BOOL DelKey32( HKEY hkRootKey, LPSTR szParentKey, LPSTR szDelKey )
+    {
+    }
+
+BOOL ItsOurDLL32( LPSTR szFileName )
+    {
+    }
+
+BOOL RenameValue32( HKEY hkRootKey, LPSTR szKey, 
+                    LPSTR szOldValName, LPSTR szNewValName )
+    {
+    }
+
+BOOL DoesValueExist32( HKEY hkRootKey, LPSTR szKey, 
+                       LPSTR szValName )
+    {
+    }
+

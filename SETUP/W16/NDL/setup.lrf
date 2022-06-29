@@ -1,0 +1,9 @@
+	/BATCH W16\ndL\QSETUP.LIB
+	W16\ndL\setup.obj&
+W16\ndL\SETUTIL.obj&
+W16\ndL\SETDDE.obj&
+W16\ndL\setdisp.obj&
+W16\ndL\setext.obj&
+W16\ndL\setunzip.obj&
+W16\ndL\setspl.obj&
+W16\ndL\setver.obj, NUL;

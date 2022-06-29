@@ -1,0 +1,13 @@
+Remove Disabling Code For BIOS Mouse Calls
+
+In the very beginning of ROMSRCH (back when it was still called
+PROBE), a test was put in to skip exercising the BIOS mouse calls
+unless a mouse driver was present.  We have a system in the testlab
+for which the BIOS code for these functions is in a separate 4KB block
+which we mistakenly recover.  This TWT deletes the disabling code so
+that we now always test these functions so as to mark as much of the
+BIOS as in use as possible.
+
+FUNCS.ASM	Delete disabling code.
+
+

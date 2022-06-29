@@ -1,0 +1,44 @@
+Workaround Bug In Some IBM Value Point BIOSes
+
+During normal processing of ROMSRCH, we exercise the NMI interrupt
+02h.  The response to this software interrupt on some IBM Value Point
+systems is to display a message "Unexpected type 02 interrupt" and
+CLI/HLT which stops the processor dead in its tracks.
+
+Because HLT is a privileged instruction, it actually signals a GP
+Fault when executed in VM, so we have a means by which we can overcome
+this rude behavior.  In particular, we can tell 386MAX.SYS to reflect
+the CLI/HLT to VM as an INT 02h at which point our handler takes over
+and continues execution as if nothing happened.
+
+At the same time, I restricted the behavior of PnP testing so as to
+exercise the event notification functions only if that feature is
+supported.
+
+Also, I removed the separate version number from ROMSRCH so that it
+now tracks the version number of 386MAX.
+
+MAKEFILE	Define action for assembling VERSRET.ASM from the
+		  386MAX directory.
+		Include VERSRET.ASM in the mix of source files as we
+		  now get our version number from there.
+
+PROBE.INC	Define flag to indicate we toggled the @DBG_HLT flag
+		  in 386MAX's DBG_FLAG.
+
+FUNCS.ASM	If INT 02h, tell 386MAX to reflect CLI/HLT to VM as an
+		  INT 02h.  Note that the address of the INT 02h
+		  called by ROMSRCH is in INT_VECTOR and the address
+		  of the INT 02h called by 386MAX in response to a
+		  CLI/HLT is in 0:4*02h.
+		If event notification is not supported by this PnP
+		  BIOS, don't exercise functions 03h-05h.
+
+PROBE.ASM	Define and make public the DBG_FLAG word in the 386MAX
+		  info structure.
+
+VERSION.ASM	Bump the beta version #.
+		Delete the major/minor version # as we now get it from
+		  VERSRET.ASM.
+
+

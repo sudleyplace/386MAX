@@ -1,0 +1,11 @@
+Workaround Bug In MASM
+
+It apears that MASM has a different idea about the name of a segment
+and seg of the name of a segment.  LINK doesn't care, but QLINK does,
+so I'm changing it.  At the same time, I replaced constant 40h with
+seg BIOSDATA where appropriate.
+
+PROBE,ASM	Use seg BIOSDATA instead of constant 40h.
+		Use seg BIOSDATA instead of BIOSDATA.
+
+
