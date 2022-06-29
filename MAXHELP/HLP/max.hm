@@ -1,0 +1,221 @@
+// MAKEHELP.BAT generated Help Map file. 
+ 
+ 
+// Help mappings for WMX ..\winmxmz\resource.h 
+ 
+// Commands (ID_* and IDM_*) 
+ 
+// Prompts (IDP_*) 
+ 
+// Resources (IDR_*) 
+WMX_HIDR_MAINFRAME                      0x1020002
+ 
+// Dialogs (IDD_*) 
+WMX_HIDD_DISPATCHRUNNING                0x1020064
+WMX_HIDD_UNINSTALL                      0x1020066
+WMX_HIDD_WELCOME                        0x102006A
+WMX_HIDD_SELECTMBOOT                    0x102006B
+WMX_HIDD_SELECTMODE                     0x102006C
+WMX_HIDD_CUSTOPTS                       0x102006D
+WMX_HIDD_END_PHASE1                     0x102006E
+WMX_HIDD_SUMMARY                        0x1020070
+WMX_HIDD_CONFIRMEXIT                    0x1020071
+WMX_HIDD_CUSTOPTS95                     0x1020073
+ 
+// Controls (IDC_* and IDW_*) 
+WMX_HIDC_DELETEFILES                    0x10503E9
+WMX_HIDC_REMOVEDATA                     0x10503EA
+WMX_HIDC_REMOVEDIR                      0x10503EB
+WMX_HIDC_REMOVEINI                      0x10503EC
+WMX_HIDC_REMOVEPATH                     0x10503ED
+WMX_HIDC_REMOVEQDM                      0x10503EE
+WMX_HIDC_REMOVESOUNDS                   0x10503EF
+WMX_HIDC_RESTOREPRINT                   0x10503F0
+WMX_HIDC_UNREGISTER                     0x10503F1
+WMX_HIDC_DISPATCHDIR                    0x10503F2
+WMX_HIDC_GROUP                          0x10503F3
+WMX_HIDC_DOIT                           0x10503F4
+WMX_HIDC_EVAP                           0x10503F5
+WMX_HIDC_EVAPIF                         0x10503F6
+WMX_HIDC_HELP                           0x10503F7
+WMX_HIDC_SELECTMB                       0x10503F8
+WMX_HIDC_BACK                           0x10503F9
+WMX_HIDC_EXPRESS                        0x10503FA
+WMX_HIDC_CUSTOM                         0x10503FB
+WMX_HIDC_ROMSRCH                        0x10503FC
+WMX_HIDC_VGASWAP                        0x10503FD
+WMX_HIDC_EXTRADOS                       0x10503FE
+WMX_HIDC_REVERT                         0x1050401
+WMX_HIDC_HIGHDOS                        0x1050402
+WMX_HIDC_LOWDOS                         0x1050403
+WMX_HIDC_LOWDESC1                       0x1050404
+WMX_HIDC_HIGHDESC1                      0x1050405
+WMX_HIDC_HIGHREG5                       0x1050406
+WMX_HIDC_HIGHREG4                       0x1050407
+WMX_HIDC_HIGHREG3                       0x1050408
+WMX_HIDC_HIGHREG2                       0x1050409
+WMX_HIDC_HIGHREG1                       0x105040A
+WMX_HIDC_TOTALMOVEDHIGH                 0x105040B
+WMX_HIDC_TOTALUSEDHIGH                  0x105040C
+WMX_HIDC_TOTALFREEHIGH                  0x105040D
+WMX_HIDC_TOTALLOW                       0x105040E
+WMX_HIDC_TOTALUSEDLOW                   0x105040F
+WMX_HIDC_TOTALFREELOW                   0x1050410
+WMX_HIDC_OLDLOWDOSFREE                  0x1050411
+WMX_HIDC_DISROMSRCH                     0x1050412
+WMX_HIDC_DISVGASWAP                     0x1050413
+WMX_HIDC_HIGHLIST                       0x1050415
+WMX_HIDC_LOWLIST                        0x1050416
+WMX_HIDC_DOSSTART                       0x1050419
+ 
+// Hit-Tests (IDHT_*) 
+ 
+ 
+// Help mappings for WMX helpafx.h 
+ 
+// Commands (ID_* and IDM_*) 
+WMX_HID_SC_SIZE                         0x101EF00
+WMX_HID_SC_MOVE                         0x101EF01
+WMX_HID_SC_MINIMIZE                     0x101EF02
+WMX_HID_SC_MAXIMIZE                     0x101EF03
+WMX_HID_SC_NEXTWINDOW                   0x101EF04
+WMX_HID_SC_PREVWINDOW                   0x101EF05
+WMX_HID_SC_CLOSE                        0x101EF06
+WMX_HID_SC_RESTORE                      0x101EF12
+WMX_HID_SC_TASKLIST                     0x101EF13
+WMX_HID_FILE_MRU_FILE1                  0x101E110
+WMX_HID_FILE_MRU_FILE2                  0x101E111
+WMX_HID_FILE_MRU_FILE3                  0x101E112
+WMX_HID_FILE_MRU_FILE4                  0x101E113
+WMX_HID_WINDOW_ALL                      0x101EF1F
+WMX_HID_FILE_NEW                        0x101E100
+WMX_HID_FILE_OPEN                       0x101E101
+WMX_HID_FILE_CLOSE                      0x101E102
+WMX_HID_FILE_SAVE                       0x101E103
+WMX_HID_FILE_SAVE_AS                    0x101E104
+WMX_HID_FILE_PAGE_SETUP                 0x101E105
+WMX_HID_FILE_PRINT_SETUP                0x101E106
+WMX_HID_FILE_PRINT                      0x101E107
+WMX_HID_FILE_PRINT_PREVIEW              0x101E108
+WMX_HID_FILE_UPDATE                     0x101E109
+WMX_HID_FILE_SAVE_COPY_AS               0x101E10A
+WMX_HID_EDIT_CLEAR                      0x101E120
+WMX_HID_EDIT_CLEAR_ALL                  0x101E121
+WMX_HID_EDIT_COPY                       0x101E122
+WMX_HID_EDIT_CUT                        0x101E123
+WMX_HID_EDIT_FIND                       0x101E124
+WMX_HID_EDIT_PASTE                      0x101E125
+WMX_HID_EDIT_PASTE_LINK                 0x101E126
+WMX_HID_EDIT_PASTE_SPECIAL              0x101E127
+WMX_HID_EDIT_REPEAT                     0x101E128
+WMX_HID_EDIT_REPLACE                    0x101E129
+WMX_HID_EDIT_SELECT_ALL                 0x101E12A
+WMX_HID_EDIT_UNDO                       0x101E12B
+WMX_HID_EDIT_REDO                       0x101E12C
+WMX_HID_WINDOW_NEW                      0x101E130
+WMX_HID_WINDOW_ARRANGE                  0x101E131
+WMX_HID_WINDOW_CASCADE                  0x101E132
+WMX_HID_WINDOW_TILE_HORZ                0x101E133
+WMX_HID_WINDOW_TILE_VERT                0x101E134
+WMX_HID_WINDOW_SPLIT                    0x101E135
+WMX_HID_APP_ABOUT                       0x101E140
+WMX_HID_APP_EXIT                        0x101E141
+WMX_HID_HELP_INDEX                      0x101E142
+WMX_HID_HELP_USING                      0x101E143
+WMX_HID_CONTEXT_HELP                    0x101E144
+WMX_HID_NEXT_PANE                       0x101E150
+WMX_HID_PREV_PANE                       0x101E151
+WMX_HID_OLE_INSERT_NEW                  0x101E200
+WMX_HID_OLE_EDIT_LINKS                  0x101E201
+WMX_HID_OLE_EDIT_CONVERT                0x101E202
+WMX_HID_OLE_EDIT_CHANGE_ICON            0x101E203
+WMX_HID_VIEW_TOOLBAR                    0x101E800
+WMX_HID_VIEW_STATUS_BAR                 0x101E801
+WMX_HID_RECORD_FIRST                    0x101E900
+WMX_HID_RECORD_LAST                     0x101E901
+WMX_HID_RECORD_NEXT                     0x101E902
+WMX_HID_RECORD_PREV                     0x101E903
+ 
+// Prompts (IDP_*) 
+WMX_HIDP_AFX_INVALID_FILENAME           0x103F100
+WMX_HIDP_AFX_FAILED_TO_OPEN_DOC         0x103F101
+WMX_HIDP_AFX_FAILED_TO_SAVE_DOC         0x103F102
+WMX_HIDP_AFX_ASK_TO_SAVE                0x103F103
+WMX_HIDP_AFX_FAILED_TO_CREATE_DOC       0x103F104
+WMX_HIDP_AFX_FILE_TOO_LARGE             0x103F105
+WMX_HIDP_AFX_FAILED_TO_START_PRINT      0x103F106
+WMX_HIDP_AFX_FAILED_TO_LAUNCH_HELP      0x103F107
+WMX_HIDP_AFX_INTERNAL_FAILURE           0x103F108
+WMX_HIDP_AFX_COMMAND_FAILURE            0x103F109
+WMX_HIDP_AFX_FAILED_MEMORY_ALLOC        0x103F10A
+WMX_HIDP_AFX_VB2APICALLED               0x103F10B
+WMX_HIDP_AFX_PARSE_INT                  0x103F110
+WMX_HIDP_AFX_PARSE_REAL                 0x103F111
+WMX_HIDP_AFX_PARSE_INT_RANGE            0x103F112
+WMX_HIDP_AFX_PARSE_REAL_RANGE           0x103F113
+WMX_HIDP_AFX_PARSE_STRING_SIZE          0x103F114
+WMX_HIDP_AFX_PARSE_RADIO_BUTTON         0x103F115
+WMX_HIDP_AFX_FAILED_INVALID_FORMAT      0x103F120
+WMX_HIDP_AFX_FAILED_INVALID_PATH        0x103F121
+WMX_HIDP_AFX_FAILED_DISK_FULL           0x103F122
+WMX_HIDP_AFX_FAILED_ACCESS_READ         0x103F123
+WMX_HIDP_AFX_FAILED_ACCESS_WRITE        0x103F124
+WMX_HIDP_AFX_FAILED_IO_ERROR_READ       0x103F125
+WMX_HIDP_AFX_FAILED_IO_ERROR_WRITE      0x103F126
+WMX_HIDP_AFX_STATIC_OBJECT              0x103F180
+WMX_HIDP_AFX_FAILED_TO_CONNECT          0x103F181
+WMX_HIDP_AFX_SERVER_BUSY                0x103F182
+WMX_HIDP_AFX_BAD_VERB                   0x103F183
+WMX_HIDP_AFX_FAILED_TO_NOTIFY           0x103F185
+WMX_HIDP_AFX_FAILED_TO_LAUNCH           0x103F186
+WMX_HIDP_AFX_ASK_TO_UPDATE              0x103F187
+WMX_HIDP_AFX_FAILED_TO_UPDATE           0x103F188
+WMX_HIDP_AFX_FAILED_TO_REGISTER         0x103F189
+WMX_HIDP_AFX_FAILED_TO_AUTO_REGISTER    0x103F18A
+WMX_HIDP_AFX_FAILED_TO_CONVERT          0x103F18B
+ 
+// Resources (IDR_*) 
+ 
+// Dialogs (IDD_*) 
+WMX_HIDD_AFX_FILEOPEN                   0x1027004
+WMX_HIDD_AFX_FILESAVE                   0x1027005
+WMX_HIDD_AFX_FONT                       0x1027006
+WMX_HIDD_AFX_COLOR                      0x1027007
+WMX_HIDD_AFX_PRINT                      0x1027008
+WMX_HIDD_AFX_PRINTSETUP                 0x1027009
+WMX_HIDD_AFX_FIND                       0x102700A
+WMX_HIDD_AFX_REPLACE                    0x102700B
+WMX_HIDD_AFX_NEWTYPEDLG                 0x1027801
+WMX_HIDD_AFX_PRINTDLG                   0x1027802
+WMX_HIDD_AFX_PREVIEW_TOOLBAR            0x1027803
+WMX_HIDD_AFX_INSERTOBJECT               0x1027804
+WMX_HIDD_AFX_CHANGEICON                 0x1027805
+WMX_HIDD_AFX_CONVERT                    0x1027806
+WMX_HIDD_AFX_PASTESPECIAL               0x1027807
+WMX_HIDD_AFX_EDITLINKS                  0x1027808
+WMX_HIDD_AFX_FILEBROWSE                 0x1027809
+WMX_HIDD_AFX_BUSY                       0x102780A
+ 
+// Controls (IDC_* and IDW_*) 
+WMX_HIDW_AFX_TOOLBAR                    0x105E800
+WMX_HIDW_AFX_STATUS_BAR                 0x105E801
+WMX_HIDW_AFX_PREVIEW_BAR                0x105E802
+WMX_HIDW_AFX_RESIZE_BAR                 0x105E803
+ 
+// Hit-Tests (IDHT_*) 
+WMX_HIDHT_NOWHERE                       0x1040000
+WMX_HIDHT_CAPTION                       0x1040002
+WMX_HIDHT_SIZE                          0x1040004
+WMX_HIDHT_HSCROLL                       0x1040006
+WMX_HIDHT_VSCROLL                       0x1040007
+WMX_HIDHT_MINBUTTON                     0x1040008
+WMX_HIDHT_MAXBUTTON                     0x1040009
+WMX_HIDHT_LEFT                          0x104000A
+WMX_HIDHT_RIGHT                         0x104000B
+WMX_HIDHT_TOP                           0x104000C
+WMX_HIDHT_TOPLEFT                       0x104000D
+WMX_HIDHT_TOPRIGHT                      0x104000E
+WMX_HIDHT_BOTTOM                        0x104000F
+WMX_HIDHT_BOTTOMLEFT                    0x1040010
+WMX_HIDHT_BOTTOMRIGHT                   0x1040011
+WMX_HIDHT_BORDER                        0x1040012

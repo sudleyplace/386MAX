@@ -1,0 +1,31 @@
+[OPTIONS]
+; $Header:   P:/PVCS/MAX/MAXHELP/_MAXHELP.SRV   1.2   28 Feb 1996 16:32:04   HENRY  $
+#ifdef LANG_GR
+TITLE=Qualitas MAX Hilfe
+#else
+TITLE=Qualitas Max Help
+#endif
+WARNING=2
+ERRORLOG=hlp\maxhelp.err
+CONTENTS=HelpContents1
+COMPRESS=FALSE
+BMROOT=BITMAPS
+REPORT=ON
+COPYRIGHT=Copyright © 1995-96 Qualitas, Inc.
+
+[WINDOWS]
+INCLUDE <hlp\maxhelp.win>
+
+[FILES]
+MAXHELP.RTF
+
+[CONFIG]
+INCLUDE <hlp\maxhelp.cfg>
+
+[ALIAS]
+INCLUDE <winmaxim.LANGALI>
+
+[MAP]
+INCLUDE <hlp\maxhelp.hm>
+INCLUDE <hlp\max.hm>
+

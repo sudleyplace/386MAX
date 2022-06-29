@@ -1,0 +1,34 @@
+[Options]
+TITLE=Qualitas MAX Setup
+ERRORLOG=C:\SETUP\SETUP.err
+CONTENTS=HelpContents1
+ROOT=C:\SETUP
+COMPRESS=FALSE
+BMROOT=C:\SETUP\BITMAPS
+REPORT=ON
+COPYRIGHT=Qualitas, Inc.
+[FILES]
+SETUP.RTF
+[CONFIG]
+BrowseButtons()
+[MAP]
+HelpContents1	1	; Help Contents
+WelcometoQualitasMAX8.2	2	; Welcome to Qualitas MAX 8
+Registrationinformation.3	3	; Registration information
+Registrationconfirmation.4	4	; Registration confirmation
+MultiConfig.5	5	; MultiConfig
+Filesandlocations.6	6	; Files and locations
+SourceDirectory.7	7	; Source Directory
+InsertReferenceDisk.8	8	; Insert Reference Disk
+ConfiguringQualitasMAX.9	9	; Configuring Qualitas MAX
+Windowsoptions.10	10	; Windows options
+MAXprofileoptions.11	11	; MAX profile options
+RunQMTonbootup.12	12	; Run QMT on bootup
+WhenyouclickContinue.13	13	; When you click Continue
+Filemodifications.14	14	; File modifications
+Setupcompleted.15	15	; Setup completed
+Wouldyouliketorebootnow..16	16	; Would you like to reboot now?
+WouldyouliketorunMaximizenow..17	17	; Would you like to run Maximize now?
+Qualitasprogramgroup.18	18	; Qualitas program group
+[WINDOWS]
+main="Qualitas MAX Setup", , 0, (255, 255, 232), (0, 0, 160), 0

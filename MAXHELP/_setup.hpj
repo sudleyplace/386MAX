@@ -1,0 +1,24 @@
+[OPTIONS]
+; $Header:   P:/PVCS/MAX/MAXHELP/_SETUP.SRV   1.2   28 Feb 1996 16:32:02   HENRY  $
+TITLE=Qualitas Max Setup
+WARNING=2
+ERRORLOG=hlp\setup.err
+CONTENTS=HelpContents1
+COMPRESS=FALSE
+BMROOT=BITMAPS
+REPORT=ON
+COPYRIGHT=Copyright © 1995-96 Qualitas, Inc.
+
+[WINDOWS]
+#include <hlp\setup.win>
+
+[FILES]
+SETUP.RTF
+
+[CONFIG]
+#include <hlp\setup.cfg>
+
+[ALIAS]
+
+[MAP]
+#include <hlp\setup.hm>

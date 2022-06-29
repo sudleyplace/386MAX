@@ -1,0 +1,566 @@
+HelpContents1	1	; Help Contents
+AboutQualitasMAX.2	2	; About Qualitas MAX
+Setup.3	507	; Setup
+Maximize.4	4	; Maximize
+SampleInstallation.5	5	; Sample Installation
+GoAhead.6	6	; Go Ahead
+MAXmeter.7	7	; MAXmeter
+Toolbox.8	8	; Toolbox
+MAXedit.9	9	; MAXedit
+DOSMAXforWindows.10	10	; DOSMAX for Windows
+QualitasPIFEditor.11	11	; Qualitas PIF Editor
+MAXShellandASQ.12	12	; MAX Shell and ASQ
+QualitasMemoryTester.13	508	; Qualitas Memory Tester
+386UTIL.COM.14	14	; 386UTIL.COM
+OtherQualitasMAXUtilities.15	15	; Other Qualitas MAX Utilities
+386MAXand386LOADOptions.16	16	; 386MAX and 386LOAD Options
+Troubleshooting.17	17	; Troubleshooting
+Messages.18	18	; Messages
+AnOverviewofMemoryManagement.19	509	; An Overview of Memory Management
+QualitasMAXoverview.20	20	; Qualitas MAX overview
+QualitasMAXfunctions.21	510	; Qualitas MAX functions
+QualitasMAXinterface.22	511	; Qualitas MAX interface
+QualitasMAXcomponents.23	23	; Qualitas MAX components
+QualitasMAXhardwarerequirements.24	24	; Qualitas MAX hardware requirements
+QualitasMAXsoftwarerequirements.25	25	; Qualitas MAX software requirements
+On.linedocumentation.26	512	; On-line documentation
+HowtogethelpinWindows.27	27	; How to get help in Windows
+MAXHelp.28	28	; MAX Help
+F1key.29	29	; F1 key
+Menubar.30	30	; Menu bar
+Control.orsystem.menu.31	31	; Control (or system) menu
+Helpbutton.32	32	; Help button
+HowtogethelpinDOS.33	33	; How to get help in DOS
+OpeningDOSHelp.34	34	; Opening DOS Help
+UsingDOSHelpwithamouse.35	35	; Using DOS Help with a mouse
+UsingDOSHelpwiththekeyboard.36	36	; Using DOS Help with the keyboard
+OtherhelpinDOS.37	37	; Other help in DOS
+READMEfile.38	38	; README file
+Technicalsupport.39	39	; Technical support
+Whenyouhaveaquestion.40	513	; When you have a question
+Electronicservices.41	41	; Electronic services
+QualitasFAXFactsservice.42	42	; Qualitas FAXFacts service
+QualitasonCompuServe.43	514	; Qualitas on CompuServe
+QualitasBBS.44	44	; Qualitas BBS
+QualitasontheInternet.45	45	; Qualitas on the Internet
+Additionalelectronicservices.46	515	; Additional electronic services
+Telephone.fax.andmailsupport.47	516	; Telephone, fax, and mail support
+Gettingsupportviatelephone.48	48	; Getting support via telephone
+Gettingsupportviafax.49	517	; Getting support via fax
+Gettingsupportviamail.50	50	; Getting support via mail
+Summaryoftechnicalsupportaccessinformation.51	51	; Summary of technical support access information
+Suggestionbox.52	52	; Suggestion box
+Setupoverview.53	53	; Setup overview
+RunningSetupfromWindows.54	54	; Running Setup from Windows
+RunningSetupfromDOS.55	55	; Running Setup from DOS
+DOSSetupcommandlineoptions.56	56	; DOS Setup command line options
+Aftertheinstallation.57	518	; After the installation
+Ifyoursystemchanges.58	58	; If your system changes
+Whenyouchangehardware.59	59	; When you change hardware
+Whenyouaddmemory.residentsoftware.60	60	; When you add memory-resident software
+Changingthecurrentconfiguration.61	61	; Changing the current configuration
+MultiConfigSetup.62	62	; MultiConfig Setup
+Maximizeoverview.63	63	; Maximize overview
+RunningMaximizefromWindows.64	64	; Running Maximize from Windows
+WelcometoWindowsMaximize.65	65	; Welcome to Windows Maximize
+SelectingMultiConfigSection.66	66	; Selecting MultiConfig Section
+SelectingMaximizeMode.67	67	; Selecting Maximize Mode
+ExpressMaximizeinWindows.68	68	; Express Maximize in Windows
+CustomMaximizeinWindows.69	69	; Custom Maximize in Windows
+MaximizeCompleted.70	70	; Maximize Completed
+RunningMaximizefromDOS.71	71	; Running Maximize from DOS
+WelcometoDOSMaximize.72	519	; Welcome to DOS Maximize
+SelectingMultiConfigsection.73	73	; Selecting MultiConfig section
+SelectingMaximizemode.74	74	; Selecting Maximize mode
+ExpressMaximizeinDOS.75	520	; Express Maximize in DOS
+CustomMaximizeinDOS.76	76	; Custom Maximize in DOS
+MultiConfigMaximize.77	77	; MultiConfig Maximize
+Foradvancedusers.78	78	; For advanced users
+Maximizecommandlineoptions.79	79	; Maximize command line options
+MAXIMIZE.CFG.80	521	; MAXIMIZE.CFG
+Maximizereordering.81	81	; Maximize reordering
+Sampleinstallationoverview.82	82	; Sample installation overview
+BeforeinstallingQualitasMAX.83	83	; Before installing Qualitas MAX
+CONFIG.SYS.before..84	84	; CONFIG.SYS (before)
+AUTOEXEC.BAT.before..85	522	; AUTOEXEC.BAT (before)
+MEM.before..86	86	; MEM (before)
+Duringinstallation.87	87	; During installation
+Maximize.PhaseI..88	88	; Maximize (Phase I)
+Maximize.PhaseII..89	89	; Maximize (Phase II)
+Maximize.PhaseIII..90	90	; Maximize (Phase III)
+AfterinstallingQualitasMAX.91	91	; After installing Qualitas MAX
+CONFIG.SYS.after..92	92	; CONFIG.SYS (after)
+AUTOEXEC.BAT.after..93	93	; AUTOEXEC.BAT (after)
+MEM.after..94	94	; MEM (after)
+Whathappenedtotheoriginalstartupfiles..95	95	; What happened to the original startup files?
+AcloserlookatMaximize.96	96	; A closer look at Maximize
+MaximizePhaseI.97	97	; Maximize Phase I
+MaximizePhaseII.98	98	; Maximize Phase II
+MaximizePhaseIII.99	99	; Maximize Phase III
+GoAheadoverview.100	100	; Go Ahead overview
+GoAheadmainwindow.101	101	; Go Ahead main window
+GoAheadstatusline.102	102	; Go Ahead status line
+GoAheadstatusbar.103	103	; Go Ahead status bar
+Memorystatus.104	104	; Memory status
+Currentstate.105	105	; Current state
+GoAheaddisabledlist.106	523	; Go Ahead disabled list
+GoAheadnotesfortheadvanceduser.107	107	; Go Ahead notes for the advanced user
+GoAheadscenarios.108	108	; Go Ahead scenarios
+MAXmeteroverview.109	109	; MAXmeter overview
+RunningMAXmeter.110	110	; Running MAXmeter
+ConfiguringMAXmeter.111	524	; Configuring MAXmeter
+MAXmeter.sdisplay.112	112	; MAXmeter's display
+Date.113	113	; Date
+Time.114	114	; Time
+Memory.115	115	; MAXmeter - MAXmeter's display - Memory
+GDIResources.116	116	; GDI Resources
+UserResources.117	117	; User Resources
+LowDOSMemory.118	118	; Low DOS Memory
+Alwaysontop.119	525	; Always on top
+MovingMAXmeter.120	120	; Moving MAXmeter
+TomoveMAXmeterwiththemouse.121	121	; To move MAXmeter with the mouse
+TomoveMAXmeterwiththekeyboard.122	122	; To move MAXmeter with the keyboard
+Toolboxoverview.123	123	; Toolbox overview
+Startuptab.124	124	; Startup tab
+Windowsstartup.125	125	; Windows startup
+LoadMAXmeter.126	126	; Load MAXmeter
+LoadGoAhead.127	526	; Load Go Ahead
+EnableDOSMAX.128	128	; Enable DOSMAX
+Systemstartup.129	129	; System startup
+LoadDOSStackshigh.130	130	; Load DOS Stacks high
+EnableExtraDOS.131	131	; Enable ExtraDOS
+RunQMT.132	132	; Run QMT
+UMB.Adapterstab.133	133	; UMB/Adapters tab
+UseMDA.134	134	; Use MDA
+EnableVGASWAP.135	135	; Enable VGASWAP
+UseROMSearch.136	136	; Use ROMSearch
+RAM.137	527	; Toolbox - UMB/Adapters tab - RAM
+DPMI.EMStab.138	528	; DPMI/EMS tab
+DPMI.139	139	; Toolbox - DPMI/EMS tab - DPMI
+EnableDPMIsupport.140	140	; Enable DPMI support
+EnableDPMIswapfile.141	141	; Enable DPMI swapfile
+EMS.142	529	; Toolbox - DPMI/EMS tab - EMS
+EnableEMS.143	143	; Enable EMS
+EMSPageframe.144	144	; EMS Pageframe
+Uninstalltab.145	145	; Uninstall tab
+ExitingToolbox.146	146	; Exiting Toolbox
+Reboot.147	147	; Reboot
+RestartWindows.148	148	; Restart Windows
+Maximize.149	149	; Toolbox - Exiting Toolbox - Maximize
+MAXeditoverview.150	150	; MAXedit overview
+MAXeditmenubar.151	151	; MAXedit menu bar
+Filemenu.152	152	; MAXedit - MAXedit menu bar - File menu
+New.153	530	; New
+Open.154	154	; Open
+Save.155	155	; Save
+SaveAs.156	156	; Save As
+OpenQMAX.INI.157	157	; Open QMAX.INI
+Print.158	158	; Print
+PrinterSetup.159	159	; Printer Setup
+Exit.160	160	; MAXedit - File menu - Exit
+Editmenu.161	161	; Edit menu
+Undo.162	162	; Undo
+Cut.163	531	; Cut
+Copy.164	164	; Copy
+Paste.165	165	; Paste
+Delete.166	166	; Delete
+SelectAll.167	167	; Select All
+Searchmenu.168	168	; Search menu
+Find.169	169	; Find
+Next.170	170	; Next
+Previous.171	171	; Previous
+Windowmenu.172	172	; Window menu
+Tile.173	173	; Tile
+Cascade.174	174	; Cascade
+ArrangeIcons.175	175	; Arrange Icons
+CloseAll.176	176	; Close All
+Openedfiles.177	532	; Opened files
+Helpmenu.178	178	; MAXedit - MAXedit menu bar - Help menu
+HelponMAXedit.179	179	; Help on MAXedit
+AboutMAXedit.180	180	; About MAXedit
+MAXedittoolbar.181	181	; MAXedit tool bar
+DOSMAXoverview.182	182	; DOSMAX overview
+Textmodevsgraphicsmode.183	183	; Text mode vs graphics mode
+It.sprobablyatextmodeprogramif..184	184	; It's probably a text mode program if…
+It.sprobablyagraphicsmodeprogramif..185	533	; It's probably a graphics mode program if…
+Howmuchmemory..186	186	; How much memory?
+DOS.187	534	; DOS
+Windows.188	188	; Windows
+TSRs.189	189	; TSRs
+Monochromedisplayarea.190	190	; Monochrome display area
+HowtouseDOSMAXforWindows.191	191	; How to use DOSMAX for Windows
+CreatingDOSMAXsessionsinWindows3.1x.192	535	; Creating DOSMAX sessions in Windows 3.1x
+CreatingDOSMAXsessionsinWindows95.193	193	; Creating DOSMAX sessions in Windows 95
+QPEsettings.194	536	; QPE settings
+WhatifIaccidentallystartagraphicsmodeprogram..195	195	; What if I accidentally start a graphics mode program?
+QPOPUP.196	196	; QPOPUP
+Ignorethismodeswitch.197	197	; Ignore this mode switch
+Alwaysignoremodeswitchesinthisprogram.198	198	; Always ignore mode switches in this program
+TerminatethisDOSwindow.199	199	; Terminate this DOS window
+DOSMAXforWindowsreference.200	200	; DOSMAX for Windows reference
+DOSMAXfiles.201	537	; DOSMAX files
+QPOPUPoptions.202	202	; QPOPUP options
+QPOPUP.INFoptions.203	203	; QPOPUP.INF options
+AddingaQPOPUPwarning.204	204	; Adding a QPOPUP warning
+PreventingexecutionwithQPOPUP.205	205	; Preventing execution with QPOPUP
+SYSTEM.INIoptions.206	206	; SYSTEM.INI options
+DOSMAX.OFF.207	207	; DOSMAX=OFF
+DOSMAXDefault.ON.208	208	; DOSMAXDefault=ON
+DOSMAXFonts.OFF.209	209	; DOSMAXFonts=OFF
+DOSMAXMono.OFF.210	210	; DOSMAXMono=OFF
+TroubleshootingDOSMAXforWindows.211	211	; Troubleshooting DOSMAX for Windows
+QualitasPIFeditoroverview.212	212	; Qualitas PIF editor overview
+QualitasPIFandQPEfiles.213	213	; Qualitas PIF and QPE files
+QualitasPIFeditorandDOSMAX.214	214	; Qualitas PIF editor and DOSMAX
+UseDefault.215	215	; Use Default
+ON.216	216	; ON
+OFF.217	538	; OFF
+GettingaPIFjustright.218	218	; Getting a PIF just right
+MAXshell.219	219	; MAX shell
+MAXshellcommandlineoptions.220	220	; MAX shell command line options
+ASQ.221	539	; ASQ
+RunningASQ.222	222	; Running ASQ
+ASQcommandlineoptions.223	223	; ASQ command line options
+ASQmenubar.224	224	; ASQ menu bar
+Filemenu.225	225	; MAX Shell and ASQ - ASQ menu bar - File menu
+Snapshot.226	226	; MAX Shell and ASQ - File menu - Snapshot
+Exit.227	227	; MAX Shell and ASQ - File menu - Exit
+Memorymenu.228	228	; Memory menu
+Configmenu.229	229	; Config menu
+Equipmentmenu.230	230	; Equipment menu
+Learnmenu.231	231	; Learn menu
+Helpmenu.232	232	; MAX Shell and ASQ - ASQ menu bar - Help menu
+QualitasMemoryTester.QMT.overview.233	233	; Qualitas Memory Tester (QMT) overview
+RunningQMT.234	234	; Running QMT
+QMTcommandlineoptions.235	235	; QMT command line options
+QMTscreens.236	236	; QMT screens
+QMTbasicscreen.237	237	; QMT basic screen
+QMTadvancedscreen.238	238	; QMT advanced screen
+QMTkeys.239	239	; QMT keys
+Basicandadvancedkeys.240	240	; Basic and advanced keys
+Basickeys.241	241	; Basic keys
+Advancedkeys.242	242	; Advanced keys
+AbouttheQMTtests.243	243	; About the QMT tests
+Stuck.atfault.244	244	; Stuck-at fault
+Transitionfault.245	245	; Transition fault
+Couplingfault.246	246	; Coupling fault
+Inversionfault.247	247	; Inversion fault
+Idempotentfault.248	248	; Idempotent fault
+Memoryandparityerrors.249	249	; Memory and parity errors
+386UTIL.COMoverview.250	540	; 386UTIL.COM overview
+386UTIL.COMcommandlineoptions.251	251	; 386UTIL.COM command line options
+Listor.L.Overview..252	252	; List or /L (Overview)
+NewtopofDOSmemory.253	253	; New top of DOS memory
+AddedlowDOSmemory.254	254	; Added low DOS memory
+AddedhighDOSmemory.255	255	; Added high DOS memory
+AvailableextendedmemoryandAvailablesharedmemory.256	256	; Available extended memory and Available shared memory
+Programstorage.257	257	; Program storage
+ROMmappingregion.258	258	; ROM mapping region
+HighDOSmemory.259	259	; High DOS memory
+LowDOSmemory.260	260	; Low DOS memory
+AvailSharedmemoryandRemainingextendedmemory.261	541	; Avail Shared memory and Remaining extended memory
+Totalextendedmemory.262	542	; Total extended memory
+xxKBavailableinHIGHmemory.largestblockisyyKB..263	263	; xx KB available in HIGH memory, largest block is yy KB.
+MAPEMSor.E.EMS..264	264	; MAPEMS or /E (EMS)
+Handle.265	265	; 386UTIL.COM - MAPEMS or /E (EMS) - Handle
+Memory.266	266	; 386UTIL.COM - MAPEMS or /E (EMS) - Memory
+Name.267	267	; 386UTIL.COM - MAPEMS or /E (EMS) - Name
+Total.268	268	; Total
+EMSPageMap.269	269	; EMS Page Map
+MAPMEMor.M.ResidentPrograms..270	270	; MAPMEM or /M (Resident Programs)
+Name.271	271	; 386UTIL.COM - MAPMEM or /M (Resident Programs) - Name
+HexStartandHexEnd.272	272	; Hex Start and Hex End
+HexOwner.273	273	; Hex Owner
+DecimalLength.274	274	; 386UTIL.COM - MAPMEM or /M (Resident Programs) - Decimal Length
+TextorInterruptNumbers.275	275	; Text or Interrupt Numbers
+MAPDEVor.D.DeviceDrivers..276	276	; MAPDEV or /D (Device Drivers)
+Name.277	277	; 386UTIL.COM - MAPDEV or /D (Device Drivers) - Name
+HexStart.278	278	; Hex Start
+DecimalLength.279	279	; 386UTIL.COM - MAPDEV or /D (Device Drivers) - Decimal Length
+InterruptNumbers.280	280	; Interrupt Numbers
+SUMMARYor.S.LoadSizes..281	281	; SUMMARY or /S (Load Sizes)
+DeviceorProgramName.282	543	; Device or Program Name
+SizeParameter.Initial.283	283	; Size Parameter - Initial
+SizeParameter.Resident.284	284	; Size Parameter - Resident
+AllowFlexFrame..285	285	; Allow FlexFrame?
+SuggestedAction.286	286	; Suggested Action
+ResidentProgramOptimization.287	544	; Resident Program Optimization
+RAMSCANor.R.MemoryScan..288	288	; RAMSCAN or /R (Memory Scan)
+Type.289	289	; Type
+Handle.290	290	; 386UTIL.COM - RAMSCAN or /R (Memory Scan) - Handle
+AddressRange.291	291	; Address Range
+Size.292	292	; Size
+Name.293	293	; 386UTIL.COM - RAMSCAN or /R (Memory Scan) - Name
+TIMEMEMor.T.TimeMemory..294	294	; TIMEMEM or /T (Time Memory)
+StartingAddress.295	295	; Starting Address
+Range.Start.296	545	; Range - Start
+Range.End.297	297	; Range - End
+Length.298	298	; Length
+AverageTime.s.299	299	; Average Time µs
+RatiotoFastestTime.300	300	; Ratio to Fastest Time
+Qcache.301	301	; Qcache
+Qcachesyntax.302	302	; Qcache syntax
+Qcachecommandlineoptions.303	303	; Qcache command line options
+RunTimeParameters.304	304	; Run Time Parameters
+386DISK.305	305	; 386DISK
+386DISKsyntax.306	306	; 386DISK syntax
+ROMSearch.307	307	; ROMSearch
+STRIPMGR.308	308	; STRIPMGR
+STRIPMGRsyntax.309	309	; STRIPMGR syntax
+STRIPMGRcommandlineoptions.310	310	; STRIPMGR command line options
+Snapshot.311	311	; Other Qualitas MAX Utilities - Snapshot
+Snapshotsyntax.312	312	; Snapshot syntax
+ExtraDOS.313	313	; ExtraDOS
+386MAXand386LOADoverview.314	314	; 386MAX and 386LOAD overview
+386MAX.SYSprofileoptions.315	315	; 386MAX.SYS profile options
+AUTOBCF.316	316	; AUTOBCF
+BCF..317	317	; BCF=
+DMA..318	318	; DMA=
+EMS.0.319	319	; EMS=0
+EXTSIZE..Advancedoption..320	320	; EXTSIZE= (Advanced option)
+FRAME..321	321	; FRAME=
+HPDAREG..Advancedoption..322	322	; HPDAREG= (Advanced option)
+NO58.323	323	; NO58
+NOCOMPROM.324	324	; NOCOMPROM
+NODPMI.325	325	; NODPMI
+NOFLEX.326	326	; NOFLEX
+NOFRAME.327	327	; NOFRAME
+NOHIGH.328	328	; NOHIGH
+NOLOADHI.329	329	; NOLOADHI
+NOLOW.330	330	; NOLOW
+NOROM.331	331	; NOROM
+NOSCAN..332	332	; NOSCAN=
+NOSCSI.Advancedoption..333	333	; NOSCSI (Advanced option)
+NOWIN3.334	334	; NOWIN3
+NOWIN30.335	335	; NOWIN30
+NOXBIOS.336	336	; NOXBIOS
+NOXRAM.337	337	; NOXRAM
+PRGREG..338	338	; 386MAX and 386LOAD Options - 386MAX.SYS profile options - PRGREG=
+PSMEM..Advancedoption..339	339	; PSMEM= (Advanced option)
+RAM..340	340	; RAM=
+ROM..341	341	; ROM=
+STACKREG..Advancedoption..342	342	; STACKREG= (Advanced option)
+STACKS..Advancedoption..343	343	; STACKS= (Advanced option)
+SWAPFILE..344	344	; SWAPFILE=
+USE..345	345	; USE=
+VGA.346	546	; VGA
+VGASWAP.347	347	; VGASWAP
+VIDMEM..348	348	; VIDMEM=
+VXD..349	349	; VXD=
+XBDAREG..Advancedoption..350	350	; XBDAREG= (Advanced option)
+XBIOSHI.351	351	; XBIOSHI
+XMSHNDL.Advancedoption..352	352	; XMSHNDL (Advanced option)
+386LOADoptions.353	353	; 386LOAD options
+DISPLAY.354	354	; DISPLAY
+ENVREG..355	355	; ENVREG=
+ENVSAVE.AdvancedOption..356	356	; ENVSAVE (Advanced Option)
+FLEXFRAME.AdvancedOption..357	357	; FLEXFRAME (Advanced Option)
+GETSIZE.358	358	; GETSIZE
+GROUP..359	359	; GROUP=
+NOPAUSE.360	360	; NOPAUSE
+PRGREG..361	361	; 386MAX and 386LOAD Options - 386LOAD options - PRGREG=
+PROG..362	362	; PROG=
+QUIET.363	363	; QUIET
+SIZE..364	364	; SIZE=
+Troubleshootingoverview.365	365	; Troubleshooting overview
+Fixingasystemthatwon.tboot.366	366	; Fixing a system that won't boot
+Altkey.367	367	; Alt key
+F8key.368	368	; F8 key
+PREMAXIM.369	369	; PREMAXIM
+PREINST.370	370	; PREINST
+STRIPMGR.EXE.371	371	; STRIPMGR.EXE
+Isolatingtheproblem.372	547	; Isolating the problem
+Maximize.373	373	; Troubleshooting - Isolating the problem - Maximize
+ASQand386UTIL.374	374	; ASQ and 386UTIL
+Lockupsonstartup.375	375	; Lockups on startup
+Generaltroubleshootingtips.376	376	; General troubleshooting tips
+Videoproblems.377	377	; Video problems
+Networkproblems.378	378	; Network problems
+Diskproblems.379	379	; Disk problems
+EMSproblems.380	548	; EMS problems
+Commonproblems.381	381	; Common problems
+PrivilegedOperationException.382	382	; Privileged Operation Exception
+Windowserrors.383	383	; Windows errors
+DOSerrors.384	384	; DOS errors
+TroubleshootingforWindowscomponents.385	549	; Troubleshooting for Windows components
+GoAhead.386	386	; Troubleshooting - Troubleshooting for Windows components - Go Ahead
+Toolbox.387	387	; Troubleshooting - Troubleshooting for Windows components - Toolbox
+DOSMAXforWindows.388	388	; Troubleshooting - Troubleshooting for Windows components - DOSMAX for Windows
+MAXedit.389	389	; Troubleshooting - Troubleshooting for Windows components - MAXedit
+MAXmeter.390	390	; Troubleshooting - Troubleshooting for Windows components - MAXmeter
+Messagesoverview.391	391	; Messages overview
+MAXmessages.392	550	; MAX messages
+Warningconditions.393	393	; Warning conditions
+MAXVxDmessages.394	394	; MAX VxD messages
+386LOADmessages.395	395	; 386LOAD messages
+386UTILmessages.396	396	; 386UTIL messages
+ExtraDOSmessages.397	397	; ExtraDOS messages
+Setupmessages.398	398	; Setup messages
+Toolboxmessages.399	399	; Toolbox messages
+386DISKmessages.400	400	; 386DISK messages
+Qcachemessages.401	401	; Qcache messages
+Memorymanagementoverview.402	402	; Memory management overview
+Computermemoryterminology.403	403	; Computer memory terminology
+Bytes.kilobytes.megabytes.andgigabytes.404	404	; Bytes, kilobytes, megabytes, and gigabytes
+RAM.405	551	; An Overview of Memory Management - Computer memory terminology - RAM
+Harddrive.isitmemory..406	406	; Hard drive:  is it memory?
+ROM.407	552	; ROM
+Hexadecimaladdresses.408	408	; Hexadecimal addresses
+TheevolutionofPCmemory.409	409	; The evolution of PC memory
+LowandhighDOSmemory.410	553	; Low and high DOS memory
+What.stypicallyinlowDOSmemory.411	411	; What's typically in low DOS memory
+What.stypicallyinhighDOSmemory.412	412	; What's typically in high DOS memory
+Expandedmemory.413	413	; Expanded memory
+Bankswitching.414	414	; Bank switching
+ATandlaterchips.415	415	; AT and later chips
+Extendedmemory.416	416	; Extended memory
+Operatingmodes.417	417	; Operating modes
+Memoryandthe386.418	418	; Memory and the 386
+QualitasMAXandmemorymanagement.419	419	; Qualitas MAX and memory management
+QualitasMAXandDOSMemory.420	420	; Qualitas MAX and DOS Memory
+Videomemory.421	554	; Video memory
+SystemROM.422	422	; System ROM
+Remapping.423	423	; Remapping
+Gettingthemostfromyourmegabyte.424	424	; Getting the most from your megabyte
+Hardwareadapters.425	425	; Hardware adapters
+Microchannelsystems.426	555	; Microchannel systems
+MDA.427	556	; MDA
+QualitasMAXandmemoryaboveonemegabyte.428	428	; Qualitas MAX and memory above one megabyte
+EMS.429	557	; An Overview of Memory Management - Qualitas MAX and memory above one megabyte - EMS
+XMS.430	558	; XMS
+VCPI.431	431	; VCPI
+DPMI.432	432	; An Overview of Memory Management - Qualitas MAX and memory above one megabyte - DPMI
+VDS.433	559	; VDS
+SmartMemory.434	560	; An Overview of Memory Management - Qualitas MAX and memory management - SmartMemory
+NotesforWindowsusers.435	435	; Notes for Windows users
+MAXreplacesHIMEM.SYSandEMM386.EXE.436	436	; MAX replaces HIMEM.SYS and EMM386.EXE
+GoAhead.437	437	; An Overview of Memory Management - Notes for Windows users - Go Ahead
+MorememoryforWindows.438	438	; More memory for Windows
+MorememoryinaDOSwindow.439	439	; More memory in a DOS window
+ResidentSoftwareInstancing.440	440	; Resident Software Instancing
+SmartMemory.441	561	; An Overview of Memory Management - Notes for Windows users - SmartMemory
+VirtualizedhighDOS.442	442	; Virtualized high DOS
+WinSmart.443	443	; WinSmart
+NotesforDOSmemorymanagementusers.444	444	; Notes for DOS memory management users
+QualitasMAXimprovesonmemorymanagement.445	445	; Qualitas MAX improves on memory management
+Specificregionselection.446	446	; Specific region selection
+Optimization.447	447	; Optimization
+Loadmanagement.448	448	; Load management
+BIOScompression.449	449	; BIOS compression
+Additionalsavingsonutilities.450	450	; Additional savings on utilities
+ROMcaching.451	451	; ROM caching
+BenefitsforWindowsusers.452	452	; Benefits for Windows users
+GlossaryOfTerms.453	453	; Glossary of Terms
+Gloss386DISK.454	454	; D2HGloss386DISK
+Gloss386LOAD.455	455	; D2HGloss386LOAD
+Gloss386MAX.PRO.456	456	; D2HGloss386MAX.PRO
+Gloss386UTIL.457	457	; D2HGloss386UTIL
+GlossAlternatemapregisterset.458	458	; D2HGlossAlternatemapregisterset
+GlossApplication.459	459	; D2HGlossApplication
+GlossASQ.460	460	; D2HGlossASQ
+GlossBackfilling.461	461	; D2HGlossBackfilling
+GlossByte.462	462	; D2HGlossByte
+GlossConventionalmemory.463	463	; D2HGlossConventionalmemory
+GlossCPU.464	464	; D2HGlossCPU
+GlossDevicedrivers.465	465	; D2HGlossDevicedrivers
+GlossDMA.466	466	; D2HGlossDMA
+GlossDOSHelpReader.467	467	; D2HGlossDOSHelpReader
+GlossDOSMAXforWindows.468	468	; D2HGlossDOSMAXforWindows
+GlossDPMI.469	469	; D2HGlossDPMI
+GlossEMS.470	470	; D2HGlossEMS
+GlossExpandedmemory.471	562	; D2HGlossExpandedmemory
+GlossExtendedmemory.472	563	; D2HGlossExtendedmemory
+GlossExtraDOS.473	473	; D2HGlossExtraDOS
+GlossGoAhead.474	474	; D2HGlossGoAhead
+GlossHighDOSmemory.475	475	; D2HGlossHighDOSmemory
+GlossKilobyte.megabyte.gigabyte.476	476	; D2HGlossKilobyte.megabyte.gigabyte
+GlossLowDOSmemory.477	477	; D2HGlossLowDOSmemory
+GlossMAXHelp.478	478	; D2HGlossMAXHelp
+GlossMAXshell.479	479	; D2HGlossMAXshell
+GlossMAXedit.480	480	; D2HGlossMAXedit
+GlossMaximize.481	481	; D2HGlossMaximize
+GlossMAXmeter.482	482	; D2HGlossMAXmeter
+GlossMemory.resident.483	483	; D2HGlossMemory.resident
+GlossMonochromedisplayarea.484	484	; D2HGlossMonochromedisplayarea
+GlossMultiConfig.485	485	; D2HGlossMultiConfig
+GlossPageframe.486	486	; D2HGlossPageframe
+GlossParagraph.487	487	; D2HGlossParagraph
+GlossProfile.488	488	; D2HGlossProfile
+GlossProtectedmode.489	489	; D2HGlossProtectedmode
+GlossQcache.490	564	; D2HGlossQcache
+GlossQMT.491	491	; D2HGlossQMT
+GlossQPOPUP.492	565	; D2HGlossQPOPUP
+GlossQualitasPIFeditor.493	493	; D2HGlossQualitasPIFeditor
+GlossRAM.494	494	; D2HGlossRAM
+GlossROM.495	495	; D2HGlossROM
+GlossROMcaching.496	496	; D2HGlossROMcaching
+GlossROMSearch.497	497	; D2HGlossROMSearch
+GlossSCSI.498	498	; D2HGlossSCSI
+GlossSnapshot.499	499	; D2HGlossSnapshot
+GlossSTRIPMGR.500	500	; D2HGlossSTRIPMGR
+GlossToolbox.501	501	; D2HGlossToolbox
+GlossTSR.502	502	; D2HGlossTSR
+GlossVCPI.503	503	; D2HGlossVCPI
+GlossWeitekFloatingPointAccelerator.504	566	; D2HGlossWeitekFloatingPointAccelerator
+GlossWinSmart.505	505	; D2HGlossWinSmart
+GlossXMS.506	506	; D2HGlossXMS
+Setup.3 3	; Setup
+QualitasMemoryTester.13 13	; Qualitas Memory Tester
+AnOverviewofMemoryManagement.19 19	; An Overview of Memory Management
+QualitasMAXfunctions.21 21	; Qualitas MAX functions
+QualitasMAXinterface.22 22	; Qualitas MAX interface
+On.linedocumentation.26 26	; On-line documentation
+Whenyouhaveaquestion.40 40	; When you have a question
+QualitasonCompuServe.43 43	; Qualitas on CompuServe
+Additionalelectronicservices.46 46	; Additional electronic services
+Telephone.fax.andmailsupport.47 47	; Telephone, fax, and mail support
+Gettingsupportviafax.49 49	; Getting support via fax
+Aftertheinstallation.57 57	; After the installation
+WelcometoDOSMaximize.72 72	; Welcome to DOS Maximize
+ExpressMaximizeinDOS.75 75	; Express Maximize in DOS
+MAXIMIZE.CFG.80 80	; MAXIMIZE.CFG
+AUTOEXEC.BAT.before..85 85	; AUTOEXEC.BAT (before)
+GoAheaddisabledlist.106 106	; Go Ahead disabled list
+ConfiguringMAXmeter.111 111	; Configuring MAXmeter
+Alwaysontop.119 119	; Always on top
+LoadGoAhead.127 127	; Load Go Ahead
+RAM.137 137	; Toolbox - UMB/Adapters tab - RAM
+DPMI.EMStab.138 138	; DPMI/EMS tab
+EMS.142 142	; Toolbox - DPMI/EMS tab - EMS
+New.153 153	; New
+Cut.163 163	; Cut
+Openedfiles.177 177	; Opened files
+It.sprobablyagraphicsmodeprogramif..185 185	; It's probably a graphics mode program if…
+DOS.187 187	; DOS
+CreatingDOSMAXsessionsinWindows3.1x.192 192	; Creating DOSMAX sessions in Windows 3.1x
+QPEsettings.194 194	; QPE settings
+DOSMAXfiles.201 201	; DOSMAX files
+OFF.217 217	; OFF
+ASQ.221 221	; ASQ
+386UTIL.COMoverview.250 250	; 386UTIL.COM overview
+AvailSharedmemoryandRemainingextendedmemory.261 261	; Avail Shared memory and Remaining extended memory
+Totalextendedmemory.262 262	; Total extended memory
+DeviceorProgramName.282 282	; Device or Program Name
+ResidentProgramOptimization.287 287	; Resident Program Optimization
+Range.Start.296 296	; Range - Start
+VGA.346 346	; VGA
+Isolatingtheproblem.372 372	; Isolating the problem
+EMSproblems.380 380	; EMS problems
+TroubleshootingforWindowscomponents.385 385	; Troubleshooting for Windows components
+MAXmessages.392 392	; MAX messages
+RAM.405 405	; An Overview of Memory Management - Computer memory terminology - RAM
+ROM.407 407	; ROM
+LowandhighDOSmemory.410 410	; Low and high DOS memory
+Videomemory.421 421	; Video memory
+Microchannelsystems.426 426	; Microchannel systems
+MDA.427 427	; MDA
+EMS.429 429	; An Overview of Memory Management - Qualitas MAX and memory above one megabyte - EMS
+XMS.430 430	; XMS
+VDS.433 433	; VDS
+SmartMemory.434 434	; An Overview of Memory Management - Qualitas MAX and memory management - SmartMemory
+SmartMemory.441 441	; An Overview of Memory Management - Notes for Windows users - SmartMemory
+GlossExpandedmemory.471 471	; D2HGlossExpandedmemory
+GlossExtendedmemory.472 472	; D2HGlossExtendedmemory
+GlossQcache.490 490	; D2HGlossQcache
+GlossQPOPUP.492 492	; D2HGlossQPOPUP
+GlossWeitekFloatingPointAccelerator.504 504	; D2HGlossWeitekFloatingPointAccelerator

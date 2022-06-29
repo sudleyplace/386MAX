@@ -1,0 +1,263 @@
+{\rtf1\ansi \deff5\deflang1033{\fonttbl{\f1\froman\fcharset2\fprq2 Symbol;}{\f5\fswiss\fcharset0\fprq2 Arial;}{\f11\fmodern\fcharset0\fprq1 Courier New;}{\f221\froman\fcharset0\fprq2 CG Times (W1);}}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;
+\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\f5\fs20 \snext0 Normal;}{\s1\sb962\sa1682 \b\f5\fs48\cf7 \sbasedon15\snext2 heading 1;}{\s2\sb362\sa43\keepn 
+\b\f5\fs36\cf7 \sbasedon15\snext16 heading 2;}{\s3\sb340\keepn \b\f5\fs28\cf7 \sbasedon15\snext16 heading 3;}{\s4\sb216\sa14\keepn \b\i\f5\cf7 \sbasedon15\snext17 heading 4;}{\s5\sb340 \b\f5\fs28\cf7 \sbasedon15\snext18 heading 5;}{\*\cs10 \additive 
+Default Paragraph Font;}{\s15 \b\f5\fs48\cf7 \sbasedon0\snext15 Heading Base;}{\s16\sb100\sl280\slmult1 \f5\fs20 \sbasedon0\snext16 Body Text;}{\s17\fi-360\li720\sb100\sl280\slmult1 \f5\fs20 \sbasedon16\snext17 List;}{\s18\sb115\sl280\slmult1 \f5\fs20 
+\sbasedon16\snext18 Definition;}{\s19 \f5\fs20 \sbasedon20\snext0 toc 3;}{\s20 \f5\fs20 \sbasedon0\snext20 TOC Base;}{\s21\sb60\sa60 \f5\fs22\uldb \sbasedon20\snext0 toc 2;}{\s22\sb240\sa120 \b\f5\fs28 \sbasedon20\snext0 toc 1;}{\s23\li720 \f5\fs20 
+\sbasedon24\snext0 index 3;}{\s24 \f5\fs20 \sbasedon0\snext24 Index Base;}{\s25\li360 \f5\fs20 \sbasedon24\snext0 index 2;}{\s26 \f5\fs20 \sbasedon24\snext0 index 1;}{\s27\sb302\sa122 \b\f5\fs22\cf7 \sbasedon15\snext26 index heading;}{\s28\brdrt
+\brdrs\brdrw15\brsp20 \brdrbtw\brdrs\brdrw15\brsp20 \tqr\tx9720 \f5\fs20 \sbasedon29\snext28 footer;}{\s29 \f5\fs20 \sbasedon0\snext29 Header Base;}{\s30\tqr\tx9720 \f5\fs20 \sbasedon29\snext30 header;}{\s31\li720 \f5\fs20 \sbasedon0\snext31 
+Normal Indent;}{\s32\li72\ri72\sb40\sa40 \f5\fs18 \sbasedon16\snext32 TableText;}{\s33\keepn \b\f5\fs48\cf7 \sbasedon15\snext33 TOCTitle;}{\s34\qr\sb242\sa722 \b\f5\fs72\cf7 \sbasedon15\snext34 Title;}{\s35\fi-360\li720\sb100\sl280\slmult1\tx720 \f5\fs20 
+\sbasedon17\snext35 List Table;}{\s36\sa160\sl280\slmult1\tx360\tx720 \i\f5\fs20 \sbasedon16\snext16 caption;}{\s37\sa160\sl280\slmult1\tx360\tx720 \i\f5\fs20 \sbasedon16\snext37 Margin Note;}{\s38\qr\li1440\sb960\brdrt\brdrth\brdrw60\brsp20 
+\b\f5\fs28\cf7 \sbasedon34\snext38 SuperTitle;}{\s39\qr\sb242\sa722 \b\f5\fs28\cf7 \sbasedon34\snext39 ByLine;}{\s40\li720\sb100\sa40\sl280\slmult1 \f11\fs20 \sbasedon41\snext40 CodeExplained;}{\s41\sb100\sl280\slmult1 \f11\fs20 \sbasedon16\snext41 
+Code Base;}{\s42\li720\sl280\slmult1\tx1080\tx1440\tx1800\tx2160\tx2520\tx2880\tx3240\tx3600\tx3960\tx4320\tx4680\tx5040\tx5400\tx5760\tx6120 \f11\fs20 \sbasedon41\snext42 Source;}{\s43\sb60\sa60\sl280\slmult1\tx360\tx720 \f5\fs20 \sbasedon16\snext36 
+Figures;}{\s44\sb60\sa60\sl280\slmult1\tx360\tx720 \f5\fs20 \sbasedon43\snext44 Figures Table;}{\s45\sb80 \f221\fs20 \sbasedon0\snext45 BodyTable;}{\s46\sb100\sl280\slmult1 \f5\fs20 \sbasedon16\snext46 Body Text Table;}{\s47\li72\ri72\sb60 \b\f5\fs48\cf7 
+\sbasedon15\snext47 TableHeading;}{\s48\li720\sb115\sl280\slmult1\tx1080\tx1440\tx1800\tx2160\tx2520\tx2880\tx3240\tx3600\tx3960\tx4320\tx4680\tx5040\tx5400\tx5760\tx6120 \f11\fs20 \sbasedon42\snext48 SourceTop;}{\s49\sb180\sa180\sl280\slmult1\brdrt
+\brdrs\brdrw15\brsp20 \brdrb\brdrs\brdrw15\brsp20 \f5\fs20 \sbasedon16\snext49 Note;}{\s50\fi-360\li1080\sb100\sl280\slmult1\tx1080 \f5\fs20 \sbasedon57\snext50 List 2 Table;}{\s51\sb180\sa20 \b\f5\cf2 \sbasedon15\snext52 RelatedHead;}{
+\s52\sa60\sl280\slmult1 \f5\fs20\uldb \sbasedon67\snext52 Jump;}{\s53\sl-20\slmult1 \f5\fs20 \sbasedon16\snext0 TableBorder;}{\s54\tqc\tx4320\tqr\tx8640 \b\f5\fs16 \sbasedon0\snext54 CropMark;}{\s55\tqr\tx9720 \f5\fs20 \sbasedon30\snext55 header even;}{
+\s56\tqr\tx9720 \f5\fs20 \sbasedon30\snext56 header odd;}{\s57\fi-360\li1080\sb100\sl280\slmult1\tx1080 \f5\fs20 \sbasedon17\snext57 List 2;}{\s58\qr\sb600\sa1200 \b\f5\cf7 \sbasedon34\snext58 Byline;}{\s59\li2160\ri720 \f5\fs20 \sbasedon19\snext0 toc 4;}
+{\s60\li800\tqr\tx11160 \f5\fs20 \sbasedon0\snext0 toc 5;}{\s61\li1000\tqr\tx11160 \f5\fs20 \sbasedon0\snext0 toc 6;}{\s62\li1200\tqr\tx11160 \f5\fs20 \sbasedon0\snext0 toc 7;}{\s63\li1400\tqr\tx11160 \f5\fs20 \sbasedon0\snext0 toc 8;}{
+\s64\li1600\tqr\tx11160 \f5\fs20 \sbasedon0\snext0 toc 9;}{\*\cs65 \additive\fs16\up6 \sbasedon10 footnote reference;}{\s66 \b\f5\fs20 \sbasedon0\snext66 footnote text;}{\s67\sa60\sl280\slmult1 \f5\fs20\uldb \sbasedon16\snext67 Jump Base;}{
+\s68\sb40\sa40\sl280\slmult1 \f5\fs22 \sbasedon16\snext68 GlossaryTerm;}{\s69\sa160\sl280\slmult1\tx360\tx720 \i\f5\fs20 \sbasedon36\snext69 CaptionTable;}{\s70\sb20\sa60\sl280\slmult1 \b\f5\fs22\uldb \sbasedon67\snext70 Jump from Contents;}{
+\s71\sa60\sl280\slmult1 \f5\fs20\uldb \sbasedon67\snext71 Jump from List;}{\s72\fi-360\li360\sb100\sl280\slmult1{\*\pn \pnlvl11\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\f5\fs20 \sbasedon16\snext72 Bullets;}{
+\s73\fi-360\li360\sb100\sl280\slmult1{\*\pn \pnlvl10\pndec\pnstart1\pnindent360\pnhang{\pntxta .}}\f5\fs20 \sbasedon72\snext73 numberedlist;}}{\info{\title Qualitas MAX}{\author Klaus Albrecht}{\operator Klaus Albrecht}{\creatim\yr1996\mo3\dy4\hr9\min27}
+{\revtim\yr1996\mo3\dy4\hr9\min30}{\version1}{\edmins0}{\nofpages1}{\nofwords2474}{\nofchars14105}{\vern49205}}\margl720\margr360\margt360\margb360 
+\facingp\widowctrl\ftnbj\aenddoc\hyphhotz425\margmirror\noextrasprl\prcolbl\cvmme\sprsspbf\brkfrm\swpbdr\hyphcaps0 \fet0{\*\template W:\\WINWORD6\\VORLAGEN\\D2H_HELP.dot}\sectd \sbkodd\linex0\headery101\footery0\colsx709\endnhere {\headerl \trowd 
+\trrh-1080\trkeep \cellx360\clbrdrr\brdrs\brdrw15 \cellx720\cellx10800\clbrdrl\brdrs\brdrw15 \cellx11160\cellx11520 \pard\plain \s54\intbl\tqc\tx4320\tqr\tx8640 \b\f5\fs16 \cell \cell \cell \cell \cell \pard\plain \intbl \f5\fs20 \row \trowd \trkeep 
+\clbrdrb\brdrs\brdrw15 \cellx360\cellx720\cellx10800\cellx11160\clbrdrb\brdrs\brdrw15 \cellx11520 \pard\plain \s54\intbl\tqc\tx4320\tqr\tx8640 \b\f5\fs16 \cell \cell \cell \cell \cell \pard\plain \intbl \f5\fs20 \row \pard\plain \s30\tqr\tx9720 \f5\fs20 
+
+\par }{\headerr \trowd \trrh-1080\trleft-360\trkeep \cellx0\clbrdrr\brdrs\brdrw15 \cellx360\cellx10440\clbrdrl\brdrs\brdrw15 \cellx10800\cellx11160 \pard\plain \s54\intbl\tqc\tx4320\tqr\tx8640 \b\f5\fs16 \cell \cell \cell \cell \cell \pard\plain \intbl 
+\f5\fs20 \row \trowd \trleft-360\trkeep \clbrdrb\brdrs\brdrw15 \cellx0\cellx360\cellx10440\cellx10800\clbrdrb\brdrs\brdrw15 \cellx11160 \pard\plain \s54\intbl\tqc\tx4320\tqr\tx8640 \b\f5\fs16 \cell \cell \cell \cell \cell \pard\plain \intbl \f5\fs20 \row 
+\pard\plain \s30\tqr\tx9720 \f5\fs20 
+\par }{\footerl \pard\plain \s28\brdrt\brdrs\brdrw15\brsp20 \brdrbtw\brdrs\brdrw15\brsp20 \tqr\tx9720 \f5\fs20 {\field{\*\fldinst PAGE}{\fldrslt 18}} {{\field{\*\fldinst SYMBOL 183 \\f "Symbol" \\s 10}{\fldrslt\f1\fs20}}} {\field{\*\fldinst STYLEREF"1"
+}{\fldrslt {\b Fehler! Kein Text mit angegebener Formatvorlage im Dokument.}}}\tab {\field\flddirty{\*\fldinst TITLE}{\fldrslt }}
+\par \trowd \trrh-360\trkeep \clbrdrt\brdrs\brdrw15 \cellx360\cellx720\cellx10800\cellx11160\clbrdrt\brdrs\brdrw15 \cellx11520 \pard\plain \s54\intbl\tqc\tx4320\tqr\tx8640 \b\f5\fs16 \cell \cell \cell \cell \cell \pard\plain \intbl \f5\fs20 \row \trowd 
+\trrh-720\trkeep \cellx360\clbrdrr\brdrs\brdrw15 \cellx720\cellx10800\clbrdrl\brdrs\brdrw15 \cellx11160\cellx11520 \pard\plain \s54\intbl\tqc\tx4320\tqr\tx8640 \b\f5\fs16 \cell \cell \cell \cell \cell \pard\plain \intbl \f5\fs20 \row \pard \sa180 
+\par }{\footerr \pard\plain \s28\brdrt\brdrs\brdrw15\brsp20 \brdrbtw\brdrs\brdrw15\brsp20 \tqr\tx9720 \f5\fs20 {\field\flddirty{\*\fldinst TITLE}{\fldrslt }}\tab {\field{\*\fldinst STYLEREF"1"}{\fldrslt {\b 
+Fehler! Kein Text mit angegebener Formatvorlage im Dokument.}}} {{\field{\*\fldinst SYMBOL 183 \\f "Symbol" \\s 10}{\fldrslt\f1\fs20}}} {\field{\*\fldinst PAGE}{\fldrslt 17}}
+\par \trowd \trrh-360\trleft-360\trkeep \clbrdrt\brdrs\brdrw15 \cellx0\cellx360\cellx10440\cellx10800\clbrdrt\brdrs\brdrw15 \cellx11160 \pard\plain \s54\intbl\tqc\tx4320\tqr\tx8640 \b\f5\fs16 \cell \cell \cell \cell \cell \pard\plain \intbl \f5\fs20 \row 
+\trowd \trrh-720\trleft-360\trkeep \cellx0\clbrdrr\brdrs\brdrw15 \cellx360\cellx10440\clbrdrl\brdrs\brdrw15 \cellx10800\cellx11160 \pard\plain \s54\intbl\tqc\tx4320\tqr\tx8640 \b\f5\fs16 \cell \cell \cell \cell \cell \pard\plain \intbl \f5\fs20 \row 
+\pard \sa180 
+\par }{\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5
+\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang
+{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \s33\keepn \b\f5\fs48\cf7 {\cs65\fs16\up6\lang1031 #{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 #} HelpContents1}}{\fs24  }{
+\cs65\fs16\up6\lang1031 ${\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 $} Inhalt}}{\fs24  }{\cs65\fs16\up6\lang1031 K{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 K} Inhalt}}{\fs24  }Inhalt
+\par \pard\plain \s22\sb240\sa120 \b\f5\fs28 {\lang1031 Qualitas MAX Setup}
+\par \pard\plain \s70\sb20\sa60\sl280\slmult1 \b\f5\fs22\uldb Willkommen bei Qualitas MAX 8{\v WillkommenbeiQualitasMAX8.2}
+\par Registrierungs-Information{\v Registrierungs.Information.3}
+\par MultiConfig{\v MultiConfig.5}
+\par Pfad und Dateien{\v PfadundDateien.6}
+\par Quellen-Verzeichnis{\v Quellen.Verzeichnis.7}
+\par Referenzdiskette einlegen{\v Referenzdisketteeinlegen.8}
+\par Qualitas MAX Einstellungen{\v QualitasMAXEinstellungen.9}
+\par Datei-\'c4nderungen{\v Datei..nderungen.14}
+\par Setup abgeschlossen{\v Setupabgeschlossen.15}
+\par \pard\plain \s2\sb362\sa43\keepn \b\f5\fs36\cf7 {\lang1031 {\*\bkmkstart _Toc336741947}{\*\bkmkstart _Toc349199629}\page }{\cs65\fs16\up6\lang1031 #{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 #} WillkommenbeiQualitasMAX8.2}}{\fs24\lang1031  }{
+\cs65\fs16\up6\lang1031 ${\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 $} Willkommen bei Qualitas MAX 8}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 K{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 K} Willkommen bei Qualitas MAX 8}}{
+\fs24\lang1031  }{\cs65\fs16\up6\lang1031 +{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 +} SECTION1:0000}}{\fs24\lang1031  }{\lang1031 Willkommen bei Qualitas MAX 8{\*\bkmkend _Toc336741947}{\*\bkmkend _Toc349199629}
+\par }\pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\lang1031 
+Dieses Setup-Programm kopiert die Qualitas MAX Programm-Dateien von der Installationsdiskette auf die Festplatte Ihres Computers. Sobald der Kopiervorgang abgeschlossen ist, stellt Ihnen Setup einige Fragen zu den gew\'fc
+nschten Funktionen, die Qualitas MAX f\'fcr Ihr System bereitstellen soll.
+\par M\'f6chten Sie das Setup jetzt nicht fortsetzen, klicken Sie im Dialogfeld "Willkommen" auf die Schaltfl\'e4che }{\b\lang1031 Beenden}{\lang1031 .
+\par Andernfalls klicken Sie auf die Schaltfl\'e4che }{\b\lang1031 Weiter }{\lang1031 und setzen das Qualitas MAX Setup fort. Nahezu alle Dialogfelder der Setup-Prozedur verf\'fcgen \'fcber die Schaltfl\'e4che }{\b\lang1031 Beenden}{\lang1031 
+, mit der Sie das Setup bei Bedarf abbrechen k\'f6nnen.
+\par Zu jedem Setup-Schritt ist eine Hilfe-Information verf\'fcgbar. Klicken Sie im jeweiligen Dialogfeld auf die Schaltfl\'e4che }{\b\lang1031 Hilfe}{\lang1031 , um die entsprechenden Erl\'e4uterungen zu erhalten.
+\par }\pard\plain \s51\sb180\sa20 \b\f5\cf2 Siehe auch:
+\par \pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\uldb\lang1031 Registrierungs-Information}{\v\uldb\lang1031 Registrierungs.Information.3}{\lang1031 
+\par }\pard\plain \s2\sb362\sa43\keepn \b\f5\fs36\cf7 {\lang1031 {\*\bkmkstart _Toc336741948}{\*\bkmkstart _Ref339847637}{\*\bkmkstart _Ref339876234}{\*\bkmkstart _Toc349199630}\page }{\cs65\fs16\up6\lang1031 #{\footnote \pard\plain \s66 \b\f5\fs20 {
+\cs65\fs16\up6 #} Registrierungs.Information.3}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 ${\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 $} Registrierungs-Information}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 K{\footnote \pard\plain \s66 
+\b\f5\fs20 {\cs65\fs16\up6 K} Registrierungs-Information}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 +{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 +} SECTION1:0005}}{\fs24\lang1031  }{\lang1031 Registrierungs-Information
+{\*\bkmkend _Toc336741948}{\*\bkmkend _Ref339847637}{\*\bkmkend _Ref339876234}{\*\bkmkend _Toc349199630}
+\par }\pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\lang1031 Setup ben\'f6tigt Ihren Namen, den Firmennamen (soweit zutreffend) und die Qualitas MAX Seriennummer. Sie finden die Seriennummer auf der \'e4u\'dferen R\'fc
+ckseite des Handbuch-/Diskettenumschlags.
+\par Setup erkennt anhand der Seriennummer, ob das Produkt ein Upgrade f\'fcr ein vorhand
+enes Qualitas Memory Management Produkt ist (anstelle einer neuen Installations-Lizenz). Setup sucht in diesem Fall auf Ihrem System nach einer vorhandenen Version des Qualitas MAX, 386MAX oder BlueMAX und setzt die Setup-Prozedur entsprechend fort.
+
+\par Nach Eingabe der Registrierungs-Informationen klicken Sie auf die Schaltfl\'e4che }{\b\lang1031 Weiter}{\lang1031 . Qualitas MAX speichert die eingegebenen Informationen und personalisiert damit Ihre Qualitas MAX Lizenz. 
+\par Bei Eingabefehlern im Registrierungs-Dialog k\'f6nnen Sie aus dem Best\'e4tigungs-Dialog zur Eingabekorrektur zur\'fcckkehren.
+\par }\pard\plain \s51\sb180\sa20 \b\f5\cf2 {\*\bkmkstart _Toc336741949}Siehe auch:
+\par \pard\plain \s71\sa60\sl280\slmult1 \f5\fs20\uldb Registrierungs-Best\'e4tigung{\v Registrierungs.Best.tigung.4}
+\par \pard\plain \s3\sb340\keepn \b\f5\fs28\cf7 {\lang1031 \page }{\cs65\fs16\up6\lang1031 #{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 #} Registrierungs.Best.tigung.4}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 ${\footnote \pard\plain \s66 
+\b\f5\fs20 {\cs65\fs16\up6 $} Registrierungs-Best\'e4tigung}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 K{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 K} Registrierungs-Best\'e4tigung}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 +{\footnote 
+\pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 +} SECTION1:0010}}{\fs24\lang1031  }{\lang1031 Registrierungs-Best\'e4tigung{\*\bkmkend _Toc336741949}
+\par }\pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\lang1031 Im Best\'e4tigungs-Dialog \'fcberpr\'fcfen Sie bitte die korrekte Eingabe Ihres Namen, Firma (soweit zutreffend) und Seriennummer. Sind Korrekturen erforderlich, klicken Sie auf }{\b\lang1031 \'c4
+ndern }{\lang1031 zur R\'fcckkehr zum vorherigen Registrierungs-Dialog.
+\par Sind alle Angaben korrekt eingetragen, klicken Sie auf }{\b\lang1031 OK}{\lang1031 .
+\par }\pard\plain \s51\sb180\sa20 \b\f5\cf2 Siehe auch:
+\par \pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\uldb\lang1031 MultiConfig}{\v\uldb\lang1031 MultiConfig.5}{\lang1031  }{\b\lang1031 
+\par }\pard\plain \s2\sb362\sa43\keepn \b\f5\fs36\cf7 {\lang1031 {\*\bkmkstart _Toc336741950}{\*\bkmkstart _Ref339876257}{\*\bkmkstart _Toc349199631}\page }{\cs65\fs16\up6\lang1031 #{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 #} MultiConfig.5}}{
+\fs24\lang1031  }{\cs65\fs16\up6\lang1031 ${\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 $} MultiConfig}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 K{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 K} MultiConfig}}{\fs24\lang1031  }{
+\cs65\fs16\up6\lang1031 +{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 +} SECTION1:0015}}{\fs24\lang1031  }{\lang1031 MultiConfig{\*\bkmkend _Toc336741950}{\*\bkmkend _Ref339876257}{\*\bkmkend _Toc349199631}
+\par }\pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\lang1031 Ist Ihr System mit der DOS-Funktion zur Auswahl aus mehreren Konfigurationen eingerichtet, zeigt dieses Dialogfeld die bei jedem Systemstart verf\'fc
+gbaren Konfigurationen an. Die aktuell gestartete Konfiguration ist als Voreinstellung gew\'e4hlt. Sie k\'f6nnen eine der verf\'fcgbaren Konfigurationen ausw\'e4hlen und dort Qualitas MAX installieren.
+\par Klicken Sie auf die Schaltfl\'e4che }{\b\lang1031 Weiter}{\lang1031 , um Setup fortzusetzen.
+\par }\pard\plain \s51\sb180\sa20 \b\f5\cf2 Siehe auch:
+\par \pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\uldb\lang1031 Pfad und Dateien}{\v\uldb\lang1031 PfadundDateien.6}{\lang1031  
+\par }\pard\plain \s2\sb362\sa43\keepn \b\f5\fs36\cf7 {\lang1031 {\*\bkmkstart _Toc336741951}{\*\bkmkstart _Ref339876277}{\*\bkmkstart _Toc349199632}\page }{\cs65\fs16\up6\lang1031 #{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 #} PfadundDateien.6}}{
+\fs24\lang1031  }{\cs65\fs16\up6\lang1031 ${\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 $} Pfad und Dateien}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 K{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 K} Pfad und Dateien}}{\fs24\lang1031 
+ }{\cs65\fs16\up6\lang1031 +{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 +} SECTION1:0020}}{\fs24\lang1031  }{\lang1031 Pfad und Dateien{\*\bkmkend _Toc336741951}{\*\bkmkend _Ref339876277}{\*\bkmkend _Toc349199632}
+\par }\pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\lang1031 In diesem Dialogfeld geben Sie an, auf welches Laufwerk und in welches Verzeichnis die Qualitas MAX Dateien kopiert werden. Sie w\'e4hlen hier auch die gew\'fcnschten Komponenten aus.
+\par }{\b\lang1031 Pfad
+\par }{\lang1031 Das Standardverzeichnis f\'fcr die Programmdateien ist C:\\QMAX. Der Pfad wird im Dialogfeld-Bereich }{\b\lang1031 Installation in}{\lang1031  angezeigt. In der Regel werden Sie das Standardverzeichnis verwenden; Sie k\'f6
+nnen jedoch bei Bedarf einen anderen Pfad im Textfeld eingeben.
+\par Findet Setup auf Ihrem System eine vorhandene Version eines Qualitas Memory Management Produktes (386MAX, BlueMax oder Qualitas MAX), so ist das Feld }{\b\lang1031 Installation in}{\lang1031  abgeblendet und Sie k\'f6
+nnen den alten Installations-Pfad nicht \'e4ndern. In diesem Fall }{\i\lang1031 m\'fcssen }{\lang1031 Sie Qualitas MAX 8 \'fcber die alte Version installieren.
+\par }{\b\lang1031 Dateien
+\par }{\lang1031 Mit Auswahl der Qualitas MAX Dateien entscheiden Sie, welche Komponenten Sie installieren m\'f6chten. Mit Aktivieren oder Deaktivieren der Kontrollk\'e4stchen treffen Sie Ihre Auswahl.
+\par }{\b\i\lang1031 Programmdateien}{\lang1031  - Sie m\'fcssen diese Dateien bei der Erst-Installation ausw\'e4hlen; andernfalls w\'e4re Qualitas MAX nicht funktionsf\'e4hig.
+\par }{\b\i\lang1031 Online-Hilfe}{\lang1031  - Die Windows Hilfe-Datei ist Ihre wichtigste Informationsquelle f\'fcr das Produkt. Wir empfehlen, diese zu installieren - es sei denn, Sie m\'fcssen unbedingt Speicherplatz auf der Platte einsparen.
+\par }{\b\i\lang1031 DOS Hilfe-Betrachter}{\lang1031 
+ - Der Hilfe-Betrachter erlaubt Ihnen das Ansehen der Online-Hilfe, wenn Sie Qualitas MAX in DOS statt in Windows anwenden. Sollten Sie absolut sicher sein, niemals Qualitas MAX nur auf der DOS-Ebene zu nutzen, k\'f6
+nnen Sie mit Deaktivieren dieser Option etwas Speicherplatz auf der Platte einsparen.
+\par Im unteren Bereich des Dialogfelds informiert Sie Setup \'fcber den f\'fcr Ihre aktuelle Auswahl ben\'f6tigten und verf\'fcgbaren Speicherplatz auf der Festplatte.
+\par Klicken Sie auf die Schaltfl\'e4che }{\b\lang1031 Zur\'fcck}{\lang1031 , wenn Sie eine andere Konfiguration (MultiConfig) ausw\'e4hlen m\'f6chten.
+\par Klicken Sie auf die Schaltfl\'e4che }{\b\lang1031 Weiter}{\lang1031 , wenn Sie Setup fortsetzen m\'f6chten. Es beginnt dann der Kopiervorgang
+\par Hatten Sie eine fr\'fchere Version des 386MAX, BlueMAX oder Qualitas MAX Memory Managers auf Ihrem System installiert, meldet Setup zun\'e4chst, da\'df
+ eine Sicherung der vorherigen Installation erfolgt. Diese wird in einem Unterverzeichnis OLDMAX.1, direkt unter dem Verzeichnis C:\\QMAX, abgelegt. Diese Sicherung hat nur tempor\'e4ren Charakter; nach erfolgreichem Abschlu\'df
+ der Neu-Installation wird die Sicherung gel\'f6scht.
+\par Nach der Sicherung der alten Dateien extrahiert und kopiert Setup die neuen Dateien. Eine Statusleiste zeigt den Installationsfortschritt an. Es fordert zum Einlegen der zweiten Qualitas MAX Diskette auf.
+\par }\pard\plain \s51\sb180\sa20 \b\f5\cf2 Siehe auch:
+\par \pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\uldb\lang1031 Quellen-Verzeichnis}{\v\uldb\lang1031 Quellen.Verzeichnis.7}{\lang1031  
+\par }\pard\plain \s2\sb362\sa43\keepn \b\f5\fs36\cf7 {\lang1031 {\*\bkmkstart _Ref337630548}{\*\bkmkstart _Toc349199633}\page }{\cs65\fs16\up6\lang1031 #{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 #} Quellen.Verzeichnis.7}}{\fs24\lang1031  }{
+\cs65\fs16\up6\lang1031 ${\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 $} Quellen-Verzeichnis}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 K{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 K} Quellen-Verzeichnis}}{\fs24\lang1031  }{
+\cs65\fs16\up6\lang1031 +{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 +} SECTION1:0025}}{\fs24\lang1031  }{\lang1031 Quellen-Verzeichnis{\*\bkmkend _Ref337630548}{\*\bkmkend _Toc349199633}
+\par }\pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\lang1031 In diesem Dialogfeld geben Sie den Pfad zur zweiten Qualitas MAX Diskette an. Dies kann der Laufwerksbuchstabe des Diskettenlaufwerks sein (A: oder B:) oder der vollst\'e4
+ndige Pfad zu einem Netzwerk-Verzeichnis.
+\par Standardm\'e4\'dfig wird der f\'fcr Diskette 1 g\'fcltige Pfad angezeigt; bei Bedarf k\'f6nnen Sie diese Vorgabe \'e4ndern.
+\par }\pard\plain \s51\sb180\sa20 \b\f5\cf2 Siehe auch:
+\par \pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\uldb\lang1031 Referenzdiskette einlegen}{\v\uldb\lang1031 Referenzdisketteeinlegen.8}{\lang1031 
+\par }{\uldb\lang1031 Qualitas MAX Einstellungen}{\v\uldb\lang1031 QualitasMAXEinstellungen.9}{\lang1031  
+\par }\pard\plain \s2\sb362\sa43\keepn \b\f5\fs36\cf7 {\lang1031 {\*\bkmkstart _Ref347553003}{\*\bkmkstart _Toc349199634}\page }{\cs65\fs16\up6\lang1031 #{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 #} Referenzdisketteeinlegen.8}}{\fs24\lang1031  }{
+\cs65\fs16\up6\lang1031 ${\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 $} Referenzdiskette einlegen}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 K{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 K} Referenzdiskette einlegen}}{\fs24\lang1031 
+ }{\cs65\fs16\up6\lang1031 +{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 +} SECTION1:0030}}{\fs24\lang1031  }{\lang1031 Referenzdiskette einlegen{\*\bkmkend _Ref347553003}{\*\bkmkend _Toc349199634}
+\par }\pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\lang1031 Erkennt Setup ein Mikrokanal-System, werden Sie zum Einlegen einer Kopie der System-Referenzdiskette aufgefordert. Geben Sie Laufwerk und Pfad zur Referenzdiskette an.
+\par Setup verwendet die Informationen der Referenzdiskette zum Erkennen, Sch\'fctzen und, soweit m\'f6glich, Optimieren der Speicherbelegung f\'fcr RAM und ROM der Adapterkarten im System mit dem Ziel, gr\'f6\'dftm\'f6gliche zusammenh\'e4
+ngende Speicherbereiche im HiDOS-Speicher bereitzustellen.
+\par Obwohl Sie Setup auch ohne Referenzdiskette fortsetzen k\'f6nnen, empfehlen wir Ihnen eine Kopie der System-Referenzdiskette einzulegen und mit Klicken auf }{\b\lang1031 OK}{\lang1031 
+ die Adapter-Informationen bereitzustellen. Nur so kann Setup sicherstellen, da\'df alle notwendigen Informationen zur Optimierung Ihres Systems vorhanden sind.
+\par }\pard\plain \s51\sb180\sa20 \b\f5\cf2 Siehe auch:
+\par \pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\uldb\lang1031 Qualitas MAX Einstellungen}{\v\uldb\lang1031 QualitasMAXEinstellungen.9}{\lang1031 
+\par }\pard\plain \s2\sb362\sa43\keepn \b\f5\fs36\cf7 {\lang1031 {\*\bkmkstart _Toc336741952}{\*\bkmkstart _Ref339268468}{\*\bkmkstart _Ref339876310}{\*\bkmkstart _Ref347553047}{\*\bkmkstart _Toc349199635}\page }{\cs65\fs16\up6\lang1031 #{\footnote 
+\pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 #} QualitasMAXEinstellungen.9}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 ${\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 $} Qualitas MAX Einstellungen}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 K
+{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 K} Qualitas MAX Einstellungen}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 +{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 +} SECTION1:0035}}{\fs24\lang1031  }{\lang1031 Qualitas MAX Einstellu
+ngen{\*\bkmkend _Toc336741952}{\*\bkmkend _Ref339268468}{\*\bkmkend _Ref339876310}{\*\bkmkend _Ref347553047}{\*\bkmkend _Toc349199635}
+\par }\pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\lang1031 Nach dem Kopiervorgang f\'fcr die ausgew\'e4hlten Dateien k\'f6nnen Sie verschiedene Einstellungen f\'fcr den Ablauf des Qualitas MAX auf Ihrem System w\'e4hlen. 
+\par Die }{\b\lang1031 Windows-Optionen}{\lang1031  betreffen zwei Qualitas Dienstprogramme, die mit dem Windows-Start geladen werden k\'f6nnen.
+\par Die }{\b\lang1031 MAX Profil-Optionen}{\lang1031  betreffen Qualitas MAX selbst und regeln die Behandlung verschiedener Speicherbereiche in Ihrem System.
+\par Hier w\'e4hlen Sie auch, ob der }{\b\lang1031 Qualitas Memory Tester }{\lang1031 bei jedem Systemstart Ihres Computers ablaufen soll.
+\par }\pard\plain \s51\sb180\sa20 \b\f5\cf2 {\*\bkmkstart _Toc336741953}{\*\bkmkstart _Ref339876395}Siehe auch:
+\par \pard\plain \s71\sa60\sl280\slmult1 \f5\fs20\uldb Windows-Optionen{\v Windows.Optionen.10}
+\par MAX Profil-Optionen{\v MAXProfil.Optionen.11}
+\par QMT beim Systemstart ausf\'fchren{\v QMTbeimSystemstartausf.hren.12}
+\par Wenn Sie auf "Weiter" klicken{\v WennSieauf.Weiter.klicken.13}
+\par \pard\plain \s3\sb340\keepn \b\f5\fs28\cf7 {\lang1031 \page }{\cs65\fs16\up6\lang1031 #{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 #} Windows.Optionen.10}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 ${\footnote \pard\plain \s66 \b\f5\fs20 {
+\cs65\fs16\up6 $} Windows-Optionen}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 K{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 K} Windows-Optionen}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 +{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 
++} SECTION1:0040}}{\fs24\lang1031  }{\lang1031 Windows-Optionen{\*\bkmkend _Toc336741953}{\*\bkmkend _Ref339876395}
+\par }\pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\b\lang1031 Go Ahead einschalten - }{\lang1031 Go Ahead ist ein Dienstprogramm zur effizienten Verwaltung der LoDOS-Ressourcen unter Windows 3.1x.. Als Ergebnis k\'f6nnen Sie mehr Anwendungen als bisher ge
+\'f6ffnet halten. Bei Installation in Windows 3.1x ist dieses Kontrollk\'e4stchen standardm\'e4\'df\'edg aktiviert. Setup f\'fcgt Go Ahead zur Autostart-Gruppe hinzu; damit wird Go Ahead mit jedem Windows-Start automatisch als Symbol geladen.
+\par Bei Installation in Windows 95 wird Go Ahead nicht installiert, da Windows 95 selbst \'fcber entsprechende Mechanismen zur Ressourcen-Verwaltung verf\'fcgt. 
+\par Sie k\'f6nnen das automatische Laden des Go Ahead Dienstprogrammes zu einem sp\'e4teren Zeitpunkt mit Hilfe der Qualitas Toolbox ausschalten. 
+\par Nach Abschlu\'df der Setup-Prozedur finden Sie in der Online-Hilfe weitere Informationen \'fcber Go Ahead. 
+\par }{\b\lang1031 MAXmeter einschalten -}{\lang1031  MAXmeter ist eine Informationsleiste, die Sie st\'e4ndig \'fcber Datum, Uhrzeit, Gesamtspeicher Ihres Systems sowie die verf\'fc
+gbaren Ressourcen (USER, GDI und unter Windows 3.1x auch LoDOS) informiert. Ist das Kontrollk\'e4stchen aktiviert (Voreinstellung), f\'fcgt Setup das MAXmeter Dienstprogramm zur Autostart-Gruppe hinzu, soda\'df es mit jedem Windows-Start geladen wird.
+
+\par Sie k\'f6nnen das automatische Laden der MAXmeter-Anzeige zu einem sp\'e4teren Zeitpunkt mit Hilfe der Qualitas Toolbox ausschalten.
+\par Nach Abschlu\'df der Setup-Prozedur finden Sie in der Online-Hilfe weitere Informationen zur Einstellung der MAXmeter-Anzeige. 
+\par }\pard\plain \s51\sb180\sa20 \b\f5\cf2 Siehe auch:
+\par \pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\uldb\lang1031 MAX Profil-Optionen}{\v\uldb\lang1031 MAXProfil.Optionen.11}{\lang1031 
+\par }{\uldb\lang1031 QMT beim Systemstart ausf\'fchren}{\v\uldb\lang1031 QMTbeimSystemstartausf.hren.12}{\lang1031 
+\par }{\uldb\lang1031 Wenn Sie auf "Weiter" klicken}{\v\uldb\lang1031 WennSieauf.Weiter.klicken.13}{\lang1031 
+\par }\pard\plain \s3\sb340\keepn \b\f5\fs28\cf7 {\lang1031 {\*\bkmkstart _Toc336741954}{\*\bkmkstart _Ref339268519}{\*\bkmkstart _Ref339268669}{\*\bkmkstart _Ref339876336}\page }{\cs65\fs16\up6\lang1031 #{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 
+#} MAXProfil.Optionen.11}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 ${\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 $} MAX Profil-Optionen}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 K{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 K}
+ MAX Profil-Optionen}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 +{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 +} SECTION1:0045}}{\fs24\lang1031  }{\lang1031 MAX Profil-Optionen{\*\bkmkend _Toc336741954}{\*\bkmkend _Ref339268519}
+{\*\bkmkend _Ref339268669}{\*\bkmkend _Ref339876336}
+\par }\pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\lang1031 Die hier gew\'e4hlten Optionen werden in die Datei 386MAX.PRO eingetragen. Diese Datei ist mit einer Windows INI-Datei vergleichbar; sie enth\'e4lt Informationen, die Qualitas MAX \'fc
+ber bestimmte Eigenschaften Ihres Systems informieren. \'c4nderungen in der PROfildatei bewirken eine \'c4nderung der Qualitas MAX-Arbeitsweise, vergleichbar mit Befehlszeilen-Optionen eines (DOS-) Programmes. 
+\par }{\b\lang1031 MDA}{\lang1031  }{\b\lang1031 nutzen}{\lang1031  - Der Monochrom-Anzeigebereich (Monochrome Display Area - MDA) ist ein Speicherbereich, den Ihr System f\'fcr die Textanzeige eines Monochrom- (Schwarzwei\'df
+-) Bildschirms reserviert hat. Arbeiten Sie mit einem Farbmonitor, mu\'df dieser Speicherbereich nicht unbedingt reserviert werden; Qualitas MAX kann diesen Speicher zur\'fcckgewinnen und als HiDOS-Speicher nutzbar machen. 
+\par Nachdem Setup die Programmdateien kopiert hat, pr\'fcft es die sichere Verf\'fcgbarkeit des MDA-Speicherbereiches. Nicht alle Video-Adapter erlauben die R\'fcckgewinnung des MDA-Speicherbereiches. Kann dies ohne Komplikationen erfolgen, ist das Kontrollk
+\'e4stchen bereits aktiviert. Ist das Kontrollk\'e4stchen standardm\'e4\'dfig deaktiviert, empfehlen wir Ihnen diese Einstellung nicht zu ver\'e4ndern.}{\b\lang1031 
+\par EMS bereitstellen }{\lang1031 - Erkennt Setup eine aktive EMS (Expanded Memory) Unterst\'fctzung in Ihrem System, ist dieses Kontrollk\'e4stchen aktiviert.
+\par }\pard\plain \s51\sb180\sa20 \b\f5\cf2 Siehe auch:
+\par \pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\uldb\lang1031 Windows-Optionen}{\v\uldb\lang1031 Windows.Optionen.10}{\lang1031 
+\par }{\uldb\lang1031 {\*\bkmkstart _Toc336741955}{\*\bkmkstart _Ref339876355}QMT beim Systemstart ausf\'fchren}{\v\uldb\lang1031 QMTbeimSystemstartausf.hren.12}{\lang1031 
+\par }{\uldb\lang1031 Wenn Sie auf "Weiter" klicken}{\v\uldb\lang1031 WennSieauf.Weiter.klicken.13}{\lang1031  
+\par }\pard\plain \s3\sb340\keepn \b\f5\fs28\cf7 {\lang1031 {\*\bkmkstart _Ref349057406}\page }{\cs65\fs16\up6\lang1031 #{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 #} QMTbeimSystemstartausf.hren.12}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 $
+{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 $} QMT beim Systemstart ausf\'fchren}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 K{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 K} QMT beim Systemstart ausf\'fchren}}{\fs24\lang1031  }{
+\cs65\fs16\up6\lang1031 +{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 +} SECTION1:0050}}{\fs24\lang1031  }{\lang1031 QMT beim Systemstart ausf\'fchren{\*\bkmkend _Toc336741955}{\*\bkmkend _Ref339876355}{\*\bkmkend _Ref349057406}
+\par }\pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\lang1031 QMT (Qualitas Memory Tester) kann den System-RAM einem H\'e4rtetest unterziehen und Sie \'fcber m\'f6gliche Probleme informieren. Mit Aktivieren dieses Kontrollk\'e4
+stchens wird QMT bei jedem Start Ihres Computers ablaufen; der Speicher-Kurztest ben\'f6tigt in der Regel weniger als eine Minute.
+\par M\'f6chten Sie QMT nicht bei jedem Systemstart anwenden, k\'f6nnen Sie QMT jederzeit in DOS (au\'dferhalb Windows!) aufrufen. Dazu wechseln Sie zum Verzeichnis }{\b\lang1031 QMAX}{\lang1031 , geben }{\b\lang1031 QMT }{\lang1031 ein und dr\'fc
+cken die EINGABETASTE..
+\par }\pard\plain \s51\sb180\sa20 \b\f5\cf2 {\*\bkmkstart _Toc336741956}Siehe auch:
+\par \pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\uldb\lang1031 Windows-Optionen}{\v\uldb\lang1031 Windows.Optionen.10}{\lang1031 
+\par }{\uldb\lang1031 MAX Profil-Optionen}{\v\uldb\lang1031 MAXProfil.Optionen.11}{\lang1031  
+\par }{\uldb\lang1031 Wenn Sie auf "Weiter" klicken}{\v\uldb\lang1031 WennSieauf.Weiter.klicken.13}{\lang1031 
+\par }\pard\plain \s3\sb340\keepn \b\f5\fs28\cf7 {\lang1031 {\*\bkmkstart _Ref339876367}\page }{\cs65\fs16\up6\lang1031 #{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 #} WennSieauf.Weiter.klicken.13}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 $
+{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 $} Wenn Sie auf "Weiter" klicken}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 K{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 K} Wenn Sie auf "Weiter" klicken}}{\fs24\lang1031  }{
+\cs65\fs16\up6\lang1031 +{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 +} SECTION1:0055}}{\fs24\lang1031  }{\lang1031 Wenn Sie auf "Weiter" klicken{\*\bkmkend _Toc336741956}{\*\bkmkend _Ref339876367}
+\par }\pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\lang1031 Mit Klicken auf die Schaltfl\'e4che }{\b\lang1031 Weiter}{\lang1031  im Dialogfeld }{\b\lang1031 MAX-Einstellungen}{\lang1031  l\'f6sen Sie mehrere Aktionen aus:
+\par Setup legt eine neue }{\uldb\lang1031 Programmgruppe Qualitas MAX}{\v\uldb\lang1031 ProgrammgruppeQualitasMAX.18}{\lang1031  mit einigen Symbolen an.
+\par Es schaltet (f\'fcr Sie unsichtbar) zu DOS um und ruft das Dienstprogramm STRIPMGR auf; dieses entfernt aus den Systemdateien alle Eintr\'e4ge bereits vorhandener Memory Management Programme.
+\par Setup zeigt das Dialogfeld }{\b\lang1031 Datei-\'c4nderungen}{\lang1031  an.
+\par }\pard\plain \s51\sb180\sa20 \b\f5\cf2 Siehe auch:
+\par \pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\uldb\lang1031 Datei-\'c4nderungen}{\v\uldb\lang1031 Datei..nderungen.14}{\lang1031 
+\par }\pard\plain \s2\sb362\sa43\keepn \b\f5\fs36\cf7 {\lang1031 {\*\bkmkstart _Toc336741957}{\*\bkmkstart _Ref339876490}{\*\bkmkstart _Toc349199636}\page }{\cs65\fs16\up6\lang1031 #{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 #} Datei..nderungen.14}
+}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 ${\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 $} Datei-\'c4nderungen}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 K{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 K} Datei-\'c4nderungen}}{
+\fs24\lang1031  }{\cs65\fs16\up6\lang1031 +{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 +} SECTION1:0060}}{\fs24\lang1031  }{\lang1031 Datei-\'c4nderungen{\*\bkmkend _Toc336741957}{\*\bkmkend _Ref339876490}{\*\bkmkend _Toc349199636}
+\par }\pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\lang1031 Nach Auswahl der Optionen im Dialogfeld MAX-Einstellungen und Best\'e4tigung mit }{\b\lang1031 Weiter}{\lang1031  mu\'df Setup bestimmte Systemdateien \'e4
+ndern bzw. die Qualitas MAX Profildatei anlegen (oder \'e4ndern, falls es sich um einen Upgrade f\'fcr ein vorhandenes Qualitas Memory Management Produkt handelt). Der vollst\'e4ndige Pfad- und Dateiname wird f\'fcr jede betreffende Datei im Dialogfeld }{
+\b\lang1031 Datei-\'c4nderungen}{\lang1031 , Listenfeld }{\b\lang1031 \'c4nderungen ansehen}{\lang1031 , angezeigt. Hier k\'f6nnen u.a. folgende Dateien eingetragen sein:
+\par \tab CONFIG.SYS
+\par \tab SYSTEM.INI
+\par \tab WIN.INI
+\par \tab 386MAX.PRO\tab 
+\par Doppelklicken auf einen Dateinamen zeigt die vorgeschlagenen \'c4nderungen f\'fcr die jeweilige Datei in einem Informationsfenster an.
+\par Standardm\'e4\'dfig f\'fchrt Setup diese \'c4nderungen automatisch durch. Sie k\'f6nnen Setup jedoch anweisen, da\'df die Originaldateien unver\'e4
+ndert bleiben und die neuen Versionen dieser Dateien im Verzeichnis QMAX mit der Dateinamenerweiterung .ADD abgelegt werden. 
+\par Bitte beachten Sie, da\'df mit Auswahl der zweiten Option (ADD-Dateien) nur die Qualitas MAX Dateien auf die Festplatte Ihres Computers kopiert, aber keine weiteren \'c4nderungen wirksam werden! Die in den Systemdateien erforderlichen \'c4
+nderungen sind dann nicht durchgef\'fchrt! 
+\par Klicken Sie auf die Schaltfl\'e4che }{\b\lang1031 Weiter}{\lang1031 , um Setup fortzusetzen.
+\par }\pard\plain \s51\sb180\sa20 \b\f5\cf2 Siehe auch:
+\par \pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\uldb\lang1031 Setup abgeschlossen}{\v\uldb\lang1031 Setupabgeschlossen.15}{\lang1031 
+\par }\pard\plain \s2\sb362\sa43\keepn \b\f5\fs36\cf7 {\lang1031 {\*\bkmkstart _Toc336741958}{\*\bkmkstart _Ref339876503}{\*\bkmkstart _Toc349199637}\page }{\cs65\fs16\up6\lang1031 #{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 #}
+ Setupabgeschlossen.15}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 ${\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 $} Setup abgeschlossen}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 K{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 K}
+ Setup abgeschlossen}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 +{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 +} SECTION1:0065}}{\fs24\lang1031  }{\lang1031 Setup abgeschlossen{\*\bkmkend _Toc336741958}{\*\bkmkend _Ref339876503}
+{\*\bkmkend _Toc349199637}
+\par }\pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\lang1031 Sind die Qualitas MAX Dateien auf die Festplatte Ihres Computers kopiert, meldet Setup den Abschlu\'df
+ seiner Aktionen und fordert Sie zu einem Neustart des Computers auf oder bietet Ihnen den Aufruf des Maximize an (abh\'e4ngig von Erstinstallation oder Upgrade).
+\par }\pard\plain \s51\sb180\sa20 \b\f5\cf2 Siehe auch:
+\par \pard\plain \s71\sa60\sl280\slmult1 \f5\fs20\uldb M\'f6chten Sie den Computer jetzt neu starten?{\v M.chtenSiedenComputerjetztneustarten..16}
+\par M\'f6chten Sie jetzt Maximize starten?{\v M.chtenSiejetztMaximizestarten..17}
+\par Programmgruppe Qualitas MAX{\v ProgrammgruppeQualitasMAX.18}
+\par \pard\plain \s3\sb340\keepn \b\f5\fs28\cf7 {\lang1031 \page }{\cs65\fs16\up6\lang1031 #{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 #} M.chtenSiedenComputerjetztneustarten..16}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 ${\footnote \pard\plain 
+\s66 \b\f5\fs20 {\cs65\fs16\up6 $} M\'f6chten Sie den Computer jetzt neu starten?}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 K{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 K} M\'f6chten Sie den Computer jetzt neu starten?}}{\fs24\lang1031  }{
+\cs65\fs16\up6\lang1031 +{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 +} SECTION1:0070}}{\fs24\lang1031  }{\lang1031 M\'f6chten Sie den Computer jetzt neu starten?
+\par }\pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\lang1031 Mit diesem Dialogfeld wird Ihnen empfohlen, einen Neustart Ihres Computers auszul\'f6sen. Nur wenn Sie den Neustart w\'e4hlen, wird Ihre neue Qualitas MAX Installation wirksam!.
+\par }\pard\plain \s3\sb340\keepn \b\f5\fs28\cf7 {\lang1031 {\*\bkmkstart _Toc336741959}\page }{\cs65\fs16\up6\lang1031 #{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 #} M.chtenSiejetztMaximizestarten..17}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 $
+{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 $} M\'f6chten Sie jetzt Maximize starten?}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 K{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 K} M\'f6chten Sie jetzt Maximize starten?}}{
+\fs24\lang1031  }{\cs65\fs16\up6\lang1031 +{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 +} SECTION1:0075}}{\fs24\lang1031  }{\lang1031 M\'f6chten Sie jetzt Maximize starten?{\*\bkmkend _Toc336741959}
+\par }\pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\lang1031 Mit diesem Dialogfeld erhalten Sie die Gelegenheit, Maximize zu starten. Wir empfehlen dies ausdr\'fccklich. Klicken Sie auf }{\b\lang1031 Maximize}{\lang1031 
+. Setup startet daraufhin Maximize, das in einem dreifachen Durchlauf die Speicherorganisation Ihres Computers analysiert und optimiert.
+\par M\'f6chten Sie Maximize an dieser Stelle nicht ausf\'fchren, klicken Sie auf }{\b\lang1031 Beenden}{\lang1031 . Sie m\'fcssen dennoch Ihren Computer neu starten, soda\'df die in den Systemdateien vorgenommenen \'c4
+nderungen wirksam werden. Beachten Sie bitte, da\'df in diesem Fall nur einige Basisfunktionen aktiviert werden, die Speicherorganisation Ihres Systems aber noch nicht optimiert ist! Es werden keine Ger\'e4
+tetreiber und speicher-residenten Programme in den HiDOS-Speicher verlagert - es ist kein zus\'e4tzlicher Speicher gewonnen. Erst mit Ablauf des Maximize erzielen Sie die bestm\'f6
+gliche Speicherorganisation und somit maximale Leistung Ihres Computersystems.
+\par }\pard\plain \s3\sb340\keepn \b\f5\fs28\cf7 {\lang1031 {\*\bkmkstart _Ref337796103}\page }{\cs65\fs16\up6\lang1031 #{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 #} ProgrammgruppeQualitasMAX.18}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 $
+{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 $} Programmgruppe Qualitas MAX}}{\fs24\lang1031  }{\cs65\fs16\up6\lang1031 K{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 K} Programmgruppe Qualitas MAX}}{\fs24\lang1031  }{
+\cs65\fs16\up6\lang1031 +{\footnote \pard\plain \s66 \b\f5\fs20 {\cs65\fs16\up6 +} SECTION1:0080}}{\fs24\lang1031  }{\lang1031 Programmgruppe Qualitas MAX{\*\bkmkend _Ref337796103}
+\par }\pard\plain \s16\sb100\sl280\slmult1 \f5\fs20 {\lang1031 Setup hat im Windows Programm-Manager die Programmgruppe (bzw. in Windows 95 im Men\'fc Start, Programme, den Eintrag) QUALITAS MAX angelegt. Folgende Symbole sind enthalten:
+\par }{\b\lang1031 Setup}{\lang1031  - Das Installationsprogramm. Sie k\'f6nnen Setup jederzeit aufrufen und evtl. bei der Erstinstallation ausgelassene Dateien und Funktionen hinzuf\'fcgen.
+\par }{\b\lang1031 MAX Hilfe}{\lang1031  - Die Qualitas MAX Online-Dokumentation erl\'e4utert ausf\'fchrlich alle Qualitas MAX Funktionen, Dienstprogramme und deren Optionen.
+\par }{\b\lang1031 README }{\lang1031 - Diese Textdatei enth\'e4lt aktuelle technische Informationen hinsichtlich Kompatibilit\'e4t verschiedener Produkte und Umgebungen.
+\par }{\b\lang1031 Toolbox}{\lang1031  - Mit dieser "Steuerzentrale" \'e4ndern Sie die Einstellungen f\'fcr Qualitas MAX.
+\par }{\b\lang1031 MAXedit}{\lang1031  - Der Text-Editor erleichtert die Bearbeitung der System-Dateien.
+\par }{\b\lang1031 MAXmeter -}{\lang1031  Das Qualitas MAX Dienstprogramm informiert Sie st\'e4ndig \'fcber die verf\'fcgbaren Windows-Ressourcen. 
+\par }{\b\lang1031 Go Ahead }{\lang1031 (Windows 3.1x)}{\b\lang1031  - }{\lang1031 Das Dienstprogramm zur effizienten Verwaltung der LoDOS-Ressourcen unter Windows 3.1x erlaubt Ihnen, mehr Anwendungen als bisher ge\'f6ffnet zu halten.
+\par }{\b\lang1031 Maximize}{\lang1031  - Der Hauptbestandteil des Qualitas MAX analysiert Ihr Computersystem und erstellt die optimale Speicher-Organisation. Dabei wird geregelt, welcher Ger\'e4
+tetreiber bzw. speicher-residente Software in welche Speicherregion geladen wird, soda\'df f\'fcr Anwendungsprogramme m\'f6glichst viel konventioneller Speicher frei wird.
+\par }{\b\lang1031 Qualitas PIF-Editor}{\lang1031  (Windows 3.1x) - Ein PIF-Editor, optimiert zur Anwendung mit Qualitas MAX; Sie erstellen damit die in Windows 3.1x erforderlichen PIF-Dateien zum Start Ihrer DOS Programme aus dem Windows Programm-Manager.
+
+\par }{\b\lang1031 DOSMAX Vollbild}{\lang1031  - Doppelklick auf diesem Symbol \'f6ffnet ein DOS-Fenster im Vollbildmodus mit maximal darstellbarem DOS Speicher f\'fcr Anwendungsprogramme.
+\par }{\b\lang1031 DOSMAX Fenster}{\lang1031  - Doppelklick auf diesem Symbol \'f6ffnet ein DOS-Fenster mit maximal darstellbarem DOS Speicher f\'fcr Anwendungsprogramme.
+\par }\pard\plain \s26 \f5\fs20 {\lang1031 Die Online-Dokumentation }{\b\lang1031 MAX-Hilfe}{\lang1031  erl\'e4utert alle Qualitas MAX Komponenten ausf\'fchrlich.}
+\par }

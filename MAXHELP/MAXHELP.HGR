@@ -1,0 +1,528 @@
+[Options]
+TITLE=Qualitas MAX Hilfe
+ERRORLOG=C:\MAXHELP\MAXHELP.err
+CONTENTS=HelpContents1
+ROOT=C:\MAXHELP
+COMPRESS=FALSE
+BMROOT=C:\MAXHELP\BITMAPS
+REPORT=ON
+COPYRIGHT=Copyright  © 1996 Qualitas, Inc.
+[FILES]
+MAXHELP.RTF
+[CONFIG]
+BrowseButtons()
+
+CreateButton("jump_glossary","&Glossar","JumpId(`',`GlossaryOfTerms.454')")
+[MAP]
+HelpContents1	1	; Help Contents
+.berQualitasMAX.2	941	; Über Qualitas MAX
+Setup.3	942	; Setup
+Maximize.4	943	; Maximize
+Installations.Beispiel.5	944	; Installations-Beispiel
+GoAhead.6	945	; Go Ahead
+MAXmeter.7	946	; MAXmeter
+Toolbox.8	947	; Toolbox
+MAXedit.9	948	; MAXedit
+DOSMAXf.rWindows.10	949	; DOSMAX für Windows
+QualitasPIF.Editor.11	950	; Qualitas PIF-Editor
+MAX.Men.sundASQ.12	951	; MAX-Menüs und ASQ
+QualitasMemoryTester.13	952	; Qualitas Memory Tester
+386UTIL.COM.14	953	; 386UTIL.COM
+WeitereQualitasMAXDienstprogramme.15	954	; Weitere Qualitas MAX Dienstprogramme
+386MAXund386LOADOptionen.16	955	; 386MAX und 386LOAD Optionen
+Fehlerbeseitigung.17	956	; Fehlerbeseitigung
+Fehlermeldungen.18	957	; Fehlermeldungen
+EineEinf.hrunginMemoryManagement.19	958	; Eine Einführung in Memory Management
+QualitasMAX..berblick.20	959	; Qualitas MAX - Überblick
+QualitasMAXFunktionen.21	960	; Qualitas MAX Funktionen
+QualitasMAXBedienungsoberfl.che.22	961	; Qualitas MAX Bedienungsoberfläche
+QualitasMAXFunktionsumfang.23	962	; Qualitas MAX Funktionsumfang
+QualitasMAXHardware.Anforderungen.24	963	; Qualitas MAX Hardware-Anforderungen
+QualitasMAXSoftware.Anforderungen.25	964	; Qualitas MAX Software-Anforderungen
+Online.Dokumentation.26	965	; Online-Dokumentation
+SoerhaltenSieHilfeinWindows.27	966	; So erhalten Sie Hilfe in Windows
+DasSymbol.QualitasMAXHilfe..28	967	; Das Symbol "Qualitas MAX Hilfe"
+DieTasteF1.29	968	; Die Taste F1
+DieMen.leiste.30	969	; Die Menüleiste
+DasSystemmen..31	970	; Das Systemmenü
+DieSchaltfl.cheHilfe.32	971	; Die Schaltfläche Hilfe
+SoerhaltenSieHilfeinDOS.33	972	; So erhalten Sie Hilfe in DOS
+DieDOSHilfe.ffnen.34	973	; Die DOS Hilfe öffnen
+DOSHilfe.SteuerungmitderMaus.35	974	; DOS Hilfe-Steuerung mit der Maus
+DOSHilfe.SteuerungmitderTastatur.36	975	; DOS Hilfe-Steuerung mit der Tastatur
+WeitereHilfeinDOS.37	976	; Weitere Hilfe in DOS
+DieDateiREADME.38	977	; Die Datei README
+TechnischerKundendienst.39	978	; Technischer Kundendienst
+WennSieFragenhaben.40	979	; Wenn Sie Fragen haben
+ElektronischeDienste.41	980	; Elektronische Dienste
+QualitasFAXFactsService.42	981	; Qualitas FAXFacts Service
+QualitasinCompuServe.43	982	; Qualitas in CompuServe
+QualitasBBS.44	983	; Qualitas BBS
+QualitasimInternet.45	984	; Qualitas im Internet
+WeitereelektronischeDienste.46	985	; Weitere elektronische Dienste
+Unterst.tzungperTelefon.FaxundBriefpost.47	986	; Unterstützung per Telefon, Fax und Briefpost
+TelefonischeUnterst.tzung.48	987	; Telefonische Unterstützung
+Unterst.tzungperFax.49	988	; Unterstützung per Fax
+Unterst.tzungperBriefpost.50	989	; Unterstützung per Briefpost
+.berblick.SoerreichenSiedentechnischenKundendienst.51	990	; Überblick: So erreichen Sie den technischen Kundendienst
+IhreVorschl.gesindwillkommen..52	991	; Ihre Vorschläge sind willkommen!
+KundendienstinDeutschland.53	992	; Kundendienst in Deutschland
+Setup..berblick.54	993	; Setup - Überblick
+SetupinWindowsausf.hren.55	994	; Setup in Windows ausführen
+SetupinDOSausf.hren.56	995	; Setup in DOS ausführen
+DOSSetupBefehlszeilen.Optionen.57	996	; DOS Setup Befehlszeilen-Optionen
+NachderInstallation.58	997	; Nach der Installation
+FallsSieIhrPC.Systemerweitern....59	998	; Falls Sie Ihr PC-System erweitern ...
+WennSieHardware..nderungenvornehmen.60	999	; Wenn Sie Hardware-Änderungen vornehmen
+WennSiespeicher.residenteSoftwarehinzuf.gen.61	1000	; Wenn Sie speicher-residente Software hinzufügen
+.nderungderaktuellenKonfiguration.62	1001	; Änderung der aktuellen Konfiguration
+MultiConfigSetup.63	1002	; MultiConfig Setup
+Maximize..berblick.64	1003	; Maximize - Überblick
+MaximizeinWindowsausf.hren.65	1004	; Maximize in Windows ausführen
+WillkommenbeiWindows.Maximize.66	1005	; Willkommen bei Windows-Maximize
+EinenMultiConfig.Konfigurationsblockausw.hlen.67	1006	; Einen MultiConfig-Konfigurationsblock auswählen
+Maximize.Modusausw.hlen.68	1007	; Maximize - Maximize in Windows ausführen - Maximize-Modus auswählen
+Expre..MaximizeinWindows.69	1008	; Expreß-Maximize in Windows
+Angepa.tesMaximizeinWindows.70	1009	; Angepaßtes Maximize in Windows
+Maximize.Ergebnis.71	1010	; Maximize-Ergebnis
+MaximizeinDOSausf.hren.72	1011	; Maximize in DOS ausführen
+WillkommenbeiDOS.Maximize.73	1012	; Willkommen bei DOS-Maximize
+EinenMultiConfig.Blockausw.hlen.74	1013	; Einen MultiConfig-Block auswählen
+Maximize.Modusausw.hlen.75	1014	; Maximize - Maximize in DOS ausführen - Maximize-Modus auswählen
+Expre..MaximizeinDOS.76	1015	; Expreß-Maximize in DOS
+Angepa.tesMaximizeinDOS.77	1016	; Angepaßtes Maximize in DOS
+MultiConfig.Maximize.78	1017	; MultiConfig-Maximize
+F.rerfahreneAnwender.79	1018	; Für erfahrene Anwender
+MaximizeBefehlszeilen.Optionen.80	1019	; Maximize Befehlszeilen-Optionen
+MAXIMIZE.CFG.81	1020	; MAXIMIZE.CFG
+MaximizeLade.Neuordnung.82	1021	; Maximize Lade-Neuordnung
+Installations.Beispiel..berblick.83	1022	; Installations-Beispiel - Überblick
+VorderQualitasMAXInstallation.84	1023	; Vor der Qualitas MAX Installation
+CONFIG.SYS.vorher..85	1024	; CONFIG.SYS (vorher)
+AUTOEXEC.BAT.vorher..86	1025	; AUTOEXEC.BAT (vorher)
+MEM.vorher..87	1026	; MEM (vorher)
+W.hrendderInstallation.88	1027	; Während der Installation
+Maximize.PhaseI..89	1028	; Maximize (Phase I)
+Maximize.PhaseII..90	1029	; Maximize (Phase II)
+Maximize.PhaseIII..91	1030	; Maximize (Phase III)
+NachderQualitasMAXInstallation.92	1031	; Nach der Qualitas MAX Installation
+CONFIG.SYS.nachher..93	1032	; CONFIG.SYS (nachher)
+AUTOEXEC.BAT.nachher..94	1033	; AUTOEXEC.BAT (nachher)
+MEM.nachher..95	1034	; MEM (nachher)
+Waswurdeausdenurspr.nglichenStart.Dateien..96	1035	; Was wurde aus den ursprünglichen Start-Dateien?
+Maximizen.herbetrachtet.97	1036	; Maximize näher betrachtet
+MaximizePhaseI.98	1037	; Maximize Phase I
+MaximizePhaseII.99	1038	; Maximize Phase II
+MaximizePhaseIII.100	1039	; Maximize Phase III
+GoAhead..berblick.101	1040	; Go Ahead - Überblick
+GoAheadHauptfenster.102	1041	; Go Ahead Hauptfenster
+GoAheadStatuszeile.103	1042	; Go Ahead Statuszeile
+GoAheadStatusleiste.104	1043	; Go Ahead Statusleiste
+Speicherstatus.105	1044	; Speicherstatus
+AktuellerStatus.106	1045	; Aktueller Status
+GoAheadAusschlu.liste.107	1046	; Go Ahead Ausschlußliste
+GoAhead.Informationenf.rerfahreneAnwender.108	1047	; Go Ahead - Informationen für erfahrene Anwender
+GoAheadSzenarios.109	1048	; Go Ahead Szenarios
+MAXmeter..berblick.110	1049	; MAXmeter - Überblick
+MAXmeteranwenden.111	1050	; MAXmeter anwenden
+MAXmeterKonfiguration.112	1051	; MAXmeter Konfiguration
+MAXmeterInformationsleiste.113	1052	; MAXmeter Informationsleiste
+Datum.114	1053	; Datum
+Uhrzeit.115	1054	; Uhrzeit
+Speicher.116	1055	; MAXmeter - MAXmeter Informationsleiste - Speicher
+GDIRessourcen.117	1056	; GDI Ressourcen
+UserRessourcen.118	1057	; User Ressourcen
+LoDOSSpeicher.119	1058	; MAXmeter - MAXmeter Informationsleiste - LoDOS Speicher
+ImmerimVordergrund.120	1059	; Immer im Vordergrund
+MAXmeterverschieben.121	1060	; MAXmeter verschieben
+MAXmetermitderMausverschieben.122	1061	; MAXmeter mit der Maus verschieben
+MAXmetermitTastenbefehlenverschieben.123	1062	; MAXmeter mit Tastenbefehlen verschieben
+Toolbox..berblick.124	1063	; Toolbox - Überblick
+RegisterkarteStart.125	1064	; Registerkarte Start
+Windows.Start.126	1065	; Windows-Start
+MAXmeterladen.127	1066	; MAXmeter laden
+GoAheadladen.128	1067	; Go Ahead laden
+DOSMAXeinschalten.129	1068	; DOSMAX einschalten
+Systemstart.130	1069	; Systemstart
+DOSStacks.Stapelspeicher.hochladen.131	1070	; DOS Stacks (Stapelspeicher) hochladen
+ExtraDOSeinschalten.132	1071	; ExtraDOS einschalten
+QualitasMemoryTesterausf.hren.133	1072	; Qualitas Memory Tester ausführen
+RegisterkarteUMB.Adapter.134	1073	; Registerkarte UMB/Adapter
+MDAnutzen.135	1074	; MDA nutzen
+VGASWAPeinschalten.136	1075	; VGASWAP einschalten
+ROMSearchanwenden.137	1076	; ROMSearch anwenden
+RAM.138	1077	; Toolbox - Registerkarte UMB/Adapter - RAM
+RegisterkarteDPMI.EMS.139	1078	; Registerkarte DPMI/EMS
+DPMI.140	1079	; Toolbox - Registerkarte DPMI/EMS - DPMI
+DPMIeinschalten.141	1080	; DPMI einschalten
+DPMIAuslagerungsdatei.142	1081	; DPMI Auslagerungsdatei
+EMS.143	1082	; Toolbox - Registerkarte DPMI/EMS - EMS
+EMSbereitstellen.144	1083	; EMS bereitstellen
+EMSSeitenrahmen.145	1084	; EMS Seitenrahmen
+RegisterkarteEntfernen.146	1085	; Registerkarte Entfernen
+Toolboxbeenden.147	1086	; Toolbox beenden
+System.Neustart.Reboot..148	1087	; System-Neustart (Reboot)
+Windows.Neustart.149	1088	; Windows-Neustart
+Maximize.150	1089	; Toolbox - Toolbox beenden - Maximize
+MAXedit..berblick.151	1090	; MAXedit - Überblick
+MAXeditMen.leiste.152	1091	; MAXedit Menüleiste
+Men..Datei.153	1092	; MAXedit - MAXedit Menüleiste - Menü: Datei
+Neu.154	1093	; Neu
+.ffnen.155	1094	; Öffnen
+Speichern.156	1095	; Speichern
+Speichernunter.157	1096	; Speichern unter
+QMAX.INI.ffnen.158	1097	; QMAX.INI öffnen
+Drucken.159	1098	; Drucken
+Druckereinrichten.160	1099	; Drucker einrichten
+Beenden.161	1100	; MAXedit - Menü: Datei - Beenden
+Men..Bearbeiten.162	1101	; Menü: Bearbeiten
+R.ckg.ngig.163	1102	; Rückgängig
+Ausschneiden.164	1103	; Ausschneiden
+Kopieren.165	1104	; Kopieren
+Einf.gen.166	1105	; Einfügen
+L.schen.167	1106	; Löschen
+Allesmarkieren.168	1107	; Alles markieren
+Men..Suchen.169	1108	; Menü: Suchen
+Suchen.170	1109	; Suchen
+Weitersuchen.171	1110	; Weitersuchen
+Vorher.172	1111	; Vorher
+Men..Fenster.173	1112	; Menü: Fenster
+Nebeneinander.174	1113	; Nebeneinander
+.berlappend.175	1114	; Überlappend
+Symboleanordnen.176	1115	; Symbole anordnen
+Alleschlie.en.177	1116	; Alle schließen
+Ge.ffneteDateien.178	1117	; Geöffnete Dateien
+Hilfe.Men..179	1118	; Hilfe-Menü
+HilfezuMAXedit.180	1119	; Hilfe zu MAXedit
+Info.berMAXedit.181	1120	; Info über MAXedit
+MAXeditSymbolleiste.182	1121	; MAXedit Symbolleiste
+DOSMAX..berblick.183	1122	; DOSMAX - Überblick
+TextmodusimGegensatzzuGrafikmodi.184	1123	; Textmodus im Gegensatz zu Grafikmodi
+EsistwahrscheinlicheinTextmodus.Programm.wenn....185	1124	; Es ist wahrscheinlich ein Textmodus-Programm, wenn ...
+EsistwahrscheinlicheinGrafikmodus.Programm.wenn....186	1125	; Es ist wahrscheinlich ein Grafikmodus-Programm, wenn ...
+WievielSpeicheristverf.gbar..187	1126	; Wieviel Speicher ist verfügbar?
+DOS.188	1127	; DOS
+Windows.189	1128	; Windows
+TSR.Programme.190	1129	; TSR-Programme
+Monochrom.Anzeigebereich.191	1130	; Monochrom-Anzeigebereich
+SowendenSieDOSMAXf.rWindowsan.192	1131	; So wenden Sie DOSMAX für Windows an
+DOSMAXFensterinWindows3.1xeinrichten.193	1132	; DOSMAX Fenster in Windows 3.1x einrichten
+DOSMAXFensterinWindows95einrichten.194	1133	; DOSMAX Fenster in Windows 95 einrichten
+QPE.Einstellungen.195	1134	; QPE-Einstellungen
+WennSieversehentlicheinGrafikmodus.Programmaufrufen....196	1135	; Wenn Sie versehentlich ein Grafikmodus-Programm aufrufen ...
+QPOPUP.197	1136	; QPOPUP
+DieseModus.Umschaltung.bergehen.198	1137	; Diese Modus-Umschaltung übergehen
+F.rdiesesProgrammimmer.bergehen.199	1138	; Für dieses Programm immer übergehen
+DiesesDOS.Fensterschlie.en.200	1139	; Dieses DOS-Fenster schließen
+DOSMAXf.rWindows.Referenz.201	1140	; DOSMAX für Windows - Referenz
+DOSMAXDateien.202	1141	; DOSMAX Dateien
+OptioneninQPOPUP.203	1142	; Optionen in QPOPUP
+OptioneninQPOPUP.INF.204	1143	; Optionen in QPOPUP.INF
+EineQPOPUP.Warnunghinzuf.gen.205	1144	; Eine QPOPUP-Warnung hinzufügen
+MitQPOPUPeinenProgrammstartverhindern.206	1145	; Mit QPOPUP einen Programmstart verhindern
+OptioneninSYSTEM.INI.207	1146	; Optionen in SYSTEM.INI
+DOSMAX.OFF.208	1147	; DOSMAX=OFF
+DOSMAXDefault.ON.209	1148	; DOSMAXDefault=ON
+DOSMAXFonts.OFF.210	1149	; DOSMAXFonts=OFF
+DOSMAXMono.OFF.211	1150	; DOSMAXMono=OFF
+FehlerbeseitigungbeiDOSMAXf.rWindows.212	1151	; Fehlerbeseitigung bei DOSMAX für Windows
+QualitasPIF.Editor..berblick.213	1152	; Qualitas PIF-Editor - Überblick
+QualitasPIF.undQPE.Dateien.214	1153	; Qualitas PIF- und QPE-Dateien
+DerQualitasPIF.EditorundDOSMAX.215	1154	; Der Qualitas PIF-Editor und DOSMAX
+Voreinstellung.216	1155	; Voreinstellung
+Ein.ON..217	1156	; Ein (ON)
+Aus.OFF..218	1157	; Aus (OFF)
+DieperfektePIF.Datei.219	1158	; Die perfekte PIF-Datei
+MAX.Men.s.220	1159	; MAX-Menüs
+MAX.Men.s.Befehlszeilen.Optionen.221	1160	; MAX-Menüs - Befehlszeilen-Optionen
+ASQ.222	1161	; ASQ
+ASQausf.hren.223	1162	; ASQ ausführen
+ASQBefehlszeilen.Optionen.224	1163	; ASQ Befehlszeilen-Optionen
+ASQMen.leiste.225	1164	; ASQ Menüleiste
+Men..Datei.226	1165	; MAX-Menüs und ASQ - ASQ Menüleiste - Menü: Datei
+Snapshot.227	1166	; MAX-Menüs und ASQ - Menü: Datei - Snapshot
+Beenden.228	1167	; MAX-Menüs und ASQ - Menü: Datei - Beenden
+Men..Speicher.229	1168	; Menü: Speicher
+Men..Konfig.230	1169	; Menü: Konfig
+Men..Maschine.231	1170	; Menü: Maschine
+Men..Lernen.232	1171	; Menü: Lernen
+Men..Hilfe.233	1172	; Menü: Hilfe
+QualitasMemoryTester.QMT...berblick.234	1173	; Qualitas Memory Tester (QMT) - Überblick
+QMTanwenden.235	1174	; QMT anwenden
+QMTBefehlszeilen.Optionen.236	1175	; QMT Befehlszeilen-Optionen
+QMTBildschirme.237	1176	; QMT Bildschirme
+QMT.bersichtsbildschirm.238	1177	; QMT Übersichtsbildschirm
+ErweiterteQMT.Anzeige.239	1178	; Erweiterte QMT-Anzeige
+QMTTasten.240	1179	; QMT Tasten
+Tastenim.bersichtsbildunderweiterterAnzeige.241	1180	; Tasten im Übersichtsbild und erweiterter Anzeige
+Tastenim.bersichtsbildschirm.242	1181	; Tasten im Übersichtsbildschirm
+TastenindererweitertenAnzeige.243	1182	; Tasten in der erweiterten Anzeige
+InformationenzudenQMT.Tests.244	1183	; Informationen zu den QMT-Tests
+Blockieren.245	1184	; Blockieren
+.bergangsfehler.246	1185	; Übergangsfehler
+Kopplung.247	1186	; Kopplung
+Inversion.248	1187	; Inversion
+Folge.Stop.249	1188	; Folge-Stop
+Speicher.undParit.tsfehler.250	1189	; Speicher- und Paritätsfehler
+386UTIL.COM..berblick.251	1190	; 386UTIL.COM - Überblick
+386UTIL.COMBefehlszeilen.Optionen.252	1191	; 386UTIL.COM Befehlszeilen-Optionen
+Listoder.L.Info..berblick..253	1192	; List oder /L (Info - Überblick)
+NeueDOSObergrenze.254	1193	; Neue DOS Obergrenze
+Zus.tzlicherLoDOSSpeicher.255	1194	; Zusätzlicher LoDOS Speicher
+Zus.tzlicherHiDOSSpeicher.256	1195	; Zusätzlicher HiDOS Speicher
+Verf.gbaresExtendedMemoryundverf.gbarerdynamischerSpeicher.257	1196	; Verfügbares Extended Memory und verfügbarer dynamischer Speicher
+Programmspeicher.258	1197	; Programmspeicher
+ROMAbbildungsbereich.259	1198	; ROM Abbildungsbereich
+HiDOSSpeicher.260	1199	; HiDOS Speicher
+LoDOSSpeicher.261	1200	; 386UTIL.COM - List oder /L (Info - Überblick) - LoDOS Speicher
+Verf.gbardynamischundRestExtendedMemory.262	1201	; Verfügbar dynamisch und Rest Extended Memory
+GesamtExtendedMemory.263	1202	; Gesamt Extended Memory
+xxKBimHiDOS.Speicherverf.gbar.gr..terBlockistyyKB..264	1203	; xx KB im HiDOS-Speicher verfügbar, größter Block ist yy KB.
+MAPEMSoder.E.Info.EMS.Speicher..265	1204	; MAPEMS oder /E (Info - EMS-Speicher)
+Handle.Einheitennummer..266	1205	; 386UTIL.COM - MAPEMS oder /E (Info - EMS-Speicher) - Handle (Einheitennummer)
+Speicher.267	1206	; 386UTIL.COM - MAPEMS oder /E (Info - EMS-Speicher) - Speicher
+Name.268	1207	; 386UTIL.COM - MAPEMS oder /E (Info - EMS-Speicher) - Name
+Gesamtbetrag.269	1208	; Gesamtbetrag
+EMSSeiten.270	1209	; EMS Seiten
+MAPMEModer.M.Info.residenteProgramme..271	1210	; MAPMEM oder /M (Info - residente Programme)
+Name.272	1211	; 386UTIL.COM - MAPMEM oder /M (Info - residente Programme) - Name
+HexStartundHexEnde.273	1212	; Hex Start und Hex Ende
+HexHalter.274	1213	; Hex Halter
+DezimaleL.nge.275	1214	; 386UTIL.COM - MAPMEM oder /M (Info - residente Programme) - Dezimale Länge
+TextoderInterrupt.Nummern.276	1215	; Text oder Interrupt-Nummern
+MAPDEVoder.D.Info.Einheiten.Treiber..277	1216	; MAPDEV oder /D (Info - Einheiten-Treiber)
+Name.278	1217	; 386UTIL.COM - MAPDEV oder /D (Info - Einheiten-Treiber) - Name
+HexStart.279	1218	; Hex Start
+DezimaleL.nge.280	1219	; 386UTIL.COM - MAPDEV oder /D (Info - Einheiten-Treiber) - Dezimale Länge
+Interrupt.Nummern.281	1220	; Interrupt-Nummern
+SUMMARYoder.S.Info.Ladegr..en..282	1221	; SUMMARY oder /S (Info - Ladegrößen)
+Ger.te.oderProgrammname.283	1222	; Geräte- oder Programmname
+Gr..enparameter.Initialisierung.284	1223	; Größenparameter - Initialisierung
+Gr..enparameter.Resident.285	1224	; Größenparameter - Resident
+FlexFrameJa.Nein.MUSS.286	1225	; FlexFrame Ja/Nein/MUSS
+Empfehlung.287	1226	; Empfehlung
+OptimierungresidenterProgramme.288	1227	; Optimierung residenter Programme
+RAMSCANoder.R.Info.Speicherplan..289	1228	; RAMSCAN oder /R (Info - Speicherplan)
+Typ.290	1229	; Typ
+Handle.Einheitennummer..291	1230	; 386UTIL.COM - RAMSCAN oder /R (Info - Speicherplan) - Handle (Einheitennummer)
+Adre.bereich.292	1231	; Adreßbereich
+Gr..e.293	1232	; Größe
+Name.294	1233	; 386UTIL.COM - RAMSCAN oder /R (Info - Speicherplan) - Name
+TIMEMEModer.T.Info.Speicher.Geschwindigkeit..295	1234	; TIMEMEM oder /T (Info - Speicher-Geschwindigkeit)
+Anfangsadresse.296	1235	; Anfangsadresse
+Bereich.Anfang.297	1236	; Bereich - Anfang
+Bereich.Ende.298	1237	; Bereich - Ende
+L.nge.299	1238	; Länge
+MittlereZugriffszeit.in.s..300	1239	; Mittlere Zugriffszeit (in µs)
+Verh.ltniszurschnellstenZeit.301	1240	; Verhältnis zur schnellsten Zeit
+Qcache.302	1241	; Qcache
+QcacheSyntax.303	1242	; Qcache Syntax
+QcacheBefehlszeilen.Optionen.304	1243	; Qcache Befehlszeilen-Optionen
+Laufzeit.Optionen.Parameter.305	1244	; Laufzeit-Optionen / Parameter
+386DISK.306	1245	; 386DISK
+386DISKSyntax.307	1246	; 386DISK Syntax
+ROMSearch.308	1247	; ROMSearch
+STRIPMGR.309	1248	; STRIPMGR
+STRIPMGRSyntax.310	1249	; STRIPMGR Syntax
+STRIPMGRBefehlszeilen.Optionen.311	1250	; STRIPMGR Befehlszeilen-Optionen
+Snapshot.312	1251	; Weitere Qualitas MAX Dienstprogramme - Snapshot
+SnapshotSyntax.313	1252	; Snapshot Syntax
+ExtraDOS.314	1253	; ExtraDOS
+386MAXund386LOAD..berblick.315	1254	; 386MAX und 386LOAD - Überblick
+386MAX.SYSProfil.Optionen.316	1255	; 386MAX.SYS Profil-Optionen
+AUTOBCF.317	1256	; AUTOBCF
+BCF..318	1257	; BCF=
+DMA..319	1258	; DMA=
+EMS.0.320	1259	; EMS=0
+EXTSIZE..ErweiterteOption..321	1450	; EXTSIZE= (Erweiterte Option)
+FRAME..322	1261	; FRAME=
+HPDAREG..ErweiterteOption..323	1451	; HPDAREG= (Erweiterte Option)
+NO58.324	1263	; NO58
+NOCOMPROM.325	1264	; NOCOMPROM
+NODPMI.326	1265	; NODPMI
+NOFLEX.327	1266	; NOFLEX
+NOFRAME.328	1267	; NOFRAME
+NOHIGH.329	1268	; NOHIGH
+NOLOADHI.330	1269	; NOLOADHI
+NOLOW.331	1270	; NOLOW
+NOROM.332	1271	; NOROM
+NOSCAN..333	1272	; NOSCAN=
+NOSCSI.ErweiterteOption..334	1273	; NOSCSI (Erweiterte Option)
+NOWIN3.335	1274	; NOWIN3
+NOWIN30.336	1275	; NOWIN30
+NOXBIOS.337	1276	; NOXBIOS
+NOXRAM.338	1277	; NOXRAM
+PRGREG..339	1278	; 386MAX und 386LOAD Optionen - 386MAX.SYS Profil-Optionen - PRGREG=
+PSMEM..ErweiterteOption..340	1452	; PSMEM= (Erweiterte Option)
+RAM..341	1280	; RAM=
+ROM..342	1281	; ROM=
+STACKREG..ErweiterteOption..343	1453	; STACKREG= (Erweiterte Option)
+STACKS..ErweiterteOption..344	1454	; STACKS= (Erweiterte Option)
+SWAPFILE..345	1284	; SWAPFILE=
+USE..346	1285	; USE=
+VGA.347	1286	; VGA
+VGASWAP.348	1287	; VGASWAP
+VIDMEM..349	1288	; VIDMEM=
+VXD..350	1289	; VXD=
+XBDAREG..ErweiterteOption..351	1455	; XBDAREG= (Erweiterte Option)
+XBIOSHI.352	1291	; XBIOSHI
+XMSHNDL.ErweiterteOption..353	1292	; XMSHNDL (Erweiterte Option)
+386LOADOptionen.354	1293	; 386LOAD Optionen
+DISPLAY.355	1294	; DISPLAY
+ENVREG..356	1295	; ENVREG=
+ENVSAVE.ErweiterteOption..357	1296	; ENVSAVE (Erweiterte Option)
+FLEXFRAME.ErweiterteOption..358	1297	; FLEXFRAME (Erweiterte Option)
+GETSIZE.359	1298	; GETSIZE
+GROUP..360	1299	; GROUP=
+NOPAUSE.361	1300	; NOPAUSE
+PRGREG..362	1301	; 386MAX und 386LOAD Optionen - 386LOAD Optionen - PRGREG=
+PROG..363	1302	; PROG=
+QUIET.364	1303	; QUIET
+SIZE..365	1304	; SIZE=
+Fehlerbeseitigung..berblick.366	1305	; Fehlerbeseitigung - Überblick
+Fehlerbeseitigungf.rH.ngenbeimSystemstart.367	1306	; Fehlerbeseitigung für Hängen beim Systemstart
+DieALT.Taste.368	1307	; Die ALT-Taste
+DieTasteF8.369	1308	; Die Taste F8
+PREMAXIM.370	1309	; PREMAXIM
+PREINST.371	1310	; PREINST
+STRIPMGR.EXE.372	1311	; STRIPMGR.EXE
+DasProblemeingrenzen.373	1312	; Das Problem eingrenzen
+Maximize.374	1313	; Fehlerbeseitigung - Das Problem eingrenzen - Maximize
+ASQund386UTIL.375	1314	; ASQ und 386UTIL
+Stillstandw.hrenddesSystemstarts.376	1315	; Stillstand während des Systemstarts
+AllgemeineHinweisezurFehlerbehebung.377	1316	; Allgemeine Hinweise zur Fehlerbehebung
+ProblememitderBildschirmanzeige.378	1317	; Probleme mit der Bildschirmanzeige
+Netzwerk.Probleme.379	1318	; Netzwerk-Probleme
+ProblememitderFestplatte.380	1319	; Probleme mit der Festplatte
+EMS.Probleme.381	1320	; EMS-Probleme
+AllgemeineProbleme.382	1321	; Allgemeine Probleme
+AusnahmesituationbeiprivilegierterAnweisung.383	1322	; Ausnahmesituation bei privilegierter Anweisung
+Windows.Fehler.384	1323	; Windows-Fehler
+DOS.Fehler.385	1324	; DOS-Fehler
+Fehlerbeseitigungf.rWindows.Komponenten.386	1325	; Fehlerbeseitigung für Windows-Komponenten
+GoAhead.387	1326	; Fehlerbeseitigung - Fehlerbeseitigung für Windows-Komponenten - Go Ahead
+Toolbox.388	1327	; Fehlerbeseitigung - Fehlerbeseitigung für Windows-Komponenten - Toolbox
+DOSMAXf.rWindows.389	1328	; Fehlerbeseitigung - Fehlerbeseitigung für Windows-Komponenten - DOSMAX für Windows
+MAXedit.390	1329	; Fehlerbeseitigung - Fehlerbeseitigung für Windows-Komponenten - MAXedit
+MAXmeter.391	1330	; Fehlerbeseitigung - Fehlerbeseitigung für Windows-Komponenten - MAXmeter
+FehlermeldungenundHinweise..berblick.392	1331	; Fehlermeldungen und Hinweise - Überblick
+MAXMeldungen.393	1332	; MAX Meldungen
+Warnungen.394	1333	; Warnungen
+MAXVxDMeldungen.395	1334	; MAX VxD Meldungen
+386LOADMeldungen.396	1335	; 386LOAD Meldungen
+386UTILMeldungen.397	1336	; 386UTIL Meldungen
+ExtraDOSMeldungen.398	1337	; ExtraDOS Meldungen
+SetupMeldungen.399	1338	; Setup Meldungen
+ToolboxMeldungen.400	1339	; Toolbox Meldungen
+386DISKMeldungen.401	1340	; 386DISK Meldungen
+QcacheMeldungen.402	1341	; Qcache Meldungen
+MemoryManagement..berblick.403	1342	; Memory Management - Überblick
+DieTerminologief.rComputer.Speicher.404	1343	; Die Terminologie für Computer-Speicher
+Byte.Kilobyte.MegabyteundGigabyte.405	1344	; Byte, Kilobyte, Megabyte und Gigabyte
+RAM.406	1345	; Eine Einführung in Memory Management - Die Terminologie für Computer-Speicher - RAM
+Z.hltdieFestplattezumSpeicher..407	1346	; Zählt die Festplatte zum Speicher?
+ROM.408	1347	; ROM
+HexadezimaleAdressen.409	1348	; Hexadezimale Adressen
+DieEntwicklungdesPC.Speichers.410	1349	; Die Entwicklung des PC-Speichers
+LoDOSundHiDOSSpeicher.411	1350	; LoDOS und HiDOS Speicher
+ImLoDOSSpeicheristinderRegelzufinden..412	1351	; Im LoDOS Speicher ist in der Regel zu finden:
+ImHiDOSSpeicheristinderRegelzufinden..413	1352	; Im HiDOS Speicher ist in der Regel zu finden:
+ExpandedMemory.414	1353	; Expanded Memory
+Speicherbank.Umschaltung.BankSwitching..415	1354	; Speicherbank-Umschaltung (Bank Switching)
+AT.KlasseundneuereGenerationen.416	1355	; AT-Klasse und neuere Generationen
+ExtendedMemory.417	1356	; Extended Memory
+Betriebsmodi.418	1357	; Betriebsmodi
+Der386erundderSpeicher.419	1358	; Der 386er und der Speicher
+QualitasMAXundMemoryManagement.420	1359	; Qualitas MAX und Memory Management
+QualitasMAXundDOS.Speicher.421	1360	; Qualitas MAX und DOS-Speicher
+Bildschirmspeicher.VideoMemory..422	1361	; Bildschirmspeicher (Video Memory)
+System.ROM.423	1362	; System-ROM
+Umadressierung.Remapping..424	1363	; Umadressierung (Remapping)
+OptimaleNutzungdesMegabyte.425	1364	; Optimale Nutzung des Megabyte
+Hardware.Adapter.426	1365	; Hardware-Adapter
+Microkanal.Systeme.427	1366	; Microkanal-Systeme
+MDA.428	1367	; MDA
+QualitasMAXundSpeicheroberhalbeinesMegabyte.429	1368	; Qualitas MAX und Speicher oberhalb eines Megabyte
+EMS.430	1369	; Eine Einführung in Memory Management - Qualitas MAX und Speicher oberhalb eines Megabyte - EMS
+XMS.431	1370	; XMS
+VCPI.432	1371	; VCPI
+DPMI.433	1372	; Eine Einführung in Memory Management - Qualitas MAX und Speicher oberhalb eines Megabyte - DPMI
+VDS.434	1373	; VDS
+SmartMemory.435	1374	; Eine Einführung in Memory Management - Qualitas MAX und Memory Management - SmartMemory
+Hinweisef.rWindows.Anwender.436	1375	; Hinweise für Windows-Anwender
+QualitasMAXersetztHIMEM.SYSundEMM386.EXE.437	1376	; Qualitas MAX ersetzt HIMEM.SYS und EMM386.EXE
+GoAhead.438	1377	; Eine Einführung in Memory Management - Hinweise für Windows-Anwender - Go Ahead
+MehrSpeicherf.rWindows.439	1378	; Mehr Speicher für Windows
+MehrSpeicherineinemDOS.Fenster.440	1379	; Mehr Speicher in einem DOS-Fenster
+Instancingf.rresidenteSoftware.441	1380	; Instancing für residente Software
+SmartMemory.442	1381	; Eine Einführung in Memory Management - Hinweise für Windows-Anwender - SmartMemory
+VirtuellesHiDOS.443	1382	; Virtuelles HiDOS
+WinSmart.444	1383	; WinSmart
+Hinweisef.rDOSMemoryManagementAnwender.445	1384	; Hinweise für DOS Memory Management Anwender
+QualitasMAXoptimiertdasMemoryManagement.446	1385	; Qualitas MAX optimiert das Memory Management
+GezielteRegionen.Wahl.447	1386	; Gezielte Regionen-Wahl
+Optimierung.448	1387	; Optimierung
+Lade.Management.449	1388	; Lade-Management
+BIOSKomprimierung.450	1389	; BIOS Komprimierung
+Zus.tzlicherGewinnimVergleichmitanderenDienstprogrammen.451	1390	; Zusätzlicher Gewinn im Vergleich mit anderen Dienstprogrammen
+ROMCaching.452	1391	; ROM Caching
+Vorteilef.rWindows.Anwender.453	1392	; Vorteile für Windows-Anwender
+GlossaryOfTerms.454	1393	; Glossar
+Gloss386DISK.455	1394	; D2HGloss386DISK
+Gloss386LOAD.456	1395	; D2HGloss386LOAD
+Gloss386MAX.PRO.457	1396	; D2HGloss386MAX.PRO
+Gloss386UTIL.458	1397	; D2HGloss386UTIL
+GlossAMRS.459	1398	; D2HGlossAMRS
+GlossAnwendungsprogramm.460	1399	; D2HGlossAnwendungsprogramm
+GlossASQ.461	1400	; D2HGlossASQ
+GlossBackfilling.462	1401	; D2HGlossBackfilling
+GlossByte.463	1402	; D2HGlossByte
+GlossCPU.464	1403	; D2HGlossCPU
+GlossDMA.465	1404	; D2HGlossDMA
+GlossDOSHilfe.Betrachter.466	1405	; D2HGlossDOSHilfe.Betrachter
+GlossDOSMAXf.rWindows.467	1406	; D2HGlossDOSMAXf.rWindows
+GlossDPMI.468	1407	; D2HGlossDPMI
+GlossEMS.469	1408	; D2HGlossEMS
+GlossExpandedMemory.470	1409	; D2HGlossExpandedMemory
+GlossExtendedMemory.471	1410	; D2HGlossExtendedMemory
+GlossExtraDOS.472	1411	; D2HGlossExtraDOS
+GlossGer.tetreiber.473	1412	; D2HGlossGer.tetreiber
+GlossGigabyte.474	1413	; D2HGlossGigabyte
+GlossGoAhead.475	1414	; D2HGlossGoAhead
+GlossHiDOSSpeicher.476	1415	; D2HGlossHiDOSSpeicher
+GlossKilobyte.477	1416	; D2HGlossKilobyte
+GlossKonventionellerSpeicher.478	1417	; D2HGlossKonventionellerSpeicher
+GlossLoDOSSpeicher.479	1418	; D2HGlossLoDOSSpeicher
+GlossMAXHilfe.480	1419	; D2HGlossMAXHilfe
+GlossMAX.Men.s.481	1420	; D2HGlossMAX.Men.s
+GlossMAXedit.482	1421	; D2HGlossMAXedit
+GlossMaximize.483	1422	; D2HGlossMaximize
+GlossMAXmeter.484	1423	; D2HGlossMAXmeter
+GlossMegabyte.485	1424	; D2HGlossMegabyte
+GlossMonochrom.Anzeigebereich.486	1425	; D2HGlossMonochrom.Anzeigebereich
+GlossMultiConfig.487	1426	; D2HGlossMultiConfig
+GlossPageframe.488	1427	; D2HGlossPageframe
+GlossParagraph.489	1428	; D2HGlossParagraph
+GlossProfil.490	1429	; D2HGlossProfil
+GlossProtectedMode.491	1430	; D2HGlossProtectedMode
+GlossQcache.492	1431	; D2HGlossQcache
+GlossQMT.493	1432	; D2HGlossQMT
+GlossQPOPUP.494	1433	; D2HGlossQPOPUP
+GlossQualitasPIF.Editor.495	1434	; D2HGlossQualitasPIF.Editor
+GlossRAM.496	1435	; D2HGlossRAM
+GlossROM.497	1436	; D2HGlossROM
+GlossROMCaching.498	1437	; D2HGlossROMCaching
+GlossROMSearch.499	1438	; D2HGlossROMSearch
+GlossSCSI.500	1439	; D2HGlossSCSI
+GlossSeitenrahmen.501	1440	; D2HGlossSeitenrahmen
+GlossSnapshot.502	1441	; D2HGlossSnapshot
+Glossspeicher.resident.503	1442	; D2HGlossspeicher.resident
+GlossSTRIPMGR.504	1443	; D2HGlossSTRIPMGR
+GlossToolbox.505	1444	; D2HGlossToolbox
+GlossTSR.506	1445	; D2HGlossTSR
+GlossVCPI.507	1446	; D2HGlossVCPI
+GlossWeitekFPA.Prozessor.508	1447	; D2HGlossWeitekFPA.Prozessor
+GlossWinSmart.509	1448	; D2HGlossWinSmart
+GlossXMS.510	1449	; D2HGlossXMS
+[WINDOWS]
+main="Qualitas MAX Hilfe", , 0, (255, 255, 232), (0, 128, 128), 0

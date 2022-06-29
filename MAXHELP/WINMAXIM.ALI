@@ -1,0 +1,26 @@
+; $Header:   P:/PVCS/MAX/MAXHELP/WINMAXIM.ALV   1.4   13 Nov 1995 16:54:16   BECKYY  $
+; WinMaxim help aliases
+; The WMX_H* values are generated from WINMXMZ/RESOURCE.H by MAKEHLP2.BAT
+;
+
+;WMX_HIDC_EDIT					=
+;WMX_HIDC_EDIT_PASS				=
+;WMX_HIDC_EDIT_PASS2			=
+;WMX_HIDC_TAB_END				=
+;WMX_HIDD_EDIT_PASS				=
+;WMX_HID_VIEW_NEXT				=
+;WMX_HID_VIEW_PREV				=
+
+
+WMX_HIDD_WELCOME				= WelcometoWindowsMaximize.65
+WMX_HIDD_SELECTMBOOT			= SelectingMultiConfigSection.66
+WMX_HIDD_SELECTMODE				= SelectingMaximizeMode.67
+WMX_HIDC_EXPRESS				= ExpressMaximizeinWindows.68
+WMX_HIDD_CUSTOPTS				= CustomMaximizeinWindows.69
+WMX_HIDD_END_PHASE1				= AcloserlookatMaximize.96
+WMX_HIDD_SUMMARY				= MaximizeCompleted.70
+
+WMX_HIDC_HIGHLIST				= AcloserlookatMaximize.96
+WMX_HIDC_LOWLIST				= AcloserlookatMaximize.96
+
+

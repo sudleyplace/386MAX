@@ -1,0 +1,27 @@
+; $Header:   P:/PVCS/MAX/MAXHELP/WINMAXIM.AGV   1.1   27 Feb 1996 15:49:20   HENRY  $
+; WinMaxim help aliases
+; The WMX_H* values are generated from WINMXMZ/RESOURCE.H by MAKEHLP2.BAT
+;
+; This file is for the German localized MAX 8.01 product
+; The "dots" in the strings are correct -- Doc2Help converts
+; any accented or special characters to dots
+
+;WMX_HIDC_EDIT					=
+;WMX_HIDC_EDIT_PASS				=
+;WMX_HIDC_EDIT_PASS2				=
+;WMX_HIDC_TAB_END				=
+;WMX_HIDD_EDIT_PASS				=
+;WMX_HID_VIEW_NEXT				=
+;WMX_HID_VIEW_PREV				=
+
+
+WMX_HIDD_WELCOME				= WillkommenbeiWindows.Maximize.66
+WMX_HIDD_SELECTMBOOT				= EinenMultiConfig.Konfigurationsblockausw.hlen.67
+WMX_HIDD_SELECTMODE				= Maximize.Modusausw.hlen.68
+WMX_HIDC_EXPRESS				= Expre..MaximizeinWindows.69
+WMX_HIDD_CUSTOPTS				= Angepa.tesMaximizeinWindows.70
+WMX_HIDD_END_PHASE1				= Maximizen.herbetrachtet.97
+WMX_HIDD_SUMMARY				= Maximize.Ergebnis.71
+
+WMX_HIDC_HIGHLIST				= Maximizen.herbetrachtet.97
+WMX_HIDC_LOWLIST				= Maximizen.herbetrachtet.97
