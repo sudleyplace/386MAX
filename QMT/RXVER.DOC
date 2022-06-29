@@ -1,0 +1,12 @@
+Use Qualitas MAX Version In QMT/RAMEXAM
+
+Use the version # from Qualitas MAX as the version # for both QMT and
+RAMEXAM.
+
+MAKEFILE	Define rule for Q vs. O dependency.  Note that this
+		  rule must come before the ones for R and E; if not,
+		  then VERSBETA.ASM will come from the 386MAX
+		  directory, not the local directory.
+		Change references of VERSION.* to VERSRET.*
+
+

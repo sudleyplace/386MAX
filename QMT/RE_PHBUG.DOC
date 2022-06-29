@@ -1,0 +1,11 @@
+Fix Bug When Checking For Extended Memory
+
+When I put in the code to check for extended memory using INT 15h,
+function E801 in order to workaround a bug in certain Phoenix BIOSes,
+I put the code in the wrong place.  It should precede the code which
+fails on the Phoenix BIOSes, not follow it.
+
+MEM_MAIN.ASM	    Switch the order in which we check for extended
+		      memory.
+
+

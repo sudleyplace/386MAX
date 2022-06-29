@@ -1,0 +1,17 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;;	MEMCHK Symbol Group file format
+;;
+;;	This file may contain comments, like this line, by preceding each
+;;	line with a semicolon (;).  Comments may also appear at the end of
+;;	each line, since all input after the group name is ignored.
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; group mode	sel	group[!segment]
+
+  3000	V	*	PGROUP!CODE	; RAMDEMO code
+  3000	V	*	PGROUP!PROG	; ...	  code
+  3001	V	*	PGROUP!DATA	; ...	  data
+  3001	V	*	PGROUP!NDATA	; ...	  data
+

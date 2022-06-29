@@ -1,0 +1,1538 @@
+
+			QUALITAS CONFIDENTIAL
+
+			     QMT FIX FILE
+			      26 APR 93
+		       Versions 7.00 and above
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+* Fix Memory Allocation Bug If No XMS Users
+
+ Description:  If neither an XMS driver nor a DPMI host is present and
+	       only then, should we allocate top-down extended memory.
+	       Previously, we would allocate it if (say) we used EMS=0
+	       and had an XMS driver, but no XMS users were currently
+	       active.	In that case, we would doubly allocate
+	       extended memory.
+ Who:  BOB
+ When:	26 Apr 93.
+ SW/HW Environment:  XMS driver with no XMS users.
+ Symptom:  Memory in advanced screen is shown as doubly allocated
+	   starting around 1MB.
+ Temporary Workaround:	Use some XMS first.
+ Test Procedure:  With the above scenario, bring up QMT and confirm
+		  that there's no doubly allocated memory.
+ QA Testing Passed:
+ Version: (7.00) 7.00.001
+
+* Add COLOR or /C option to QMT
+
+ Description: QMT now supports the COLOR (/C for short)
+	option.  This is useful for EGA systems where we
+	need to ask whether color is present.  INSTALL will
+	add this automatically to the QMT command line.
+ Who:	HENRY
+ When:	28 Apr 93.
+ SW/HW Environment: EGA or CGA systems.
+ Symptom: QMT asks "Is this in color (Y/N) ?"
+ Temporary Workaround: echo Y | qmt ...
+ Test Procedure: Run QMT on an EGA system.  Verify that it
+	asks for color.  Run QMT/c on the same system, and
+	it shouldn't ask.
+ QA Testing Passed:
+ Version: (7.00)  7.00.002
+
+* Fix Bug In QMT When Using VCPI
+
+ Description:  When running QMT as a VCPI client, we mistakenly use a
+	       32-bit register as an index instead of the
+	       corresponding 16-bit register.  This can cause us to
+	       fail with a Stack Fault.  The error does not always
+	       occur as it depends upon the high-order word of EBP
+	       being non-zero (a somewhat random event).
+ Who:  BOB
+ When:	4 May 93.
+ SW/HW Environment:  Running QMT as a VCPI client (say with EMM386).
+ Symptom:  EMM386 exception #12.
+ Temporary Workaround:	None.
+ Test Procedure:  In the above environment, run QMT several times in a
+		  row.
+ QA Testing Passed:
+ Version: (7.00)  7.00.003
+
+* Workaround (Presumed) Caching Problem
+
+ Description:  Under certain circumstances, the calibration code can
+	       time zero iterations of a loop at one time and 1 KB
+	       iterations of the same loop at a slower time.  The only
+	       reason I can see for this behavior is that there could
+	       be an external cache in the picture slowing things down
+	       the first time but not the second time.	The workaround
+	       is to time the first iteration twice, once to prime the
+	       cache (and discarding the resulting time) and again for
+	       effect.
+ Who:  BOB
+ When:	5 May 93.
+ SW/HW Environment:  AOX cards and systems with external caches(?).
+ Symptom:  Erratic behavior running QMT.
+ Temporary Workaround:	None.
+ Test Procedure:  On a system with an AOX card, run QMT.  That system
+		  also demonstrates the caching problem.
+ QA Testing Passed:
+ Version: (7.00)  7.00.004
+
+* Fix Bug in EISA Memory Checking
+
+ Description:  As per the changes to 386MAX in CPQEISA.BOB, I've found
+	       that we weren't checking for EISA memory correctly.
+	       This TWT fixes that in the same manner as it did for
+	       CPQEISA.BOB.
+ Who:  BOB
+ When:	11 May 93.
+ SW/HW Environment:  EISA systems.
+ Symptom:  QMT without a VCPI or DPMI host doesn't find all EISA
+	   memory, and sometimes finds memory it shouldn't.
+ Temporary Workaround:	None.
+ Test Procedure:  On COMPAQ 486/33 EISA system run QMT with neither a
+		  DPMI nor VCPI host.
+ QA Testing Passed:
+ Version: (7.00)  7.00.005
+
+* Tell MAX To Disable Swapfile
+
+ Description:  In conjunction with VMMNOSWP.BOB, this change uses a
+	       newly-defined interface with MAX to tell it not to
+	       initialize the temporary swapfile.
+ Who:  BOB
+ When:	11 May 93.
+ SW/HW Environment:  386MAX with temporary swapfile.
+ Symptom:  QMT takes a while to present the initial screen because the
+	   DPMI host is initializing a temporary swapfile.
+ Temporary Workaround:	Use a permanent swapfile or just be patient.
+ Test Procedure:  Run QMT and note the difference.
+ QA Testing Passed:
+ Version: (7.00)  7.00.006
+
+* Fix Bug In Memory Allocations With VCPI/XMS/VDS
+
+ Description:  If we're running in a VCPI context with both an XMS and
+	       a VDS server present, we don't translate memory
+	       properly.  We should have marked the XMS-allocated
+	       memory as needing translation from Linear to Physical,
+	       but didn't.  Now we do.
+ Who:  BOB
+ When:	12 May 93.
+ SW/HW Environment:  VCPI, XMS, and VDS servers present and some
+		     available XMS memory is not one-to-one (linear to
+		     physical).
+ Symptom:  System crash (?) as we might write into memory we don't
+	   own.
+ Temporary Workaround:	Remove one of the above requirements (no VCPI,
+			no XMS, or no VDS).
+ Test Procedure:  With NODPMI in 386MAX profile and some XMS memory
+		  not one-exitne, run QMT.
+ QA Testing Passed:
+ Version: (7.00)  7.00.007
+
+* Workaround Bug In PROTMAN
+
+ Description:  Our old friend PROTMAN has found a way to mess up QMT.
+	       We test unallocated conventional memory above us as a
+	       matter of course.  With PROTMAN in the system before
+	       network binding, we need to change our calculations to
+	       take into account that PROTMAN has a floater at the top
+	       of DOS which is unprotected by any memory allocation
+	       scheme.	Thus we can't test as much conventional memory
+	       above us as we would like to.
+ Who:  BOB
+ When:	12 May 93.
+ SW/HW Environment:  Running with PROTMAN active before network
+		     binding.
+ Symptom:  System crash when QMT writes over PROTMAN unprotected
+	   memory.
+ Temporary Workaround:	Run QMT after network binding.
+ Test Procedure:  Run QMT before network binding on a PROTMAN system.
+ QA Testing Passed:
+ Version: (7.00)  7.00.008
+
+* Improve A20 Handling
+
+ Description:  In case we must do our own A20 gating (if there's
+	       neither a VCPI nor DPMI host around), we should do a
+	       better job of it.  In particular, I ripped off the same
+	       routines from 386MAX and made a few changes in the
+	       process.  The new module MEM_A20.ASM contains the A20
+	       gating routines using a similar scheme to that used in
+	       386MAX.
+
+	       The only changes are to simplify the A20COM_ISA routine
+	       to not read the output port byte.  We can't afford that
+	       here as we might very well be called within an INT 09h
+	       event in which case we'll blow away the scancode.  The
+	       other change is to define a new action when an XMS
+	       driver is in the system.  What better mechanism to use
+	       than HIMEM.SYS when they've done all the hard work of
+	       polling system board vendors to figure out how to gate
+	       A20.  Also, the keyword DEBUG=EPM can be used to force
+	       use of our Enter Protected Mode mechanism.
+ Who:  BOB
+ When:	26 May 93.
+ SW/HW Environment:  Non-VCPI, non-DPMI environments where we must do
+		     our own A20 gating.
+ Symptom:  QMT might not run in the above-mentioned environments, or
+	   it might behave erratically.
+ Temporary Workaround:	Run QMT in a VCPI or DPMI environment.
+ Test Procedure:  Without a VCPI or DPMI host, and with and without an
+		  XMS driver, bring up and run QMT on various systems.
+ QA Testing Passed:
+ Version: (7.00)  7.00.009
+
+* Translate English messages to German
+
+ Description: Translate English messages to German
+ Who: ANDY
+ When: 24 MAY 93
+ SW/HW Environment: All
+ Symptom: None, not a bug.
+ Temporary Workaround: None, not a bug.
+ Test Procedure:
+ QA Testing Passed:
+ Version: (7.00)  7.00.010
+
+=============== MAX 7.00 Retail Release, 06/11/93 =====================
+
+* Make a Yes/No question in QMT international.
+
+ Description: Previously one of the questions in QMT was checking
+	      for a Yes/No response, even when the German version was
+	      built.
+ Who: ANDY
+ When: 08 JUL 93
+ SW/HW Environment: German version of QMT
+ Symptom: You have to press "Y" instead of "J" for the affirmative.
+ Temporary Workaround: Press "Y" when you mean "Ja"
+ Test Procedure: With the German Version of QMT, verify that the
+		 Yes/No questions will check for German versions
+		 of "Y" and "N".
+ QA Testing Passed:
+ Version: (7.01a)  QMT 7.01.000
+
+=============== MAX 7.00a (7.01) 1st Patch Release 07/16/93 ==============
+
+* Add scheduling options to QMT
+
+ Description: The DAILY, WEEKLY, MONTHLY, INTERVAL, ASK, and
+	LOG keywords allow scheduled execution of QMT.	F1 help
+	text may be printed to a printer (using BIOS services)
+	or to a text file using F2.  F1 help may now be viewed
+	while testing is in progress, although printing will
+	be disabled.  The Esc key now 1) terminates testing,
+	2) serves as a positive response to the abort confirmation
+	question, and 3) exits QMT.  Alt-TAB switches between
+	the advanced and normal screens.
+ Who:  HENRY
+ When: 9 Sep 93.
+ SW/HW Environment: All.
+ Symptom: None, it's not a bug.
+ Temporary Workaround: None, it's not a bug.
+ Test Procedure: Test QMT with new scheduling options.	Verify
+	that everything works.
+ QA Testing Passed:
+ Version: (7.01b)  7.01.001
+
+* Don't use QEMM and Netroom DPMI
+
+ Description: We detect Netroom and QEMM DPMI support and
+	avoid using it, since they don't provide VDS services
+	while in protected mode.  We also avoid bugs in the
+	Netroom implementation of VDS.
+ Who:  HENRY
+ When: 9 Sep 93.
+ SW/HW Environment: QEMM or Netroom with optional DPMI support.
+ Symptom: System hangs in various interesting ways.
+ Temporary Workaround: None.
+ Test Procedure: Under QEMM and Netroom, run QMT with DPMI support
+	present.  Remove page frame and run QMT.  It should complain
+	of no VCPI or DPMI host.  Run QMT under 386MAX with DPMI but
+	no page frame.	Everything should work.  Run it with the NODPMI
+	keyword (a new QMT option) and QMT should complain there is
+	no VCPI or DPMI host.
+ QA Testing Passed:
+ Version: (7.01b)  7.01.002
+
+* Allow QMT to be exited with ESC ESC if running in AUTO mode
+
+ Description: This change allows QMT to be exited with the ESC ESC
+	      combination if a test was started from the command line.
+	      Otherwise ESC ESC F10 is required to exit. Also added
+	      the F9 key as a synonym for Alt-TAB.
+
+ Who: ANDY
+ When: 27 SEP 93
+ SW/HW Environment: Any machine running QMT
+ Symptom: None
+ Temporary Workaround: None
+ Test Procedure: Run the following and see if they work properly:
+			QMT QUICK=1
+			QMT QUICK=1 WEEKLY=n (n being today)
+			QMT LOG (should not automatically exit)
+ QA Testing Passed:
+ Version: (7.01b)  7.01.002
+
+* Support NOEMS on EMM386, QEMM386, and RM386
+
+ Description:  If there is a NOEMS parameter for either the MS-DOS
+	       version of EMM386 or QEMM, or NOFRAME for RM386, QMT
+	       would previously fail to load.  As it turns out in this
+	       circumstance, although none of EMM386, QEMM386, and
+	       RM386 define an EMS device driver they all provide VCPI
+	       services directly through INT 67h.  First we check for
+	       their special device names used when they do not
+	       provide EMS services.
+ Who:  BOB
+ When:	1 Oct 93.
+ SW/HW Environment:  EMM386 NOEMS, QEMM386 NOEMS, or RM386 NOFRAME.
+ Symptom:  QMT fails to load, instead displaying an error message.
+ Temporary Workaround:	Omit the NOEMS or NOFRAME parameter.
+ Test Procedure:  In the above circumstances, try QMT.
+ QA Testing Passed:
+ Version: (7.01b)  7.01.003
+
+* Fix IMR and I/O Port 92h Bugs
+
+ Description:  Two bugs in QMT are fixed in this TWT.
+
+* When we enter PM via VCPI (but not DPMI or RM), we don't save the
+  current values of the Interrupt Mask Registers (IMRs), although we
+  do restore those registers when we exit PM.  Thus the IMRs are set
+  to zero.  This doesn't seem to bother most systems, but it does
+  affect some.	We now save the current IMR values before we enter PM
+  the first time.
+
+* When we check for system types, we perform a test to determine if
+  this system gates A20 via I/O port 92h.  With some memory managers
+  (such as EMM386) on some systems, this has the effect of rebooting
+  the system.  The change is not to check for A20 gating information
+  if we're using DPMI or VCPI (but not RM) to enter PM.
+
+ Who:  BOB
+ When:	4 Oct 93.
+ SW/HW Environment:  Non-386MAX memory managers on certain systems.
+ Symptom:  Reboots when starting QMT or hangs the system when exiting
+	   QMT.
+ Temporary Workaround:	None.
+ Test Procedure:  On the Dell EISA system in the testlab, run QMT
+		  under both QEMM and EMM386 from AUTOEXEC.BAT.
+ QA Testing Passed:
+ Version: (7.01b)  7.01.004
+
+* Create a program that will create a bootable QMT floppy
+
+ Description: Since the recommended usage of QMT is to use it from a
+	      clean boot from a bootable floppy, we now have a small
+	      program that will automate this.
+ Who: ANDY
+ When: 06 OCT 93
+ SW/HW Environment: Machines using QMT
+ Symptom: None
+ Temporary Workaround: None
+ Test Procedure: Use the MAKEBOOT program and make sure you get the
+		 desired results.
+ QA Testing Passed:
+ Version: (7.01b) 1.00
+
+* Update chevrons when running in AUTO mode.
+
+ Description: Previously QMT FULL=1 would leave QUICK highlighted,
+	      and look as if a quick test was in effect, even though
+	      a full was being done.
+ Who: ANDY
+ When: 06 OCT 93
+ SW/HW Environment: Machines using QMT
+ Symptom: Misunderstanding
+ Temporary Workaround: Ignore it.
+ Test Procedure: Run QMT FULL=1 and make sure the chevrons are around
+		 FULL
+ QA Testing Passed:
+ Version: (7.01b) 7.01.005
+
+* Handle Memory Testing Errors While Displaying Help
+
+ Description:  If the user is testing memory and at the same time
+	       scanning the help screens, if an error occurs we don't
+	       handle it correctly.  The solution is to clear any
+	       previous help state flags before calling the routine to
+	       display the error message.  A side effect of this is
+	       that after clearing the error screen (via ESC), the
+	       user is returned to the main menu, not the help screen
+	       last seen.  This can be an advantage as the text at the
+	       bottom of the error screen says "Press Esc to return to
+	       the main menu".
+ Who:  BOB
+ When:	12 Oct 93.
+ SW/HW Environment:  Errors occuring during help display.
+ Symptom:  Error screen doesn't display when it should.
+ Temporary Workaround:	Read a book instead of the help screens.
+ Test Procedure:  On a system with known memory problems or one with
+		  an NMI switch, reproduce the above scenario.
+ QA Testing Passed:
+ Version: (7.01b)  7.01.006
+
+* Fix S16/S32 Bugs
+
+ Description:  In the unlikely chance QMT ever runs on an old B1-step
+	       386 (16 MHz) CPU, we need to put in S16/S32 macros to
+	       avoid the Errata which has to do with the CPU picking
+	       up the ASP for the current instruction from the
+	       following one.
+
+	       At the same time, a couple of MASM bugs are avoided.
+	       These have to do with MUL and DIV which MASM 5.10b
+	       incorrectly signals a warning message if the memory
+	       operand uses a CS:  override.
+ Who:  BOB
+ When:	12 Oct 93.
+ SW/HW Environment:  16 MHz B1-step 386 systems.
+ Symptom:  System crash?
+ Temporary Workaround:	Get an up-to-date system.
+ Test Procedure:  There's an old recipe for bear stew that begins with
+		  "First, go out and kill a bear.".
+ QA Testing Passed:
+ Version: (7.01b)  7.01.007
+
+* Fix Bug On SX Systems
+
+ Description:  When QMT is run on an SX system, we delay that
+	       determination until after we've calculated TSTSIZEx
+	       variables which depend upon knowning the memory size.
+	       The solution is to change the order of set and
+	       reference.  This difference is noticeable only when
+	       running a copupling test.
+ Who:  BOB
+ When:	13 Oct 93.
+ SW/HW Environment:  SX systems.
+ Symptom:  Progress bar at end of a coupling test is not at 100%.
+ Temporary Workaround:	None.
+ Test Procedure:  Run a coupling test on an SX system.
+ QA Testing Passed:
+ Version: (7.01b)  7.01.008
+
+* Fix Bug When QMT Fails DPMI Switch to PM
+
+Description:  If QMT attemps to enter PM via DPMI and fails (not
+	      enough memory, etc.), we fail to restore the previously
+	      hooked INT 22h vector.
+
+	      Also, the code in CHECK_PRVEXT is changed so as not to
+	      depend upon the BIOS Block Move returning a valid result
+	      in either AH or CF as there's nothing we can trust all
+	      the time.
+
+	       Finally, if there's insufficient memory to enter PM
+	       through the DPMI host, we display a message to that
+	       effect.	Otherwise, if the VM to PM switch fails, we
+	       display the previous generic error message.
+ Who:  BOB
+ When:	14 Oct 93.
+ SW/HW Environment:  DPMI host with not enough memory to enter PM.
+ Symptom:  System crash before QMT screen.
+ Temporary Workaround:	Give it enough memory, or use VCPI.
+ Test Procedure:  On a system in the above state, run QMT.
+ QA Testing Passed:
+ Version: (7.01b)  7.01.009
+
+* Ignore EISA BIOS Function Errors
+
+ Description:  Previously, if we encountered an error when checking
+	       for EISA memory, we displayed an error message and
+	       terminated.  In practice, we don't really care if
+	       there's been an error.  We just use the physical memory
+	       size we get from the BIOS, rather than whatever the
+	       EISA functions say.  Moreover, when NETROOM cloaks the
+	       BIOS, it doesn't emulate the EISA memory functions, so
+	       they return an 86h.  With this change, we ignore EISA
+	       errors and use the default memory size.
+ Who:  BOB
+ When:	21 Oct 93.
+ SW/HW Environment:  EISA systems with brokenb BIOS, or cloaked by
+		     NETROOM.
+ Symptom:  EISA error message, QMT terminates.
+ Temporary Workaround:	Remove NETROOM cloaking, or fix the BIOS.
+ Test Procedure:  On an EISA system, install NETROOM with BIOS
+		  cloaking.
+ QA Testing Passed:
+ Version: (7.01b)  7.01.010
+
+* Miscellaneous Changes To QMT
+
+ Description:  * Remove "for 386 systems" from the QMT tag line.
+
+	       * In AUTO mode, wait two seconds (interruptible with a
+		 keystroke) before returning to the DOS command line
+		 so the user may view the test completion results.
+
+	       * Instead of saying "Your memory is currently being
+		 tested", say which test is being run.  If the test
+		 selection was made from the basic screen (or via the
+		 QUICK= or FULL= command line options), say we're
+		 running the QUICK or FULL test.  Otherwise, use the
+		 test name (e.g., Stuck-At Fault Test, etc.).
+
+	       * Put titles on the command line switch descriptions in
+		 both the /?  display as well as the help screen.
+
+	       * Implement and document Esc to exit QMT (F10 still
+		 works, we just don't document it).
+
+	       * In the help text for the memory to test window on the
+		 advanced screen, note that grayed out regions might
+		 also correspond to memory not physically present.
+
+	       * Implement standalone vs.  bundled flags in such a way
+		 that QMTSETUP creates a version of QMT in the
+		 destination directory with the standalone flag set
+		 (all options available) and INSTALL for 386MAX
+		 creates a version with that flag clear (scheduling
+		 options not available).  In the latter case, none of
+		 the scheduling options (DAILY, WEEKLY, MONTHLY,
+		 INTERVAL, ASK, and LOG) appear in any of the help
+		 screens and, if used as a command line switch, they
+		 are treated as invalid keywords.
+
+	       * Fix bug when we switched from terminating via INT 21h
+		 to 22h where the ending messages are not displayed
+		 because DOS has already closed our file handles
+		 (including standard output).
+
+ Who:  BOB
+ When:	25 Oct 93.
+ SW/HW Environment:  All.
+ Symptom:  The only bug fixed was when we called QMT in AUTO mode and
+	   we didn't display the exit messages.
+ Temporary Workaround:	None.
+ Test Procedure:  Run QMT in AUTO mode and ensure we display the
+		  appropriate exit messages.
+ QA Testing Passed:
+ Version: (7.01b)  7.01.011
+
+* Allow CMOS < PHYSIZE If CMOS = 16MB Or Near 64MB
+
+ Description:  On some systems, the CMOS memory size value is
+	       artifically smaller than the BIOS value for one of two
+	       reasons:  either it's a COMPAQ system with more than
+	       16MB but the CMOS is set to 16MB for obsolete 286
+	       software compatibility, or it's an EISA system with
+	       more than 64MB and the CMOS bytes are not wide enough
+	       to represent that much memory (in kilobytes).  In
+	       either case, we used to display a warning message that
+	       the two values do not match and ask the user to choose
+	       one.  This message is unnecessary as we know the reason
+	       for the mismatch (or at least we think we do).  The
+	       change in this TWT is to choose the larger value
+	       without asking the user.
+
+	       Note that this check follows the test for the /S
+	       keyword, so if there's a problem with our assumptions
+	       (that in the above two cases, the larger value is the
+	       correct one), we have an override.
+
+	       Also, the code/data which distinguishes between INSTALL
+	       and QMTSETUP is broken out into a separate module, so
+	       we don't need to reassemble anything (only re-link) to
+	       generate either executable.
+
+ Who:  BOB
+ When:	25 Oct 93.
+ SW/HW Environment:  COMPAQ systems with > 16MB, or EISA systems with
+		     > 64MB.
+ Symptom:  Warning message about CMOS < PHYSIZE is displayed.
+ Temporary Workaround:	Choose the larger of the two values.
+ Test Procedure:  On either of the above two systems, run QMT.	The
+		  above warning message should not appear.
+ QA Testing Passed:
+ Version: (7.01b)  7.01.012
+
+* Support Color Switch While Testing
+
+ Description:  With this change, we support switching the color state
+	       (switching between color and B&W via F5) while the test
+	       is running.
+ Who:  BOB
+ When:	1 Nov 93.
+ SW/HW Environment:  All.
+ Symptom:  None, it's not a bug.
+ Temporary Workaround:	Use F5 before running the tests.
+ Test Procedure:  While running a test, press F5 to toggle the color
+		  state.
+ QA Testing Passed:
+ Version: (7.01b)  7.01.013
+
+* Allow QMT To Work With 386MAX, EMS=0, and NODPMI
+
+ Description:  Now that 386MAX supports VCPI services with EMS=0, we
+	       can check for that case and allow QMT to work in that
+	       case.
+ Who:  BOB
+ When:	3 Nov 93.
+ SW/HW Environment:  386MAX with EMS=0 and NODPMI.
+ Symptom:  QMT won't enter PM (Remove memory manager, etc.)
+ Temporary Workaround:	Remove EMS=0 or NODPMI.
+ Test Procedure:  With EMS=0 and NODPMI in effect, attempt to bring up
+		  QMT.	Also try the new QMT with the same options
+		  with an old 386MAX to ensure it fails gracefully.
+ QA Testing Passed:
+ Version: (7.01b)  7.01.014
+
+* Create RAMexam from QMT
+
+ Description: Create RAMexam from QMT
+ Who: ANDY
+ When: 04 NOV 93
+ SW/HW Environment: N/A
+ Symptom: None, not a bug.
+ Temporary Workaround: None, not a bug.
+ Test Procedure: Run RAMexam and verify that all phrases with QMT
+		 have been replaced with RAMexam. Run QMT and verify
+		 that RAMexam only features are not there.
+ QA Testing Passed:
+ Version: (7.01b)  7.01.015
+
+=============== MAX 7.00b (7.01) 2nd Patch Release 11/04/93 ==============
+
+* Fix Bugs In Memory Value Display
+
+ Description:  If a test is selected from the Basic screen and the
+	       user switches to the Advanced screen, the current
+	       memory range being worked on is not highlighted as it
+	       should be until the tests switch to another memory
+	       range.  Also, if when viewing the Advanced screen while
+	       running a test, switching between Hex and Decimal
+	       displays omits the same highlighted line.  This TWT
+	       fixes both bugs.
+ Who:  BOB
+ When:	8 Nov 93.
+ SW/HW Environment:  All.
+ Symptom:  While running a test and switching between Basic and
+	   Advanced screens or Hex and Decimal, the memory range is
+	   not properly highlighted.
+ Temporary Workaround:	Wait until the next range is selected.
+ Test Procedure:  While running a test and switching between Basic and
+		  Advanced screens or Hex and Decimal, ensure the
+		  current memory range is properly highlighted.
+ QA Testing Passed:
+ Version: (BETA)  7.01.016
+
+* MAKEBOOT.COM would not copy COMMAND.COM on DOS version 3.x and 4.x
+
+ Description: MAKEBOOT used to rely on the SYS program to copy
+	      COMMAND.COM. Since this does not happen with all
+	      version of DOS, we now look for COMMAND.COM on the
+	      floppy after running SYS. If it is absent we put one
+	      there.
+ Who: ANDY
+ When: 11 NOV 93
+ SW/HW Environment: MAKEBOOT users that have an old version of DOS.
+ Symptom: Users uses the diskette MAKEBOOT created and get a message
+	  about not finding COMMAND.COM.
+ Temporary Workaround: Copy COMMAND.COM yourself.
+ Test Procedure: On a DOS version 3.3 system try the following.
+		 Run MAKEBOOT with no PATH or COMSPEC, verify the
+		 error message.
+		 Run MAKEBOOT with PATH that at least points to a
+		 directory with COMMAND.COM and verify that COMMAND.COM
+		 gets copied.
+		 Run MAKEBOOT with a COMPSEC only and verify that
+		 COMMAND.COM gets copied
+ QA Testing Passed:
+ Version: (BETA)  MAKEBOOT 1.01
+
+* Fix a bug that prevented .LOG files from being written.
+
+ Description: RAMexam LOG would not create a .LOG file.
+ Who: ANDY
+ When: 11 NOV 93
+ SW/HW Environment: Users of RAMexam
+ Symptom: No .LOG file when RAMexam LOG is run.
+ Temporary Workaround: Do without the log.
+ Test Procedure: Run RAMexam LOG QUICK=1 and verify that the .LOG
+		 file is created.
+ QA Testing Passed:
+ Version: (BETA)  7.01.017
+
+* Fix Miscellaneous Bugs In RAMEXAM
+
+ Description:  This TWT contains various miscellaneous bug fixes and
+	       features:
+
+	       * Now that we have VCPI SWAT (well, it's almost there),
+		 I've removed support for loading SWAT directly in
+		 conventional memory.  That wasn't ever practical as
+		 it all had to fit in low DOS.	As SWAT got bigger and
+		 bigger, we would run into trouble.
+
+	       * Surround all debugging features with a test for beta
+		 features.
+
+	       * Handle debugging via VCPI SWAT by relocating it to a
+		 new linear address as SWAT's PTEs are at some other
+		 linear address (typically allocated from XMS memory).
+
+	       * Ensure we enter and exit PM via VCPI with IF=0 (some
+		 VCPI hosts such as RM386 leave us in PM with IF=1 if
+		 that what it was at DE0C time).  Without this change,
+		 RAMexam can spontaneously reboot.
+
+	       * If we enter PM via VCPI, ensure GS is set to AGROUP
+		 as code later on depends upon this.  That's what
+		 caused RAMexam to reboot on exit.
+
+	       * When enter PM via VCPI, we used to allocate PTEs for
+		 all memory ranges even if it was unallocated.
+		 Because of other changes made elsewhere, that can
+		 cause a reboot during memory testing as we might
+		 overflow the page table.
+ Who:  BOB
+ When:	12 Nov 93.
+ SW/HW Environment:  All.
+ Symptom:  Reboot while running tests, or at exit, when using VCPI.
+ Temporary Workaround:	Use a DPMI host like MAX.
+ Test Procedure:  With all VCPI hosts, run RAMEXAM and ensure that it
+		  doesn't spontaneously reboot.
+ QA Testing Passed:
+ Version: (BETA)  7.01.018
+
+* Fix A20-related Bugs
+
+ Description:  A few A20-related bugs are fixed in this TWT:
+
+	       1.  If we're doing our own A20 gating (we entered PM
+		   from RM) and we're using our default ISA bus gating
+		   method, we attempt to read the default output port
+		   byte.
+
+		   A.  On some systems the value read for the output
+		       port byte is invalid (e.g., the reset bit is
+		       clear which should be the case only when
+		       rebooting the system).  We now test for this
+		       case and if it's invalid, we ignore the value
+		       just read.
+
+		   B.  Correspondingly, I've changed the default value
+		       for the output port byte to be 0DDh (the
+		       typical value used by many BIOSes when they
+		       gate it themselves) in case the value we read
+		       is invalid.
+
+		   C.  The whole idea of reading the default output
+		       port byte was to obtain the values of the two
+		       undefined bits which are sometimes used for
+		       speed (high/low) and cache settings (ON/OFF).
+		       What with the above changes, if the value we
+		       read from the 8042 appears to be valid, I
+		       transfer only those two undefined bits to the
+		       default output port byte value we use later
+		       when gating A20.
+
+		   D.  After we gate/de-gate A20 using our own ISA bus
+		       gating method, we pulse the 8042 as on some
+		       systems the 8042 needs to wait for a bit before
+		       the command takes effect.  I've found on some
+		       systems we also need to wait after pulsing the
+		       8042, as well as before.
+
+	       2.  If we're doing our own A20 gating (we entered PM
+		   from RM) and we're using the XMS manager's
+		   routines, we used to call the wrong function to
+		   gate and de-gate.
+ Who:  BOB
+ When:	15 Nov 93.
+ SW/HW Environment:  ISA bus systems without an VM86 memory manager,
+		     possibly with HIMEM.SYS, though.
+ Symptom:  Keyboard lockup during or after testing.
+ Temporary Workaround:	Install a memory manager which runs in VM86
+			mode.
+ Test Procedure:  On an ISA bus system, run RAMexam with and without
+		  HIMEM.SYS (say as RAMEXEM /C QUICK=1) and dance on
+		  CapsLock throughout testing all the way back to the
+		  DOS command line ensuring that the CapsLock light
+		  continues to change.
+ QA Testing Passed:
+ Version: (BETA)  7.01.019
+
+* Fix bugs in handling WEEKLY= and MONTHLY= with no RAMEXAM.DAT
+
+ Description: If RAMEXAM.DAT did not exist or was more than
+	a month (or week) out of synch, RAMEXAM would exhibit
+	unexpected behavior by running before a specified day
+	of the week or month.
+ Who:	HENRY
+ When:	16 Nov 93.
+ SW/HW Environment: Usually, RAMEXAM.DAT doesn't exist and WEEKLY=
+	or MONTHLY= specifies a day of the week or month later
+	than today.
+ Symptom: RAMEXAM runs ahead of schedule.
+ Temporary Workaround: None; this will only happen the first time.
+ Test Procedure: Test RAMEXAM with WEEKLY= and MONTHLY= with
+	date set (via DOS DATE command) to force different
+	behavior.  Verify that it makes sense.
+ QA Testing Passed:
+ Version: (BETA)  7.01.020
+
+* Allow MAKEBOOT to give more descriptive error messages.
+
+ Description: This change allows MAKEBOOT to give more descriptive
+	      error messages than before.
+ Who: ANDY
+ When: 17 NOV 93
+ SW/HW Environment: MAKEBOOT users that use bad media.
+ Symptom: DOS error message.
+ Temporary Workaround: Make sure you use a good disk.
+ Test Procedure:
+ QA Testing Passed:
+ Version: (BETA)  MAKEBOOT 1.02
+
+* Change WEEKLY and MONTHLY scheduling behavior
+
+ Description: The behavior of WEEKLY= and MONTHLY= is
+	now more in line with the documentation.  Previously,
+	we ensured that if RAMexam had already run that
+	week or that month, it wouldn't run again until
+	the specified day of the following week or month.
+	Now, RAMexam will always run on or after the
+	specified day of the week or month.
+ Who:	HENRY
+ When:	19 Nov 93.
+ SW/HW Environment: RAMEXAM MONTHLY=31 QUICK=1
+ Symptom: If RAMEXAM has already been run at any time during
+	the month (say, from the command line) on the last
+	day of the month it still won't run, and will announce
+	that the next scheduled time is the last day of next
+	month.
+ Temporary Workaround: None.
+ Test Procedure: Use all edge conditions combining the
+	following:
+	RAMEXAM.DAT: Missing, dated today, dated last month,
+		dated last year.
+	MONTHLY=n: =n missing or =1, =31, any other day.
+	DOS date (set via DATE command): First day of a month,
+		last day, first of December, last of December,
+		last of January (leap and non-leap), first of
+		February (leap and non-leap).
+	A smaller set to test WEEKLY:
+	RAMEXAM.DAT: Missing, today, last week, 2 weeks ago.
+	WEEKLY=n: =n missing or =1, =7, any other day.
+	DOS date: Sunday, Saturday, same as RAMEXAM.DAT, day
+		before RAMEXAM.DAT, day after.
+ QA Testing Passed:
+ Version: (BETA)  7.01.021
+
+* Fix bug in handling keyboard halt
+
+ Description: If RAMEXAM is run in auto mode from a batch file
+	and there are already two Esc keys in the keyboard buffer
+	when it starts up, it hangs after drawing the screen.
+	If the user cancels a test with Esc, the message "Tests
+	cancelled by user" will be displayed on return to DOS.
+ Who:	HENRY
+ When:	19 Nov 93.
+ SW/HW Environment: When RAMEXAM starts up, there are already
+	two Esc keystrokes in the keyboard buffer.
+ Symptom: RAMEXAM appears to hang.
+ Temporary Workaround: None.
+ Test Procedure: Run a batch file such as the following:
+	@echo off
+	dir c:\
+	ramexam quick=1 adv
+	Run it and immediately hit Esc twice (before the Ramexam
+	copyright).  The screen should come up briefly then disappear,
+	leaving "Tests cancelled by user."
+ QA Testing Passed:
+ Version: (BETA)  7.01.021
+
+* Fix Int 67h- and 386SWAT-related issues in RAMexam
+
+ Description: If 386SWAT is not present, our check for SWAT
+	can hang the system if EMS=0 with MAX versions prior
+	to 7.01.033.  Such versions of MAX with EMS=0 and
+	NODPMI will also hang.	If device SWAT is loaded
+	for real mode debugging, we now always take the
+	smaller of the two extended memory sizes gotten
+	from the BIOS and CMOS.
+ Who:	HENRY
+ When:	19 Nov 93.
+ SW/HW Environment: Older 386MAX (pre-7.01.033), EMS=0,
+	and NODPMI or no 386SWAT loaded.
+ Symptom: RAMEXAM crashes.
+ Temporary Workaround: Enable DPMI, load 386SWAT, or enable EMS.
+ Test Procedure: See Environment.  Test with and without SWAT,
+	with and without NODPMI.  Also test in real mode with
+	and without SWAT.
+ QA Testing Passed:
+ Version: (BETA)  7.01.022
+
+* Fix bug in handling A20 gating
+
+ Description: On some machines (Donna's PS/2 Model 50 with
+	Reply BIOS is one) failing to disable interrupts and
+	flush the keyboard input buffer when gating A20
+	causes spurious keystrokes (such as Esc) to appear
+	in the Int 16h buffer.
+ Who:	HENRY
+ When:	19 Nov 93.
+ SW/HW Environment: Real mode, PS/2 Model 50.
+ Symptom: RAMexam exits immediately, after apparently flashing
+	up on the screen.
+ Temporary Workaround: None.
+ Test Procedure: See Environment.  Verify that keystrokes may
+	be put into the buffer before RAMEXAM starts up.
+ QA Testing Passed:
+ Version: (BETA)  7.01.022
+
+* Workaround Bug In DR-DOS EMM386
+
+ Description:  The EMM386.SYS that ships with DR-DOS doesn't handle
+	       VDS calls correctly.  In particular, at 4MB and above
+	       they return bogus physical addresses.  We now check for
+	       this case and disable our use of VDS services.
+ Who:  BOB
+ When:	19 Nov 93.
+ SW/HW Environment:  DR-DOS's EMM386.
+ Symptom:  System crash or reboot.
+ Temporary Workaround:	Boot without that version of EMM386.
+ Test Procedure:  On any system (you don't need to have DR-DOS
+		  installed), boot with the EMM386 from DR-DOS
+		  and attempt to run RAMexam.
+ QA Testing Passed:
+ Version: (BETA)  7.01.023
+
+* Workaround A20 vs. I/O Port 92h Bugs
+
+ Description:  Alas, from the no-good-deed-goes-unpunished file, it
+	       turns out that on some systems the very act of writing
+	       to I/O port 92h (the actual value doesn't matter) gates
+	       A20 on, but then that's all she wrote.  No further
+	       writes to 92h or to the 8042 for that matter have any
+	       effect.
+
+	       As this causes us some problems, we need to recognize
+	       this situation and avoid it.  On the system I
+	       encountered with this hardware bug, the input value of
+	       I/O port 92h is 0C0h, so the test used checks for the
+	       two high-order bits on.	If that's a valid I/O port (at
+	       least in MCA parlance), that would mean that both Fixed
+	       Disk lights are on, which is, I trust, an unlikely
+	       event.  This also catches the case where the I/O port
+	       has no effect and a read returns 0FFh.
+
+	       At the same time, I changed the code such that if
+	       there's an XMS driver present, we use it exclusively to
+	       gate/degate A20 (Microsoft knows best).
+ Who:  BOB
+ When:	22 Nov 93.
+ SW/HW Environment:  Systems with flaky A20 gating via I/O port 92h.
+ Symptom:  Keyboard locks up after running RAMexam.
+ Temporary Workaround:	None.
+ Test Procedure:  On Dan Shelkrot's system run RAMexam with either
+		  HIMEM, or no memory manager and ensure that the
+		  keyboard doesn't lock up.
+ QA Testing Passed:
+ Version: (BETA)  7.01.024
+
+* Implement back-door VCPI access if EMS=0
+
+ Description: If 386MAX is present with EMS=0 and DPMI
+	disabled, we can enter protected mode via the
+	back door to our VCPI services (as Windows
+	standard mode does).
+
+	This also eliminates a hole in our detection of
+	invalid handling of Int 67h.
+ Who:	HENRY
+ When:	22 Nov 93.
+ SW/HW Environment: Pre-7.01.033 MAX version with EMS=0
+	and NODPMI.
+ Symptom: RAMEXAM complains it can't enter protected mode.
+ Temporary Workaround: Enable DPMI.
+ Test Procedure: Load an older version of MAX with EMS=0.
+	Disable DPMI via MEMLIMIT NODPMI,0 and verify
+	that RAMEXAM runs.  Also try it with NODPMI.
+ QA Testing Passed:
+ Version: (BETA)  7.01.025
+
+* Support Multiple Subprojects via NEWDIR Mechanism
+  Avoid Spurious Impure Memory References
+
+ Description:  As with other projects, RAMEXAM needs support for
+	       multiple subprojects which is implemented here through
+	       the familiar NEWDIR mechanism.  This involves the usual
+	       changes to MAKEFILE to support the NEWDIR keyword as
+	       well as a NEWDIR.BAT file.
+
+	       At the same time, I changed MEM_CMD.ASM and MEM_FCN.ASM
+	       to avoid spurious "Impure memory references" because of
+	       a bug in MASM 5.10b.
+ Who:  BOB
+ When:	22 Nov 93.
+ SW/HW Environment:  None, it's not a bug.
+ Symptom:  None, it's not a bug.
+ Temporary Workaround:	None, it's not a bug.
+ Test Procedure:  Build RAMEXAM and QMT; they should be identical to
+		  the previous version.
+ QA Testing Passed:
+ Version: (BETA)  7.01.026
+
+* Fix NMAKE Bugs in NEWDIR Changes
+
+ Description:  For reasons I still don't understand, NMAKE chooses to
+	       use implicit rules instead of explicit rules.
+	       To overcome this confusion, we need to change some of
+	       the intermediate targets when creating the MEM_HTX2.OBJ
+	       file (now called MEM_HTX3.OBJ).
+ Who:  BOB
+ When:	22 Nov 93.
+ SW/HW Environment:  None, it's not a bug.
+ Symptom:  None, it's not a bug.
+ Temporary Workaround:	None, it's not a bug.
+ Test Procedure:  Build the beast.
+ QA Testing Passed:
+ Version: (BETA)  7.01.027
+
+* Workaround Bug in DRDOS 7
+
+ Description:  Although DRDOS 7 claims that it supports XMS version
+	       3.00, it doesn't implement the most basic of the 3.00
+	       functions, namely Query Extended Memory.  Silly me
+	       thought that if they returned version 3.00, they
+	       implemented all the 3.00 functions.  This change checks
+	       that assumption and falls back to the XMS version 2.00
+	       functions if the XMS Query function fails.
+ Who:  BOB
+ When:	23 Nov 93.
+ SW/HW Environment:  DRDOS 7's EMM386.EXE.
+ Symptom:  RAMexam tests conventional memory only.
+ Temporary Workaround:	Remove DRDOS 7's EMM386.EXE.
+ Test Procedure:  With the EMM386.EXE which comes with DRDOS 7, run
+		  RAMexam and confirm we see and test extended memory.
+ QA Testing Passed:
+ Version: (BETA)  7.01.028
+
+* Reduce Keyboard Lockups
+
+ Description:  Some systems can't handle gating A20 fast enough, so we
+	       need to reduce the number of times we need to do that.
+	       This change takes the approach that if we're entering
+	       PM from RM (that is, we're gating/degating it
+	       ourselves), we should gate A20 on once at the beginning
+	       and degate it once when we exit.  This means that we
+	       don't go through a gate/degate sequence on every
+	       hardware interrupt (timer tick, keystroke, etc.) -- the
+	       gate remains enabled at all times until we exit from
+	       RAMexam.  In this modern world, I'm hoping there aren't
+	       any TSRs which might rely upon A20 being degated.
+
+	       There are still systems which can't gate A20 fast
+	       enough when we enter PM via the BIOS function 89h, so
+	       we can still get keyboard lockups.  The only workaround
+	       for that is DEBUG=EPM.
+ Who:  BOB
+ When:	23 Nov 93.
+ SW/HW Environment:  Flaky systems which can't gate/degate A20 fast
+		     enough to handle mode switches on every hardware
+		     interrupt.
+ Symptom:  Keyboard lockup during testing.
+ Temporary Workaround:	DEBUG=EPM.
+ Test Procedure:  On Dan Shelkrot's system run RAMexam from RM (with
+		  or without HIMEM.SYS).  Dance on (say) the CapsLock
+		  key.	It still locks up, but DEBUG=EPM works.
+ QA Testing Passed:
+ Version: (BETA)  7.01.029
+
+* Made some text changes to MAKEBOOT.EXE
+
+ Description: DR-DOS's SYS command leaves the cursor positioned at
+	      the end of the last line that it displays. This change prints
+	      a CR/LF after running SYS so that the next text printed
+	      is not on the same line. Also the message "Press A to
+	      abort, and any other key to continue" was replaced with
+	      "Press A to abort, or any other key to continue."
+ Who: ANDY
+ When: 02 DEC 93
+ SW/HW Environment: MAKEBOOT users
+ Symptom: None
+ Temporary Workaround: None.
+ Test Procedure: Run MAKEBOOT on a DR-DOS machine and verify that the
+		 screen looks OK. Verify that the Press A to abort
+		 message has an OR instead of an AND.
+ QA Testing Passed:
+ Version: (BETA)  MAKEBOOT 1.03
+
+* Reduce Keyboard Lockup Problems
+
+ Description:  On some systems when RAMexam starts from RM (with or
+	       without HIMEM), the keyboard can lockup in repeat mode
+	       for reasons I don't completely understand.  This TWT
+	       attempts to reduce those problems, but it doesn't
+	       completely eliminate them.
+
+	       * In our INT 08h and 09h handlers, pass the call on
+		 down to the BIOS and take our special action on the
+		 way back.  This change reduces the latency between
+		 the actual HW interrupt and when the BIOS sees it.
+
+	       * In our INT 09h handler, use the BIOS function INT 16h
+		 to inquire of keystrokes instead of reading the I/O
+		 port directly.  This change also reduces the HW
+		 interrupt latency.
+
+	       * Upon entry to PM from RM, don't reprogram the PIC at
+		 all.  This might cause us to confuse the PIC if
+		 there's a pending interrupt.
+
+	       * Upon exit from PM to RM, don't restore the IMR,
+		 enable NMI, or restore the original CR0 everytime.
+		 Instead, do that only when we exit RAMexam
+		 altogether.
+
+	       * Remove the IFDEF @BETA around the call to and
+		 definition of CHECK_SWAT as we need that piece of
+		 information to avoid asking the question about
+		 differing BIOS and CMOS sizes.
+
+	       * Move the code which reads the default output port
+		 byte to the end of A20 determination code and don't
+		 do it if we've already determined the method of
+		 gating A20.  That way, we don't disturb the 8042
+		 unless absolutely necessary.
+
+ Who:  BOB
+ When:	3 Dec 93.
+ SW/HW Environment:  Start from RM.
+ Symptom:  When starting from RM, keyboard locks up.
+ Temporary Workaround:	Use DEBUG=EPM, /K, or type more gently.
+ Test Procedure:  On sensitive systems start from RM and type 'til
+		   the cows come home.
+ QA Testing Passed:
+ Version: (BETA)  7.01.030
+
+* Worked around a small problem with SYS, added the /K to RAMEXAM.
+
+ Description: DOS's SYS command uses the COMMAND.COM that is in the
+	      root, (and can possible be the wrong version.) Since
+	      MAKEBOOT runs SYS, the disk MAKEBOOT creates is not
+	      bootable. This change copies the COMMAND.COM pointed
+	      to by COMSPEC in every case.
+
+	      This change also adds the /K parameter to RAMEXAM. /K
+	      is a synonym for DEBUG=EPM.
+
+ Who: ANDY
+ When: 03 DEC 93
+ SW/HW Environment: Machines with the wrong version of COMMAND.COM in
+		    the root of their boot drive.
+ Symptom: MAKEBOOT creates a non-bootable diskette.
+ Temporary Workaround: Erasing the old version of COMMAND.COM fixes
+		       this.
+ Test Procedure: Put a bad COMMAND.COM in the root direcotry of the
+		 boot drive, and verify that MAKEBOOT creates a
+		 bootable diskette.
+ QA Testing Passed:
+ Version: (BETA) RAMEXAM  7.01.031
+		 MAKEBOOT 1.04
+
+* Reverse The Meaning Of K Switch
+
+ Description:  Because some BIOSes can't be trusted to enter PM
+	       correctly (or quickly enough), we're using our own EPM
+	       routine by default.  Iff the K switch is specified, we
+	       go back to using the BIOS EPM.  The aliases DEBUG=EPM
+	       and DEBUG:EPM have been deleted.
+ Who:  BOB
+ When:	6 Dec 93.
+ SW/HW Environment:  Any system which gives us trouble (typically
+		     keyboard lockups) from RM.
+ Symptom:  Keyboard lockup when run from RM.
+ Temporary Workaround:	Use K switch.
+ Test Procedure:  Run RAMexam on ISA systems from RM and verify that
+		  repeated keyboard activity doesn't lockup the
+		  system.
+ QA Testing Passed:
+ Version: (BETA)  7.01.032
+
+* Fix a problem encountered with R/O COMMAND.COMs
+
+ Description: On some versions of DOS, SYS will make the COMMAND.COM
+	      that it copies to the boot disk Read-Only. This change
+	      removes the R/O (and any other) attribs from COMMAND.COM
+	      before attempting to copy over it.
+ Who: ANDY
+ When: 07 DEC 93
+ SW/HW Environment: Paul's machine
+ Symptom: MAKEBOOT reports "Trouble copying COMMAND.COM"
+ Temporary Workaround: The disk is usually OK despite the error message.
+ Test Procedure: On Paul's machine run MAKEBOOT and watch the screen.
+ QA Testing Passed:
+ Version: (BETA) MAKEBOOT 1.05
+
+* Define separate padded copy of version text
+
+ Description: The version text (7.01 or 7.01.000á) was
+	previously right padded with spaces for use in
+	fixed-line length messages such as MSG_CPY.  Now
+	there's a padded version for this purpose, and we
+	use the unpadded one for the command line copyright.
+ Who:	HENRY
+ When:	10 Dec 93.
+ SW/HW Environment: Retail (as opposed to beta) RAMEXAM and QMT.
+ Symptom: "RAMEXAM -- Version 7.00      -- Qualitas RAMexam"
+ Temporary Workaround: Close your eyes.
+ Test Procedure: Test all four versions: beta and retail QMT, and
+	beta and retail RAMEXAM.  Check the command line copyright
+	notice (it's also visible after returning to the DOS prompt)
+	and verify that the copyright displayed in the top left corner
+	during testing is OK.
+ QA Testing Passed:
+ Version: (BETA)  7.01.033
+
+* Fix Bug Under DRDOS 7
+
+ Description:  Those wild and crazy guys who put out the EMM386 that
+	       ships with DRDOS changed the master PIC base in VM from
+	       08h to 50h and caught me in the process.  When we enter
+	       PM as a VCPI client, we hook the timer tick and
+	       keyboard to handle those events.  Before DR DOS 7, we
+	       could hook those interrupts as numbers 08h and 09h.
+	       Now we must ask the VCPI host about the master (and
+	       slave) PIC base, and use it instead of the constant
+	       08h.
+ Who:  BOB
+ When:	10 Dec 93.
+ SW/HW Environment:  DR DOS 7.
+ Symptom:  RAMexam works (when called in auto mode, say, QUICK=1), but
+	   the keyboard and timer are inactive.
+ Temporary Workaround:	None.
+ Test Procedure:  Run RAMexam under DR DOS 7.
+ QA Testing Passed:
+ Version: (BETA)  7.01.034
+
+* Avoid Other Memory Manager's DPMI Support
+
+ Description:  Through the school of hard knocks, we now know that we
+	       can't trust anyone else's DPMI support.  QEMM, NETROOM,
+	       and DR DOS all fail in some way on which our use of
+	       DPMI depends.  If it's not MAX, we won't use DPMI.
+ Who:  BOB
+ When:	20 Dec 93.
+ SW/HW Environment:  Lately, it's DR DOS's DPMI support which fails.
+ Symptom:  Under DR DOS 7, RAMexam locks on "Allocating Memory".
+ Temporary Workaround:	Use NODPMI.
+ Test Procedure:  On a DR DOS 7 system, run RAMexam.  Also, try on a
+		  QEMM and NETROOM system both with their DPMI support
+		  enabled.
+ QA Testing Passed:
+ Version: (BETA)  7.01.035
+
+* Workaround Real Mode VCPI Bug
+
+ Description:  Some memory managers can install themselves in the
+	       system such that they run the CPU in RM without having
+	       installed their EMS/VCPI handler (e.g., QEMM w/Dos=LOW
+	       and NOEMS).  In this case, we crash and burn because we
+	       make a VCPI call before INT 67h has been setup.	The
+	       solution is always to allocate a zero-length XMS handle
+	       which forces the memory manager to run the CPU in VM.
+	       At the end, we de-allocate the XMS handle.
+ Who:  BOB
+ When:	21 Dec 93.
+ SW/HW Environment:  Memory manager's which do not install EMS/VCPI
+		     handler until they are told to.
+ Symptom:  Crash at copyright line.
+ Temporary Workaround:	Allocate XMS/EMS memory before running
+			RAMexam.
+ Test Procedure:  Run QEMM w/Dos=LOW and NOEMS.
+ QA Testing Passed:
+ Version: (BETA)  7.01.036
+
+* Fix Bug On COMPAQ Systems w/Cache
+
+ Description:  On most COMPAQ systems (typically 386 systems), when we
+	       disable the memory cache, the BIOS degates A20 as a
+	       side effect.  In our EPM code, we gated A20 on and then
+	       disabled the cache which negated the first action.
+	       This change moves the cache disable code to precede the
+	       gate A20 on code.
+
+	       Also, for reasons known only to Microsoft, MASM chose
+	       this time to complain about a phase error which forced
+	       me to move some other code around which has nothing to
+	       do with the above change.
+ Who:  BOB
+ When:	21 Dec 93.
+ SW/HW Environment:  COMPAQ systems with cache controller running
+		     RAMexam from RM.
+ Symptom:  Crash at the point RAMexam tests memory at 1MB.
+ Temporary Workaround:	Run under a memory manager.
+ Test Procedure:  On a COMPAQ system with a cache controller, run
+		  RAMexam from RM.
+ QA Testing Passed:
+ Version: (BETA)  7.01.037
+
+* Workaround HW Bugs W/VLSI Chipsets
+
+ Description:  Systems with a VLSI chipset which includes a secondary
+	       cache controller do not flush the secondary memory
+	       cache when asked to and moreover appear to leave stale
+	       data in the cache.
+
+	       This serious HW bug is dealt with ultimately by reading
+	       enough data just prior to invalidating the cache so as
+	       to overwhelm the memory cache with spurious data
+	       references such that the above bug is avoided.  The
+	       start of the data read is just below 640 KB.  To
+	       accomplish this, we also need to move the code which
+	       first overwhelms and then flushes the cache to a point
+	       where it is executed only once.	To this end, two new
+	       flag bits are defined to control one-time entrance into
+	       PM (the first time) and exit from PM (the last time).
+ Who:  BOB
+ When:	21 Dec 93.
+ SW/HW Environment:  VLSI chipset systems.
+ Symptom:  Keyboard lockups during testing.
+ Temporary Workaround:	Keep your cotton-picking fingers off the
+			keyboard!
+ Test Procedure:  Try typing on such a system.
+ QA Testing Passed:
+ Version: (BETA)  7.01.038
+
+* Fix Bug in VLSI Flush Code
+
+ Description:  The previous TWT apparently was overzealous in its
+	       attempt to disable the memory cache.  We did it for
+	       both RM and VCPI, however, for reasons I don't
+	       understand, under some memory managers (that is, the
+	       VCPI case) but not 386MAX, the disabling doesn't work.
+	       The workaround seems to be don't do that when using
+	       VCPI.  That's not so bad as we still setup our VCPI
+	       PTEs with the $PTE_CD (cache disable) bit set, so the
+	       memory references which really count SHOULD bypass the
+	       cache, however I just don't trust the VLSI chipset.
+ Who:  BOB
+ When:	22 Dec 93.
+ SW/HW Environment:  VLSI systems running with a memory manager (but
+		     not 386MAX).
+ Symptom:  System crash at startup.
+ Temporary Workaround:	Run in RM.
+ Test Procedure:  Run RAMexam under all memory managers on a VLSI
+		  chipset system.
+ QA Testing Passed:
+ Version: (BETA)  7.01.039
+
+* Fix a problem recovering TOP384 memory on some Compaqs.
+
+ Description: For some unknown reason, some of the newer Compaqs will
+	      not allow us to recover the TOP384 memory. (Actually
+	      the top 128k). This change turns off that
+	      recovery for all Compaqs.
+ Who: ANDY
+ When: 22 DEC 93
+ SW/HW Environment: Compaqs
+ Symptom: System locks.
+ Temporary Workaround: ???
+ Test Procedure: Run RAMEXAM on many different Compaqs, including
+		 newer ones that previously caused a problem.
+ QA Testing Passed:
+ Version: (BETA)  7.01.040
+
+* Make a minor change to RAMEXAM.
+
+ Description: The VCPICALL macro was used where the VCPIBACK macro
+	      was needed.
+ Who: ANDY
+ When: 22 DEC 93
+ SW/HW Environment: Machines with EMS=0, and NODPMI effective the MAX.PRO
+ Symptom: Machine locks
+ Temporary Workaround: Enable EMS and/or DPMI
+ Test Procedure: With EMS=0 and NODPMI effective in the MAX.PRO, run
+		 RAMEXAM and verify that it works.
+ QA Testing Passed:
+ Version: (BETA)  7.01.041
+
+* Fix Bug In Page Table Counting
+
+ Description:  Some time ago, I introduced a bug such that we might
+	       not create enough PTEs when running as a VCPI client.
+	       This can occur when the amount of untestable
+	       conventional memory (below the highest segment used by
+	       RAMexam) plus the amount of untestable extended memory
+	       (in use by the memory manager or other extended memory
+	       allocators) is less than the amount of BIM (built-in
+	       memory) recovered by the memory manager plus 128 KB.
+ Who:  BOB
+ When:	23 Dec 93.
+ SW/HW Environment:  VCPI hosts on systems with BIM and low extended
+		     memory allocations and high BIM recovery.
+ Symptom:  System crash when we test BIM memory.
+ Temporary Workaround:	Run from RM, tell the VCPI host not to recover
+			BIM memory, or allocate some extended memory
+			yourself.
+ Test Procedure:  Run RAMexam on a BIM system which meets the above
+		  criteria.
+ QA Testing Passed:
+ Version: (BETA)  7.01.042
+
+* Fix Bug If Zero Bytes of COMPAQ BIM
+
+ Description:  If there is a BIM structure on a COMPAQ, but it
+	       indicates that there's no memory available, we
+	       incorrectly recover zero bytes.
+ Who:  BOB
+ When:	29 Dec 93.
+ SW/HW Environment:  COMPAQ w/BIM structure but no memory in BIM.
+ Symptom:  The Memory-To-Test shows zero bytes recovered at 00FE0000.
+ Temporary Workaround:	Use NOXRAM.
+ Test Procedure:  Run RAMexam on a COMPAQ w/BIM structure but no
+		  memory available.
+ QA Testing Passed:
+ Version: (BETA)  7.01.043
+
+* Recognize VLSI 82C480 Cache Controller Systems
+
+ Description:  Because of a hardware bug in the VLSI 82C480 L2 cache
+	       controller, we must recognize it specially and disable
+	       it when present in order to obtain valid memory test
+	       results (not to mention avoid the system from crashing
+	       when we WBINVD the L1 and L2 caches).  For the moment,
+	       we recognize one such system which has an 82C480 by
+	       searching for a code signature in the BIOS.  Other
+	       BIOSes will have to be added to the search list if they
+	       have a different code signature.
+
+	       Also, for such systems which we don't recognize at
+	       first, there is a new command line switch (V) which
+	       tells RAMexam that the controller is present.
+
+	       In a previous TWT, we skipped over the VLSI disable
+	       code if we were running as a VCPI client as we
+	       encountered a problem in that case.  I now believe that
+	       the problem was the VLSI cache controller, not the fact
+	       that we were running as a VCPI client, so I removed the
+	       code which skips over the cache disable as we now can
+	       take advantage of it.
+
+	       After a careful reading of the 486 and Pentium system
+	       cache issues, I think we should WBINVD, disable the L1
+	       cache via the $CD bit in CR0, WBINVD, disable the
+	       write-through capability via the $NW bit in CR0, and
+	       finally WBINVD.	This sequence should allow the L1
+	       cache (and the L2 cache were it working properly) to be
+	       fully disabled.	Previously, we disabled the L1 cache
+	       by setting both the $CD and $NW bits at the same time,
+	       and then WBINVDing.  Technically, setting both of those
+	       bits should disallow an invalidate, so that's why we do
+	       them separately.
+
+ Who:  BOB
+ When:	28 Dec 93.
+ SW/HW Environment:  486 systems with VLSI 82C480 cache controller.
+ Symptom:  Crash at startup when running in real mode.
+ Temporary Workaround:	Run under a memory manager (not HIMEM,
+			though).
+ Test Procedure:  On a system with a VLSI 82C480 cache controller,
+		  run RAMexam from real mode.
+ QA Testing Passed:
+ Version: (BETA)  7.01.044
+
+* Workaround More Problems With VLSI Chipset
+
+ Description:  The folks at VLSI tell us that the system might crash
+	       when the cache controller is re-enabled.  To workaround
+	       this problem, we overwhelm the cache before and after
+	       we restore the original cache size.
+
+	       The folks at VLSI also said that the chipset latches
+	       the last command value written to it, so we don't need
+	       to send the command value a second time if we're
+	       reading, changing, and writing a chipset register
+	       value.  This matches the behavior I've seen in the one
+	       BIOS we have (the Intel machine).  They also said that
+	       this latching is a property of the chipset, and that
+	       the system board can't change or subvert it, so we
+	       should be able to rely upon this behavior.  The net
+	       effect is that I simplified some of the code which
+	       reads, changes, and writes to the chipset.
+
+	       Also, in case the system we're on has an XBDA, the data
+	       region we use for overwhelming is reduced by 8 KB to
+	       avoid any XBDA.
+ Who:  BOB
+ When:	29 Dec 93.
+ SW/HW Environment:  VLSI 82C480 chipset systems.
+ Symptom:  System crash when exiting RAMexam.
+ Temporary Workaround:	Reboot the system instead of pressing ESC.
+ Test Procedure:  I haven't been able to make this happen as I'm told
+		  it'll take a larger cache than the one we have (ours
+		  is 64 KB).
+ QA Testing Passed:
+ Version: (BETA)  7.01.045
+
+* Fix display of F1 help for ASK option
+
+ Description: When the ASK keyword puts up its dialog box,
+	displaying help via F1 leaves residue.	This has been
+	fixed.
+ Who:	HENRY
+ When:	28 June 94.
+ SW/HW Environment: All.
+ Symptom: See Description.
+ Temporary Workaround: None.
+ Test Procedure: Run RAMEXAM ASK.  Press F1, then Esc.	Verify
+	that ASK dialog is the same as before.
+ QA Testing Passed:
+ Version: (BETA)  7.01.046
+
+=============== MAX 7.01 Retail Release, 07/30/94 =====================
+
+* Implement Demo Version of RAMexam
+
+ Description:  A demo version of RAMexam has all the features of
+	       RAMexam except the code which allocates extended memory
+	       is not present.	Thus, the demo version tests
+	       conventional memory only.  The serial # verification
+	       and display are omitted for the demo version.
+ Who:  BOB
+ When:	6 Jul 95.
+ SW/HW Environment:  All.
+ Symptom:  None, it's not a bug.
+ Temporary Workaround:	None, it's not a bug.
+ Test Procedure:  Run the usual tests.
+ QA Testing Passed:
+ Version: (BETA)  7.02.001
+
+* Change The Rest of RAMexam References to RAMdemo
+
+ Description:  In the previous TWT I missed some of the references to
+	       RAMexam which should be changed to RAMdemo.
+ Who:  BOB
+ When:	6 Jul 95.
+ SW/HW Environment:  RAMdemo
+ Symptom:  Some references to RAMexam should be RAMdemo.
+ Temporary Workaround:	Ignore it.
+ Test Procedure:  I searched throught the .EXE for "RAME" and "RAMe"
+		  and confirmed that all such references were valid
+		  (such as in "RAMexam Demo").
+ QA Testing Passed:
+ Version: (BETA)  7.02.002
+
+*
+
+ Description:
+ Who:
+ When:
+ SW/HW Environment:
+ Symptom:
+ Temporary Workaround:
+ Test Procedure:
+ QA Testing Passed:
+ Version: (BETA)  7.02.003
+
+

@@ -1,0 +1,397 @@
+;' $Header:   P:/PVCS/MAX/QMT/MEM_HTX2.AUV   1.0   05 Sep 1995 16:56:26   HENRY  $ '
+
+include ASCII.INC
+include WRAPPER.INC		; Handy Macros
+
+include MEM_OEM.INC
+
+.model SMALL
+.code
+
+	org	 100h
+START:
+
+; Setup some initial values
+
+COL_WIDTH 70
+INDENT 0			; Set indenting for next few paras
+
+RAWOUT <".386p">                ; Setup for use16 segment
+RAWOUT <"DGROUP  group   DATA">
+RAWOUT <"DATA    segment use16 dword public 'data' ; Start DATA segment">
+RAWOUT <"        assume  ds:DGROUP">
+
+ONESYMNAME HELP_NAVTTL
+CENTER	<"NAVIGATING ",PNAME>
+
+ONESYMNAME HELP_OVRTTL
+CENTER	<"OVERVIEW OF ",PNAME>
+
+ONESYMNAME HELP_TSTTTL
+CENTER	<"ABOUT THE TESTS">
+
+ONESYMNAME HELP_ERRTTL
+CENTER	<"MEMORY AND PARITY ERRORS">
+
+ONESYMNAME HELP_CMDTTL
+CENTER	<"COMMAND LINE SWITCHES">
+
+ONESYMNAME HELP_MEMTTL
+CENTER	<>
+
+ONESYMNAME HELP_NMITTL
+CENTER	<>
+
+; Give some symbol names
+
+COL_WIDTH 70
+
+SYMNAME HELP_NMI,@HNMI_NCOL,@HNMI_NROW ; Name this section
+
+CENTER <"A PARITY ERROR HAS OCCURRED">
+
+RAWOUT <"        public  HELP_NMI_ADDR">
+RAWOUT <" db     '                           AT ADDRESS '">
+RAWOUT <"HELP_NMI_ADDR db '______                           '">
+
+ db  '                    ',CR
+ db  PNAME,' has encountered a parity error in the memory in this system.  The '
+ db  'recommended course of action is to discuss the results of this test '
+ db  'with your authorized dealer.  It is important to note that the address '
+ db  'given is the physical address (as seen by the CPU) of the faulty memory '
+ db  'chip.  Because the correspondence of physical addresses with actual '
+ db  'memory chips differs from system to system, ',PNAME,' cannot point to a '
+ db  'particular chip within the system. ',CR
+ db  CR
+ db  'Please consult with your authorized dealer on corrective options.',CR
+
+COL_WIDTH 70
+
+SYMNAME HELP_NAV,@HNAV_NCOL,@HNAV_NROW ; Name this section
+
+ db  'Screen Overview',CR
+ db  CR
+ db  'There are two ',PNAME,' displays available, Basic and Advanced.  When ',PNAME,' '
+ db  'starts, it displays the Basic screen.  There are three windows on the '
+ db  'Basic display.  The window in the upper left corner of the screen '
+ db  'displays the program name and copyright.  The window in the upper right '
+ db  'portion of the screen displays two buttons labeled "Quick" and "Full".  '
+ db  'Select the test you want using the right and left cursor (arrow) keys.  '
+ db  'Press enter to start the test.  The third window, centered in the '
+ db  'bottom half of the screen, displays test progress.',CR
+ db  CR
+ db  PNAME,'''s Advanced screen is for users who want to see the nuts and bolts '
+ db  'of memory testing.  Users may switch between the Advanced and Basic '
+ db  'screens using the Alt-TAB key.',CR
+ db  CR
+ db  'There are four windows on the Advanced display, one of which (in the '
+ db  'top, left corner) is the same as with the Basic display.',CR
+ db  CR
+ db  'The "Test Selection" window, in the top right corner of the screen, has '
+ db  'the names of the six different memory tests.  Each test name is '
+ db  'followed by a field in which you may enter the number of times ',PNAME,' '
+ db  'should run the test or "C" to instruct ',PNAME,' to run the test continually.',CR
+ db  CR
+ db  'The "Memory to Test" window, in the lower left corner of the screen, '
+ db  'displays the memory regions which ',PNAME,' has identified.  Regions '
+ db  'displayed in gray are used by other software (such as a disk cache) or '
+ db  'are not physically present; in either case, they cannot be tested.',CR
+ db  CR
+ db  'The "Status" window appears in the lower right corner.  While running, '
+ db  PNAME,' reads and writes (abbreviated in the display as "Rd" and "Wr") '
+ db  'various test patterns into memory.  This activity appears in the Status '
+ db  'window.',CR
+ db  CR
+ db  CR
+ db  'Keyboard Overview',CR
+ db  CR
+ db  'The following keys are available in both Basic and Advanced screens:',CR
+ db  CR
+
+INDENT 14			; Set indenting for next section
+
+ db  '    F1        Display help',CR
+ db  '    F5        Toggle between color and monochrome displays',CR
+ db  '    Alt-TAB   Toggle between advanced and basic displays',CR
+ db  '    F9        Same as Alt-TAB, needed for some 83-key keyboards',CR
+ db  '    Esc       Halt testing or exit ',PNAME,CR
+ db  CR
+
+INDENT 0			; Set indenting for next line
+
+ db  'The following keys are available while viewing the Basic display:',CR
+ db  CR
+
+INDENT 14			; Set indenting for next section
+
+ db  '    Cursor    Alternate between highlighting "Quick" and "Full" '
+ db  'buttons',CR
+ db  '    Enter     Start testing',CR
+ db  CR
+
+INDENT 0			; Set indenting for next line
+
+ db  'The following keys are available while viewing the Advanced display:',CR
+ db  CR
+
+INDENT 16			; Set indenting for next section
+
+ db  '    Cursor    Select test for which to specify value',CR
+ db  '    Ctr-Enter Run the highlighted test one time',CR
+ db  '    H         Display values in hexadecimal format',CR
+ db  '    D         Display values in decimal format',CR
+ db  '    Tab       Move cursor between Test Selection window and Memory to '
+ db  'test window if there are more memory entries than fit '
+ db  'in a single screen.  When in the Memory to Test window '
+ db  'the cursor keys scroll the list up and down.',CR
+
+; End of first help screen
+
+SYMNAME HELP_OVR,@HOVR_NCOL,@HOVR_NROW ; Name this section
+
+INDENT 0
+
+ db  'What is ',PNAME,' ',CR
+ db  CR
+ db  'The Qualitas Memory Tester (',PNAME,') uses advanced memory checking to find '
+ db  'problems in your PC''s memory system.  ',PNAME,' detects classes of memory '
+ db  'errors not detectable by the basic POST test provided at boottime.  In '
+ db  'many cases, memory fails without warning.  Symptoms of memory problems '
+ db  'may include erratic lock-ups, loss of data, or disk corruption. '
+ db  'Regular, extensive testing of your PC''s memory system gives you an '
+ db  'opportunity to try to track any problems before you experience the '
+ db  'symptoms.  ',PNAME,' warns about error conditions that can lead to these '
+ db  'problems so that you may take appropriate steps to try to correct them.',CR
+ db  CR
+ db  'How Memory Fails',CR
+ db  CR
+ db  'System memory is fragile and may be affected by numerous circumstances '
+ db  'and conditions.  Some of the causes of memory problems include '
+ db  'humidity, vibration, static, radiation, temperature fluctuations, and '
+ db  'pressure changes.  Aging and deteriorating components can also cause '
+ db  'memory failures.  Another condition that affects how memory functions '
+ db  'is design flaws in the components.  These flaws can cause critical '
+ db  'timing errors in memory.',CR
+ db  CR
+ db  'How to Use ',PNAME,CR
+ db  CR
+ db  PNAME,' installs and runs automatically in the Quick mode each time you '
+ db  'boot your system if you reply "yes" to the question asked during '
+ifdef @RAMEXAM
+ db  'RSETUP.  '
+else
+ db  'INSTALL.  '
+endif
+ db  'There are advantages to checking the available portion of the '
+ db  'system memory on a daily basis.  However, you gain the maximum benefit '
+ db  'from ',PNAME,' by testing as much of your system memory as possible regularly '
+ db  'and by using the Full memory test.  For this reason, it is most '
+ db  'beneficial to test your system memory without resident programs and '
+ db  'device drivers that may use extended or expanded memory.  This group of '
+ db  'programs includes memory management software, disk caches, and RAM '
+ db  'drives.  Periodically, weekly or even daily, you may want to boot from '
+ db  'a boot floppy or a basic CONFIG.SYS and AUTOEXEC.BAT to ensure as '
+ db  'little RAM as possible is in use before using ',PNAME,' to test the system '
+ db  'memory.',CR
+
+SYMNAME HELP_TST,@HTST_NCOL,@HTST_NROW ; Name this section
+
+INDENT 0
+
+ db  'The Qualitas Memory Tester (',PNAME,') operates based on a knowledge of how '
+ db  'memory fails.  ',PNAME,' employs six different tests, each targeted at '
+ db  'specific types of memory failure.  Memory is a collection of individual '
+ db  'bits.  At any given moment, a bit is in one of two states:  ON, '
+ db  'represented by a 1, or OFF, represented by 0 (zero).  All memory errors '
+ db  'are characterized by one or more bits not changing to or remaining at '
+ db  'the appropriate value.  (See "Memory Errors" elsewhere in ',PNAME,'''s on-line '
+ db  'help.)  ',PNAME,' uses sophisticated strategies of writing and reading memory '
+ db  'to identify errors.  Here is a description of the six categories of '
+ db  'errors for which ',PNAME,' tests:',CR
+ db  CR
+ db  'Stuck-At Fault',CR
+ db  'A stuck-at fault occurs when one or more bits retain the value that '
+ db  'exists in the memory when the system boots, regardless of attempts to '
+ db  'write new values into the memory.',CR
+ db  CR
+ db  'Transition Fault',CR
+ db  'A transition fault is similar to a stuck-at fault with the exception '
+ db  'that the value of the defective bit changes one time before it assumes '
+ db  'a "stuck" state.',CR
+ db  CR
+ db  'Coupling Fault:',CR
+ db  'A coupling fault occurs when a change to one or more bits causes an '
+ db  'error in other bit(s).  Coupling faults fall into two categories:',CR
+ db  CR
+
+INDENT 4
+
+ db  '    Inversion Fault: ',CR
+ db  '    This type of error occurs when a change to one bit causes an '
+ db  'unwanted change to another bit.',CR
+ db  CR
+ db  '    Idempotent Fault:',CR
+ db  '    This type of error occurs when a change in one bit forces another '
+ db  'bit into a "stuck" state.  See Stuck-At Fault above.',CR
+ db  CR
+
+INDENT 0
+
+ db  'Additionally, multiple coupling errors can occur simultaneously.  These '
+ db  'are either "linked" or "unlinked" faults:',CR
+ db  CR
+
+INDENT 4
+
+ db  '    Linked:   There are common bits involved in multiple errors.  For '
+ db  'example, changing either of two bits erroneously cause a third '
+ db  'bit to change.',CR
+ db  CR
+ db  '    Unlinked:  Multiple, independent errors.  ',CR
+
+SYMNAME HELP_ERR,@HERR_NCOL,@HERR_NROW ; Name this section
+
+INDENT 0
+
+ db  'Memory can fail in a variety of ways and for any number of reasons.  In '
+ db  'some cases ',PNAME,' will report an error caused not by faulty memory chips '
+ db  'but by the computer hardware that manages access to the chips.  '
+ db  'Unfortunately, it is not possible for ',PNAME,' to identify the specific '
+ db  'hardware, memory chip or otherwise, which causes an error.',CR
+ db  CR
+ db  'Correcting memory system problems requires hands-on contact with the PC '
+ db  'and often involves the use of special diagnostic hardware.  For these '
+ db  'reasons, Qualitas technical support personnel are neither trained nor '
+ db  'available to help correct defects detected by ',PNAME,'.  If ',PNAME,' detects an '
+ db  'error you should contact your dealer or qualified repair service.',CR
+
+SYMNAME HELP_CMD,@HCMD_NCOL,@HCMD_NROW ; Name this section
+
+INDENT 16
+
+CENTER <PNAME,' COMPATIBILITY OPTIONS'>
+    db 'K               avoid spurious keyboard lockups',CR
+;;; db 'NOSCRUB         to avoid scrubbing extra recovered memory',CR
+    db 'NOXRAM          do not recover extra memory',CR
+;;; db 'SHADOWRAM       to recover shadow RAM (C&T CHIPSet-compatible)',CR
+    db 'TOP384          recover 384KB COMPAQ-like memory',CR
+    db 'NOPARITY        avoid spurious parity errors on certain systems',CR
+    db 'NODPMI          do not use DPMI services',CR
+    db 'L               use larger of BIOS and CMOS sizes if they differ',CR
+    db 'S               use smaller of BIOS and CMOS sizes if they differ',CR
+    db 'V               to disable VLSI 82C480 cache controller',CR
+;;; db 'DEBUG=FAULT     to debug any fault-processing code',CR
+;;; db 'DEBUG=TIME      to debug memory timing tests',CR
+ db  CR
+CENTER <PNAME,' TEST TYPE OPTIONS'>
+    db 'SAF=nn          run Stuck-At Fault Test nn times',CR
+    db 'TF=nn           run Transition Fault Test nn times',CR
+    db 'UNLINV=nn       run Unlinked Inversion Coupling Fault Test nn times',CR
+    db 'UNLIDM=nn       run Unlinked Idempotent Coupling Fault Test nn times',CR
+    db 'LNKINV=nn       run Linked Inversion Coupling Fault Test nn times',CR
+    db 'LNKIDM=nn       run Linked Idempotent Coupling Fault Test nn times',CR
+    db 'QUICK=nn        run Quick tests nn times',CR
+    db 'FULL=nn         run Full tests nn times',CR
+    db 'ALL=nn          run all tests nn times',CR
+ db  CR
+CENTER <PNAME,' DISPLAY OPTIONS'>
+    db 'ADVANCED        start execution in advanced mode',CR
+    db 'HEX             start execution in hexadecimal mode',CR
+    db 'NOEXIT          do not exit after running tests automatically',CR
+    db 'BW or /B        force black & white display',CR
+    db 'COLOR or /C     force color display',CR
+ db  CR
+ifdef @RAMEXAM			; If building RAMEXAM
+CENTER <PNAME,' SCHEDULING OPTIONS'>
+    db 'DAILY           run ',PNAME,' only if it has not been run since midnight',CR
+
+    db 'WEEKLY[=day]    run ',PNAME,' only if it has not been run in the last week '
+    db '-- if optional day is specified, ',PNAME,' will run on or '
+    db 'after that day of the week (Sunday=1, Monday=2, etc.)',CR
+
+    db 'MONTHLY[=date]  run ',PNAME,' only if it has not run in the last month -- '
+    db 'if option date is specified, ',PNAME,' will run on or after '
+    db 'that day of the month (1-31)',CR
+
+    db 'INTERVAL=n      run ',PNAME,' only if at least n days have expired '
+    db 'since the last time ',PNAME,' was run',CR
+
+    db 'ASK[=timeout,response] Prompt for action to take, with a default '
+    db 'response to be used after timeout seconds:',CR
+INDENT 29
+    db '                Y (Yes)      run ',PNAME,CR
+    db '                N (No)       skip test and wait until next '
+    db 'scheduled occurrence',CR
+
+    db '                P (Postpone) skip test; ask again later',CR
+
+INDENT 16
+
+    db 'LOG[=filename][,o]  append a log entry to ',PUNAME,'.LOG or other '
+    db 'filename and use o to overwrite any existing file of the '
+    db 'same name',CR
+
+ db  CR
+endif					; Building RAMEXAM
+ db  '?               display help',CR
+
+SYMNAME HELP_MEM,@HMEM_NCOL,@HMEM_NROW ; Name this section
+
+INDENT 0
+
+CENTER <'A MEMORY ERROR HAS OCCURRED'>
+
+RAWOUT <'        public  HELP_MEM_ADDR,HELP_MEM_EXP,HELP_MEM_ACT'>
+
+;;;;;;;;  db	 '                           AT ADDRESS ______'
+RAWOUT <" db     '                           AT ADDRESS '">
+RAWOUT <"HELP_MEM_ADDR db '______                           '">
+ db CR
+
+;;;;;;;;  db	 '                      EXPECTED VALUE __'
+RAWOUT < " db    '                      EXPECTED VALUE '">
+RAWOUT < "HELP_MEM_EXP db  '__                                '">
+
+;;;;;;;;  db	 '                        ACTUAL VALUE __                                '
+RAWOUT <" db     '                        ACTUAL VALUE '">
+RAWOUT <"HELP_MEM_ACT db  '__                                '">
+
+ db CR
+ db PNAME,' has encountered a read-write error in the memory in this system.  '
+ db 'The recommended course of action is to discuss the results of this test '
+ db 'with your authorized dealer.  It is important to note that the address '
+ db 'given is the physical address (as seen by the CPU) of the faulty memory '
+ db 'chip.  Because the correspondence of physical addresses with actual '
+ db 'memory chips differs from system to system, ',PNAME,' cannot point to a '
+ db 'particular chip within the system.',CR
+ db CR
+ db 'Please consult with your authorized dealer on corrective options.',CR
+
+COL_WIDTH 42
+INDENT 2
+
+SYMNAME MSG_ACHLP,@ACHLP_NCOL,@ACHLP_NROW ; Name this section
+
+CENTER <'ASK command'>
+ db CR
+ db  '  The ASK command prompts you for confirmation '
+ db  'before carrying out scheduled '
+ db  'tests.  If no response is given before '
+ db  'the alloted time, the default action '
+ db  'is carried out.',CR
+ db  CR
+ db  '  Possible responses are:',CR
+ db  '  Yes - carry out the tests.',CR
+ db  '  No - no tests are done, and the prompt '
+ db	'will not appear until the next scheduled interval.',CR
+ db  '  Postpone - no tests, but the prompt will appear next time ',PNAME,' is run.',CR
+ db  CR
+
+EOT					; End of text
+
+RAWOUT <'DATA    ends                   ; End DATA segment'>
+
+RAWOUT <'        end'>
+
+	end	START
+

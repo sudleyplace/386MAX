@@ -1,0 +1,11 @@
+Implement Changes For Creating RAMdemo
+
+MAKEFILE	Define RAMDEMO variables and use them.
+		Split out .SSF and .EXE targets in case LINK is
+		  interrupted.
+
+MEM_MSGS.ASM	Update copyright year.
+
+RAMDEMO.WSG	Define.
+
+

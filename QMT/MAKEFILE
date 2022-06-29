@@ -1,0 +1,340 @@
+#' $Header:   P:/PVCS/MAX/QMT/MAKEFILE.__V   1.8   28 Aug 1998 14:03:58   BOB  $
+#
+# Makefile for RAMEXAM.EXE, RAMDEMO.EXE, and QMT.EXE
+#
+
+.SUFFIXES:	.aus .agr .ob2 .ssf .pro
+
+!include $(MAXROOT)include\maxnames.mak
+
+# Values to override on the command line
+FULLRE=0			# 1 for full RamExam with scheduling, etc.
+BETA=0				# 1 for retail
+RAMDEMO=0			# 1 to build RAMdemo
+
+!if $(BETA)
+BLETTER=B			# REB, QMB
+!else
+BLETTER=T			# RET, QMT
+!endif
+
+# Valid OEMs are:
+#	RET - RAMexam Retail
+#	REB - RAMexam Beta
+#	DET - RAMdemo Retail
+#	DEB - RAMdemo Beta
+#	QMT - QMT Retail (MAX version)
+#	QMB - QMT Beta	 (MAX version)
+!if $(RAMDEMO)
+PRODNAME=RAMDEMO
+OEM=DE$(BLETTER)
+MAKEBOOT=1
+
+!elseif $(FULLRE)
+PRODNAME=RAMEXAM
+OEM=RE$(BLETTER)
+MAKEBOOT=1
+
+!else
+PRODNAME=QMT
+OEM=QM$(BLETTER)
+MAKEBOOT=0
+!endif
+
+NEWDIR=N
+
+!IF "$(LNKCMD)" == ""
+LNKCMD=$(LD)
+!ENDIF
+
+E=$(SRCROOT)qmt\	# Local project source directory
+M=P:\MAX\QMT\		# Main project source directory
+O=$(OEM)\			# OEM-specific files
+R=$(RXMDIR) 		# Source directory
+P=$(R);$(E);$(M)	# Search sequence for source
+
+OLDINC=$(INCLUDE)	# Old INCLUDE value
+ALLINC=$(E);$(O);$(I);$(Q);$(INCLUDE) # INCLUDE search path
+INCLUDE=$(MSVC16)INCLUDE;$(INCLUDE)
+
+# For MAKEBOOT.C and WRAPPER.C
+CFLAGS=/Gs /W3 /DSYSTEM=$(SYSNAME) /DREORDER /DLANG_$(LANG)
+PFLAGS=/Zg /DPROTO /DCVDBG /DSYSTEM=$(SYSNAME) /DREORDER /DLANG_$(LANG)
+
+
+# if LST is defined in the environment or on the command line,
+# define a macro we can tack onto the end of each MASM line
+!IFDEF LST
+LSTMAC=,$(LST)\$(@B)
+!ELSE
+LSTMAC=
+!ENDIF
+
+AFLAGS=/DLANG_$(LANG) /T /DOEM=$(OEM) # MASM options
+LFLAGS=/map /line /nod		# Linker options
+
+ALL:	 DIR \
+	 $(BINDIR)$(PRODNAME).EXE	\
+	 $(BINDIR)$(PRODNAME).SSF	\
+!IF "$(NEWDIR)" == "Y"
+	 NEWDIR 			\
+!ENDIF
+!if $(MAKEBOOT) 	# MAKEBOOT only needed for RAMEXAM/DEMO
+	 $(BINDIR)MAKEBOOT.EXE		\
+!endif
+
+DEL:
+	-rm $(O)*.*
+
+DIR:
+	vdir -c $(O)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\qmt\*
+VCSDIR = P:\PVCS\MAX\qmt\*
+ALIAS ALL P:\PVCS\MAX\qmt\*.*,p:\pvcs\max\qmt\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+DEPSCAN = -r$(MAXROOT)
+DEPSCAN = $(DEPSCAN) -p{$$(P)}
+DEPSCAN = $(DEPSCAN) -t$(O)=$$(O)
+DEPSCAN = $(DEPSCAN) *.asm *.a$(LANG)
+!IF !$(FULLRE)
+DEPSCAN = $(DEPSCAN) $(Q)versret.asm
+!ENDIF
+DEPSCAN = $(DEPSCAN) *.c
+DEPSCAN = $(DEPSCAN) >$(O)qmtdep.inc
+
+DEPSCAN: {$(P)}MAKEFILE
+	-rm $(O)dirntry.inc $(O)makeboot.pro
+	depscan $(DEPSCAN)
+
+{$(P)}MAKEFILE: $(O)qmtdep.inc
+
+!IF "$(NEWDIR)" == "Y"
+!if [xc/r/a/n/t $(R)$(O)QMTDEP.INC $(O).]
+!endif
+!ELSE
+!if exist ($(O)qmtdep.inc) == 0
+!if [depscan $(DEPSCAN)]
+!endif
+!endif
+!include $(O)qmtdep.inc
+!ENDIF
+
+!IF "$(NEWDIR)" == "Y"
+NEWDIR:  {$(P)}MAKEFILE 	\
+		 {$(P)}WRAPPER.COM	\
+		 {$(P)}MKRX.BAT 	\
+		 {$(P)}MKRB.BAT 	\
+		 {$(P)}PVCS.CFG
+	$(COMSPEC) /c <<$(O)MAKEFILE.BAT
+	xc/r/a/n/t $(**: =^
+	xc/r/a/n/t )
+<<NOKEEP
+
+!ENDIF
+
+{$(Q)}.asm{$(O)}.obj:
+!IF "$(NEWDIR)" == "Y"
+	copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	set INCLUDE=$(ALLINC)
+	masm %s $(AFLAGS), $(O) $(LSTMAC);
+	set INCLUDE=$(OLDINC)
+	@ff $*/,/#
+!ENDIF
+
+{$(E)}.asm{$(O)}.obj:
+!IF "$(NEWDIR)" == "Y"
+	copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	set INCLUDE=$(ALLINC)
+	masm %s $(AFLAGS), $(O) $(LSTMAC);
+	set INCLUDE=$(OLDINC)
+	@ff $*/,/#
+!ENDIF
+
+{$(R)}.asm{$(O)}.obj:
+!IF "$(NEWDIR)" == "Y"
+	copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	set INCLUDE=$(ALLINC)
+	masm %s $(AFLAGS), $(O) $(LSTMAC);
+	set INCLUDE=$(OLDINC)
+	@ff $*/,/#
+!ENDIF
+
+OBJS=	$(O)MEM_MAIN.OBJ	\
+		$(O)MEM_CMD.OBJ 	\
+		$(O)MEM_EPM.OBJ 	\
+		$(O)MEM_FALT.OBJ	\
+		$(O)MEM_FCN.OBJ 	\
+		$(O)MEM_KEY.OBJ 	\
+		$(O)MEM_MISC.OBJ	\
+		$(O)MEM_SCRN.OBJ	\
+		$(O)MEM_SYS.OBJ 	\
+		$(O)MEM_TIME.OBJ	\
+		$(O)MEM_FMT.OBJ 	\
+		$(O)MEM_HELP.OBJ	\
+		$(O)MEM_HTXT.OBJ	\
+		$(O)MEM_CAL.OBJ 	\
+		$(O)MEM_MSGS.OBJ	\
+		$(O)MEM_USF.OBJ 	\
+		$(O)MEM_UTF.OBJ 	\
+		$(O)MEM_UIN.OBJ 	\
+		$(O)MEM_UID.OBJ 	\
+		$(O)MEM_LIN.OBJ 	\
+		$(O)MEM_LID.OBJ 	\
+!IF $(FULLRE)
+		$(O)VERSION.OBJ 	\
+!ELSE
+		$(O)VERSRET.OBJ 	\
+!ENDIF
+		$(O)VERSBETA.OBJ	\
+		$(O)MEM_A20.OBJ 	\
+		$(O)MEM_HTX3.OBJ	\
+		$(O)MEM_IDN.OBJ
+
+$(BINDIR)$(PRODNAME).SSF:	$(O)$(PRODNAME).SSF
+!IF "$(NEWDIR)" != "Y"
+	xc /r $(**R).ssf   $*.*
+	xc /r $(**R).map   $*.*
+!ENDIF
+
+$(BINDIR)$(PRODNAME).EXE:	$(O)$(PRODNAME).EXE
+!IF "$(NEWDIR)" != "Y"
+	xc /r $(O)$(PRODNAME).EXE  $(BINDIR)$(PRODNAME).EXE
+!ENDIF
+
+$(O)$(PRODNAME).EXE:	$(OBJS) 	\
+			{$(P)}MAKEFILE	\
+			{$(P)}$(PRODNAME).WSG
+!IF "$(NEWDIR)" == "Y"
+	copy $(R)$(O)$(@B).EXE $(O).
+	copy $(R)$(O)$(@B).SSF $(O).
+	copy $(R)$(O)$(@B).MAP $(O).
+	xc/r/a/n/t $(R)$(PRODNAME).WSG
+!ELSE
+	$(LNKCMD) @<<$(O)$(PRODNAME).ARF
+		$(OBJS: =+^
+)
+		$*
+		$*
+		$(LFLAGS) ;
+<<KEEP
+
+$(O)$(PRODNAME).MAP:	$(O)$(PRODNAME).EXE
+
+$(O)$(PRODNAME).SSF:	$(O)$(PRODNAME).MAP
+	mapssf -w$(PRODNAME) -t$* $*
+!ENDIF
+
+$(O)MEM_A20.OBJ:	{$(P)}MEM_A20.ASM	$(MEM_A20_ADEP)
+
+$(O)MEM_CAL.OBJ:	{$(P)}MEM_CAL.ASM	$(MEM_CAL_ADEP)
+
+$(O)MEM_CMD.OBJ:	{$(P)}MEM_CMD.ASM	$(MEM_CMD_ADEP)
+
+$(O)MEM_EPM.OBJ:	{$(P)}MEM_EPM.ASM	$(MEM_EPM_ADEP)
+
+$(O)MEM_FALT.OBJ:	{$(P)}MEM_FALT.ASM	$(MEM_FALT_ADEP)
+
+$(O)MEM_FCN.OBJ:	{$(P)}MEM_FCN.ASM	$(MEM_FCN_ADEP)
+
+$(O)MEM_FMT.OBJ:	{$(P)}MEM_FMT.ASM	$(MEM_FMT_ADEP)
+
+$(O)MEM_KEY.OBJ:	{$(P)}MEM_KEY.ASM	$(MEM_KEY_ADEP)
+
+$(O)MEM_HELP.OBJ:	{$(P)}MEM_HELP.ASM	$(MEM_HELP_ADEP)
+
+$(O)MEM_HTXT.OBJ:	{$(P)}MEM_HTXT.ASM	$(MEM_HTXT_ADEP)
+
+$(O)MEM_IDN.OBJ:	{$(P)}MEM_IDN.ASM	$(MEM_IDN_ADEP)
+
+$(O)MEM_MAIN.OBJ:	{$(P)}MEM_MAIN.ASM	$(MEM_MAIN_ADEP)
+
+$(O)MEM_MISC.OBJ:	{$(P)}MEM_MISC.ASM	$(MEM_MISC_ADEP)
+
+$(O)MEM_MSGS.OBJ:	{$(P)}MEM_MSGS.ASM	$(MEM_MSGS_ADEP)
+
+$(O)MEM_SCRN.OBJ:	{$(P)}MEM_SCRN.ASM	$(MEM_SCRN_ADEP)
+
+$(O)MEM_SYS.OBJ:	{$(P)}MEM_SYS.ASM	$(MEM_SYS_ADEP)
+
+$(O)MEM_TIME.OBJ:	{$(P)}MEM_TIME.ASM	$(MEM_TIME_ADEP)
+
+$(O)MEM_USF.OBJ:	{$(P)}MEM_USF.ASM	$(MEM_USF_ADEP)
+
+$(O)MEM_UTF.OBJ:	{$(P)}MEM_UTF.ASM	$(MEM_UTF_ADEP)
+
+$(O)MEM_UIN.OBJ:	{$(P)}MEM_UIN.ASM	$(MEM_UIN_ADEP)
+
+$(O)MEM_UID.OBJ:	{$(P)}MEM_UID.ASM	$(MEM_UID_ADEP)
+
+$(O)MEM_LIN.OBJ:	{$(P)}MEM_LIN.ASM	$(MEM_LIN_ADEP)
+
+$(O)MEM_LID.OBJ:	{$(P)}MEM_LID.ASM	$(MEM_LID_ADEP)
+
+$(R)WRAPPER.COM:	{$(P)}WRAPPER.C $(WRAPPER_DEP)
+!IF "$(NEWDIR)" != "Y"
+	$(CC) /AT $(CFLAGS) /Fm$* %s
+	mapssf -t$* $*
+!ENDIF
+
+# MEM_HTX2.AUS or .AGR contains the long help text that requires
+# wrapping. This is accomplished by compiling MEM_HTX2.AUS (or AGR)
+# to a .COM file, and processing (with WRAPPER) the .COM file to
+# produce a new .ASM that is wrapped correctly. That .ASM file is
+# compiled to the final .OBJ
+
+$(O)MEM_HTX3.OBJ:	{$(P)}MEM_HTX2.A$(LANG) $(R)WRAPPER.COM $(MEM_HTX2_ADEP)
+!IF "$(NEWDIR)" == "Y"
+	copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	set INCLUDE=$(ALLINC)
+	masm %s $(AFLAGS), $(O)$(@B).OB2 ;
+	set INCLUDE=$(OLDINC)
+	$(LNKCMD) @<<$(O)MEM_HTX2.ARF
+	$(O)mem_htx3.ob2
+	$(O)mem_htx2
+	$(O)mem_htx2
+	$(LFLAGS) /tiny;
+<<KEEP
+	$(R)wrapper.com $(O)mem_htx2.COM $(O)MEM_HTX2.AS2
+	set INCLUDE=$(ALLINC)
+	masm $(O)MEM_HTX2.AS2 $(AFLAGS), $(O)MEM_HTX3.OBJ $(LSTMAC);
+	set INCLUDE=$(OLDINC)
+!ENDIF
+
+$(O)VERSRET.OBJ:	$(Q)VERSRET.ASM 	$(VERSRET_ADEP)
+
+$(O)VERSION.OBJ:	{$(P)}VERSION.ASM	$(VERSION_ADEP)
+
+$(O)VERSBETA.OBJ:	{$(P)}VERSBETA.ASM	$(VERSBETA_ADEP)
+
+$(O)MAKEBOOT.EXE:	{$(P)}MAKEBOOT.C	$(O)MAKEBOOT.PRO $(MAKEBOOT_DEP)
+!IF "$(NEWDIR)" == "Y"
+	copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	$(CC) /AS $(CFLAGS) /I$(O) /I$(E) /Fm$* /Fo$* /Fe$* %s
+	mapssf -t$* $*
+!ENDIF
+
+$(O)MAKEBOOT.PRO: {$(P)}MAKEBOOT.C
+!IF "$(NEWDIR)" == "Y"
+	copy %|dpF$(@D)\$(@F) $(@D)\.
+!ELSE
+	$(CC) $(PFLAGS) /I$(E) %s > $(O)makeboot.tmp
+	xc /m/r $(O)makeboot.tmp $(O)makeboot.pro
+!ENDIF
+
+$(BINDIR)MAKEBOOT.EXE:	$(O)MAKEBOOT.EXE
+!IF "$(NEWDIR)" != "Y"
+	xc /r $(O)MAKEBOOT.EXE	$(BINDIR)MAKEBOOT.EXE
+!ENDIF
+

@@ -1,0 +1,12 @@
+Use New Memory Function Calls To Get Extended Memory
+
+If the BIOS supports it, there are two additional functions which
+return the size of extended memory in kilobytes, this time handling >
+64 MB.
+
+MAKEFILE	Make sensitive to LNKCMD environment variable.
+
+MEM_MAIN.ASM	In CHECK_PHYS, try the extended memory functions
+		  0DA88h and 0E801h.
+
+

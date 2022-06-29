@@ -1,0 +1,16 @@
+Stuck-At Faults     [  0]
+Transition Faults   [  0]
+Linked Inversion    [  0]
+Unlinked Inversion  [  0]
+Linked Idempotent   [  0]
+Unlinked Idempotent [  0]
+	  START
+
+SAF [  0]
+TF  [  0]
+LIN [  0]
+UIN [  0]
+LID [  0]
+UID [  0]    START
+(Status Line)
+

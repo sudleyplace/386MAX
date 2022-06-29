@@ -1,0 +1,193 @@
+;' $Header:   P:/PVCS/MAX/QMT/MEM_UIN.MAV   1.0   05 Sep 1995 16:56:14   HENRY  $
+;
+; (C) Copyright 1988-93 Qualitas, Inc.	All rights reserved.
+;
+; MEM_UIN.MAC
+;
+; Macro for Unlinked Inversion Coupling Fault testing
+;
+	 include MEM_COM.MAC
+
+UINMAC	 macro	 NAM,SHF,STR,REG,BWD
+
+COMMENT|
+
+NAM	 =	 Test name
+
+SHF	 =	 Shift amount to convert from Bytes to Units
+	 =	 0 for bytes
+	 =	 1 for words
+	 =	 2 for dwords
+
+STR	 =	 Structure suffix
+	 =	 'LO'  for bytes
+	 =	 'ELO' for words
+	 =	 'EDD' for dwords
+
+REG	 =	 Register name
+	 =	 AL  for bytes
+	 =	 AX  for words
+	 =	 EAX for dwords
+
+BWD	 =	 Byte/Word/Dword letter
+	 =	 'B' for bytes
+	 =	 'W' for words
+	 =	 'D' for dwords
+
+|
+
+	 pushad 		; Save all EGP registers
+
+; Set initial value for Read/Write 1s up
+
+	 mov	 REG1UP.&STR,1 shl ((8*(1 shl SHF))-1) ; Pattern is 100...000
+
+; Set initial value for Read/Write 0s up
+
+	 mov	 REG0UP.&STR,not (1 shl ((8*(1 shl SHF))-1)) ; Pattern is 011...111
+
+; Set initial value for Read/Write 1s down
+
+	 mov	 REG1DN.&STR,1	; Pattern is 000...001
+
+; Set initial value for Read/Write 0s down
+
+	 mov	 REG0DN.&STR,not 1 ; Pattern is 111...110
+
+; Intialize count value for Bytes/Words/Dwords
+
+	 mov	 PATCNT,8*(1 shl SHF) ; Initialize it
+	 mov	 PATOFF,offset PGROUP:FMT_PATTERN&BWD ; Save the pattern offset
+
+CNTOPERS =	 0		; Initialize macro operation count
+
+	 mov	 edx,ecx	; Save N to restore from later
+NAM&BWD&_NEXT:
+
+; ************************** INITIALIZE ****************************************
+
+	 call	 FMT_PATTERN&BWD ; Display the current pattern
+
+; Write 0s up
+
+	 W0_MAC  NAM,SHF,STR,REG,BWD
+
+; ************************** SEQUENCE #1 ***************************************
+
+; Read 0s and Write 1s up
+
+	 R0W1_MAC NAM,SHF,STR,REG,BWD
+
+; ************************** SEQUENCE #2 ***************************************
+
+; Read 1s and Write 0s down
+
+	 R1W0DN_MAC NAM,SHF,STR,REG,BWD,REG1UP
+
+; ************************** SEQUENCE #3 ***************************************
+
+; Read 0s down
+
+	 R0DN_MAC NAM,SHF,STR,REG,BWD
+
+@TOTOPERS equ	 CNTOPERS + 0	; Save in equate
+
+; ************************** PATTERN SHIFT *************************************
+
+	 stc			; Shift in a leading 1
+	 rcr	 REG1UP.&STR,1	; Shift to next value
+
+	 stc			; Shift in a leading 1
+	 rcl	 REG0UP.&STR,1	; Shift to next value
+
+	 stc			; Shift in a leading 1
+	 rcl	 REG1DN.&STR,1	; Shift to next value
+
+	 stc			; Shift in a leading 1
+	 rcr	 REG0DN.&STR,1	; Shift to next value
+
+	 dec	 PATCNT 	; One fewer pattern
+	 jnz	 NAM&BWD&_NEXT	; Jump if more bits to test
+NAM&BWD&_HALT:
+	 clc			; Indicate all went well
+
+	 jmp	 short NAM&BWD&_EXIT ; Join common exit code
+
+
+; External NMI or halt
+
+NAM&BWD&_NMIERREXT:
+	 test	 CNT_FLAG,@CNT_HALT ; Did the user request a halt?
+	 jnz	 short NAM&BWD&_HALT ; Jump if so
+
+	 mov	 edi,NMIADDR	; Get the failing address
+
+	 jmp	 short NAM&BWD&_NMIERRCOM ; Join common error code
+
+; NMI reading/writing at ES:EDI+BPU
+
+NAM&BWD&_NMIERRDN:
+	 add	 edi,BPU	; Return to failing address
+
+	 jmp	 short NAM&BWD&_NMIERRCOM ; Join common error code
+
+; NMI reading/writing at ES:EDI-BPU
+
+NAM&BWD&_NMIERRUP:
+	 sub	 edi,BPU	; Return to failing address
+
+	 jmp	 short NAM&BWD&_NMIERRCOM ; Join common error code
+
+; NMI reading/writing at ES:EDI
+
+NAM&BWD&_NMIERR:
+	 jmp	 short NAM&BWD&_NMIERRCOM ; Join common error code
+
+; Mismatch reading 0s at ES:EDI+BPU
+
+NAM&BWD&_ERR0DN:
+	 add	 edi,BPU	; Return to failing address
+
+	 jmp	 short NAM&BWD&_ERR0COM ; Join common error code
+
+; Mismatch reading 0s at ES:EDI-BPU
+
+NAM&BWD&_ERR0UP:
+	 sub	 edi,BPU	; Return to failing address
+
+;;;;;;;; jmp	 short NAM&BWD&_ERR0COM ; Join common error code
+
+; Mismatch reading 0s at ES:EDI
+
+NAM&BWD&_ERR0:
+NAM&BWD&_ERR0COM:
+	 jmp	 short NAM&BWD&_ERRCOM ; Join common error code
+
+
+; Mismatch reading 1s at ES:EDI
+
+NAM&BWD&_ERR1:
+	 jmp	 short NAM&BWD&_ERRCOM ; Join common error code
+
+NAM&BWD&_NMIERRCOM:
+	 call	 DISP_NMIERR	; Display error
+
+	 stc			; Indicate something went wrong
+
+	 jmp	 short NAM&BWD&_EXIT ; Join common exit code
+
+NAM&BWD&_ERRCOM:
+	 call	 DISP_ERR&BWD	; Display error data
+
+	 stc			; Indicate something went wrong
+NAM&BWD&_EXIT:
+	 mov	 NMIOFF,0	; Clear NMI error addr
+	 mov	 PATOFF,0	; Clear pattern offset
+
+	 popad			; Restore all EGP registers
+
+	 ret			; Return to caller
+
+	 endm			; UINMAC
+
+

@@ -1,0 +1,388 @@
+;' $Header:   P:/PVCS/MAX/QMT/MEM_HTX2.AGV   1.0   26 Feb 1996 16:54:00   BUILD  $ '
+
+include ASCII.INC
+include WRAPPER.INC		; Handy Macros
+
+include MEM_OEM.INC
+
+.model SMALL
+.code
+
+	org	 100h
+START:
+
+; Setup some initial values
+
+COL_WIDTH 70
+INDENT 0			; Set indenting for next few paras
+
+RAWOUT <".386p">                ; Setup for use16 segment
+RAWOUT <"DGROUP  group   DATA">
+RAWOUT <"DATA    segment use16 dword public 'data' ; Start DATA segment">
+RAWOUT <"        assume  ds:DGROUP">
+
+ONESYMNAME HELP_NAVTTL
+CENTER <"STEUERUNG IN ", PNAME>
+
+ONESYMNAME HELP_OVRTTL
+CENTER <"öBERBLICK ZU ", PNAME>
+
+ONESYMNAME HELP_TSTTTL
+CENTER <"INFO öBER DIE TESTS">
+
+ONESYMNAME HELP_ERRTTL
+CENTER <"SPEICHER UND PARITéTSFEHLER">
+
+ONESYMNAME HELP_CMDTTL
+CENTER <"BEFEHLSZEILEN-SCHALTER">
+
+ONESYMNAME HELP_MEMTTL
+CENTER <>
+
+ONESYMNAME HELP_NMITTL
+CENTER <>
+
+; Give some symbol names
+
+COL_WIDTH 70
+
+SYMNAME HELP_NMI,@HNMI_NCOL,@HNMI_NROW ; Name this section
+
+CENTER <"EIN PARITéTSFEHLER IST AUFGETRETEN">
+
+RAWOUT <"        public  HELP_NMI_ADDR">
+RAWOUT <"        db      '                          BEI ADRESSE '">
+RAWOUT <"HELP_NMI_ADDR db '______                           '">
+
+ db  CR
+ db  PNAME,' hat einen ParitÑtsfehler im RAM-Speicher dieses Systems erkannt.  '
+ db  'Wir empfehlen Ihnen, das Testergebnis mit Ihrem FachhÑndler zu '
+ db  'besprechen. Bitte beachten Sie, da· die gemeldete Speicheradresse die '
+ db  'physikalische Adresse des fehlerhaften Chips ist (so wie diese von der '
+ db  'CPU erkannt wird). Die Zuordnung physikalischer Adressen zu den '
+ db  'Speicher-Chips ist je nach System unterschiedlich. ',PNAME,' kann daher auf '
+ db  'keinen bestimmten Speicher-Chip im System hinweisen.',CR
+ db  CR
+ db  'FÅr Ma·nahmen zur Fehlerbehebung fragen Sie bitte Ihren FachhÑndler.',CR
+
+COL_WIDTH 70
+
+SYMNAME HELP_NAV,@HNAV_NCOL,@HNAV_NROW ; Name this section
+
+CENTER 'Bildschirm-öberblick'
+ db  CR
+ db  'Es gibt zwei ',PNAME,'-Bildschirme: öbersicht und erweiterte Anzeige. Nach '
+ db  'dem Start zeigt ',PNAME,' das öbersichtsbild. Hier gibt es drei Fenster: '
+ db  'Das Fenster in der linken oberen Ecke zeigt den Programmnamen und '
+ db  'Copyright-Informationen. Das Fenster rechts oben am Bildschirm enthÑlt '
+ db  'zwei SchaltflÑchen "Quick" und "Voll" fÅr den entsprechenden Testmodus. '
+ db  'WÑhlen Sie den gewÅnschten Modus mit der rechten bzw. linken Pfeiltaste '
+ db  'und beginnen Sie den Test mit der Eingabetaste. Das dritte Fenster, in '
+ db  'der Mitte des unteren Bildschirmbereichs, zeigt den Testfortschritt.',CR
+ db  CR
+ db  'Die erweiterte ',PNAME,'-Anzeige ist fÅr Anwender von Interesse, die mehr '
+ db  'Details der Speichertests kennenlernen mîchten. Mit Alt-TAB schalten '
+ db  'Sie zwischen öbersicht und erweiterter Anzeige um.',CR
+ db  CR
+ db  'Die erweiterte Anzeige bietet vier Informationsfenster. Das Fenster in '
+ db  'der linken oberen Ecke entspricht der Information im öbersichtsbild.',CR
+ db  CR
+ db  'Das Fenster zur Testauswahl im rechten oberen Bildschirmbereich zeigt '
+ db  'die Namen von sechs Speicher-Testverfahren. FÅr jeden Test kînnen Sie '
+ db  'angeben, wie oft ',PNAME,' den Test ausfÅhren soll. Mit "D" wÑhlen Sie einen '
+ db  'Dauertest, den ',PNAME,' dann kontinuierlich ausfÅhrt.',CR
+ db  CR
+ db  'Das Fenster "Testbereich" im linken unteren Bildschirmbereich zeigt '
+ db  'die von ',PNAME,' erkannten Speicherbereiche. Die in grauer Farbe gezeigten '
+ db  'Speicherbereiche werden von anderer Software belegt (z.B. Disk Cache) '
+ db  'oder sind physikalisch nicht vorhanden; in beiden FÑllen kînnen diese '
+ db  'Speicherbereiche nicht geprÅft werden.',CR
+ db  CR
+ db  'Das "Statusfenster" sehen Sie am Bildschirm rechts unten. WÑhrend der '
+ db  'Tests liest und schreibt ',PNAME,' (im Fenster mit "L" und "S" abgekÅrzt) '
+ db  'verschiedene Datenmuster in den Speicher. Diese AktivitÑten werden im '
+ db  'Statusfenster gemeldet.',CR
+ db  CR
+ db  CR
+ db  'Tastatur',CR
+ db  CR
+ db  'Die folgende Tastensteuerung ist in beiden ',PNAME,'-Bildschirmen wirksam:',CR
+ db  CR
+
+INDENT 14			; Set indenting for next section
+
+ db  '    F1        zeigt Hilfe',CR
+ db  '    F5        schaltet um zwischen Farb- und Schwarzwei·anzeige',CR
+ db  '    Alt-TAB   schaltet um zwischen erweiterter Anzeige und öbersicht',CR
+ db  '    F9        wie Alt-TAB, fÅr einige Tastaturen (z.B. mit 83 Tasten)',CR
+ db  '    ESC       hÑlt den Testablauf an oder beendet ',PNAME,CR
+ db  CR
+
+INDENT 0			; Set indenting for next line
+
+ db  'Die folgende Tastensteuerung ist in der öbersichts-Anzeige wirksam:',CR
+ db  CR
+
+INDENT 14			; Set indenting for next section
+
+ db  '    Cursor    wÑhlt Testmodus "Quick" oder "Voll" ',CR
+ db  CR
+ db  '    EINGABET. beginnt den Test',CR
+ db  CR
+
+INDENT 0			; Set indenting for next line
+
+ db  'Die folgende Tastensteuerung ist in der erweiterten Anzeige wirksam: ',CR
+ db  CR
+
+INDENT 14			; Set indenting for next section
+
+ db  '    Cursor    wÑhlt einen Test zur Angabe der Durchlaufzahl ',CR
+ db  '    STRG-EING fÅhrt den gewÑhlten Test einmal aus ',CR
+ db  '    H         zeigt Werte in hexadezimalem Format ',CR
+ db  '    D         zeigt Werte in dezimalem Format ',CR
+ db  '    TAB       bewegt den Cursor zwischen den Fenstern Testauswahl und '
+ db  'Testbereich, wenn mehr Informationen als darstellbar '
+ db  'vorliegen. Im Fenster Testbereich rollen Sie die Bild- '
+ db  'schirmanzeige mit den Cursortasten auf- und abwÑrts. ',CR
+
+; End of first help screen
+
+SYMNAME HELP_OVR,@HOVR_NCOL,@HOVR_NROW ; Name this section
+
+INDENT 0
+
+ db  'Was ist ',PNAME,'?',CR
+ db  CR
+ db  'Der Qualitas Memory Tester (',PNAME,') arbeitet mit modernsten Verfahren zum '
+ db  'AufspÅren von Speicherproblemenm in Ihrem PC. ',PNAME,' erkennt Fehler, die '
+ db  'der normale System-Selbsttest beim Einschalten des Computers nicht er- '
+ db  'kennen kann. Meist fallen Speicherbausteine ohne Warnung aus. Symptome '
+ db  'sind unter anderem plîtzlicher Stillstand, Datenverlust oder zerstîrte '
+ db  'Dateien. RegelmÑ·ige, grÅndliche öberprÅfung des Systemspeichers ist '
+ db  'eine vorbeugende Ma·nahme gegen derartige Probleme. ',PNAME,' erkennt und '
+ db  'warnt bei Fehlersituationen, die frÅher oder spÑter zu diesen Problemen '
+ db  'fÅhren kînnen. FrÅhzeitige Wartung hilft weitere SchÑden vermeiden.',CR
+ db  CR
+ db  'Ursachen fÅr Speicherausfall',CR
+ db  CR
+ db  'Systemspeicher ist empfindlich und kann durch verschiedene EinflÅsse '
+ db  'Stîrungen zeigen. Einige dieser Ursachen sind u.a. Luftfeuchtigkeit, '
+ db  'ErschÅtterungen, statische Aufladung, Strahlung, Temperaturwechsel '
+ db  'und DruckÑnderung. Alternde, nachlassende Bauteile kînnen ebenso '
+ db  'Speicherfehler verursachen. Nicht zuletzt sind Designfehler in Bau- '
+ db  'teilen mîgliche Auslîser. Diese fÅhrne mîglicherweise zu kritischen '
+ db  'Laufzeitfehlern (Timing) im Speicher.',CR
+ db  CR
+ db  'So wenden Sie ',PNAME,' an',CR
+ db  CR
+ db  PNAME,' lÑuft beim Systemstart Ihres Computers im Quick-Modus, wenn Sie '
+ifdef @RAMEXAM
+ db  'wÑhrend RSETUP die entsprechende Frage mit "Ja" beantwortet hatten. '
+else
+ db  'wÑhrend INSTALL die entsprechende Frage mit "Ja" beantwortet hatten. '
+endif
+ db  'Die tÑgliche PrÅfung des verfÅgbaren Systemspeichers ist sicher'
+ db  'von Vorteil. Den grî·eren Nutzen bietet ',PNAME,' bei regelmÑ·iger '
+ db  'PrÅfung eines mîglichst gro·en Anteils vom Systemspeicher mit dem voll- '
+ db  'stÑndigen Testumfang. Aus diesem Grund sollte der Systemspeicher ohne '
+ db  'residente Programme und GerÑtetreiber, die mîglicherweise Extended bzw. '
+ db  'Expanded Memory belegen, einer grÅndlichen PrÅfung unterzogen werden. '
+ db  'Die residenten Programme schlie·en Memory Manager, Disk Cache und RAM '
+ db  'Treiber ein. Sie sollten regelmÑ·ig - wîchentlich oder tÑglich - den '
+ db  'Computer von Diskette mit einer minimalen CONFIG.SYS und AUTOEXEC.BAT '
+ db  'starten, soda· fÅr den ',PNAME,' Speichertest mîglichst wenig Systemspeicher '
+ db  'belegt ist.',CR
+
+SYMNAME HELP_TST,@HTST_NCOL,@HTST_NROW ; Name this section
+
+INDENT 0
+
+ db  'Der Qualitas Memory Tester (',PNAME,') arbeitet auf Basis der Erkenntnisse, '
+ db  'wie Speicher ausfÑllt. ',PNAME,' bietet sechs Testverfahren, von denen jedes '
+ db  'auf bestimmte Speicherfehler ausgerichtet ist. Speicher ist eine Samm- '
+ db  'lung individueller Speicherzellen (Bit). Zu einem Zeitpunkt hat ein Bit '
+ db  'einen der ZustÑnde EIN (dargestellt durch eine 1) oder AUS (0). Alle '
+ db  'Speicherfehler haben gemeinsam, da· sich Bits nicht in den erwarteten '
+ db  'Zustand Ñndern oder den Ausgangswert nicht behalten (siehe auch Thema '
+ db  '"Speicherfehler" in der ',PNAME,' Online-Hilfe). ',PNAME,' verwendet besondere '
+ db  'Strategien zum Lesen und Schreiben im Speicher fÅr das AufspÅren von '
+ db  'Fehlern. Die sechs von ',PNAME,' untersuchten Fehlerkategorien sind:',CR
+ db  CR
+ db  'Blockieren',CR
+ db  'Dieser Fehler tritt auf, wenn ein oder mehrere Bit den Speicherzustand '
+ db  'zum Boot-Zeitpunkt des Systems behalten - unabhÑngig von Versuchen, '
+ db  'neue Werte in den Speicher zu schreiben. ',CR
+ db  CR
+ db  'öbergangsfehler',CR
+ db  'Der Fehler ist mit dem Blockieren vergleichbar - mit der Ausnahme, da· '
+ db  'der Wert des defekten Bit sich einmal Ñndert, bevor dieser Zustand dann '
+ db  '"einfriert" (d.h. der öbergang in einen anderen Zustand ist fehlerhaft)',CR
+ db  CR
+ db  'Kopplung',CR
+ db  'Eine Kopplung liegt vor, wenn die énderung eines oder mehreren Bit '
+ db  'weitere Fehler in anderen Bit verursacht. Es gibt die Kategorien:',CR
+ db  CR
+
+INDENT 4
+
+ db  '    Inversion',CR
+ db  '    Die énderung eines Bit verursacht die unerwartete énderung des '
+ db  'Zustandes eines anderen Bit.',CR
+ db  CR
+ db  '    Folge-Stop',CR
+ db  '    Die énderung eines Bit verursacht das "Einfrieren" eines anderen '
+ db  'Bit. Siehe auch "Blockieren" und "öbergangsfehler".',CR
+ db  CR
+ db  'ZusÑtzlich kînnen mehrere Kopplungsfehler zur gleichen Zeit auftreten. '
+ db  'Diese sind entweder "verkettete" oder "unabhÑngige" Fehler:',CR
+ db  CR
+
+INDENT 4
+
+ db  '    Verkettet: Bei mehreren Fehlern sind gemeinsame Bit beteiligt.',CR
+ db  '    Beispiel: énderung eines beliebigen von zwei Bit Ñndert irrtÅmlich '
+ db  'den Zustand eines dritten Bit.',CR
+ db  CR
+ db  '    UnabhÑngig: Mehrere Fehler mit nicht-gemeinsamen Bit-Ursprung.',CR
+
+SYMNAME HELP_ERR,@HERR_NCOL,@HERR_NROW ; Name this section
+
+INDENT 0
+
+ db  'Speicherfehler kînnen aus einer Vielzahl von Situationen und Ursachen '
+ db  'entstehen. ',PNAME,' kann evtl. Fehler melden, die nicht durch fehlerhafte '
+ db  'Speicher-Chips bedingt sind - sondern durch die Hardware, welche den '
+ db  'Zugriff auf den Speicher regelt. Eine Unterscheidung, ob nun die Hard- '
+ db  'ware, ein Speicher-Chip oder andere Ursachen vorliegen, ist umîglich.',CR
+ db  CR
+ db  'Die Behebung von Speicherfehlern erfordert den direkten Eingriff in den '
+ db  'PC und oftmals den Einsatz besonderer Diagnose-Hardware. Aus diesen '
+ db  'GrÅnden kann Ihnen der Qualitas Kundendienst fÅr die von ',PNAME,' entdeckten '
+ db  'Fehler keine UnterstÅtzung bieten. Es wird dringend empfohlen, da· Sie '
+ db  'sich mit Ihrem FachhÑndler oder Wartungsdienst in Verbindung setzen.',CR
+
+SYMNAME HELP_CMD,@HCMD_NCOL,@HCMD_NROW ; Name this section
+
+INDENT 14
+CENTER PNAME,' KOMPATIBILITéTS-OPTIONEN',CR
+ db  'K             vermeidet Tastaturprobleme wÑhrend ',PNAME,'-Ablauf',CR
+ db  'NOXRAM        macht besonderen Zusatz-RAM nicht ausdrÅcklich nutzbar ',CR
+;;;; db  'SHADOWRAM     macht Schatten-RAM (C&T CHIPSet-Kompatible) nutzbar und '
+;;;; db  'prÅft diesen Speicher',CR
+ db  'TOP384        prÅft Schatten-RAM in unbekannten, COMPAQ-kompatiblen '
+ db  'Systemen',CR
+ db  'NOPARITY      schaltet wÑhrend ',PNAME,'-AktivitÑt die ParitÑtsprÅfung aus',CR
+ db  'NODPMI        keine DPMI Services zum Umschalten in Protected Mode',CR
+ db  'L             verwendet grî·ere BIOS und CMOS Werte bei Abweichungen',CR
+ db  'S             verwendet kleinere BIOS und CMOS Werte bei Abweichungen',CR
+ db  'V             schaltet den VLSI 82C480 Cache Controller ab',CR
+ db  CR
+CENTER PNAME,' TESTVERFAHREN-OPTIONEN'
+ db  'SAF=nn        prÅft auf Blockieren, nn DurchlÑufe',CR
+ db  'TF=nn         prÅft auf öbergangsfehler, nn DurchlÑufe',CR
+ db  'UNLINV=nn     prÅft auf unabhÑngige Inversions-Kopplung, nn DurchlÑufe',CR
+ db  'UNLIDM=nn     prÅft auf unabhÑngige Folgestop-Kopplung, nn DurchlÑufe',CR
+ db  'LNKINV=nn     prÅft auf verkettete Inversions-Kopplung, nn DurchlÑufe',CR
+ db  'LNKIDM=nn     prÅft auf verkettete Folgestop-Kopplung, nn DurcklÑufe ',CR
+ db  'QUICK=nn      fÅhrt Kurztests (Quick Test) nn mal durch',CR
+ db  'FULL=nn       fÅhrt vollstÑndige Tests nn mal durch',CR
+ db  'ALL=nn        fÅhrt alle Tests nn mal durch',CR
+ db  CR
+CENTER PNAME,' ANZEIGE-OPTIONEN'
+ db  'ADVANCED      startet im erweiterten Modus',CR
+ db  'HEX           startet im hexadezimalen Modus',CR
+ db  'NOEXIT        kein Programmende nach automatischem Testablauf',CR
+ db  'BW oder /B    zeigt Bildschirme schwarzwei·',CR
+ db  'COLOR oder /C zeigt Bildschirme in Farbe (auf Farbmonitor)',CR
+ db  CR
+ifdef @RAMEXAM			; If building RAMEXAM
+CENTER PNAME,' ABLAUFPLAN-OPTIONEN'
+ db  'DAILY        ',PNAME,' lÑuft einmal tÑglich',CR
+ db  'WEEKLY[=tag] ',PNAME,' lÑuft einmal pro Woche. Ist wahlfrei ein Tag '
+ db  'angegeben, lÑuft ',PNAME,' an oder nach diesem Wochentag '
+ db  '(Sonntag=1, Montag=2, usw.)',CR
+ db  'MONTHLY[=datum] ',PNAME,' lÑuft einmal pro Monat. Ist wahlfrei ein Tag '
+ db  'angegeben, lÑuft ',PNAME,' an oder nach diesem Tag im Monat (1-31).',CR
+ db  'INTERVAL=n   ',PNAME,' lÑuft, wenn mindestens n Tage seit letztem '
+ db  PNAME,' Lauf vergangen sind.',CR
+ db  'ASK[=zeit,antwort] fordert Aktion mit einer Voreinstellung '
+ db  'an, die nach angegebenem Zeitablauf (in Sekunden) ausgefÅhrt wird:',CR
+ db  '              J (Ja)       fÅhrt ',PNAME,'aus',CR
+
+INDENT 27
+
+ db  '              N (Nein)     Åbergeht Test und wartet auf nÑchstes '
+ db  'geplante Ereignis.',CR
+ db  '              S (SpÑter)   Åbergeht Test, fragt spÑter wieder.',CR
+
+INDENT 14
+
+ db  'LOG[=dateiname][,n] hÑngt einen Log-Eintrag an ',PUNAME,'.LOG oder. '
+ db  '              anderen Dateinamen an.',CR
+ db  '              Parameter ,n (neu) ersetzt die alte Datei.',CR
+ db  CR
+endif					; Building RAMEXAM
+ db  '?             zeigt diesen Hilfe-Bildschirm',CR
+
+SYMNAME HELP_MEM,@HMEM_NCOL,@HMEM_NROW ; Name this section
+
+INDENT 0
+
+CENTER <"EIN SPEICHERFEHLER IST AUFGETRETEN">
+
+RAWOUT <"        public  HELP_MEM_ADDR,HELP_MEM_EXP,HELP_MEM_ACT">
+
+;;;;;;;;  db	 '                           AN ADRESSE ______'
+RAWOUT <" db     '                           AN ADRESSE '">
+RAWOUT <"HELP_MEM_ADDR db '______                           '">
+ db CR
+
+;;;;;;;;  db	 '                     ERWARTETER WERT __'
+RAWOUT < " db    '                     ERWARTETER WERT '">
+RAWOUT < "HELP_MEM_EXP db  '__                                '">
+
+;;;;;;;;  db	 '                  TATSéCHLICHER WERT __                                '
+RAWOUT <" db     '                  TATSéCHLICHER WERT '">
+RAWOUT <"HELP_MEM_ACT db  '__                                '">
+
+ db  CR
+ db  PNAME,' hat einen Lese-/Schreibfehler im RAM-Speicher dieses Systems '
+ db  'erkannt. Wir empfehlen Ihnen, das Testergebnis mit Ihrem FachhÑndler '
+ db  'zu besprechen. Bitte beachten Sie, da· die gemeldete Speicheradresse '
+ db  'die physikalische Adresse des fehlerhaften Chips ist (so wie diese von '
+ db  'der CPU erkannt wird). Die Zuordnung physikalischer Adressen zu den '
+ db  'Speicher-Chips ist je nach System unterschiedlich. ',PNAME,' kann daher auf '
+ db  'keinen bestimmten Speicher-Chip im System hinweisen.',CR
+ db  CR
+ db  'FÅr Ma·nahmen zur Fehlerbehebung fragen Sie bitte Ihren FachhÑndler.',CR
+
+COL_WIDTH 42
+INDENT 2
+
+SYMNAME MSG_ACHLP,@ACHLP_NCOL,@ACHLP_NROW ; Name this section
+CENTER <"ASK Befehl">
+ db CR
+ db  '  Der ASK Befehl fordert eine BestÑtigung, '
+ db  'bevor die geplanten Tests '
+ db  'ablaufen. Ohne Antwort wird nach Ablauf '
+ db  'der vorgegebenen Zeit die Standard- '
+ db  'aktion ausgefÅhrt.',CR
+ db  CR
+ db  '  Mîgliche Antworten sind:',CR
+ db  '  JA   - fÅhrt Tests durch.',CR
+ db  '  Nein - Åbergeht Tests, die Anfrage wird  '
+ db	'erst bei nÑchster geplanter Aktion neu gestellt.',CR
+ db  '  SpÑter - keine Tests, aber Anfrage bei nÑchstem ',PNAME,' Aufruf.',CR
+ db  CR
+
+EOT					; End of text
+
+RAWOUT <"DATA    ends                   ; End DATA segment">
+
+RAWOUT <"        end">
+
+	end	START
+
+
+

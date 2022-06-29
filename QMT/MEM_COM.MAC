@@ -1,0 +1,810 @@
+;' $Header:   P:/PVCS/MAX/QMT/MEM_COM.MAV   1.0   05 Sep 1995 16:56:12   HENRY  $
+;
+; (C) Copyright 1988-93 Qualitas, Inc.	All rights reserved.
+;
+; MEM_COM.MAC
+;
+; Common macros for fault testing
+;
+
+
+CALIB_STR struc
+
+CALIB_OVHD dd	 ?		; Overhead time
+CALIB_PERIT dd	 ?		; Per iteration time
+
+CALIB_STR ends
+
+
+PCALIB_STR struc
+
+PCALIB_LEN dw	 ?		; # calibration entries for this module
+PCALIB_PTR dw	 ?		; Ptr to the ptr to this module's
+				; calibration entries
+PCALIB_STR ends
+
+
+; ************************** INCOPERS ******************************************
+
+INCOPERS macro	 NAM,BWD
+
+	 REGSAVE <eax,edx>	; Save for a moment
+
+; Add in the constant overhead time (if any)
+
+	 mov	 eax,CALIB_&NAM.CALIB_OVHD ; Get this macro's overhead time
+	 add	 NUMOPERS.EDQLO,eax ; Add into cumulative count
+	 adc	 NUMOPERS.EDQHI,0 ; ...
+
+; Add in the per iteration time times the byte size
+
+	 mov	 eax,CALIB_&NAM.CALIB_PERIT ; Get this macro's per iteration time
+	 mul	 edx		; Multiply by byte count
+	 add	 NUMOPERS.EDQLO,eax ; Add into cumulative count
+	 adc	 NUMOPERS.EDQHI,edx ; ...
+
+	 REGREST <edx,eax>	; Restore
+
+	 call	 DISP_OPERS	; Format and display # operations so far
+
+ifidn <BWD>,<D>
+CALIBSEG segment use16 word public 'data' ; Start CALIBSEG segment
+;;;;;;;; assume  ds:DGROUP
+
+	 dw	 DGROUP:CALIB_&NAM ; Ptr to calibration structure
+
+CALIBSEG ends			; End CALIBSEG segment
+endif				; IFIDN <BWD>,<D>
+
+	 endm			; INCOPERS
+
+
+; ************************** W0_MAC ********************************************
+
+W0_MAC	 macro	 NAM,SHF,STR,REG,BWD,CAL
+	 local	 ZAP1
+
+ifb <CAL>
+
+; Write 0s up
+
+	 call	 FMT_W0 	; Format and display W0 message
+endif				; IFB <CAL>
+
+	 mov	 edi,TIMETAB[bx].TT_LBASE ; ES:EDI ==> A[0]
+	 mov	 ecx,edx	; ECX = N (in bytes)
+	 shr	 ecx,SHF-0	; Convert from bytes to bytes/words/dwords
+	 mov	 REG,REG0UP.&STR ; All 0s data going up
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERRUP ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 mov	 ZAPOFF,offset cs:ZAP1 ; Save zap offset
+ZAP1:
+     rep stos	 es:[edi].&STR	; Write 0s up
+	 call	 ZAPREST	; Restore zapped prefix
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+ifb <CAL>
+	 INCOPERS W0,BWD	; Count in more operations
+endif				; IFB <CAL>
+
+	 endm			; W0_MAC
+
+
+; ************************** R0DN_MAC ******************************************
+
+R0DN_MAC macro	 NAM,SHF,STR,REG,BWD,CAL
+	 local	 ZAP1
+
+ifb <CAL>
+
+; Read 0s down
+
+	 call	 FMT_R0DN	; Format and display R0DN message
+endif				; IFB <CAL>
+
+	 mov	 edi,TIMETAB[bx].TT_LBASE ; ES:EDI ==> A[0]
+	 add	 edi,edx	; ES:EDI ==> A[N]
+	 sub	 edi,BPU	; ES:EDI ==> A[N-1]
+	 mov	 ecx,edx	; ECX = N (in bytes)
+	 shr	 ecx,SHF-0	; Convert from bytes to bytes/words/dwords
+	 mov	 REG,REG0DN.&STR ; All 0s data going down
+	 mov	 esi,REG0DN	; Save as expected pattern
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERRUP ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 std			; String ops backwards
+	 mov	 ZAPOFF,offset cs:ZAP1 ; Save zap offset
+ZAP1:
+    repe scas	 es:[edi].&STR	; Read 0s up
+	 cld			; Restore direction flag
+	 call	 ZAPREST	; Restore zapped prefix
+ifb <CAL>
+	 jne	 near ptr NAM&BWD&_ERR0DN ; Jump if mismatch reading 0s down
+endif				; IFB <CAL>
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+ifb <CAL>
+	 INCOPERS R0DN,BWD	; Count in more operations
+endif				; IFB <CAL>
+
+	 endm			; R0DN_MAC
+
+
+; ************************** R0W1_MAC ******************************************
+
+R0W1_MAC macro	 NAM,SHF,STR,REG,BWD,CAL
+	 local	 R0W1_NEXT
+
+ifb <CAL>
+
+; Read 0s and Write 1s up
+
+	 call	 FMT_R0W1	; Format and display R0W1 message
+endif				; IFB <CAL>
+
+	 mov	 edi,TIMETAB[bx].TT_LBASE ; ES:EDI ==> A[0]
+	 mov	 ecx,edx	; ECX = N (in bytes)
+	 shr	 ecx,SHF-0	; Convert from bytes to bytes/words/dwords
+R0W1_NEXT:
+
+; Read 0s
+
+	 mov	 REG,REG0UP.&STR ; All 0s data going up
+	 mov	 esi,REG0UP	; Save as expected pattern
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERR ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 cmp	 REG,es:[edi].&STR ; Read 0s
+ifb <CAL>
+	 jne	 near ptr NAM&BWD&_ERR0 ; Jump if mismatch
+endif				; IFB <CAL>
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+; Write 1s up
+
+	 mov	 REG,REG1UP.&STR ; All 1s data going up
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERRUP ; Save NMI error addr
+endif				; IFB <CAL>
+
+S32	 stos	 es:[edi].&STR	; Write 1s up
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+	 loop	 dword ptr R0W1_NEXT ; Jump if more pairs to Read/Write
+ifb <CAL>
+	 INCOPERS R0W1,BWD	; Count in more operations
+endif				; IFB <CAL>
+
+	 endm			; R0W1_MAC
+
+
+; ************************** R0W1DN_MAC ****************************************
+
+R0W1DN_MAC macro NAM,SHF,STR,REG,BWD,R0,CAL
+	 local	 R0W1DN_NEXT
+
+ifb <CAL>
+
+; Read 0s and Write 1s down
+
+	 call	 FMT_R0W1DN	; Format and display R0W1DN message
+endif				; IFB <CAL>
+
+	 mov	 edi,TIMETAB.TT_LBASE[bx] ; ES:EDI ==> A[0]
+	 add	 edi,edx	; ES:EDI ==> A[N]
+	 sub	 edi,BPU	; ES:EDI ==> A[N-1]
+	 mov	 ecx,edx	; ECX = N (in bytes)
+	 shr	 ecx,SHF-0	; Convert from bytes to bytes/words/dwords
+R0W1DN_NEXT:
+
+; Read 0s
+
+	 mov	 REG,R0.&STR	; All 0s data in previous direction
+	 mov	 esi,R0 	; Save as expected pattern
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERR ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 cmp	 REG,es:[edi].&STR ; Read 0s
+ifb <CAL>
+	 jne	 near ptr NAM&BWD&_ERR0 ; Jump if mismatch
+endif				; IFB <CAL>
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+; Write 1s down
+
+	 mov	 REG,REG1DN.&STR ; All 1s data going down
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERRDN ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 std			; String ops backwards
+S32	 stos	 es:[edi].&STR	; Write 1s down
+	 cld			; Restore direction flag
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+	 loop	 dword ptr R0W1DN_NEXT ; Jump if more pairs to Read/Write
+ifb <CAL>
+	 INCOPERS R0W1DN,BWD	; Count in more operations
+endif				; IFB <CAL>
+
+	 endm			; R0W1DN_MAC
+
+
+; ************************** R0W1W0DN_MAC **************************************
+
+R0W1W0DN_MAC macro NAM,SHF,STR,REG,BWD,CAL
+	 local	 R0W1W0DN_NEXT
+
+ifb <CAL>
+
+; Read 0s, Write 1s, and Write 0s down
+
+	 call	 FMT_R0W1W0DN	; Format and display R0W1W0DN message
+endif				; IFB <CAL>
+
+	 mov	 edi,TIMETAB.TT_LBASE[bx] ; ES:EDI ==> A[0]
+	 add	 edi,edx	; ES:EDI ==> A[N]
+	 sub	 edi,BPU	; ES:EDI ==> A[N-1]
+	 mov	 ecx,edx	; ECX = N (in bytes)
+	 shr	 ecx,SHF-0	; Convert from bytes to bytes/words/dwords
+R0W1W0DN_NEXT:
+
+; Read 0s, Write 1s
+
+	 mov	 REG,REG1DN.&STR ; All 1s data going down
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERR ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 xchg	 REG,es:[edi]	; Read 0s, Write 1s
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+	 mov	 esi,REG0DN	; Save as expected pattern
+
+	 cmp	 REG,REG0DN.&STR ; Check for all 0s
+ifb <CAL>
+	 jne	 near ptr NAM&BWD&_ERR0X ; Jump if mismatch
+endif				; IFB <CAL>
+
+; Write 0s down
+
+;;;;;;;; mov	 REG,REG0DN.&STR ; All 0s data going down
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERRDN ; Save NMI error addr
+endif				; IFB <CAL>
+	 std			; String ops backwards
+S32	 stos	 es:[edi].&STR	; Write 0s down
+	 cld			; Restore direction flag
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+	 loop	 dword ptr R0W1W0DN_NEXT ; Jump if more pairs to Read/Write
+ifb <CAL>
+	 INCOPERS R0W1W0DN,BWD	; Count in more operations
+endif				; IFB <CAL>
+
+	 endm			; R0W1W0DN_MAC
+
+
+; ************************** R0W1R1_MAC ****************************************
+
+R0W1R1_MAC macro NAM,SHF,STR,REG,BWD,CAL
+	 local	 R0W1R1_NEXT
+
+ifb <CAL>
+
+; Read 0s, Write 1s, and Read 1s up
+
+	 call	 FMT_R0W1R1	; Format and display R0W1R1 message
+endif				; IFB <CAL>
+
+	 mov	 edi,TIMETAB[bx].TT_LBASE ; ES:EDI ==> A[0]
+	 mov	 ecx,edx	; ECX = N (in bytes)
+	 shr	 ecx,SHF-0	; Convert from bytes to bytes/words/dwords
+R0W1R1_NEXT:
+
+; Read 0s, Write 1s
+
+	 mov	 REG,REG1UP.&STR ; All 1s data going up
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERR ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 xchg	 REG,es:[edi]	; Read 0s, Write 1s
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+	 mov	 esi,REG0UP	; Save as expected pattern
+
+	 cmp	 REG,REG0UP.&STR ; Check for all 0s
+ifb <CAL>
+	 jne	 near ptr NAM&BWD&_ERR0X ; Jump if mismatch
+endif				; IFB <CAL>
+
+; Read 1s up
+
+	 mov	 REG,REG1UP.&STR ; All 1s data going up
+	 mov	 esi,REG1UP	; Save as expected pattern
+ifb <CAL>
+;;;;;;;; mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERR ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 scas	 es:[edi].&STR	; Read 1s up
+ifb <CAL>
+	 jne	 near ptr NAM&BWD&_ERR1UP ; Jump if mismatch
+endif				; IFB <CAL>
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+	 loop	 dword ptr R0W1R1_NEXT ; Jump if more pairs to Read/Write
+ifb <CAL>
+	 INCOPERS R0W1R1,BWD	; Count in more operations
+endif				; IFB <CAL>
+
+	 endm			; R0W1R1_MAC
+
+
+; ************************** R0W1R1W0R0W1_MAC **********************************
+
+R0W1R1W0R0W1_MAC macro NAM,SHF,STR,REG,BWD,CAL
+	 local	 R0W1R1W0R0W1_NEXT
+
+ifb <CAL>
+
+; Read 0s, Write 1s, Read 1s, Write 0s, Read 0s, and Write 1s up
+
+	 call	 FMT_R0W1R1W0R0W1 ; Format and display R0W1R1W0R0W1 message
+endif				; IFB <CAL>
+
+	 mov	 edi,TIMETAB[bx].TT_LBASE ; ES:EDI ==> A[0]
+	 mov	 ecx,edx	; ECX = N (in bytes)
+	 shr	 ecx,SHF-0	; Convert from bytes to bytes/words/dwords
+R0W1R1W0R0W1_NEXT:
+
+; Read 0s, Write 1s
+
+	 mov	 REG,REG1UP.&STR ; All 1s data going up
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERR ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 xchg	 REG,es:[edi]	; Read 0s, Write 1s
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+	 mov	 esi,REG0UP	; Save as expected pattern
+
+	 cmp	 REG,REG0UP.&STR ; Check for all 0s
+ifb <CAL>
+	 jne	 near ptr NAM&BWD&_ERR0X ; Jump if mismatch
+endif				; IFB <CAL>
+
+; Read 1s, Write 0s
+
+;;;;;;;; mov	 REG,REG0UP.&STR ; All 0s data going up
+ifb <CAL>
+;;;;;;;; mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERR ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 xchg	 REG,es:[edi]	; Read 1s, Write 0s
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+	 mov	 esi,REG1UP	; Save as expected pattern
+
+	 cmp	 REG,REG1UP.&STR ; Check for all 1s
+ifb <CAL>
+	 jne	 near ptr NAM&BWD&_ERR1X ; Jump if mismatch
+endif				; IFB <CAL>
+
+; Read 0s
+
+	 mov	 REG,REG0UP.&STR ; All 0s data going up
+ifb <CAL>
+;;;;;;;; mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERR ; Save NMI error addr
+endif				; IFB <CAL>
+	 mov	 esi,REG0UP	; Save as expected pattern
+
+	 cmp	 REG,es:[edi].&STR ; Read 0s
+ifb <CAL>
+	 jne	 near ptr NAM&BWD&_ERR0 ; Jump if mismatch
+endif				; IFB <CAL>
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+; Write 1s up
+
+	 mov	 REG,REG1UP.&STR ; All 1s data going up
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERR ; Save NMI error addr
+endif				; IFB <CAL>
+
+S32	 stos	 es:[edi].&STR	; Write 1s up
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+	 loop	 dword ptr R0W1R1W0R0W1_NEXT ; Jump if more pairs to Read/Write
+ifb <CAL>
+	 INCOPERS R0W1R1W0R0W1,BWD ; Count in more operations
+endif				; IFB <CAL>
+
+	 endm			; R0W1R1W0R0W1_MAC
+
+
+; ************************** R1W0_MAC ******************************************
+
+R1W0_MAC macro	 NAM,SHF,STR,REG,BWD,CAL
+	 local	 R1W0_NEXT
+
+ifb <CAL>
+
+; Read 1s and Write 0s up
+
+	 call	 FMT_R1W0	; Format and display R1W0 message
+endif				; IFB <CAL>
+
+	 mov	 edi,TIMETAB[bx].TT_LBASE ; ES:EDI ==> A[0]
+	 mov	 ecx,edx	; ECX = N (in bytes)
+	 shr	 ecx,SHF-0	; Convert from bytes to bytes/words/dwords
+R1W0_NEXT:
+
+; Read 1s
+
+	 mov	 REG,REG1UP.&STR ; All 1s data going up
+	 mov	 esi,REG1UP	; Save as expected pattern
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERR ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 cmp	 REG,es:[edi].&STR ; Read 1s
+ifb <CAL>
+	 jne	 near ptr NAM&BWD&_ERR1 ; Jump if mismatch
+endif				; IFB <CAL>
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+; Write 0s up
+
+	 mov	 REG,REG0UP.&STR ; All 0s data going up
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERRUP ; Save NMI error addr
+endif				; IFB <CAL>
+
+S32	 stos	 es:[edi].&STR	; Write 0s up
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+	 loop	 dword ptr R1W0_NEXT ; Jump if more pairs to Read/Write
+ifb <CAL>
+	 INCOPERS R1W0,BWD	; Count in more operations
+endif				; IFB <CAL>
+
+	 endm			; R1W0_MAC
+
+
+; ************************** R1W0DN_MAC ****************************************
+
+R1W0DN_MAC macro NAM,SHF,STR,REG,BWD,R1,CAL
+	 local	 R1W0DN_NEXT
+
+ifb <CAL>
+
+; Read 1s and Write 0s down
+
+	 call	 FMT_R1W0DN	; Format and display R1W0DN message
+endif				; IFB <CAL>
+
+	 mov	 edi,TIMETAB.TT_LBASE[bx] ; ES:EDI ==> A[0]
+	 add	 edi,edx	; ES:EDI ==> A[N]
+	 sub	 edi,BPU	; ES:EDI ==> A[N-1]
+	 mov	 ecx,edx	; ECX = N (in bytes)
+	 shr	 ecx,SHF-0	; Convert from bytes to bytes/words/dwords
+R1W0DN_NEXT:
+
+; Read 1s
+
+	 mov	 REG,R1.&STR	; All 1s data in previous direction
+	 mov	 esi,R1 	; Save as expected pattern
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERR ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 cmp	 REG,es:[edi].&STR ; Read 1s
+ifb <CAL>
+	 jne	 near ptr NAM&BWD&_ERR1 ; Jump if mismatch
+endif				; IFB <CAL>
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+; Write 0s down
+
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERRDN ; Save NMI error addr
+endif				; IFB <CAL>
+	 mov	 REG,REG0DN.&STR ; All 0s data going down
+
+	 std			; String ops backwards
+S32	 stos	 es:[edi].&STR	; Write 0s down
+	 cld			; Restore direction flag
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+	 loop	 dword ptr R1W0DN_NEXT ; Jump if more pairs to Read/Write
+ifb <CAL>
+	 INCOPERS R1W0DN,BWD	; Count in more operations
+endif				; IFB <CAL>
+
+	 endm			; R1W0DN_MAC
+
+
+; ************************** R1W0R0DN_MAC **************************************
+
+R1W0R0DN_MAC macro NAM,SHF,STR,REG,BWD,R1,CAL
+	 local	 R1W0R0DN_NEXT
+
+ifb <CAL>
+
+; Read 1s, Write 0s, and Read 0s down
+
+	 call	 FMT_R1W0R0DN	; Format and display R1W0R0DN message
+endif				; IFB <CAL>
+
+	 mov	 edi,TIMETAB[bx].TT_LBASE ; ES:EDI ==> A[0]
+	 add	 edi,edx	; ES:EDI ==> A[N]
+	 sub	 edi,BPU	; ES:EDI ==> A[N-1]
+	 mov	 ecx,edx	; ECX = N (in bytes)
+	 shr	 ecx,SHF-0	; Convert from bytes to bytes/words/dwords
+R1W0R0DN_NEXT:
+
+; Read 1s, Write 0s
+
+	 mov	 REG,REG0DN.&STR ; All 0s data
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERR ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 xchg	 REG,es:[edi]	; Read 1s, Write 0s
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+	 mov	 esi,R1 	; Save as expected pattern
+
+	 cmp	 REG,R1.&STR	; Check for all 1s in previous direction
+ifb <CAL>
+	 jne	 near ptr NAM&BWD&_ERR1X ; Jump if mismatch
+endif				; IFB <CAL>
+
+; Read 0s down
+
+	 mov	 REG,REG0DN.&STR ; All 0s data going down
+	 mov	 esi,REG0DN	; Save as expected pattern
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERRDN ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 std			; String ops backwards
+	 scas	 es:[edi].&STR	; Read 0s down
+	 cld			; Restore direction flag
+ifb <CAL>
+	 jne	 near ptr NAM&BWD&_ERR0DN ; Jump if mismatch
+endif				; IFB <CAL>
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+	 loop	 dword ptr R1W0R0DN_NEXT ; Jump if more pairs to Read/Write
+ifb <CAL>
+	 INCOPERS R1W0R0DN,BWD	; Count in more operations
+endif				; IFB <CAL>
+
+	 endm			; R1W0R0DN_MAC
+
+
+; ************************** R1W0W1_MAC ****************************************
+
+R1W0W1_MAC macro NAM,SHF,STR,REG,BWD,CAL
+	 local	 R1W0W1_NEXT
+
+ifb <CAL>
+
+; Read 1s, Write 0s, and Write 1s up
+
+	 call	 FMT_R1W0W1	; Format and display R1W0W1 message
+endif				; IFB <CAL>
+
+	 mov	 edi,TIMETAB[bx].TT_LBASE ; ES:EDI ==> A[0]
+	 mov	 ecx,edx	; ECX = N (in bytes)
+	 shr	 ecx,SHF-0	; Convert from bytes to bytes/words/dwords
+R1W0W1_NEXT:
+
+; Read 1s, Write 0s
+
+	 mov	 REG,REG0UP.&STR ; All 0s data going up
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERR ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 xchg	 REG,es:[edi]	; Read 1s, Write 0s
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+	 mov	 esi,REG1UP	; Save as expected pattern
+
+	 cmp	 REG,REG1UP.&STR ; Check for all 1s
+ifb <CAL>
+	 jne	 near ptr NAM&BWD&_ERR1X ; Jump if mismatch
+endif				; IFB <CAL>
+
+; Write 1s up
+
+;;;;;;;; mov	 REG,REG1UP.&STR ; All 1s data
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERRUP ; Save NMI error addr
+endif				; IFB <CAL>
+
+S32	 stos	 es:[edi].&STR	; Write 1s down
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+	 loop	 dword ptr R1W0W1_NEXT ; Jump if more pairs to Read/Write
+ifb <CAL>
+	 INCOPERS R1W0W1,BWD	; Count in more operations
+endif				; IFB <CAL>
+
+	 endm			; R1W0W1_MAC
+
+
+; ************************** R1W0W1W0DN_MAC ************************************
+
+R1W0W1W0DN_MAC macro NAM,SHF,STR,REG,BWD,R1,CAL
+	 local	 R1W0W1W0DN_NEXT
+
+ifb <CAL>
+
+; Read 1s, Write 0s, Write 1s, and Write 0s down
+
+	 call	 FMT_R1W0W1W0DN ; Format and display R1W0W1W0DN message
+endif				; IFB <CAL>
+
+	 mov	 edi,TIMETAB[bx].TT_LBASE ; ES:EDI ==> A[0]
+	 add	 edi,edx	; ES:EDI ==> A[N]
+	 sub	 edi,BPU	; ES:EDI ==> A[N-1]
+	 mov	 ecx,edx	; ECX = N (in bytes)
+	 shr	 ecx,SHF-0	; Convert from bytes to bytes/words/dwords
+R1W0W1W0DN_NEXT:
+
+; Read 1s, Write 0s
+
+	 mov	 REG,REG0DN.&STR ; All 0s data going down
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERR ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 xchg	 REG,es:[edi]	; Read 1s, Write 0s
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+	 mov	 esi,R1 	; Save as expected pattern
+
+	 cmp	 REG,R1.&STR	; Check for all 1s in previous direction
+ifb <CAL>
+	 jne	 near ptr NAM&BWD&_ERR1X ; Jump if mismatch
+endif				; IFB <CAL>
+
+; Write 1s
+
+	 mov	 REG,REG1DN.&STR ; All 1s data going down
+ifb <CAL>
+;;;;;;;; mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERR ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 mov	 es:[edi].&STR,REG ; Write 1s
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+; Write 0s down
+
+	 mov	 REG,REG0DN.&STR ; All 0s data going down
+ifb <CAL>
+	 mov	 NMIOFF,offset PGROUP:NAM&BWD&_NMIERRDN ; Save NMI error addr
+endif				; IFB <CAL>
+
+	 std			; String ops backwards
+S32	 stos	 es:[edi].&STR	; Write 0s down
+	 cld			; Restore direction flag
+
+	 call	 CHECK_HALT	; See if we should halt testing
+ifb <CAL>
+	 jnz	 near ptr NAM&BWD&_NMIERREXT ; Jump if so
+endif				; IFB <CAL>
+
+	 loop	 dword ptr R1W0W1W0DN_NEXT ; Jump if more pairs to Read/Write
+ifb <CAL>
+	 INCOPERS R1W0W1W0DN,BWD ; Count in more operations
+endif				; IFB <CAL>
+
+	 endm			; R1W0W1W0DN_MAC
+
+
+

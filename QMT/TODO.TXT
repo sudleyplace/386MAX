@@ -1,0 +1,32 @@
+			    RAMExam To Do
+
+* Use execute cycles as well as read/write cycles to test memory.
+
+* Test memory around the SIMM boundary to catch timing errors.
+
+* Finish alarms for various events.
+
+* Finish continuing testing after first error.
+
+* Log memory errors based upon granularity (e.g. 4KB).
+
+* Excise bad memory with XMS allocations.
+
+* Tweak memory timings to find maximal setting.
+
+* Change SCAS to MOV/CMP to save incorrect value if NMI.
+
+* Design your own test, e.g. W0U R0D, etc.
+
+* Copy code to video memory when changing memory timing settings.
+
+______________________________________________________________________
+
+				 Done
+
+* Use paging when starting in RM so that the code, but not the data
+  can be cached.
+
+* When testing continuously, count iterations.
+
+

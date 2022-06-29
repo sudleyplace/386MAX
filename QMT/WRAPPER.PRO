@@ -1,0 +1,10 @@
+extern	void main(int argc,char **argv );
+extern	void lastsymlen(void );
+extern	long dbCenter(char __huge *hpString);
+extern	long dbRawOut(char __huge *hpString);
+extern	long dbOneSymbol(char __huge *hpString);
+extern	long dbColor(char __huge *hpString);
+extern	long dbSymbol(char __huge *hpString);
+extern	unsigned char __huge *File2Mem(char *pszFileName,unsigned char __huge **phpbBuffer ,long *plFileSize);
+extern	long hugeread(int hf,void __huge *hpvBuffer,long cbBuffer);
+extern	void QuoteExpand(char *CurrLine);
