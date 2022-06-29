@@ -1,0 +1,9 @@
+Fix Bug In VxD When Running Under Win95
+
+In our PnP code, we patch the Win95 Phys-to-Lin PTEs with a special
+one for PnP support.  In order to avoid confusing Win95 later on, we
+need to preserve the low-order flag bits in the receiving PTE.
+
+VMAX.ASM	Preserve low-order flags bits in receiving PTE.
+
+

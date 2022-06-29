@@ -1,0 +1,11 @@
+Use 386MAX Version As VXD Version
+
+Change the VxD so that it tracks the version number of 386MAX.
+
+VMAX_VER.ASM	Delete the version # and related fields.  It now comes
+		  from VERSRET.ASM in the 386MAX directory.
+
+MAKEFILE	Define dependencies for VERSRET.ASM from the 386MAX
+		  directory.
+
+

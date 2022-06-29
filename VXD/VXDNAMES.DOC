@@ -1,0 +1,25 @@
+*   Change product names in 386max.vxd to Qualitas MAX
+
+ Description:  Include QMAX_OEM.INC from the object dir. Use @OEM_TEXT
+     and @OEM_FILE for @OEMTEXT strings in the program, depending on
+     whether it is a file or product name.
+
+ Who: PETERJ
+ When: 31 Oct.95
+ SW/HW Environment: All
+ Symptom: NAB   
+ Temporary Workaround: NAB
+ Test Procedure:
+ QA Testing Passed:
+ Version: 386MAX.VXD - 8.000.017.005
+
+Files affected:
+
+VMAX_MSG.ASM        Include BCF\QMAX_OEM.INC for names and use
+                    @OEM_TEXT and @OEM_FILE in strings.
+    
+VMAX_VER.ASM        Change beta version number to 5.
+
+MAKEFILE            Add dependency on bcf\QMAX_OEM.INC.
+
+

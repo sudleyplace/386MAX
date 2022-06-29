@@ -1,0 +1,41 @@
+Workaround Overzealous Win95 With RAM Buffers
+
+If the user places a RAM= statement in the 386MAX profile we avoid
+that region of high DOS (as well as set the Cache Disable bit in the
+corresponding PTE).
+
+When Win 3.1 comes up it also seems to avoid that region, but Win95
+doesn't, instead allocating the corresponding linear addresses to
+itself.
+
+With this TWT, we take positive action to ensure Windows skips over
+the RAM buffer.
+
+Also, we set the Cache Disable bit in the corresponding PTE for Win
+3.1.
+
+Unrelated changes:
+
+* Fix register popping bug in ROM_AMM.
+* Fix backward compatibility bug in PATCH_PnP and REST_PnP.
+* Delete extraneous INT 03h left over from PnP TWT.
+* Add "Set NOLOW=IGNORE" wording to error message as requested by
+  Tech Support.
+
+VMAX.ASM	During SYS_CRITICAL_INIT, Call RAM_SCAN right after
+		  calling ROM_SCAN.
+		Split several error messages into ROM and RAM cases.
+		Define RAM_SCAN routine similar to ROM_SCAN to look
+		  for PTEs in 386MAX's table which have the Cache
+		  Disable bit set.
+		Fix harmless bug when popping registers in ROM_AMM.
+		In PATCH_PnP and REST_PnP, check for version >= 8.00
+		  before checking PnP_SEG in order to be compatible
+		  with versions of 386MAX prior to 8.00.
+		Delete extraneous INT 03h left over from PnP TWT.
+
+VMAX_MSG.ASM	Split several error messages into ROM and RAM cases.
+		Add "Set NOLOW=IGNORE" wording to error message as
+		  requested by Tech Support.
+
+

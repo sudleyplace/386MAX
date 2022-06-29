@@ -1,0 +1,45 @@
+Change and Further Control the Display of RAM= Region Conflicts
+
+The previous TWT on this topic displayed a fatal error message if
+there was a RAM= statement which covered a region which had already
+been assigned by a USE= statement or by a previously executing VxD
+under Windows.
+
+This approach was too drastic, and this TWT modifies it to do the
+following:
+
+1.  Query a SYSTEM.INI file [Qualitas] section variable
+    V86Assign=[TRUE|FALSE] to determine whether or not to assign the
+    RAM= pages.  For Windows versions < 4.0, the default is FALSE
+    (thus mimicking the 386MAX 7.0 behavior); for version 4.0 or
+    later, the default is TRUE (thus attempting to counteract Win95's
+    more aggressive behavior).
+
+2.  If we assign RAM= pages and an error occurs, query a SYSTEM.INI
+    file [Qualitas] section variable V86Display=[TRUE|FALSE] to
+    determine whether or not to display the error message.
+
+3.  In any case, the error is now non-fatal.
+
+4.  Do not consider as an error a RAM= statement which covers a region
+    already covered by any other 386MAX.PRO statement (such as USE=,
+    or ROM=).
+
+VMAX_PMI.INC	Define new equates for the new keywords.
+
+VMAX.ASM	Define various equates.
+		Define bitmap RAM_ERRMAP to hold info on errors
+		  encountered during a V86 Assign.
+		Delete code which made RAM= assign failure fatal.
+		Read state of new variables.
+		Control RAM= assign by new variable.
+		In RAM_SCAN, keep track of errors encountered while
+		  assigning pages.
+		Define new routine to display RAM = assign errors.
+		In VMAX_DEVICE_INIT, display any RAM= assign errors
+		  (note we must wait until high DOS is hooked up
+		  before calling DOS functions).
+
+VMAX_MSG.ASM	Change error messages for RAM = assign errors.
+
+

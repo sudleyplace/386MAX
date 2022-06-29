@@ -1,0 +1,12 @@
+Fix Bug Clobbering Registers
+
+When we run under Win95, there's a point at which we call some VMM
+functions which clobber some registers near and dear to us.  Put on
+more body armor.
+
+VMAX_SVM.ASM	Insert more DOSMAX debug breakpoints.
+		Label more DOXMAX debug breakpoints.
+		In DOSMAX_DESTROYVM, protect us from W clobbering some
+		  of our registers.
+
+

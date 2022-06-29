@@ -1,0 +1,33 @@
+Fix Bug In VxD LoadHi Code
+
+Long ago, we modified some code supplied by Microsoft with the LoadHi
+VxD kit.  The routine (Get_Device_Info) which determines the size of a
+device driver trundles through the DD chain looking for the DD and
+upon finding it, attempts to find its start and end, the difference
+being its size.  Within the loop which compares the DD names, the
+address of the last DD is saved for later comparison in case we're
+dealing with nested DDs.
+
+The problem occurs if the DD we're sizing is the first or second DD in
+the entire chain because the code neglects to initialize a register.
+This register is used later on if the DD we're sizing is in a sequence
+of nested DDs to determine whether or not we can find the DD's size.
+
+Of course, this very scenario occurs when Novell's Client32 VxD is
+loaded and it links its network devices into the DD chain.  In the
+process, the Client32 code attempts to instance all of its network DDs
+(which is probably a bad idea), one of which (PRN) is the first one
+Client32 links into the DD chain, and as such is the second one in the
+entire chain.  When EMM386 and QEMM are presented with this scenario,
+they both fail to identify PRN, and hence fail to instance it.
+
+Because our code failed to initialize a register, we weren't so lucky,
+and we allow PRN to be instanced.  This precipitates a long chain of
+events which eventually ends with a call to LinMapIntoV86() which
+fails because the page with the PRN DD is instanced.  However, this
+leaves something else mapped onto the same page, which breaks the
+device driver (in a big way), and it's not a happy ending.
+
+VMAX_LHI.ASM	In Get_Device_Info(), zero EDX upon entry.
+
+

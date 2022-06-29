@@ -1,0 +1,14 @@
+Delete Checks For Backfilled Systems
+
+Because it causes more trouble than it solves, Tech Support would like
+the checking for backfilled systems to be removed.  Although it's true
+that Windows won't run in a backfilled system, there just aren't any
+more of them around.  Moreover, there are a number of false positives
+e.g. where a boot utility allocates memory from the top of low DOS and
+the later relocates itself and re-adjusts the INT 12h value.
+
+VMAX_RMI.ASM	Delete references to NOLOW checking.
+
+VMAX_MSG.ASM	Delete messages regarding NOLOW checking.
+
+

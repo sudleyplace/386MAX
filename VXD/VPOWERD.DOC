@@ -1,0 +1,15 @@
+Workaround Bug In Win95's Internal VPOWERD Driver
+
+Because of an alignment bug in the internal VPOWERD driver in Win95's
+VMM32.VxD, we need to hook the _Allocate_Global_V86_Data_Area service
+and promote the alignment for at least their calls to this service
+from dword to para.  The VPOWERD code requests dword alignment, but
+their use of the resulting data area actually requires para alignment.
+
+We actually promote all calls with dword alignment to para alignment.
+
+VMAX_SVM.ASM	Hook the _Allocate_Global_V86_Data_Area service.
+		In our local handler, if dword alignment requested,
+		  make it para.
+
+

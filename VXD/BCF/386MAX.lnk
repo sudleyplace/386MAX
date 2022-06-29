@@ -1,0 +1,25 @@
+		BCF\vmax.obj		+
+		BCF\vmax_api.obj	+
+		BCF\vmax_dbg.obj	+
+		BCF\vmax_fns.obj	+
+		BCF\vmax_hrp.obj	+
+		BCF\vmax_i0e.obj	+
+		BCF\vmax_lhi.obj	+
+		BCF\vmax_msg.obj	+
+		BCF\vmax_nfg.obj	+
+		BCF\vmax_rmi.obj	+
+		BCF\vmax_svm.obj	+
+		BCF\vmax_upd.obj	+
+		BCF\vmax_vdd.obj	+
+		BCF\vmaxzmax.obj	+
+		R:\MAX\text\loadhi.obj+
+			+
+		R:\MAX\text\instinit.obj	+
+		R:\MAX\text\instswap.obj	+
+		BCF\versret.obj+
+			+
+		BCF\vmax_ver.obj
+386MAX.VXD /NOI /NOD /NOPACKCODE /SEG:32
+BCF\386MAX.map /MAP
+
+386MAX.def

@@ -1,0 +1,266 @@
+#' $Header:   P:/PVCS/MAX/VXD/MAKEFILE.__V   1.8   15 Jun 1998 23:57:20   BOB  $
+#
+# Makefile for building 386MAX.VXD for MAX 8
+#
+
+!include $(MAXROOT)include\maxnames.mak
+
+H2INC	= h2inc
+HFLAGS	= /Mn /Ni
+
+# Setup based on the default OEM configuration
+OEM=BCF
+OEMTEXT=386MAX
+VXDNAME=386MAX
+VXDEXT=VXD
+MKVER=OEM_$(OEM)
+MAX7=1
+FLEXROM=$(OEM)
+DEBUG=1
+
+# Change values based on $(OEM)
+!IF "$(OEM)" == "BLU"
+OEMTEXT=BlueMAX
+VXDNAME=BLUEMAX
+VXDEXT=VXD
+DEBUG=0
+!ENDIF
+
+!IF "$(OEM)" == "BLW"
+OEMTEXT=BlueMAX
+VXDNAME=BLUEMAX
+VXDEXT=VXD
+!ENDIF
+
+!IF "$(OEM)" == "RET"
+OEMTEXT=386MAX
+VXDNAME=RETMAX
+VXDEXT=VXD
+RELNAME=386MAX
+RELEXT=VXD
+DEBUG=0
+!ELSE
+RELNAME=$(VXDNAME)
+RELEXT=$(VXDEXT)
+!ENDIF
+
+
+# Define directories.  Some of these are OEM-specific
+BIN=$(OEM)\		# destination for binaries
+O=$(OEM)\		# OEM-specific .OBJ's and temporary .INC's
+SDKINC=$(MAXROOT)include\	# DDK and SDK includes
+LH=$(MAXROOT)text\	# LOADHIGH OBJ directory
+
+OLDINC=$(INCLUDE)
+OLDMASM=$(MASM)
+ALLINC=.;$(I);$(O);$(Q);$(SDKINC);$(SWATVXD)
+# Note that DOS doesn't support an embedded equal sign in a SET statement,
+#   so if we have to execute these SET statements from the DOS command line,
+#   DOS won't accept them.  Thus the options are broken up into ones with
+#   and without an embedded equal sign.
+SETMASM5OPT=-p -w1 -Ml
+SETMASM5OPT=$(SETMASM5OPT) -DOEM_$(OEM) -DLANG_$(LANG)
+MASM5OPT=-D@OEMTEXT='$(OEMTEXT)' -D@OEMEXT='$(VXDEXT)'
+
+OPTIONS=
+
+# Define macros for debugging
+!IF "$(DEBUG)"=="1"
+OPTIONS=$(OPTIONS) -D@DEBUG
+!ENDIF				# !IF DEBUG
+
+# Define macros for feature control
+!IF "$(MAX7)"=="1"
+HARPO=1
+DOSMAX=1
+VGASWAP=1
+!ENDIF				# !IF "$(MAX7)"=="1"
+
+!IFDEF HARPO
+OPTIONS=$(OPTIONS) -D@HARPO
+!ENDIF				# !IFDEF HARPO
+
+!IFDEF DOSMAX
+ZMAX=1
+OPTIONS=$(OPTIONS) -D@DOSMAX
+!ENDIF				# !IFDEF DOSMAX
+
+!IFDEF FLASH
+ZMAX=1
+OPTIONS=$(OPTIONS) -D@FLASH
+!ENDIF				# !IFDEF FLASH
+
+!IFDEF ZMAX
+OPTIONS=$(OPTIONS) -D@ZMAX
+!ENDIF				# !IFDEF ZMAX
+
+!IFDEF VGASWAP
+OPTIONS=$(OPTIONS) -D@VGASWAP
+!ENDIF				# !IFDEF VGASWAP
+
+# Define macro LSTMAC so that we can tack it onto the end of ANY
+# MASM command line, whether it is defined or empty.
+!IFDEF LST
+LSTMAC=,$(LST)\ \
+
+!ELSE
+LSTMAC=
+!ENDIF
+
+# Rules for .asm.obj -- generic and OEM-specific
+{$(R)}.asm{$(G)}.obj:
+	set MASM=$(SETMASM5OPT) $(OPTIONS)
+	set INCLUDE=$(ALLINC)
+	masm $(MASM5OPT) $(R)$(@B), $(G)$(@B) $(LSTMAC);
+	set INCLUDE=$(OLDINC)
+	set MASM=$(OLDMASM)
+	@ff $*/,/#
+
+{$(R)}.asm{$(O)}.obj:
+	set MASM=$(SETMASM5OPT) $(OPTIONS)
+	set INCLUDE=$(ALLINC)
+	masm $(MASM5OPT) $(R)$(@B), $(O)$(@B) $(LSTMAC);
+	set INCLUDE=$(OLDINC)
+	set MASM=$(OLDMASM)
+	@ff $*/,/#
+
+{$(Q)}.asm{$(O)}.obj:
+	set MASM=$(SETMASM5OPT) $(OPTIONS)
+	set INCLUDE=$(ALLINC)
+	masm $(MASM5OPT) %s $(O)$(@B) $(LSTMAC);
+	set INCLUDE=$(OLDINC)
+	set MASM=$(OLDMASM)
+	@ff $*/,/#
+
+OBJS=				\
+	$(O)vmax.obj		\
+	$(O)vmax_api.obj	\
+	$(O)vmax_dbg.obj	\
+	$(O)vmax_fns.obj	\
+!IFDEF HARPO
+	$(O)vmax_hrp.obj	\
+!ENDIF			# !IFDEF HARPO
+	$(O)vmax_i0e.obj	\
+	$(O)vmax_lhi.obj	\
+	$(O)vmax_msg.obj	\
+	$(O)vmax_nfg.obj	\
+	$(O)vmax_rmi.obj	\
+!IFDEF DOSMAX
+	$(O)vmax_svm.obj	\
+!ENDIF			# !IFDEF DOSMAX
+	$(O)vmax_upd.obj	\
+	$(O)vmax_vdd.obj	\
+!IFDEF ZMAX
+	$(O)vmaxzmax.obj	\
+!ENDIF			# IFDEF ZMAX
+	$(LH)loadhi.obj 	\
+	$(LH)instinit.obj	\
+	$(LH)instswap.obj	\
+	$(O)versret.obj 	\
+	$(O)vmax_ver.obj
+
+ALL: DIR	$(BIN)$(VXDNAME).$(VXDEXT)	$(BINDIR)$(RELNAME).$(RELEXT) \
+	$(BIN)$(VXDNAME).ssf		$(BINDIR)win.ssf
+
+zip:
+	del win3vxd.zip
+	pkzip -r -p win3vxd.zip
+
+DEL:
+	-rm $(O)*.*
+
+DIR:
+	vdir -c $(O)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\vxd\*
+VCSDIR = P:\PVCS\MAX\vxd\*
+ALIAS ALL P:\PVCS\MAX\vxd\*.*,p:\pvcs\max\vxd\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+DEPSCAN: makefile
+	depscan -s$(O)=$$(O) *.asm $(Q)versret.asm >vxddep.inc
+
+$(O)QMAX_OEM.INC: $(Q)QMAX@$(OEM).OEM
+	xc /n/a $(Q)QMAX@$(OEM).OEM $*.inc
+
+!include <vxddep.inc>
+
+$(BIN)$(VXDNAME).map:	$(BIN)$(VXDNAME).$(VXDEXT)
+
+$(BIN)$(VXDNAME).ssf:	$(SWATVXD)RET\swatvxd.map $(SWATVXD)swatvxd.wsg $(BIN)$(VXDNAME).map vmax.wsg
+	mapssf /o -t$*.ssf -w$(SWATVXD)SWATVXD.WSG $(SWATVXD)RET\SWATVXD.MAP -wVMAX.WSG $(BIN)$(VXDNAME).MAP
+
+$(BIN)$(VXDNAME).$(VXDEXT):	\
+		$(RELNAME).def	\
+		$(OBJS)
+	link386 @<<$(O)$(VXDNAME).lnk
+		$(OBJS: =+^
+		)
+$(VXDNAME).$(VXDEXT) /NOI /NOD /NOPACKCODE /SEG:32
+$(O)$(VXDNAME).map /MAP
+
+$(RELNAME).def
+<<KEEP
+	addhdr /v:300 $(VXDNAME).$(VXDEXT)
+######	mapsym32 $(O)$(VXDNAME).map
+	xc /r	$(VXDNAME).$(VXDEXT)	$(O).
+
+$(BINDIR)$(RELNAME).$(RELEXT):	$(BIN)$(VXDNAME).$(VXDEXT)
+	xc /r $(**R).$(VXDEXT)	$*.*
+	xc /r $(**R).map	$*.*
+
+$(BINDIR)win.ssf:	$(BIN)$(VXDNAME).ssf
+	xc /r $(**R).ssf	$*.*
+
+$(O)vmax.obj:	vmax.asm		$(VMAX_ADEP)
+
+$(O)vmaxzmax.obj: vmaxzmax.asm	$(VMAXZMAX_ADEP)
+
+$(O)vmax_api.obj: vmax_api.asm	$(VMAX_API_ADEP)
+
+$(O)vmax_dbg.obj: vmax_dbg.asm	$(VMAX_DBG_ADEP)
+
+$(O)vmax_fns.obj: vmax_fns.asm	$(VMAX_FNS_ADEP)
+
+$(O)vmax_hrp.obj: vmax_hrp.asm	$(VMAX_HRP_ADEP)
+
+$(O)vmax_i0e.obj: vmax_i0e.asm	$(VMAX_I0E_ADEP)
+
+$(O)vmax_lhi.obj: vmax_lhi.asm	$(VMAX_LHI_ADEP)
+
+$(O)vmax_msg.obj: vmax_msg.asm	$(VMAX_MSG_ADEP)
+
+$(O)vmax_nfg.obj: vmax_nfg.asm	$(VMAX_NFG_ADEP)
+
+$(O)vmax_rmi.obj: vmax_rmi.asm	$(VMAX_RMI_ADEP)
+
+$(O)vmax_svm.obj: vmax_svm.asm	$(VMAX_SVM_ADEP)
+
+$(O)vmax_upd.obj: vmax_upd.asm	$(VMAX_UPD_ADEP)
+
+$(O)vmax_vdd.obj: vmax_vdd.asm	$(VMAX_VDD_ADEP)
+
+$(O)vmax_ver.obj: vmax_ver.asm	$(VMAX_VER_ADEP)
+
+$(O)versret.obj: $(Q)versret.asm $(VERSRET_ADEP)
+
+$(O)dmax.obj:	dmax.asm		$(DMAX_ADEP)
+
+$(O)dmax_rmi.obj: dmax_rmi.asm	$(DMAX_RMI_ADEP)
+
+$(O)dmax_ver.obj: dmax_ver.asm	$(DMAX_VER_ADEP)
+
+pif.inc:	pif.h
+	$(H2INC) $(HFLAGS) /Fa$*.inc $?
+	#ERROR You must now manually fixup PIF.INC
+
+qpe.inc:	qpe.h
+	$(H2INC) $(HFLAGS) /Fa$*.inc $?
+	#ERROR You must now manually fixup QPE.INC
+
+
