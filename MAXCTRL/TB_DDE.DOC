@@ -1,0 +1,13 @@
+Fix Bug Calculating Length of FMEMCPY
+
+In a previous TWT, I limited the length of an FMEMCPY, but not
+sufficiently so.  This time, the length limitation code is moved
+inside of the loop (or as PVCS likes to portray it, the IF/FOR
+statement which controls the loop is moved above the length limitation
+code).	The loop searches through the result of DdeAccessData() which
+returns a CR/LF-separated list of the members of the StartUp group.
+
+SETUPDDE.C	Move length limitation code to inside loop which
+		  checks the return from DdeAccessData().
+
+

@@ -1,0 +1,209 @@
+#include <windows.h>
+
+#include "TOOLBOX.H"
+
+#include <dlgs.h>
+#include <sfttabs.h>
+
+#include "cversion.h"
+#include <mversion.h>
+#include <common.ver>
+
+MAXICON ICON PRELOAD "toolbox.ico"
+
+600 DIALOG PRELOAD 30, 30, 215, 170
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CLASS "TBDialogClass"
+CAPTION "Qualitas Toolbox"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK", IDOK, 30, 150, 40, 14
+    PUSHBUTTON      "&Abbrechen", IDCANCEL, 86, 150, 45, 14
+    PUSHBUTTON      "&Hilfe", IDHELP, 146, 150, 40, 14
+    LTEXT           "", IDC_MULTISECTION, 8, 136, 200, 8
+END
+
+600 TABBEDDIALOG PRELOAD BEGIN
+    4, 0, 1, 4, SFTTABS_TOP
+    "\0",  "\0"
+    "S&tart\0",  1,  IDD_STARTUP
+    "UM&B/Adapter\0",  1,  IDD_HIGHDOS
+    "D&PMI/EMS\0",  1,  IDD_DPMI
+    "E&ntfernen\0",  1,  IDD_UNINSTALL
+END
+
+
+IDD_STARTUP DIALOG PRELOAD 5, 18, 210, 129
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CLASS "TBDialogClass"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        " Systemstart ", 107, 5, 74, 200, 54
+    CONTROL         "DOS &Stacks (Stapelspeicher) hochladen", IDC_STACKS, "Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 15, 87, 160, 10
+    CONTROL         "&ExtraDOS einschalten", IDC_EXTRADOS, "Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 15, 102, 160, 10
+    CONTROL         "&Qualitas Memory Tester ausf\374hren", IDC_QMT, "Button", BS_AUTOCHECKBOX |
+                    WS_TABSTOP, 15, 115, 160, 10
+    GROUPBOX        " Windows-Start ", 0, 5, 9, 200, 54
+    CONTROL         "&MAXmeter laden", IDC_MAXMETER, "Button", BS_AUTOCHECKBOX |
+                    WS_TABSTOP, 15, 23, 100, 10
+    CONTROL         "&Go Ahead laden", IDC_MAXRAM, "Button", BS_AUTOCHECKBOX |
+                    WS_TABSTOP, 15, 36, 100, 10
+    CONTROL         "&DOSMAX einschalten", IDC_DOSMAX, "Button", BS_AUTOCHECKBOX |
+                    WS_TABSTOP, 15, 51, 100, 10
+END
+
+
+IDD_HIGHDOS DIALOG PRELOAD 6, 18, 204, 150
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CLASS "TBDialogClass"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&MDA (B000h-B800h) nutzen", IDC_MDA, "Button",
+                      BS_AUTOCHECKBOX | WS_TABSTOP, 10, 6, 140, 10
+    CONTROL         "&VGASWAP einschalten", IDC_VGASWAP, "Button", BS_AUTOCHECKBOX |
+                      WS_TABSTOP, 10, 21, 140, 10
+    CONTROL         "ROM&Search anwenden", IDC_ROMSEARCH, "Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 10, 36, 140, 10
+    LTEXT           "R&AM=", IDC_RAMTEXT, 8, 58, 20, 8
+    EDITTEXT        IDC_RAMEDITSTART,30,56,40,12,ES_AUTOHSCROLL | ES_READONLY
+    SCROLLBAR       IDC_RAMSCROLLSTART,71,56,11,12,SBS_VERT
+    LTEXT           "b&is", IDC_RAMTEXTTO, 90, 58, 16, 8
+    EDITTEXT        IDC_RAMEDITEND,106,56,40,12,ES_AUTOHSCROLL | ES_READONLY
+    SCROLLBAR       IDC_RAMSCROLLEND,147,56,11,12,SBS_VERT
+    LISTBOX         IDC_RAMLIST, 90, 79, 68, 45, LBS_SORT | LBS_EXTENDEDSEL |
+                      WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Hinzuf\374gen", IDC_ADDRAM, 30, 79, 45, 14
+    PUSHBUTTON      "&Entfernen", IDC_REMOVERAM, 30, 99, 45, 14
+END
+
+
+IDD_DPMI DIALOG PRELOAD 6, 18, 214, 106
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CLASS "TBDialogClass"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        " DPMI ", 0, 5, 6, 114, 96
+    CONTROL         "&DPMI einschalten", IDC_DPMI, "Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 15, 22, 84, 10
+    CONTROL         "DP&MI Auslagerungsdatei", IDC_DPMISWAP, "Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 15, 38, 97, 10
+    LTEXT           "&Pfad zur Auslagerungsdatei:", IDC_DPMISWAPFILETEXT, 10, 57, 104, 8
+    EDITTEXT        IDC_DPMISWAPFILE, 15, 68, 100, 12, ES_AUTOHSCROLL
+    LTEXT           "Da&teigr\366\337e:", IDC_DPMISWAPSIZETEXT, 10, 88, 44, 8
+    EDITTEXT        IDC_DPMISWAPSIZE, 59, 85, 24, 12, ES_AUTOHSCROLL
+    LTEXT           "KB", IDC_DPMISWAPKBTEXT, 88, 88, 10, 8
+    GROUPBOX        " EMS ", 0, 125, 6, 82, 96
+    CONTROL         "&EMS bereitstellen", IDC_EMS, "Button", BS_AUTOCHECKBOX |
+                    WS_TABSTOP, 135, 21, 72, 10
+    LTEXT           "EMS &Seitenrahmen:", IDC_EMSFRAMETEXT, 130, 43, 70, 8
+    COMBOBOX        IDC_EMSFRAME, 135, 56, 65, 70, CBS_DROPDOWN |
+                      ES_READONLY | WS_VSCROLL | WS_TABSTOP
+END
+
+
+IDD_UNINSTALL DIALOG PRELOAD 5, 16, 201, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CLASS "TBDialogClass"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Memory Manager entfernen", IDC_STRIPMM, "Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 5, 17, 100, 10
+    CONTROL         "&Lade-Befehle entfernen", IDC_STRIPLH, "Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 5, 33, 100, 10
+    LTEXT           "MultiCon&fig-Block:", 401, 115, 3, 70, 8
+    COMBOBOX        IDC_STRIPMMSECTION, 105, 15, 95, 43, CBS_DROPDOWN |
+                      WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_STRIPLHSECTION, 105, 31, 95, 44, CBS_DROPDOWN |
+                      WS_VSCROLL | WS_TABSTOP
+    CONTROL         "SYSTEM.INI, WIN.INI und Registrier-&Eintr\344ge entfernen", IDC_REMOVEINIENTRIES, "Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 5, 49, 190, 10
+    CONTROL         "Datei &QMAX.INI entfernen", IDC_REMOVEINIFILE, "Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 5, 65, 190, 10
+    CONTROL         "Qualitas MAX Programmgr&uppe entfernen", IDC_REMOVEMAXGROUP, "Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 5, 81, 190, 10
+    CONTROL         "Qualitas MAX &Verzeichnis entfernen", IDC_REMOVEMAXDIR, "Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 5, 97, 190, 10
+    CONTROL         "Qualitas MAX &Programme entfernen", IDC_REMOVEMAX, "Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 5, 113, 190, 10
+END
+
+
+EXITMAXIMIZEDLGBOX DIALOG PRELOAD 20, 70, 200, 75
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_VISIBLE
+CAPTION "Maximize"
+FONT 8, "Helv"
+BEGIN
+    ICON            MAXICON, -1, 10, 10, 18, 20
+    DEFPUSHBUTTON   "&Maximize", IDC_CONTINUE, 45, 55, 45, 14
+    PUSHBUTTON      "&Beenden", IDC_EXIT, 110, 55, 45, 14
+    LTEXT           "Sie haben einige MAX Parameter ge\344ndert. F\374r optimale Leistung sollte Maxmize ausgef\374hrt werden. Stellen Sie sicher, da\337 keine Diskette eingelegt ist. Soll Maximize jetzt beginnen?",
+                      201, 40, 10, 150, 40
+END
+
+
+EXITRESTARTDLGBOX DIALOG PRELOAD 20, 70, 200, 75
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_VISIBLE
+CAPTION "Windows neu starten"
+FONT 8, "Helv"
+BEGIN
+    ICON            MAXICON, -1, 10, 10, 18, 20
+    DEFPUSHBUTTON   "Windows &neu starten", IDC_CONTINUE, 15, 55, 85, 14
+    PUSHBUTTON      "&Beenden", IDC_EXIT, 109, 55, 75, 14
+    LTEXT           "Sie haben einige MAX Parameter ge\344ndert. F\374r optimale Leistung sollte Windows neu gestartet werden. M\366chten Sie Windows jetzt neu starten?",
+                      201, 40, 10, 150, 40
+END
+
+
+EXITREBOOTDLGBOX DIALOG PRELOAD 20, 70, 200, 75
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_VISIBLE
+CAPTION "System neu starten"
+FONT 8, "Helv"
+BEGIN
+    ICON            MAXICON, -1, 10, 10, 18, 20
+    DEFPUSHBUTTON   "&Neu starten", IDC_CONTINUE, 45, 55, 45, 14
+    PUSHBUTTON      "&Beenden", IDC_EXIT, 110, 55, 45, 14
+    LTEXT           "Sie haben einige MAX Parameter ge\344ndert. F\374r optimale Leistung sollte der Computer neu gestartet werden. Stellen Sie sicher, da\337 keine Diskette eingelegt ist. Soll der Neustart jetzt erfolgen?",
+                      201, 40, 10, 150, 40
+END
+
+
+MODELESSDLGBOX DIALOG PRELOAD 25, 70, 180, 40
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE
+FONT 8, "Helv"
+BEGIN
+    ICON            MAXICON, -1, 6, 8, 18, 20
+    CTEXT           "", 100, 30, 8, 140, 30
+END
+
+
+ABOUTDLGBOX DIALOG PRELOAD 4, 4, 184, 119
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Info über Qualitas Toolbox"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",1,129,6,50,14
+    ICON            MAXICON,-1,144,56,18,20
+    LTEXT           "Qualitas Toolbox\nVersion " VER_PRODUCTVERSION_STR,-1, 12,7,112,17
+    LTEXT           VER_LEGALCOPYRIGHT2_STR,
+                    -1,12,36,125,18
+    LTEXT           "Dieses Exemplar ist lizenziert f\374r: ",101,12,68,112,8
+    LTEXT           "",102,12,84,168,24
+END
+
+
+CONFLICTDLGBOX DIALOG PRELOAD  0, 0, 185, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Toolbox"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDC_CONTINUE,60,75,50,14
+    LTEXT           "Sie haben Parameter bzw. Einstellungen gew\344hlt, die sich gegenseitig st\366ren.",
+                      -1,10,5,162,21
+    LTEXT           "",IDC_CONFLICT1,60,25,75,9
+    LTEXT           "",IDC_CONFLICT2,60,35,65,8
+    LTEXT           "Sie m\374ssen f\374r einen oder mehrere Parameter eine andere Auswahl treffen.",
+                      -1,10,50,160,22
+END
+

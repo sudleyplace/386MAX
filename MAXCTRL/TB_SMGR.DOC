@@ -1,0 +1,24 @@
+* Use stripm95.pif to set DOSMAX=ON in toolbox.exe in Win95.
+
+Description: Use stripm95.pif to set DOSMAX=ON in Win95. This prevents
+             a bug in the 386max.vxd from generating a page fault. The
+             bug has been fixed, but it will trigger in previous versions
+             during uninstall if DOSMAX is off and version 8.0 is still 
+             active ( install then uninstall without rebooting ).
+ Who: PETERJ
+ When: 19 Mar 1996
+ SW/HW Environment: Windows 95
+ Symptom: Stripmgr locks up during uninstall.
+ Temporary Workaround: Set DOSMAXDefault=ON in system.ini
+ Test Procedure: Install 8.01 over 8.0 then use toolbox uninstall 
+                 without rebooting.
+ QA Testing Passed:
+ Version: toolbox.exe 8.01.25.16
+
+Files affected:
+
+TOOLBOX.C           Use stripm95.pif if windows 95.
+
+CVERSION.H          Bump version to 16.
+
+

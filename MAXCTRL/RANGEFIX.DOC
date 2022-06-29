@@ -1,0 +1,26 @@
+* TOOLBOX.EXE range fix on USE= RAM= overlap
+
+ Description: If you attempt to set contiguous memory blocks in USE= and
+     RAM= statements (i.e. USE=EC00-F000 & RAM=F000-F200 ), the program
+     will fail on the F000 overlap. Also discovered while fixing the
+     initial complaint, It would also fail if the RAM= endpoint was
+     greater than the USE= startpoint but not greater than the USE= 
+     endpoint.
+
+ Who: PETERJ
+ When: 18 Dec. 95
+ SW/HW Environment: Windows
+ Symptom: Cannot set contiguous start and end points.
+ Temporary Workaround: Manual edit of 386max.pro.
+ Test Procedure: Set contiguous memory blocks and check that the conflicting
+                 memory dialog does not appear.
+ QA Testing Passed
+ Version: MAXCTRL 8.01.2.10 
+
+New files:
+
+Files affected:
+
+TOOLBOX.C           Change limit comparisons in several functions.
+
+CVERSION.H          Bump version to 10.

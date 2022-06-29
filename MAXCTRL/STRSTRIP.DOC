@@ -1,0 +1,65 @@
+* Move strings to a central location.
+
+ Description: (1) Remove all strings from Windows progam's inline source and 
+     move to include files as defines, stringtables, or variable initializers.
+     (2) Remove the help button from the Conflict Dialog in Toolbox.
+     (3) Use Depscan dependencies in makefiles.
+
+ Who: PETERJ
+ When: 15 Dec. 95
+ SW/HW Environment: Windows.
+ Symptom:NAB
+ Temporary Workaround:NAB
+ Test Procedure: Verify text in all programs.
+ QA Testing Passed:
+ Version:
+
+New files:
+
+QPIFEDIT\QPIFEDIT.INC       Depscan dependencies.
+
+MAXCTRL\MESSAGES.H          Message text file.
+
+MAXCTRL\MAXCTRL.INC         Depscan dependencies.
+
+MAXEDIT\MESSAGES.H          Message text file.
+
+MAXEDIT\MAXEDIT.INC         Depscan dependencies.
+
+MAXMETER\MESSAGES.H         Message text file.
+
+MAXMETER\MAXMETER.INC       Depscan dependencies.
+
+Files affected:
+
+QPIFEDIT\QPIFEDIT.C         Strip Text.
+
+QPIFEDIT\QPIFEDIT.RC        Add text to stringtable.
+
+QPIFEDIT\QPIFEDIT.H         Text ID.
+
+QPIFEDIT\CVERSION.H         Bump version to 2.
+
+QPIFEDIT\MAKEFILE           Add Depscan dependencies.
+
+MAXCTRL\TOOLBOX.C           Strip Text and code for help button.
+
+MAXCTRL\TOOLBOX.RC          Remove Help button from ConflictDlg. 
+
+MAXCTRL\CVERSION.H          Bump Version to 9.
+
+MAXCTRL\MAXCTRL.MAK         Use Depscan dependencies.
+
+MAXEDIT\MAXEDIT.C           Strip text.
+
+MAXEDIT\CVERSION.H          Bump version to 5.
+
+MAXEDIT\MAXEDIT.MAK         Use Depscan dependencies.
+
+MAXMETER\MAXMETER.C         Strip text.
+
+MAXMETER\CVERSION.H         Bump version to 6.
+
+MAXMETER\MAXMETER.MAK       Use Depscan dependencies.
+
+

@@ -1,0 +1,24 @@
+* Write options to Maximize.ini
+
+ Description: Set options in [Defaults] section of maximize.ini.
+    Set Custom=0 ( forces express maximize ). Other options set
+    are ROMSrch, VGASwap and ExtraDOS.
+    Addendum: Wait for stripmgr to finish before moving on and
+              move evap call to very end of the program.
+
+ Who: PETERJ
+ When: 11 Nov. 95
+ SW/HW Environment: Windows
+ Symptom: Options not set when toolbox calls maximize.
+ Temporary Workaround: select options in maximize.
+ Test Procedure: USe toolbox.exe to set options that require maximize.
+     Maximize should be invoked and should not repeat the options dialog.
+ QA Testing Passed:
+ Version: 8.0.026.8
+
+Files affected:
+
+TOOLBOX.C           Write options to Maximize.ini on OK.
+
+CVERSION.H          Bump version to 8.
+

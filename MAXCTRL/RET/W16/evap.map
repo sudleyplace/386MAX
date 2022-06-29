@@ -1,0 +1,732 @@
+
+ Start  Stop   Length Name                   Class
+ 00000H 00503H 00504H EVAP_TEXT              CODE
+ 00504H 039E2H 034DFH _TEXT                  CODE
+ 039F0H 060DFH 026F0H EMULATOR_TEXT          CODE
+ 060E0H 060E0H 00000H C_ETEXT                ENDCODE
+ 060E0H 0624FH 00170H EMULATOR_DATA          FAR_DATA
+ 06250H 06291H 00042H NULL                   BEGDATA
+ 06292H 067E7H 00556H _DATA                  DATA
+ 067E8H 067E9H 00002H XIQC                   DATA
+ 067EAH 067F5H 0000CH DBDATA                 DATA
+ 067F6H 06803H 0000EH CDATA                  DATA
+ 06804H 06804H 00000H XIFB                   DATA
+ 06804H 06804H 00000H XIF                    DATA
+ 06804H 06804H 00000H XIFE                   DATA
+ 06804H 06804H 00000H XIB                    DATA
+ 06804H 06807H 00004H XI                     DATA
+ 06808H 06808H 00000H XIE                    DATA
+ 06808H 06808H 00000H XPB                    DATA
+ 06808H 0680BH 00004H XP                     DATA
+ 0680CH 0680CH 00000H XPE                    DATA
+ 0680CH 0680CH 00000H XCB                    DATA
+ 0680CH 0680CH 00000H XC                     DATA
+ 0680CH 0680CH 00000H XCE                    DATA
+ 0680CH 0680CH 00000H XCFB                   DATA
+ 0680CH 0680CH 00000H XCFCRT                 DATA
+ 0680CH 0680CH 00000H XCF                    DATA
+ 0680CH 0680CH 00000H XCFE                   DATA
+ 0680CH 0680CH 00000H XIFCB                  DATA
+ 0680CH 0680CH 00000H XIFU                   DATA
+ 0680CH 0680CH 00000H XIFL                   DATA
+ 0680CH 0680CH 00000H XIFM                   DATA
+ 0680CH 0680CH 00000H XIFCE                  DATA
+ 0680CH 0681BH 00010H CONST                  CONST
+ 0681CH 06823H 00008H HDR                    MSG
+ 06824H 069D0H 001ADH MSG                    MSG
+ 069D1H 069D2H 00002H PAD                    MSG
+ 069D3H 069D3H 00001H EPAD                   MSG
+ 069D4H 06AC5H 000F2H _BSS                   BSS
+ 06AC6H 06AC6H 00000H XOB                    BSS
+ 06AC6H 06AC6H 00000H XO                     BSS
+ 06AC6H 06AC6H 00000H XOE                    BSS
+ 06AC6H 06AC6H 00000H XOFB                   BSS
+ 06AC6H 06AC6H 00000H XOF                    BSS
+ 06AC6H 06AC6H 00000H XOFE                   BSS
+ 06AD0H 06AD7H 00008H c_common               BSS
+ 06AE0H 072DFH 00800H STACK                  STACK
+
+ Origin   Group
+ 0625:0   DGROUP
+
+  Address         Publics by Name
+
+ 0050:2288       $i8_output
+ 0050:2854       $i8_tpwr10
+ 0000:FE32  Abs  FIARQQ
+ 0000:0E32  Abs  FICRQQ
+ 0000:5C32  Abs  FIDRQQ
+ 0000:1632  Abs  FIERQQ
+ 0000:0632  Abs  FISRQQ
+ 0000:A23D  Abs  FIWRQQ
+ 0000:4000  Abs  FJARQQ
+ 0000:C000  Abs  FJCRQQ
+ 0000:8000  Abs  FJSRQQ
+ 0050:1A84       _atof
+ 0050:20D4       _atol
+ 0000:00AA       _del_cmd
+ 0050:03B6       _difftime
+ 0625:0784       _edata
+ 0625:0890       _end
+ 0625:00AA       _errno
+ 0050:01EF       _exit
+ 0050:28FA       _fclose
+ 0050:2428       _fflush
+ 0000:047C       _FindFile
+ 0000:0340       _fname_part
+ 0050:20D8       _getenv
+ 0000:0000       _main
+ 0050:1E1C       _memmove
+ 0050:0468       _memset
+ 0000:03B4       _mkdirname
+ 0000:02C6       _path_part
+ 0000:0450       _QueryFileExists
+ 0050:04F0       _remove
+ 0050:034C       _sprintf
+ 0625:01CC       _STKHQQ
+ 0050:02A2       _strcat
+ 0050:0436       _strchr
+ 0050:02F6       _strcpy
+ 0000:0412       _strip_trailing
+ 0050:0332       _strlen
+ 0050:2620       _strncmp
+ 0050:20AA       _strncpy
+ 0050:03E0       _time
+ 0625:01C8       __aaltstkovr
+ 0625:008E       __acfinfo
+ 0000:9876  Abs  __acrtmsg
+ 0000:9876  Abs  __acrtused
+ 0000:D6D6  Abs  __aDBdoswp
+ 0625:00FC       __adbgmsg
+ 0625:0070       __aexit_rtn
+ 0050:216E       __aFahdiff
+ 0050:180C       __aFchkstk
+ 0050:1742       __aFeaddd
+ 0050:16BB       __aFeadds
+ 0050:177E       __aFedivd
+ 0050:178D       __aFedivdr
+ 0050:16F7       __aFedivs
+ 0050:1706       __aFedivsr
+ 0050:1715       __aFeldd
+ 0050:17AB       __aFeldl
+ 0050:17BA       __aFeldq
+ 0050:168E       __aFelds
+ 0050:179C       __aFeldw
+ 0050:1751       __aFemuld
+ 0050:16CA       __aFemuls
+ 0050:1733       __aFestd
+ 0050:1724       __aFestdp
+ 0050:16AC       __aFests
+ 0050:169D       __aFestsp
+ 0050:1760       __aFesubd
+ 0050:176F       __aFesubdr
+ 0050:16D9       __aFesubs
+ 0050:16E8       __aFesubsr
+ 0050:159C       __aFfadd
+ 0050:1620       __aFfaddd
+ 0050:15F0       __aFfchs
+ 0050:15CC       __aFfdiv
+ 0050:1650       __aFfdivd
+ 0050:165C       __aFfdivdr
+ 0050:15D8       __aFfdivr
+ 0050:15E4       __aFfdup
+ 0050:15FC       __aFfldd
+ 0050:1674       __aFfldl
+ 0050:1680       __aFfldq
+ 0050:1668       __aFfldw
+ 0050:15A8       __aFfmul
+ 0050:162C       __aFfmuld
+ 0050:1614       __aFfstd
+ 0050:1608       __aFfstdp
+ 0050:15B4       __aFfsub
+ 0050:1638       __aFfsubd
+ 0050:1644       __aFfsubdr
+ 0050:15C0       __aFfsubr
+ 0050:1F02       __aFlmul
+ 0050:219A       __aFlrem
+ 0050:1740       __aFsaddd
+ 0050:16B9       __aFsadds
+ 0050:177C       __aFsdivd
+ 0050:178B       __aFsdivdr
+ 0050:16F5       __aFsdivs
+ 0050:1704       __aFsdivsr
+ 0050:1713       __aFsldd
+ 0050:17A9       __aFsldl
+ 0050:17B8       __aFsldq
+ 0050:168C       __aFslds
+ 0050:179A       __aFsldw
+ 0050:174F       __aFsmuld
+ 0050:16C8       __aFsmuls
+ 0050:1731       __aFsstd
+ 0050:1722       __aFsstdp
+ 0050:16AA       __aFssts
+ 0050:169B       __aFsstsp
+ 0050:175E       __aFssubd
+ 0050:176D       __aFssubdr
+ 0050:16D7       __aFssubs
+ 0050:16E6       __aFssubsr
+ 0050:1F02       __aFulmul
+ 0000:1000  Abs  __AHINCR
+ 0000:000C  Abs  __AHSHIFT
+ 0625:009C       __aintdiv
+ 0625:052C       __amblksiz
+ 0050:00F8       __amsg_exit
+ 0625:0042       __anullsize
+ 0625:0088       __aseghi
+ 0625:008A       __aseglo
+ 0625:0072       __asizds
+ 0625:019A       __asizeC
+ 0625:019B       __asizeD
+ 0050:0014       __astart
+ 0625:006E       __atopsp
+ 0050:265C       __catox
+ 0050:01FE       __cexit
+ 0050:150A       __cfltcvt
+ 0625:017A       __cfltcvt_tab
+ 0625:0528       __cflush
+ 0050:10FA       __cftoe
+ 0050:12B2       __cftof
+ 0050:1436       __cftog
+ 0050:04B7       __chdir
+ 0625:00DF       __child
+ 0050:180C       __chkstk
+ 0050:0126       __cinit
+ 0050:00E9       __cintDIV
+ 0050:2D82       __close
+ 0050:3402       __cltoasub
+ 0050:2A88       __commit
+ 0625:00B7       __cpumode
+ 0050:1000       __cropzeros
+ 0050:0276       __ctermsub
+ 0625:03B2       __ctype
+ 0625:03B2       __ctype_
+ 0050:340F       __cxtoa
+ 0050:0208       __c_exit
+ 0050:0124       __dataseg
+ 0625:04F0       __daylight
+ 0625:04CE       __days
+ 0050:1BB9       __DOSCREATECSALIAS
+ 0050:1B84       __DOSDEVCONFIG
+ 0625:00B8       __doserrno
+ 0050:1BCF       __DOSFREESEG
+ 0050:1B9B       __DOSGETMACHINEMODE
+ 0050:085C       __dosret0
+ 0050:0871       __dosretax
+ 0050:0864       __dosreturn
+ 0050:1BB0       __DOSSETVEC
+ 0050:0E9A       __dostotime_t
+ 0050:1BD8       __DOSWRITE
+ 0050:2E28       __dos_commit
+ 0050:050B       __dos_findfirst
+ 0050:0500       __dos_findnext
+ 0050:053E       __dos_setfileattr
+ 0050:1742       __eaddd
+ 0050:16BB       __eadds
+ 0625:0784       __edata
+ 0050:177E       __edivd
+ 0050:178D       __edivdr
+ 0050:16F7       __edivs
+ 0050:1706       __edivsr
+ 0050:1715       __eldd
+ 0050:17AB       __eldl
+ 0050:17BA       __eldq
+ 0050:168E       __elds
+ 0050:179C       __eldw
+ 039F:0000       __EmDataSeg
+ 0050:1751       __emuld
+ 0050:16CA       __emuls
+ 0625:0890       __end
+ 0050:1F80       __endstdio
+ 0625:00D6       __environ
+ 0050:1733       __estd
+ 0050:1724       __estdp
+ 0050:16AC       __ests
+ 0050:169D       __estsp
+ 0050:1760       __esubd
+ 0050:176F       __esubdr
+ 0050:16D9       __esubs
+ 0050:16E8       __esubsr
+ 0050:01F6       __exit
+ 0625:00E7       __exitflag
+ 0625:00A0       __fac
+ 0050:159C       __fadd
+ 0050:1620       __faddd
+ 0050:08B2       __farstub
+ 0050:10A8       __fassign
+ 0050:15F0       __fchs
+ 0050:26B2       __fcloseall
+ 0050:15CC       __fdiv
+ 0050:1650       __fdivd
+ 0050:165C       __fdivdr
+ 0050:15D8       __fdivr
+ 0625:008C       __fDosExt
+ 0050:15E4       __fdup
+ 0050:2574       __ffree
+ 0050:0566       __FF_MSGBANNER
+ 0625:058A       __fheap
+ 0050:208A       __findlast
+ 0050:15FC       __fldd
+ 0050:1674       __fldl
+ 0050:1680       __fldq
+ 0050:1668       __fldw
+ 0050:08B4       __flsbuf
+ 0050:23CE       __fltin
+ 0050:1F34       __fltout
+ 0000:9876  Abs  __fltused
+ 0050:2480       __flush
+ 0050:2500       __flushall
+ 0050:2587       __fmalloc
+ 0050:15A8       __fmul
+ 0050:162C       __fmuld
+ 0050:0F92       __forcdecpt
+ 039F:0873       __fpemulator
+ 039F:0010       __fpemulatorbegin
+ 039F:2668       __fpemulatorend
+ 039F:02DE       __FPEXCEPTION87
+ 0625:05A8       __fpinit
+ 039F:267A       __FPINSTALL87
+ 039F:003A       __fpmath
+ 0050:17C8       __fpsignal
+ 060E:0169       __fptaskdata
+ 039F:26A9       __FPTERMINATE87
+ 0050:1ADC       __fptostr
+ 0050:0588       __fptrap
+ 0050:2D4A       __freebuf
+ 0050:1614       __fstd
+ 0050:1608       __fstdp
+ 0050:15B4       __fsub
+ 0050:1638       __fsubd
+ 0050:1644       __fsubdr
+ 0050:15C0       __fsubr
+ 0050:1856       __getbuf
+ 0050:1FAA       __growseg
+ 0050:2039       __incseg
+ 0050:2DA2       __initseg
+ 0625:00E2       __intno
+ 0625:01CE       __iob
+ 0625:02BE       __iob2
+ 0050:1D4E       __isindst
+ 0050:2E0C       __itoa
+ 0625:03AE       __lastiob
+ 0050:31C3       __LD12MULT
+ 0050:30EE       __LD12MULTTENPOWER
+ 0050:2DD6       __linkseg
+ 0625:04B4       __lpdays
+ 0050:18A2       __lseek
+ 0625:052A       __lseekchk
+ 0050:3348       __MANTOLD12
+ 0050:087E       __maperror
+ 0625:0880       __mbac
+ 0050:04B0       __mkdir
+ 0050:1830       __myalloc
+ 0050:2A44       __newseg
+ 0625:00BA       __nfile
+ 0625:0074       __nheap_desc
+ 0050:07FA       __NMSG_TEXT
+ 0050:0825       __NMSG_WRITE
+ 0050:058E       __nullcheck
+ 0625:00B8       __oserr
+ 0625:00BC       __osfile
+ 0625:00B3       __osmajor
+ 0625:00B2       __osminor
+ 0625:00B6       __osmode
+ 0625:00B2       __osver
+ 0625:00B4       __osversion
+ 0050:09B0       __output
+ 0625:00E1       __ovlflag
+ 0625:00E3       __ovlvec
+ 0625:00DA       __pgmptr
+ 0625:0578       __pnhFarHeap
+ 0050:107A       __positive
+ 0625:00B0       __psp
+ 0625:00AE       __pspadr
+ 0050:04C6       __rmdir
+ 0050:1740       __saddd
+ 0050:16B9       __sadds
+ 0050:177C       __sdivd
+ 0050:178B       __sdivdr
+ 0050:16F5       __sdivs
+ 0050:1704       __sdivsr
+ 0050:29C8       __searchseg
+ 0050:05B2       __setargv
+ 0050:075A       __setenvp
+ 0625:0198       __sigintoff
+ 0625:0196       __sigintseg
+ 0050:1713       __sldd
+ 0050:17A9       __sldl
+ 0050:17B8       __sldq
+ 0050:168C       __slds
+ 0050:179A       __sldw
+ 0050:174F       __smuld
+ 0050:16C8       __smuls
+ 0050:1731       __sstd
+ 0050:1722       __sstdp
+ 0050:16AA       __ssts
+ 0050:169B       __sstsp
+ 0050:175E       __ssubd
+ 0050:176D       __ssubdr
+ 0050:16D7       __ssubs
+ 0050:16E6       __ssubsr
+ 0050:1F96       __stackavail
+ 0050:3466       __strcmpi
+ 0050:34AC       __strdup
+ 0050:3466       __stricmp
+ 0050:2892       __STRINGTOD
+ 0050:2AE2       __STRINGTOLD
+ 0625:04EC       __timezone
+ 0625:04FA       __tzname
+ 0050:1C04       __tzset
+ 0625:00AC       __umaskval
+ 0050:04F0       __unlink
+ 0050:1924       __write
+ 0050:1EE6       __wrt2err
+ 0625:05A0       ___aDBexit
+ 0625:059E       ___aDBrterr
+ 0625:059C       ___aDBswpchk
+ 0625:059A       ___aDBswpflg
+ 0625:00D0       ___argc
+ 0625:00D2       ___argv
+ 0625:0598       ___qczrinit
+ 0050:1BF2       ___tzset
+
+  Address         Publics by Value
+
+ 0000:0000       _main
+ 0000:000C  Abs  __AHSHIFT
+ 0000:00AA       _del_cmd
+ 0000:02C6       _path_part
+ 0000:0340       _fname_part
+ 0000:03B4       _mkdirname
+ 0000:0412       _strip_trailing
+ 0000:0450       _QueryFileExists
+ 0000:047C       _FindFile
+ 0050:0014       __astart
+ 0050:00E9       __cintDIV
+ 0050:00F8       __amsg_exit
+ 0050:0124       __dataseg
+ 0050:0126       __cinit
+ 0000:0632  Abs  FISRQQ
+ 0050:01EF       _exit
+ 0050:01F6       __exit
+ 0050:01FE       __cexit
+ 0050:0208       __c_exit
+ 0050:0276       __ctermsub
+ 0050:02A2       _strcat
+ 0050:02F6       _strcpy
+ 0050:0332       _strlen
+ 0050:034C       _sprintf
+ 0050:03B6       _difftime
+ 0050:03E0       _time
+ 0050:0436       _strchr
+ 0050:0468       _memset
+ 0050:04B0       __mkdir
+ 0050:04B7       __chdir
+ 0050:04C6       __rmdir
+ 0050:04F0       _remove
+ 0050:04F0       __unlink
+ 0050:0500       __dos_findnext
+ 0050:050B       __dos_findfirst
+ 0050:053E       __dos_setfileattr
+ 0050:0566       __FF_MSGBANNER
+ 0050:0588       __fptrap
+ 0050:058E       __nullcheck
+ 0050:05B2       __setargv
+ 0050:075A       __setenvp
+ 0050:07FA       __NMSG_TEXT
+ 0050:0825       __NMSG_WRITE
+ 0050:085C       __dosret0
+ 0050:0864       __dosreturn
+ 0050:0871       __dosretax
+ 0050:087E       __maperror
+ 0050:08B2       __farstub
+ 0050:08B4       __flsbuf
+ 0000:0E32  Abs  FICRQQ
+ 0050:09B0       __output
+ 0000:1000  Abs  __AHINCR
+ 0050:0E9A       __dostotime_t
+ 0050:0F92       __forcdecpt
+ 0050:1000       __cropzeros
+ 0050:107A       __positive
+ 0050:10A8       __fassign
+ 0050:10FA       __cftoe
+ 0000:1632  Abs  FIERQQ
+ 0050:12B2       __cftof
+ 0050:1436       __cftog
+ 0050:150A       __cfltcvt
+ 0050:159C       __aFfadd
+ 0050:159C       __fadd
+ 0050:15A8       __aFfmul
+ 0050:15A8       __fmul
+ 0050:15B4       __aFfsub
+ 0050:15B4       __fsub
+ 0050:15C0       __fsubr
+ 0050:15C0       __aFfsubr
+ 0050:15CC       __aFfdiv
+ 0050:15CC       __fdiv
+ 0050:15D8       __aFfdivr
+ 0050:15D8       __fdivr
+ 0050:15E4       __fdup
+ 0050:15E4       __aFfdup
+ 0050:15F0       __aFfchs
+ 0050:15F0       __fchs
+ 0050:15FC       __fldd
+ 0050:15FC       __aFfldd
+ 0050:1608       __aFfstdp
+ 0050:1608       __fstdp
+ 0050:1614       __fstd
+ 0050:1614       __aFfstd
+ 0050:1620       __faddd
+ 0050:1620       __aFfaddd
+ 0050:162C       __fmuld
+ 0050:162C       __aFfmuld
+ 0050:1638       __aFfsubd
+ 0050:1638       __fsubd
+ 0050:1644       __fsubdr
+ 0050:1644       __aFfsubdr
+ 0050:1650       __fdivd
+ 0050:1650       __aFfdivd
+ 0050:165C       __aFfdivdr
+ 0050:165C       __fdivdr
+ 0050:1668       __fldw
+ 0050:1668       __aFfldw
+ 0050:1674       __aFfldl
+ 0050:1674       __fldl
+ 0050:1680       __aFfldq
+ 0050:1680       __fldq
+ 0050:168C       __slds
+ 0050:168C       __aFslds
+ 0050:168E       __aFelds
+ 0050:168E       __elds
+ 0050:169B       __aFsstsp
+ 0050:169B       __sstsp
+ 0050:169D       __estsp
+ 0050:169D       __aFestsp
+ 0050:16AA       __ssts
+ 0050:16AA       __aFssts
+ 0050:16AC       __ests
+ 0050:16AC       __aFests
+ 0050:16B9       __aFsadds
+ 0050:16B9       __sadds
+ 0050:16BB       __eadds
+ 0050:16BB       __aFeadds
+ 0050:16C8       __aFsmuls
+ 0050:16C8       __smuls
+ 0050:16CA       __aFemuls
+ 0050:16CA       __emuls
+ 0050:16D7       __aFssubs
+ 0050:16D7       __ssubs
+ 0050:16D9       __aFesubs
+ 0050:16D9       __esubs
+ 0050:16E6       __ssubsr
+ 0050:16E6       __aFssubsr
+ 0050:16E8       __esubsr
+ 0050:16E8       __aFesubsr
+ 0050:16F5       __sdivs
+ 0050:16F5       __aFsdivs
+ 0050:16F7       __edivs
+ 0050:16F7       __aFedivs
+ 0050:1704       __sdivsr
+ 0050:1704       __aFsdivsr
+ 0050:1706       __edivsr
+ 0050:1706       __aFedivsr
+ 0050:1713       __sldd
+ 0050:1713       __aFsldd
+ 0050:1715       __aFeldd
+ 0050:1715       __eldd
+ 0050:1722       __aFsstdp
+ 0050:1722       __sstdp
+ 0050:1724       __estdp
+ 0050:1724       __aFestdp
+ 0050:1731       __aFsstd
+ 0050:1731       __sstd
+ 0050:1733       __aFestd
+ 0050:1733       __estd
+ 0050:1740       __aFsaddd
+ 0050:1740       __saddd
+ 0050:1742       __aFeaddd
+ 0050:1742       __eaddd
+ 0050:174F       __aFsmuld
+ 0050:174F       __smuld
+ 0050:1751       __emuld
+ 0050:1751       __aFemuld
+ 0050:175E       __aFssubd
+ 0050:175E       __ssubd
+ 0050:1760       __esubd
+ 0050:1760       __aFesubd
+ 0050:176D       __aFssubdr
+ 0050:176D       __ssubdr
+ 0050:176F       __aFesubdr
+ 0050:176F       __esubdr
+ 0050:177C       __aFsdivd
+ 0050:177C       __sdivd
+ 0050:177E       __edivd
+ 0050:177E       __aFedivd
+ 0050:178B       __aFsdivdr
+ 0050:178B       __sdivdr
+ 0050:178D       __edivdr
+ 0050:178D       __aFedivdr
+ 0050:179A       __aFsldw
+ 0050:179A       __sldw
+ 0050:179C       __aFeldw
+ 0050:179C       __eldw
+ 0050:17A9       __aFsldl
+ 0050:17A9       __sldl
+ 0050:17AB       __eldl
+ 0050:17AB       __aFeldl
+ 0050:17B8       __aFsldq
+ 0050:17B8       __sldq
+ 0050:17BA       __eldq
+ 0050:17BA       __aFeldq
+ 0050:17C8       __fpsignal
+ 0050:180C       __chkstk
+ 0050:180C       __aFchkstk
+ 0050:1830       __myalloc
+ 0050:1856       __getbuf
+ 0050:18A2       __lseek
+ 0050:1924       __write
+ 0050:1A84       _atof
+ 0050:1ADC       __fptostr
+ 0050:1B84       __DOSDEVCONFIG
+ 0050:1B9B       __DOSGETMACHINEMODE
+ 0050:1BB0       __DOSSETVEC
+ 0050:1BB9       __DOSCREATECSALIAS
+ 0050:1BCF       __DOSFREESEG
+ 0050:1BD8       __DOSWRITE
+ 0050:1BF2       ___tzset
+ 0050:1C04       __tzset
+ 0050:1D4E       __isindst
+ 0050:1E1C       _memmove
+ 0050:1EE6       __wrt2err
+ 0050:1F02       __aFulmul
+ 0050:1F02       __aFlmul
+ 0050:1F34       __fltout
+ 0050:1F80       __endstdio
+ 0050:1F96       __stackavail
+ 0050:1FAA       __growseg
+ 0050:2039       __incseg
+ 0050:208A       __findlast
+ 0050:20AA       _strncpy
+ 0050:20D4       _atol
+ 0050:20D8       _getenv
+ 0050:216E       __aFahdiff
+ 0050:219A       __aFlrem
+ 0050:2288       $i8_output
+ 0050:23CE       __fltin
+ 0050:2428       _fflush
+ 0050:2480       __flush
+ 0050:2500       __flushall
+ 0050:2574       __ffree
+ 0050:2587       __fmalloc
+ 0050:2620       _strncmp
+ 0050:265C       __catox
+ 0050:26B2       __fcloseall
+ 0050:2854       $i8_tpwr10
+ 0050:2892       __STRINGTOD
+ 0050:28FA       _fclose
+ 0050:29C8       __searchseg
+ 0050:2A44       __newseg
+ 0050:2A88       __commit
+ 0050:2AE2       __STRINGTOLD
+ 0050:2D4A       __freebuf
+ 0050:2D82       __close
+ 0050:2DA2       __initseg
+ 0050:2DD6       __linkseg
+ 0050:2E0C       __itoa
+ 0050:2E28       __dos_commit
+ 0050:30EE       __LD12MULTTENPOWER
+ 0050:31C3       __LD12MULT
+ 0050:3348       __MANTOLD12
+ 0050:3402       __cltoasub
+ 0050:340F       __cxtoa
+ 0050:3466       __strcmpi
+ 0050:3466       __stricmp
+ 0050:34AC       __strdup
+ 039F:0000       __EmDataSeg
+ 039F:0010       __fpemulatorbegin
+ 039F:003A       __fpmath
+ 039F:02DE       __FPEXCEPTION87
+ 039F:0873       __fpemulator
+ 039F:2668       __fpemulatorend
+ 039F:267A       __FPINSTALL87
+ 039F:26A9       __FPTERMINATE87
+ 060E:0169       __fptaskdata
+ 0625:0042       __anullsize
+ 0625:006E       __atopsp
+ 0625:0070       __aexit_rtn
+ 0625:0072       __asizds
+ 0625:0074       __nheap_desc
+ 0625:0088       __aseghi
+ 0625:008A       __aseglo
+ 0625:008C       __fDosExt
+ 0625:008E       __acfinfo
+ 0625:009C       __aintdiv
+ 0625:00A0       __fac
+ 0625:00AA       _errno
+ 0625:00AC       __umaskval
+ 0625:00AE       __pspadr
+ 0625:00B0       __psp
+ 0625:00B2       __osminor
+ 0625:00B2       __osver
+ 0625:00B3       __osmajor
+ 0625:00B4       __osversion
+ 0625:00B6       __osmode
+ 0625:00B7       __cpumode
+ 0625:00B8       __doserrno
+ 0625:00B8       __oserr
+ 0625:00BA       __nfile
+ 0625:00BC       __osfile
+ 0625:00D0       ___argc
+ 0625:00D2       ___argv
+ 0625:00D6       __environ
+ 0625:00DA       __pgmptr
+ 0625:00DF       __child
+ 0625:00E1       __ovlflag
+ 0625:00E2       __intno
+ 0625:00E3       __ovlvec
+ 0625:00E7       __exitflag
+ 0625:00FC       __adbgmsg
+ 0625:017A       __cfltcvt_tab
+ 0625:0196       __sigintseg
+ 0625:0198       __sigintoff
+ 0625:019A       __asizeC
+ 0625:019B       __asizeD
+ 0625:01C8       __aaltstkovr
+ 0625:01CC       _STKHQQ
+ 0625:01CE       __iob
+ 0625:02BE       __iob2
+ 0625:03AE       __lastiob
+ 0625:03B2       __ctype_
+ 0625:03B2       __ctype
+ 0625:04B4       __lpdays
+ 0625:04CE       __days
+ 0625:04EC       __timezone
+ 0625:04F0       __daylight
+ 0625:04FA       __tzname
+ 0625:0528       __cflush
+ 0625:052A       __lseekchk
+ 0625:052C       __amblksiz
+ 0625:0578       __pnhFarHeap
+ 0625:058A       __fheap
+ 0625:0598       ___qczrinit
+ 0625:059A       ___aDBswpflg
+ 0625:059C       ___aDBswpchk
+ 0625:059E       ___aDBrterr
+ 0625:05A0       ___aDBexit
+ 0625:05A8       __fpinit
+ 0625:0784       __edata
+ 0625:0784       _edata
+ 0625:0880       __mbac
+ 0625:0890       _end
+ 0625:0890       __end
+ 0000:9876  Abs  __acrtmsg
+ 0000:9876  Abs  __acrtused
+ 0000:9876  Abs  __fltused
+ 0000:D6D6  Abs  __aDBdoswp
+ 0000:4000  Abs  FJARQQ
+ 0000:5C32  Abs  FIDRQQ
+ 0000:8000  Abs  FJSRQQ
+ 0000:A23D  Abs  FIWRQQ
+ 0000:C000  Abs  FJCRQQ
+ 0000:FE32  Abs  FIARQQ
+
+Program entry point at 0050:0014

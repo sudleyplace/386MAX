@@ -1,0 +1,23 @@
+* Use section name if no description in multiconfig list box in uninstall.
+
+ Description: If the multiconfig section has no description, use the name
+   in the list boxes on the uninstall tab.
+
+ Who: PETERJ
+ When: 3 Nov. 95.
+ SW/HW Environment: Windows
+ Symptom: Missing multiconfig names if no description.
+ Temporary Workaround:none
+ Test Procedure: Run toolbox on a multi-config system with no descriptions
+    for the sections. Check that section names appear in listboxes.
+ QA Testing Passed:
+ Version: toolbox.exe 8.0.21.5
+
+Files affected:
+
+TOOLBOX.C           If no description, copy name. 
+                    EnableWindow when check is selected.
+
+CVERSION.H          Bump version to 5.
+
+

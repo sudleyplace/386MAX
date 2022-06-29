@@ -1,0 +1,31 @@
+* TOOLBOX.EXE - Don't leave evap.pif in Win95
+
+ Description: (1) In fact, don't even use Evap.com in Win95. The limitation
+     that evap.com was created to get around, that is, the inability to
+     delete the file you are in within Windows, does not exist in Win95.
+     So I just copied the delete functions from evap into misc.c (some
+     were already there ) and now call them from the toolbox program if
+     we are running in Win95. (2) Set NOFLEX in 386max.pro if RAM= changed. 
+
+ Who: PETERJ
+ When: 27 Oct 95
+ SW/HW Environment: Win95
+ Symptom: Evap.pif remains running after Uninstall.
+ Temporary Workaround: manually close and delete evap.pif.
+ Test Procedure: (1) Uninstall Max 8 from Win95. No trace should remain.
+                 (2) Change RAM= via toolbox.exe and see that NOFLEX is
+                 added to the 386MAX.pro file.
+ QA Testing Passed:
+ Version: TOOLBOX.EXE 8.000.016.003
+
+Files affected:
+
+MISC.C          Add del_cmd() and _del() functions and add parameter to
+                FindFile() and fix calling parameters. 
+
+TOOLBOX.C       Call del_cmd() instead of Winexec( evap ) if in Win95.
+                Call ModifyPro() if RAM= changes.
+
+TOOLBOX.H       Add defines and prototypes.
+
+CVERSION.H      Bump version to 3.

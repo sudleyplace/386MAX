@@ -1,0 +1,130 @@
+DLGINCLUDE RCDATA DISCARDABLE
+BEGIN
+    "MAXCTRL.H\0"
+END
+
+600 DIALOG 20, 28, 215, 155
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Qualitas MAX Control"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK", IDOK, 35, 136, 40, 14
+    PUSHBUTTON      "Cancel", IDCANCEL, 90, 136, 40, 14
+    PUSHBUTTON      "Help", IDHELP, 150, 136, 40, 14
+END
+
+#if defined(_WIN32) || defined(__WIN32__)
+/* This tabbed dialog definition is used for WIN32(s) */
+
+600 TABBEDDIALOG BEGIN
+    4, 0, 1, 4, SFTTABS_TOP
+    L"\0",  L"\0"
+    L"Startup\0",  1,  IDD_STARTUP
+    L"UMB/Adapters\0",  1,  IDD_HIGHDOS
+    L"DPMI/EMS\0",  1,  IDD_DPMI
+    L"Uninstall\0",  1,  IDD_UNINSTALL
+END
+#else
+/* This tabbed dialog definition is used for Windows 3.x (16 bit) */
+
+600 TABBEDDIALOG BEGIN
+    4, 0, 1, 4, SFTTABS_TOP
+    "\0",  "\0"
+    "Startup\0",  1,  IDD_STARTUP
+    "UMB/Adapters\0",  1,  IDD_HIGHDOS
+    "DPMI/EMS\0",  1,  IDD_DPMI
+    "Uninstall\0",  1,  IDD_UNINSTALL
+END
+#endif
+
+IDD_STARTUP DIALOG 5, 18, 210, 129
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Run QMT", IDC_QMT, "Button", BS_AUTOCHECKBOX | 
+                    WS_TABSTOP, 15, 115, 47, 10
+    CONTROL         "Load MAXRAM", IDC_MAXRAM, "Button", BS_AUTOCHECKBOX | 
+                    WS_TABSTOP, 15, 102, 75, 10
+    CONTROL         "Load MAXMeter", IDC_MAXMETER, "Button", BS_AUTOCHECKBOX | 
+                    WS_TABSTOP, 15, 88, 80, 10
+    CONTROL         "Enable ExtraDOS", IDC_EXTRADOS, "Button", 
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 15, 38, 75, 10
+    GROUPBOX        "System startup", 0, 5, 3, 200, 67
+    CONTROL         "Load DOS Stacks high", IDC_STACKS, "Button", 
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 15, 22, 80, 10
+    GROUPBOX        "Windows startup", 107, 5, 75, 200, 53
+    CONTROL         "Enable DOSMAX", IDC_DOSMAX, "Button", BS_AUTOCHECKBOX | 
+                    WS_TABSTOP, 15, 54, 80, 10
+    COMBOBOX        IDC_STACKSMULTI, 100, 21, 100, 48, CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_EXTRADOSMULTI, 100, 37, 100, 39, CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "MultiConfig section:", 110, 100, 10, 85, 8
+END
+
+IDD_HIGHDOS DIALOG 6, 18, 204, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Use MDA (B000h-B800h)", IDC_MDA, "Button", 
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 10, 6, 140, 10
+    CONTROL         "Enable VGASWAP", IDC_VGASWAP, "Button", BS_AUTOCHECKBOX | 
+                    WS_TABSTOP, 10, 21, 140, 10
+    CONTROL         "Use ROMSearch", IDC_ROMSEARCH, "Button", 
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 10, 36, 140, 10
+    LISTBOX         IDC_NORAMLIST, 10, 69, 65, 61, LBS_SORT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Upper DOS Memory:", 205, 10, 56, 75, 8
+    LISTBOX         IDC_RAMLIST, 130, 69, 70, 60, LBS_SORT | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Add >>", 207, 80, 79, 45, 14
+    PUSHBUTTON      "<< Remove", 208, 80, 101, 45, 14
+END
+
+IDD_DPMI DIALOG 6, 18, 214, 106
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "DPMI", 0, 5, 6, 104, 96
+    CONTROL         "Enable DPMI support", IDC_DPMI, "Button", 
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 15, 21, 84, 10
+    CONTROL         "Enable DPMI swapfile", IDC_DPMISWAP, "Button", 
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 15, 38, 84, 10
+    LTEXT           "Swapfile location:", 0, 15, 57, 72, 8
+    EDITTEXT        IDC_DPMISWAPFILE, 20, 68, 84, 12, ES_AUTOHSCROLL
+    LTEXT           "Swapfile size:", 0, 15, 88, 44, 8
+    EDITTEXT        IDC_DPMISWAPSIZE, 65, 85, 24, 12, ES_AUTOHSCROLL
+    GROUPBOX        "EMS", 0, 115, 6, 92, 96
+    CONTROL         "Enable EMS", IDC_EMS, "Button", BS_AUTOCHECKBOX | 
+                    WS_TABSTOP, 125, 21, 72, 10
+    LTEXT           "EMS pageframe location:", 310, 125, 40, 80, 8
+    COMBOBOX        IDC_EMSFRAME, 130, 56, 75, 43, CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Kb", 307, 90, 88, 10, 8
+END
+
+IDD_UNINSTALL DIALOG 5, 16, 201, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Remove memory manager", IDC_STRIPMM, "Button", 
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 5, 16, 100, 10
+    CONTROL         "Strip loadhigh statements", IDC_STRIPLH, "Button", 
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 5, 31, 90, 10
+    LTEXT           "MultiConfig section:", 401, 115, 3, 70, 8
+    COMBOBOX        402, 105, 15, 95, 43, CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        403, 105, 30, 95, 44, CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Remove MAX program files", IDC_REMOVEMAX, "Button", 
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 5, 47, 95, 10
+    CONTROL         "Remove INI entries", IDC_REMOVEINIENTRIES, "Button", 
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 5, 63, 95, 10
+    CONTROL         "Remove INI files", IDC_REMOVEINIFILES, "Button", 
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 5, 78, 95, 10
+    CONTROL         "Remove Qualitas MAX Program Group", IDC_REMOVEMAXGROUP, 
+                    "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 5, 93, 135, 10
+    CONTROL         "Remove Qualitas MAX directory", IDC_REMOVEMAXDIR, 
+                    "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 5, 108, 125, 10
+END
+

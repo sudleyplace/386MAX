@@ -1,0 +1,25 @@
+* Use toolbox icon on task list.
+
+ Description: Register a class for the main dialogs in Toolbox to allow
+     us to specify the icon to be used on the taskbar.
+
+ Who: PETERJ
+ When: 6 Nov. 95    
+ SW/HW Environment: Windows
+ Symptom: Icon on tasklist for Toolbox is MS Windows icon.
+ Temporary Workaround: none.
+ Test Procedure: Run Toolbox.exe. Use alt-tab to switch tasks. Icon for
+         toolbox should be toolbox icon (hammer) not Windows window flag.
+ 
+ QA Testing Passed:
+ Version: Toolbox.exe 8.0.23.6
+
+Files affected:
+
+TOOLBOX.C           Register specific class for Toolbox dialogs.
+                    USe LoadIcon() to load MAXICON for toolbox.
+
+TOOLBOX.RC          Use TBDialogClass for main dialogs.
+
+CVERSION.H          Bump version to 6.
+
