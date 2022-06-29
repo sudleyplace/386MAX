@@ -1,0 +1,18 @@
+386LOAD  A Qualitas BlueMAX utility that loads memory resident software
+         into high DOS memory.
+BlueMAX  A Qualitas BlueMAX utility that provides command-line access
+         to BlueMAX.
+386UTIL  A Qualitas BlueMAX utility that provides information about
+         this system's use of memory.
+ASQ      A Qualitas BlueMAX utility that provides system analysis and a
+         memory management tutorial.
+MAX      The Qualitas BlueMAX shell.
+MAXIMIZE The Qualitas BlueMAX configuration optimization tool.
+RAMBASIC A Qualitas BlueMAX utility that provides IBM BASIC support.
+ROMSRCH  A Qualitas BlueMAX utility for finding additional high DOS memory
+         regions.
+STRIPMGR A Qualitas BlueMAX utility for clearing references to memory
+         management software from system configuration files.
+SNAPSHOT A Qualitas BlueMAX utility to record system configuration
+         information.
+

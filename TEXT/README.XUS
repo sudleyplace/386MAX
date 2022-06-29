@@ -1,0 +1,324 @@
+			     Qualitas MAX
+			       Version 8
+
+
+This file contains important information not contained in the
+Installation and Getting Started Guide or in the on-line HELP for
+Qualitas MAX.
+
+Information on the files shipped with Qualitas MAX is provided in the
+file PACKING.LST.
+
+The information in this file is divided into the following sections:
+
+			  FEATURE SPECIFIC INFORMATION
+			  NETWORK INFORMATION
+			  GENERAL and PROGRAM SPECIFIC INFORMATION
+			  DISK CONTROLLERS
+			  WINDOWS 95
+
+     NOTICE:  Owners of PS/2 or other Micro Channel machines can skip
+     the sections on hardware listed below.  If you are installing
+     386MAX on one of these machines, please take a look at notes on
+     software, networks, and other general and miscellaneous topics.
+     By allowing Maximize to use your reference diskette, the Micro
+     Channel adapters are automatically configured and protected.
+
+		      FEATURE SPECIFIC INFORMATION
+		      ============================
+QUALITAS TOOLBOX
+================
+
+GENERAL:  Qualitas toolbox cannot run on EGA systems.
+
+UNINSTALL TAB:	If DOSMAX32.DLL is in memory and you Uninstall the
+Qualitas MAX files on a Windows 95 system, you may receive this System
+error "The file you are trying to open is already in use by another
+program.  Quit the other program, and then try again."  Press Cancel
+at this screen and Uninstall continues normally.  After completion
+you need to manually delete the C:\QMAX directory and the DOSMAX32.DLL
+file.
+
+
+DOS 6 MULTIBOOT SUPPORT
+=======================
+The [common] section of the DOS 6 Multiboot support executes at each
+boot, regardless of the section that is chosen.  Because of this special
+handling by DOS, the following precautions must be taken prior
+to running MAXIMIZE:
+    Do not load resident programs in the [common] section of CONFIG.SYS.
+    Do not load resident programs prior to the MENU ITEM labels located
+						in CONFIG.SYS.
+    Do not use MENU as a MENUITEM in CONFIG.SYS.
+    Do not load resident programs before any GOTO %CONFIG% statements in
+						AUTOEXEC.BAT.
+    Do not load resident programs after the :END statement in
+						AUTOEXEC.BAT.
+
+
+
+			NETWORK INFORMATION
+			===================
+
+BANYAN:  The /NC option must be used on the first line calling the
+network in your AUTOEXEC.BAT.  The line should read BAN /NC.  The two
+remaining drivers must be loaded individually.	In order to find the
+proper names for the drivers, load BAN.COM without the /NC option and
+look at the 386UTIL /M display.  The following is a typical setup
+prior to loading into high DOS:
+
+     ban/nc
+     ndisban
+     redirall
+     netbind
+     arswait
+     z:login
+
+Make a specific reference to Z:LOGIN when you list the other programs in
+AUTOEXEC.BAT.  After rebooting with BAN /NC, the message "Network
+interface not enabled" may occur when BAN loads.  This is harmless and
+can be ignored.
+
+If Windows is loaded from the server, SET EMSCACHE=OK may be required
+in AUTOEXEC.BAT.
+
+[Banyan Version 5.50/patch level 1 specific information] Due to
+problems with Protman and NETBIND, the program FILLMEM.COM, written by
+the Qualitas Development staff, may be required and should load
+immediately before NETBIND in AUTOEXEC.BAT.  The most likely symptom of
+this problem is a message like "Binding not performed" or "Protman has
+reported an incomplete binding" when NETBIND loads.  This message
+should occur only after phase three of Maximize when another program
+has loaded high before NETBIND.
+
+FILLMEM is available on the Qualitas BBS.  Banyan has fixed the
+problem in later versions.
+
+NOVELL ELS:  The program NET$OS, which runs in protected mode, does not
+support VCPI, and therefore is not compatible with 386MAX.
+
+NOVELL [Token Ring configuration with ODI drivers only]:  If the token
+ring card is set to 8KB RAM / 8KB ROM instead of the standard 16/8
+configuration, the machine may lock with 386MAX (and sometimes without)
+in the system.	The TOKEN.EXE program does not respect the 8KB RAM area
+and writes to memory beyond the 8KB range.  To workaround the problem,
+use the 16/8 setting for the token ring card or don't use the TOKEN.EXE
+ODI driver.
+
+
+		  GENERAL and PROGRAM SPECIFIC INFORMATION
+		  ========================================
+AOX Upgrade Boards for IBM PS/2 Systems
+=======================================
+In Windows SETP, there is no safe way for Qualitas MAX to detect
+the AOX upgrade boards on IBM PS/2 systems. If you are using one of
+these boards, you may see the following message upon reboot after
+installing Qualitas MAX:
+
+    Qualitas MAX was unable to locate a valid BIOS Compression
+    file (BCF).  If the necessary BCF is available you may
+    download it from the Qualitas Bulletin Board at
+    (301) 907-8030 or through CompuServe (GO PCVENA).
+    128K BIOS CRC file would be @____.BCF, 64K BIOS CRC @____.BCF
+
+In these cases, the appropriate BCF is likely available on the
+installation diskettes.  You may install it by running SETUP/N from
+DOS.  You may also install it manually by following these directions.
+1.  Hold down the <alt> key at boot time immediately after the
+"starting MS DOS" message to prevent Qualitas MAX from installing.  You
+may safely ignore the resulting messages that indicate programs are
+being loaded into low DOS memory.
+2.  Run ASQ from the QMAX directory.  Choose Equipment from the menu
+bar at the top of the screen, then Summary from the drop down menu to
+get the correct BIOS for the system you are using.  The CRC is in the
+format of nnnn.  The BCF for your system is then in the format of
+@nnnn.bcf.  All available BCFs for the AOX systems are on Disk 2 of
+Qualitas MAX in the BCF directory.
+3.  Copy the BCF for your system into your Qualitas MAX directory.
+Reboot the system and run Maximize from Windows or DOS.
+
+FPROT
+=====
+This virus protection program from Frisk Software loads VIRSTOP.EXE.
+The program loaded immediately after this program reboots the system if
+386MAX is installed.  There is no known workaround.
+
+HP Vectra XU5-90C PCI Pentium
+=============================
+Some of these systems shipped with a BIOS revision that may cause a
+continuous reboot when 386MAX is installed.  Download the new BIOS
+[filename - GO0508US.EXE] available from HP's BBS or other on-line
+services to resolve the conflict.
+
+NORTON ANTIVIRUS
+================
+To avoid conflicts with Maximize and Norton's NAVTSR.EXE, load NAVTSR
+as the last program in your AUTOEXEC.BAT file.
+
+NOVELL DOS 7 and STACKER 4
+==========================
+If you are loading DPMS.EXE that comes with these programs, you may
+receive the error message "DPMS.EXE V1.0x:  No VCPI driver present, or
+error initialising DPMI".  We do not recommend that you use DPMS.EXE
+when loading Qualitas MAX.  DPMS.EXE does not use VDS and can recognize
+VCPI only through EMS memory.
+
+PC DOS 7
+========
+PC DOS 7 does not recognize 1024 and 2048 sector sizes for 386DISK.
+Use the default sector size of 512.
+
+PARADOX 4
+=========
+If you have conflicts running Paradox 4.xx when 386MAX is installed, use
+the -NOTSR option on the Paradox command line.
+
+Using Paradox 4.xx in a low (<64KB) extended memory environment can
+cause unpredictable consequences and may result in a system lock.
+Ensure that an appropriate amount of extended memory is available
+before using Paradox 4.x.
+
+PCKWIK WINMASTER
+================
+PCKWIK WinMaster ships a program named TOOLBOX.EXE (as does Qualitas
+MAX 8).  Whichever of the two files runs first is kept in the cache
+causing that program to run the next time the program name is invoked.
+To avoid this conflict, rename one of the files and change the icon
+properties to match the name.  For example, rename the TOOLBOX.EXE in
+the Qualitas MAX directory to QTOOLBOX.EXE.  In Windows 95, right click
+on the icon and choose Properties to change the command line.  In
+Windows 3.1x, highlight the icon by clicking on it once.  Run File and
+choose Properties to change the name of the file in the Command line
+box.
+
+Vertisoft REMOVEIT
+==================
+This program may cause Qualitas MAX Windows SETUP to lock while
+removing other memory managers from configuration files.  Close the
+Smart Disk Custodian and Log IT before installing Qualitas MAX.  You
+may reopen both programs when SETUP and Maximize are complete.
+
+
+			DISK CONTROLLERS
+			================
+
+BUSMASTERING CONTROLLERS:
+To optimize performance, busmastering controllers bypass the system
+board DMA controller and perform their own DMA transfers.  With a
+memory manager installed, memory may be remapped and may not retain a
+one-to-one linear to physical relationship.  So that DMA transfers are
+properly performed in memory which is not mapped one-to-one, a
+busmastering device must use one of two schemes, double buffering or
+VDS support.  During initialization, 386MAX displays an error message
+if it detects any busmastering hard disk controller that is not VDS
+compatible.  In order for 386MAX to detect a busmastering controller,
+either high DOS memory or an EMS page frame must be present.
+
+Vendors of certain busmastering controllers that do not support VDS in
+ROM provide software drivers to support either VDS or double buffering
+schemes.  VDS drivers may be loaded after 386MAX.SYS in CONFIG.SYS and
+may be loaded into high DOS memory.  If the driver provides double
+buffering, it must be loaded before 386MAX.SYS and must be loaded into
+low DOS memory.
+
+Some disk caches implement double buffering schemes.  If you are using
+a cache which double buffers disk transfers, do not load the cache
+into high DOS memory.  Doing so may cause the disk cache buffer to be
+loaded into memory that is not mapped one-to-one and CAN RESULT IN
+DATA LOSS.
+
+To bypass the 386MAX.SYS busmaster error message at startup, add the
+keyword NOSCSI to the 386MAX profile.  If 386MAX.SYS has detected an
+unsupported busmastering controller and Smartdrive is not loaded, an
+error message will result when loading Windows 3.xx.  If you are SURE
+you have a VDS-compatible busmastering controller, place SET
+BUSMASTER=VDS in your AUTOEXEC.BAT to bypass this error message and
+load Windows.  If you choose to bypass the message by using these
+instructions, run Custom rather than Express maximize so that you may
+toggle Smartdrive to remain in low DOS memory.	See the online help
+for detailed information on Custom Maximize.  Note that USING THESE
+OPTIONS WITHOUT REGARD TO OR KNOWLEDGE OF YOUR SYSTEM SETUP CAN RESULT
+IN LOSS OF DATA.
+
+See the on-line HELP for additional information on Busmastering
+Controllers.
+
+WINDOWS 95
+==========
+
+GO AHEAD
+The Go Ahead feature of Qualitas Max is disabled for Windows 95
+environments.
+
+WINDOWS 95 DUAL-BOOT
+Please see your Windows 95 documentation for information on how to set
+up dual boot capabilities for Windows 95 and your previous version of
+Windows.  After enabling dual-boot, use these directions to install
+Qualitas MAX and run Maximize on both boot configurations.
+
+Use these instructions if you have set up a Windows 95 dual boot and
+you wish to install to both Windows 95 and your previous Windows
+configuration.	If you want to use Qualitas MAX only with your Windows
+95 configuration, follow the directions in the Quick Start and
+installation Guide.  No additional instructions are necessary.	If you
+wish to use Qualitas MAX in both configurations, use the following
+instructions.
+
+If you have not yet installed Qualitas MAX into your Windows 95
+configuration, do so by following the directions in the Quick Start and
+Installation Guide.  When Maximize completes, restart your system and
+use these directions to install Qualitas MAX into your "Previous
+version of DOS".
+
+Boot your system and press the F8 key as soon as you see "Starting
+Windows 95".  If you have successfully installed a dual-boot setup,
+"Previous version of DOS" shows up as one of the menu choices.  Choose
+this option to boot with your previous version of DOS (valid only for
+DOS versions 5.x or 6.X) and Windows.  Be sure you have added any
+drivers and TSRs that you wish to use in this boot configuration to
+their appropriate start-up file.
+
+1.  In the QMAX directory, make backup copies of the 386MAX.PRO file
+and the ExtraDOS.PRO file.
+  Copy 386MAX.PRO 386MAX.WIN
+  Copy ExtraDOS.PRO ExtraDOS.WIN.
+These are the only startup files, other than CONFIG.SYS and
+AUTOEXEC.BAT, that Maximze modifies.  You will restore these files at
+the end of this process.
+
+2.  From within your previous version of Windows (version 3.1x), run
+Qualitas MAX SETUP.  If you do not intend to use your previous version
+of Windows, run SETUP/R from your Qualitas MAX directory in DOS.
+
+3.  When SETUP asks if you want to run Maximize, reply YES.
+
+4.  As the machine reboots during each phase of Maximize, press the F8
+key and select the menu option for “Previous version of DOS” for each
+of the 3 reboots of Maximize so that Maximize can run to completion in
+the same boot configuration.
+
+5.  As soon as Maximize completes, go to the QMAX directory to rename
+the profiles for this configuration and restore the original profiles
+for Windows 95.  Do not boot into the Windows 95 configuration prior to
+completing this step.
+
+First, copy the new profiles to names specific to this boot
+configuration:
+  Copy 386MAX.PRO 386MAX.DOS
+  Copy ExtraDOS.PRO ExtraDOS.DOS
+
+Edit CONFIG.SYS (type edit C:\CONFIG.SYS from the C:\> prompt) to place
+the appropriate names for this configuration on the appropriate
+Qualitas MAX lines:
+  Find the line that points to 386MAX.PRO.  Change 386MAX.PRO to
+					    386MAX.DOS.
+  Find the line that points to ExtraDOS.PRO.  Change ExtraDOS.PRO to
+					      ExtraDOS.DOS.
+
+Now copy the Windows 95 profiles back to their original names:
+  Copy 386MAX.WIN 386MAX.PRO
+  Copy ExtraDOS.WIN ExtraDOS.PRO
+
+You now have Qualitas MAX installed in both sections of your dual boot
+configuration.
+

@@ -1,0 +1,183 @@
+                          QUESTIONS & ANSWERS
+                 Commonly Asked Questions about 386MAX
+
+
+This information pertains to both 386MAX and BlueMAX.
+
+
+* I have 4MB (or more) of RAM and I've installed 386MAX, but only
+  120KB of programs into high DOS Why?
+
+Although it might seem that 4MB is more than enough memory to load all
+your programs "high", extended memory may not be used to store TSRs and
+device drivers.  Due to the original design of the MS-DOS operating
+system, programs must be loaded within the first megabyte of address
+space.  The first 640KB is called conventional memory.  High DOS is the
+384KB region between 640KB and 1MB.  Programs that are relocated from
+conventional memory into high DOS must fit within the confines of this
+region.  Unfortunately, the entire high DOS range is not usable because
+some of the addresses in this region are needed by your system
+hardware.  At a minimum, your video adapter and system BIOS must use a
+portion of these addresses.  In addition, you may have other adapters
+using memory in high DOS to address their RAM or ROM.  386MAX reclaims
+as many of the addresses between 640KB and 1MB as possible by using
+advanced memory management features such as ROMSRCH, VGASWAP, and
+FLEXFRAME technology.
+
+
+* How often should I run Maximize?
+
+Maximize is a program which automatically reconfigures your bootup
+files to load as many of your resident programs into high DOS as
+possible.  You should rerun Maximize when changes have been made which
+affect your low and high DOS memory.  If you have recently installed
+some new TSRs or device drivers, rerun Maximize to try to load these
+new programs into high DOS.  The addition of CD- ROM drivers or a new
+mouse driver are examples of this type of event.  You should also rerun
+Maximize if you make changes to the 386MAX.PRO file, so that Maximize
+can reconfigure your bootup files to account for the new set of
+options.  For example, you might add RAM=D000-D400 to 386MAX.PRO in
+order to protect the addresses used by a new adapter in your system.
+Rerunning Maximize will reconfigure your startup files to find the best
+fit for your resident programs under this new environment.  It is not
+necessary to run Maximize after installing applications on your system
+unless those applications add resident programs to your configuration
+files.
+
+
+* How do I run Maximize?
+
+There are two ways to start Maximize.  You may run Maximize from the
+DOS prompt in your 386MAX directory.  To do so, you must change to the
+386MAX directory using the Change Directory command (CD \386MAX),
+unless you have added 386MAX to your search path.  At the C:\386MAX
+prompt, type MAXIMIZE and strike ENTER.  Alternatively, you may run
+Maximize from the MAX shell program.  To run the MAX shell, type MAX at
+the C:\386MAX DOS prompt.  Once in the MAX shell, select MAXIMIZE from
+the menu.
+
+
+* Why might I want to run Full Maximize rather than Quick Maximize?
+
+As our on-line help suggests, Quick Maximize is faster because Maximize
+makes the decisions for you based on pre-set defaults.  Since each
+system is different and each user's preferences vary, there are times
+when it is not appropriate to use Quick Maximize.  Here are two of the
+most common examples of instances when you should use Full Maximize:
+You may have a TSR or driver that you know will not operate correctly
+when loaded into high DOS.  To keep it from being Maximized, run Full
+Maximize and toggle it to LOW during Phase II by using the F6 key.
+Perhaps you have a high performance video card which behaves
+incorrectly in certain modes when using VGASWAP.  Since, in most
+circumstances, VGASWAP is a default setting of Quick Maximize, you
+should run Full Maximize to decline using VGASWAP.
+
+
+* I do not want Maximize to relocate my Micro channel Adapters in my
+  IBM PS/2 system.  How do I prevent this from happening?
+
+This is another good example of a situation where you should use Full
+Maximize.  By default, Quick Maximize will try to relocate your micro
+channel adapters to make your high DOS less fragmented.  If you do not
+wish to have your adapters Maximized, you should run Full Maximize.
+Full Maximize will display a list of your adapters during Phase I.  To
+prevent the relocation of a particular adapter, highlight it using the
+arrow keys and toggle it to STATIC using the F6 key.
+
+
+* There are some changes I would like to make in my 386MAX options.
+  Where do I make these changes?
+
+In your 386MAX directory, there is a text file called 386MAX.PRO.  This
+file contains the options used by 386MAX when it initializes.  To
+change 386MAX options, edit this file with any ASCII text editor, such
+as DOS EDIT or the editor in the MAX shell.  Consult your 386MAX
+Reference Guide for more information on valid 386MAX options and their
+implementation.
+
+
+* I have added an adapter card to my system which uses RAM or ROM in
+  high DOS memory.  How do I keep 386MAX from using the adapter's
+  range of addresses as high DOS?
+
+Many adapters use RAM or ROM in high DOS.  Network cards, scanners,
+CDROM controllers, and SCSI drive controllers are common examples of
+adapters which may need to use memory between 640KB and 1MB.  To keep
+386MAX from reclaiming the memory addresses in use by your adapters,
+use the RAM= command in the 386MAX.PRO file.  Consult the documentation
+for your adapters to determine the appropriate range of addresses to
+protect.  See Chapter 2 in your 386MAX Reference Guide for more
+information on the use of the RAM= option.
+
+
+* Before using 386MAX, I used EMM386.EXE.  With EMM386.EXE, I used the
+  EXCLUDE (/X=) command to protect some addresses in high DOS for my
+  adapters' use.  I noticed 386MAX has an EXCLUDE command, should I
+  use it in the same manner as with my previous memory manager?
+
+Although 386MAX does have an EXCLUDE option, it does not have the same
+function as in the DOS memory manager.  The EXCLUDE statement instructs
+386MAX to avoid mapping EMS pages in a certain area.  In general, the
+EXCLUDE= option is used for troubleshooting with older EMS-aware
+applications.  Unless instructed by the README file to add EXCLUDE= for
+an application in your system, it is rare that a user would have a
+valid use for this option.  The proper way to protect an adapter's RAM
+or ROM is to use a RAM= statement.  See Chapter 2 in your 386MAX
+Reference Guide for more information on the use of the RAM= option.
+
+
+* I just replaced a major component in my system, such as the
+  motherboard, hard drive, video adapter or system BIOS.  How do I
+  reconfigure 386MAX?
+
+There is a simple way to reconfigure 386MAX for major system changes.
+From your 386MAX diskette, run INSTALL /N.  The /N option instructs the
+INSTALL program that this is a new machine and that it should disregard
+any system specific options in the previous 386MAX.PRO file.
+Alternatively, you may run INSTALL /N /R from your 386MAX directory.
+The /R option instructs INSTALL to run from the files already existing
+on your hard drive, eliminating the necessity of using the distribution
+diskette.
+
+
+* When I try to run Windows I get the following error message, how do
+  I correct this?  "386MAX VxD Error V1014:  Disk Cache or other file
+  I/O software using EMS memory"
+
+When invoking Windows, 386MAX checks to verify that no resident file
+I/O software is using EMS memory.  Because Windows will use free EMS
+pages to improve its own performance, conflicts may occur between
+Windows and EMS-resident software.  When the EMS resident software
+conducts file I/O, these conflicts may result in data loss.  Since we
+do not consider this to be a stable environment, Qualitas does not
+recommend using resident file I/O software in EMS when running
+Microsoft Windows.  If you receive this warning, the best course of
+action is to determine which file I/O software is causing the warning
+and prevent it from using EMS memory.  Common examples of these
+resident programs are network drivers, disk caches, and data
+compression drivers such as Stacker.  For more information, consult the
+386MAX README file.
+
+
+* When I look at the files on my hard drive, I see a very large file
+  called 386spart.par which is using a number of megabytes of my disk
+  space.  Did 386MAX add this file and, if so, why?
+
+Actually, despite the name, this file is not a 386MAX file.  When
+running in 386 Enhanced mode, Windows will use a swap file to free RAM
+by swapping information in memory to a reserved area of disk space.  To
+find more information about swap files, you should review the sections
+on Virtual Memory in your Windows manual.
+
+
+* I would like to learn more about memory management.  Where can I
+  look for more information?
+
+Fortunately, Qualitas has already provided you the information to get
+you started.  Chapter One of our Reference Guide and Chapter Four of
+the User Guide both provide introductions to memory management.  From
+there you can turn to ASQ, where we provide a tutorial to educate our
+users on memory management issues.  To run the tutorial, run ASQ from
+your 386MAX directory and select Learn from the menus.
+
+

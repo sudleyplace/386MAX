@@ -1,0 +1,204 @@
+ ; REORDER.CFG	 Version A    Version Date 10/03/91
+ ; (C) Copyright Qualitas, Inc. 1991-96   All Rights Reserved.
+ ; This information is proprietary ....
+
+ ; Reordering Control File (REORDER.CFG)
+ ;
+ ; DESCRIPTION
+ ;
+ ; The Reordering Control File is an ASCII file which pre-specifies groups to
+ ; be used in the reordering process in Phase III of Maximize so the user does
+ ; not need to manually specify groups.
+ ;
+ ; The Reordering control file will be processed in two passes, once for
+ ; CONFIG.SYS and once for AUTOEXEC.BAT.  For each line in REORDER.CFG, the
+ ; in-memory copy of CONFIG.SYS or AUTOEXEC.BAT (or nested batch file) will be
+ ; scanned for a match.
+ ;
+ ; Each group in REORDER.CFG consists of one or more subgroups.  The first
+ ; (01) subgroup determines if the group is present in CONFIG.SYS or
+ ; AUTOEXEC.BAT.  i.e.	at least one of the lines in an 01 subgroup must be
+ ; found in the CONFIG.SYS or AUTOEXEC.BAT file for that group to be
+ ; considered.	If there is no match in the 01 subgroup, the remainder of the
+
+ ; main group is bypassed.
+ ;
+ ;
+ ; LAYOUT
+ ;
+ ; REORDER.CFG is a variable field Ascii file with white space delimiters.
+ ; Multiple spaces and tabs are processed as a single space.  Regular column
+ ; format is not signficant except for readability.
+ ;
+ ; The first three lines of the file contain file version control and
+ ; copyright information and must be present.
+ ;
+ ; Blank lines are ignored and may be used to increase readability.
+ ;
+ ; Leading white space on a line is ignored.
+ ;
+ ; A semicolon ';' present anywhere in a line causes the remainder of the
+ ; line to be treated as a comment.
+ ;
+ ; Field 1 - Group ID String
+ ;
+ ;     Function:   A character string identifying the group. Choice of
+ ;		   characters is arbitrary but should be suggestive.
+ ;
+ ; Field 2 - Sub-Group Sequence
+ ;
+ ;     Function:   1 or 2 Ascii digits which specify a sub-group within a
+ ;		   group.  Subgroup 01 must be present, and a match must
+ ;		   be found for at least one member of subgroup 01 for the
+ ;		   remainder of the group to be processed.
+ ;
+ ;		   If an item may be one of a set, a separate line is needed
+ ;		   for each choice in the sub-group. There is no limit to the
+ ;		   number of items within a sub-group.
+ ;
+ ; Field 3 - Special Flags
+ ;
+ ;     Function:   Identifies field type for field 4.
+ ;
+ ;     Values	   F - Field 4 is a file name (possibly with wildcards)
+ ;		   T - Field 4 is a text string
+ ;
+ ;		   Flag values may be combined where appropriate.
+ ;
+ ; Field 4 - File Name
+ ;
+ ;     Function:   A file name (with optional wildcards) which specifies the
+ ;		   file name that must be present in order for a line to be
+ ;		   recognized as an item in a subgroup. Matching is case- and
+ ;		   path-insensitive. Only the file name is significant.
+ ;
+ ;		   Standard DOS wildcards ('?', '*') will be recognized and
+ ;		   have their usual meaning.
+ ;
+ ; Field 4 - Text String
+ ;
+ ;     Function:   Text string must match exactly the target text found
+ ;		   starting from the beginning of the target line. The match
+ ;		   is insensitive to case and white space. Regular expressions
+ ;		   are not supported.
+ ;
+ ;		   If the semicolon character is required inside the text
+ ;		   string, it must be surrounded by double quotes (";").
+
+ ;  GROUP DATA
+
+ ;  Stacker
+
+ STCKR	01 F STACKER.COM
+ STCKR	02 F SSWAP.COM
+
+ ;  Superstor
+
+ SSTOR	01 F SSTORDRV.SYS
+ SSTOR	02 F DEVSWAP.COM
+
+ ;  Satisfaction FAX Board
+
+ STSFX	01 F CASMGR.EXE
+ STSFX	02 F FAXPOP.EXE
+
+ ;  Intel Connection CoProcessor
+
+ INTLCC 01 F CONNECT.EXE
+ INTLCC 02 F FAXPOP.EXE
+
+ ;  WD FASST 7000 SCSI Controller
+ ;  DOS 4.00 Driver Versions
+
+ WDFAST1 01 F SSTBIO.SYS
+ WDFAST1 02 F SSTDRIVE.SYS
+
+ ;  Novell Netware
+
+ NOV	01 F IPX.COM
+ NOV	02 F NET3.COM
+ NOV	02 F NET4.COM
+ NOV	02 F NET5.COM
+ NOV	02 F NET6.COM
+ NOV	02 F NETX.COM
+ NOV	02 F NET.COM
+ NOV	02 F XMSNET?.EXE
+ NOV	02 F EMSNET?.EXE
+ NOV	02 F RPRINTER.*
+ NOV	02 F TBMI.COM
+ NOV	03 F LOGIN.*
+
+ ;   Banyan
+
+ BAN	01 F BAN.COM
+ BAN	02 F ETHERBAN.COM	; Banyan hardware drivers
+ BAN	02 F 3C503BAN.COM
+ BAN	02 F 3C523BAN.COM
+ BAN	02 F 3C603BAN.COM
+ BAN	02 F ARCBAN.COM
+ BAN	02 F TOKNBAN.COM
+ BAN	02 F NDTOKBAN.COM
+ BAN	02 F TOKUIBAN.COM
+ BAN	02 F TOKBANMC.COM
+ BAN	02 F IPABAN.COM
+ BAN	02 F INTERBAN.COM
+ BAN	02 F OMNIBAN.COM
+ BAN	02 F PRO4BAN.COM
+ BAN	02 F PCNETBAN.COM
+ BAN	02 F PROBAN.COM
+ BAN	02 F PROBANMC.COM
+ BAN	02 F UNGERBAN.COM
+ BAN	02 F VLANBAN.COM
+ BAN	02 F INTR2BAN.COM
+ BAN	02 F I92BAN.COM
+ BAN	02 F UBNIUBAN.COM
+ BAN	02 F WDBAN.COM
+ BAN	02 F ATTSBAN.COM
+ BAN	02 F NICMCBAN.COM
+ BAN	02 F ASYNCBAN.COM
+ BAN	02 F LSTARBAN.COM
+ BAN	02 F LSMCBAN.COM
+ BAN	02 F LSTURBO.COM
+ BAN	02 F INTELBAN.COM
+ BAN	02 F NDISBAN.COM
+ BAN	02 F HUGHSBAN.COM
+ BAN	03 F REDIR2.EXE 	; Banyan network services redirectors
+ BAN	03 F REDIR3.EXE
+ BAN	03 F REDIR4.EXE
+ BAN	03 F REDIRALL.EXE
+ BAN	03 F REDIRNP4.EXE	; New BANYAN TSR
+ BAN	04 F PCNETB.COM 	; Banyan NETBIOS support
+ BAN	04 F PCNETBAN.COM
+ BAN	04 F TSR2A.COM		; Banyan NETBIOS support (for Windows only)
+ BAN	05 F INNS.EXE		; New BAYNAN TSR
+ BAN	06 F NETBIND.EXE
+ BAN	06 F ARSWAIT.EXE
+ BAN	07 F LOGIN.*
+
+ ; IBM Networks - Token Ring, Ethernet, PC Network Baseband
+
+ IBM	01 F DXMA0MOD.SYS ; Token Ring, Ethernet, PC Network Baseband
+ IBM	02 F DXMC0MOD.SYS ; Token Ring - No 3270 Emulation
+ IBM	02 F DXMC1MOD.SYS ; Token Ring - 3270 Emulation
+ IBM	02 F DXME0MOD.SYS ; Ethernet
+ IBM	02 F DXMG0MOD.SYS ; PC Network Baseband - No 3270 Emulation
+ IBM	02 F DXMG1MOD.SYS ; PC Network Baseband - 3270 Emulation
+ IBM	03 F DXMT0MOD.SYS ; Token Ring, Ethernet, PC Network - Netbios emulation
+
+ ; Lantastic
+
+ LANTST 01 F REDIR.EXE
+ LANTST 02 F NET.EXE
+ LANTST 03 F LANPUP.EXE
+ LANTST 04 F SERVER.EXE
+ LANTST 05 F NET_MGR.EXE
+ LANTST 06 F LANCACHE.EXE
+ LANTST 07 F AE2.EXE
+ LANTST 08 F AILANBIO.EXE
+
+ ; AST Power Management
+
+ ASTPOWER 01 F SLEEP.SYS
+ ASTPOWER 02 F POWER.EXE
+
+

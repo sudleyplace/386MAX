@@ -1,0 +1,25 @@
+386LOAD  Ein Qualitas 386MAX Werkzeug, das speicher-
+         residente Programme in den HiDOS Bereich
+         (Åblicherweise 640 KB...1 MB) lÑdt.
+386MAX   Ein Qualitas 386MAX Werkzeug, das Åber einen
+         DOS-Befehl Zugriff auf den 386MAX Treiber
+         ermîglicht.
+386UTIL  Ein Qualitas 386MAX Werkzeug, das Ihnen aktuelle
+         Informationen Åber den Speicher-Ladezustand Ihrer
+         Maschine liefert.
+ASQ      Ein Qualitas 386MAX Werkzeug, das Ihnen bei der
+         Analyse Ihres Rechners hilft und Lernhilfe zum
+         Thema Speicher-Verwaltung gibt.
+MAX      Die Qualitas 386MAX ArbeitsoberflÑche.
+MAXIMIZE Das Qualitas 386MAX Werkzeug zur Speicher-
+         Maximierung.
+ROMSRCH  Ein Qualitas 386MAX Werkzeug, das Ihnen hilft,
+         zusÑtzlichen Speicher im HiDOS sinnvoll nutzbar
+         zu machen.
+SNAPSHOT Ein Qualitas 386MAX Werkzeug, das Ihnen Zusammen-
+         stellungen Ihrer System-Konfiguration zeigen und
+         ausdrucken kann.
+STRIPMGR Ein Qualitas 386MAX Werkzeug, das Ihnen hilft,
+         auch Ñltere Speicher-Lade-Befehle in Ihrer
+         AUTOEXEC.BAT und CONFIG.SYS an 386MAX anzupassen.
+

@@ -1,0 +1,340 @@
+
+                              BLUEMAX
+
+
+If you need Information on...Consult this File in the BlueMAX Directory
+=======================================================================
+Windows Information and Installation......................WINDOWS.DOC
+Common Questions and Answers..............................Q&A.DOC
+MAXIMIZE.CFG Information and Keywords.....................MAXIMIZE.DOC
+
+Complete information on each of the files provided with BlueMAX,
+including which are necessary and which are optional, is provided in
+the file PACKING.LST.
+
+The information in this file is divided into the following sections:
+
+                          FEATURE SPECIFIC INFORMATION
+                          NETWORK INFORMATION
+                          GENERAL and PROGRAM SPECIFIC INFORMATION
+                          DISK CONTROLLERS
+
+     NOTICE:  Owners of PS/2 or other Micro Channel machines can skip
+     the sections on hardware listed below.  If you are installing
+     BlueMAX on one of these machines, please take a look at notes on
+     software, networks, and other general and miscellaneous topics.
+     By allowing Maximize to use your reference diskette, the Micro
+     Channel adapters are automatically configured and protected.
+
+
+                      FEATURE SPECIFIC INFORMATION
+                      ============================
+ASQ
+===
+ASQ fails in Windows on some PS/2 model 70s in a Token Ring
+configuration.  Do not use ASQ in this environment.
+
+The network connection in a Novell 3.11 configuration installed with an
+ARCNET adapter is sometimes lost when exiting ASQ.  There is no known
+workaround at this time.
+
+DOS 6 MULTIBOOT SUPPORT
+=======================
+The [common] section of the DOS 6 Multiboot support executes at each
+boot, regardless of the section that is chosen.  Because of this special
+handling by DOS, the following precautions must be taken prior
+to running MAXIMIZE:
+    Do not load resident programs in the [common] section of CONFIG.SYS.
+    Do not load resident programs prior to the MENU ITEM labels located
+                                                in CONFIG.SYS.
+    Do not use MENU as a MENUITEM in CONFIG.SYS.
+    Do not load resident programs before any GOTO %CONFIG% statements in
+                                                AUTOEXEC.BAT.
+    Do not load resident programs after the :END statement in
+                                                AUTOEXEC.BAT.
+
+QSTRIP
+======
+Run QSTRIP from the BlueMAX subdirectory to remove QMT from
+your configuration files.
+
+VGASWAP
+=======
+In order to use the VGASWAP option successfully, the video display
+adapter cannot use the monochrome display area (B000-B800). If you
+encounter video problems, edit the BlueMAX.PRO file to remove the
+VGASWAP and USE=B000-B800 options.
+
+
+                        NETWORK INFORMATION
+                        ===================
+
+10NET [version 5.0 rev. level 0]:  This version of 10NET is not
+compatible with the ExtraDOS portion of BlueMAX.  Edit CONFIG.SYS to
+remove the lines that load ExtraDOS at the end of the file.  Version
+5.0, rev. level 3 or higher is compatible with ExtraDOS and requires no
+special considerations.
+
+BANYAN:  The /NC option must be used on the first line calling the
+network in your AUTOEXEC.BAT.  The line should read BAN /NC.  The two
+remaining drivers must be loaded individually.  In order to find the
+proper names for the drivers, load BAN.COM without the /NC option and
+look at the 386UTIL /M display.  The following is a typical setup
+prior to loading into high DOS:
+
+     ban/nc
+     ndisban
+     redirall
+     netbind
+     arswait
+     z:login
+
+Make a specific reference to Z:LOGIN when you list the other programs in
+AUTOEXEC.BAT.  After rebooting with BAN /NC, the message "Network
+interface not enabled" may occur when BAN loads.  This is harmless and
+can be ignored.
+
+If Windows is loaded from the server, SET EMSCACHE=OK may be required
+in AUTOEXEC.BAT.
+
+[Banyan Version 5.50/patch level 1 specific information] Due to
+problems with Protman and NETBIND, the program FILLMEM.COM, written by
+the Qualitas Development staff, may be required and should load
+immediately before NETBIND in AUTOEXEC.BAT.  The most likely symptom of
+this problem is a message like "Binding not performed" or "Protman has
+reported an incomplete binding" when NETBIND loads.  This message
+should occur only after phase three of Maximize when another program
+has loaded high before NETBIND.
+
+FILLMEM is available on the Qualitas BBS.  Banyan has fixed the
+problem in later versions.
+
+DEC PATHWORKS:  Old versions of the USE.EXE program (Decnet versions
+prior to 4.0) may cause Batproc (BlueMax's batch file processor) to
+issue "out of environment space" messages.  Update the version of
+USE.EXE to resolve this problem.
+
+Edit AUTOEXEC.BAT to include SET EMSCACHE=OK if this network is used
+in a Windows environment.
+
+DNA [version 3.38]:  If MASTER.SYS or STATION.SYS does not initialize or
+if a connection cannot be made between the server and workstation, add
+the option WINDOW=xxxx (using the proper RAM address in place of xxxx)
+to both MASTER.SYS and STATION.SYS.  The beginning RAM address of the
+network card is displayed on the copyright line of either MASTER.SYS or
+STATION.SYS when it initially loads.  Reboot both systems for the
+change to take effect.
+
+Example:  DEVICE=C:\DNA\STATION.SYS WINDOW=CC00 (other parameters)
+
+LANSMART [version 3.2]:  As an option, the server can be installed
+with a default 1MB write-behind cache that can use either XMS or EMS.
+The cache has a five second write back delay which could cause data
+loss during Maximize.  If you choose to use the Lansmart cache,
+issue the SetLogon command at the DOS prompt and change the Write Back
+option to OFF.
+
+LANSMART version 3.2 is not compatible with the ExtraDOS portion of
+BlueMAX.  Edit CONFIG.SYS to remove the lines at the end of the file
+that load ExtraDOS.
+
+NOVELL CONNECTIVITY with busmastering network adapters:  If IPX or
+IPXODI drivers fail to load high and lock the machine in the last phase
+of Maximize, it is likely that a busmastering network adapter is in use.
+The IPX drivers associated with these cards do not have VDS support and,
+therefore, cannot work in memory that is not mapped one to one.  The
+only workaround for this condition is to force the IPX or IPXODI driver
+low.  The NE2100 network adapter by Eagle Technology is in this
+category.
+
+NOVELL ELS:  The program NET$OS, which runs in protected mode, does not
+support VCPI, and therefore is not compatible with BlueMAX.
+
+NOVELL [Token Ring configuration with ODI drivers only]:  If the token
+ring card is set to 8KB RAM / 8KB ROM instead of the standard 16/8
+configuration, the machine may lock with BlueMAX (and sometimes without)
+in the system.  The TOKEN.EXE program does not respect the 8KB RAM area
+and writes to memory beyond the 8KB range.  To workaround the problem,
+use the 16/8 setting for the token ring card or don't use the TOKEN.EXE
+ODI driver.
+
+TOPS:  The DMA setting on the FLASHCard must be disabled.  Use
+/DMA=NONE on the TOPS ATALK or ALAP line.
+
+
+                  GENERAL and PROGRAM SPECIFIC INFORMATION
+                  ========================================
+
+IBM 3638 Terminal Emulation Card
+================================
+The IBM 3638 Terminal Emulation Card is unique in that it relies on
+ABIOS routines.  The 3638 Terminal Emulation Card will fail with
+BlueMAX's BIOS Compression enabled.  To use this card with BlueMAX,
+disable BIOS compression in your BlueMAX profile.
+
+Disk Caches
+===========
+If you are using a disk cache or other file I/O software that is using
+EMS memory, the following warning appears when you try to run Windows:
+
+     BLUEMAX VxD ERROR V1014:  Disk Cache or Other File I/O Software
+     Using EMS Memory.
+
+You may work around the warning by adding SET EMSCACHE=OK to your
+AUTOEXEC.BAT file.  Please read the warnings in the Windows.doc file
+supplied with BlueMAX before making this change to your system.
+
+
+EGA/VGA Programs that Use Monochrome
+====================================
+Some programs that normally run in color mode may use the monochrome
+buffer area to access special characteristics of the VGA/EGA card
+installed.  If these programs are used, the monochrome buffer area
+cannot be reclaimed as high DOS or as an EMS area without video problems
+resulting.  This is a list of known programs that run on EGA/VGA
+systems, but use the monochrome area as well.
+
+Name                     BlueMAX Option or Special Instructions
+====                     ======================================
+MATHBLASTER PLUS..remove INCLUDE=B000-B800, USE=B000-B800 and/or VGASWAP
+ACCUWEATHER.......change INCLUDE=B000-B800 or USE=B000-B800 to
+                         INCLUDE=B100-B800 or USE=B100-B800 and
+                         remove VGASWAP
+SOFTKICKER........remove INCLUDE=B000-B800, USE=B000-B800 and/or VGASWAP
+CLEAR.............remove INCLUDE=B000-B800, USE=B000-B800 and/or VGASWAP
+SUPERCALC 5.......remove INCLUDE=B000-B800, USE=B000-B800 and/or VGASWAP
+LEGAL FLEET.......remove INCLUDE=B000-B800, USE=B000-B800 and/or VGASWAP
+NOTE:  Supercalc 5 can be set up so that the monochrome buffer area
+will not be used.  Consult the Supercalc manual for full details.  If
+using Supercalc on a CGA or monochrome system, you may have to use the
+VGA or EGA option.
+
+DOUBLEDISK GOLD
+===============
+The compressed drive support of BlueMAX will work with DoubleDisk Gold
+if you move the ACTIVATE command to CONFIG.SYS and load it with an
+INSTALL= statement.
+
+Remark the command similar to the one below in AUTOEXEC.BAT:
+
+                      C:\DUBLDISK\ACTIVATE A C0=D, S C:=D
+
+Add the same command to CONFIG.SYS immediately following DUBLDISK.SYS:
+
+                      INSTALL=C:\DUBLDISK\ACTIVATE A C0=D, S C:=D
+
+Please note that your commands may differ from the examples given.
+
+HP Vectra XU5-90C PCI Pentium
+=============================
+Some of these systems shipped with a BIOS revision that may cause a
+continuous reboot when BlueMAX is installed.  Download the new BIOS
+[filename - GO0508US.EXE] available from HP's BBS or other on-line
+services to resolve the conflict.
+
+NOVELL DOS 7 and STACKER 4
+==========================
+If you are loading DPMS.EXE that comes with these programs, you may
+receive the error message "DPMS.EXE V1.0x:  No VCPI driver present, or
+error initialising DPMI".  The error message is inaccurate and you
+may work around the error by editing your BlueMAX.PRO file as follows:
+
+     Find the EMS=0 option in the BlueMAX.PRO file and place a
+               semicolon (;) in front of the option
+     Add NOFRAME as an option on any line by itself in the profile
+     Save the file and reboot your system to activate the changes.
+
+
+XTRADRIVE
+=========
+When using XTRADRIVE and BlueMAX in a Windows environment, add SET
+NOLOW=IGNORE to AUTOEXEC.BAT to avoid the following error message when
+running Microsoft Windows:
+
+                BLUEMAX VxD Error V1018: NOLOW Option Required
+
+PARADOX 4
+=========
+If you have conflicts running Paradox 4.xx when BlueMAX is installed,
+use the -NOTSR option on the Paradox command line.
+
+Using Paradox 4.xx in a low (<64KB) extended memory environment can
+cause unpredictable consequences and may result in a system lock.
+Ensure that an appropriate amount of extended memory is available
+before using Paradox 4.x.
+
+FPROT
+=====
+This virus protection program from Frisk Software loads VIRSTOP.EXE.
+The program loaded immediately after this program reboots the system if
+BlueMAX is installed.  There is no known workaround.
+
+USE/UNUSE
+=========
+This program fails if ExtraDOS loads command.com into high DOS memory.
+Add C=NOLOADHI to the EXTRADOS.PRO file to force command.com low.
+
+
+                        DISK CONTROLLERS
+                        ================
+
+BUSMASTERING CONTROLLERS:
+To optimize performance, busmastering controllers bypass the system
+board DMA controller and perform their own DMA transfers.  With a
+memory manager installed, memory may be remapped and may not retain a
+one-to-one linear to physical relationship.  So that DMA transfers are
+properly performed in memory which is not mapped one-to-one, a
+busmastering device must use one of two schemes, double buffering or
+VDS support.  During initialization, BlueMAX displays an error message
+if it detects any busmastering hard disk controller that is not VDS
+compatible.  In order for BlueMAX to detect a busmastering controller,
+either high DOS memory or an EMS page frame must be present.
+
+Vendors of certain busmastering controllers that do not support VDS in
+ROM provide software drivers to support either VDS or double buffering
+schemes.  VDS drivers may be loaded after BLUEMAX.SYS in CONFIG.SYS and
+may be loaded into high DOS memory.  If the driver provides double
+buffering, it must be loaded before BLUEMAX.SYS and must be loaded into
+low DOS memory.
+
+Some disk caches implement double buffering schemes.  If you are using
+a cache which double buffers disk transfers, do not load the cache
+into high DOS memory Doing so may cause the disk cache buffer to be
+loaded into memory that is not mapped one-to-one and CAN RESULT IN
+DATA LOSS.  See BUSMASTERING DEVICES in the WINDOWS.DOC file for
+information specific to this problem and Windows.
+
+To bypass the BLUEMAX.SYS busmaster error message at startup, add the
+keyword NOSCSI to the BlueMAX profile.  If BLUEMAX.SYS has detected an
+unsupported busmastering controller and SMARTDrive is not loaded, an
+error message will result when loading Windows 3.xx.  If you are SURE
+you have a VDS-compatible busmastering controller, place SET
+BUSMASTER=VDS in your AUTOEXEC.BAT to bypass this error message and
+load Windows.  Note that USING THESE OPTIONS WITHOUT REGARD TO OR
+KNOWLEDGE OF YOUR SYSTEM SETUP CAN RESULT IN LOSS OF DATA.
+
+Contact your hard disk controller manufacturer for detailed information
+about your hard disk controller.  So that the following busmastering
+controllers perform properly, follow the directions for each:
+
+Adaptec:  If you are using an Adaptec 1542, Adaptec ships a software
+driver that must load in your CONFIG.SYS before BlueMAX.SYS.  Request
+part #1410 from your Adaptec distributor.
+
+Western Digital FASST SCSI:  VDS support is incorporated into ROM
+revision 3.36 or later.  In versions prior to 3.36, the controller
+ships with two drivers called FIXMEM.SYS and SSTBIOS.SYS.  Copy these
+device drivers to your boot disk.  Insert the separate lines
+DEVICE=d:\path\FIXMEM.SYS and DEVICE=d:\path\SSTBIOS.SYS /WE to your
+CONFIG.SYS file preceding the BlueMAX.SYS line.
+
+Procomm Technologies Microchannel 7F01 SCSI Adapter:  If you are using
+this adapter, place the following line in CONFIG.SYS before
+BlueMAX.SYS:
+
+    DEVICE = C:\BLUEMAX\PCS-COMP.SYS
+
+PCS-COMP.SYS, provided with BlueMAX, overcomes conflicts using BlueMAX
+BIOS compression with this Procomm SCSI adapter.
+
+

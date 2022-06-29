@@ -1,0 +1,206 @@
+
+                        WINDOWS COMPATIBILITY
+
+
+QUALITAS PROGRAM GROUP:
+If you are using a Program Manager replacement, such as Norton
+Desktop, the Qualitas Program Group may not appear on the desktop.
+These programs may not read the PROGMAN.INI file that initializes
+startup groups.
+
+STARTING WINDOWS:
+If typing WIN starts Windows in Standard mode, rather than Enhanced
+mode, type WIN/3 at the command line.  WIN.COM chooses the Windows
+operating mode most appropriate for your machine.  The command WIN/3
+forces Enhanced mode.
+
+SYSTEMS WITH LESS THAN 640 KB OF CONVENTIONAL MEMORY:
+Due to a limitation of Windows, BlueMAX cannot backfill systems with
+less than 640KB of conventional memory and still support Windows in
+Enhanced mode.  You must add a NOLOW option to the BlueMAX.SYS
+options profile (C:\BlueMAX\BlueMAX.PRO) and reboot the system if you
+require BlueMAX support for Windows in Enhanced mode.  The NOLOW option
+disables default backfilling support by BlueMAX.SYS.  Consult the
+Users Guide or the options file for more information on all of the
+BlueMAX options.
+
+DOSMAX:
+Qualitas DOSMAX is not compatible with systems that need the NOLOW
+option as described above.  See the documentation provided with BlueMAX
+for complete information on DOSMAX.
+
+An active NOXBIOS option in the BLUEMAX.PRO precludes the use of
+DOSMAX.  See the Users Guide for a complete explanation of the
+NOXBIOS option.
+
+Hewlett-Packard systems often reserve 1KB at the top of conventional
+RAM for special configuration features.  In order to use DOSMAX
+successfully on these systems, you must disable this 1KB area through
+HP's setup program.
+
+VIRTUAL HIGH DOS:
+By default, Virtual High DOS is disabled.  To enable, place
+VirtualHighDOS=-1 in the [386Enh] section of SYSTEM.INI and the keyword
+NO58 in the BLUEMAX.PRO file.  Consult the Users guide for additional
+information on Virtual High DOS.
+
+IBM THINKPAD:
+If you are using an IBM Thinkpad and experience problems with the
+suspend/resume feature while inside Windows, download THINKPAD.ZIP
+or THINKPAD.EXE (self extracting zip file) from the Qualitas BBS.
+
+ATI MACH 32 VIDEO ADAPTER:
+This adapter may fail if installed with the drivers provided by the
+manufacturer when trying to run Windows with BlueMAX on systems with
+physical memory located between 15 and 16 MB.  You may work around this
+problem by limiting the total amount of extended memory available to
+BlueMAX to 14 MB.  Edit the BlueMAX.PRO to add EXTSIZE=14336 and reboot
+the system to activate the new configuration.  An alternate workaround
+is to remove the special video drivers for the adapter and install the
+standard Windows video drivers.
+
+
+TROUBLESHOOTING:
+After Windows has completed initialization, BlueMAX.SYS is switched to
+OFF mode and the involvement of BlueMAX.VxD is minimal.  Windows starts
+up with a different set of initialization parameters with BlueMAX in the
+system than without.  This may result in problems that appear only when
+BlueMAX is in the system that may not be BlueMAX problems.  The following
+paragraph outlines a process that will help isolate the source of a
+Windows problem.
+
+Run STRIPMGR /ST from the BlueMAX directory to remove references to
+BlueMAX from the system startup files.  Then, add the following two
+Device= statements, in the order listed, to the beginning of the
+CONFIG.SYS:
+
+       Device=C:\path\HIMEM.SYS
+       Device=C:\path\EMM386.SYS RAM
+
+where path is either the DOS directory if you are using MS-DOS 5.0 or
+higher, or your WINDOWS directory.
+
+After making the above changes in CONFIG.SYS, reboot the system and
+attempt to reproduce the problem.  If the problem still exists and you
+require further assistance, be sure to notify any support
+representative (Qualitas', Microsoft's or the application
+manufacturer's) of the results of the above test.  Performing this step
+will speed up the technical support process.
+
+To return to your original configuration files, run PRESTRIP.BAT from
+the root directory.
+
+
+DISK CACHES AND RAM DISKS:
+Disk caches, RAM disks, and network software MUST be configured to use
+EXTended (including XMS) memory rather than EMS memory.  Since BlueMAX
+has no control over EMS memory from within Windows 3.x, we cannot
+guarantee proper EMS support for those TSRs configured to use EMS
+memory.  If BlueMAX detects the presence of such software, an error
+message is displayed and Windows will not start.
+
+*********************************************************************
+* USERS HAVE REPORTED CERTAIN RELEASES OF DISK CACHING SOFTWARE     *
+* CAN DAMAGE FILES ON THE HARD DISK IF THE CACHE IS CONFIGURED TO   *
+* USE EMS MEMORY IN THE WINDOWS 3.x ENVIRONMENT.  WE STRONGLY       *
+* RECOMMEND CONFIGURING DISK CACHES TO USE EXTENDED MEMORY          *
+* INSTEAD OF EMS MEMORY.                                            *
+*********************************************************************
+
+If you see the following error message:
+
+     BlueMAX VxD ERROR V1014:  Disk Cache or Other File I/O Software
+     Using EMS Memory.
+
+Ensure no resident software performing file I/O has allocated EMS
+memory prior to Windows startup.  The file I/O could be a disk cache,
+disk compression utility, or network.  Run 386UTIL /E from the BlueMAX
+directory to display EMS memory usage.
+
+If you MUST run Windows in the presence of such EMS-using software, the
+error message may be overridden with the DOS environment variable:
+
+     set EMSCACHE=OK
+
+
+BUSMASTERING DEVICES:
+If BlueMAX.SYS has detected a busmastering hard disk controller
+without VDS support or the keyword NOSCSI is present in the
+BlueMAX.PRO file, the BlueMAX.VxD must see a double-buffering disk
+cache in memory before starting Windows.  (See "Busmastering
+Controllers" in the README file for more details.) Through
+double-buffering, a disk cache alleviates problems when busmastering
+controllers transfer from memory which is not mapped one-to-one.
+
+If a double-buffering disk cache is not found, BlueMAX will generate
+the following error messages:
+
+     BlueMAX VxD Error V1011: Busmaster Disk Subsystem detected that
+     requires a compliant disk cache to be loaded.
+
+Set the environment variable BUSMASTER=VDS and restart Windows only if
+you are sure there is no non-VDS busmaster in the system.  If you MUST
+override this safety check, define the DOS environment variable:
+
+     set BUSMASTER=VDS
+
+Use this option only if you are positive that you do not have a
+busmastering device or that your device has VDS support.  See the
+README file for more information on busmastering controllers.
+
+
+FILES and BUFFERS:
+FILES= in CONFIG.SYS set too low (fewer than 25) can result in Windows
+failing to load certain files or fonts properly.  Windows may also
+generate an "UNRECOVERABLE APPLICATION ERROR".
+
+BUFFERS= in CONFIG.SYS set to fewer than 3 will result in unpredictable
+and undesirable results.  If you are running disk caching software,
+BUFFERS can be reduced to a minimum of 3.
+
+EMS PAGE FRAME:
+If the EMS page frame is located in conventional memory (at address
+9000 or below), applications that use EMS memory may fail under Windows
+3.x.  If an application using EMS memory does fail under Windows, try
+to relocate the EMS page frame in the high DOS area instead of
+conventional memory.  This can be done by reconfiguring adapters to
+allow for at least 64KB contiguous address space in high DOS memory in
+which to place the EMS page frame.
+
+TOKEN RING:
+If you see the following error message while attempting to enter
+Windows 3.x with Token Ring in a Novell network environment:
+
+"Cannot install the Windows 386 enhanced memory driver"
+
+Try loading the DXMT0MOD.SYS driver along with DXMA0MOD.SYS and
+DXMC0MOD.SYS in order to run 386 Enhanced mode.
+
+
+                    **** Windows 3.0 Specific ****
+
+BlueMAX is compatible with Windows 3.0 in 386 Enhanced and Real mode
+ONLY.  The following notes should be helpful when running BlueMAX and
+Windows 3.0.
+
+SYSTEM.INI OPTIONS:
+There are potential conflicts with Windows 3.0 when the address space
+normally occupied by the system ROM is remapped.  Because memory
+managers frequently remap system ROM address space, the following
+statement must be added to the [386Enh] section of SYSTEM.INI:
+
+    SystemROMBreakPoint=FALSE
+
+
+NETWORK ADAPTERS:
+Network adapters often use IRQ 3, which conflicts with COM2.  If your
+machine has this interrupt conflict, Windows 3.0 will not work
+properly.
+
+An anomaly in Windows 3.x can cause networks to fail when they are
+configured to use other than IRQ 3.  A solution to this problem and
+information on its use may be found on the CompuServe Novell forum in
+the form of VPICDA.386.  You need a device statement in the [386Enh]
+section of SYSTEM.INI to load this VxD.
+
+

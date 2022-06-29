@@ -1,0 +1,269 @@
+                               PACK-LISTE
+===========================================================================
+Hinweis: Der folgende Text wurde ohne deutsche Umlaute geschrieben,
+sodass Sie die Datei in DOS und in Windows problemlos lesen koennen!
+===========================================================================
+Die folgende Tabelle listet die Qualitas MAX-Dateien und ihre Funktionen auf.
+
+Dateien auf Diskette
+=======================
+Diese Dateien finden Sie auf den Qualitas MAX Disketten:
+
+386MAX.1                Qualitas MAX Dateien auf Disk 1, komprimiert
+386MAX.2                Qualitas MAX Dateien auf Disk 2, komprimiert
+DISK1                   Kennzeichnet Installationsdiskette 1.
+DISK2                   Kennzeichnet Installationsdiskette 2.
+SETUPDOS.CFG            Konfigurationsdatei fuer Setup.
+SETUPDOS.HLP            Hilfedatei fuer das DOS-Setup.
+SETUPDOS.OVL            Qualitas MAX DOS-Installationsprogramm,
+                        aufgerufen von Setup.exe.
+QLOGO.OVL               Grafik-Emblem.
+SETUP.HLP               Windows-Hilfedatei fuer Setup.
+SETUP.EXE               Installationsprogramm.
+
+
+Windows-Dateien
+==================
+Die folgende Datei wird vom Setup-Programm im Windows-Verzeichnis angelegt:
+
+QMAX.INI                Initialisierungsdatei fuer Qualitas MAX Programme.
+
+Die folgende Datei wird vom Setup-Programm in das Windows\System Verzeichnis
+kopiert:
+
+GOAHEAD.DRV             Windows-Treiber fuer Go Ahead.
+
+Die folgende Datei wird nur dann in das Windows\System Verzeichnis kopiert,
+wenn sie dort noch nicht vorhanden ist oder die vorhandene Version aelter
+als die zu installierende Datei ist:
+
+CTL3DV2.DLL             Dynamic Linked Library fuer 3-D Efekte
+                        in Dialogfeldern.
+
+
+Qualitas MAX Dateien
+============================
+Die folgenden Dateien werden vom Setup-Programm in das Qualitas MAX
+Verzeichnis kopiert:
+
+386DISK.SYS             Dieses Programm simuliert ein Diskettenlaufwerk im
+                        im RAM-Speicher. Sie koennen die RAM-Disk in
+                        eXtended Memory, EMS oder XMS-Speicher anlegen.
+                        Das virtuelle Laufwerk erfordert Qualitas MAX.
+386LOAD.CFG             Konfigurationsdatei fuer den Programmlader 386LOAD.
+386LOAD.COM             Programmlader fuer speicher-residente Software.
+386LOAD.SYS             Programmlader fuer Geraetetreiber.
+(386MAX.COM)            Nur aus aelteren Installationen vorhanden;
+                        siehe 386UTIL.COM, welches das alte Dienstprogramm
+                        vollstaendig ersetzt.
+386MAX.LST              Auszug aus der STRIPMGR.LST. Diese Datei wird nur
+                        verwendet, wenn Sie Qualitas Software entfernen
+                        moechten.
+386MAX.PRO              Qualitas MAX Profildatei, enthaelt Qualitas MAX
+                        Optionen fuer Einstellungen des Memory Managers.
+386MAX.SWP              Auslagerungsdatei fuer DPMI-Anwendungen;
+                        Datei-Attribut: "versteckt" (hidden).
+386MAX.SYS              386MAX.SYS ist der Geraetetreiber, der die
+                        Qualitas MAX Kernfunktionen bereitstellt.
+386MAX.VXD              386MAX.VXD Der Windows 3.x kompatible Treiber,
+                        wird automatisch von 386MAX.SYS aufgerufen.
+386UTIL.COM             Zeigt Ihnen eine Vielzahl von Einzelheiten ueber
+                        die Speicherbelegung Ihrer Maschine.
+ASQ.EXE                 Hauptprogramm ASQ. Macht Sie zum Spezialisten
+                        fuer Memory Management.
+ASQ.HLP                 Hilfe-Datei fuer ASQ.
+AUTO_WMX.BAT            Eine von Maximize erzeugte Datei.
+AUTO_WMX.CFG            Eine von Maximize erzeugte Datei.
+AUTO_WMX.$$$            Eine von Maximize erzeugte Datei.
+BATPROC.EXE             Dient Qualitas MAX als interner Ersatz fuer
+                        COMMAND.COM und bietet ihm umfassendere Kon-
+                        trolle darueber, welche Programme ein RESIDENTES
+                        Laden angefordert haben.
+BATPROC.UMB             Eine von Maximize erzeugte Datei.
+CFG_SYS.$$$             Eine von Maximize erzeugte Datei.
+DISK1                   Kennzeichnet "Installationsdiskette" 1.
+DISK2                   Kennzeichnet "Installationsdiskette" 2.
+DOSHELP.ADD             Diese Datei ergaenzt die DOS DOS 5/6 Hilfe um
+                        Qualitas MAX Einzelheiten.
+DOSM95F.PIF             DOSMAX PIF-Datei fuer eine DOS Vollbild-Sitzung
+                        in Windows 95.
+DOSM95W.PIF             DOSMAX PIF-Datei fuer eine DOS Fenster-Sitzung
+                        in Windows 95.
+DOSMAX.ICO              Symbol (Icon) für die DOSMAX Komponenten.
+DOSMAX16.DLL            Dynamic Linked Library fuer die
+                        DOSMAX 16-Bit Unterstützung
+DOSMAX32.DLL            Dynamic Linked Library fuer die
+                        DOSMAX 32-Bit Unterstützung
+DOSMAXF.PIF             DOSMAX PIF-Datei fuer eine DOS Vollbild-Sitzung
+                        in Windows 3.1x.
+DOSMAXF.QPE             DOSMAX PIF-Erweiterungsdatei dazu
+                        (lesbar mit dem Qualitas PIF Editor)
+DOSMAXW.PIF             DOSMAX PIF-Datei fuer eine DOS Fenster-Sitzung
+                        in Windows 3.1x.
+DOSMAXW.QPE             DOSMAX PIF-Erweiterungsdatei dazu
+                        (lesbar mit dem Qualitas PIF Editor)
+EDITOR.BAT              DOS-Stapeldatei zum Aufruf des DOS MAX-Editors.
+ERRMAXIM.BAT            Diese DOS Stapeldatei ruft PREMAXIM.BAT
+                        bei bestimmten Fehlern auf.
+EXTRADOS.MAX            Programmdatei fuer ExtraDOS.
+EXTRADOS.PRO            Profildatei, die MAXIMIZE anlegt und damit
+                        ExtraDOS Konfigurations-Optionen speichert.
+EVAP.EXE                Wird zum Entfernen (De-Installation) des
+                        Qualitas MAX verwendet
+GOAHEAD.EXE             Programmdatei fuer Go Ahead.
+HHELP.EXE               Programmdatei des DOS Hilfe-Betrachters.
+HHELP.INI               Initialisierungs-Datei fuer den DOS Hilfe-Betrachter.
+LASTPHAS                Zeichnet die Phase des erfolgreich abgeschlossenen
+                        Maximize-Durchlauf auf (1,2 oder 3).
+MAX.EXE                 Uebergeordnetes Hauptprogramm, aus dem heraus
+                        u.a. die Routinen MAXIMIZE und ASQ aufgerufen
+                        werden koennen und das einen Editor sowie
+                        sowie Datei-Betrachter beinhaltet.
+MAX.HLP                 Hilfedatei fuer die MAX-Oberflaeche.
+MAXEDIT.EXE             Programmdatei fuer MAXedit.
+MAXHILFE.BAT            DOS-Stapeldatei zum Aufruf des DOS Hilfe-Betrachters.
+MAXHELP.HLP             Hilfedatei fuer Qualitas MAX.
+MAXIMIZE.BST            Datei, in der Informationen ueber die von
+                        Maximize ermittelte optimale Konfiguration
+                        aufgezeichnet sind.
+MAXIMIZE.CFG            Datei mit besonderen Konfigurations-Optionen
+                        zu Maximize.
+MAXIMIZE.EXE            Maximize analysiert das System und erstellt
+                        die ideale Ladereihenfolge fuer die vorhandenen
+                        Geraetetreiber und speicher-residenten Programme.
+MAXIMIZE.HLP            Hilfe-Datei fuer MAXIMIZE..
+MAXIMIZE.INI            Initialisierungsdatei mit Einstellungen,
+                        verwendet von Maximize.
+MAXIMIZE.LOG            Protokolldatei ueber alle Maximize-Laeufe.
+MAXIMIZE.OUT            Interne Datei, verwendet waehrend Maximize.
+MAXIMIZE.TRM            Datei mit Befehlen, die fuer Qualitas MAX
+                        besondere Bedeutung haben; Oberflaechen- und
+                        Menue-Programme sowie speicher-residente Programme,
+                        die Maximize ignorieren sollte.
+MAXMETER.EXE            Programmdatei fuer MAXmeter.
+MEMLIMIT.EXE            Begrenzt Speicherbelegung fuer diverse Speicher-
+                        Standards.
+PACKING.LST             Liste der Qualitas MAX Dateien und deren Bedeutung.
+PNP.TXT                 Liste der Plug-n-Play Geraete-IDs.
+PREINST.BAT             DOS-Stapeldatei, mit deren Hilfe die Konfiguration
+                        auf den Stand vor der Qualitas MAX Installation
+                        zurueckgesetzt wird.
+PREMAXIM.BAT            DOS-Stapeldatei, die Ihnen hilft, Ihre
+                        CONFIG.SYS und alle vorhandenen Stapel-
+                        dateien auf den Stand vom dem letzten
+                        Maximize-Lauf zurueckzusetzen.
+QLOGO.OVL               Grafik-Emblem.
+QMT.EXE                 Programmdatei fuer den Qualitas Memory Tester.
+QPIFEDIT.EXE            Qualitas PIF Editor fuer Windows
+QPOPUP.EXE              Windows-Programm, das Programme mit grafischer
+                        Anzeige ueberwacht. Warnt vor Konflikten mit der
+                        Qualtias DOSMAX Funktion.
+QPOPUP.INF              Datei mit einer Liste fuer Programme, die eine
+                        Sonderbehandlung fuer DOSMAX-Fenster benoetigen, sodass
+                        Konflikte mit grafischer Anzeige vermieden werden.
+QSTRIP.BAT              DOS-Stapeldatei, die Qualitas Dienstprogramme
+                        aus Systemdateien entfernt.
+QUALITAS.LST            Liste fuer STRIPMGR zum Entfernen der Qualitas
+                        Dienstprogramme aus den Systemdateien.
+RDOSMAX.EXE             Programm zum Eintrag der DOSMAX-verwandten Programme
+                        in der Windows Registrierdatenbank.
+README                  Text-Datei mit den neuesten wichtigen Ein-
+                        zelheiten zu Qualitas MAX, die nach der Drucklegung
+                        des Ihnen vorliegenden Handbuches noch
+                        erwaehnenswert wurden. Zusaetzlich erhalten
+                        Sie Hinweise zu besonderen Hardware- und
+                        Software-Konfigurationen.
+README.BAT              Hilft Ihnen, Text-Dateien (in DOS) auf Ihren Bildschirm
+                        zu bringen. Kann verwendet werden, um die wichtigen
+                        Informationen aus Text-Dateien anzusehen.
+REORDER.CFG             ASCII-Datei zur Voreinstellung der Sortier-
+                        gruppen, die waehrend der Neuordnung in Phase III
+                        der MAXIMIZE-Routine verwendet wird, damit der
+                        Anwender dieses nicht von Hand durchfuehren muss.
+RMOLDMAX.BAT            Entfernt die waehrend einer Neuinstallation evtl.
+                        angelegten temporaeren Zwischen-Verzeichnisse,
+                        die zur Sicherung aelterer MAX-Installationen
+                        dienen. Benutzen Sie diesen Befehl AUSSCHLIESS-
+                        LICH unter DOS und nur dann, wenn Ihre neueste
+                        Installation erfolgreich war und Sie SICHER sind,
+                        dass Sie nicht mehr auf den vorherigen Stand
+                        zurueckkehren wollen.
+ROMSRCH.COM             Gewinnt HiDOS-Speicher aus ungenutzten
+                        ROM-BIOS Bereichen.
+ROMSRCH.OUT             Datei mit Information ueber Bereiche, die ROMSRCH
+                        als nutzbar erkannt hat.
+SETEWV.EXE              Interne Hilfsroutine fuer DOSMAX.
+SETUP.EXE               Installationsprogramm.
+SETUP.HLP               Hilfedatei zum Setup-Programm.
+SETUP.ICO               Symbol (Icon) fuer das SETUP-Programm.
+SETUPDOS.CFG            Konfigurationsdatei fuer Setup.
+SETUPDOS.HLP            Hilfedatei zum DOS-Setup.
+SETUPDOS.OVL            Qualitas MAX DOS-Installationsprogramm
+                        (wird von SETUP.EXE aufgerufen).
+SFTTABS.DLL             3-D Registerkarten-Steuerung fuer die Toolbox.
+SNAPSHOT.EXE            Hilft Ihnen, einen SCHNAPPSCHUSS von Ihrer
+                        System-Einstellung anzufertigen, ohne dass Sie
+                        die MAX-Oberfaeche bemuehen muessen.
+STRIPMGR.EXE            STRIPMGR.EXE liest CONFIG.SYS, AUTOEXEC.BAT
+                        sowie alle Batch-Dateien, die von AUTOEXEC
+                        aufgerufen werden, entfernt auf Wunsch 386-
+                        Speicherverwaltungs-Programme und mit diesen
+                        zusammenhaengende andere Programme bzw. deren
+                        Aufrufe.
+STRIPMGR.LST            Datei mit einer Liste von Speicher-
+                        Verwaltern, die aus CONFIG.SYS, AUTOEXEC.BAT
+                        entfernt werden. Ebenso aus allen Batch-Dateien,
+                        die von AUTOEXEC.BAT aufgerufen werden.
+STRIPMGR.PIF            PIF-Datei, verwendet zum Entfernen (De-Installation)
+                        des Qualitas MAX.
+TOOLBOX.EXE             Programm fuer die Toolbox.
+WINMAXIM.EXE            Windows Maximize Programm; analysiert das System
+                        und erstellt die ideale Ladereihenfolge fuer die
+                        vorhandenen Geraetetreiber und speicher-residenten
+                        Programme.
+XLAT.COM                Verschiebt VGA- und EGA-BIOS Routinen in den
+                        Monochrom-Bereich bei kompatiblen Systemen.
+_MXIMIZE.BAT            Eine von Maximize erzeugte Datei.
+
+
+Sicherungsdateien
+==================
+Die folgenden Dateien werden von Setup oder Maximize als Sicherung
+der entsprechenden Originaldateien angelegt:
+
+Dateiname.nnn           Sicherungskopie der entsprechenden Datei vor
+                        jeweiliger Änderung der Qualitas MAX- und Windows-
+                        Dateien (wobei n=ganzzahliger Wert).
+Dateiname.ADD           Datei mit notwendigen Ergaenzungen/Aenderungen
+                        fuer Ihre Systemdateien mit gleichem Namen.
+                        Hilfreich, wenn Sie die Aenderungen/Ergaenzungen
+                        nicht automatisch vornehmen lassen.
+Dateiname.DIF           Datei mit Markeriung der Aenderungen, die INSTALL
+                        in Systemdateien vorgenommen hat.
+Dateiname.SAV           Sicherungsdatei der urspruenglichen System-
+                        Startdateien, Qualitas MAX und Windows-Dateien
+                        mit gleichem Namen; diese entsprechen dem Stand
+                        vor Ausführung des Qualitas MAX Setup Programmes.
+
+
+Dateien im Stammverzeichnis
+===========================
+Die folgenden Dateien werden von STRIPMGR.EXE im Stammverzeichnis
+angelegt:
+
+PRESTRIP.BAT            Stapeldatei, mit der Sie Ihre Konfiguration
+                        auf den Stand vor Ausfuehrung des STRIPMGR
+                        Programmes zuruecksetzen koennen.
+CONFIG.nnn              Sicherungskopie Ihrer CONFIG.SYS-Datei vor
+                        dem letzten Aufruf von STRIPMGR.
+AUTOEXEC.nnn            Sicherungskopie Ihrer AUTOEXEC.BAT-Datei
+                        vor dem letzten Aufruf von STRIPMGR.
+
+-----------------------------------
+Copyright Qualitas.  Qualitas, Inc.
+8601 Georgia Avenue, Suite 908, Silver Spring, MD 20910, USA
+Qualitas MAX ist ein Warenzeichen und Qualitas ist in den USA ein
+eingetragenes Warenzeichen von Qualitas, Inc. Alle weiteren Produktnamen
+und Warenzeichen sind Warenzeichen oder eingetragene Warenzeichen der
+jeweiligen Eigentuemer.
+

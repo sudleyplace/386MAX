@@ -1,0 +1,232 @@
+The following is list of BlueMAX files and their functions.
+
+INSTALL.EXE and UPDATE.EXE decompress the files from BlueMAX.1.
+
+                 *    Indicates a file which must be present for BlueMAX
+                      to operate.
+
+                 **   Indicates a file which must be present to achieve
+                      optimal performance.
+
+                 ^    Indicates a file which must be present for ASQ to
+                      operate.
+
+                 ~    Indicates a file which must be present for MAX to
+                      operate
+
+                 &    Necessary for Windows 3.x support.
+
+                      A file with no indicator next to it can be removed
+                      safely at any time.
+
+
+ *BlueMAX.SYS           BlueMAX.SYS is the device driver which
+                        provides the core of BlueMAX support.
+
+ *BlueMAX.PRO           BlueMAX Profile contains BlueMAX configuration
+                        options.
+
+ *BlueMAX.COM           See 386UTIL.COM which supercedes this file.
+
+ *&BlueMAX.VXD          BlueMAX.VXD is the Windows 3.x compatible
+                        driver automatically invoked by BlueMAX.SYS.
+
+ *386LOAD.SYS           The program loader for device drivers.
+
+ *386LOAD.COM           The program loader for memory resident
+                        programs.
+
+ *386LOAD.CFG           The configuration file for the program loader
+                        386LOAD.
+
+ *386UTIL.COM           Enables you to display a variety of
+                        information about your system's memory usage.
+
+ *XLAT.COM              Relocates VGA and EGA BIOSes into the monochrome
+                        display area on compatible systems.
+
+ **@xxxx.BCF            BIOS Compression Files. One is unique to each                        to each system.
+                        system.
+
+ **BATPROC.EXE          BATPROC.EXE serves as a replacement for
+                        COMMAND.COM and allows Maximize greater control
+                        in determining which programs have requested
+                        to remain resident.
+
+ **BCF.LST              The list of BIOS Compression Files checked by
+                        Install and Maximize.  All unnecessary BCFs are
+                        deleted from the BlueMAX directory.
+
+ **&DOSMAXF.PIF         The DOSMAX Full screen DOS prompt PIF.
+ **&DOSMAXF.QPE         The DOSMAX Full screen PIF readable by the Qualitas PIF
+                        Editor.
+ **&DOSMAXW.PIF         The DOSMAX Windowed DOS prompt PIF.
+ **&DOSMAXW.QPE         The DOSMAX Windowed PIF readable by the Qualitas
+                        PIF Editor.
+
+ **ExtraDOS.MAX         The ExtraDOS executable program.
+
+ **ExtraDOS.PRO         A profile created during Maximize containing ExtraDOS
+                        configuration options.
+
+ **INSTALL.EXE          The executable Install program.
+
+ **INSTALL.HLP          The file containing help for Install.
+
+ **INSTALL.CFG          The file containing configuration information
+                        for Install.
+
+ **MAXIMIZE.CFG         A file containing special Maximize configuration
+                        options.
+
+ **MAXIMIZE.EXE         Maximize is a program that determines the
+                        optimal loading sequence for your TSR and
+                        device drivers.
+
+ **MAXIMIZE.TRM         A file containing BlueMAX related commands,
+                        shell & menu programs, and memory resident
+                        programs that Maximize should ignore.
+
+ **MAXIMIZE.HLP         A file which contains help for Maximize.
+
+ **MEMLIMIT.EXE         Limits memory allocations under different memory
+                        specifications.
+
+ **QMT.EXE              The Qualitas Memory Tester executable file.
+
+ **&QPIFEDIT.EXE        The Qualitas PIF Editor for Windows.
+
+ **&QPOPUP.EXE          A Windows program that monitors graphic-based
+                        programs that may fail with the Qualitas DOSMAX
+                        feature.
+
+ **&QPOPUP.INF          A file listing programs that may require special
+                        handling in a DOSMAX window because they run in
+                        graphics mode.
+
+ **&QUALITAS.GRP        The Qualitas Group added to PROGMAN.INI that
+                        contains QPIF Editor and 2 DOSMAX DOS prompt icons.
+
+ **RAMBASIC.COM         Re-enables support for IBM BASIC on PS/2s with
+                        BIOS compression.
+
+ **REORDER.CFG          An ASCII file which pre-specifies groups to be
+                        used in the reordering process in Phase III of
+                        Maximize, so the user does not need to
+                        manually specify groups.
+
+ **ROMSRCH.COM          Recovers large areas of high DOS address space
+                        where unused ROM software resides.
+
+ **STRIPMGR.EXE         STRIPMGR.EXE scans CONFIG.SYS, AUTOEXEC.BAT
+                        and any batch files called by AUTOEXEC and
+                        optionally removes memory managers and their
+                        related programs.
+
+ **STRIPMGR.LST         A file containing a list of 386 memory
+                        managers to be removed from CONFIG.SYS,
+                        AUTOEXEC.BAT and any batch files called by
+                        AUTOEXEC.
+
+ ^ASQ.EXE               The Qualitas system analysis tool.
+
+ ^ASQ.HLP               A file containing help for ASQ.
+
+ ~MAX.EXE               Runs the MAX shell that accesses Install, Update,
+                        Maximize and ASQ and includes an editor and file
+                        viewer.
+
+ ~MAX.HLP               A file containing help for the MAX shell.
+
+  386DISK.SYS           This program simulates a disk drive on your
+                        system.  You may choose to place the data of
+                        the simulated disk in extended, EMS, or XMS
+                        memory.  This virtual disk is the only disk
+                        supported in conjunction with BlueMAX.
+
+  BlueMAX.LST           Subset of STRIPMGR.LST.  This file is referenced
+                        only if you want to strip Qualitas' software.
+
+  BlueMAX.SWP           A hidden swapfile created for DPMI applications.
+
+  BATPROC.UMB           A file created during Maximize.
+
+  DOSHELP.ADD           A file containing the help text added to DOS 5/6 help.
+
+  ERRMAXIM.BAT          A batch file which calls PREMAXIM.BAT under certain
+                        error conditions.
+
+  EDITOR.BAT            A batch file to start the MAX editor.
+
+  MAXIMIZE.DOC          A document containing MAXIMIZE.CFG options.
+
+  PACKING.LST           This text file containing BlueMAX files and functions.
+
+  PCS-COMP.SYS          A compatibility driver for the Procomm SCSI Adapter.
+
+  PREINST.BAT           A batch file which returns the configuration
+                        to a pre-BlueMAX installed state.
+
+  PREMAXIM.BAT          A batch file which restores system startup files
+                        to the state before the last pass of Maximize.
+
+  Q&A.DOC               A document containing commonly asked questions and
+                        their answers.
+
+  QSTRIP.BAT            A batch file that strips out Qualitas utilities.
+
+  QUALITAS.LST          The strip list read by STRIPMGR to strip Qualitas
+                        utilities.
+
+  QUTIL.BAT             A optional batch file created by Install for DOS
+                        MultiConfig containing QMT.
+
+  README                A text file which contains updated information
+                        about BlueMAX.  This file reflects changes that
+                        took effect after the last printing of the
+                        manual.  It also contains tips about special
+                        hardware and software configurations.
+
+  README.BAT            Enables you to display text files on your
+                        screen.  May be used to view current
+                        information about the BlueMAX system provided
+                        in text files.
+
+  RMOLDMAX.BAT          Removes BlueMAX backup directories.
+
+  SLV-COMP.SYS          A compatibility driver for Sigma LaserView monitors.
+
+  SNAPSHOT.EXE          Enables you to take a snapshot of your system
+                        without having to go into the MAX shell.
+
+  STRIPMGR.DOC          A file containing documentation for STRIPMGR
+
+  WINDOWS.DOC           A text file which gives information about
+                        compatibility and special installation
+                        instructions for Windows versions.
+
+The following files are created for backup purposes by running Install and/or
+Maximize:
+
+  filename.nnn          Backups of system startup files, 386MAX and Windows
+                        files with the same filenames.
+
+  filename.ADD          Files containing the necessary statements to add to
+                        the system startup files by the same names if you
+                        elect not to allow Install to make changes
+                        automatically.
+
+  filename.DIF          Files highlighting line-by-line changes made to
+                        the system startup files by Install.
+
+ The following files are created by running STRIPMGR.EXE and copied into
+ the root directory:
+
+   PRESTRIP.BAT         A batch file which may be used to return to the
+                        configuration used prior to using STRIPMGR.
+
+   CONFIG.nnn           A backup of the CONFIG.SYS before running STRIPMGR.
+
+   AUTOEXEC.nnn         A backup of the AUTOEXEC.BAT before running STRIPMGR.
+
+

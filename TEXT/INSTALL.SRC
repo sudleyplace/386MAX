@@ -1,0 +1,119 @@
+#ifdef LANG_GR
+; INSTALL.CFG-Datei
+;
+; Diese Datei kann SchlÅsselwîrter oder Zeilen in folgendem Format
+; enthalten:
+;
+; Kennz. Basisname
+;
+; Kennzeichen sind:
+;  P	Partitions-Treiber; mu· vor MAX geladen werden, falls MAX
+;	auf einem anderen als dem BOOT-Laufwerk installiert wurde.
+;
+;  D	anderer Treiber, der stets VOR MAX geladen werden mu·.
+;
+; Zur Zeit sind folgende SchlÅsselwîrter unterstÅtzt:
+; SNOWCONTROL	    verhindert Bildschirm-Flimmern auf CGA-Systemen
+; NOLOGO	    startet ohne grafisches-BegrÅ·ungs-Logo
+#else
+; INSTALL.CFG file
+;
+; This file may contain keywords or lines of the following format:
+;
+; Flags Basename
+;
+; Flags are:
+;  P	Partition driver; needs to be loaded before MAX if MAX is installed
+;	on a drive other than boot drive.
+;  D	Other driver which always needs to be loaded before MAX
+;
+; Currently supported keywords are:
+; SNOWCONTROL		Eliminate screen flicker on CGA-type systems
+; NOLOGO		Do not display logo using graphics characters
+#endif
+
+#ifdef LANG_GR
+; Partitions-Treiber
+ P	DMDRVR.BIN	; Disk Manager
+ P	FIXT_DRV.SYS	; Vfeatures Deluxe von Golden Bow
+ P	SSTOR.SYS	; SpeedStor
+ P	ENHDSK.SYS	; Everex/MSDOS
+ P	EDVR.SYS	; InnerSpace
+#else
+; Partition drivers
+ P	DMDRVR.BIN	; Disk Manager
+ P	FIXT_DRV.SYS	; Vfeatures Deluxe by Golden Bow
+ P	SSTOR.SYS	; SpeedStor
+ P	ENHDSK.SYS	; Everex/MSDOS
+ P	EDVR.SYS	; InnerSpace
+#endif
+
+#ifdef LANG_GR
+; andere Treiber, die vor MAX geladen werden mÅssen.
+ D	386INT15.SYS	; Treiber fÅr Microway FastCache 386 Beschl.
+			; -Karte
+ D	ADAPTEC.SYS	; Treiber fÅr Adaptec SCSI-Karte
+#error Untranslated line
+ D	ASPI3X90.SYS	; Mylex DCE 376 caching controller
+ D	ASPI4DOS.SYS	; Treiber fÅr Adaptec SCSI-Karte
+#error Untranslated lines (4)
+ D	ASPIDRVR.SYS	; ASPI Driver
+ D	ASPIKERN.SYS	; ASPI driver for AMI 44D SCSI controller
+ D	DISKLOCK.SYS	; Disk Lock
+ D	DOS4E.SYS	; Mylex DCE 376 caching controller
+ D	DOSCFG.EXE	; Treiber fÅr IOMega Busmaster. Diese beiden
+ D	DOSOAD.SYS	; Treiber mÅssen nur dann vor MAX geladen
+			; sein, wenn ein Busmaster Kontroller ver-
+			; wendet wird und KEIN anderer VDS Treiber
+			; (wie z.B. ASPI4DOS.SYS) vorhanden ist.
+#error Untranslated line
+ D	FASTBIOS.SYS	; Screen I/O accelerator, not required with 386MAX
+ D	MMIDD.SYS	; Driver fÅr AOX 486 CPU Erweiterungs-Platine
+ D	PCS-COMP.SYS	; Procomm SCSI-KompatibilitÑts-Treiber
+			; (NUR BlueMAX)
+#error Untranslated line
+ D	RAPIDBIO.SYS	; Screen I/O accelerator, not required with 386MAX
+ D	SCSIHA.SYS	; Treiber fÅr Adaptec SCSI-Karte
+ D	SCSIHA2.SYS	; Treiber fÅr Adaptec SCSI-Karte
+ D	SLV-COMP.SYS	; Sigma L*View-KompatibilitÑts-Treiber
+			; (NUR BlueMAX)
+#error Untranslated line
+ D	SLCCARD.SYS	; Driver for Cyrix CPU.
+ D	TECMAR.SYS	; TECMAR Video-Treiber
+ D	UVDS.SYS	; Ultrastore SCSI Busmaster VDS-kompatibler
+			; Treiber
+ D	XBDAFIX.SYS	; Zero-length XBDA fix driver
+#else
+; Other drivers which need to be loaded before MAX
+ D	386INT15.SYS	; Driver for Microway FastCache 386 accelerator card
+ D	ADAPTEC.SYS	; Driver for Adaptec SCSI card
+ D	ASPI3X90.SYS	; Mylex DCE 376 caching controller
+ D	ASPI4DOS.SYS	; Driver for Adaptec SCSI card
+ D	ASPIDRVR.SYS	; ASPI Driver
+ D	ASPIKERN.SYS	; ASPI driver for AMI 44D SCSI controller
+ D	DISKLOCK.SYS	; Disk Lock
+ D	DOS4E.SYS	; Mylex DCE 376 caching controller
+ D	DOSCFG.EXE	; Drivers for IOMega busmasters.  These two drivers
+ D	DOSOAD.SYS	; need only be loaded before MAX if a busmastering
+			; controller is used, and another VDS driver
+			; (such as ASPI4DOS.SYS) is not used.
+ D	FASTBIOS.SYS	; Screen I/O accelerator, not required with 386MAX
+ D	MMIDD.SYS	; Driver for AOX 486 CPU upgrade board
+ D	PCS-COMP.SYS	; Procomm SCSI compatibility driver (BlueMAX only)
+ D	RAPIDBIO.SYS	; Screen I/O accelerator, not required with 386MAX
+ D	SCSIHA.SYS	; Driver for Adaptec SCSI card
+ D	SCSIHA2.SYS	; Driver for Adaptec SCSI card
+ D	SLV-COMP.SYS	; Sigma L*View compatibility driver (BlueMAX only)
+ D	SLCCARD.SYS	; Driver for Cyrix CPU.
+ D	TECMAR.SYS	; TECMAR video driver
+ D	UVDS.SYS	; Ultrastore SCSI busmaster VDS compatibility driver
+ D	XBDAFIX.SYS	; Zero-length XBDA fix driver
+#endif
+
+#ifdef LANG_GR
+; Ende von INSTALL.CFG
+#else
+; End of INSTALL.CFG
+#endif
+
+

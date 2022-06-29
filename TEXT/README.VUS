@@ -1,0 +1,60 @@
+			      286 SUPPORT
+				MOVE'EM
+			A Program Loader for PCs
+
+
+This file contains information regarding MOVE'EM not printed in the
+Reference Guide or User Guide.
+
+
+PROGRAM LOADERS
+===============
+
+If you are currently using another 286 program loader, please remove
+references to this program in your system startup files before running
+MAXIMIZE.
+
+
+Additional MOVE'EM.MGR Options
+==============================
+
+The following MOVE'EM.MGR option is also available for use with MOVE'EM:
+
+   EMS
+
+   Purpose:	    Overrides CHIPSet support for high DOS memory
+   Syntax:	    EMS
+   MOVE'EM Default: CHIPSet support for high DOS memory
+
+In a system with both EMS 4.0 hardware and a C&T CHIPSet, MOVE'EM
+uses the CHIPSet to remap high DOS memory.  The EMS option tells
+MOVE'EM to use the EMS 4.0 hardware to create high DOS memory.
+
+Example:
+
+To create high DOS memory through EMS support on a machine with a C&T
+CHIPSet and an EMS 4.0 board, add EMS to the MOVE'EM profile.
+
+
+New MOVE'EM.SYS and MOVE'EM.COM Options
+=======================================
+
+The following MOVE'EM.SYS and MOVE'EM.COM option is available for use
+with MOVE'EM:
+
+   FLEXFRAME
+
+See Chapter 2 in the Reference Guide for a complete discussion of this
+option.
+
+
+
+EMS 4.0 BOARDS
+==============
+
+Please see EMSGUIDE.DOC, located in the MOVE'EM directory, for complete
+information on configuring EMS 4.0 boards for use with MOVE'EM.
+
+
+********************
+

@@ -1,0 +1,221 @@
+ ; REORDER.CFG   Version A    Version Date 10/03/91
+ ; (C) Copyright Qualitas, Inc. 1991-96   All Rights Reserved.
+ ;
+ ; Diese Information ist urheberrechtlich geschÅtzt.
+ ;
+ ; Reordering Control File (REORDER.CFG)
+ ; Steuerdatei fÅr die Neusortierung
+ ;
+ ; BESCHREIBUNG
+ ;
+ ; Diese Steuerdatei ist eine ASCII Datei zur Verwendung beim Neu-
+ ; sortieren von Ladebefehlen wÑhrend der Phase III von MAXIMIZE.
+ ; Sie erspart dem Anwender das Zusammenstellen von Ladegruppen per
+ ; Hand.
+ ;
+ ; Die Steuerdatei wird fÅr zwei verschiedene DurchlÑufe benutzt.
+ ; Einmal fÅr die öberarbeitung von CONFIG.SYS, zum zweiten fÅr
+ ; AUTOEXEC.BAT. FÅr jede Zeile der Steuerdatei wird in den, wÑhrend
+ ; des Maximierens speicher-residenten, Dateien CONFIG.SYS, AUTOEXEC
+ ; .BAT und den von der letzteren aufgerufenen (Åber 'call' verket-
+ ; teten) Batch-Dateien nach öbereinstimmungen gesucht.
+ ;
+ ; Jede Gruppe in der REORDER.CFG gliedert sich in eine oder mehrere
+ ; Untergruppen. Die erste Untergruppe (01) legt fest, ob die Gruppe
+ ; in CONFIG.SYS oder in AUTOEXEC.BAT vorhanden ist. D.h. mindestens
+ ; eine der Zeilen einer 01-er-Untergruppe mu· in CONFIG.SYS oder
+ ; AUTOEXEC.BAT vorkommen, damit die Gruppe berÅcksichtigt wird.
+ ; Findet sich also keine öbereinstimmung in der 01-er-Untergruppe,
+ ; wird der Rest der Hauptgruppe Åbergangen.
+ ;
+ ;
+ ; LAYOUT
+ ;
+ ; REORDER.CFG ist eine ASCII-Datei mit variablen FeldlÑngen und
+ ; Leerstellen als Feldtrenner.
+ ;
+ ; Mehrstellige Trenner und Tab-SprÅnge werden als einstellige
+ ; Trenner behandelt.
+ ;
+ ; Das angewandte tabellenartige Spaltenformat sowie eingefÅgte
+ ; Leerzeilen dienen lediglich der besseren Lesbarkeit.
+ ;
+ ; Die ersten drei Zeilen dieser Datei enthalten Kontroll-Angaben
+ ; und Copyright-EintrÑge; sie mÅssen vorhanden sein.
+ ;
+ ; FÅhrende Leerstellen in einer Zeile werden ignoriert.
+ ;
+ ; Ein Semicolon ';' an irgendeiner Stelle einer Zeile bewirkt,
+ ; da· der Rest der Zeile als Kommentar behandelt und nicht
+ ; bearbeitet wird.
+ ;
+ ; Feld 1 - Gruppen-Identifikations-Zeichenkette
+ ;
+ ;  Funktion:   Eine Zeichenkette zum Identifizieren der Gruppe.
+ ;              Die Zeichen sind willkÅrlich ausgewÑhlt und haben
+ ;              Bezug zum Gruppenthema.
+ ;
+ ; Feld 2 - Untergruppen-Zeichenfolge
+ ;
+ ;  Funktion:   1 oder 2 ASCII-Zeichen, die eine Untergruppe inner-
+ ;              halb einer Gruppe kennzeichnen. Untergruppe 01 mu·
+ ;              vorhanden sein, ebenfalls eine öbereinstimmung mit
+ ;              mindestens einem Glied der Untergruppe 01, damit
+ ;              der Rest der Gruppe bearbeitet werden kann.
+ ;
+ ;              Wenn innerhalb einer Untergruppe Wahlfreiheit unter
+ ;              mehreren Mîglichkeiten besteht, mu· fÅr jede einzelne
+ ;              davon eine eigene Zeile angelegt sein. Die Anzahl der
+ ;              Wahlmîglichkeiten ist unbegrenzt.
+ ;
+ ; Feld 3 - Sonder-Kennzeichen
+ ;
+ ;  Funktion:   kennzeichnet den Feldtyp von Feld 4
+ ;
+ ;  EintrÑge:   F - Feld 4 ist ein Dateiname (Platzhalter * ? zulÑssig)
+ ;              T - Feld 4 ist eine Text-Zeichenkette
+ ;
+ ;              Falls erforderlich, kînnen Kennzeichen zusammengesetzt
+ ;              werden.
+ ;
+ ; Feld 4 - Dateiname
+ ;
+ ;  Funktion:   Ein Dateiname (ggf. mit * ?), der zur Spezifikation
+ ;              der Datei dient, die vorhanden sein mu·, damit eine
+ ;              Zeile als Bestandteil einer Untergruppe erkannt wird.
+ ;              Pfadangaben sowie Gro·-/Kleinschreibung werden nicht
+ ;              auf öbereinstimmung abgeprÅft. Lediglich der Dateiname
+ ;              ist von Belang.
+ ;
+ ;              Standard-DOS-Platzhalter ('?', '*') werden erkannt und
+ ;              haben ihre ursprÅngliche Bedeutung.
+ ;
+ ; Feld 4 - Text-Zeichenkette
+ ;
+ ;  Funktion:   Eine Text-Zeichenkette mu· genau mit dem Zieltext vom
+ ;              Beginn der Zielzeile an Åbereinstimmen. Leerzeichen
+ ;              werden ignoriert, eine öberprÅfung auf Gro·-/ Klein-
+ ;              schreibung findet nicht statt. RegulÑre AusdrÅcke
+ ;              werden nicht unterstÅtzt.
+ ;
+ ;              Ein zum Text gehîrendes Semicolon mu· in doppelte
+ ;              Hochkommata eingeschlossen werden (";"), damit der
+ ;              Rest der Zeile nicht als Kommentar behandelt wird.
+
+ ;  GRUPPEN-DATEN
+
+ ;  Stacker
+
+ STCKR  01 F STACKER.COM
+ STCKR  02 F SSWAP.COM
+
+ ;  Superstor
+
+ SSTOR  01 F SSTORDRV.SYS
+ SSTOR  02 F DEVSWAP.COM
+
+ ;  Satisfaction FAX Board
+
+ STSFX  01 F CASMGR.EXE
+ STSFX  02 F FAXPOP.EXE
+
+ ;  Intel Connection CoProcessor
+
+ INTLCC 01 F CONNECT.EXE
+ INTLCC 02 F FAXPOP.EXE
+
+ ;  WD FASST 7000 SCSI Controller
+ ;  DOS 4.00 Driver Versions
+
+ WDFAST1 01 F SSTBIO.SYS
+ WDFAST1 02 F SSTDRIVE.SYS
+
+ ;  Novell Netware
+
+ NOV    01 F IPX.COM
+ NOV    02 F NET3.COM
+ NOV    02 F NET4.COM
+ NOV    02 F NET5.COM
+ NOV    02 F NET6.COM
+ NOV    02 F NETX.COM
+ NOV    02 F NET.COM
+ NOV    02 F XMSNET?.EXE
+ NOV    02 F EMSNET?.EXE
+ NOV    02 F RPRINTER.*
+ NOV    02 F TBMI.COM
+ NOV    03 F LOGIN.*
+
+ ;   Banyan
+
+ BAN    01 F BAN.COM
+ BAN    02 F ETHERBAN.COM       ; Banyan hardware drivers
+ BAN    02 F 3C503BAN.COM
+ BAN    02 F 3C523BAN.COM
+ BAN    02 F 3C603BAN.COM
+ BAN    02 F ARCBAN.COM
+ BAN    02 F TOKNBAN.COM
+ BAN    02 F NDTOKBAN.COM
+ BAN    02 F TOKUIBAN.COM
+ BAN    02 F TOKBANMC.COM
+ BAN    02 F IPABAN.COM
+ BAN    02 F INTERBAN.COM
+ BAN    02 F OMNIBAN.COM
+ BAN    02 F PRO4BAN.COM
+ BAN    02 F PCNETBAN.COM
+ BAN    02 F PROBAN.COM
+ BAN    02 F PROBANMC.COM
+ BAN    02 F UNGERBAN.COM
+ BAN    02 F VLANBAN.COM
+ BAN    02 F INTR2BAN.COM
+ BAN    02 F I92BAN.COM
+ BAN    02 F UBNIUBAN.COM
+ BAN    02 F WDBAN.COM
+ BAN    02 F ATTSBAN.COM
+ BAN    02 F NICMCBAN.COM
+ BAN    02 F ASYNCBAN.COM
+ BAN    02 F LSTARBAN.COM
+ BAN    02 F LSMCBAN.COM
+ BAN    02 F LSTURBO.COM
+ BAN    02 F INTELBAN.COM
+ BAN    02 F NDISBAN.COM
+ BAN    02 F HUGHSBAN.COM
+ BAN    03 F REDIR2.EXE         ; Banyan network services redirectors
+ BAN    03 F REDIR3.EXE
+ BAN    03 F REDIR4.EXE
+ BAN    03 F REDIRALL.EXE
+ BAN    03 F REDIRNP4.EXE       ; New BANYAN TSR
+ BAN    04 F PCNETB.COM         ; Banyan NETBIOS support
+ BAN    04 F PCNETBAN.COM
+ BAN    04 F TSR2A.COM          ; Banyan NETBIOS support (for Windows only)
+ BAN    05 F INNS.EXE           ; New BAYNAN TSR
+ BAN    06 F NETBIND.EXE
+ BAN    06 F ARSWAIT.EXE
+ BAN    07 F LOGIN.*
+
+ ; IBM Networks - Token Ring, Ethernet, PC Network Baseband
+
+ IBM    01 F DXMA0MOD.SYS ; Token Ring, Ethernet, PC Network Baseband
+ IBM    02 F DXMC0MOD.SYS ; Token Ring - No 3270 Emulation
+ IBM    02 F DXMC1MOD.SYS ; Token Ring - 3270 Emulation
+ IBM    02 F DXME0MOD.SYS ; Ethernet
+ IBM    02 F DXMG0MOD.SYS ; PC Network Baseband - No 3270 Emulation
+ IBM    02 F DXMG1MOD.SYS ; PC Network Baseband - 3270 Emulation
+ IBM    03 F DXMT0MOD.SYS ; Token Ring, Ethernet, PC Network - Netbios emulation
+
+ ; Lantastic
+
+ LANTST 01 F REDIR.EXE
+ LANTST 02 F NET.EXE
+ LANTST 03 F LANPUP.EXE
+ LANTST 04 F SERVER.EXE
+ LANTST 05 F NET_MGR.EXE
+ LANTST 06 F LANCACHE.EXE
+ LANTST 07 F AE2.EXE
+ LANTST 08 F AILANBIO.EXE
+
+ ; AST Power Management
+
+ ASTPOWER 01 F SLEEP.SYS
+ ASTPOWER 02 F POWER.EXE
+
+

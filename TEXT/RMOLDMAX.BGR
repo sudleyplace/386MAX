@@ -1,0 +1,52 @@
+     echo off
+     cls
+     if %1.==. goto help
+
+     if not exist OLDMAX.%1\*.* goto nofiles
+
+     echo J >  rmoldmax.rsp
+     echo Y >> rmoldmax.rsp
+     erase OLDMAX.%1 < rmoldmax.rsp
+     del rmoldmax.rsp
+
+    :nofiles
+     rmdir OLDMAX.%1 > nul
+     cls
+echo   зддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддд©
+echo   Ё  Verzeichnis OLDMAX.%1 wurde entfernt.                           Ё
+echo   юддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддды
+     goto done
+
+    :help
+echo   зддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддд©
+echo   Ё                        RMOLDMAX.BAT                             Ё
+echo   Ё                                                                 Ё
+echo   Ё    Diese Batch-Datei l■scht zuerst alle Dateien aus einem       Ё
+echo   Ё    Verzeichnis mit Sicherungskopien Ihrer alten 386MAX- oder    Ё
+echo   Ё    BLUEMAX-Installation und entfernt dann das Verzeichnis.      Ё
+echo   Ё                                                                 Ё
+echo   Ё    Die Sicherungs-Verzeichnisse heissen OLDMAX.n, wobei die     Ё
+echo   Ё    h■chste Zahl n das jeweils letzte Verzeichnis betrifft.      Ё
+echo   Ё                                                                 Ё
+echo   Ё    Es folgt eine Liste von OLDMAX-Verzeichnissen. Um ein be-    Ё
+echo   Ё    stimmtes Verzeichnis .n zu l■schen, geben Sie ein:           Ё
+echo   Ё                                                                 Ё
+echo   Ё    RMOLDMAX n                                                   Ё
+echo   Ё                                                                 Ё
+echo   Ё    Nach Bet└tigen einer beliebigen Taste sehen Sie die Liste.   Ё
+echo   юддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддды
+
+     pause > nul
+     cls
+echo   зддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддд©
+echo   Ё    OLDMAX-Sicherungs-Verzeichnisse:                             Ё
+echo   юддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддды
+     dir OLDMAX.* /p
+echo   зддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддд©
+echo   Ё  Geben Sie RMOLDMAX n ein,                                      Ё
+echo   Ё  um das OLDMAX.n-Verzeichnis zu entfernen.                      Ё
+echo   юддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддддды
+
+:done
+
+

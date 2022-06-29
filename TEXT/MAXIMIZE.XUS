@@ -1,0 +1,55 @@
+
+			    MAXIMIZE.CFG
+			    컴컴컴컴컴컴
+
+The MAXIMIZE.CFG is a file that allows special exemptions and additions
+to occur while MAXIMIZE is active.  If your 386MAX or BlueMAX
+subdirectory does not have a MAXIMIZE.CFG file, you may create one with
+any ASCII text editor.
+
+The following options are valid in the MAXIMIZE.CFG:
+
+ADFSKIP=nnnn:  Tells MAXIMIZE to skip processing a particular Adapter
+Description File (ADF) on Micro Channel machines.
+
+ADFSTATIC=nnnn:  Tells MAXIMIZE not to optimize a particular ADF on
+Micro Channel machines.
+
+BACKUP=#:  Select the number of copies of each backup file to leave in
+the 386MAX directory.
+
+BOOTDRIVE=n:  This keyword allows the user to overide automatic boot
+drive determination by specifying a specific boot drive for MAXIMIZE.
+
+NOGATE:  This keyword allows 386MAX to work around conflicts on Gateway
+PCI local bus systems using Saturn chipset and Gateway motherboard.
+
+NOEXPAND:  This keyword tell MAXIMIZE not to expand the Include or
+Common sections in a DOS 6 Multiboot environment.  Maximize does not
+process programs in these sections when NOEXPAND is specified.
+
+NOEXTRADOS:  This keyword prevents MAXIMIZE from attempting to load DOS
+subsegments into high DOS memory.
+
+NOVGASWAP:  Use of this keyword in the MAXIMIZE.CFG file allows
+Maximize to run to completion without attempting to relocate VGA ROM
+and/or RAM.
+
+NOROMSRCH:  Use of this keyword keeps MAXIMIZE from attempting to run
+ROMSRCH.  It is placed in the MAXIMIZE.CFG automatically after ROMSRCH
+has been run successfully.
+
+NOSCAN=xxxx-xxxx:  Tells MAXIMIZE not to scan this region.  NOSCAN is
+useful in cases where 386UTIL/R causes a lockup.
+
+PCIBIOS:  Ignore any NOROMSRCH and USE= in the system ROM area if
+386MAX has detected a PCI local bus BIOS.
+
+TIMEOUTDELAY=t:  Tells MAXIMIZE to continue without user input after t
+number of seconds.
+
+USECOLOR=0:  Always use monochrome for MAXIMIZE.
+USECOLOR=1:  Always use color for MAXIMIZE.
+
+
+

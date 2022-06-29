@@ -1,0 +1,95 @@
+
+STRIPMGR scans CONFIG.SYS, AUTOEXEC.BAT, and any batch files called by
+AUTOEXEC, and optionally removes memory managers and their related
+programs.
+
+The syntax is:
+
+	stripmgr [d:] [/H/R/S/T] [/A Header_Name] [~386MAX.SYS] [striplist]
+
+The switches are:
+
+	/A	Process this section only where Header_Name denotes the name
+		of the DOS 6 MultiConfig configuration block.
+
+	/H	Display the help screen.
+
+	/R	Remove load high commands for programs loaded high but don't
+		remove memory manager.														 the memory manager loaded low.
+
+	/S	Strip memory managers and their related programs located in
+		the system startup files. STRIPMGR will prompt the user before
+		removing each program, unless the /T(erse) switch is
+		specified (see below).
+
+	/T	Terse mode.  Remove ALL occurrences of memory managers and
+		their related programs without displaying status messages
+		or prompts.
+
+
+The optional arguments are:
+
+	d:		Startup drive (where CONFIG.SYS & AUTOEXEC.BAT
+			are located).
+
+	~386MAX.SYS	Don't remove references to 386MAX or any of its
+			associated programs.  (Note that the name could
+			be changed, i.e. ~QEMM.SYS to not remove any
+			references to QEMM.)
+
+	striplist	The name of the strip list file.  If not
+			specified, it defaults to STRIPMGR.LST in the same
+			directory as STRIPMGR.
+
+The format of the strip list is:
+
+: QEMM 386 from Quarterdeck
+qemm.sys
+	~loadhi
+	!noega
+
+: 386MAX from Qualitas
+386max.sys
+	~386LOAD *prog=
+
+
+Lines beginning with a : or ; are comments and are ignored, as are blank
+lines.	A program name in the left column is the memory manager name; it
+is followed by the names of its associated programs with leading tabs.
+If STRIPMGR matches the memory manager name with a name in CONFIG.SYS,
+it saves the associated programs to a "delete list" and scans CONFIG.SYS
+and AUTOEXEC (and related batch files) for a match.  Otherwise, the
+associated programs are ignored.
+
+If a program name in the left column is followed on the same line by
+another name, that second name must exist on the line for a match to
+be made.  For example:
+
+: MS-DOS 6.0
+dos umb
+	lh
+	loadhigh
+
+The word "UMB" must appear in a "DOS=" statement; for example, "DOS=HIGH,UMB"
+
+
+The associated programs have required leading characters:
+
+	!	Remove the entire line where this program name occurs
+	~	Remove the program name and any switches (/ or -) which
+		follow, but keep the remainder of the line.
+	@	Remove the program name and replace it with the name
+		immediately following.
+
+If the associated program has a ~, it can also take optional arguments.
+
+	~386LOAD GETSIZE PRGREG= TERSE
+
+will remove any matching arguments (GETSIZE, PRGREG=, TERSE) from the line.
+If the argument is preceded by an asterisk (*), it is assumed to be the
+last valid argument on the line, and everything is removed up to and
+including that argument:
+
+	~386LOAD *prog=
+
+

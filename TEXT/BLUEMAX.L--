@@ -1,0 +1,9 @@
+: This is a test strip list file for STRIPMGR
+
+: BLUEMAX
+bluemax.sys
+	~386load *prog=
+:	!386disk
+:	!ultimate
+:	!omtifix
+
