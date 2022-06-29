@@ -1,0 +1,25 @@
+; This file contains the default tone generations
+; for various events encountered when running RAMexam.
+; To enable use of these tones, specify the keyword TONE,
+; followed (optionally) by the drive, path, filename,
+; and extension of a file similat to this one.
+
+; The format of each set of tones is a sequence of one
+; or more triplets of the form
+;	(frequency, duration, pause)
+; followed by a repeat count.  To cause the tones to repeat
+; for a long time, use a large number (up to 65535).
+
+; The frequency value is units of Hz, and the duration
+; value is in units of milliseconds.
+
+startup = (200,60,30) (400,60,30) (600,60,30) (800,60,30) (1000,60,30) , 0
+startup = (200,600,30) (300,600,30) (100,600,300), 1000
+
+;;startup
+;;all-tests-complete=
+;;one-test-complete=
+;;memory-failure=
+;;parity-failure=
+
+

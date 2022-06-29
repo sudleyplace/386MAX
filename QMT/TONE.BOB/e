@@ -1,0 +1,40 @@
+   P:\PVCS\MAX\QMT\MEM_SYS.ASV Rev 1.0 (05 Sep 1995 16:55:32)
+           mem_sys.asm (05 Jun 1998 14:59:12)
+===================
+       3       3  |     page    58,122
+       4       4  |     name    MEM_SYS
+-      5          |     include DIRNTRY.INC    ; Include the file's directory entry
+       6       5  |
+       7       6  |COMMENT|        Module Specifications
+       8       7  |
+       9       8  |Copyright:  (C) Copyright 1988-93 Qualitas, Inc.
+      10       9  |
++             10  |Segmentation:  See MEM_SEGS.INC for details.
+-     11          |Segmentation:  Group PGROUP:
+-     12          |           Program segment CODE,  byte-aligned,  public, class 'prog'
+-     13          |           Group DGROUP:
+-     14          |           Data    segment DATA,  dword-aligned, public, class 'data'
+-     15          |           Data    segment DATAZ, para-aligned,  public, class 'dataz'
+      16      11  |
+      17      12  |Program derived from:  None.
+===================
+      38      33  |     include 8255.INC
+      39      34  |
++             35  |    include MEM_SEGS.INC
+      40      36  |     include MEM_TIME.INC
+      41      37  |.list
+-     42          |
+-     43          |PGROUP   group   CODE
+-     44          |DGROUP   group   DATA,DATAZ
+-     45          |CGROUP   group   CPUID_SEG
+-     46          |
+      47      38  |
+      48      39  |DATAZ    segment use16 para public 'dataz' ; Start DATAZ segment
+===================
+      57      48  |     assume  ds:DGROUP
+      58      49  |
++             50  |    extrn   CMD_FLAG:dword
+-     59          |     extrn   CMD_FLAG:word
+      60      51  |     include MEM_CMD.INC
+      61      52  |
+===================
