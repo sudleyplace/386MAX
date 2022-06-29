@@ -1,0 +1,401 @@
+.386p
+DGROUP  group   DATA
+DATA    segment use16 dword public 'data' ; Start DATA segment
+        assume  ds:DGROUP
+
+	 public	 HELP_NAVTTL
+HELP_NAVTTL	 label	 byte
+ db '                           NAVIGATING RAMexam                          '
+
+	 public	 HELP_OVRTTL
+HELP_OVRTTL	 label	 byte
+ db '                          OVERVIEW OF RAMexam                          '
+
+	 public	 HELP_TSTTTL
+HELP_TSTTTL	 label	 byte
+ db '                            ABOUT THE TESTS                            '
+
+	 public	 HELP_ERRTTL
+HELP_ERRTTL	 label	 byte
+ db '                        MEMORY AND PARITY ERRORS                       '
+
+	 public	 HELP_CMDTTL
+HELP_CMDTTL	 label	 byte
+ db '                         COMMAND LINE SWITCHES                         '
+
+	 public	 HELP_MEMTTL
+HELP_MEMTTL	 label	 byte
+ db '                                                                       '
+
+	 public	 HELP_NMITTL
+HELP_NMITTL	 label	 byte
+ db '                                                                       '
+
+	 public	 HELP_NMIXTTL
+HELP_NMIXTTL	 label	 byte
+ db '                                                                       '
+
+	 public	 HELP_NMI,@HNMI_NCOL,@HNMI_NROW
+HELP_NMI	 label	 byte
+@HNMI_NCOL equ 71
+ db '                      A PARITY ERROR HAS OCCURRED                      '
+        public  HELP_NMI_ADDR
+ db     '                           AT ADDRESS '
+HELP_NMI_ADDR db '______                           '
+ db '                                                                       '
+ db 'RAMexam has encountered a parity error in the memory in this system.   '
+ db 'The recommended course of action is to discuss the results of this test'
+ db 'with your authorized dealer.  It is important to note that the address '
+ db 'given is the physical address (as seen by the CPU) of the faulty memory'
+ db 'chip.  Because the correspondence of physical addresses with actual    '
+ db 'memory chips differs from system to system, RAMexam cannot point to a  '
+ db 'particular chip within the system.                                     '
+ db '                                                                       '
+ db 'Please consult with your authorized dealer on corrective options.      '
+ db '                                                                       '
+ db 'Do you wish to continue finding memory errors [Yes/No/Auto]?           '
+
+@HNMI_NROW equ ($-HELP_NMI)/@HNMI_NCOL
+
+	 public	 HELP_NMIX,@HNMIX_NCOL,@HNMIX_NROW
+HELP_NMIX	 label	 byte
+@HNMIX_NCOL equ 71
+ db '                  A SPURIOUS PARITY ERROR HAS OCCURRED                 '
+        public  HELP_NMIX_ADDR
+ db     '                           AT ADDRESS '
+HELP_NMIX_ADDR db '________                         '
+ db '                                                                       '
+ db 'RAMexam has encountered a spurious parity error in the memory in this  '
+ db 'system.  The recommended course of action is to discuss the results of '
+ db 'this test with your authorized dealer.  It is important to note that   '
+ db 'the address given is the physical address (as seen by the CPU) of the  '
+ db 'faulty memory chip.  Because the correspondence of physical addresses  '
+ db 'with actual memory chips differs from system to system, RAMexam cannot '
+ db 'point to a particular chip within the system.                          '
+ db '                                                                       '
+ db 'Please consult with your authorized dealer on corrective options.      '
+ db '                                                                       '
+ db 'Do you wish to continue finding memory errors [Yes/No/Auto]?           '
+
+@HNMIX_NROW equ ($-HELP_NMIX)/@HNMIX_NCOL
+
+	 public	 HELP_NAV,@HNAV_NCOL,@HNAV_NROW
+HELP_NAV	 label	 byte
+@HNAV_NCOL equ 71
+ db 'Screen Overview                                                        '
+ db '                                                                       '
+ db 'There are two RAMexam displays available, Basic and Advanced.  When    '
+ db 'RAMexam starts, it displays the Basic screen.  There are three windows '
+ db 'on the Basic display.  The window in the upper left corner of the      '
+ db 'screen displays the program name and copyright.  The window in the     '
+ db 'upper right portion of the screen displays two buttons labeled "Quick" '
+ db 'and "Full".  Select the test you want using the right and left cursor  '
+ db '(arrow) keys.  Press enter to start the test.  The third window,       '
+ db 'centered in the bottom half of the screen, displays test progress.     '
+ db '                                                                       '
+ db 'RAMexam''s Advanced screen is for users who want to see the nuts and    '
+ db 'bolts of memory testing.  Users may switch between the Advanced and    '
+ db 'Basic screens using the Alt-TAB key.                                   '
+ db '                                                                       '
+ db 'There are four windows on the Advanced display, one of which (in the   '
+ db 'top, left corner) is the same as with the Basic display.               '
+ db '                                                                       '
+ db 'The "Test Selection" window, in the top right corner of the screen, has'
+ db 'the names of the six different memory tests.  Each test name is        '
+ db 'followed by a field in which you may enter the number of times RAMexam '
+ db 'should run the test or "C" to instruct RAMexam to run the test         '
+ db 'continually.                                                           '
+ db '                                                                       '
+ db 'The "Memory to Test" window, in the lower left corner of the screen,   '
+ db 'displays the memory regions which RAMexam has identified.  Regions     '
+ db 'displayed in gray are used by other software (such as a disk cache) or '
+ db 'are not physically present; in either case, they cannot be tested.     '
+ db '                                                                       '
+ db 'The "Status" window appears in the lower right corner.  While running, '
+ db 'RAMexam reads and writes (abbreviated in the display as "Rd" and "Wr") '
+ db 'various test patterns into memory.  This activity appears in the Status'
+ db 'window.                                                                '
+ db '                                                                       '
+ db 'Various values and states are also displayed on the screen such as the '
+ db 'current delay amount, AutoMem state, and error count.                  '
+ db '                                                                       '
+ db 'The delay amount is displayed in miliseconds and is used within the    '
+ db 'Data Retention-13 Fault test.                                          '
+ db '                                                                       '
+ db 'The AutoMem state when set to ON tells RAMexam to continue             '
+ db 'automatically testing for errors after a memory error occurs.  The     '
+ db 'default setting for this state is OFF.                                 '
+ db '                                                                       '
+ db 'The error count indicates how many memory errors have occurred so far. '
+ db 'This value is most useful when running with AutoMem set to ON.         '
+ db '                                                                       '
+ db '                                                                       '
+ db 'Keyboard Overview                                                      '
+ db '                                                                       '
+ db 'The following keys are available in both Basic and Advanced screens:   '
+ db '                                                                       '
+ db '    F1        Display help                                             '
+ db '    F5        Toggle between color and monochrome displays             '
+ db '    F6        Display Set Delay Interval dialog                        '
+ db '    F7        Toggle the AutoMem state between ON and OFF              '
+ db '    F9        Same as Alt-TAB, needed for some 83-key keyboards        '
+ db '    Alt-TAB   Toggle between advanced and basic displays               '
+ db '    Esc       Halt testing or exit RAMexam                             '
+ db '                                                                       '
+ db 'The following keys are available while viewing the Basic display:      '
+ db '                                                                       '
+ db '    Cursor    Alternate between highlighting "Quick" and "Full" buttons'
+ db '    Enter     Start testing                                            '
+ db '                                                                       '
+ db 'The following keys are available while viewing the Advanced display:   '
+ db '                                                                       '
+ db '    Cursor    Select test for which to specify value                   '
+ db '    Ctl-Enter Run the highlighted test one time                        '
+ db '    H         Display values in hexadecimal format                     '
+ db '    D         Display values in decimal format                         '
+ db '    Tab       Move cursor between Test Selection window and Memory to  '
+ db '                test window if there are more memory entries than fit  '
+ db '                in a single screen.  When in the Memory to Test window '
+ db '                the cursor keys scroll the list up and down.           '
+
+@HNAV_NROW equ ($-HELP_NAV)/@HNAV_NCOL
+
+	 public	 HELP_OVR,@HOVR_NCOL,@HOVR_NROW
+HELP_OVR	 label	 byte
+@HOVR_NCOL equ 71
+ db 'What is RAMexam                                                        '
+ db '                                                                       '
+ db 'The Qualitas Memory Tester (RAMexam) uses advanced memory checking to  '
+ db 'find problems in your PC''s memory system.  RAMexam detects classes of  '
+ db 'memory errors not detectable by the basic POST test provided at        '
+ db 'boottime.  In many cases, memory fails without warning.  Symptoms of   '
+ db 'memory problems may include erratic lock-ups, loss of data, or disk    '
+ db 'corruption. Regular, extensive testing of your PC''s memory system gives'
+ db 'you an opportunity to try to track any problems before you experience  '
+ db 'the symptoms.  RAMexam warns about error conditions that can lead to   '
+ db 'these problems so that you may take appropriate steps to try to correct'
+ db 'them.                                                                  '
+ db '                                                                       '
+ db 'How Memory Fails                                                       '
+ db '                                                                       '
+ db 'System memory is fragile and may be affected by numerous circumstances '
+ db 'and conditions.  Some of the causes of memory problems include         '
+ db 'humidity, vibration, static, radiation, temperature fluctuations, and  '
+ db 'pressure changes.  Aging and deteriorating components can also cause   '
+ db 'memory failures.  Another condition that affects how memory functions  '
+ db 'is design flaws in the components.  These flaws can cause critical     '
+ db 'timing errors in memory.                                               '
+ db '                                                                       '
+ db 'How to Use RAMexam                                                     '
+ db '                                                                       '
+ db 'RAMexam installs and runs automatically in the Quick mode each time you'
+ db 'boot your system if you reply "yes" to the question asked during       '
+ db 'RSETUP.  There are advantages to checking the available portion of the '
+ db 'system memory on a daily basis.  However, you gain the maximum benefit '
+ db 'from RAMexam by testing as much of your system memory as possible      '
+ db 'regularly and by using the Full memory test.  For this reason, it is   '
+ db 'most beneficial to test your system memory without resident programs   '
+ db 'and device drivers that may use extended or expanded memory.  This     '
+ db 'group of programs includes memory management software, disk caches, and'
+ db 'RAM drives.  Periodically, weekly or even daily, you may want to boot  '
+ db 'from a boot floppy or a basic CONFIG.SYS and AUTOEXEC.BAT to ensure as '
+ db 'little RAM as possible is in use before using RAMexam to test the      '
+ db 'system memory.                                                         '
+
+@HOVR_NROW equ ($-HELP_OVR)/@HOVR_NCOL
+
+	 public	 HELP_TST,@HTST_NCOL,@HTST_NROW
+HELP_TST	 label	 byte
+@HTST_NCOL equ 71
+ db 'The Qualitas Memory Tester (RAMexam) operates based on a knowledge of  '
+ db 'how memory fails.  RAMexam employs six different tests, each targeted  '
+ db 'at specific types of memory failure.  Memory is a collection of        '
+ db 'individual bits.  At any given moment, a bit is in one of two states:  '
+ db 'ON, represented by a 1, or OFF, represented by 0 (zero).  All memory   '
+ db 'errors are characterized by one or more bits not changing to or        '
+ db 'remaining at the appropriate value.  (See "Memory Errors" elsewhere in '
+ db 'RAMexam''s on-line help.)  RAMexam uses sophisticated strategies of     '
+ db 'writing and reading memory to identify errors.  Here is a description  '
+ db 'of the six categories of errors for which RAMexam tests:               '
+ db '                                                                       '
+ db 'Stuck-At Fault:                                                        '
+ db 'A stuck-at fault occurs when one or more bits retain the value that    '
+ db 'exists in the memory when the system boots, regardless of attempts to  '
+ db 'write new values into the memory.                                      '
+ db '                                                                       '
+ db 'Transition Fault:                                                      '
+ db 'A transition fault is similar to a stuck-at fault with the exception   '
+ db 'that the value of the defective bit changes one time before it assumes '
+ db 'a "stuck" state.                                                       '
+ db '                                                                       '
+ db 'Coupling Fault:                                                        '
+ db 'A coupling fault occurs when a change to one or more bits causes an    '
+ db 'error in other bit(s).  Coupling faults fall into two categories:      '
+ db '                                                                       '
+ db '    Inversion Fault:                                                   '
+ db '    This type of error occurs when a change to one bit causes an       '
+ db '    unwanted change to another bit.                                    '
+ db '                                                                       '
+ db '    Idempotent Fault:                                                  '
+ db '    This type of error occurs when a change in one bit forces another  '
+ db '    bit into a "stuck" state.  See Stuck-At Fault above.               '
+ db '                                                                       '
+ db 'Additionally, multiple coupling errors can occur simultaneously.  These'
+ db 'are either "linked" or "unlinked" faults:                              '
+ db '                                                                       '
+ db '    Linked:   There are common bits involved in multiple errors.  For  '
+ db '    example, changing either of two bits erroneously cause a third bit '
+ db '    to change.                                                         '
+ db '                                                                       '
+ db '    Unlinked:  Multiple, independent errors.                           '
+ db '                                                                       '
+ db 'Moving Inversion Test:                                                 '
+ db 'The moving inversion test is used to catch a combination of faults     '
+ db 'including Stuck-At Faults, Unlinked Inversion Coupling Faults, most    '
+ db 'Unlinked Idempotent Coupling Faults, and Idempotent Coupling Faults    '
+ db 'linked with Inversion Coupling Faults.                                 '
+ db '                                                                       '
+ db 'Data Retention Fault:                                                  '
+ db 'A data retention fault occurs when a memory cell fails to retain its   '
+ db 'value after a certain period of time.  This type of fault is more      '
+ db 'common in SRAMs than DRAMs.  In order to detect this fault, it is      '
+ db 'necessary to delay at certain points in the test.  The amount of the   '
+ db 'delay can be changed by pressing the F6 key.                           '
+
+@HTST_NROW equ ($-HELP_TST)/@HTST_NCOL
+
+	 public	 HELP_ERR,@HERR_NCOL,@HERR_NROW
+HELP_ERR	 label	 byte
+@HERR_NCOL equ 71
+ db 'Memory can fail in a variety of ways and for any number of reasons.  In'
+ db 'some cases RAMexam will report an error caused not by faulty memory    '
+ db 'chips but by the computer hardware that manages access to the chips.   '
+ db 'Unfortunately, it is not possible for RAMexam to identify the specific '
+ db 'hardware, memory chip or otherwise, which causes an error.             '
+ db '                                                                       '
+ db 'Correcting memory system problems requires hands-on contact with the PC'
+ db 'and often involves the use of special diagnostic hardware.  For these  '
+ db 'reasons, Qualitas technical support personnel are neither trained nor  '
+ db 'available to help correct defects detected by RAMexam.  If RAMexam     '
+ db 'detects an error you should contact your dealer or qualified repair    '
+ db 'service.                                                               '
+
+@HERR_NROW equ ($-HELP_ERR)/@HERR_NCOL
+
+	 public	 HELP_CMD,@HCMD_NCOL,@HCMD_NROW
+HELP_CMD	 label	 byte
+@HCMD_NCOL equ 71
+ db '                     RAMexam COMPATIBILITY OPTIONS                     '
+ db 'K               avoid spurious keyboard lockups                        '
+ db 'NOXRAM          do not recover extra memory                            '
+ db 'TOP384          recover 384KB COMPAQ-like memory                       '
+ db 'NOPARITY        avoid spurious parity errors on certain systems        '
+ db 'NODPMI          do not use DPMI services                               '
+ db 'NOVCPI          do not use VCPI services                               '
+ db 'L               use larger of BIOS and CMOS sizes if they differ       '
+ db 'S               use smaller of BIOS and CMOS sizes if they differ      '
+ db 'V               to disable VLSI 82C480 cache controller                '
+ db 'EXT=nnnnn       to set amount of extended memory to nnnnn              '
+ db '                                                                       '
+ db '                       RAMexam TEST TYPE OPTIONS                       '
+ db 'SAF=nn          run Stuck-At Fault Test nn times                       '
+ db 'TF=nn           run Transition Fault Test nn times                     '
+ db 'UNLINV=nn       run Unlinked Inversion Coupling Fault Test nn times    '
+ db 'UNLIDM=nn       run Unlinked Idempotent Coupling Fault Test nn times   '
+ db 'LNKINV=nn       run Linked Inversion Coupling Fault Test nn times      '
+ db 'LNKIDM=nn       run Linked Idempotent Coupling Fault Test nn times     '
+ db 'MOVI=nn         run Moving Inversion Test nn times                     '
+ db 'DRD=nn          run Data Retention-13 Fault Test nn times              '
+ db 'QUICK=nn        run Quick tests nn times                               '
+ db 'FULL=nn         run Full tests nn times                                '
+ db 'ALL=nn          run all tests nn times                                 '
+ db 'DELAY=nn        delay nn milliseconds within Data Retention-13 Fault   '
+ db '                test                                                   '
+ db 'ERRCNT=nn       set the maximum # errors to be saved in memory         '
+ db 'AUTOMEM=[ON|OFF]  set the initial state of AutoMem                     '
+ db '                                                                       '
+ db '                        RAMexam DISPLAY OPTIONS                        '
+ db 'ADVANCED        start execution in advanced mode (also ADV)            '
+ db 'HEX             start execution in hexadecimal mode                    '
+ db 'NOEXIT          do not exit after running tests automatically          '
+ db 'BW or /B        force black & white display                            '
+ db 'COLOR or /C     force color display                                    '
+ db '                                                                       '
+ db '                       RAMexam SCHEDULING OPTIONS                      '
+ db 'DAILY           run RAMexam only if it has not been run since midnight '
+ db 'WEEKLY[=day]    run RAMexam only if it has not been run in the last    '
+ db '                week -- if optional day is specified, RAMexam will run '
+ db '                on or after that day of the week (Sunday=1, Monday=2,  '
+ db '                etc.)                                                  '
+ db 'MONTHLY[=date]  run RAMexam only if it has not run in the last month --'
+ db '                if option date is specified, RAMexam will run on or    '
+ db '                after that day of the month (1-31)                     '
+ db 'INTERVAL=n      run RAMexam only if at least n days have expired since '
+ db '                the last time RAMexam was run                          '
+ db 'ASK[=timeout,response] Prompt for action to take, with a default       '
+ db '                response to be used after timeout seconds:             '
+ db '                Y (Yes)      run RAMexam                               '
+ db '                N (No)       skip test and wait until next scheduled   '
+ db '                             occurrence                                '
+ db '                P (Postpone) skip test; ask again later                '
+ db 'LOG[=filename][,o]  append a log entry to RAMEXAM.LOG or other filename'
+ db '                and use o to overwrite any existing file of the same   '
+ db '                name                                                   '
+ db '                                                                       '
+ db 'OLOG[=filename]  append a log entry to RAMEXAM'',.LOG or other filename,'
+ db '                first overwriting any existing file of the same  name. '
+ db '                                                                       '
+ db '?               display help                                           '
+
+@HCMD_NROW equ ($-HELP_CMD)/@HCMD_NCOL
+
+	 public	 HELP_MEM,@HMEM_NCOL,@HMEM_NROW
+HELP_MEM	 label	 byte
+@HMEM_NCOL equ 71
+ db '                      A MEMORY ERROR HAS OCCURRED                      '
+        public  HELP_MEM_ADDR,HELP_MEM_EXP,HELP_MEM_ACT
+ db     '                           AT ADDRESS '
+HELP_MEM_ADDR db '______                           '
+ db '                                                                       '
+ db    '                      EXPECTED VALUE '
+HELP_MEM_EXP db  '__                                '
+ db     '                        ACTUAL VALUE '
+HELP_MEM_ACT db  '__                                '
+ db '                                                                       '
+ db 'RAMexam has encountered a read-write error in the memory in this       '
+ db 'system.  The recommended course of action is to discuss the results of '
+ db 'this test with your authorized dealer.  It is important to note that   '
+ db 'the address given is the physical address (as seen by the CPU) of the  '
+ db 'faulty memory chip.  Because the correspondence of physical addresses  '
+ db 'with actual memory chips differs from system to system, RAMexam cannot '
+ db 'point to a particular chip within the system.                          '
+ db '                                                                       '
+ db 'Please consult with your authorized dealer on corrective options.      '
+ db '                                                                       '
+ db 'Do you wish to continue finding memory errors [Yes/No/Auto]?           '
+
+@HMEM_NROW equ ($-HELP_MEM)/@HMEM_NCOL
+
+	 public	 MSG_ACHLP,@ACHLP_NCOL,@ACHLP_NROW
+MSG_ACHLP	 label	 byte
+@ACHLP_NCOL equ 43
+ db '                ASK command                '
+ db '                                           '
+ db '  The ASK command prompts you for          '
+ db '  confirmation before carrying out         '
+ db '  scheduled tests.  If no response is given'
+ db '  before the alloted time, the default     '
+ db '  action is carried out.                   '
+ db '                                           '
+ db '  Possible responses are:                  '
+ db '  Yes - carry out the tests.               '
+ db '  No - no tests are done, and the prompt   '
+ db '  will not appear until the next scheduled '
+ db '  interval.                                '
+ db '  Postpone - no tests, but the prompt will '
+ db '  appear next time RAMexam is run.         '
+ db '                                           '
+@ACHLP_NROW equ ($-MSG_ACHLP)/@ACHLP_NCOL
+
+DATA    ends                   ; End DATA segment
+        end
