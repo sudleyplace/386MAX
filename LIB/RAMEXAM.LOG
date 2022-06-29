@@ -1,0 +1,579 @@
+
+RAMexam was executed on 3/2/1999 at 6:26 PM with the following
+options: ADV HEX DEBUG OLOG
+
+The following memory ranges were tested:
+
+   307K -    640K (0004CCD0-0009FFF0)    333K
+ 13520K - 130224K (00D34000-07F2C000) 116704K
+
+TESTS CANCELLED BY USER.
+
+     Test Times
+--------------------
+18:26:34 to 18:26:42, 0 - Stuck-At Fault test.
+
+*****************************************************
+
+RAMexam was executed on 3/13/99 at 8:22 PM with the following
+options: ADV HEX
+
+The following memory ranges were tested:
+
+   289K -    640K (00048540-000A0000)    351K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00080020; expected 00000000, got BEFB24AB.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/13/99 at 8:23 PM with the following
+options: ADV HEX
+
+The following memory ranges were tested:
+
+   289K -    640K (00048540-000A0000)    351K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00091000; expected 00000000, got 3E8314EB.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/13/99 at 8:23 PM with the following
+options: ADV HEX
+
+The following memory ranges were tested:
+
+   289K -    640K (00048540-000A0000)    351K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00091000; expected 00000000, got 3E8314EB.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/13/99 at 8:24 PM with the following
+options: ADV HEX
+
+The following memory ranges were tested:
+
+   293K -    640K (00049540-000A0000)    347K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00091000; expected 00000000, got 3E8314EB.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/13/99 at 8:26 PM with the following
+options: DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   298K -    640K (0004A940-000A0000)    342K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00091000; expected 00000000, got 3E8314EB.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/13/99 at 8:30 PM with the following
+options: DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   298K -    640K (0004A940-000A0000)    342K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00091000; expected 00000000, got 3E8314EB.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/13/99 at 8:31 PM with the following
+options: DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   298K -    640K (0004A940-000A0000)    342K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00091000; expected 00000000, got 3E8314EB.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/13/99 at 8:31 PM with the following
+options: DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   298K -    640K (0004A940-000A0000)    342K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00091000; expected 00000000, got 3E8314EB.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/13/99 at 8:38 PM with the following
+options: DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   298K -    640K (0004A940-000A0000)    342K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00091000; expected 00000000, got 3E8314EB.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/13/99 at 8:43 PM with the following
+options: DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   298K -    640K (0004A940-000A0000)    342K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00093000; expected 00000000, got 0274C0FE.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/13/99 at 10:54 PM with the following
+options: DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   298K -    640K (0004A940-000A0000)    342K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00092000; expected 00000000, got D374A3D3.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/14/99 at 2:22 PM with the following
+options: ADV HEX
+
+The following memory ranges were tested:
+
+   294K -    640K (00049940-000A0000)    346K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00091000; expected 00000000, got 3E8314EB.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/14/99 at 2:22 PM with the following
+options: ADV HEX
+
+The following memory ranges were tested:
+
+   294K -    640K (00049940-000A0000)    346K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00091000; expected 00000000, got 3E8314EB.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/14/99 at 2:27 PM with the following
+options: DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   298K -    640K (0004A940-000A0000)    342K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00091000; expected 00000000, got 3E8314EB.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/14/99 at 2:27 PM with the following
+options: DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   298K -    640K (0004A940-000A0000)    342K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00092000; expected 00000000, got D374A3D3.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/14/99 at 2:27 PM with the following
+options: DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   298K -    640K (0004A940-000A0000)    342K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00091000; expected 00000000, got 3E8314EB.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/14/99 at 2:29 PM with the following
+options: ADV HEX
+
+The following memory ranges were tested:
+
+   269K -    640K (00043540-000A0000)    371K
+  1092K - 131008K (00111000-07FF0000) 129916K
+
+Dword mismatch at 00044000; expected 00000000, got 01002E5B.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/14/99 at 2:29 PM with the following
+options: ADV HEX
+
+The following memory ranges were tested:
+
+   269K -    640K (00043540-000A0000)    371K
+  1092K - 131008K (00111000-07FF0000) 129916K
+
+Dword mismatch at 00091000; expected 00000000, got 3E8314EB.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/14/99 at 2:34 PM with the following
+options: DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   298K -    640K (0004A940-000A0000)    342K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00091000; expected 00000000, got 3E8314EB.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/15/99 at 3:33 PM with the following
+options: DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   298K -    640K (0004A940-000A0000)    342K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00092000; expected 00000000, got D374A3D3.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/17/99 at 3:00 PM with the following
+options: DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   298K -    640K (0004A940-000A0000)    342K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00082000; expected 00000000, got 00000517.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 3/17/99 at 9:50 PM with the following
+options: 
+
+The following memory ranges were tested:
+
+   294K -    640K (00049940-000A0000)    346K
+  2831K - 131008K (002C3C00-07FF0000) 128177K
+
+Dword mismatch at 00082000; expected 00000000, got 00000517.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 7/15/99 at 8:13 PM with the following
+options: DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   172K -    640K (0002B000-000A0000)    468K
+  2827K - 263168K (002C2C00-10100000) 260341K
+
+Dword mismatch at 08000000; expected 00000000, actual FFFFFFFF.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 7/25/99 at 1:39 PM with the following
+options: EXT DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   144K -    640K (00024000-0009FFF0)    496K
+ 13580K -  15628K (00D43000-00F43000)   2048K
+
+Dword mismatch at 00E8E170; expected 0007FFFF, actual 0007FFFF.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 7/25/99 at 1:42 PM with the following
+options: ADV HEX EXT
+
+The following memory ranges were tested:
+
+   144K -    640K (00024000-000A0000)    496K
+  1092K -   3140K (00111000-00311000)   2048K
+
+Parity error at 002D2CB8.
+     1 parity error(s).
+
+*****************************************************
+
+RAMexam was executed on 9/5/99 at 3:01 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   148K -    640K (00025000-0009FFF0)    492K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Dword mismatch at 00D46004; expected 00000000, actual 00001000.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 9/5/99 at 4:17 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   148K -    640K (00025000-0009FFF0)    492K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Dword mismatch at 00D46004; expected 00000000, actual 00001000.
+Dword mismatch at 00D46008; expected 00000000, actual 00002000.
+Dword mismatch at 07F27FFC; expected FFFFFFFF, actual FEFFFFFF.
+     3 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 9/5/99 at 4:35 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   152K -    640K (00026000-0009FFF0)    488K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Dword mismatch at 00D46004; expected 00000000, actual 00001000.
+Dword mismatch at 00D4600C; expected 00000000, actual 00020000.
+Dword mismatch at 07F27FFC; expected FFFFFFFF, actual FEFFFFFF.
+     3 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 9/5/99 at 5:28 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   152K -    640K (00026000-0009FFF0)    488K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Dword mismatch at 00025004; expected 00000000, actual 00000100.
+Dword mismatch at 00D46004; expected 00000000, actual 00000001.
+     2 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 9/5/99 at 11:07 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   148K -    640K (00025000-0009FFF0)    492K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Parity error at 00D46000.
+     1 parity error(s).
+
+*****************************************************
+
+RAMexam was executed on 9/5/99 at 11:17 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   148K -    640K (00025000-0009FFF0)    492K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Parity error at 00D46000.
+     3 parity error(s).
+
+*****************************************************
+
+RAMexam was executed on 9/5/99 at 11:22 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   148K -    640K (00025000-0009FFF0)    492K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Parity error at 00D46000.
+Parity error at 00D46004.
+     2 parity error(s).
+
+*****************************************************
+
+RAMexam was executed on 11/3/99 at 3:47 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   152K -    640K (00026000-0009FFF0)    488K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Dword mismatch at 00026000; expected 7FFFFFFF, actual FFFFFFFE.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 11/3/99 at 3:48 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   152K -    640K (00026000-0009FFF0)    488K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Dword mismatch at 00026000; expected 7FFFFFFF, actual FFFFFFFE.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 11/3/99 at 3:50 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   152K -    640K (00026000-0009FFF0)    488K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Dword mismatch at 00026000; expected 7FFFFFFF, actual FFFFFFFE.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 11/3/99 at 3:52 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   152K -    640K (00026000-0009FFF0)    488K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Dword mismatch at 00026000; expected 7FFFFFFF, actual FFFFFFFE.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 11/3/99 at 3:54 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   152K -    640K (00026000-0009FFF0)    488K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Dword mismatch at 00026000; expected 7FFFFFFF, actual FFFFFFFE.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 11/3/99 at 4:11 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   152K -    640K (00026000-0009FFF0)    488K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Dword mismatch at 00026000; expected 7FFFFFFF, actual FFFFFFFE.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 11/3/99 at 4:13 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   152K -    640K (00026000-0009FFF0)    488K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Dword mismatch at 00026000; expected 7FFFFFFF, actual FFFFFFFE.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 11/3/99 at 4:14 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   152K -    640K (00026000-0009FFF0)    488K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Dword mismatch at 0009FFEC; expected FFFFFFFE, actual 7FFFFFFF.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 11/3/99 at 5:40 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   156K -    640K (00027000-0009FFF0)    484K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Dword mismatch at 00027000; expected FFFFFFFE, actual 7FFFFFFF.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 11/3/99 at 5:42 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   156K -    640K (00027000-0009FFF0)    484K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Dword mismatch at 00027000; expected 7FFFFFFF, actual FFFFFFFE.
+     1 memory error(s).
+
+*****************************************************
+
+RAMexam was executed on 11/4/99 at 6:47 PM with the following
+options: DEBUG DEBUG ADV HEX
+
+The following memory ranges were tested:
+
+   160K -    640K (00028000-0009FFF0)    480K
+ 13592K - 130208K (00D46000-07F28000) 116616K
+
+Dword mismatch at 00028000; expected FFFFFFFF, actual FFFFFFFE.
+     1 memory error(s).
