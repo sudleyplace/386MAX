@@ -1,0 +1,360 @@
+//Microsoft App Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+// $Header:   P:/PVCS/MAX/CYASETUP/CYASETUP.RCV   1.7   24 Jan 1997 11:08:54   PETERJ  $
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "set_ids.h"
+#include "cya_ids.h"
+#include "cversion.h"
+#include <cyaver.h>
+#include <common.ver>
+
+/////////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MODELESS DIALOG DISCARDABLE  20, 20, 310, 69
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            SETICON,-1,6,6,18,20
+    CTEXT           "",IDC_STATUS1,43,8,224,11
+    LTEXT           "",IDC_STATUS2,8,33,294,27
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 225, 79
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "About Qualitas Setup."
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,88,58,50,14
+    LTEXT           "Qualitas Setup Version 1.000.000.000",IDC_VERSION,38,21,
+                    150,11
+    LTEXT           "Copyright (c) 1996 Qualitas, Inc.  All Rights Reserved",
+                    IDC_COPY,21,37,183,12
+    ICON            SETICON,-1,10,6,18,20
+END
+
+IDD_WELCOME DIALOG DISCARDABLE  0, 0, 221, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Welcome"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Continue",IDOK,19,64,50,14
+    PUSHBUTTON      "&Exit",IDCANCEL,85,64,50,14
+    LTEXT           "Welcome to the Setup program for Qualitas C.Y.A. This program will install Qualitas C.Y.A. on your system. ",
+                    IDC_STATIC,12,12,197,36
+    PUSHBUTTON      "&Help",IDM_HELP,151,64,50,14
+END
+
+IDD_DIRECTORY DIALOG DISCARDABLE  0, 0, 275, 93
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "C.Y.A. Directory"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Continue",IDOK,14,67,50,14
+    PUSHBUTTON      "&Exit",IDCANCEL,146,67,50,14
+    EDITTEXT        IDC_INSTDIR,12,41,248,12,ES_UPPERCASE | ES_AUTOHSCROLL
+    LTEXT           "Setup has chosen this directory for C.Y.A. installation. If you would prefer C.Y.A. to be installed into a different directory, please edit the name shown below.",
+                    IDC_TEXT,13,10,247,25
+    PUSHBUTTON      "&Help",IDM_HELP,212,67,50,14
+    PUSHBUTTON      "&Browse",IDC_BROWSE,80,67,50,14
+    LTEXT           "",IDC_STATDIR,14,39,247,17
+END
+
+IDD_DIRBROWSE DIALOG DISCARDABLE  36, 24, 169, 134
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select a directory"
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "",IFC_STATIC3,142,113,8,9,NOT WS_VISIBLE | WS_DISABLED | 
+                    NOT WS_GROUP
+    EDITTEXT        IFC_EDITTEXT1,140,109,6,12,ES_AUTOHSCROLL | 
+                    ES_OEMCONVERT | NOT WS_VISIBLE | WS_DISABLED | NOT 
+                    WS_TABSTOP
+    LISTBOX         IFC_LISTBOX1,139,106,8,9,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_DISABLENOSCROLL | NOT WS_VISIBLE | 
+                    WS_DISABLED | WS_VSCROLL
+    LTEXT           "&Directories:",IDC_STATIC,11,6,92,9
+    LTEXT           "",IFC_STATIC1,11,18,92,9,SS_NOPREFIX
+    LISTBOX         IFC_LISTBOX2,11,32,92,68,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "",IFC_STATIC2,135,109,8,9,NOT WS_VISIBLE | WS_DISABLED | 
+                    NOT WS_GROUP
+    COMBOBOX        IFC_COMBOBOX1,132,106,16,36,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | NOT WS_VISIBLE | WS_DISABLED | 
+                    WS_BORDER | WS_VSCROLL
+    LTEXT           "Dri&ves:",IFC_STATIC4,11,104,92,9
+    COMBOBOX        IFC_COMBOBOX2,11,114,92,68,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | CBS_SORT | 
+                    CBS_HASSTRINGS | WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,109,6,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,109,24,50,14,WS_GROUP
+    PUSHBUTTON      "&Help",IFC_HELP1,109,46,50,14,WS_GROUP
+    CONTROL         "",IFC_CONTROL1,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_DISABLED,134,105,8,12
+END
+
+
+IDD_EXTRACT DIALOG PRELOAD DISCARDABLE  49, 38, 221, 67
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION
+CAPTION "Extracting files"
+FONT 8, "Helv"
+BEGIN
+    ICON            SETICON,-1,12,6,18,20
+    CTEXT           "Copying ...",668,10,27,200,8
+    EDITTEXT        IDC_METER,10,43,200,14,ES_READONLY
+END
+
+IDD_TRAYASK DIALOG DISCARDABLE  0, 0, 223, 71
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Qualitas C.Y.A. Setup"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Yes",IDOK,20,42,50,14
+    PUSHBUTTON      "&No",IDCANCEL,86,42,50,14
+    LTEXT           "Would you like to add C.Y.A. to the tray area of your taskbar?",
+                    IDC_STATIC,8,12,206,20
+    PUSHBUTTON      "&Help",IDM_HELP,152,42,50,14
+END
+
+IDD_USERINFO DIALOG DISCARDABLE  0, 0, 265, 168
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "C.Y.A. User Information"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&User Name",IDC_STATIC,17,38,49,9
+    EDITTEXT        IDC_REGUSER,76,38,170,12,ES_AUTOHSCROLL
+    LTEXT           "&Organization",IDC_STATIC,17,68,49,9
+    EDITTEXT        IDC_REGORG,76,65,170,12,ES_AUTOHSCROLL
+    LTEXT           "&Serial Number",IDC_STATIC,17,99,49,9
+    EDITTEXT        IDC_REGSERIAL,76,97,170,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Continue",IDOK,48,136,50,14
+    PUSHBUTTON      "&Exit",IDCANCEL,114,136,50,14
+    PUSHBUTTON      "&Help",IDM_HELP,180,136,50,14
+    LTEXT           "Enter your user information and serial number in the boxes below.",
+                    IDC_TEXT,10,10,239,13
+END
+
+IDD_CONFIRMUSER DIALOG DISCARDABLE  0, 0, 265, 168
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "C.Y.A. User Information"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&User Name",IDC_STATIC,17,38,49,9
+    LTEXT           "&Organization",IDC_STATIC,17,68,49,9
+    LTEXT           "&Serial Number",IDC_STATIC,17,99,49,9
+    DEFPUSHBUTTON   "&Yes",IDOK,48,136,50,14
+    PUSHBUTTON      "&No",IDCANCEL,114,136,50,14
+    PUSHBUTTON      "&Help",IDM_HELP,180,136,50,14
+    LTEXT           "This is the information that you input. Is this information correct?",
+                    IDC_TEXT,10,10,239,13
+    LTEXT           "",IDC_REGUSER,77,39,177,9
+    LTEXT           "",IDC_REGORG,77,69,177,11
+    LTEXT           "",IDC_REGSERIAL,77,99,177,11
+END
+
+IDD_UNINSTALL DIALOG DISCARDABLE  0, 0, 221, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Qualitas C.Y.A. Uninstall"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Continue",IDOK,19,64,50,14
+    PUSHBUTTON      "&Exit",IDCANCEL,85,64,50,14
+    LTEXT           "This is the Qualitas C.Y.A. Uninstall program. Selecting Continue will remove C.Y.A. and the associated data files from your system. If this is not the action you desire please select Exit now.",
+                    IDC_STATIC,12,12,197,36
+    PUSHBUTTON      "&Help",IDM_HELP,151,64,50,14
+END
+
+IDD_OLDUSER DIALOG DISCARDABLE  0, 0, 265, 168
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "C.Y.A. User Information"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Continue",IDOK,60,134,50,14
+    DEFPUSHBUTTON   "&Exit",IDCANCEL,149,134,50,14
+    RTEXT           "User Name:",IDC_STATIC,17,38,49,9
+    RTEXT           "Organization:",IDC_STATIC,17,68,49,9
+    RTEXT           "Serial Number:",IDC_STATIC,17,99,49,9
+    CTEXT           "This copy of C.Y.A. has been installed by:",IDC_TEXT,10,
+                    10,239,13
+    LTEXT           "",IDC_REGUSER,77,39,177,9
+    LTEXT           "",IDC_REGORG,77,69,177,11
+    LTEXT           "",IDC_REGSERIAL,77,99,177,11
+END
+
+IDD_FILESET DIALOG DISCARDABLE  0, 0, 319, 238
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Qualitas C.Y.A. Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Continue",IDOK,45,210,50,14
+    PUSHBUTTON      "&Exit",IDCANCEL,137,210,50,14
+    PUSHBUTTON      "&Help",IDM_HELP,229,210,50,14
+    LISTBOX         IDC_FILELIST,16,42,211,101,WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "&Add File",IDC_ADDFILE,252,63,50,14
+    PUSHBUTTON      "&Delete File",IDC_DELFILE,253,104,50,14
+    LTEXT           "The files shown have been added to the list of files that C.Y.A. will ""Capture"". If you wish, you may add other files to this list now, or change the list at any time later using the C.Y.A. options menu.",
+                    IDC_STATIC,10,8,293,26
+    LTEXT           "The Windows Registry is a special case. It is not added to the Capture File List, but is included in the ""Capture"" by activating the check box below.",
+                    IDC_STATIC,15,153,289,20
+    CONTROL         "Save the Windows Registry with the Capture.",
+                    IDC_SAVEREG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,177,
+                    170,13
+END
+
+IDD_ADDFILE DIALOG DISCARDABLE  0, 0, 302, 93
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Add to C.Y.A. Capture Files"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Add this name to the capture files:",IDC_STATIC,13,14,
+                    215,10
+    EDITTEXT        IDC_NAMETOADD,11,31,218,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,29,61,50,14
+    PUSHBUTTON      "&Browse",IDC_BROWSE,238,30,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,95,61,50,14
+    PUSHBUTTON      "&Help",IDM_HELP,161,61,50,14
+END
+
+IDD_SCHEDULE DIALOG DISCARDABLE  0, 0, 250, 181
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "C.Y.A. Scheduling Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Continue",IDOK,34,148,50,14
+    PUSHBUTTON      "&Exit",IDCANCEL,100,148,50,14
+    PUSHBUTTON      "&Help",IDM_HELP,166,148,50,14
+    GROUPBOX        "Schedule Options",IDC_STATIC,49,51,160,81
+    CONTROL         "&Don't Capture Automatically",IDC_RADNOAUTO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,67,69,106,10
+    CONTROL         "Capture on &Windows Startup",IDC_RADSCHED1,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,67,87,106,9
+    CONTROL         "Capture e&very ",IDC_RADSCHED2,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,67,106,60,11
+    LTEXT           "da&ys",IDC_DAYSTAT,162,107,18,11
+    EDITTEXT        IDC_DAYS,130,105,14,12,ES_AUTOHSCROLL
+    SCROLLBAR       IDC_DAYSCROLL,144,105,11,12,SBS_VERT
+    LTEXT           "C.Y.A. can be added to your startup group so that it can ""Capture"" your configuration when Windows is started, or when Windows is started after a selected number of days. This option can also be set from the C.Y.A. option menu.",
+                    IDC_STATIC,11,9,229,35
+END
+
+IDD_PGROUP DIALOG DISCARDABLE  0, 0, 253, 185
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Choose a program group"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Continue",IDOK,35,156,50,14
+    PUSHBUTTON      "&Exit",IDCANCEL,101,156,50,14
+    PUSHBUTTON      "&Help",IDM_HELP,167,156,50,14
+    LTEXT           "&Program Groups",IDC_STATIC,26,33,63,9
+    COMBOBOX        IDC_PGLIST,24,47,201,91,CBS_SIMPLE | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Choose the program group into which you want C.Y.A. installed.",
+                    IDC_STATIC,21,9,211,14
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+SETICON                 ICON    PRELOAD DISCARDABLE "SETUP.ICO"
+SETICON1                ICON    PRELOAD DISCARDABLE "CYABOXNB.ICO"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+SETUP                   BITMAP  DISCARDABLE     "CSPLASH.BMP"
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "// $Header:   P:/PVCS/MAX/CYASETUP/CYASETUP.RCV   1.7   24 Jan 1997 11:08:54   PETERJ  $\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""set_ids.h""\r\n"
+    "#include ""cya_ids.h""\r\n"
+    "#include ""cversion.h""\r\n"
+    "#include "<cyaver.h>"\r\n"
+    "#include "<common.ver>"\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "SETCLEAN RCDATA BEGIN\r\n"
+    "#ifdef "TLOCK"\r\n"
+    "#include ""ret\\w16TL\\evap.rc""\r\n"
+    "#else\r\n"
+    "#include ""ret\\w16\\evap.rc""\r\n"
+    "#endif\r\n"
+    "END\r\n"
+    "\r\n"
+    "EVAPIF RCDATA BEGIN\r\n"
+    "#ifdef "TLOCK"\r\n"
+    "#include ""ret\\w16TL\\epif.rc""\r\n"
+    "#else\r\n"
+    "#include ""ret\\w16\\epif.rc""\r\n"
+    "#endif\r\n"
+    "END\r\n"
+    "\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef APSTUDIO_INVOKED
+////////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+SETCLEAN RCDATA BEGIN
+#ifdef TLOCK
+#include "ret\w16TL\evap.rc"
+#else
+#include "ret\w16\evap.rc"
+#endif
+END
+
+EVAPIF RCDATA BEGIN
+#ifdef TLOCK
+#include "ret\w16TL\epif.rc"
+#else
+#include "ret\w16\epif.rc"
+#endif
+END
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

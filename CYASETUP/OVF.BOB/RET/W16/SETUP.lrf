@@ -1,0 +1,13 @@
+ret\W16\progspec.obj+
+ret\W16\proglocl.obj+
+ret\W16\psdialog.obj /NOD /NOE /F /A:16 
+ret\W16\SETUP.EXE
+ret\W16\SETUP.MAP/map
+libw+
+llibcew+
+shell+
+ddeml+
+commdlg+
+ver R:\MAX\lib\Lstutil+
+R:\MAX\lib\qsetup
+CYASETUP.DEF;

@@ -1,0 +1,94 @@
+// $Header:   P:/PVCS/MAX/CYASETUP/CSETTEXT.USV   1.2   05 May 1997 11:07:56   PETERJ  $
+//------------------------------------------------------------------
+// csettext.us
+// Copyright (C) 1996 Qualitas, Inc.  All rights reserved
+// Text for cyasetup program.
+// for conditional inclusion into progspec.h in the cyasetup directory.
+//------------------------------------------------------------------
+// Translators: Translate text between quotes within the DEFVAL(  ) symbol.
+// example  - EXTERN LPSTR szEMsg_Limits DEFVAL( "System limits exceeded!" );
+// translate - "System limits exceeded!".
+// In the formatted text strings the symbols following the % symbol,
+// ( examples %s %d %ld %u %x %c )
+// are placeholders for data inserted by the program, such as numbers,
+// filenames, drive letters, etc. In the case where several such
+// symbols are in one text string, the order of appearance must 
+// be maintained.
+// The symbol \n is a newline character that will force characters following
+// the symbol to the next display line.
+//------------------------------------------------------------------
+
+//------------------------------------------------------------------
+// Text.
+//------------------------------------------------------------------
+EXTERN LPSTR szC_ProgName       DEFVAL( "Qualitas C.Y.A. Setup" );
+EXTERN LPSTR szC_UnProgName     DEFVAL( "Qualitas C.Y.A. Uninstall" );
+EXTERN LPSTR szC_IconTitle      DEFVAL( "Qualitas C.Y.A." );
+EXTERN LPSTR szC_SetTitle       DEFVAL( "Setup C.Y.A." );
+EXTERN LPSTR szC_UnTitle        DEFVAL( "Uninstall C.Y.A." );
+EXTERN LPSTR szC_DefaultGroup   DEFVAL( "Qualitas CYA" );
+
+    // messages.
+EXTERN LPSTR szMsg_TrayFound    DEFVAL( "Uninstall has detected Traynote is installed.\nWould you like to uninstall Traynote?" );
+EXTERN LPSTR szMsg_ExitRun      DEFVAL( "Qualitas C.Y.A. has been successfully installed\nWould you like to run C.Y.A. now?" );
+
+EXTERN LPSTR szEMsg_DataDir    DEFVAL( "Can't create data directory!" );
+EXTERN LPSTR szEMsg_Limits     DEFVAL( "System limits exceeded!" );
+EXTERN LPSTR szEMsg_NotValidSN DEFVAL( "You have not entered a valid Serial Number!" );
+EXTERN LPSTR szEMsg_Running    DEFVAL( "C.Y.A. is currently running.\nShutdown C.Y.A. and then rerun Uninstall." );
+EXTERN LPSTR szEMsg_InstOnly   DEFVAL( "Multiple instances of C.Y.A. have been detected. You must run Uninstall in each installed environment to completely uninstall C.Y.A." );
+
+EXTERN LPSTR szEMsg_NotDone    DEFVAL( "Installation of C.Y.A. did not complete.\nPlease run Setup again to install C.Y.A." );
+EXTERN LPSTR szEMsg_UnNotDone  DEFVAL( "UnInstall of C.Y.A. aborted." );
+EXTERN LPSTR szEMsg_BadGroup   DEFVAL( "You have 40 program groups, the maximum allowed by Windows. Please select an existing group to install C.Y.A. into." );
+EXTERN LPSTR szEMsg_AddGroup   DEFVAL( "Group Create Failed. Please select an existing group to install C.Y.A. into." );
+
+EXTERN LPSTR szFmtMsg_BadDir   DEFVAL( "Bad directory name %s" );
+EXTERN LPSTR szFmtMsg_BadDisk   DEFVAL( "Invalid Drive %c:" );
+EXTERN LPSTR szFmt_NotText     DEFVAL( "The file %s contains binary data. CYA will save copies of this file but cannot perform comparisons between versions." ); 
+EXTERN LPSTR szFmt_Duplicate   DEFVAL( "The file %s is already on the list." ); 
+
+EXTERN LPSTR szMsg_AboutVer
+#ifdef PROGSPEC_DEFVARS
+= "Qualitas " VER_PRODUCTNAME_STR "  Version " VERSION
+#endif
+;
+
+EXTERN LPSTR szMsg_AboutCopy
+#ifdef PROGSPEC_DEFVARS
+= VER_COPYRIGHT1_STR "  " VER_COPYRIGHT2_STR 
+#endif
+;
+
+EXTERN LPSTR szC_ITTraynote     DEFVAL( "Qualitas Traynote" );
+
+#ifdef TLOCK
+EXTERN LPSTR szTLUser   DEFVAL( "Trial User");
+EXTERN LPSTR szTLOrg    DEFVAL( "");
+EXTERN LPSTR szTLSN     DEFVAL( "000");
+#endif
+
+
+//------------------------------------------------------------------
+// Help Keys
+// These must match headings in the help file exactly.
+//------------------------------------------------------------------
+EXTERN LPSTR szHK_Contents      DEFVAL( "Help Contents" );
+EXTERN LPSTR szHK_Main          DEFVAL( "Welcome to Qualitas C.Y.A." ); 
+EXTERN LPSTR szHK_Dir           DEFVAL( "File Locations" ); 
+EXTERN LPSTR szHK_UserInfo      DEFVAL( "User Information" ); 
+EXTERN LPSTR szHK_UserConf      DEFVAL( "User Information Confirmation" ); 
+EXTERN LPSTR szHK_Schedule      DEFVAL( "Configure C.Y.A. Scheduling" ); 
+EXTERN LPSTR szHK_Caplist       DEFVAL( "Configure C.Y.A. Capture Set" ); 
+EXTERN LPSTR szHK_AddFile       DEFVAL( "Add to C.Y.A. Capture Set" ); 
+EXTERN LPSTR szHK_Traynote      DEFVAL( "C.Y.A. Configuration Tray" ); 
+EXTERN LPSTR szHK_PGroup        DEFVAL( "C.Y.A. Choose Program Group" ); 
+EXTERN LPSTR szHK_UnMain        DEFVAL( "Uninstall Qualitas C.Y.A." ); 
+
+//------------------------------------------------------------------
+
+//------------------------------------------------------------------
+// Post 1.5 changes. ( need retranslation )
+//------------------------------------------------------------------
+EXTERN LPSTR szFmtMsg_BadSize  DEFVAL( "Insufficient Space on %c:!\nC.Y.A. requires %ldK bytes on the destination drive.\nand %ldK bytes on the Windows drive.\nNote: Windows may report erroneous drive space on drives > 2Gb." );
+EXTERN LPSTR szFmtMsg_BadSame  DEFVAL( "Insufficient Space on %c:! C.Y.A. requires %ldK bytes on the destination drive.\nNote: Windows may report erroneous drive space on drives > 2Gb." );

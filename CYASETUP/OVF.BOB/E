@@ -1,0 +1,87 @@
+   ..\psdialog.cpp (05 May 1997 11:07:56)
+           psdialog.cpp (22 Nov 1999 12:10:46)
+===================
++              1  |// $Header:   P:/PVCS/MAX/CYASETUP/PSDIALOG.CPV   1.13   05 May 1997 11:07:56   PETERJ  $
+-      1          |// $Header:   P:/PVCS/MAX/CYASETUP/PSDIALOG.CPV   1.13   05 May 1997 11:07:56   PETERJ  $
+       2       2  |//------------------------------------------------------------------
+       3       3  |// psdialog.cpp
+===================
+      54      54  |LPCFILELIST lpCfgAnchor DEFVAL( NULL );
+      55      55  |
++             56  |#define MAXSCHED     99
++             57  |#define MINSCHED      1
+-     56          |#define MAXSCHED     99
+-     57          |#define MINSCHED      1
+      58      58  |
+      59      59  |    // local functions.
+===================
+     203     203  |    int i;
+     204     204  |    BOOL bDSDone;
++            205  |    DWORD dwDiskSpace;
++            206  |    DWORD dwWinSpace;
+-    205          |    long lDiskSpace;
+-    206          |    long lWinSpace;
+     207     207  |    static WORD wRet;
+     208     208  |    OPENFILENAME ofn;
+===================
+     251     251  |                }
+     252     252  |
++            253  |                    dwDiskSpace = FreeDiskSpace( (char)szInstallDir[0] );
++            254  |                    dwWinSpace = FreeDiskSpace( (char)lpWinPath[0] );
+-    253          |                    lDiskSpace = FreeDiskSpace( (char)szInstallDir[0] );
+-    254          |                    lWinSpace = FreeDiskSpace( (char)lpWinPath[0] );
+     255     255  |
+     256     256  |                        // Handle invalid drive.
++            257  |                    if( dwDiskSpace == 0L )
+-    257          |                    if( lDiskSpace == 0L )
+     258     258  |    {
+     259     259  |                        char szT1[ 512 ];
+===================
+     280     280  |    {
+     281     281  |                            bSameDrive = TRUE;
++            282  |                            dwDiskSpaceReq += dwWinSpaceReq;
+-    282          |                            lDiskSpaceReq += lWinSpaceReq;
+     283     283  |                }
+     284     284  |
++            285  |                        if( dwDiskSpaceReq > dwDiskSpace )
+-    285          |                        if( lDiskSpaceReq > lDiskSpace )
+     286     286  |    {
+     287     287  |                        char szT1[ 512 ];
+===================
+     290     290  |    {
+     291     291  |                                wsprintf( szT1, szFmtMsg_BadSame, szInstallDir[0],
++            292  |                                                        dwDiskSpaceReq / 1000 );
+-    292          |                                                        lDiskSpaceReq / 1000 );
+     293     293  |                }
+     294     294  |                    else
+     295     295  |    {
+     296     296  |                                wsprintf( szT1, szFmtMsg_BadSize, szInstallDir[0],
++            297  |                                                      dwDiskSpaceReq / 1000, 
++            298  |                                                      dwWinSpaceReq / 1000 );
+-    297          |                                                      lDiskSpaceReq / 1000, 
+-    298          |                                                      lWinSpaceReq / 1000 );
+     299     299  |                }
+     300     300  |
+===================
+     312     312  |                }
+     313     313  |
++            314  |                        if( dwWinSpaceReq > dwWinSpace && (!bSameDrive))
+-    314          |                        if( lWinSpaceReq > lWinSpace && (!bSameDrive))
+     315     315  |    {
+     316     316  |                        char szT1[ 512 ];
+     317     317  |    int nMBRet;
+     318     318  |                            wsprintf( szT1, szFmtMsg_BadSize, lpWinPath[0],
++            319  |                                                      dwDiskSpaceReq / 1000, 
++            320  |                                                      dwWinSpaceReq / 1000 );
+-    319          |                                                      lDiskSpaceReq / 1000, 
+-    320          |                                                      lWinSpaceReq / 1000 );
+     321     321  |
+     322     322  |                            nMBRet = MessageBox( hDlg, szT1, szBuff_Title, 
+===================
+     891     891  |    {
+     892     892  |                        SendDlgItemMessage(hDlg, IDC_FILELIST, LB_DELETESTRING, (WORD)dwCurSel, 0L );
++            893  |                        SendDlgItemMessage(hDlg, IDC_FILELIST,  LB_SETCURSEL, (WPARAM)-1, 0L), 
+-    893          |                        SendDlgItemMessage(hDlg, IDC_FILELIST,  LB_SETCURSEL, (WPARAM)-1, 0L), 
+     894     894  |            EnableWindow( GetDlgItem(hDlg, IDC_DELFILE ), FALSE );
+     895     895  |                        SetFocus( GetDlgItem(hDlg, IDOK ));
+===================

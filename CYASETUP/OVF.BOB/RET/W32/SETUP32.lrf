@@ -1,0 +1,19 @@
+kernel32.lib
+user32.lib
+gdi32.lib
+winspool.lib
+comdlg32.lib
+advapi32.lib
+shell32.lib
+ole32.lib
+oleaut32.lib
+uuid.lib
+version.lib R:\MAX\lib\Lstut32.lib
+R:\MAX\lib\qsetup32.lib
+R:\MAX\lib\dzip32.lib
+R:\MAX\lib\dunzip32.lib ret\W32\progspec.obj
+ret\W32\proglocl.obj
+ret\W32\psdialog.obj
+ret\W32\cyasetup.res 
+/OUT:ret\W32\SETUP32.EXE
+/SUBSYSTEM:WINDOWS

@@ -1,0 +1,16 @@
+; size of installation.
+; size of files on windows disk.
+; <disknum>, archive
+; filename, copy group, optionflags.
+*Install=2000000
+*Windows=100000
+<1>,CYA.Z
+DZIP.DLL,1,0
+CYA16.EXE,1,0
+DZIP32.DLL,2,0
+CYA32.EXE,2,0
+CYAHELP.HLP,0,0
+TRAYNOTE.EXE,2,0
+TRAYNOTE.TXT,2,0
+README,0,0
+

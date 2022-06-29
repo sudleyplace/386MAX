@@ -1,0 +1,2054 @@
+
+ SETUP
+
+ Start     Length     Name                   Class
+ 0001:0000 00A10H     PROGSPEC_TEXT          CODE
+ 0001:0A10 020B8H     PROGLOCL_TEXT          CODE
+ 0001:2AC8 02D0BH     PSDIALOG_TEXT          CODE
+ 0001:57D4 0526DH     _TEXT                  CODE
+ 0001:AA42 001EAH     DOSDIR_TEXT            CODE
+ 0001:AC2C 000B4H     ISTEXT_TEXT            CODE
+ 0001:ACE0 00C3FH     SETUP_TEXT             CODE
+ 0001:B920 02FD8H     SETUTIL_TEXT           CODE
+ 0001:E8F8 00DCEH     SETDDE_TEXT            CODE
+ 0002:0000 00ABDH     SETDISP_TEXT           CODE
+ 0002:0ABE 00551H     SETEXT_TEXT            CODE
+ 0002:1010 0065AH     SETUNZIP_TEXT          CODE
+ 0002:166A 0038EH     SETSPL_TEXT            CODE
+ 0002:1A00 0006BH     COMDAT_SEG1            CODE
+ 0003:0000 0000EH     SETUP1_DATA            FAR_DATA
+ 0004:0000 00010H     NULL                   BEGDATA
+ 0004:0010 01D3CH     _DATA                  DATA
+ 0004:1D4C 0000EH     CDATA                  DATA
+ 0004:1D5A 00000H     XIFB                   DATA
+ 0004:1D5A 00000H     XIF                    DATA
+ 0004:1D5A 00000H     XIFE                   DATA
+ 0004:1D5A 00000H     XIB                    DATA
+ 0004:1D5A 00004H     XI                     DATA
+ 0004:1D5E 00000H     XIE                    DATA
+ 0004:1D5E 00000H     XPB                    DATA
+ 0004:1D5E 00004H     XP                     DATA
+ 0004:1D62 00000H     XPE                    DATA
+ 0004:1D62 00000H     XCB                    DATA
+ 0004:1D62 00000H     XC                     DATA
+ 0004:1D62 00000H     XCE                    DATA
+ 0004:1D62 00000H     XCFB                   DATA
+ 0004:1D62 00000H     XCFCRT                 DATA
+ 0004:1D62 00000H     XCF                    DATA
+ 0004:1D62 00000H     XCFE                   DATA
+ 0004:1D62 00000H     XIFCB                  DATA
+ 0004:1D62 00000H     XIFU                   DATA
+ 0004:1D62 00000H     XIFL                   DATA
+ 0004:1D62 00000H     XIFM                   DATA
+ 0004:1D62 00000H     XIFCE                  DATA
+ 0004:1D62 00000H     DBDATA                 DATA
+ 0004:1D62 000E4H     IOB                    DATA
+ 0004:1E46 00000H     IOBX                   DATA
+ 0004:1E46 0000CH     IOBE                   DATA
+ 0004:1E52 000E4H     IOB2                   DATA
+ 0004:1F36 00000H     IOB2X                  DATA
+ 0004:1F36 0000CH     IOB2E                  DATA
+ 0004:1F42 00012H     CONST                  CONST
+ 0004:1F54 00008H     HDR                    MSG
+ 0004:1F5C 003C6H     MSG                    MSG
+ 0004:2322 00002H     PAD                    MSG
+ 0004:2324 00001H     EPAD                   MSG
+ 0004:2326 007BCH     _BSS                   BSS
+ 0004:2AE2 00000H     XOB                    BSS
+ 0004:2AE2 00000H     XO                     BSS
+ 0004:2AE2 00000H     XOE                    BSS
+ 0004:2AE2 00000H     XOFB                   BSS
+ 0004:2AE2 00000H     XOF                    BSS
+ 0004:2AE2 00000H     XOFE                   BSS
+ 0004:2AF0 00008H     c_common               BSS
+
+ Origin   Group
+ 0004:0   DGROUP
+
+ Address   Export                  Alias
+
+ 0001:4982 ADDDLGPROC              ADDDLGPROC
+ 0001:3912 CONFIRMUIDLGPROC        CONFIRMUIDLGPROC
+ 0001:35C2 DIRBROWSEDLGPROC        DIRBROWSEDLGPROC
+ 0001:2D76 DIRDLGPROC              DIRDLGPROC
+ 0002:017E EXTRACTDLGPROC          EXTRACTDLGPROC
+ 0001:B88E F1FILTERPROC            F1FILTERPROC
+ 0001:3BE6 FILESETDLGPROC          FILESETDLGPROC
+ 0001:B118 MAINWNDPROC             MAINWNDPROC
+ 0002:00CC MODELESSDLGPROC         MODELESSDLGPROC
+ 0001:3A7C OLDUIDLGPROC            OLDUIDLGPROC
+ 0001:4C08 PGROUPDLGPROC           PGROUPDLGPROC
+ 0001:441C SCHEDULEDLGPROC         SCHEDULEDLGPROC
+ 0002:166A SPLASHWNDPROC           SPLASHWNDPROC
+ 0001:2C34 TRAYASKDLGPROC          TRAYASKDLGPROC
+ 0001:4836 UNINSTALLDLGPROC        UNINSTALLDLGPROC
+ 0001:3698 USERINFODLGPROC         USERINFODLGPROC
+ 0001:2AC8 WELCOMEDLGPROC          WELCOMEDLGPROC
+ 0001:ACE0 WINMAIN                 WINMAIN
+ 0001:6A06 ___ExportedStub         ___ExportedStub
+
+  Address         Publics by Name
+
+ 0001:99EE       $i8_output
+ 0001:9D2A       $i8_tpwr10
+ 0002:1A00       ??0CZopen@@REC@I@Z
+ 0002:113A       ??1CZopen@@REC@XZ
+ 0001:E8F8       ?AddItemIconToGroup@@ZAHPED00H0H@Z
+ 0001:E9D6       ?AddItemToGroup@@ZAHPED00H@Z
+ 0002:0ABE       ?AddToCopyBatch@@ZAHPED00I@Z
+ 0001:DF08       ?AddToWininit@@ZAXPED@Z
+ 0001:BCC2       ?AllocGlobalMem@@ZAPEDPEI@Z
+ 0001:0D2A       ?AutoConfig@@ZAXXZ
+ 0004:0ADE       ?bAddAuto@@3HE
+ 0004:1678       ?bBoost32@@3HE
+ 0004:1698       ?bC3DInhibit@@3HE
+ 0004:1682       ?bClassReg@@3HE
+ 0004:1C0C       ?bCleanOut@@3HE
+ 0004:0AD2       ?bComplete@@3HE
+ 0004:1684       ?bDlgClassReg@@3HE
+ 0004:0AEC       ?bEvap95@@3HE
+ 0004:0AEA       ?bExitEvap@@3HE
+ 0004:1686       ?bFileError@@3HE
+ 0004:169A       ?bInhibitSplash@@3HE
+ 0004:0AD4       ?bNoExtract@@3HE
+ 0004:1676       ?bOldNT@@3HE
+ 0001:C8D0       ?bootdrive@@ZADPED@Z
+ 0004:0AD6       ?bReinstall@@3HE
+ 0004:0ADA       ?bRunCYAOnExit@@3HE
+ 0004:168A       ?bSplashActive@@3HE
+ 0004:167E       ?bSplashInhibit@@3HE
+ 0004:1688       ?bSplashReg@@3HE
+ 0004:167A       ?bStartUp95@@3HE
+ 0004:1680       ?bStartup@@3HE
+ 0004:0ADC       ?bTraynote@@3HE
+ 0004:0AD8       ?bTrayWasOn@@3HE
+ 0004:0AE4       ?bUIData@@3HE
+ 0004:0AE0       ?bUIInstOnly@@3HE
+ 0004:0AE2       ?bUIProg@@3HE
+ 0004:0AE8       ?bUITray@@3HE
+ 0004:0AE6       ?bUIUndo@@3HE
+ 0004:0AD0       ?bUninstall@@3HE
+ 0004:1670       ?bWin95@@3HE
+ 0004:1674       ?bWinNT4Plus@@3HE
+ 0004:1672       ?bWinNT@@3HE
+ 0001:BC20       ?CenterWindow@@ZAXI@Z
+ 0004:02F8       ?cFFSep@@3DE
+ 0002:0082       ?ChangeDisplay2@@ZAXPFD@Z
+ 0002:0058       ?ChangeDisplay@@ZAXPFD@Z
+ 0001:5450       ?CheckEdLimit@@ZAXIHPEHHH@Z
+ 0001:1CCC       ?CheckUser@@ZAHXZ
+ 0001:B52E       ?Cleanup@@ZAXXZ
+ 0002:15B0       ?Close@CZopen@@RECXH@Z
+ 0002:15D0       ?CloseAbort@CZopen@@RECXH@Z
+ 0002:1560       ?CloseAll@CZopen@@RECXXZ
+ 0002:08BA       ?CopySetup@@ZAXXZ
+ 0002:14C8       ?CopyUnzipDll@@ZAHXZ
+ 0001:CDCA       ?CrackIt@@ZAXIJPEG0PEI@Z
+ 0001:CE8E       ?CrashExit@@ZAXXZ
+ 0001:F596       ?DDECallback@@ZCKIIKKKKKK@Z
+ 0001:09EE       ?Decide2@@ZAHHHH@Z
+ 0001:EFD6       ?DeleteGroup@@ZAXPED@Z
+ 0001:EAB2       ?DeleteItemFromGroup@@ZAXPED0H@Z
+ 0001:E7BC       ?DoesSectionExist@@ZAHPED0@Z
+ 0002:0C70       ?DosCopyPrep@@ZAHPED000@Z
+ 0001:1F70       ?Do_Uninstall@@ZAXXZ
+ 0002:0736       ?DrawMeter@@ZAHIH@Z
+ 0004:1AF6       ?dwDDEInst@@3KE
+ 0004:2370       ?dwVersion@@3KE
+ 0001:F048       ?EndDDE@@ZAXXZ
+ 0002:00AC       ?EndDisplay@@ZAXXZ
+ 0001:C9FA       ?EnumZip@@ZAXPEPEU_tagSTRINGLIST@@PED@Z
+ 0002:0E96       ?ExecCleanBat@@ZAHPED0000@Z
+ 0002:0D92       ?ExtractFileFromRes@@ZCHIPFDG@Z
+ 0001:C51A       ?FileCopy@@ZAHPED0@Z
+ 0001:BFBA       ?FindFile@@ZAPEDHPEDPEU_find_t@@0@Z
+ 0001:DBAE       ?FindLastSerialPath@@ZAHPED@Z
+ 0001:BEC6       ?fname_part@@ZAPEDPED@Z
+ 0001:DCEC       ?FreeDiskSpace@@ZAKD@Z
+ 0001:BCFE       ?FreeGlobalMem@@ZIXPED@Z
+ 0001:E796       ?FreeThunkLib@@ZAXXZ
+ 0001:B920       ?GetEnvInfo@@ZAXI@Z
+ 0002:1302       ?GetFirst@CZopen@@RECHPEUZIPINFO@@@Z
+ 0002:123E       ?GetFromZip@CZopen@@RECHPFD0H@Z
+ 0001:ED22       ?GetGroupItemList@@ZAHPEDPEPED@Z
+ 0001:EB60       ?GetGroups@@ZAPEDXZ
+ 0001:C2AE       ?GetLine@@ZAHHPEDH@Z
+ 0001:C106       ?GetMem@@ZAPEXI@Z
+ 0002:13C4       ?GetNext@CZopen@@RECHPEUZIPINFO@@@Z
+ 0001:C766       ?GetPrivateProfileLong@@ZAJPED0J0@Z
+ 0004:28B0       ?ghInstance@@3IE
+ 0004:28AE       ?hAcc@@3IE
+ 0004:1906       ?hActive@@3IE
+ 0004:1692       ?hbSplash@@3IE
+ 0004:14D6       ?hcArrow@@3IE
+ 0004:14D8       ?hcHour@@3IE
+ 0004:190A       ?hGlobDlg@@3IE
+ 0004:238C       ?hhF1@@3KE
+ 0004:1660       ?hlibCTL3D@@3IE
+ 0004:1662       ?hlibThunk@@3IE
+ 0004:14D2       ?hModeless@@3IE
+ 0004:14D0       ?hParent@@3IE
+ 0004:2388       ?hpF1@@3P7CHXZE
+ 0004:14D4       ?hSplash@@3IE
+ 0001:B1F2       ?InitApplication@@ZAHI@Z
+ 0001:F00E       ?InitDDE@@ZAIXZ
+ 0001:B272       ?InitInst@@ZAHIHPED@Z
+ 0002:1720       ?InitSplash@@ZAHI@Z
+ 0001:0A10       ?InstallIcon@@ZAHXZ
+ 0002:1A24       ?IsValid@CZopen@@RECHH@Z
+ 0001:D93A       ?KillDiskList@@ZAXPEPEU_tagDISKLIST@@@Z
+ 0001:515E       ?KillFileList@@ZAXPEPEU_tagCFILELIST@@@Z
+ 0001:CB18       ?KillStringList@@ZAXPEPEU_tagSTRINGLIST@@@Z
+ 0004:0B7A       ?lDiskSpaceReq@@3JE
+ 0001:B6C6       ?LoadCTL3D@@ZAHXZ
+ 0001:D310       ?LoadCtl3dLibrary@@ZAHPED@Z
+ 0001:4FF2       ?LoadFileList@@ZAXPEPEU_tagCFILELIST@@@Z
+ 0001:E588       ?LoadThunkLib@@ZAXXZ
+ 0004:193C       ?lpADisks@@3PEU_tagDISKLIST@@E
+ 0004:2330       ?lpCfgAnchor@@3PEU_tagCFILELIST@@E
+ 0004:1914       ?lpDataPath@@3PEDE
+ 0004:1938       ?lpEnumZip@@3PEU_tagSTRINGLIST@@E
+ 0004:0B82       ?lpFileList@@3PEDE
+ 0004:237C       ?lpfn3DAutoSubclass@@3P7CHI@ZE
+ 0004:2380       ?lpfn3DCtlColorEx@@3P7CIIIJ@ZE
+ 0004:2368       ?lpfn3DRegister@@3P7CHI@ZE
+ 0004:2374       ?lpfn3DSubclassDlg@@3P7CHIG@ZE
+ 0004:2378       ?lpfn3DSubclassDlgEx@@3P7CHIK@ZE
+ 0004:236C       ?lpfn3DUnregister@@3P7CHI@ZE
+ 0004:2394       ?lpfnAddReg@@3P7CHKPED0PEEKK@ZE
+ 0004:2384       ?lpfnChangePEVersionNumbers@@3P7CHPED00@ZE
+ 0004:239C       ?lpfnCompareVersionInfo@@3P7CHPED0@ZE
+ 0004:28AA       ?lpfnDelKey@@3P7CHKPED0@ZE
+ 0004:2352       ?lpfnDoesValueExist@@3P7CHKPED0@ZE
+ 0004:2ABE       ?lpfnDuz@@3P7CHPEUUNZIPCMDSTRUCT@@@ZE
+ 0004:2398       ?lpfnIs95Ver@@3P7CHPED@ZE
+ 0004:2390       ?lpfnItsOurDLL@@3P7CHPED@ZE
+ 0004:234E       ?lpfnRenameValue@@3P7CHKPED00@ZE
+ 0004:1924       ?lpHelpFile@@3PEDE
+ 0004:1930       ?lpIniFile@@3PEDE
+ 0004:0B86       ?lpProgGroup@@3PEDE
+ 0004:190C       ?lpProgName@@3PEDE
+ 0004:1910       ?lpProgPath@@3PEDE
+ 0004:1928       ?lpStartup@@3PEDE
+ 0004:1920       ?lpSysPath@@3PEDE
+ 0004:1918       ?lpUndoPath@@3PEDE
+ 0004:192C       ?lpWIniFile@@3PEDE
+ 0004:191C       ?lpWinPath@@3PEDE
+ 0004:1934       ?lpZipFile@@3PEDE
+ 0004:18FE       ?lTotSize@@3JE
+ 0004:1902       ?lWinSize@@3JE
+ 0004:0B7E       ?lWinSpaceReq@@3JE
+ 0001:DCB0       ?MakeFileExt@@ZAXPED000@Z
+ 0001:BD56       ?MakePath@@ZAXPED00@Z
+ 0001:DAF8       ?MakeSerialPath@@ZAXPED00@Z
+ 0001:5500       ?MakeValidPath@@ZAHPED@Z
+ 0001:E350       ?ModifyProfileString@@ZAXPED000H@Z
+ 0001:1682       ?MoveLocalToShared@@ZAHXZ
+ 0004:1694       ?nBMHeight@@3HE
+ 0004:1696       ?nBMWidth@@3HE
+ 0004:167C       ?nCountry@@3HE
+ 0004:1690       ?nSplashWait@@3HE
+ 0001:BB96       ?OpenOrCreate@@ZAHPEDH@Z
+ 0001:BE0A       ?path_part@@ZAPEDPED@Z
+ 0001:F3D0       ?pmAddItem@@ZAHPED00H@Z
+ 0001:F44C       ?pmAddItemIcon@@ZAHPED00HH@Z
+ 0001:F27E       ?pmCreateGroup@@ZAHPED0@Z
+ 0001:F304       ?pmDeleteGroup@@ZAHPED@Z
+ 0001:F4CE       ?pmDeleteItem@@ZAHPED@Z
+ 0001:F06E       ?pmQueryGroup@@ZAHPED0@Z
+ 0001:F532       ?pmReplaceItem@@ZAHPED@Z
+ 0001:F368       ?pmShowGroup@@ZAHPEDG@Z
+ 0001:BAD2       ?PrepZipPath@@ZAXPED0@Z
+ 0002:045A       ?ProcessDiskList@@ZAXPEPEU_tagDISKLIST@@I@Z
+ 0001:04EC       ?ProcessInitialize@@ZAXXZ
+ 0001:C05C       ?QueryDirExists@@ZAHPED@Z
+ 0001:BF78       ?QueryFileExists@@ZAHPED@Z
+ 0001:CBB2       ?QueryNameInList@@ZAHPEDPEPEU_tagSTRINGLIST@@H@Z
+ 0001:CC66       ?QueryNameInListAdd@@ZAHPEDPEPEU_tagSTRINGLIST@@H@Z
+ 0004:2356       ?quit_env@@3QEHE
+ 0001:D46C       ?ReadQPFile@@ZAXPED@Z
+ 0001:C1C6       ?ReAllocMem@@ZAPEXPEXI@Z
+ 0001:DDD2       ?RemoveFiles@@ZAXPED@Z
+ 0001:52FC       ?ScanFLForDups@@ZAHPEPEU_tagCFILELIST@@PED@Z
+ 0001:538E       ?ScrollNumWheel@@ZAHIHHHHHPED@Z
+ 0001:BBE0       ?SetErrMsg@@ZAXPED@Z
+ 0002:1182       ?SetZip@CZopen@@RECHPFD@Z
+ 0001:B31E       ?ShowMainWindow@@ZAXXZ
+ 0002:1858       ?ShowSplashWindow@@ZAXI@Z
+ 0001:DE60       ?SNPackStr@@ZAHPED0@Z
+ 0001:CD7C       ?sswrite@@ZAIHPJXI@Z
+ 0002:0000       ?StartDisplay@@ZAXPED0@Z
+ 0002:18A6       ?StopSplashWindow@@ZAXI@Z
+ 0001:C4DE       ?strip_bracket@@ZAXPED@Z
+ 0001:C414       ?strip_leading@@ZAXPED0@Z
+ 0001:C476       ?strip_trailing@@ZAXPED0@Z
+ 0001:C276       ?StrMem@@ZAPEDPED@Z
+ 0001:CE0A       ?SYield@@ZAXH@Z
+ 0004:169C       ?szBuff_Title@@3QEDE
+ 0004:0020       ?szC8_ProgName16@@3PEDE
+ 0004:002A       ?szC8_ProgName32@@3PEDE
+ 0004:0E9E       ?szC8_ProgName@@3PEDE
+ 0004:033E       ?szCA_FileFilter@@3PEDE
+ 0004:0F96       ?szC_Autoexec@@3PEDE
+ 0004:01B8       ?szC_AutoexecNT@@3PEDE
+ 0004:10E6       ?szC_AutoSwitch@@3PEDE
+ 0004:0220       ?szC_Close@@3PEDE
+ 0004:01C6       ?szC_ConfigNT@@3PEDE
+ 0004:0FA6       ?szC_ConfigSys@@3PEDE
+ 0004:0EE2       ?szC_Ctl3Comp@@3PEDE
+ 0004:0ED2       ?szC_Ctl3dLib@@3PEDE
+ 0004:0130       ?szC_DataDir@@3PEDE
+ 0004:03C4       ?szC_DefaultGroup@@3PEDE
+ 0004:10DE       ?szC_DEStartupGroup@@3PEDE
+ 0004:1C62       ?szC_DUNZIP32Lib@@3PEDE
+ 0004:1C50       ?szC_DUNZIPLib@@3PEDE
+ 0004:018A       ?szC_Epif@@3PEDE
+ 0004:017C       ?szC_Evap@@3PEDE
+ 0004:0250       ?szC_ExtBAT@@3PEDE
+ 0004:023C       ?szC_ExtDLL@@3PEDE
+ 0004:0246       ?szC_ExtEXE@@3PEDE
+ 0004:0FD0       ?szC_HelpFile@@3PEDE
+ 0004:11F8       ?szC_HK_UDDefault@@3PEDE
+ 0004:11D6       ?szC_HK_UDName@@3PEDE
+ 0004:11EA       ?szC_HK_UDString@@3PEDE
+ 0004:11C6       ?szC_HK_Uninstall@@3PEDE
+ 0004:038A       ?szC_IconTitle@@3PEDE
+ 0004:1082       ?szC_IniByAge@@3PEDE
+ 0004:109A       ?szC_IniByCount@@3PEDE
+ 0004:106C       ?szC_IniDataDir@@3PEDE
+ 0004:00DA       ?szC_IniDays@@3PEDE
+ 0004:1062       ?szC_IniDir@@3PEDE
+ 0004:008E       ?szC_IniETBar@@3PEDE
+ 0004:1052       ?szC_IniIName@@3PEDE
+ 0004:0082       ?szC_IniInst@@3PEDE
+ 0004:108E       ?szC_IniMaxAge@@3PEDE
+ 0004:10B6       ?szC_IniMaxCount@@3PEDE
+ 0004:10A8       ?szC_IniMinCount@@3PEDE
+ 0004:0040       ?szC_IniName@@3PEDE
+ 0004:102A       ?szC_IniOpt@@3PEDE
+ 0004:00F6       ?szC_IniPGroup@@3PEDE
+ 0004:0074       ?szC_IniReg@@3PEDE
+ 0004:1078       ?szC_IniRename@@3PEDE
+ 0004:1036       ?szC_IniSaveReg@@3PEDE
+ 0004:00C4       ?szC_IniSched@@3PEDE
+ 0004:00D0       ?szC_IniStart@@3PEDE
+ 0004:00E8       ?szC_IniTMark@@3PEDE
+ 0004:1048       ?szC_IniUndo@@3PEDE
+ 0004:00AA       ?szC_IniUOrg@@3PEDE
+ 0004:0098       ?szC_IniUser@@3PEDE
+ 0004:010E       ?szC_IniUserSID@@3PEDE
+ 0004:00B6       ?szC_IniUSN@@3PEDE
+ 0004:0052       ?szC_InstIni@@3PEDE
+ 0004:10F2       ?szC_InstSizeKey@@3PEDE
+ 0004:0844       ?szC_ITTraynote@@3PEDE
+ 0004:0228       ?szC_New@@3PEDE
+ 0004:0F84       ?szC_Null@@3PEDE
+ 0004:0032       ?szC_Prefix@@3PEDE
+ 0004:0358       ?szC_ProgName@@3PEDE
+ 0004:0EB4       ?szC_ProgTitle32@@3PEDE
+ 0004:0EA8       ?szC_ProgTitle@@3PEDE
+ 0004:0232       ?szC_Quit@@3PEDE
+ 0004:0102       ?szC_RealIniUndo@@3PEDE
+ 0004:0062       ?szC_RegIni@@3PEDE
+ 0004:10C4       ?szC_Registry@@3PEDE
+ 0004:02E2       ?szC_RegTag32@@3PEDE
+ 0004:039C       ?szC_SetTitle@@3PEDE
+ 0004:01A8       ?szC_Setup32@@3PEDE
+ 0004:0198       ?szC_Setup@@3PEDE
+ 0004:020C       ?szC_Space@@3PEDE
+ 0004:0216       ?szC_Start@@3PEDE
+ 0004:01D4       ?szC_Sys32@@3PEDE
+ 0004:0FC2       ?szC_SystemIni@@3PEDE
+ 0004:111E       ?szC_Thunk32Name@@3PEDE
+ 0004:110E       ?szC_ThunkLibName@@3PEDE
+ 0004:02A4       ?szC_TIApp@@3PEDE
+ 0004:02AE       ?szC_TIClass@@3PEDE
+ 0004:02C0       ?szC_TIDefClass@@3PEDE
+ 0004:027E       ?szC_TIIconFile@@3PEDE
+ 0004:028C       ?szC_TILeft@@3PEDE
+ 0004:029C       ?szC_TIRight@@3PEDE
+ 0004:0258       ?szC_TISecCYA@@3PEDE
+ 0004:0264       ?szC_TISecGen@@3PEDE
+ 0004:0270       ?szC_TITTip@@3PEDE
+ 0004:015E       ?szC_TL16DLL@@3PEDE
+ 0004:016E       ?szC_TL32DLL@@3PEDE
+ 0004:01F4       ?szC_TrayExe@@3PEDE
+ 0004:0206       ?szC_TrayIni@@3PEDE
+ 0004:01E2       ?szC_Traynote@@3PEDE
+ 0004:02D4       ?szC_TTStr@@3PEDE
+ 0004:0118       ?szC_Undo@@3PEDE
+ 0004:0124       ?szC_UndoDir@@3PEDE
+ 0004:0376       ?szC_UnProgName@@3PEDE
+ 0004:03B2       ?szC_UnTitle@@3PEDE
+ 0004:0F26       ?szC_Unzip32Comp@@3PEDE
+ 0004:0F14       ?szC_Unzip32DLL@@3PEDE
+ 0004:0F02       ?szC_UnzipComp@@3PEDE
+ 0004:0EF2       ?szC_UnzipDLL@@3PEDE
+ 0004:0EC2       ?szC_Us@@3PEDE
+ 0004:10D0       ?szC_USStartupGroup@@3PEDE
+ 0004:0F30       ?szC_VMMPath@@3PEDE
+ 0004:116A       ?szC_VQVCoName@@3PEDE
+ 0004:118E       ?szC_VQVFileVer@@3PEDE
+ 0004:117E       ?szC_VQVProdVer@@3PEDE
+ 0004:115A       ?szC_VQVSFInfo@@3PEDE
+ 0004:113C       ?szC_VQVTranslation@@3PEDE
+ 0004:0FB2       ?szC_WinIni@@3PEDE
+ 0004:0FE0       ?szC_Wininit@@3PEDE
+ 0004:10FE       ?szC_WinSizeKey@@3PEDE
+ 0004:014E       ?szC_Zip32DLL@@3PEDE
+ 0004:013E       ?szC_ZipDLL@@3PEDE
+ 0004:0F60       ?szDataExt@@3PEDE
+ 0004:0016       ?szDefDir@@3PEDE
+ 0004:0F38       ?szDifExt@@3PEDE
+ 0004:06F8       ?szEMsg_AddGroup@@3PEDE
+ 0004:1366       ?szEMsg_AddUI@@3PEDE
+ 0004:06A6       ?szEMsg_BadGroup@@3PEDE
+ 0004:1294       ?szEMsg_Crash@@3PEDE
+ 0004:0494       ?szEMsg_DataDir@@3PEDE
+ 0004:1300       ?szEMsg_FileWrite@@3PEDE
+ 0004:1268       ?szEMsg_FOpen@@3PEDE
+ 0004:05B6       ?szEMsg_InstOnly@@3PEDE
+ 0004:04B0       ?szEMsg_Limits@@3PEDE
+ 0004:123A       ?szEMsg_Mem@@3PEDE
+ 0004:1252       ?szEMsg_Module@@3PEDE
+ 0004:060C       ?szEMsg_NotDone@@3PEDE
+ 0004:04E0       ?szEMsg_NotValidSN@@3PEDE
+ 0004:12C8       ?szEMsg_NullPtr@@3PEDE
+ 0004:127E       ?szEMsg_Read@@3PEDE
+ 0004:1392       ?szEMsg_RemUI@@3PEDE
+ 0004:12E4       ?szEMsg_Resource@@3PEDE
+ 0004:052C       ?szEMsg_Running@@3PEDE
+ 0004:12AE       ?szEMsg_Term@@3PEDE
+ 0004:062E       ?szEMsg_UnNotDone@@3PEDE
+ 0004:133E       ?szEMsg_ZipLib32@@3PEDE
+ 0004:131E       ?szEMsg_ZipLib@@3PEDE
+ 0004:0F6A       ?szExeExt@@3PEDE
+ 0004:141C       ?szFmtMsg_BadCreate@@3PEDE
+ 0004:0712       ?szFmtMsg_BadDir@@3PEDE
+ 0004:0728       ?szFmtMsg_BadDisk@@3PEDE
+ 0004:1430       ?szFmtMsg_BadOpen@@3PEDE
+ 0004:0ACC       ?szFmtMsg_BadSame@@3PEDE
+ 0004:0A38       ?szFmtMsg_BadSize@@3PEDE
+ 0004:13B2       ?szFmtMsg_Extract@@3PEDE
+ 0004:14CC       ?szFmt_DllInUse@@3PEDE
+ 0004:07CA       ?szFmt_Duplicate@@3PEDE
+ 0004:1406       ?szFmt_NoDir@@3PEDE
+ 0004:13D2       ?szFmt_NoFile@@3PEDE
+ 0004:07A2       ?szFmt_NotText@@3PEDE
+ 0004:14DA       ?szGlobErrorMsg@@3QEDE
+ 0004:1664       ?szHKp_Contents@@3PEDE
+ 0004:166C       ?szHKp_Dir@@3PEDE
+ 0004:1668       ?szHKp_Main@@3PEDE
+ 0004:0922       ?szHK_AddFile@@3PEDE
+ 0004:0904       ?szHK_Caplist@@3PEDE
+ 0004:0856       ?szHK_Contents@@3PEDE
+ 0004:088A       ?szHK_Dir@@3PEDE
+ 0004:0876       ?szHK_Main@@3PEDE
+ 0004:0960       ?szHK_PGroup@@3PEDE
+ 0004:08E2       ?szHK_Schedule@@3PEDE
+ 0004:0940       ?szHK_Traynote@@3PEDE
+ 0004:097E       ?szHK_UnMain@@3PEDE
+ 0004:08C2       ?szHK_UserConf@@3PEDE
+ 0004:08A0       ?szHK_UserInfo@@3PEDE
+ 0004:0F7E       ?szHlpExt@@3PEDE
+ 0004:0B08       ?szIniDir@@3QEDE
+ 0004:0F42       ?szIniExt@@3PEDE
+ 0004:0AF8       ?szIniOpt@@3QEDE
+ 0004:0AEE       ?szInst@@3QEDE
+ 0004:17F6       ?szInstallDir@@3QEDE
+ 0004:0F56       ?szLstExt@@3PEDE
+ 0004:082E       ?szMsg_AboutCopy@@3PEDE
+ 0004:07F4       ?szMsg_AboutVer@@3PEDE
+ 0004:0472       ?szMsg_ExitRun@@3PEDE
+ 0004:1218       ?szMsg_Extracting@@3PEDE
+ 0004:041C       ?szMsg_TrayFound@@3PEDE
+ 0004:1226       ?szMsg_Warning@@3PEDE
+ 0004:16F0       ?szQPFile@@3QEDE
+ 0004:0F74       ?szRegExt@@3PEDE
+ 0004:0B64       ?szSerialNumber@@3QEDE
+ 0004:100A       ?szSetupDlgClass@@3PEDE
+ 0004:0FF4       ?szSetupWndClass@@3PEDE
+ 0004:101E       ?szSplashWndClass@@3PEDE
+ 0004:02F4       ?szSSDlgClass@@3PEDE
+ 0004:25A2       ?szTemp@@3QEDE
+ 0004:27A4       ?szTPath@@3QEDE
+ 0004:23A0       ?szTRead@@3QEDE
+ 0004:0B18       ?szUserName@@3QEDE
+ 0004:0B3E       ?szUserOrg@@3QEDE
+ 0004:0F4C       ?szZipExt@@3PEDE
+ 0001:187E       ?TraynoteConfig@@ZAXXZ
+ 0004:168C       ?ttSplashStart@@3JE
+ 0001:B354       ?UpdateMainScreen@@ZAXI@Z
+ 0002:196C       ?UpdateSplashScreen@@ZAXI@Z
+ 0001:1C70       ?ValidSernum@@ZAHPED@Z
+ 0001:CEAA       ?VerChkCopyFiles@@ZAHPED00000PEI01I@Z
+ 0004:1908       ?wACCTable@@3GE
+ 0001:C6CA       ?WalkWindowList@@ZAHXZ
+ 0004:18FC       ?wHelpID@@3GE
+ 0001:C80C       ?WPPI_IfEmpty@@ZAHPED0H0@Z
+ 0001:C86E       ?WPPS_IfEmpty@@ZAHPED000@Z
+ 0001:4F3A       ?WriteFileList@@ZAXPEPEU_tagCFILELIST@@@Z
+ 0001:C722       ?WritePrivateProfileInt@@ZAXPED0H0@Z
+ 0001:C7C4       ?WritePrivateProfileLong@@ZAXPED0J0@Z
+ 0002:1010       ?ZipPath@@ZAPFDPFD@Z
+ 0002:15F0       ?_Close@CZopen@@JECXHH@Z
+ 0002:1070       ?_CZopen@CZopen@@JECXI@Z
+ 0001:4982       ADDDLGPROC
+ 0000:0000  Imp  ANSIUPPER            (USER.431)
+ 0000:0000  Imp  BEGINPAINT           (USER.39)
+ 0000:0000  Imp  BITBLT               (GDI.34)
+ 0000:0000  Imp  CALLNEXTHOOKEX       (USER.293)
+ 0000:0000  Imp  CATCH                (KERNEL.55)
+ 0000:0000  Imp  CHECKDLGBUTTON       (USER.97)
+ 0001:3912       CONFIRMUIDLGPROC
+ 0000:0000  Imp  CREATECOMPATIBLEDC   (GDI.52)
+ 0000:0000  Imp  CREATEDIALOG         (USER.89)
+ 0000:0000  Imp  CREATESOLIDBRUSH     (GDI.66)
+ 0000:0000  Imp  CREATEWINDOWEX       (USER.452)
+ 0000:0000  Imp  DDEACCESSDATA        (DDEML.17)
+ 0000:0000  Imp  DDECLIENTTRANSACTION (DDEML.11)
+ 0000:0000  Imp  DDECONNECT           (DDEML.7)
+ 0000:0000  Imp  DDECREATEDATAHANDLE  (DDEML.14)
+ 0000:0000  Imp  DDECREATESTRINGHANDLE (DDEML.21)
+ 0000:0000  Imp  DDEDISCONNECT        (DDEML.8)
+ 0000:0000  Imp  DDEFREEDATAHANDLE    (DDEML.19)
+ 0000:0000  Imp  DDEFREESTRINGHANDLE  (DDEML.22)
+ 0000:0000  Imp  DDEGETDATA           (DDEML.16)
+ 0000:0000  Imp  DDEINITIALIZE        (DDEML.2)
+ 0000:0000  Imp  DDEUNINITIALIZE      (DDEML.3)
+ 0000:0000  Imp  DEFWINDOWPROC        (USER.107)
+ 0000:0000  Imp  DELETEDC             (GDI.68)
+ 0000:0000  Imp  DELETEOBJECT         (GDI.69)
+ 0000:0000  Imp  DESTROYWINDOW        (USER.53)
+ 0000:0000  Imp  DIALOGBOX            (USER.87)
+ 0001:35C2       DIRBROWSEDLGPROC
+ 0001:2D76       DIRDLGPROC
+ 0000:0000  Imp  DISPATCHMESSAGE      (USER.114)
+ 0000:0000  Imp  DOS3CALL             (KERNEL.102)
+ 0000:0000  Imp  DRAWTEXT             (USER.85)
+ 0000:0000  Imp  ENABLEWINDOW         (USER.34)
+ 0000:0000  Imp  ENDDIALOG            (USER.88)
+ 0000:0000  Imp  ENDPAINT             (USER.40)
+ 0000:0000  Imp  EXITWINDOWSEXEC      (USER.246)
+ 0002:017E       EXTRACTDLGPROC
+ 0001:B88E       F1FILTERPROC
+ 0000:0000  Imp  FATALAPPEXIT         (KERNEL.137)
+ 0000:0000  Imp  FATALEXIT            (KERNEL.1)
+ 0000:FE32  Abs  FIARQQ
+ 0000:0E32  Abs  FICRQQ
+ 0000:5C32  Abs  FIDRQQ
+ 0000:1632  Abs  FIERQQ
+ 0001:3BE6       FILESETDLGPROC
+ 0000:0000  Imp  FILLRECT             (USER.81)
+ 0000:0000  Imp  FINDRESOURCE         (KERNEL.60)
+ 0000:0000  Imp  FINDWINDOW           (USER.50)
+ 0000:0632  Abs  FISRQQ
+ 0000:A23D  Abs  FIWRQQ
+ 0000:4000  Abs  FJARQQ
+ 0000:C000  Abs  FJCRQQ
+ 0000:8000  Abs  FJSRQQ
+ 0000:0000  Imp  FREELIBRARY          (KERNEL.96)
+ 0000:0000  Imp  FREEPROCINSTANCE     (KERNEL.52)
+ 0000:0000  Imp  FREERESOURCE         (KERNEL.63)
+ 0000:0000  Imp  GETCLIENTRECT        (USER.33)
+ 0000:0000  Imp  GETCURRENTTASK       (KERNEL.36)
+ 0000:0000  Imp  GETDC                (USER.66)
+ 0000:0000  Imp  GETDESKTOPWINDOW     (USER.286)
+ 0000:0000  Imp  GETDLGCTRLID         (USER.277)
+ 0000:0000  Imp  GETDLGITEM           (USER.91)
+ 0000:0000  Imp  GETDLGITEMTEXT       (USER.93)
+ 0000:0000  Imp  GETDOSENVIRONMENT    (KERNEL.131)
+ 0000:0000  Imp  GETFOCUS             (USER.23)
+ 0000:0000  Imp  GETMESSAGE           (USER.108)
+ 0000:0000  Imp  GETMODULEFILENAME    (KERNEL.49)
+ 0000:0000  Imp  GETMODULEHANDLE      (KERNEL.47)
+ 0000:0000  Imp  GETOBJECT            (GDI.82)
+ 0000:0000  Imp  GETOPENFILENAME      (COMMDLG.1)
+ 0000:0000  Imp  GETPRIVATEPROFILEINT (KERNEL.127)
+ 0000:0000  Imp  GETPRIVATEPROFILESTRING (KERNEL.128)
+ 0000:0000  Imp  GETPROCADDRESS       (KERNEL.50)
+ 0000:0000  Imp  GETPROFILEINT        (KERNEL.57)
+ 0000:0000  Imp  GETSYSTEMDIRECTORY   (KERNEL.135)
+ 0000:0000  Imp  GETSYSTEMMETRICS     (USER.179)
+ 0000:0000  Imp  GETTEXTEXTENT        (GDI.91)
+ 0000:0000  Imp  GETTEXTMETRICS       (GDI.93)
+ 0000:0000  Imp  GETVERSION           (KERNEL.3)
+ 0000:0000  Imp  GETWINDOWRECT        (USER.32)
+ 0000:0000  Imp  GETWINDOWSDIRECTORY  (KERNEL.134)
+ 0000:0000  Imp  GETWINFLAGS          (KERNEL.132)
+ 0000:0000  Imp  GLOBALALLOC          (KERNEL.15)
+ 0000:0000  Imp  GLOBALFREE           (KERNEL.17)
+ 0000:0000  Imp  GLOBALHANDLE         (KERNEL.21)
+ 0000:0000  Imp  GLOBALLOCK           (KERNEL.18)
+ 0000:0000  Imp  GLOBALREALLOC        (KERNEL.16)
+ 0000:0000  Imp  GLOBALSIZE           (KERNEL.20)
+ 0000:0000  Imp  GLOBALUNLOCK         (KERNEL.19)
+ 0000:0000  Imp  HIDECARET            (USER.166)
+ 0000:0000  Imp  INITAPP              (USER.5)
+ 0000:0000  Imp  INITTASK             (KERNEL.91)
+ 0000:0000  Imp  ISDIALOGMESSAGE      (USER.90)
+ 0000:0000  Imp  ISDLGBUTTONCHECKED   (USER.98)
+ 0000:0000  Imp  KILLTIMER            (USER.12)
+ 0000:0000  Imp  LOADACCELERATORS     (USER.177)
+ 0000:0000  Imp  LOADBITMAP           (USER.175)
+ 0000:0000  Imp  LOADCURSOR           (USER.173)
+ 0000:0000  Imp  LOADICON             (USER.174)
+ 0000:0000  Imp  LOADLIBRARY          (KERNEL.95)
+ 0000:0000  Imp  LOADRESOURCE         (KERNEL.61)
+ 0000:0000  Imp  LOCKRESOURCE         (KERNEL.62)
+ 0000:0000  Imp  LOCKSEGMENT          (KERNEL.23)
+ 0000:0000  Imp  LSTRCAT              (KERNEL.89)
+ 0000:0000  Imp  LSTRCMPI             (USER.471)
+ 0000:0000  Imp  LSTRCPY              (KERNEL.88)
+ 0000:0000  Imp  LSTRLEN              (KERNEL.90)
+ 0001:B118       MAINWNDPROC
+ 0000:0000  Imp  MAKEPROCINSTANCE     (KERNEL.51)
+ 0000:0000  Imp  MESSAGEBOX           (USER.1)
+ 0002:00CC       MODELESSDLGPROC
+ 0001:3A7C       OLDUIDLGPROC
+ 0000:0000  Imp  OPENFILE             (KERNEL.74)
+ 0000:0008  Abs  pAtomTable
+ 0000:0000  Imp  PEEKMESSAGE          (USER.109)
+ 0001:4C08       PGROUPDLGPROC
+ 0000:0006  Abs  pLocalHeap
+ 0000:0000  Imp  POSTMESSAGE          (USER.110)
+ 0000:0000  Imp  POSTQUITMESSAGE      (USER.6)
+ 0000:000E  Abs  pStackBot
+ 0000:000C  Abs  pStackMin
+ 0000:000A  Abs  pStackTop
+ 0000:0000  Imp  REGISTERCLASS        (USER.57)
+ 0000:0000  Imp  RELEASEDC            (USER.68)
+ 0004:0004       rsrvptrs
+ 0001:441C       SCHEDULEDLGPROC
+ 0000:0000  Imp  SELECTOBJECT         (GDI.45)
+ 0000:0000  Imp  SENDDLGITEMMESSAGE   (USER.101)
+ 0000:0000  Imp  SENDMESSAGE          (USER.111)
+ 0000:0000  Imp  SETBKMODE            (GDI.2)
+ 0000:0000  Imp  SETCURSOR            (USER.69)
+ 0000:0000  Imp  SETDLGITEMTEXT       (USER.92)
+ 0000:0000  Imp  SETFOCUS             (USER.22)
+ 0000:0000  Imp  SETTEXTCOLOR         (GDI.9)
+ 0000:0000  Imp  SETTIMER             (USER.10)
+ 0000:0000  Imp  SETWINDOWPOS         (USER.232)
+ 0000:0000  Imp  SETWINDOWSHOOKEX     (USER.291)
+ 0000:0000  Imp  SETWINDOWTEXT        (USER.37)
+ 0000:0000  Imp  SHOWCARET            (USER.167)
+ 0000:0000  Imp  SHOWWINDOW           (USER.42)
+ 0002:166A       SPLASHWNDPROC
+ 0000:0000  Imp  THROW                (KERNEL.56)
+ 0000:0000  Imp  TRANSLATEACCELERATOR (USER.178)
+ 0000:0000  Imp  TRANSLATEMESSAGE     (USER.113)
+ 0001:2C34       TRAYASKDLGPROC
+ 0000:0000  Imp  UNHOOKWINDOWSHOOKEX  (USER.292)
+ 0001:4836       UNINSTALLDLGPROC
+ 0000:0000  Imp  UNREGISTERCLASS      (USER.403)
+ 0000:0000  Imp  UPDATEWINDOW         (USER.124)
+ 0001:3698       USERINFODLGPROC
+ 0000:0000  Imp  VERFINDFILE          (VER.8)
+ 0000:0000  Imp  VERINSTALLFILE       (VER.9)
+ 0000:0000  Imp  WAITEVENT            (KERNEL.30)
+ 0001:2AC8       WELCOMEDLGPROC
+ 0000:0000  Imp  WINEXEC              (KERNEL.166)
+ 0000:0000  Imp  WINHELP              (USER.171)
+ 0001:ACE0       WINMAIN
+ 0000:0000  Imp  WRITEPRIVATEPROFILESTRING (KERNEL.129)
+ 0004:0E06       _aseghi
+ 0004:0E04       _aseglo
+ 0001:AA42       _AssertBS
+ 0001:9494       _atof
+ 0001:5A6A       _atoi
+ 0001:6D94       _atol
+ 0001:75A2       _difftime
+ 0004:2326       _edata
+ 0004:2AF8       _end
+ 0004:0C9C       _errno
+ 0001:58C7       _exit
+ 0001:A1D4       _fclose
+ 0001:9DD0       _fflush
+ 0001:6D98       _getenv
+ 0001:ABA4       _GetTempDir
+ 0004:1C66       _hlibDUNZIP
+ 0001:AC2C       _IsTextFile
+ 0000:0000  Imp  _LCLOSE              (KERNEL.81)
+ 0000:0000  Imp  _LCREAT              (KERNEL.83)
+ 0000:0000  Imp  _LLSEEK              (KERNEL.84)
+ 0002:145E       _LoadUnzipLibrary
+ 0000:0000  Imp  _LOPEN               (KERNEL.85)
+ 0000:0000  Imp  _LREAD               (KERNEL.82)
+ 0000:0000  Imp  _LWRITE              (KERNEL.86)
+ 0001:5B3A       _memset
+ 0001:07AA       _ProcessCleanup
+ 0001:047C       _ProcessCmdLine
+ 0001:0848       _ProcessExitSpecials
+ 0001:0000       _ProcessMainCmds
+ 0001:076A       _ProcessStartMessage
+ 0001:AAC8       _RDMkDir
+ 0001:AAD8       _RecurseDir
+ 0001:5E2C       _remove
+ 0001:AA80       _RemoveBS
+ 0001:AB2A       _RMakeDir
+ 0001:7404       _sscanf
+ 0004:0DF8       _STKHQQ
+ 0001:A94A       _strcat
+ 0001:75D0       _strchr
+ 0001:8716       _strcpy
+ 0001:6ED4       _strlen
+ 0001:6EEE       _strncmp
+ 0001:64D4       _strncpy
+ 0001:7602       _strrchr
+ 0001:5AA6       _time
+ 0001:9420       _ungetc
+ 0000:0000  Imp  _wsprintf            (USER.420)
+ 0004:1C8C       __aaltstkovr
+ 0001:7772       __access
+ 0004:0C80       __acfinfo
+ 0000:9876  Abs  __acrtmsg
+ 0000:9876  Abs  __acrtused
+ 0000:D6D6  Abs  __aDBdoswp
+ 0004:0E32       __adbgmsg
+ 0000:D6D6  Abs  __aDBused
+ 0001:9980       __aFahdiff
+ 0001:7C7C       __aFchkstk
+ 0001:9272       __aFeaddd
+ 0001:9191       __aFeadds
+ 0001:92D6       __aFedivd
+ 0001:92EF       __aFedivdr
+ 0001:91F5       __aFedivs
+ 0001:920E       __aFedivsr
+ 0001:9227       __aFeldd
+ 0001:9321       __aFeldl
+ 0001:933A       __aFeldq
+ 0001:9146       __aFelds
+ 0001:9308       __aFeldw
+ 0001:928B       __aFemuld
+ 0001:91AA       __aFemuls
+ 0001:9259       __aFestd
+ 0001:9240       __aFestdp
+ 0001:9178       __aFests
+ 0001:915F       __aFestsp
+ 0001:92A4       __aFesubd
+ 0001:92BD       __aFesubdr
+ 0001:91C3       __aFesubs
+ 0001:91DC       __aFesubsr
+ 0001:8F8C       __aFfadd
+ 0001:907E       __aFfaddd
+ 0001:967A       __aFFalmul
+ 0001:967A       __aFFaulmul
+ 0001:9026       __aFfchs
+ 0001:8FE4       __aFfdiv
+ 0001:90D6       __aFfdivd
+ 0001:90EC       __aFfdivdr
+ 0001:8FFA       __aFfdivr
+ 0001:9010       __aFfdup
+ 0001:903C       __aFfldd
+ 0001:9118       __aFfldl
+ 0001:912E       __aFfldq
+ 0001:9102       __aFfldw
+ 0001:8FA2       __aFfmul
+ 0001:9094       __aFfmuld
+ 0001:9068       __aFfstd
+ 0001:9052       __aFfstdp
+ 0001:8FB8       __aFfsub
+ 0001:90AA       __aFfsubd
+ 0001:90C0       __aFfsubdr
+ 0001:8FCE       __aFfsubr
+ 0001:7C0A       __aFftol
+ 0001:5E52       __aFldiv
+ 0001:6D34       __aFlmul
+ 0001:6E34       __aFlrem
+ 0001:7A28       __aFlshl
+ 0001:9270       __aFsaddd
+ 0001:918F       __aFsadds
+ 0001:92D4       __aFsdivd
+ 0001:92ED       __aFsdivdr
+ 0001:91F3       __aFsdivs
+ 0001:920C       __aFsdivsr
+ 0001:9225       __aFsldd
+ 0001:931F       __aFsldl
+ 0001:9338       __aFsldq
+ 0001:9144       __aFslds
+ 0001:9306       __aFsldw
+ 0001:9289       __aFsmuld
+ 0001:91A8       __aFsmuls
+ 0001:9257       __aFsstd
+ 0001:923E       __aFsstdp
+ 0001:9176       __aFssts
+ 0001:915D       __aFsstsp
+ 0001:92A2       __aFssubd
+ 0001:92BB       __aFssubdr
+ 0001:91C1       __aFssubs
+ 0001:91DA       __aFssubsr
+ 0001:7A34       __aFuldiv
+ 0001:6D34       __aFulmul
+ 0001:5EEC       __aFulshr
+ 0000:0000  Imp  __AHINCR             (KERNEL.114)
+ 0000:0000  Imp  __AHSHIFT            (KERNEL.113)
+ 0004:0C8E       __aintdiv
+ 0004:0E2E       __amblksiz
+ 0001:620E       __amsg_exit
+ 0001:7C5C       __aNchkstk
+ 0004:1CBA       __asizeC
+ 0004:1CBB       __asizeD
+ 0001:6140       __astart
+ 0001:64FE       __catox
+ 0001:58E4       __cexit
+ 0001:8EEA       __cfltcvt
+ 0004:1C9A       __cfltcvt_tab
+ 0004:1D3C       __cflush
+ 0001:8AA6       __cftoe
+ 0001:8C72       __cftof
+ 0001:8E0A       __cftog
+ 0001:5D52       __chdir
+ 0001:5DE2       __chdrive
+ 0004:0CEB       __child
+ 0001:7C7C       __chkstk
+ 0001:57E4       __cinit
+ 0001:6204       __cintDIV
+ 0001:6F2A       __close
+ 0001:A9DE       __cltoasub
+ 0004:0E02       __cmdShow
+ 0001:A2D6       __commit
+ 0004:0CAB       __cpumode
+ 0001:8992       __cropzeros
+ 0001:5965       __ctermsub
+ 0004:0CF2       __ctype
+ 0004:0CF2       __ctype_
+ 0001:7239       __cXENIXtoDOSmode
+ 0001:A9EB       __cxtoa
+ 0001:58F5       __c_exit
+ 0004:0E76       __daylight
+ 0004:0E54       __days
+ 0004:0CAC       __doserrno
+ 0001:6250       __dosret0
+ 0001:626F       __dosretax
+ 0001:625D       __dosreturn
+ 0001:65D4       __dostotime_t
+ 0001:A9BA       __dos_commit
+ 0001:7902       __dos_findfirst
+ 0001:78F0       __dos_findnext
+ 0001:79DC       __dos_getdiskfree
+ 0001:797C       __dos_getftime
+ 0001:79B0       __dos_setftime
+ 0001:9272       __eaddd
+ 0001:9191       __eadds
+ 0004:2326       __edata
+ 0001:92D6       __edivd
+ 0001:92EF       __edivdr
+ 0001:91F5       __edivs
+ 0001:920E       __edivsr
+ 0001:9227       __eldd
+ 0001:9321       __eldl
+ 0001:933A       __eldq
+ 0001:9146       __elds
+ 0001:9308       __eldw
+ 0001:928B       __emuld
+ 0001:91AA       __emuls
+ 0004:2AF8       __end
+ 0001:9B98       __endstdio
+ 0004:0CE2       __environ
+ 0001:9259       __estd
+ 0001:9240       __estdp
+ 0001:9178       __ests
+ 0001:915F       __estsp
+ 0001:92A4       __esubd
+ 0001:92BD       __esubdr
+ 0001:91C3       __esubs
+ 0001:91DC       __esubsr
+ 0001:58D5       __exit
+ 0004:0CED       __exitflag
+ 0004:0C92       __fac
+ 0001:8F8C       __fadd
+ 0001:907E       __faddd
+ 0001:8A4E       __fassign
+ 0001:9026       __fchs
+ 0001:9F2C       __fcloseall
+ 0001:8FE4       __fdiv
+ 0001:90D6       __fdivd
+ 0001:90EC       __fdivdr
+ 0001:8FFA       __fdivr
+ 0001:9010       __fdup
+ 0001:59A2       __ffree
+ 0001:670A       __FF_MSGBANNER
+ 0004:0E20       __fheap
+ 0001:5A6E       __fheapmin
+ 0001:7582       __fheapwalk
+ 0001:9376       __filbuf
+ 0001:7454       __filelength
+ 0001:6431       __findlast
+ 0001:881A       __findseg
+ 0001:903C       __fldd
+ 0001:9118       __fldl
+ 0001:912E       __fldq
+ 0001:9102       __fldw
+ 0001:9B34       __fltin
+ 0001:9766       __fltout
+ 0000:9876  Abs  __fltused
+ 0001:9E2C       __flush
+ 0001:9EAC       __flushall
+ 0001:59C3       __fmalloc
+ 0001:7A94       __fmemcpy
+ 0001:969C       __fmemmove
+ 0001:7B64       __fmemset
+ 0004:1C98       __fmode
+ 0001:8FA2       __fmul
+ 0001:9094       __fmuld
+ 0001:891C       __forcdecpt
+ 0004:1D4E       __fpinit
+ 0000:0000  Imp  __fpmath             (WIN87EM.1)
+ 0001:9352       __fpsignal
+ 0000:9876  Abs  __fptaskdata
+ 0001:94F2       __fptostr
+ 0001:61FE       __fptrap
+ 0001:74EE       __frealloc
+ 0001:A912       __freebuf
+ 0001:9068       __fstd
+ 0001:9052       __fstdp
+ 0001:5FCE       __fstrcat
+ 0001:5F68       __fstrcmp
+ 0001:5F92       __fstrcpy
+ 0001:7636       __fstrdup
+ 0001:5EF8       __fstricmp
+ 0001:7B4A       __fstrlen
+ 0001:7B26       __fstrlwr
+ 0001:5F3E       __fstrncpy
+ 0001:7BAC       __fstrpbrk
+ 0001:7AF2       __fstrrchr
+ 0001:60CA       __fstrstr
+ 0001:6022       __fstrtok
+ 0001:8FB8       __fsub
+ 0001:90AA       __fsubd
+ 0001:90C0       __fsubdr
+ 0001:8FCE       __fsubr
+ 0001:7C0A       __ftol
+ 0001:97BC       __getbuf
+ 0001:77AA       __getcwd
+ 0001:77C8       __getdcwd
+ 0001:62AE       __GetDGROUP
+ 0001:5DB8       __getdrive
+ 0001:633A       __growseg
+ 0001:95A0       __headchk
+ 0001:5A6E       __heapmin
+ 0001:7582       __heapwalk
+ 0004:0DFC       __hInstance
+ 0004:0DFA       __hPrevInstance
+ 0001:63CB       __incseg
+ 0001:6A1A       __initseg
+ 0001:7CB6       __input
+ 0001:889E       __intdosx
+ 0004:1D62       __iob
+ 0004:1E52       __iob2
+ 0004:1C98       __iomode
+ 0001:6C60       __isindst
+ 0001:A99E       __itoa
+ 0004:1CF0       __lastiob
+ 0001:A6D3       __LD12MULT
+ 0001:A5FE       __LD12MULTTENPOWER
+ 0001:6A4E       __linkseg
+ 0001:95F5       __listchk
+ 0004:0E3A       __lpdays
+ 0004:0DFE       __lpszCmdLine
+ 0001:862E       __lseek
+ 0004:1CC8       __lseekchk
+ 0001:767C       __makepath
+ 0001:A858       __MANTOLD12
+ 0001:6281       __maperror
+ 0004:2AF0       __mbac
+ 0001:6554       __minseg
+ 0001:5D44       __mkdir
+ 0001:6D66       __myalloc
+ 0001:6452       __newseg
+ 0004:0CAE       __nfile
+ 0001:6992       __NMSG_TEXT
+ 0001:69C9       __NMSG_WRITE
+ 0001:61F7       __nomain
+ 0001:6F7A       __open
+ 0004:0CAC       __oserr
+ 0004:0CB4       __osfile
+ 0004:0CA7       __osmajor
+ 0004:0CA6       __osminor
+ 0004:0CAA       __osmode
+ 0004:0CA6       __osver
+ 0004:0CA8       __osversion
+ 0004:0CE6       __pgmptr
+ 0004:0CEE       __pnhFarHeap
+ 0001:8A16       __positive
+ 0004:0CA2       __psp
+ 0004:0CA0       __pspadr
+ 0001:66D7       __QWINClose
+ 0001:66D7       __QWINExit
+ 0001:66D7       __QWINGetBuffSize
+ 0001:66D7       __QWINGetFocus
+ 0001:66D7       __QWINGetSize
+ 0001:66D7       __QWINInit
+ 0001:66D7       __QWINIsQWINin
+ 0001:66D7       __QWINMenuClick
+ 0001:66D7       __QWINOpen
+ 0001:66D7       __QWINRead
+ 0001:66D7       __QWINSetAboutString
+ 0001:66D7       __QWINSetBuffSize
+ 0001:66D7       __QWINSetFocus
+ 0001:66D7       __QWINSetSize
+ 0001:66D7       __QWINTerm
+ 0004:0E30       __qwinused
+ 0001:66D7       __QWINWrite
+ 0001:66D7       __QWINYield
+ 0001:9808       __read
+ 0001:8752       __resize
+ 0001:5D78       __rmdir
+ 0001:9270       __saddd
+ 0001:918F       __sadds
+ 0001:92D4       __sdivd
+ 0001:92ED       __sdivdr
+ 0001:91F3       __sdivs
+ 0001:920C       __sdivsr
+ 0001:62BE       __searchseg
+ 0001:672E       __setargv
+ 0001:68D8       __setenvp
+ 0004:1CB8       __sigintoff
+ 0004:1CB6       __sigintseg
+ 0000:0001  Abs  __sizec
+ 0000:0001  Abs  __sized
+ 0001:9225       __sldd
+ 0001:931F       __sldl
+ 0001:9338       __sldq
+ 0001:9144       __slds
+ 0001:9306       __sldw
+ 0001:9289       __smuld
+ 0001:91A8       __smuls
+ 0001:6F62       __sopen
+ 0001:5B82       __splitpath
+ 0001:9257       __sstd
+ 0001:923E       __sstdp
+ 0001:9176       __ssts
+ 0001:915D       __sstsp
+ 0001:92A2       __ssubd
+ 0001:92BB       __ssubdr
+ 0001:91C1       __ssubs
+ 0001:91DA       __ssubsr
+ 0001:8702       __stackavail
+ 0001:9D68       __STRINGTOD
+ 0001:9F6C       __STRINGTOLD
+ 0001:66DE       __stubmain
+ 0004:0E72       __timezone
+ 0004:0E80       __tzname
+ 0001:6B12       __tzset
+ 0004:0C9E       __umaskval
+ 0001:5E2C       __unlink
+ 0001:6A84       __unlinkseg
+ 0001:66D7       __wabout
+ 0001:8844       __walklist
+ 0001:9622       __walkone
+ 0001:66D2       __wcexit
+ 0001:66D2       __wcinit
+ 0001:66D7       __wclose
+ 0004:0CB0       __wfile
+ 0001:6136       __wflags
+ 0001:66D7       __wgetfocus
+ 0001:66D7       __wgetscreenbuf
+ 0001:66D7       __wgetsize
+ 0000:0000  Imp  __WINFLAGS           (KERNEL.178)
+ 0004:0CA5       __winmajor
+ 0004:0CA4       __winminor
+ 0004:0CA4       __winver
+ 0000:0000  Abs  __wiobused
+ 0001:66D7       __wmenuclick
+ 0004:0CB2       __wnfile
+ 0001:66D7       __wopen
+ 0001:66D7       __wread
+ 0001:724A       __write
+ 0001:66D7       __wsetfocus
+ 0001:66D7       __wsetscreenbuf
+ 0001:66D7       __wsetsize
+ 0004:0CC8       __wsfile
+ 0001:66D7       __wterm
+ 0001:66D7       __wwrite
+ 0004:0E0A       ___aDBrterr
+ 0004:0E08       ___aDBswpflg
+ 0004:0CDC       ___argc
+ 0004:0CDE       ___argv
+ 0001:6A06       ___ExportedStub
+ 0001:6AF6       ___tzset
+
+  Address         Publics by Value
+
+ 0000:0000  Imp  _LCREAT              (KERNEL.83)
+ 0000:0000  Imp  GETDLGITEMTEXT       (USER.93)
+ 0000:0000  Imp  SHOWCARET            (USER.167)
+ 0000:0000  Imp  GETVERSION           (KERNEL.3)
+ 0000:0000  Imp  ISDIALOGMESSAGE      (USER.90)
+ 0000:0000  Imp  WINEXEC              (KERNEL.166)
+ 0000:0000  Imp  SENDDLGITEMMESSAGE   (USER.101)
+ 0000:0000  Imp  DDEUNINITIALIZE      (DDEML.3)
+ 0000:0000  Imp  SETWINDOWSHOOKEX     (USER.291)
+ 0000:0000  Imp  DDECREATEDATAHANDLE  (DDEML.14)
+ 0000:0000  Imp  LOADBITMAP           (USER.175)
+ 0000:0000  Imp  DEFWINDOWPROC        (USER.107)
+ 0000:0000  Imp  GETWINDOWSDIRECTORY  (KERNEL.134)
+ 0000:0000  Imp  VERINSTALLFILE       (VER.9)
+ 0000:0000  Imp  ANSIUPPER            (USER.431)
+ 0000:0000  Imp  FREERESOURCE         (KERNEL.63)
+ 0000:0000  Imp  GLOBALREALLOC        (KERNEL.16)
+ 0000:0000  Imp  _wsprintf            (USER.420)
+ 0000:0000  Imp  GETTEXTMETRICS       (GDI.93)
+ 0000:0000  Imp  GETTEXTEXTENT        (GDI.91)
+ 0000:0000  Imp  GLOBALFREE           (KERNEL.17)
+ 0000:0000  Imp  GETMESSAGE           (USER.108)
+ 0000:0000  Imp  SELECTOBJECT         (GDI.45)
+ 0000:0000  Imp  MESSAGEBOX           (USER.1)
+ 0000:0000  Imp  CATCH                (KERNEL.55)
+ 0000:0000  Imp  UPDATEWINDOW         (USER.124)
+ 0000:0000  Imp  CREATEWINDOWEX       (USER.452)
+ 0000:0000  Imp  GLOBALALLOC          (KERNEL.15)
+ 0000:0000  Imp  LSTRCPY              (KERNEL.88)
+ 0000:0000  Imp  _LWRITE              (KERNEL.86)
+ 0000:0000  Imp  GETOBJECT            (GDI.82)
+ 0000:0000  Imp  FINDRESOURCE         (KERNEL.60)
+ 0000:0000  Imp  _LREAD               (KERNEL.82)
+ 0000:0000  Imp  __AHSHIFT            (KERNEL.113)
+ 0000:0000  Imp  WINHELP              (USER.171)
+ 0000:0000  Imp  OPENFILE             (KERNEL.74)
+ 0000:0000  Imp  DDEFREEDATAHANDLE    (DDEML.19)
+ 0000:0000  Imp  GETMODULEHANDLE      (KERNEL.47)
+ 0000:0000  Imp  LSTRCAT              (KERNEL.89)
+ 0000:0000  Imp  FINDWINDOW           (USER.50)
+ 0000:0000  Imp  GETPROCADDRESS       (KERNEL.50)
+ 0000:0000  Imp  KILLTIMER            (USER.12)
+ 0000:0000  Imp  RELEASEDC            (USER.68)
+ 0000:0000  Imp  UNREGISTERCLASS      (USER.403)
+ 0000:0000  Imp  FATALEXIT            (KERNEL.1)
+ 0000:0000  Imp  DDEACCESSDATA        (DDEML.17)
+ 0000:0000  Imp  __fpmath             (WIN87EM.1)
+ 0000:0000  Imp  EXITWINDOWSEXEC      (USER.246)
+ 0000:0000  Imp  __AHINCR             (KERNEL.114)
+ 0000:0000  Imp  SHOWWINDOW           (USER.42)
+ 0000:0000  Imp  THROW                (KERNEL.56)
+ 0000:0000  Imp  INITTASK             (KERNEL.91)
+ 0000:0000  Imp  ENDPAINT             (USER.40)
+ 0000:0000  Imp  POSTMESSAGE          (USER.110)
+ 0000:0000  Imp  GETPRIVATEPROFILESTRING (KERNEL.128)
+ 0000:0000  Imp  WRITEPRIVATEPROFILESTRING (KERNEL.129)
+ 0000:0000  Imp  LOCKSEGMENT          (KERNEL.23)
+ 0000:0000  Imp  SETWINDOWTEXT        (USER.37)
+ 0000:0000  Imp  DISPATCHMESSAGE      (USER.114)
+ 0000:0000  Imp  SETWINDOWPOS         (USER.232)
+ 0000:0000  Imp  GETFOCUS             (USER.23)
+ 0000:0000  Imp  LOADLIBRARY          (KERNEL.95)
+ 0000:0000  Imp  LSTRCMPI             (USER.471)
+ 0000:0000  Imp  BITBLT               (GDI.34)
+ 0000:0000  Imp  INITAPP              (USER.5)
+ 0000:0000  Imp  DOS3CALL             (KERNEL.102)
+ 0000:0000  Imp  GETDC                (USER.66)
+ 0000:0000  Imp  ENDDIALOG            (USER.88)
+ 0000:0000  Imp  LOADICON             (USER.174)
+ 0000:0000  Imp  TRANSLATEMESSAGE     (USER.113)
+ 0000:0000  Imp  FREEPROCINSTANCE     (KERNEL.52)
+ 0000:0000  Imp  CREATEDIALOG         (USER.89)
+ 0000:0000  Imp  HIDECARET            (USER.166)
+ 0000:0000  Abs  __wiobused
+ 0000:0000  Imp  GETSYSTEMDIRECTORY   (KERNEL.135)
+ 0000:0000  Imp  SETTEXTCOLOR         (GDI.9)
+ 0000:0000  Imp  CREATECOMPATIBLEDC   (GDI.52)
+ 0000:0000  Imp  ENABLEWINDOW         (USER.34)
+ 0000:0000  Imp  _LOPEN               (KERNEL.85)
+ 0000:0000  Imp  GETCLIENTRECT        (USER.33)
+ 0000:0000  Imp  DDECONNECT           (DDEML.7)
+ 0000:0000  Imp  __WINFLAGS           (KERNEL.178)
+ 0000:0000  Imp  CALLNEXTHOOKEX       (USER.293)
+ 0000:0000  Imp  GETWINFLAGS          (KERNEL.132)
+ 0000:0000  Imp  VERFINDFILE          (VER.8)
+ 0000:0000  Imp  CHECKDLGBUTTON       (USER.97)
+ 0000:0000  Imp  GETDESKTOPWINDOW     (USER.286)
+ 0000:0000  Imp  TRANSLATEACCELERATOR (USER.178)
+ 0000:0000  Imp  FREELIBRARY          (KERNEL.96)
+ 0000:0000  Imp  GLOBALLOCK           (KERNEL.18)
+ 0000:0000  Imp  SETDLGITEMTEXT       (USER.92)
+ 0000:0000  Imp  GETPRIVATEPROFILEINT (KERNEL.127)
+ 0000:0000  Imp  CREATESOLIDBRUSH     (GDI.66)
+ 0000:0000  Imp  REGISTERCLASS        (USER.57)
+ 0000:0000  Imp  GETDLGCTRLID         (USER.277)
+ 0000:0000  Imp  _LCLOSE              (KERNEL.81)
+ 0000:0000  Imp  SETFOCUS             (USER.22)
+ 0000:0000  Imp  WAITEVENT            (KERNEL.30)
+ 0000:0000  Imp  DELETEOBJECT         (GDI.69)
+ 0000:0000  Imp  LOADRESOURCE         (KERNEL.61)
+ 0000:0000  Imp  DDEINITIALIZE        (DDEML.2)
+ 0000:0000  Imp  FATALAPPEXIT         (KERNEL.137)
+ 0000:0000  Imp  GETDOSENVIRONMENT    (KERNEL.131)
+ 0000:0000  Imp  GETSYSTEMMETRICS     (USER.179)
+ 0000:0000  Imp  DDEDISCONNECT        (DDEML.8)
+ 0000:0000  Imp  LSTRLEN              (KERNEL.90)
+ 0000:0000  Imp  SETCURSOR            (USER.69)
+ 0000:0000  Imp  SETBKMODE            (GDI.2)
+ 0000:0000  Imp  LOADCURSOR           (USER.173)
+ 0000:0000  Imp  GLOBALHANDLE         (KERNEL.21)
+ 0000:0000  Imp  UNHOOKWINDOWSHOOKEX  (USER.292)
+ 0000:0000  Imp  GETDLGITEM           (USER.91)
+ 0000:0000  Imp  GLOBALSIZE           (KERNEL.20)
+ 0000:0000  Imp  SETTIMER             (USER.10)
+ 0000:0000  Imp  DDECLIENTTRANSACTION (DDEML.11)
+ 0000:0000  Imp  GETOPENFILENAME      (COMMDLG.1)
+ 0000:0000  Imp  GETWINDOWRECT        (USER.32)
+ 0000:0000  Imp  DELETEDC             (GDI.68)
+ 0000:0000  Imp  SENDMESSAGE          (USER.111)
+ 0000:0000  Imp  _LLSEEK              (KERNEL.84)
+ 0000:0000  Imp  ISDLGBUTTONCHECKED   (USER.98)
+ 0000:0000  Imp  LOADACCELERATORS     (USER.177)
+ 0000:0000  Imp  GLOBALUNLOCK         (KERNEL.19)
+ 0000:0000  Imp  GETPROFILEINT        (KERNEL.57)
+ 0000:0000  Imp  LOCKRESOURCE         (KERNEL.62)
+ 0000:0000  Imp  GETMODULEFILENAME    (KERNEL.49)
+ 0000:0000  Imp  PEEKMESSAGE          (USER.109)
+ 0000:0000  Imp  BEGINPAINT           (USER.39)
+ 0000:0000  Imp  DDEFREESTRINGHANDLE  (DDEML.22)
+ 0000:0000  Imp  DRAWTEXT             (USER.85)
+ 0000:0000  Imp  POSTQUITMESSAGE      (USER.6)
+ 0000:0000  Imp  DESTROYWINDOW        (USER.53)
+ 0000:0000  Imp  DDEGETDATA           (DDEML.16)
+ 0000:0000  Imp  GETCURRENTTASK       (KERNEL.36)
+ 0000:0000  Imp  MAKEPROCINSTANCE     (KERNEL.51)
+ 0000:0000  Imp  DDECREATESTRINGHANDLE (DDEML.21)
+ 0000:0000  Imp  FILLRECT             (USER.81)
+ 0000:0000  Imp  DIALOGBOX            (USER.87)
+ 0000:0001  Abs  __sized
+ 0000:0001  Abs  __sizec
+ 0000:0006  Abs  pLocalHeap
+ 0000:0008  Abs  pAtomTable
+ 0000:000A  Abs  pStackTop
+ 0000:000C  Abs  pStackMin
+ 0000:000E  Abs  pStackBot
+ 0000:0632  Abs  FISRQQ
+ 0000:0E32  Abs  FICRQQ
+ 0000:1632  Abs  FIERQQ
+ 0000:9876  Abs  __acrtmsg
+ 0000:9876  Abs  __acrtused
+ 0000:9876  Abs  __fltused
+ 0000:9876  Abs  __fptaskdata
+ 0000:D6D6  Abs  __aDBdoswp
+ 0000:D6D6  Abs  __aDBused
+ 0001:0000       _ProcessMainCmds
+ 0001:047C       _ProcessCmdLine
+ 0001:04EC       ?ProcessInitialize@@ZAXXZ
+ 0001:076A       _ProcessStartMessage
+ 0001:07AA       _ProcessCleanup
+ 0001:0848       _ProcessExitSpecials
+ 0001:09EE       ?Decide2@@ZAHHHH@Z
+ 0001:0A10       ?InstallIcon@@ZAHXZ
+ 0001:0D2A       ?AutoConfig@@ZAXXZ
+ 0001:1682       ?MoveLocalToShared@@ZAHXZ
+ 0001:187E       ?TraynoteConfig@@ZAXXZ
+ 0001:1C70       ?ValidSernum@@ZAHPED@Z
+ 0001:1CCC       ?CheckUser@@ZAHXZ
+ 0001:1F70       ?Do_Uninstall@@ZAXXZ
+ 0001:2AC8       WELCOMEDLGPROC
+ 0001:2C34       TRAYASKDLGPROC
+ 0001:2D76       DIRDLGPROC
+ 0001:35C2       DIRBROWSEDLGPROC
+ 0001:3698       USERINFODLGPROC
+ 0001:3912       CONFIRMUIDLGPROC
+ 0001:3A7C       OLDUIDLGPROC
+ 0001:3BE6       FILESETDLGPROC
+ 0001:441C       SCHEDULEDLGPROC
+ 0001:4836       UNINSTALLDLGPROC
+ 0001:4982       ADDDLGPROC
+ 0001:4C08       PGROUPDLGPROC
+ 0001:4F3A       ?WriteFileList@@ZAXPEPEU_tagCFILELIST@@@Z
+ 0001:4FF2       ?LoadFileList@@ZAXPEPEU_tagCFILELIST@@@Z
+ 0001:515E       ?KillFileList@@ZAXPEPEU_tagCFILELIST@@@Z
+ 0001:52FC       ?ScanFLForDups@@ZAHPEPEU_tagCFILELIST@@PED@Z
+ 0001:538E       ?ScrollNumWheel@@ZAHIHHHHHPED@Z
+ 0001:5450       ?CheckEdLimit@@ZAXIHPEHHH@Z
+ 0001:5500       ?MakeValidPath@@ZAHPED@Z
+ 0001:57E4       __cinit
+ 0001:58C7       _exit
+ 0001:58D5       __exit
+ 0001:58E4       __cexit
+ 0001:58F5       __c_exit
+ 0001:5965       __ctermsub
+ 0001:59A2       __ffree
+ 0001:59C3       __fmalloc
+ 0001:5A6A       _atoi
+ 0001:5A6E       __fheapmin
+ 0001:5A6E       __heapmin
+ 0001:5AA6       _time
+ 0001:5B3A       _memset
+ 0001:5B82       __splitpath
+ 0001:5D44       __mkdir
+ 0001:5D52       __chdir
+ 0001:5D78       __rmdir
+ 0001:5DB8       __getdrive
+ 0001:5DE2       __chdrive
+ 0001:5E2C       __unlink
+ 0001:5E2C       _remove
+ 0001:5E52       __aFldiv
+ 0001:5EEC       __aFulshr
+ 0001:5EF8       __fstricmp
+ 0001:5F3E       __fstrncpy
+ 0001:5F68       __fstrcmp
+ 0001:5F92       __fstrcpy
+ 0001:5FCE       __fstrcat
+ 0001:6022       __fstrtok
+ 0001:60CA       __fstrstr
+ 0001:6136       __wflags
+ 0001:6140       __astart
+ 0001:61F7       __nomain
+ 0001:61FE       __fptrap
+ 0001:6204       __cintDIV
+ 0001:620E       __amsg_exit
+ 0001:6250       __dosret0
+ 0001:625D       __dosreturn
+ 0001:626F       __dosretax
+ 0001:6281       __maperror
+ 0001:62AE       __GetDGROUP
+ 0001:62BE       __searchseg
+ 0001:633A       __growseg
+ 0001:63CB       __incseg
+ 0001:6431       __findlast
+ 0001:6452       __newseg
+ 0001:64D4       _strncpy
+ 0001:64FE       __catox
+ 0001:6554       __minseg
+ 0001:65D4       __dostotime_t
+ 0001:66D2       __wcinit
+ 0001:66D2       __wcexit
+ 0001:66D7       __wopen
+ 0001:66D7       __QWINSetAboutString
+ 0001:66D7       __QWINSetBuffSize
+ 0001:66D7       __QWINGetBuffSize
+ 0001:66D7       __QWINGetFocus
+ 0001:66D7       __wgetsize
+ 0001:66D7       __QWINRead
+ 0001:66D7       __wgetfocus
+ 0001:66D7       __wwrite
+ 0001:66D7       __wabout
+ 0001:66D7       __QWINTerm
+ 0001:66D7       __QWINGetSize
+ 0001:66D7       __QWINSetFocus
+ 0001:66D7       __wgetscreenbuf
+ 0001:66D7       __wsetscreenbuf
+ 0001:66D7       __QWINWrite
+ 0001:66D7       __QWINMenuClick
+ 0001:66D7       __QWINClose
+ 0001:66D7       __wclose
+ 0001:66D7       __wsetsize
+ 0001:66D7       __wmenuclick
+ 0001:66D7       __wread
+ 0001:66D7       __QWINOpen
+ 0001:66D7       __wterm
+ 0001:66D7       __QWINInit
+ 0001:66D7       __QWINYield
+ 0001:66D7       __QWINExit
+ 0001:66D7       __wsetfocus
+ 0001:66D7       __QWINSetSize
+ 0001:66D7       __QWINIsQWINin
+ 0001:66DE       __stubmain
+ 0001:670A       __FF_MSGBANNER
+ 0001:672E       __setargv
+ 0001:68D8       __setenvp
+ 0001:6992       __NMSG_TEXT
+ 0001:69C9       __NMSG_WRITE
+ 0001:6A06       ___ExportedStub
+ 0001:6A1A       __initseg
+ 0001:6A4E       __linkseg
+ 0001:6A84       __unlinkseg
+ 0001:6AF6       ___tzset
+ 0001:6B12       __tzset
+ 0001:6C60       __isindst
+ 0001:6D34       __aFulmul
+ 0001:6D34       __aFlmul
+ 0001:6D66       __myalloc
+ 0001:6D94       _atol
+ 0001:6D98       _getenv
+ 0001:6E34       __aFlrem
+ 0001:6ED4       _strlen
+ 0001:6EEE       _strncmp
+ 0001:6F2A       __close
+ 0001:6F62       __sopen
+ 0001:6F7A       __open
+ 0001:7239       __cXENIXtoDOSmode
+ 0001:724A       __write
+ 0001:7404       _sscanf
+ 0001:7454       __filelength
+ 0001:74EE       __frealloc
+ 0001:7582       __fheapwalk
+ 0001:7582       __heapwalk
+ 0001:75A2       _difftime
+ 0001:75D0       _strchr
+ 0001:7602       _strrchr
+ 0001:7636       __fstrdup
+ 0001:767C       __makepath
+ 0001:7772       __access
+ 0001:77AA       __getcwd
+ 0001:77C8       __getdcwd
+ 0001:78F0       __dos_findnext
+ 0001:7902       __dos_findfirst
+ 0001:797C       __dos_getftime
+ 0001:79B0       __dos_setftime
+ 0001:79DC       __dos_getdiskfree
+ 0001:7A28       __aFlshl
+ 0001:7A34       __aFuldiv
+ 0001:7A94       __fmemcpy
+ 0001:7AF2       __fstrrchr
+ 0001:7B26       __fstrlwr
+ 0001:7B4A       __fstrlen
+ 0001:7B64       __fmemset
+ 0001:7BAC       __fstrpbrk
+ 0001:7C0A       __aFftol
+ 0001:7C0A       __ftol
+ 0001:7C5C       __aNchkstk
+ 0001:7C7C       __chkstk
+ 0001:7C7C       __aFchkstk
+ 0001:7CB6       __input
+ 0001:862E       __lseek
+ 0001:8702       __stackavail
+ 0001:8716       _strcpy
+ 0001:8752       __resize
+ 0001:881A       __findseg
+ 0001:8844       __walklist
+ 0001:889E       __intdosx
+ 0001:891C       __forcdecpt
+ 0001:8992       __cropzeros
+ 0001:8A16       __positive
+ 0001:8A4E       __fassign
+ 0001:8AA6       __cftoe
+ 0001:8C72       __cftof
+ 0001:8E0A       __cftog
+ 0001:8EEA       __cfltcvt
+ 0001:8F8C       __fadd
+ 0001:8F8C       __aFfadd
+ 0001:8FA2       __fmul
+ 0001:8FA2       __aFfmul
+ 0001:8FB8       __aFfsub
+ 0001:8FB8       __fsub
+ 0001:8FCE       __fsubr
+ 0001:8FCE       __aFfsubr
+ 0001:8FE4       __fdiv
+ 0001:8FE4       __aFfdiv
+ 0001:8FFA       __aFfdivr
+ 0001:8FFA       __fdivr
+ 0001:9010       __aFfdup
+ 0001:9010       __fdup
+ 0001:9026       __aFfchs
+ 0001:9026       __fchs
+ 0001:903C       __aFfldd
+ 0001:903C       __fldd
+ 0001:9052       __aFfstdp
+ 0001:9052       __fstdp
+ 0001:9068       __fstd
+ 0001:9068       __aFfstd
+ 0001:907E       __faddd
+ 0001:907E       __aFfaddd
+ 0001:9094       __aFfmuld
+ 0001:9094       __fmuld
+ 0001:90AA       __aFfsubd
+ 0001:90AA       __fsubd
+ 0001:90C0       __aFfsubdr
+ 0001:90C0       __fsubdr
+ 0001:90D6       __aFfdivd
+ 0001:90D6       __fdivd
+ 0001:90EC       __aFfdivdr
+ 0001:90EC       __fdivdr
+ 0001:9102       __aFfldw
+ 0001:9102       __fldw
+ 0001:9118       __aFfldl
+ 0001:9118       __fldl
+ 0001:912E       __aFfldq
+ 0001:912E       __fldq
+ 0001:9144       __aFslds
+ 0001:9144       __slds
+ 0001:9146       __elds
+ 0001:9146       __aFelds
+ 0001:915D       __aFsstsp
+ 0001:915D       __sstsp
+ 0001:915F       __estsp
+ 0001:915F       __aFestsp
+ 0001:9176       __ssts
+ 0001:9176       __aFssts
+ 0001:9178       __aFests
+ 0001:9178       __ests
+ 0001:918F       __sadds
+ 0001:918F       __aFsadds
+ 0001:9191       __aFeadds
+ 0001:9191       __eadds
+ 0001:91A8       __smuls
+ 0001:91A8       __aFsmuls
+ 0001:91AA       __aFemuls
+ 0001:91AA       __emuls
+ 0001:91C1       __ssubs
+ 0001:91C1       __aFssubs
+ 0001:91C3       __esubs
+ 0001:91C3       __aFesubs
+ 0001:91DA       __aFssubsr
+ 0001:91DA       __ssubsr
+ 0001:91DC       __esubsr
+ 0001:91DC       __aFesubsr
+ 0001:91F3       __aFsdivs
+ 0001:91F3       __sdivs
+ 0001:91F5       __aFedivs
+ 0001:91F5       __edivs
+ 0001:920C       __sdivsr
+ 0001:920C       __aFsdivsr
+ 0001:920E       __edivsr
+ 0001:920E       __aFedivsr
+ 0001:9225       __sldd
+ 0001:9225       __aFsldd
+ 0001:9227       __eldd
+ 0001:9227       __aFeldd
+ 0001:923E       __aFsstdp
+ 0001:923E       __sstdp
+ 0001:9240       __estdp
+ 0001:9240       __aFestdp
+ 0001:9257       __aFsstd
+ 0001:9257       __sstd
+ 0001:9259       __aFestd
+ 0001:9259       __estd
+ 0001:9270       __aFsaddd
+ 0001:9270       __saddd
+ 0001:9272       __eaddd
+ 0001:9272       __aFeaddd
+ 0001:9289       __smuld
+ 0001:9289       __aFsmuld
+ 0001:928B       __emuld
+ 0001:928B       __aFemuld
+ 0001:92A2       __aFssubd
+ 0001:92A2       __ssubd
+ 0001:92A4       __esubd
+ 0001:92A4       __aFesubd
+ 0001:92BB       __ssubdr
+ 0001:92BB       __aFssubdr
+ 0001:92BD       __aFesubdr
+ 0001:92BD       __esubdr
+ 0001:92D4       __sdivd
+ 0001:92D4       __aFsdivd
+ 0001:92D6       __edivd
+ 0001:92D6       __aFedivd
+ 0001:92ED       __sdivdr
+ 0001:92ED       __aFsdivdr
+ 0001:92EF       __edivdr
+ 0001:92EF       __aFedivdr
+ 0001:9306       __sldw
+ 0001:9306       __aFsldw
+ 0001:9308       __eldw
+ 0001:9308       __aFeldw
+ 0001:931F       __sldl
+ 0001:931F       __aFsldl
+ 0001:9321       __eldl
+ 0001:9321       __aFeldl
+ 0001:9338       __aFsldq
+ 0001:9338       __sldq
+ 0001:933A       __eldq
+ 0001:933A       __aFeldq
+ 0001:9352       __fpsignal
+ 0001:9376       __filbuf
+ 0001:9420       _ungetc
+ 0001:9494       _atof
+ 0001:94F2       __fptostr
+ 0001:95A0       __headchk
+ 0001:95F5       __listchk
+ 0001:9622       __walkone
+ 0001:967A       __aFFalmul
+ 0001:967A       __aFFaulmul
+ 0001:969C       __fmemmove
+ 0001:9766       __fltout
+ 0001:97BC       __getbuf
+ 0001:9808       __read
+ 0001:9980       __aFahdiff
+ 0001:99EE       $i8_output
+ 0001:9B34       __fltin
+ 0001:9B98       __endstdio
+ 0001:9D2A       $i8_tpwr10
+ 0001:9D68       __STRINGTOD
+ 0001:9DD0       _fflush
+ 0001:9E2C       __flush
+ 0001:9EAC       __flushall
+ 0001:9F2C       __fcloseall
+ 0001:9F6C       __STRINGTOLD
+ 0001:A1D4       _fclose
+ 0001:A2D6       __commit
+ 0001:A5FE       __LD12MULTTENPOWER
+ 0001:A6D3       __LD12MULT
+ 0001:A858       __MANTOLD12
+ 0001:A912       __freebuf
+ 0001:A94A       _strcat
+ 0001:A99E       __itoa
+ 0001:A9BA       __dos_commit
+ 0001:A9DE       __cltoasub
+ 0001:A9EB       __cxtoa
+ 0001:AA42       _AssertBS
+ 0001:AA80       _RemoveBS
+ 0001:AAC8       _RDMkDir
+ 0001:AAD8       _RecurseDir
+ 0001:AB2A       _RMakeDir
+ 0001:ABA4       _GetTempDir
+ 0001:AC2C       _IsTextFile
+ 0001:ACE0       WINMAIN
+ 0001:B118       MAINWNDPROC
+ 0001:B1F2       ?InitApplication@@ZAHI@Z
+ 0001:B272       ?InitInst@@ZAHIHPED@Z
+ 0001:B31E       ?ShowMainWindow@@ZAXXZ
+ 0001:B354       ?UpdateMainScreen@@ZAXI@Z
+ 0001:B52E       ?Cleanup@@ZAXXZ
+ 0001:B6C6       ?LoadCTL3D@@ZAHXZ
+ 0001:B88E       F1FILTERPROC
+ 0001:B920       ?GetEnvInfo@@ZAXI@Z
+ 0001:BAD2       ?PrepZipPath@@ZAXPED0@Z
+ 0001:BB96       ?OpenOrCreate@@ZAHPEDH@Z
+ 0001:BBE0       ?SetErrMsg@@ZAXPED@Z
+ 0001:BC20       ?CenterWindow@@ZAXI@Z
+ 0001:BCC2       ?AllocGlobalMem@@ZAPEDPEI@Z
+ 0001:BCFE       ?FreeGlobalMem@@ZIXPED@Z
+ 0001:BD56       ?MakePath@@ZAXPED00@Z
+ 0001:BE0A       ?path_part@@ZAPEDPED@Z
+ 0001:BEC6       ?fname_part@@ZAPEDPED@Z
+ 0001:BF78       ?QueryFileExists@@ZAHPED@Z
+ 0001:BFBA       ?FindFile@@ZAPEDHPEDPEU_find_t@@0@Z
+ 0001:C05C       ?QueryDirExists@@ZAHPED@Z
+ 0001:C106       ?GetMem@@ZAPEXI@Z
+ 0001:C1C6       ?ReAllocMem@@ZAPEXPEXI@Z
+ 0001:C276       ?StrMem@@ZAPEDPED@Z
+ 0001:C2AE       ?GetLine@@ZAHHPEDH@Z
+ 0001:C414       ?strip_leading@@ZAXPED0@Z
+ 0001:C476       ?strip_trailing@@ZAXPED0@Z
+ 0001:C4DE       ?strip_bracket@@ZAXPED@Z
+ 0001:C51A       ?FileCopy@@ZAHPED0@Z
+ 0001:C6CA       ?WalkWindowList@@ZAHXZ
+ 0001:C722       ?WritePrivateProfileInt@@ZAXPED0H0@Z
+ 0001:C766       ?GetPrivateProfileLong@@ZAJPED0J0@Z
+ 0001:C7C4       ?WritePrivateProfileLong@@ZAXPED0J0@Z
+ 0001:C80C       ?WPPI_IfEmpty@@ZAHPED0H0@Z
+ 0001:C86E       ?WPPS_IfEmpty@@ZAHPED000@Z
+ 0001:C8D0       ?bootdrive@@ZADPED@Z
+ 0001:C9FA       ?EnumZip@@ZAXPEPEU_tagSTRINGLIST@@PED@Z
+ 0001:CB18       ?KillStringList@@ZAXPEPEU_tagSTRINGLIST@@@Z
+ 0001:CBB2       ?QueryNameInList@@ZAHPEDPEPEU_tagSTRINGLIST@@H@Z
+ 0001:CC66       ?QueryNameInListAdd@@ZAHPEDPEPEU_tagSTRINGLIST@@H@Z
+ 0001:CD7C       ?sswrite@@ZAIHPJXI@Z
+ 0001:CDCA       ?CrackIt@@ZAXIJPEG0PEI@Z
+ 0001:CE0A       ?SYield@@ZAXH@Z
+ 0001:CE8E       ?CrashExit@@ZAXXZ
+ 0001:CEAA       ?VerChkCopyFiles@@ZAHPED00000PEI01I@Z
+ 0001:D310       ?LoadCtl3dLibrary@@ZAHPED@Z
+ 0001:D46C       ?ReadQPFile@@ZAXPED@Z
+ 0001:D93A       ?KillDiskList@@ZAXPEPEU_tagDISKLIST@@@Z
+ 0001:DAF8       ?MakeSerialPath@@ZAXPED00@Z
+ 0001:DBAE       ?FindLastSerialPath@@ZAHPED@Z
+ 0001:DCB0       ?MakeFileExt@@ZAXPED000@Z
+ 0001:DCEC       ?FreeDiskSpace@@ZAKD@Z
+ 0001:DDD2       ?RemoveFiles@@ZAXPED@Z
+ 0001:DE60       ?SNPackStr@@ZAHPED0@Z
+ 0001:DF08       ?AddToWininit@@ZAXPED@Z
+ 0001:E350       ?ModifyProfileString@@ZAXPED000H@Z
+ 0001:E588       ?LoadThunkLib@@ZAXXZ
+ 0001:E796       ?FreeThunkLib@@ZAXXZ
+ 0001:E7BC       ?DoesSectionExist@@ZAHPED0@Z
+ 0001:E8F8       ?AddItemIconToGroup@@ZAHPED00H0H@Z
+ 0001:E9D6       ?AddItemToGroup@@ZAHPED00H@Z
+ 0001:EAB2       ?DeleteItemFromGroup@@ZAXPED0H@Z
+ 0001:EB60       ?GetGroups@@ZAPEDXZ
+ 0001:ED22       ?GetGroupItemList@@ZAHPEDPEPED@Z
+ 0001:EFD6       ?DeleteGroup@@ZAXPED@Z
+ 0001:F00E       ?InitDDE@@ZAIXZ
+ 0001:F048       ?EndDDE@@ZAXXZ
+ 0001:F06E       ?pmQueryGroup@@ZAHPED0@Z
+ 0001:F27E       ?pmCreateGroup@@ZAHPED0@Z
+ 0001:F304       ?pmDeleteGroup@@ZAHPED@Z
+ 0001:F368       ?pmShowGroup@@ZAHPEDG@Z
+ 0001:F3D0       ?pmAddItem@@ZAHPED00H@Z
+ 0001:F44C       ?pmAddItemIcon@@ZAHPED00HH@Z
+ 0001:F4CE       ?pmDeleteItem@@ZAHPED@Z
+ 0001:F532       ?pmReplaceItem@@ZAHPED@Z
+ 0001:F596       ?DDECallback@@ZCKIIKKKKKK@Z
+ 0002:0000       ?StartDisplay@@ZAXPED0@Z
+ 0002:0058       ?ChangeDisplay@@ZAXPFD@Z
+ 0002:0082       ?ChangeDisplay2@@ZAXPFD@Z
+ 0002:00AC       ?EndDisplay@@ZAXXZ
+ 0002:00CC       MODELESSDLGPROC
+ 0002:017E       EXTRACTDLGPROC
+ 0002:045A       ?ProcessDiskList@@ZAXPEPEU_tagDISKLIST@@I@Z
+ 0002:0736       ?DrawMeter@@ZAHIH@Z
+ 0002:08BA       ?CopySetup@@ZAXXZ
+ 0002:0ABE       ?AddToCopyBatch@@ZAHPED00I@Z
+ 0002:0C70       ?DosCopyPrep@@ZAHPED000@Z
+ 0002:0D92       ?ExtractFileFromRes@@ZCHIPFDG@Z
+ 0002:0E96       ?ExecCleanBat@@ZAHPED0000@Z
+ 0002:1010       ?ZipPath@@ZAPFDPFD@Z
+ 0002:1070       ?_CZopen@CZopen@@JECXI@Z
+ 0002:113A       ??1CZopen@@REC@XZ
+ 0002:1182       ?SetZip@CZopen@@RECHPFD@Z
+ 0002:123E       ?GetFromZip@CZopen@@RECHPFD0H@Z
+ 0002:1302       ?GetFirst@CZopen@@RECHPEUZIPINFO@@@Z
+ 0002:13C4       ?GetNext@CZopen@@RECHPEUZIPINFO@@@Z
+ 0002:145E       _LoadUnzipLibrary
+ 0002:14C8       ?CopyUnzipDll@@ZAHXZ
+ 0002:1560       ?CloseAll@CZopen@@RECXXZ
+ 0002:15B0       ?Close@CZopen@@RECXH@Z
+ 0002:15D0       ?CloseAbort@CZopen@@RECXH@Z
+ 0002:15F0       ?_Close@CZopen@@JECXHH@Z
+ 0002:166A       SPLASHWNDPROC
+ 0002:1720       ?InitSplash@@ZAHI@Z
+ 0002:1858       ?ShowSplashWindow@@ZAXI@Z
+ 0002:18A6       ?StopSplashWindow@@ZAXI@Z
+ 0002:196C       ?UpdateSplashScreen@@ZAXI@Z
+ 0002:1A00       ??0CZopen@@REC@I@Z
+ 0002:1A24       ?IsValid@CZopen@@RECHH@Z
+ 0004:0004       rsrvptrs
+ 0004:0016       ?szDefDir@@3PEDE
+ 0004:0020       ?szC8_ProgName16@@3PEDE
+ 0004:002A       ?szC8_ProgName32@@3PEDE
+ 0004:0032       ?szC_Prefix@@3PEDE
+ 0004:0040       ?szC_IniName@@3PEDE
+ 0004:0052       ?szC_InstIni@@3PEDE
+ 0004:0062       ?szC_RegIni@@3PEDE
+ 0004:0074       ?szC_IniReg@@3PEDE
+ 0004:0082       ?szC_IniInst@@3PEDE
+ 0004:008E       ?szC_IniETBar@@3PEDE
+ 0004:0098       ?szC_IniUser@@3PEDE
+ 0004:00AA       ?szC_IniUOrg@@3PEDE
+ 0004:00B6       ?szC_IniUSN@@3PEDE
+ 0004:00C4       ?szC_IniSched@@3PEDE
+ 0004:00D0       ?szC_IniStart@@3PEDE
+ 0004:00DA       ?szC_IniDays@@3PEDE
+ 0004:00E8       ?szC_IniTMark@@3PEDE
+ 0004:00F6       ?szC_IniPGroup@@3PEDE
+ 0004:0102       ?szC_RealIniUndo@@3PEDE
+ 0004:010E       ?szC_IniUserSID@@3PEDE
+ 0004:0118       ?szC_Undo@@3PEDE
+ 0004:0124       ?szC_UndoDir@@3PEDE
+ 0004:0130       ?szC_DataDir@@3PEDE
+ 0004:013E       ?szC_ZipDLL@@3PEDE
+ 0004:014E       ?szC_Zip32DLL@@3PEDE
+ 0004:015E       ?szC_TL16DLL@@3PEDE
+ 0004:016E       ?szC_TL32DLL@@3PEDE
+ 0004:017C       ?szC_Evap@@3PEDE
+ 0004:018A       ?szC_Epif@@3PEDE
+ 0004:0198       ?szC_Setup@@3PEDE
+ 0004:01A8       ?szC_Setup32@@3PEDE
+ 0004:01B8       ?szC_AutoexecNT@@3PEDE
+ 0004:01C6       ?szC_ConfigNT@@3PEDE
+ 0004:01D4       ?szC_Sys32@@3PEDE
+ 0004:01E2       ?szC_Traynote@@3PEDE
+ 0004:01F4       ?szC_TrayExe@@3PEDE
+ 0004:0206       ?szC_TrayIni@@3PEDE
+ 0004:020C       ?szC_Space@@3PEDE
+ 0004:0216       ?szC_Start@@3PEDE
+ 0004:0220       ?szC_Close@@3PEDE
+ 0004:0228       ?szC_New@@3PEDE
+ 0004:0232       ?szC_Quit@@3PEDE
+ 0004:023C       ?szC_ExtDLL@@3PEDE
+ 0004:0246       ?szC_ExtEXE@@3PEDE
+ 0004:0250       ?szC_ExtBAT@@3PEDE
+ 0004:0258       ?szC_TISecCYA@@3PEDE
+ 0004:0264       ?szC_TISecGen@@3PEDE
+ 0004:0270       ?szC_TITTip@@3PEDE
+ 0004:027E       ?szC_TIIconFile@@3PEDE
+ 0004:028C       ?szC_TILeft@@3PEDE
+ 0004:029C       ?szC_TIRight@@3PEDE
+ 0004:02A4       ?szC_TIApp@@3PEDE
+ 0004:02AE       ?szC_TIClass@@3PEDE
+ 0004:02C0       ?szC_TIDefClass@@3PEDE
+ 0004:02D4       ?szC_TTStr@@3PEDE
+ 0004:02E2       ?szC_RegTag32@@3PEDE
+ 0004:02F4       ?szSSDlgClass@@3PEDE
+ 0004:02F8       ?cFFSep@@3DE
+ 0004:033E       ?szCA_FileFilter@@3PEDE
+ 0004:0358       ?szC_ProgName@@3PEDE
+ 0004:0376       ?szC_UnProgName@@3PEDE
+ 0004:038A       ?szC_IconTitle@@3PEDE
+ 0004:039C       ?szC_SetTitle@@3PEDE
+ 0004:03B2       ?szC_UnTitle@@3PEDE
+ 0004:03C4       ?szC_DefaultGroup@@3PEDE
+ 0004:041C       ?szMsg_TrayFound@@3PEDE
+ 0004:0472       ?szMsg_ExitRun@@3PEDE
+ 0004:0494       ?szEMsg_DataDir@@3PEDE
+ 0004:04B0       ?szEMsg_Limits@@3PEDE
+ 0004:04E0       ?szEMsg_NotValidSN@@3PEDE
+ 0004:052C       ?szEMsg_Running@@3PEDE
+ 0004:05B6       ?szEMsg_InstOnly@@3PEDE
+ 0004:060C       ?szEMsg_NotDone@@3PEDE
+ 0004:062E       ?szEMsg_UnNotDone@@3PEDE
+ 0004:06A6       ?szEMsg_BadGroup@@3PEDE
+ 0004:06F8       ?szEMsg_AddGroup@@3PEDE
+ 0004:0712       ?szFmtMsg_BadDir@@3PEDE
+ 0004:0728       ?szFmtMsg_BadDisk@@3PEDE
+ 0004:07A2       ?szFmt_NotText@@3PEDE
+ 0004:07CA       ?szFmt_Duplicate@@3PEDE
+ 0004:07F4       ?szMsg_AboutVer@@3PEDE
+ 0004:082E       ?szMsg_AboutCopy@@3PEDE
+ 0004:0844       ?szC_ITTraynote@@3PEDE
+ 0004:0856       ?szHK_Contents@@3PEDE
+ 0004:0876       ?szHK_Main@@3PEDE
+ 0004:088A       ?szHK_Dir@@3PEDE
+ 0004:08A0       ?szHK_UserInfo@@3PEDE
+ 0004:08C2       ?szHK_UserConf@@3PEDE
+ 0004:08E2       ?szHK_Schedule@@3PEDE
+ 0004:0904       ?szHK_Caplist@@3PEDE
+ 0004:0922       ?szHK_AddFile@@3PEDE
+ 0004:0940       ?szHK_Traynote@@3PEDE
+ 0004:0960       ?szHK_PGroup@@3PEDE
+ 0004:097E       ?szHK_UnMain@@3PEDE
+ 0004:0A38       ?szFmtMsg_BadSize@@3PEDE
+ 0004:0ACC       ?szFmtMsg_BadSame@@3PEDE
+ 0004:0AD0       ?bUninstall@@3HE
+ 0004:0AD2       ?bComplete@@3HE
+ 0004:0AD4       ?bNoExtract@@3HE
+ 0004:0AD6       ?bReinstall@@3HE
+ 0004:0AD8       ?bTrayWasOn@@3HE
+ 0004:0ADA       ?bRunCYAOnExit@@3HE
+ 0004:0ADC       ?bTraynote@@3HE
+ 0004:0ADE       ?bAddAuto@@3HE
+ 0004:0AE0       ?bUIInstOnly@@3HE
+ 0004:0AE2       ?bUIProg@@3HE
+ 0004:0AE4       ?bUIData@@3HE
+ 0004:0AE6       ?bUIUndo@@3HE
+ 0004:0AE8       ?bUITray@@3HE
+ 0004:0AEA       ?bExitEvap@@3HE
+ 0004:0AEC       ?bEvap95@@3HE
+ 0004:0AEE       ?szInst@@3QEDE
+ 0004:0AF8       ?szIniOpt@@3QEDE
+ 0004:0B08       ?szIniDir@@3QEDE
+ 0004:0B18       ?szUserName@@3QEDE
+ 0004:0B3E       ?szUserOrg@@3QEDE
+ 0004:0B64       ?szSerialNumber@@3QEDE
+ 0004:0B7A       ?lDiskSpaceReq@@3JE
+ 0004:0B7E       ?lWinSpaceReq@@3JE
+ 0004:0B82       ?lpFileList@@3PEDE
+ 0004:0B86       ?lpProgGroup@@3PEDE
+ 0004:0C80       __acfinfo
+ 0004:0C8E       __aintdiv
+ 0004:0C92       __fac
+ 0004:0C9C       _errno
+ 0004:0C9E       __umaskval
+ 0004:0CA0       __pspadr
+ 0004:0CA2       __psp
+ 0004:0CA4       __winminor
+ 0004:0CA4       __winver
+ 0004:0CA5       __winmajor
+ 0004:0CA6       __osver
+ 0004:0CA6       __osminor
+ 0004:0CA7       __osmajor
+ 0004:0CA8       __osversion
+ 0004:0CAA       __osmode
+ 0004:0CAB       __cpumode
+ 0004:0CAC       __oserr
+ 0004:0CAC       __doserrno
+ 0004:0CAE       __nfile
+ 0004:0CB0       __wfile
+ 0004:0CB2       __wnfile
+ 0004:0CB4       __osfile
+ 0004:0CC8       __wsfile
+ 0004:0CDC       ___argc
+ 0004:0CDE       ___argv
+ 0004:0CE2       __environ
+ 0004:0CE6       __pgmptr
+ 0004:0CEB       __child
+ 0004:0CED       __exitflag
+ 0004:0CEE       __pnhFarHeap
+ 0004:0CF2       __ctype
+ 0004:0CF2       __ctype_
+ 0004:0DF8       _STKHQQ
+ 0004:0DFA       __hPrevInstance
+ 0004:0DFC       __hInstance
+ 0004:0DFE       __lpszCmdLine
+ 0004:0E02       __cmdShow
+ 0004:0E04       _aseglo
+ 0004:0E06       _aseghi
+ 0004:0E08       ___aDBswpflg
+ 0004:0E0A       ___aDBrterr
+ 0004:0E20       __fheap
+ 0004:0E2E       __amblksiz
+ 0004:0E30       __qwinused
+ 0004:0E32       __adbgmsg
+ 0004:0E3A       __lpdays
+ 0004:0E54       __days
+ 0004:0E72       __timezone
+ 0004:0E76       __daylight
+ 0004:0E80       __tzname
+ 0004:0E9E       ?szC8_ProgName@@3PEDE
+ 0004:0EA8       ?szC_ProgTitle@@3PEDE
+ 0004:0EB4       ?szC_ProgTitle32@@3PEDE
+ 0004:0EC2       ?szC_Us@@3PEDE
+ 0004:0ED2       ?szC_Ctl3dLib@@3PEDE
+ 0004:0EE2       ?szC_Ctl3Comp@@3PEDE
+ 0004:0EF2       ?szC_UnzipDLL@@3PEDE
+ 0004:0F02       ?szC_UnzipComp@@3PEDE
+ 0004:0F14       ?szC_Unzip32DLL@@3PEDE
+ 0004:0F26       ?szC_Unzip32Comp@@3PEDE
+ 0004:0F30       ?szC_VMMPath@@3PEDE
+ 0004:0F38       ?szDifExt@@3PEDE
+ 0004:0F42       ?szIniExt@@3PEDE
+ 0004:0F4C       ?szZipExt@@3PEDE
+ 0004:0F56       ?szLstExt@@3PEDE
+ 0004:0F60       ?szDataExt@@3PEDE
+ 0004:0F6A       ?szExeExt@@3PEDE
+ 0004:0F74       ?szRegExt@@3PEDE
+ 0004:0F7E       ?szHlpExt@@3PEDE
+ 0004:0F84       ?szC_Null@@3PEDE
+ 0004:0F96       ?szC_Autoexec@@3PEDE
+ 0004:0FA6       ?szC_ConfigSys@@3PEDE
+ 0004:0FB2       ?szC_WinIni@@3PEDE
+ 0004:0FC2       ?szC_SystemIni@@3PEDE
+ 0004:0FD0       ?szC_HelpFile@@3PEDE
+ 0004:0FE0       ?szC_Wininit@@3PEDE
+ 0004:0FF4       ?szSetupWndClass@@3PEDE
+ 0004:100A       ?szSetupDlgClass@@3PEDE
+ 0004:101E       ?szSplashWndClass@@3PEDE
+ 0004:102A       ?szC_IniOpt@@3PEDE
+ 0004:1036       ?szC_IniSaveReg@@3PEDE
+ 0004:1048       ?szC_IniUndo@@3PEDE
+ 0004:1052       ?szC_IniIName@@3PEDE
+ 0004:1062       ?szC_IniDir@@3PEDE
+ 0004:106C       ?szC_IniDataDir@@3PEDE
+ 0004:1078       ?szC_IniRename@@3PEDE
+ 0004:1082       ?szC_IniByAge@@3PEDE
+ 0004:108E       ?szC_IniMaxAge@@3PEDE
+ 0004:109A       ?szC_IniByCount@@3PEDE
+ 0004:10A8       ?szC_IniMinCount@@3PEDE
+ 0004:10B6       ?szC_IniMaxCount@@3PEDE
+ 0004:10C4       ?szC_Registry@@3PEDE
+ 0004:10D0       ?szC_USStartupGroup@@3PEDE
+ 0004:10DE       ?szC_DEStartupGroup@@3PEDE
+ 0004:10E6       ?szC_AutoSwitch@@3PEDE
+ 0004:10F2       ?szC_InstSizeKey@@3PEDE
+ 0004:10FE       ?szC_WinSizeKey@@3PEDE
+ 0004:110E       ?szC_ThunkLibName@@3PEDE
+ 0004:111E       ?szC_Thunk32Name@@3PEDE
+ 0004:113C       ?szC_VQVTranslation@@3PEDE
+ 0004:115A       ?szC_VQVSFInfo@@3PEDE
+ 0004:116A       ?szC_VQVCoName@@3PEDE
+ 0004:117E       ?szC_VQVProdVer@@3PEDE
+ 0004:118E       ?szC_VQVFileVer@@3PEDE
+ 0004:11C6       ?szC_HK_Uninstall@@3PEDE
+ 0004:11D6       ?szC_HK_UDName@@3PEDE
+ 0004:11EA       ?szC_HK_UDString@@3PEDE
+ 0004:11F8       ?szC_HK_UDDefault@@3PEDE
+ 0004:1218       ?szMsg_Extracting@@3PEDE
+ 0004:1226       ?szMsg_Warning@@3PEDE
+ 0004:123A       ?szEMsg_Mem@@3PEDE
+ 0004:1252       ?szEMsg_Module@@3PEDE
+ 0004:1268       ?szEMsg_FOpen@@3PEDE
+ 0004:127E       ?szEMsg_Read@@3PEDE
+ 0004:1294       ?szEMsg_Crash@@3PEDE
+ 0004:12AE       ?szEMsg_Term@@3PEDE
+ 0004:12C8       ?szEMsg_NullPtr@@3PEDE
+ 0004:12E4       ?szEMsg_Resource@@3PEDE
+ 0004:1300       ?szEMsg_FileWrite@@3PEDE
+ 0004:131E       ?szEMsg_ZipLib@@3PEDE
+ 0004:133E       ?szEMsg_ZipLib32@@3PEDE
+ 0004:1366       ?szEMsg_AddUI@@3PEDE
+ 0004:1392       ?szEMsg_RemUI@@3PEDE
+ 0004:13B2       ?szFmtMsg_Extract@@3PEDE
+ 0004:13D2       ?szFmt_NoFile@@3PEDE
+ 0004:1406       ?szFmt_NoDir@@3PEDE
+ 0004:141C       ?szFmtMsg_BadCreate@@3PEDE
+ 0004:1430       ?szFmtMsg_BadOpen@@3PEDE
+ 0004:14CC       ?szFmt_DllInUse@@3PEDE
+ 0004:14D0       ?hParent@@3IE
+ 0004:14D2       ?hModeless@@3IE
+ 0004:14D4       ?hSplash@@3IE
+ 0004:14D6       ?hcArrow@@3IE
+ 0004:14D8       ?hcHour@@3IE
+ 0004:14DA       ?szGlobErrorMsg@@3QEDE
+ 0004:1660       ?hlibCTL3D@@3IE
+ 0004:1662       ?hlibThunk@@3IE
+ 0004:1664       ?szHKp_Contents@@3PEDE
+ 0004:1668       ?szHKp_Main@@3PEDE
+ 0004:166C       ?szHKp_Dir@@3PEDE
+ 0004:1670       ?bWin95@@3HE
+ 0004:1672       ?bWinNT@@3HE
+ 0004:1674       ?bWinNT4Plus@@3HE
+ 0004:1676       ?bOldNT@@3HE
+ 0004:1678       ?bBoost32@@3HE
+ 0004:167A       ?bStartUp95@@3HE
+ 0004:167C       ?nCountry@@3HE
+ 0004:167E       ?bSplashInhibit@@3HE
+ 0004:1680       ?bStartup@@3HE
+ 0004:1682       ?bClassReg@@3HE
+ 0004:1684       ?bDlgClassReg@@3HE
+ 0004:1686       ?bFileError@@3HE
+ 0004:1688       ?bSplashReg@@3HE
+ 0004:168A       ?bSplashActive@@3HE
+ 0004:168C       ?ttSplashStart@@3JE
+ 0004:1690       ?nSplashWait@@3HE
+ 0004:1692       ?hbSplash@@3IE
+ 0004:1694       ?nBMHeight@@3HE
+ 0004:1696       ?nBMWidth@@3HE
+ 0004:1698       ?bC3DInhibit@@3HE
+ 0004:169A       ?bInhibitSplash@@3HE
+ 0004:169C       ?szBuff_Title@@3QEDE
+ 0004:16F0       ?szQPFile@@3QEDE
+ 0004:17F6       ?szInstallDir@@3QEDE
+ 0004:18FC       ?wHelpID@@3GE
+ 0004:18FE       ?lTotSize@@3JE
+ 0004:1902       ?lWinSize@@3JE
+ 0004:1906       ?hActive@@3IE
+ 0004:1908       ?wACCTable@@3GE
+ 0004:190A       ?hGlobDlg@@3IE
+ 0004:190C       ?lpProgName@@3PEDE
+ 0004:1910       ?lpProgPath@@3PEDE
+ 0004:1914       ?lpDataPath@@3PEDE
+ 0004:1918       ?lpUndoPath@@3PEDE
+ 0004:191C       ?lpWinPath@@3PEDE
+ 0004:1920       ?lpSysPath@@3PEDE
+ 0004:1924       ?lpHelpFile@@3PEDE
+ 0004:1928       ?lpStartup@@3PEDE
+ 0004:192C       ?lpWIniFile@@3PEDE
+ 0004:1930       ?lpIniFile@@3PEDE
+ 0004:1934       ?lpZipFile@@3PEDE
+ 0004:1938       ?lpEnumZip@@3PEU_tagSTRINGLIST@@E
+ 0004:193C       ?lpADisks@@3PEU_tagDISKLIST@@E
+ 0004:1AF6       ?dwDDEInst@@3KE
+ 0004:1C0C       ?bCleanOut@@3HE
+ 0004:1C50       ?szC_DUNZIPLib@@3PEDE
+ 0004:1C62       ?szC_DUNZIP32Lib@@3PEDE
+ 0004:1C66       _hlibDUNZIP
+ 0004:1C8C       __aaltstkovr
+ 0004:1C98       __iomode
+ 0004:1C98       __fmode
+ 0004:1C9A       __cfltcvt_tab
+ 0004:1CB6       __sigintseg
+ 0004:1CB8       __sigintoff
+ 0004:1CBA       __asizeC
+ 0004:1CBB       __asizeD
+ 0004:1CC8       __lseekchk
+ 0004:1CF0       __lastiob
+ 0004:1D3C       __cflush
+ 0004:1D4E       __fpinit
+ 0004:1D62       __iob
+ 0004:1E52       __iob2
+ 0004:2326       __edata
+ 0004:2326       _edata
+ 0004:2330       ?lpCfgAnchor@@3PEU_tagCFILELIST@@E
+ 0004:234E       ?lpfnRenameValue@@3P7CHKPED00@ZE
+ 0004:2352       ?lpfnDoesValueExist@@3P7CHKPED0@ZE
+ 0004:2356       ?quit_env@@3QEHE
+ 0004:2368       ?lpfn3DRegister@@3P7CHI@ZE
+ 0004:236C       ?lpfn3DUnregister@@3P7CHI@ZE
+ 0004:2370       ?dwVersion@@3KE
+ 0004:2374       ?lpfn3DSubclassDlg@@3P7CHIG@ZE
+ 0004:2378       ?lpfn3DSubclassDlgEx@@3P7CHIK@ZE
+ 0004:237C       ?lpfn3DAutoSubclass@@3P7CHI@ZE
+ 0004:2380       ?lpfn3DCtlColorEx@@3P7CIIIJ@ZE
+ 0004:2384       ?lpfnChangePEVersionNumbers@@3P7CHPED00@ZE
+ 0004:2388       ?hpF1@@3P7CHXZE
+ 0004:238C       ?hhF1@@3KE
+ 0004:2390       ?lpfnItsOurDLL@@3P7CHPED@ZE
+ 0004:2394       ?lpfnAddReg@@3P7CHKPED0PEEKK@ZE
+ 0004:2398       ?lpfnIs95Ver@@3P7CHPED@ZE
+ 0004:239C       ?lpfnCompareVersionInfo@@3P7CHPED0@ZE
+ 0004:23A0       ?szTRead@@3QEDE
+ 0004:25A2       ?szTemp@@3QEDE
+ 0004:27A4       ?szTPath@@3QEDE
+ 0004:28AA       ?lpfnDelKey@@3P7CHKPED0@ZE
+ 0004:28AE       ?hAcc@@3IE
+ 0004:28B0       ?ghInstance@@3IE
+ 0004:2ABE       ?lpfnDuz@@3P7CHPEUUNZIPCMDSTRUCT@@@ZE
+ 0004:2AF0       __mbac
+ 0004:2AF8       __end
+ 0004:2AF8       _end
+ 0000:4000  Abs  FJARQQ
+ 0000:5C32  Abs  FIDRQQ
+ 0000:8000  Abs  FJSRQQ
+ 0000:A23D  Abs  FIWRQQ
+ 0000:C000  Abs  FJCRQQ
+ 0000:FE32  Abs  FIARQQ
+
+Program entry point at 0001:6140
