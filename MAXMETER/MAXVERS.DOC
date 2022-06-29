@@ -1,0 +1,30 @@
+* Add cversion.h to several projects.
+
+ Description: MaxMeter, Maxedit  and Maxsetup had no cversion.h for
+     version tagging and were picking cversion.h up from the include
+     directory. I individualized them. Adjusted Maxctrl's makefile to
+     make sure the resource was rebuilt.
+
+ Who: PETERJ
+ When: 24 Oct 95
+ SW/HW Environment: All
+ Symptom: Version numbers never change.
+ Temporary Workaround:none
+ Test Procedure: Check versions in about boxes for all programs.
+ QA Testing Passed:
+ Version:  MaxMeter.exe 8.00.009.002, MaxEdit.exe 8.00.009.002,
+           Setup.exe 8.00.009.002,  Maxctrl.exe 8.00.009.002 
+
+Files affected
+
+..\maxmeter\maxmeter.mak        explicit name for rc file.
+..\maxmeter\cversion.h          new file.
+
+..\maxedit\maxedit.mak          explicit name for rc file.
+..\maxedit\cversion.h           new file.
+
+..\maxsetup\setup.mak           explicit name for rc file.
+..\maxsetup\setup.rc            add version includes.
+..\maxsetup\cversion.h          new file.
+
+..\maxctrl\maxctrl.mak          explicit name for rc file.

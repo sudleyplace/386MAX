@@ -1,0 +1,56 @@
+#include <windows.h>
+
+#include "resource.h"
+#include "cversion.h"
+#include <mversion.h>
+#include <common.ver>
+
+#include "fontdlg.gr"
+
+MAXICON ICON PRELOAD maxmeter.ico
+
+//
+// Dialog
+//
+
+CONFIGDLGBOX DIALOG PRELOAD 0, 0, 186, 124
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MAXmeter Einstellungen"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,40,105,45,14, WS_TABSTOP
+    PUSHBUTTON      "&Abbrechen",IDCANCEL,100,105,45,14, WS_TABSTOP
+    GROUPBOX        " Anzeige ",IDC_STATIC,7,5,81,89
+    CONTROL         "&Datum",IDC_DATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    12,18,65,8
+    CONTROL         "Uhr&zeit",IDC_TIME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    12,30,75,10
+    CONTROL         "&Speicher",IDC_MEMORY,"Button",BS_AUTOCHECKBOX |
+                    WS_TABSTOP,12,42,75,9
+    CONTROL         "&GDI Ressourcen",IDC_GDI,"Button",BS_AUTOCHECKBOX |
+                    WS_TABSTOP,12,54,70,8
+    CONTROL         "&User Ressourcen",IDC_USER,"Button",BS_AUTOCHECKBOX |
+                    WS_TABSTOP,12,66,70,10
+    CONTROL         "&LoDOS Speicher",IDC_DOSMEM,"Button",BS_AUTOCHECKBOX |
+                    WS_TABSTOP,12,78,70,10
+    GROUPBOX        " Zeit&format ", -1, 96, 5, 83, 36
+    CONTROL         "12 Stunden (am/pm)", IDC_AMPM, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 98, 18, 79, 10
+    CONTROL         "24 Stunden", IDC_UT, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 98, 30, 70, 10
+
+    CONTROL         "&Immer im Vordergrund",IDC_TOPMOST,"Button",BS_AUTOCHECKBOX |
+                    WS_TABSTOP,96,48,80,10
+END
+
+ABOUTDLGBOX DIALOG PRELOAD 4, 4, 184, 119
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Info über Qualitas MAXmeter"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",1,129,6,50,14
+    ICON            MAXICON,-1,144,56,18,20
+    LTEXT           "Qualitas MAXmeter\nVersion " VER_PRODUCTVERSION_STR,-1, 12,7,112,17
+    LTEXT           VER_LEGALCOPYRIGHT2_STR,
+                    -1,12,36,125,18
+    LTEXT           "Dieses Exemplar ist lizenziert für: ",101,12,68,112,8
+    LTEXT           "",102,12,84,168,24
+END

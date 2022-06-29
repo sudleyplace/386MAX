@@ -1,0 +1,24 @@
+* Remove forced limits on font size in maxmeter.
+
+ Description: The font pointsize was set to 10 and the size option was removed
+     from the dialog. This forced the Choosefont dialog to initialize to 10
+     and limited the selection. The default pointsize changes depending on the
+     Large font / Small font Windows selection. It is 8 for large fonts. 
+     This caused an error from the ChooseFont dialog since the limits were
+     set to 10. Remove forced limits on font size in maxmeter. This results
+     in the fonts being set to the default size for the Large/Small selection. 
+ Who: PETERJ    
+ When: 12 Feb. 1996
+ SW/HW Environment: Windows.
+ Symptom: "Size must be between 10 and 10" error message.
+ Temporary Workaround: Don't change fonts.
+ Test Procedure:Try MAXmeter font selection in both Large and Small 
+     font Windows and all screen resolutions.
+ QA Testing Passed:
+ Version: Maxmeter.exe 8.01.10.010
+
+Files affected:
+
+MAXMETER.C          Remove limits to ChooseFont.
+
+CVERSION.H          Bump version to 10.

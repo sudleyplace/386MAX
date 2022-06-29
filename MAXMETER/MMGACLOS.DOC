@@ -1,0 +1,17 @@
+Fix Bug Not Closing Go Ahead Driver
+
+If MAX Meter opens the Go Ahead driver and for some reason finds that
+the dirver is not usable (because it's disabled or isn't installed),
+MAX Meter forgets to close the driver.	This presents a problem for
+later programs which inquire as to Go Ahead's status (such as
+GOAHEAD.EXE), making them think that Go Ahead is installed.  The fix
+is to close the driver if MAX Meter doesn't use it.
+
+At the same time, I deleted the check for whether or not Go Ahead is
+enabled as Go Ahead can now be disabled (due to the presence of
+incompatible drivers), but still be functional.
+
+MAXMETER.C	Delete QUERYENABLE SendMessage() call.
+		Close the Go Ahead driver if MAX Meter doesn't use it.
+
+

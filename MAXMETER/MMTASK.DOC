@@ -1,0 +1,23 @@
+* Keep Maxmeter from Overriding Taskman with GoAhead disabled.
+
+ Description: Keep Maxmeter from Overriding Taskman with GoAhead disabled.
+     SetWindowPos was not used correctly. Added SWP_NOZORDER | SWP_NOACTIVATE
+     in cases where Maxmeter is not always on top. 
+ Who: PETERJ
+ When: 14 Mar. 1996
+ SW/HW Environment: Windows
+ Symptom: Taskman cannot be run from desktop when Maxmeter is on and GoAhead
+     is disabled.
+ Temporary Workaround: Turn off Maxmeter.
+ Test Procedure: Run maxmeter and Goahead. Disable goahead. Run taskman by 
+                 double-clicking on desktop.
+ QA Testing Passed:
+ Version: 8.01.22.12
+
+Files affected:
+
+MAXMETER.C          Added SWP_NOZORDER | SWP_NOACTIVATE to SetWindowPos
+                    When Maxmeter is not always on top.
+
+CVERSION.H          Bump version to 12.
+

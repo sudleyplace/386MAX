@@ -1,0 +1,7 @@
+ret\W16\maxmeter.obj
+ret\W16\MAXMETER.EXE
+ret\W16\MAXMETER.MAP/map
+libw+
+slibcew+
+commdlg ctl3dv2.lib
+MAXMETER.DEF;

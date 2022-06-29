@@ -1,0 +1,23 @@
+Reduce Disk Activity When Displaying Low DOS Memory
+
+If MAXMETER is displaying low DOS memory through GoAhead, it opens and
+closes the driver every time it references the driver which generates
+a lot of extra disk activity, especially noticeable if there's no disk
+cache.
+
+This TWT fixes that by opening the driver once at the beginning of the
+program (in InitInstance), and closes it once (in response to
+WM_CLOSE).  The global variable hDriver contains the driver handle.
+
+CVERSION.H	Bump the module version #.
+
+MAXMETER.C	Move the code which opens the driver from
+		  InitStatBar() (which is called many times) to
+		  InitInstance() which is called once per instance.
+		Delete all other references to OpenDriver(), testing
+		  the value in hDriver to see if the GoAhead driver is
+		  in memory.
+		Delete all other references to CloseDriver() except
+		  for the one in response to WM_CLOSE.
+
+
