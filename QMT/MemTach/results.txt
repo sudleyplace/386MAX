@@ -1,0 +1,60 @@
+"MemTach v0.89 *ALPHA* - FREE benchmarking utility by http://www.CPUReview.com"
+"Processor Brand","Pentium(r) II Processor"
+"Processor MHz","(null)"
+"Processor FSB","(null)"
+"Motherboard Brand","(null)"
+"Motherboard Model","(null)"
+"Chipset Type","(null)"
+"Chipset FSB","(null)"
+"Memory Brand","(null)"
+"Memory Type","(null)"
+"Memory chip markings","(null)"
+"BIOS memory settings","(null)"
+"Operating System","Microsoft Windows 98"
+"Version","4.10.1998"
+"Service Pack","(null)"
+"Your Name","(null)"
+"Email Address","(null)"
+"Web Address","(null)"
+"Comments","(null)"
+"Prefetch",1
+"Analyze Memory",1
+"Large Test",0
+"Run Time",108.41
+"memset",186.7,189.9,198.4
+"memcpy",190.0,203.4,208.3
+"Fill - double",183.7,186.7,189.4
+"Fill - int",186.9,188.9,191.2
+"Fill - short",176.8,186.3,189.3
+"Fill - char",185.8,188.0,189.9
+"Sum - double",746.2,776.9,794.4
+"Sum - int",442.9,468.7,488.5
+"Sum - short",234.2,241.6,245.2
+"Sum - char",181.7,193.5,197.6
+"PSum - double",709.4,717.8,735.1
+"PSum - int",441.5,447.4,452.0
+"PSum - short",310.6,323.5,327.7
+"PSum - char",267.1,279.5,283.7
+"ASum - double",806.4,820.7,834.6
+"ASum - int",468.0,477.0,481.5
+"ASum - short",233.5,241.8,245.8
+"ASum - char",192.3,195.8,199.3
+"APSum - double",751.7,761.1,772.3
+"APSum - int",411.2,431.9,444.3
+"APSum - short",323.8,328.5,330.7
+"APSum - char",276.0,281.0,285.4
+"Random - int",362.2,381.4,398.8
+"Analyze 1",148.6,151.1,153.4
+"Analyze 2",56.7,57.5,58.3
+"Analyze 3",46.8,47.4,47.8
+"Analyze 4",30.0,30.2,30.6
+"Analyze 5",29.0,29.8,30.2
+"Analyze 6",28.8,29.2,29.7
+"Analyze 7",27.4,28.1,28.5
+"Analyze 8",26.5,26.7,26.8
+"Analyze 9",20.1,20.5,20.8
+"Analyze 10",20.1,21.1,21.8
+"Analyze 11",22.0,22.9,23.6
+"Analyze 12",18.4,18.9,19.1
+"Analyze 13",11.9,12.6,12.9
+"Analyze 14",12.9,13.1,13.3

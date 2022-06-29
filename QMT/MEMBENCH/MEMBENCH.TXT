@@ -1,0 +1,282 @@
+                    +-----------------+
+                    | M E M B E N C H |           V1.7   5/98
+                    +-----------------+
+
+
+   V1.5 Improvements: Fixed MHz measurement bug (lock-up after 256 MHz).
+                      Improved processor recognition: AMD K6, Cyrix M2, Pentium II.
+                      Added AMD K6 and Cyrix M2 computers to compare with.
+
+   V1.6 Improvement: Added automatic result file generation.
+   V1.7 Improvements: Fixed video test crash bug
+                      Improved MHz measurement accuracy (tenfold)
+                      Improved documentation.
+
+
+
+
+This program is shareware, it may be used for an UNLIMITED period of
+evaluation free of charge, by private users only. It is not Freeware and
+is not allowed to be used in a commercial or government environment.
+If you like it you should register in order to receive the registered
+version with full source code.
+MEMBENCH is created, owned and licensed exclusively by Intelligent Firmware.
+Web: www.intelligentfirm.com,  Email: membench@intelligentfirm.com .
+Reverse-engineering or modifying this software is strictly prohibited.
+
+
+
+MEMBENCH measures 33 different transfer types of your PC's CPU, motherboard,
+memory and add-in cards and compares it with 8 other computers.
+It clearly shows every processor's bus performance and deficiencies. 
+MEMBENCH is written in pure assembly (with ASM32) in 32 bit protected mode
+and its measurements are very accurate and stable.
+
+MEMBENCH can be used in two ways: 
+1. To demonstrate exactly how much your PC benefits from using the innovative
+   methods compared to the standard ones. The innovative methods are the
+   workarounds used to overcome Pentium's performance flaw. Please see 
+   http://www.intelligentfirm.com for more details on the flaw.
+2. As the best benchmark in measuring accurately every kind of bandwidth in
+   your PC and comparing it to other PCs.
+
+MEMBENCH consists of the following benchmarks: 
+
+1. Main memory benchmarks: Measure all aspects of main memory transfers
+   including: read rate, innovative read rate, random read rate, write rate,
+   innovative write rate, random write rate, transfer rate, innovative
+   transfer rate, MMX innovative transfer rate. 
+2. Secondary cache memory benchmarks: Measure all aspects of secondary cache
+   (L2 cache) transfers.
+   Depending on the program used, secondary cache speed may be more important
+   than main memory speed.
+3. Primary cache memory benchmarks: Measure reading and writing from the
+   primary (L1) cache.
+4. Video memory benchmarks: Measure all aspects of video memory transfers 
+   including: read rate, random read rate, write rate, innovative write rate,
+   random write rate, transfer rate, innovative transfer rate, MMX innovative
+   transfer rate. The great majority of games copy many times a second entire
+   screens to video memory; that can be measured by the 3 video transfer
+   rate elements.
+5. I/O benchmarks: Measure ISA and PCI/VL bus I/O bandwidth including: 8 bit
+   ISA sound card read / write rate, 16 bit ISA sound card read / write rate,
+   32 bit PCI/VL hard disk read / write rate. 
+
+
+
+Syntax: "?"  : help
+        "0"  : video benchmark in text mode
+        "1"  : 320*200*256
+        "2"  : 640*480*256   VESA  (Default)
+        "3"  : 800*600*256   VESA
+        "4"  : 1024*768*256  VESA
+        "5"  : 1280*1024*256 VESA
+ 
+
+Additional information for Video memory benchmark:
+ To translate the result (Mbytes per sec) to millions pixels per sec, just
+ multiply it by 2 for 320*200 ("1") or by 1 for all others ("2" or greater).
+ You can select the resolution at which your graphics card will be measured.
+ Default resolution is 640*480 by 256 colors ("2"). If you have an old PC 
+ and this doesn't work, try running first a UNIVBE type of program (which
+ makes your graphics card VESA compatible) or if that fails also, run 
+ MEMBENCH with the "1" switch (i.e. "MEMBENCH 1"). If you are testing a 
+ non-VGA computer use "MEMBENCH 0".
+
+
+Comparing: Generally each of the 8 other computers uses common parts
+           available when its processor became available. In addition,
+           all of them are tuned for maximum performance.
+
+
+Usage instructions:
+> MEMBENCH will run only at 32 bit computers (from 386 upward). The 
+  innovative rates are not suitable for a 486 due to its 16 byte burst
+  length. (Pentium upwards have 32 bytes).
+> MEMBENCH is a 32bit protected mode program which needs 100% of your
+  computer's resources for itself, therefore it runs only under plain DOS.
+> Windows 95 users: While your computer is booting press Shift "F5" in order
+                    not to boot Windows and to stay in DOS instead.
+                    OR while in Windows 95 press "START", "SHUTDOWN", 
+                    "Restart the computer in MSDOS mode"
+> Non-Windows 95 users: Reboot your computer and while booting press "F5"
+                        in order to boot clean.
+> If you wish to experiment with different video modes, issue "MEMBENCH ?"
+> Run MEMBENCH.
+> After you have finished running all benchmarks, Membench will display a
+  message that RESULTS.BIN is ready.
+> Please send your RESULTS.BIN file as an email attachment to 
+  results@intelligentfirm.com and you will receive free upgrades and if your
+  computer is different/slower/faster than the computers at our submitted 
+  results page, we might include it also:
+  <http://www.intelligentfirm.com/membench/results.html>
+  Please include your name, email address, some computer details (CPU,
+  motherboard, memory type, graphics card) and any comments you might have.
+  RESULTS.BIN contains exactly the results of your computer which Membench
+  displayed. If you wish to receive a text table (with percentages and 
+  everything) of your RESULTS.BIN state it in your email. Also if you don't
+  mind, we could include your email address if we put your computer in our
+  results page, in order for people with similar computers to be able to 
+  email you (e.g. to ask you how your computer is so fast :) ).
+  
+
+Bugs: Membench can operate in 2 modes: with HIMEM.SYS loaded or without.
+      Very few computers have a problem with one of both methods (very low
+      results and/or reboots while testing). In case that happens, use the
+      other method, that is if HIMEM.SYS is loaded, boot without it and 
+      vice versa. If you find any other problem, please let us know.
+
+
+
+Note:
+
+Membench is MHz independent. That is, a Pentium MMX-233 and a Pentium
+MMX-166 will produce almost exactly the same results.
+'Read' i.e. a program searches; most important. 
+'Write' i.e. a program initializes or updates a memory area. 
+'Transfer' i.e. a program copies or moves data from one area to another
+(e.g. _fmemcpy).
+Video memory transfer rate is very important in games in particular, because
+it plays a major role in their frame rate (frames per second).
+
+
+What is bandwidth and why is it so important:
+
+Current processors run at very high MHz internally, while externally they are
+much slower. e.g. on a 200 MHz processor, only what can fit in the internal 
+(or L1) cache of 32/64 kbytes runs at 200 MHz; bigger programs/data have to
+be read from the secondary (L2) cache of 512 kbytes, which operates at only
+66 MHz (much higher on Pentium II); real big programs/data which cannot fit
+in the L2 cache have to be read from main memory of 16/32/64 Mbytes.
+(Of course Windows 95/NT programs won't even fit in the main memory and will
+swap to the hard disk!).
+That's why main memory and L2 cache read/write/transfer rates (in short
+bandwidth) are so important; and a 233 MHz processor is less than 5% faster
+than the same one at 200 MHz! 
+
+
+
+
+ Comments:
+Write performance: It is obvious that processors split in to two groups: the
+                   normal group (Intel Pentium, Pentium MMX, Cyrix 133) and
+                   the 'write allocation' group (Cyrix MX 166, AMD K6,
+                   Intel Pentium Pro, Pentium II). Processors using write
+                   allocation have significantly slower write and transfer
+                   performance, especially to main memory, because they read
+                   the whole cache line before they write to it. This gives
+                   some advantages on some programs which write repeatedly
+                   to the same areas. The clearest negative impact of write
+                   allocation can be seen in the 'main memory random write'
+                   test.
+Cyrix 686MX L2 :   Two of Cyrix MX's secondary cache tests have astronomical
+                   values ('Random read' 689.95 Mb/sec and 'Random write'
+                   317.46 Mb/sec). These values are NOT correct! Cyrix MX 
+                   is the only processor with a 64Kb unified L1 cache and 
+                   the two random L2 tests can fit into this huge L1 cache.
+AMD K6 performance:The AMD K6 is the only processor we ever found with the
+                   performance flaw, which could not be worked around. 
+                   (Intel's P6 processors don't have the performance flaw 
+                   in main memory access and that's why they have a much
+                   improved 'conventional read rate' while K6 has the same
+                   as Cyrix and Pentium.
+Memory type:       All computers in MEMBENCH are using EDO memory. The 
+                   performance improvements using SDRAM are small, and not
+                   justified by its price tag. Of course our workarounds 
+                   operate correctly whatever type of memory or L2 cache a 
+                   processor has (DRAM, EDO, SDRAM, SRAM); the processor has
+                   the flaw not the memory.
+Write rates:       Membench's innovative write rates are achieved using 64
+                   bit writes, a method roughly documented by Intel in its 
+                   1997 Optimizations manual; the 'performance flaw' 
+                   revealed in our site is a read buffer flaw; that is it
+                   affects only read and transfer rates.
+
+
+
+DETAILED BENCHMARK EXPLANATIONS:
+
+ 1. Main memory benchmarks:
+    * Read rate: read from main memory with the best normal method.
+    * Innovative Read rate: read from main memory with the best innovative 
+      (alternative) method, in order to avoid the read flaw and achieve
+      maximum read rate.
+    * Random read: read from main memory from random addresses (not sequentially).
+    * Write rate: write to main memory with the best normal method (REP STOSD,
+      which is used by most compilers).
+    * Innovative write rate: write to main memory using 64bit floating point
+      writes, which doubles the performance on Pentium systems.
+    * Random write rate: write to main memory to random addresses (not sequentially).
+    * Transfer rate: read from and write to main memory using the best
+      normal method (REP MOVSD, which is used by most compilers).
+    * Inn. Transfer rate: read from and write to main memory using the best
+      innovative (alternative) method, in order to avoid the read flaw and
+      achieve maximum transfer rate.
+    * Inn. MMX Transfer rate: same as previous but using MMX instructions.
+
+ 2. Secondary cache memory benchmarks: 
+    Same as main memory rates but everything is from/to/from&to secondary
+    (L2) cache.
+
+ 3. Primary cache memory benchmarks:
+    * Read rate: read from memory cached in the on-chip primary (L1) cache.
+    * Write rate: write to memory cached in the on-chip L1 cache.
+    (Other rates: Random read/write=read/write; transfer=(read+write)/2).
+
+ 4. Video memory (graphics card) benchmarks: (in 6 user selectable resolutions)
+    * Read rate: read from video memory with the best normal method.
+    * Random read rate: read from video memory from random addresses (not
+      sequentially).
+    * Write rate: write to video memory with the best normal method
+      (REP STOSD, which is used by most compilers).
+    * Innovative write rate: write to video memory using 64bit floating point
+      writes.
+    * Random write rate: write to video memory to random addresses (not sequentially).
+    * Transfer rate: read from main memory and write to video memory using the
+      best normal method (REP MOVSD, which is used by most compilers). 
+    * Inn. Transfer rate: read from main memory and write to video memory
+      using the best innovative (alternative) method, in order to avoid the
+      read flaw and achieve maximum transfer rate.
+    * Inn. MMX Transfer rate: same as previous but using MMX instructions.
+    The transfer rates divided by the frame size, give the maximum frame rate
+    of the video card.
+
+ 5. I/O benchmarks: 
+    * 8 bit ISA sound card read: reads from 8bit soundcard address.
+    * 8 bit ISA sound card write: writes to 8bit soundcard address.
+    * 16bit ISA sound card read: reads from 16bit soundcard address.
+    * 16bit ISA sound card write: writes to 16bit soundcard address.
+    * 32bit PCI/VL hard disk read: reads from the onboard EIDE hard disk
+      interface. Performance depends on hard disk mode (0-4).
+      Note: No actual disk access is made, just the maximum interface (CPU,
+      chipset, PCI/VL bus, hard disk controller & buffer) bandwidth is measured.
+    * 32bit PCI/VL hard disk write: same as previous, but write.
+     
+
+
+
+  Registration:
+
+When you register you will receive the registered version of Membench and 
+its source code including a complete demonstration of our workarounds and
+performance enhancing techniques. You can use any part of the source code
+in your programs.
+Please have a look at www.intelligentfirm.com/membench/membench.html
+
+
+
+Intel and Pentium are registered trademarks of Intel corporation.
+Other trademarks referenced in this document are owned by their respective
+companies
+
+
+LIMITED WARRANTY
+
+THESE PROGRAMS AND ACCOMPANYING WRITTEN MATERIALS ARE PROVIDED "AS IS" WITHOUT
+WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED
+TO THE IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+PURPOSE.  NEITHER THE AUTHOR NOR ANYONE ELSE WHO HAS BEEN INVOLVED IN THE
+CREATION, PRODUCTION OR DELIVERY OF THIS PRODUCT SHALL BE LIABLE FOR ANY
+DIRECT, INDIRECT, CONSEQUENTIAL OR INCIDENTAL DAMAGES ARISING OUT OF THE USE
+OR INABILITY TO USE SUCH PRODUCT EVEN IF THE AUTHOR HAS BEEN ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES.
