@@ -1,0 +1,27 @@
+
+ Start  Stop   Length Name                   Class
+ 00000H 00000H 00000H STACK                  prog                              
+ 00000H 001C6H 001C7H CODE                   prog                              
+
+ Origin   Group
+ 0000:0   PGROUP                                                               
+
+  Address         Publics by Name
+
+ 0000:016E       CMD_REBOOT          
+ 0000:0104       IDT_REBOOT          
+ 0000:010A       MSG_COPY            
+ 0000:0080       PSP_PARM_COUNT      
+ 0000:0081       PSP_PARM_STRING     
+ 0000:0162       REBOOT              
+
+  Address         Publics by Value
+
+ 0000:0080       PSP_PARM_COUNT      
+ 0000:0081       PSP_PARM_STRING     
+ 0000:0104       IDT_REBOOT          
+ 0000:010A       MSG_COPY            
+ 0000:0162       REBOOT              
+ 0000:016E       CMD_REBOOT          
+
+Program entry point at 0000:0100

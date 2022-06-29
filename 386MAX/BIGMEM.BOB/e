@@ -1,0 +1,1096 @@
+   ..\qmax_lsm.asm (08 Jul 1998 13:25:34)
+           qmax_lsm.asm (29 May 2003 23:00:10)
+===================
+       1       1  |;' $Header:   P:/PVCS/MAX/386MAX/QMAX_LSM.ASV   1.2   30 May 1997 10:45:30   BOB  $
++              2  |    title   QMAX_LSM -- DPMI Linear Space Manager functions
++              3  |    page    58,122
++              4  |    name    QMAX_LSM
+-      2          |     title   QMAX_LSM -- DPMI Linear Space Manager functions
+-      3          |     page    58,122
+-      4          |     name    QMAX_LSM
+       5       5  |
+       6       6  |COMMENT|        Module Specifications
+       7       7  |
++              8  |Copyright:  (C) Copyright 1987-2003 Qualitas, Inc.  All rights reserved.
+-      8          |Copyright:  (C) Copyright 1987-98 Qualitas, Inc.  All rights reserved.
+       9       9  |
+      10      10  |Segmentation:  Group PGROUP:
+===================
+      37      37  |if @OEM_VIRTUALMEM
+      38      38  |
++             39  |FlushTLB macro  reg     ; Macro to Flush the TLB
++             40  |    mov reg,LCL_CR3 ; Get current CR3 value
++             41  |    mov CR3,reg     ; Stuff it back in
+-     39          |FlushTLB macro   reg        ; Macro to Flush the TLB
+-     40          |     mov     reg,LCL_CR3    ; Get current CR3 value
+-     41          |     mov     CR3,reg    ; Stuff it back in
+      42      42  |
+      43      43  |     endm           ; FlushTLB
+      44      44  |
++             45  |PGROUP  group   CODE,EDATA
++             46  |IGROUP  group   LDATA,ICODE,IDATA
+-     45          |PGROUP   group   CODE,EDATA
+-     46          |IGROUP   group   LDATA,ICODE,IDATA
+      47      47  |
+      48      48  |
++             49  |CODE    segment use16 byte public 'prog' ; Start CODE segment
++             50  |    assume  ds:PGROUP
+-     49          |CODE     segment use16 byte public 'prog' ; Start CODE segment
+-     50          |     assume  ds:PGROUP
+      51      51  |
++             52  |    extrn   LCL_CR3:dword
+-     52          |     extrn   LCL_CR3:dword
+      53      53  |
++             54  |CODE    ends            ; End CODE segment
+-     54          |CODE     ends           ; End CODE segment
+      55      55  |
+      56      56  |
++             57  |EDATA   segment use16 dword public 'edata' ; Start EDATA segment
++             58  |    assume  ds:PGROUP
+-     57          |EDATA    segment use16 dword public 'edata' ; Start EDATA segment
+-     58          |     assume  ds:PGROUP
+      59      59  |
++             60  |    extrn   PCURTSS:dword
++             61  |    extrn   PVMTSS:dword
++             62  |    extrn   SEL_DS3:dword
++             63  |    extrn   PDTLEN:dword
+-     60          |     extrn   PCURTSS:dword
+-     61          |     extrn   PVMTSS:dword
+-     62          |     extrn   SEL_DS3:dword
+-     63          |     extrn   PDTLEN:dword
+      64      64  |
++             65  |EDATA   ends            ; End EDATA segment
+-     65          |EDATA    ends           ; End EDATA segment
+      66      66  |
+      67      67  |
++             68  |LDATA   segment use16 dword public 'icode' ; Start LDATA segment
++             69  |    assume  ds:IGROUP
+-     68          |LDATA    segment use16 dword public 'icode' ; Start LDATA segment
+-     69          |     assume  ds:IGROUP
+      70      70  |
++             71  |    extrn   ISEL_DS3:word    ; PGROUP selector
++             72  |    extrn   ISEL_4GB3:word  ; AGROUP ...
+-     71          |     extrn   ISEL_DS3:word   ; PGROUP selector
+-     72          |     extrn   ISEL_4GB3:word  ; AGROUP ...
+      73      73  |
++             74  |LDATA   ends            ; End LDATA segment
+-     74          |LDATA    ends           ; End LDATA segment
+      75      75  |
+      76      76  |
++             77  |IDATA   segment use16 dword public 'idata' ; Start IDATA segment
++             78  |    assume  ds:IGROUP
+-     77          |IDATA    segment use16 dword public 'idata' ; Start IDATA segment
+-     78          |     assume  ds:IGROUP
+      79      79  |
++             80  |    extrn   PageDirLA:DWORD      ; low linear address of page dir
+-     80          |     extrn   PageDirLA:DWORD     ; low linear address of page dir
+      81      81  |
+      82      82  |     public LinearBottom, LinearClientBottom
+===================
+      92      92  |LSM_AllocFlags      dd  ?   ; flags for LSM_ALLOC call
+      93      93  |
++             94  |IDATA   ends            ; End IDATA segment
+-     94          |IDATA    ends           ; End IDATA segment
+      95      95  |
+      96      96  |
++             97  |ICODE   segment use16 dword public 'icode' ; Start ICODE segment
++             98  |    assume  cs:IGROUP
+-     97          |ICODE    segment use16 dword public 'icode' ; Start ICODE segment
+-     98          |     assume  cs:IGROUP
+      99      99  |
++            100  |    extrn   VMM_GET_PHYSICAL_PAGE:near
++            101  |    extrn   VMM_ZERO_PAGE:near
++            102  |    extrn   PPM_FREE:near
++            103  |    extrn   PPM_QUERY:near
++            104  |    extrn   PPM_QUERY_SWAPPABLE:near
++            105  |    extrn   PPM_GET_LOWADDR:near
++            106  |    extrn   PPM_SET_PAGE_OWNER:near
+-    100          |     extrn   VMM_GET_PHYSICAL_PAGE:near
+-    101          |     extrn   VMM_ZERO_PAGE:near
+-    102          |     extrn   PPM_FREE:near
+-    103          |     extrn   PPM_QUERY:near
+-    104          |     extrn   PPM_QUERY_SWAPPABLE:near
+-    105          |     extrn   PPM_GET_LOWADDR:near
+-    106          |     extrn   PPM_SET_PAGE_OWNER:near
+     107     107  |
++            108  |    public  @QMAX_LSM_ICODE
+-    108          |     public  @QMAX_LSM_ICODE
+     109     109  |@QMAX_LSM_ICODE:
+     110     110  |
++            111  |    NPPROC  LSM_INIT -- Initialize the Linear Space Manager
++            112  |    assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+-    111          |     NPPROC  LSM_INIT -- Initialize the Linear Space Manager
+-    112          |     assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+     113     113  |COMMENT!
+     114     114  |
+===================
+     160     160  |On exit:
+     161     161  |
++            162  |CF  =   0 if all went OK
++            163  |    =   1 otherwise
++            164  |AX  =   error code
+-    162          |CF   =   0 if all went OK
+-    163          |     =   1 otherwise
+-    164          |AX   =   error code
+     165     165  |
+     166     166  |!
+===================
+     170     170  |; First compute the LinearBottom
+     171     171  |
++            172  |    mov eax,PDTLEN  ; Get the length of the PDT in bytes
++            173  |    shl eax,(12-2)-0    ; Convert from 4KB in dwords to bytes
++            174  |    add eax,@FourMeg-1  ; Round up to 4MB
++            175  |    and eax,not (@FourMeg-1) ; Finish round up
++            176  |    mov LinearBottom,eax ; Set location
+-    172          |     mov     eax,PDTLEN ; Get the length of the PDT in bytes
+-    173          |     shl     eax,(12-2)-0   ; Convert from 4KB in dwords to bytes
+-    174          |     add     eax,@FourMeg-1 ; Round up to 4MB
+-    175          |     and     eax,not (@FourMeg-1) ; Finish round up
+-    176          |     mov     LinearBottom,eax ; Set location
+     177     177  |
++            178  |    add eax,@SharedSize ; Define shared area
++            179  |    mov LinearClientBottom,eax ; Set location
+-    178          |     add     eax,@SharedSize ; Define shared area
+-    179          |     mov     LinearClientBottom,eax ; Set location
+     180     180  |
+     181     181  |; Set up high memory area
+     182     182  |
++            183  |    mov LinearSystemBreak,@PTBase - (2*@FourMeg) ; Set location
++            184  |    mov LinearClientTop,@PTBase - (3*@FourMeg) ; ...
+-    183          |     mov     LinearSystemBreak,@PTBase - (2*@FourMeg) ; Set location
+-    184          |     mov     LinearClientTop,@PTBase - (3*@FourMeg) ; ...
+     185     185  |
+     186     186  |; Set up the shared free list
+     187     187  |
++            188  |    mov eax,LinearSystemBreak ; Addr for shared nodes
++            189  |    mov SharedFreeList.FreeNodes,eax ; Set location
++            190  |    mov SharedFreeList.FreeHighNode,eax ; ...
+-    188          |     mov     eax,LinearSystemBreak ; Addr for shared nodes
+-    189          |     mov     SharedFreeList.FreeNodes,eax ; Set location
+-    190          |     mov     SharedFreeList.FreeHighNode,eax ; ...
+     191     191  |
++            192  |    mov es,ISEL_4GB3    ; Get AGROUP data selector at PL3
++            193  |    assume  es:AGROUP   ; Tell the assembler about it
+-    192          |     mov     es,ISEL_4GB3   ; Get AGROUP data selector at PL3
+-    193          |     assume  es:AGROUP  ; Tell the assembler about it
+     194     194  |
++            195  |    call    LSM_GET_SHARED_LIST ; Returns list in FS:EDI
++            196  |    assume  fs:nothing  ; Tell the assembler about it
+-    195          |     call    LSM_GET_SHARED_LIST ; Returns list in FS:EDI
+-    196          |     assume  fs:nothing ; Tell the assembler about it
+     197     197  |
++            198  |    call    LSM_ALLOC_FREE_NODE ; ESI <- free node address
++            199  |    mov ax,@DERR_INSUFF_LINEAR ; In case we fail
++            200  |    jc  short LSM_INIT_EXIT ; Jump if it failed (note CF=1)
+-    198          |     call    LSM_ALLOC_FREE_NODE ; ESI <- free node address
+-    199          |     mov     ax,@DERR_INSUFF_LINEAR ; In case we fail
+-    200          |     jc  short LSM_INIT_EXIT ; Jump if it failed (note CF=1)
+     201     201  |
++            202  |    mov eax,LinearBottom ; Address of initial node
+-    202          |     mov     eax,LinearBottom ; Address of initial node
+     203     203  |                ; is base of shared area
++            204  |    mov es:[esi].LFNaddr,eax ; Set base of initial node
+-    204          |     mov     es:[esi].LFNaddr,eax ; Set base of initial node
+     205     205  |
+     206     206  |; Set size of initial node in KB
+     207     207  |
++            208  |    mov es:[esi].LFNsize,@SharedSize shr @BytePage ; Set size in KB
++            209  |    mov SharedFreeList.FreeHead,esi ; Set head of shared list
+-    208          |     mov     es:[esi].LFNsize,@SharedSize shr @BytePage ; Set size in KB
+-    209          |     mov     SharedFreeList.FreeHead,esi ; Set head of shared list
+     210     210  |
+     211     211  |     clc            ; Flag success
+     212     212  |LSM_INIT_EXIT:
+     213     213  |     REGREST <fs,es,edi,esi> ; Restore registers
++            214  |    assume  es:nothing,fs:nothing ; Tell the assembler about it
+-    214          |     assume  es:nothing,fs:nothing ; Tell the assembler about it
+     215     215  |
+     216     216  |     ret            ; return to caller
+     217     217  |
++            218  |    assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+-    218          |     assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+     219     219  |
+     220     220  |LSM_INIT endp           ; End LSM_INIT procedure
++            221  |    NPPROC  LSM_INIT_CLIENT -- Initialize LSM for current client
++            222  |    assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+-    221          |     NPPROC  LSM_INIT_CLIENT -- Initialize LSM for current client
+-    222          |     assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+     223     223  |COMMENT|
+     224     224  |
+===================
+     234     234  |On exit:
+     235     235  |
++            236  |CF  =   0 ==> success
+-    236          |CF   =   0 ==> success
+     237     237  |         1 ==> failed
++            238  |AX  =   error code
++            239  |CR3 =   (if success) physical addr of client's page directory
+-    238          |AX   =   error code
+-    239          |CR3  =   (if success) physical addr of client's page directory
+     240     240  |
+     241     241  ||
+     242     242  |
+     243     243  |     REGSAVE <ebx,ecx,edx,esi,edi,es,fs> ; Save registers
+     244     244  |
++            245  |    mov es,ISEL_4GB3    ; Get AGROUP data selector at PL3
++            246  |    assume  es:AGROUP   ; Tell the assembler about it
+-    245          |     mov     es,ISEL_4GB3   ; Get AGROUP data selector at PL3
+-    246          |     assume  es:AGROUP  ; Tell the assembler about it
+     247     247  |
++            248  |    mov edi, PCURTSS    ; edi <- offset in PGROUP of current TSS
+-    248          |     mov     edi, PCURTSS   ; edi <- offset in PGROUP of current TSS
+     249     249  |
+     250     250  |; Allocate a page directory for the client
+     251     251  |
++            252  |    xor eax,eax     ; Never mind virtual address
++            253  |    xor ebx,ebx     ; Not swappable, can fail
++            254  |    call    VMM_GET_PHYSICAL_PAGE ; EBX <- page address
+-    252          |     xor     eax,eax    ; Never mind virtual address
+-    253          |     xor     ebx,ebx    ; Not swappable, can fail
+-    254          |     call    VMM_GET_PHYSICAL_PAGE ; EBX <- page address
+     255     255  |
++            256  |    cmp ebx, -1     ; Did we get a page?
++            257  |    mov ax,@DERR_INSUFF_PHYS ; In case we fail
++            258  |    je  LSM_INIT_CLIENT_FAIL ; Jump if not
+-    256          |     cmp     ebx, -1    ; Did we get a page?
+-    257          |     mov     ax,@DERR_INSUFF_PHYS ; In case we fail
+-    258          |     je  LSM_INIT_CLIENT_FAIL ; Jump if not
+     259     259  |
++            260  |    mov PGROUP:[edi].TSS_CR3,ebx ; Save page address
++            261  |    mov edx,ebx     ; Pass arg in edx
++            262  |    call    PPM_GET_LOWADDR ; EDX <- low address of PD
+-    260          |     mov     PGROUP:[edi].TSS_CR3,ebx ; Save page address
+-    261          |     mov     edx,ebx    ; Pass arg in edx
+-    262          |     call    PPM_GET_LOWADDR ; EDX <- low address of PD
+     263     263  |
+     264     264  |; Set up the new directory
+     265     265  |
++            266  |    xchg    edi,edx     ; EDI <- PD addr, EDX <- current TSS
+-    266          |     xchg    edi,edx    ; EDI <- PD addr, EDX <- current TSS
+     267     267  |     cld            ; Forward
+     268     268  |
+     269     269  |; First copy PDEs from zero to LinearClientBottom
+     270     270  |
++            271  |    xor esi,esi     ; Make a zero
+-    271          |     xor     esi,esi    ; Make a zero
+     272     272  |     MakePDEaddress esi ; ESI <- PDE addr for lin addr 0
++            273  |    mov ecx,LinearClientBottom ; Get base of client region
++            274  |    shr ecx,20+2    ; Divide by 4MB to get number of PDEs
++            275  |S32 rep movs    <AGROUP:[edi].EDD,AGROUP:[esi].EDD> ; Copy PDEs
+-    273          |     mov     ecx,LinearClientBottom ; Get base of client region
+-    274          |     shr     ecx,20+2   ; Divide by 4MB to get number of PDEs
+-    275          |S32  rep movs    <AGROUP:[edi].EDD,AGROUP:[esi].EDD> ; Copy PDEs
+     276     276  |
+     277     277  |; Zero out the client region
+     278     278  |
++            279  |    mov ecx,LinearSystemBreak ; ECX <- top of client region
++            280  |    sub ecx,LinearClientBottom ; ECX <- size of client region
++            281  |    shr ecx,20+2    ; Convert to PDE count for region
++            282  |    xor eax,eax     ; Make zero
++            283  |    rep stos    AGROUP:[edi].EDD ; Zap it
+-    279          |     mov     ecx,LinearSystemBreak ; ECX <- top of client region
+-    280          |     sub     ecx,LinearClientBottom ; ECX <- size of client region
+-    281          |     shr     ecx,20+2   ; Convert to PDE count for region
+-    282          |     xor     eax,eax    ; Make zero
+-    283          |     rep stos    AGROUP:[edi].EDD ; Zap it
+     284     284  |
+     285     285  |; Copy the remainder
+     286     286  |
++            287  |    mov ecx,LinearSystemBreak ; ECX <- top of system region
++            288  |    mov esi,ecx     ; ESI <- top of system region
+-    287          |     mov     ecx,LinearSystemBreak ; ECX <- top of system region
+-    288          |     mov     esi,ecx    ; ESI <- top of system region
+     289     289  |     MakePDEaddress esi ; ESI <- PDE addr for sys region
++            290  |    neg ecx     ; Subtract from 4GB
++            291  |    shr ecx,20+2    ; Convert to PDE count
++            292  |    dec ecx     ; Save one for PD entry itself
++            293  |S32 rep movs    <AGROUP:[edi].EDD,AGROUP:[esi].EDD>  ; copy PDEs
+-    290          |     neg     ecx        ; Subtract from 4GB
+-    291          |     shr     ecx,20+2   ; Convert to PDE count
+-    292          |     dec     ecx        ; Save one for PD entry itself
+-    293          |S32  rep movs    <AGROUP:[edi].EDD,AGROUP:[esi].EDD>  ; copy PDEs
+     294     294  |
++            295  |    mov eax,PGROUP:[edx].TSS_CR3 ; Pick up current PD addr (phys)
++            296  |    or  eax,@PTE_URP    ; Make it present r/w
++            297  |    mov AGROUP:[edi],eax ; Put self reference of page directory
+-    295          |     mov     eax,PGROUP:[edx].TSS_CR3 ; Pick up current PD addr (phys)
+-    296          |     or  eax,@PTE_URP   ; Make it present r/w
+-    297          |     mov     AGROUP:[edi],eax ; Put self reference of page directory
+     298     298  |
++            299  |    mov eax,PGROUP:[edx].TSS_CR3 ; Switch to new page directory
++            300  |    mov edi,PageDirLA   ; EDI <- linear address of PD
+-    299          |     mov     eax,PGROUP:[edx].TSS_CR3 ; Switch to new page directory
+-    300          |     mov     edi,PageDirLA  ; EDI <- linear address of PD
+     301     301  |     MakePTEaddress edi ; EDI <- PTE addr for PD
+     302     302  |
++            303  |    mov fs,ISEL_DS3 ; Get PGROUP data selector at PL3
++            304  |    assume  fs:PGROUP   ; Tell the assembler about it
+-    303          |     mov     fs,ISEL_DS3    ; Get PGROUP data selector at PL3
+-    304          |     assume  fs:PGROUP  ; Tell the assembler about it
+     305     305  |
++            306  |    mov LCL_CR3,eax ; Set CR3 global for this client
++            307  |    mov cr3,eax     ; Set CR3 - flushes TLB
++            308  |    or  eax,@PGBITS_PRESENT or @PG_READWRITE ; make PTE
++            309  |    mov AGROUP:[edi],eax ; Stick it in
+-    306          |     mov     LCL_CR3,eax    ; Set CR3 global for this client
+-    307          |     mov     cr3,eax    ; Set CR3 - flushes TLB
+-    308          |     or  eax,@PGBITS_PRESENT or @PG_READWRITE ; make PTE
+-    309          |     mov     AGROUP:[edi],eax ; Stick it in
+     310     310  |
+     311     311  |; Set up the free list
+     312     312  |
++            313  |    lea edi,PGROUP:[edx].DPTSS_VMM_FreeList ; EDI <- client free list structure
++            314  |    mov eax,LinearClientTop ; Get address for node area
++            315  |    mov PGROUP:[edi].FreeNodes,eax ; Set base of client node area
++            316  |    mov PGROUP:[edi].FreeHighNode,eax ; Initially, top is base
+-    313          |     lea     edi,PGROUP:[edx].DPTSS_VMM_FreeList ; EDI <- client free list structure
+-    314          |     mov     eax,LinearClientTop ; Get address for node area
+-    315          |     mov     PGROUP:[edi].FreeNodes,eax ; Set base of client node area
+-    316          |     mov     PGROUP:[edi].FreeHighNode,eax ; Initially, top is base
+     317     317  |
++            318  |    call    LSM_ALLOC_FREE_NODE ; ESI <- free node address
++            319  |    mov ax,@DERR_INSUFF_LINEAR ; In case we fail
++            320  |    jc  short LSM_INIT_CLIENT_FAIL ; jump if failed
+-    318          |     call    LSM_ALLOC_FREE_NODE ; ESI <- free node address
+-    319          |     mov     ax,@DERR_INSUFF_LINEAR ; In case we fail
+-    320          |     jc  short LSM_INIT_CLIENT_FAIL ; jump if failed
+     321     321  |
+     322     322  |; Set the free node to span the entire client area
+     323     323  |
++            324  |    mov PGROUP:[edi].FreeHead,esi ; Set head to point at first node
+-    324          |     mov     PGROUP:[edi].FreeHead,esi ; Set head to point at first node
+     325     325  |
++            326  |    mov eax,LinearClientBottom ; Get base of client area
++            327  |    mov AGROUP:[esi].LFNaddr,eax ; Set node address to base
++            328  |    mov eax,LinearClientTop  ; Get top of client area
++            329  |    sub eax,LinearClientBottom ; Compute size of client area
++            330  |    shr eax,@BytePage ; Convert to pages
++            331  |    mov AGROUP:[esi].LFNsize,eax ; Store in free node
++            332  |    mov AGROUP:[esi].LFNnext,0 ; Just one node now - no next node
+-    326          |     mov     eax,LinearClientBottom ; Get base of client area
+-    327          |     mov     AGROUP:[esi].LFNaddr,eax ; Set node address to base
+-    328          |     mov     eax,LinearClientTop  ; Get top of client area
+-    329          |     sub     eax,LinearClientBottom ; Compute size of client area
+-    330          |     shr     eax,@BytePage ; Convert to pages
+-    331          |     mov     AGROUP:[esi].LFNsize,eax ; Store in free node
+-    332          |     mov     AGROUP:[esi].LFNnext,0 ; Just one node now - no next node
+     333     333  |
+     334     334  |     clc            ; Flag success
+     335     335  |LSM_INIT_CLIENT_EXIT:
+     336     336  |     REGREST <fs,es,edi,esi,edx,ecx,ebx> ; Restore registers
++            337  |    assume  es:nothing,fs:nothing ; Tell the assembler about it
+-    337          |     assume  es:nothing,fs:nothing ; Tell the assembler about it
+     338     338  |
+     339     339  |     ret            ; Return to client
+===================
+     342     342  |     stc            ; Flag error
+     343     343  |
++            344  |    jmp LSM_INIT_CLIENT_EXIT ; Exit
+-    344          |     jmp     LSM_INIT_CLIENT_EXIT ; Exit
+     345     345  |
++            346  |    assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+-    346          |     assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+     347     347  |
+     348     348  |LSM_INIT_CLIENT endp        ; End LSM_INIT_CLIENT procedure
+===================
+     352     352  |    FLSM_ALLOC endp     ; end of FLSM_ALLOC
+     353     353  |    NPPROC LSM_ALLOC -- Allocate linear space
++            354  |    assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+-    354          |     assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+     355     355  |COMMENT| Allocate linear space
+     356     356  |
+===================
+     384     384  |    REGSAVE <ebp, ebx, ecx, edx, esi, edi, es, fs> ; save regs
+     385     385  |
++            386  |    mov LSM_AllocFlags,edx ; Save flags
+-    386          |     mov     LSM_AllocFlags,edx ; Save flags
+     387     387  |
++            388  |    mov es,ISEL_4GB3    ; Get AGROUP data selector at PL3
++            389  |    assume  es:AGROUP   ; Tell the assembler about it
+-    388          |     mov     es,ISEL_4GB3   ; Get AGROUP data selector at PL3
+-    389          |     assume  es:AGROUP  ; Tell the assembler about it
+     390     390  |
+     391     391  |; Choose a free list based on shared flag
+     392     392  |
++            393  |    test    edx,mask $shared ; Is this a shared alloc?
++            394  |    jz  short LSM_ALLOC_NOTSHARED ; Jump if not
+-    393          |     test    edx,mask $shared ; Is this a shared alloc?
+-    394          |     jz  short LSM_ALLOC_NOTSHARED ; Jump if not
+     395     395  |
++            396  |    call    LSM_GET_SHARED_LIST ; Returns list in FS:EDI
++            397  |    assume  fs:nothing  ; Tell the assembler about it
+-    396          |     call    LSM_GET_SHARED_LIST ; Returns list in FS:EDI
+-    397          |     assume  fs:nothing ; Tell the assembler about it
+     398     398  |
++            399  |    jmp short LSM_ALLOC_GO ; Continue processing with shared list
+-    399          |     jmp     short LSM_ALLOC_GO ; Continue processing with shared list
+     400     400  |
+     401     401  |LSM_ALLOC_NOTSHARED:
++            402  |    call    LSM_GET_CLIENT_LIST ; Returns list in FS:EDI
++            403  |    assume  fs:nothing  ; Tell the assembler about it
+-    402          |     call    LSM_GET_CLIENT_LIST ; Returns list in FS:EDI
+-    403          |     assume  fs:nothing ; Tell the assembler about it
+     404     404  |LSM_ALLOC_GO:           ; FS:EDI points to free list object
++            405  |    test    fs:[edi].FreeFlags,mask $needToMerge ; Need to merge?
++            406  |    jz  short @F    ; Jump if not
+-    405          |     test    fs:[edi].FreeFlags,mask $needToMerge ; Need to merge?
+-    406          |     jz  short @F   ; Jump if not
+     407     407  |
++            408  |    call    LSM_MERGE_FREE_LIST ; Merge the list
+-    408          |     call    LSM_MERGE_FREE_LIST ; Merge the list
+     409     409  |
++            410  |    and fs:[edi].FreeFlags,not mask $needToMerge ; mark merge not needed
+-    410          |     and     fs:[edi].FreeFlags,not mask $needToMerge ; mark merge not needed
+     411     411  |@@:
++            412  |    or  eax,eax          ; test requested address for zero
+-    412          |     or  eax,eax         ; test requested address for zero
+     413     413  |    jnz LSM_ALLOC_SPECIFIC  ; jump if specific address requested
+     414     414  |
+===================
+     428     428  |    jz  LSM_ALLOC_ANYDONE   ;   go see what happened
+     429     429  |
++            430  |    mov eax,es:[esi].LFNsize    ; get size of block for this node
++            431  |    sub eax,ebx         ; subtract requested size
++            432  |    jz  short LSM_ALLOC_EXACTFIT
++            433  |    jc  short LSM_ALLOC_ADVANCE ; too small, skip this node
+-    430          |     mov     eax,es:[esi].LFNsize   ; get size of block for this node
+-    431          |     sub     eax,ebx        ; subtract requested size
+-    432          |     jz  short LSM_ALLOC_EXACTFIT
+-    433          |     jc  short LSM_ALLOC_ADVANCE ; too small, skip this node
+     434     434  |
+     435     435  |; Block is big enough - check this delta against best delta
+     436     436  |
++            437  |    cmp eax, ecx        ; if bigger or equal
++            438  |    jae short LSM_ALLOC_ADVANCE ;    ignore it
+-    437          |     cmp     eax, ecx       ; if bigger or equal
+-    438          |     jae     short LSM_ALLOC_ADVANCE ;   ignore it
+     439     439  |                    ; else
++            440  |    mov ecx, eax        ;   set new best delta
++            441  |    mov edx, esi        ;   set new best node
+-    440          |     mov     ecx, eax       ;   set new best delta
+-    441          |     mov     edx, esi       ;   set new best node
+     442     442  |
++            443  |    jmp short LSM_ALLOC_ADVANCE ;    and go onto next node
+-    443          |     jmp     short LSM_ALLOC_ADVANCE ;   and go onto next node
+     444     444  |
+     445     445  |LSM_ALLOC_EXACTFIT:
++            446  |    mov eax,es:[esi].LFNnext    ; link prev to next to unlink this
+-    446          |     mov     eax,es:[esi].LFNnext   ; link prev to next to unlink this
+     447     447  |
+     448     448  |; On exact fit, unlink this node from the free list
+     449     449  |
++            450  |    or  ebp, ebp         ; test previous node
++            451  |    jz  short LSM_ALLOC_SETHEAD_NEXT ; if none, go fix list head
+-    450          |     or  ebp, ebp        ; test previous node
+-    451          |     jz  short LSM_ALLOC_SETHEAD_NEXT ; if none, go fix list head
+     452     452  |
++            453  |    mov es:[ebp].LFNnext, eax    ; set link
+-    453          |     mov     es:[ebp].LFNnext, eax   ; set link
+     454     454  |
++            455  |    jmp short LSM_ALLOC_EXACT_DONE ; continue processing
+-    455          |     jmp     short LSM_ALLOC_EXACT_DONE ; continue processing
+     456     456  |
+     457     457  |LSM_ALLOC_SETHEAD_NEXT:
++            458  |    mov fs:[edi].FreeHead, eax  ; set new free head
+-    458          |     mov     fs:[edi].FreeHead, eax  ; set new free head
+     459     459  |LSM_ALLOC_EXACT_DONE:
++            460  |    mov eax, es:[esi].LFNaddr    ; address of allocated block
++            461  |    and es:[esi].LFNflags, not mask $nodeInUse ; node not active
+-    460          |     mov     eax, es:[esi].LFNaddr   ; address of allocated block
+-    461          |     and     es:[esi].LFNflags, not mask $nodeInUse ; node not active
+     462     462  |
++            463  |    jmp LSM_ALLOC_SETUP_PDES     ; go set up the PDEs now
+-    463          |     jmp     LSM_ALLOC_SETUP_PDES    ; go set up the PDEs now
+     464     464  |
+     465     465  |LSM_ALLOC_ADVANCE:
++            466  |    mov ebp, esi         ; ebp <- previous node
++            467  |    mov esi, es:[esi].LFNnext    ; esi <- pointer to next node
+-    466          |     mov     ebp, esi        ; ebp <- previous node
+-    467          |     mov     esi, es:[esi].LFNnext   ; esi <- pointer to next node
+     468     468  |
++            469  |    jmp LSM_ALLOC_NEXTNODE   ; examine next node
+-    469          |     jmp     LSM_ALLOC_NEXTNODE  ; examine next node
+     470     470  |
+     471     471  |LSM_ALLOC_ANYDONE:
+===================
+     678     678  |    jmp short LSM_ALLOC_PDE2_DECCOUNT
+     679     679  |@@:
++            680  |    push    eax          ; compare current PDE against default
++            681  |    mov eax, DefaultPDE      ; get default
++            682  |    xor eax, dword ptr es:[ecx] ; cmp
++            683  |    and eax, @PTE_FRM        ; clear low bits
++            684  |    pop eax          ; restore
++            685  |    jz  short @F         ; if curr PDE is default then jump
+-    680          |     push    eax             ; compare current PDE against default
+-    681          |     mov     eax, DefaultPDE     ; get default
+-    682          |     xor     eax, dword ptr es:[ecx] ; cmp
+-    683          |     and     eax, @PTE_FRM       ; clear low bits
+-    684          |     pop     eax             ; restore
+-    685          |     jz  short @F        ; if curr PDE is default then jump
+     686     686  |
++            687  |    cmp dword ptr es:[ecx], 0    ; compare current PDE to zero
++            688  |    jne short LSM_ALLOC_PDE2_ADVANCE    ; jump if not zero
+-    687          |     cmp     dword ptr es:[ecx], 0   ; compare current PDE to zero
+-    688          |     jne     short LSM_ALLOC_PDE2_ADVANCE   ; jump if not zero
+     689     689  |@@:
++            690  |    call    LSM_NEW_PAGE_TABLE   ; get new page table
+-    690          |     call    LSM_NEW_PAGE_TABLE  ; get new page table
+     691     691  |LSM_ALLOC_PDE2_DECCOUNT:
++            692  |    dec edx          ; dec count of new PDEs needed
++            693  |    jz  LSM_ALLOC_PDE2_DONE  ; early out if all done
+-    692          |     dec     edx             ; dec count of new PDEs needed
+-    693          |     jz  LSM_ALLOC_PDE2_DONE     ; early out if all done
+     694     694  |LSM_ALLOC_PDE2_ADVANCE:
++            695  |    add ecx, 4           ; advance PDE pointer
++            696  |    add eax, @FourMeg        ; advance linear address
+-    695          |     add     ecx, 4          ; advance PDE pointer
+-    696          |     add     eax, @FourMeg       ; advance linear address
+     697     697  |
++            698  |    jmp LSM_ALLOC_PDE2_LOOP  ; process next 4MB region
+-    698          |     jmp     LSM_ALLOC_PDE2_LOOP     ; process next 4MB region
+     699     699  |
+     700     700  |LSM_ALLOC_PDE2_DONE:
++            701  |    pop eax          ; restore addr of block
+-    701          |     pop     eax             ; restore addr of block
+     702     702  |
+     703     703  |     clc                 ; flag success
+     704     704  |LSM_ALLOC_EXIT:
+     705     705  |     REGREST <fs, es, edi, esi, edx, ecx, ebx, ebp> ; restore regs
++            706  |    assume  es:nothing,fs:nothing ; Tell the assembler about it
+-    706          |     assume  es:nothing,fs:nothing ; Tell the assembler about it
+     707     707  |
+     708     708  |     ret                ; return to caller
+     709     709  |
+     710     710  |LSM_ALLOC_FAIL:
++            711  |    xor eax, eax         ; signal failure
+-    711          |     xor     eax, eax        ; signal failure
+     712     712  |
+     713     713  |     stc                 ; flag error
+     714     714  |
++            715  |    jmp LSM_ALLOC_EXIT       ; bye
+-    715          |     jmp     LSM_ALLOC_EXIT      ; bye
+     716     716  |
++            717  |    assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+-    717          |     assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+     718     718  |
+     719     719  |LSM_ALLOC   ENDP        ; end of LSM_ALLOC procedure
+     720     720  |    NPPROC  LSM_FREE -- Free Linear Space
++            721  |    assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+-    721          |     assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+     722     722  |COMMENT| Free a linear block. We insert the block being freed into the
+     723     723  |     list to maintain the list in order of increasing linear address.
+===================
+     742     742  |    jb  short LSM_FREE_SHARED       ; jump if not
+     743     743  |
++            744  |    call    LSM_GET_CLIENT_LIST ; Returns list in FS:EDI
++            745  |    assume  fs:nothing  ; Tell the assembler about it
+-    744          |     call    LSM_GET_CLIENT_LIST ; Returns list in FS:EDI
+-    745          |     assume  fs:nothing ; Tell the assembler about it
+     746     746  |
++            747  |    jmp short LSM_FREE_GO ; Continue
+-    747          |     jmp     short LSM_FREE_GO ; Continue
+     748     748  |
+     749     749  |LSM_FREE_SHARED:
++            750  |    call    LSM_GET_SHARED_LIST ; Returns list in FS:EDI
++            751  |    assume  fs:nothing  ; Tell the assembler about it
+-    750          |     call    LSM_GET_SHARED_LIST ; Returns list in FS:EDI
+-    751          |     assume  fs:nothing ; Tell the assembler about it
+     752     752  |LSM_FREE_GO:
++            753  |    mov esi,fs:[edi].FreeHead       ; esi is current block
++            754  |    xor edx,edx             ; edx is "previous" block
+-    753          |     mov     esi,fs:[edi].FreeHead      ; esi is current block
+-    754          |     xor     edx,edx            ; edx is "previous" block
+     755     755  |LSM_FREE_NEXTBLOCK:
++            756  |    or  esi, esi             ; at end of list?
++            757  |    jz  short LSM_FREE_INSERT        ; jump if so
+-    756          |     or  esi, esi            ; at end of list?
+-    757          |     jz  short LSM_FREE_INSERT       ; jump if so
+     758     758  |
++            759  |    cmp es:[esi].LFNaddr,eax ; Check this address
++            760  |    jne short @F    ; Jump if addr ok
+-    759          |     cmp     es:[esi].LFNaddr,eax ; Check this address
+-    760          |     jne     short @F   ; Jump if addr ok
+     761     761  |
++            762  |    int 3       ; Sanity check - don't free
+-    762          |     int     3      ; Sanity check - don't free
+     763     763  |@@:             ;   something already free
++            764  |    ja  short LSM_FREE_INSERT ; If this block above freed
+-    764          |     ja  short LSM_FREE_INSERT ; If this block above freed
+     765     765  |                ;   block, insert after prev
+     766     766  |LSM_FREE_ADVANCE:               ; loop to next block
++            767  |    mov edx,esi     ; This becomes prev
++            768  |    mov esi,es:[esi].LFNnext ; ...link to next
+-    767          |     mov     edx,esi    ; This becomes prev
+-    768          |     mov     esi,es:[esi].LFNnext ; ...link to next
+     769     769  |
++            770  |    jmp LSM_FREE_NEXTBLOCK ; Go get next
+-    770          |     jmp     LSM_FREE_NEXTBLOCK ; Go get next
+     771     771  |
+     772     772  |LSM_FREE_INSERT:
+     773     773  |
+     774     774  |; EDX is "prev" or zero, ESI is "current" or zero
+     775     775  |
++            776  |    mov ecx,esi     ; ECX <- current
++            777  |    call    LSM_ALLOC_FREE_NODE ; ESI <- new free node
++            778  |    jnc short @F    ; Jump if node ok
+-    776          |     mov     ecx,esi    ; ECX <- current
+-    777          |     call    LSM_ALLOC_FREE_NODE ; ESI <- new free node
+-    778          |     jnc     short @F   ; Jump if node ok
+     779     779  |
++            780  |    int 3       ; No free nodes left!
+-    780          |     int     3      ; No free nodes left!
+     781     781  |@@:
+     782     782  |
+     783     783  |; Set up new free node
+     784     784  |
++            785  |    mov es:[esi].LFNaddr,eax ; Base is freed block
++            786  |    mov es:[esi].LFNsize,ebx ; Size is freed size
++            787  |    mov es:[esi].LFNnext,ecx ; Link to next
++            788  |    or  es:[esi].LFNflags,mask $nodeInUse ; Mark in use
+-    785          |     mov     es:[esi].LFNaddr,eax ; Base is freed block
+-    786          |     mov     es:[esi].LFNsize,ebx ; Size is freed size
+-    787          |     mov     es:[esi].LFNnext,ecx ; Link to next
+-    788          |     or  es:[esi].LFNflags,mask $nodeInUse ; Mark in use
+     789     789  |
++            790  |    or  edx,edx     ; If no prev node,
++            791  |    jz  short LSM_FREE_SETHEAD ; ...update next ptr of head
+-    790          |     or  edx,edx    ; If no prev node,
+-    791          |     jz  short LSM_FREE_SETHEAD ; ...update next ptr of head
+     792     792  |
++            793  |    mov es:[edx].LFNnext,esi ; else
+-    793          |     mov     es:[edx].LFNnext,esi ; else
+     794     794  |
++            795  |    jmp short LSM_FREE_CLEAR_PDES ; ...knit it in here
+-    795          |     jmp     short LSM_FREE_CLEAR_PDES ; ...knit it in here
+     796     796  |
+     797     797  |LSM_FREE_SETHEAD:
+===================
+     810     810  |LSM_FREE_EXIT:
+     811     811  |     REGREST <fs, es, edi, esi, edx, ecx, ebx, eax> ; restore regs
++            812  |    assume  es:nothing,fs:nothing ; Tell the assembler about it
+-    812          |     assume  es:nothing,fs:nothing ; Tell the assembler about it
+     813     813  |
+     814     814  |     ret                     ; return to caller
+     815     815  |
++            816  |    assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+-    816          |     assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+     817     817  |
+     818     818  |LSM_FREE    ENDP        ; end of LSM_FREE procedure
+     819     819  |    NPPROC LSM_QUERY -- Query largest available linear block
++            820  |    assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+-    820          |     assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+     821     821  |COMMENT|
+     822     822  |
+===================
+     827     827  |On entry:
+     828     828  |
++            829  |FS:EDI  ==> pointer to free list structure
+-    829          |FS:EDI   ==>     pointer to free list structure
+     830     830  |
+     831     831  |On exit:
+     832     832  |
++            833  |ECX =   size of largest available linear block, in pages
+-    833          |ECX  =   size of largest available linear block, in pages
+     834     834  |
+     835     835  ||
+     836     836  |
+     837     837  |     REGSAVE <esi, es>
+     838     838  |
++            839  |    mov es, ISEL_4GB3        ; all memory selector
++            840  |    assume  es:AGROUP        ; Tell the assembler about it
+-    839          |     mov     es, ISEL_4GB3       ; all memory selector
+-    840          |     assume  es:AGROUP       ; Tell the assembler about it
+     841     841  |
++            842  |    xor ecx, ecx         ; init max size to zero
++            843  |    mov esi, fs:[edi].FreeHead  ; esi is current block
+-    842          |     xor     ecx, ecx        ; init max size to zero
+-    843          |     mov     esi, fs:[edi].FreeHead  ; esi is current block
+     844     844  |LSM_QUERY_NEXT:
++            845  |    or  esi, esi         ; end of list?
++            846  |    jz  short LSM_QUERY_EXIT     ; jump if yes
+-    845          |     or  esi, esi        ; end of list?
+-    846          |     jz  short LSM_QUERY_EXIT    ; jump if yes
+     847     847  |
++            848  |    cmp es:[esi].LFNsize, ecx    ; is block bigger than current max?
++            849  |    jbe short LSM_QUERY_ADVANCE ; jump if not
+-    848          |     cmp     es:[esi].LFNsize, ecx   ; is block bigger than current max?
+-    849          |     jbe     short LSM_QUERY_ADVANCE ; jump if not
+     850     850  |
++            851  |    mov ecx, es:[esi].LFNsize    ; set new max
+-    851          |     mov     ecx, es:[esi].LFNsize   ; set new max
+     852     852  |LSM_QUERY_ADVANCE:
++            853  |    mov esi, es:[esi].LFNnext    ; link to next
+-    853          |     mov     esi, es:[esi].LFNnext   ; link to next
+     854     854  |
++            855  |    jmp LSM_QUERY_NEXT       ; look at next block
+-    855          |     jmp     LSM_QUERY_NEXT      ; look at next block
+     856     856  |
+     857     857  |LSM_QUERY_EXIT:
+     858     858  |     REGREST <es, esi>       ; restore regs
++            859  |    assume  es:nothing  ; Tell the assembler about it
+-    859          |     assume  es:nothing ; Tell the assembler about it
+     860     860  |
+     861     861  |     ret                 ; return to caller
+     862     862  |
++            863  |    assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+-    863          |     assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+     864     864  |LSM_QUERY   ENDP        ; end of LSM_QUERY procedure
++            865  |    NPPROC  LSM_ALLOC_FREE_NODE -- Allocate a node from the free list
++            866  |    assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+-    865          |     NPPROC  LSM_ALLOC_FREE_NODE -- Allocate a node from the free list
+-    866          |     assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+     867     867  |COMMENT|
+     868     868  |
+===================
+     871     871  |On entry:
+     872     872  |
++            873  |FS:EDI  ==> pointer to free list structure
+-    873          |FS:EDI   ==>     pointer to free list structure
+     874     874  |
+     875     875  |On exit:
+     876     876  |
++            877  |ESI =   linear address of free node
++            878  |CF  =   0 ==> success
+-    877          |ESI  =   linear address of free node
+-    878          |CF   =   0 ==> success
+     879     879  |         1 ==> failure
+     880     880  |
+===================
+     912     912  |LSM_ALLOC_NODE_EXIT:
+     913     913  |     REGREST <es>                ; restore regs
++            914  |    assume  es:nothing  ; Tell the assembler about it
+-    914          |     assume  es:nothing ; Tell the assembler about it
+     915     915  |
+     916     916  |     ret                     ; return to caller
+===================
+     919     919  |     stc                     ; flag error - no nodes
+     920     920  |
++            921  |    jmp LSM_ALLOC_NODE_EXIT      ; exit
+-    921          |     jmp     LSM_ALLOC_NODE_EXIT         ; exit
+     922     922  |
++            923  |    assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+-    923          |     assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+     924     924  |
+     925     925  |LSM_ALLOC_FREE_NODE ENDP        ; end of LSM_ALLOC_FREE_NODE procedure
+===================
+     933     933  |On entry:
+     934     934  |
++            935  |FS:EDI  ==> pointer to free list structure
+-    935          |FS:EDI   ==>     pointer to free list structure
+     936     936  |
+     937     937  |On exit:
+     938     938  |
++            939  |CF  =   0 ==> success
+-    939          |CF   =   0 ==> success
+     940     940  |         1 ==> failure
+     941     941  |
+===================
+     944     944  |     REGSAVE <eax, ebx>          ; save regs
+     945     945  |
++            946  |    xor eax, eax             ; addr unimportant
++            947  |    xor ebx, ebx             ; flags: no swap, can fail
+-    946          |     xor     eax, eax            ; addr unimportant
+-    947          |     xor     ebx, ebx            ; flags: no swap, can fail
+     948     948  |
++            949  |    call    VMM_GET_PHYSICAL_PAGE        ; get a page
+-    949          |     call    VMM_GET_PHYSICAL_PAGE       ; get a page
+     950     950  |
++            951  |    cmp ebx, -1              ; did we get one?
++            952  |    je  short LSM_GROW_ARRAY_FAIL    ; jump if not
+-    951          |     cmp     ebx, -1             ; did we get one?
+-    952          |     je  short LSM_GROW_ARRAY_FAIL   ; jump if not
+     953     953  |
++            954  |    mov eax, fs:[edi].FreeHighNode   ; addr at which to map new page
++            955  |    call    LSM_MAP_PAGE             ; map it in
++            956  |    call    VMM_ZERO_PAGE            ; zero it out
++            957  |    add fs:[edi].FreeHighNode, @PageSize; set new high water mark
+-    954          |     mov     eax, fs:[edi].FreeHighNode  ; addr at which to map new page
+-    955          |     call    LSM_MAP_PAGE            ; map it in
+-    956          |     call    VMM_ZERO_PAGE           ; zero it out
+-    957          |     add     fs:[edi].FreeHighNode, @PageSize; set new high water mark
+     958     958  |
+     959     959  |     clc                     ; success
+===================
+     966     966  |     stc                     ; flag error
+     967     967  |
++            968  |    jmp LSM_GROW_ARRAY_EXIT      ; exit
+-    968          |     jmp     LSM_GROW_ARRAY_EXIT         ; exit
+     969     969  |
++            970  |    assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+-    970          |     assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+     971     971  |LSM_GROW_FREE_NODE_ARRAY    ENDP        ; end of LSM_GROW_FREE_NODE_ARRAY procedure
+     972     972  |    NPPROC LSM_NEW_PAGE_TABLE -- Allocate and intialize new page table
+===================
+    1019    1019  |LSM_NEW_PT_EXIT:
+    1020    1020  |     REGREST <es, edx, ebx, eax>     ; restore regs
++           1021  |    assume  es:nothing  ; Tell the assembler about it
+-   1021          |     assume  es:nothing ; Tell the assembler about it
+    1022    1022  |
+    1023    1023  |     ret                 ; return to caller
+===================
+    1026    1026  |     stc                 ; flag error
+    1027    1027  |
++           1028  |    jmp LSM_NEW_PT_EXIT      ; exit
+-   1028          |     jmp     LSM_NEW_PT_EXIT     ; exit
+    1029    1029  |
++           1030  |    assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+-   1030          |     assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+    1031    1031  |
+    1032    1032  |LSM_NEW_PAGE_TABLE  ENDP        ; end of LSM_NEW_PAGE_TABLE procedure
++           1033  |    NPPROC  LSM_MAP_PAGE -- Map a physical page at a given linear address
++           1034  |    assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+-   1033          |     NPPROC  LSM_MAP_PAGE -- Map a physical page at a given linear address
+-   1034          |     assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+    1035    1035  |COMMENT|
+    1036    1036  |
+===================
+    1040    1040  |On entry:
+    1041    1041  |
++           1042  |EAX =   linear address
++           1043  |EBX =   physical address
+-   1042          |EAX  =   linear address
+-   1043          |EBX  =   physical address
+    1044    1044  |
+    1045    1045  |On exit:
+    1046    1046  |
++           1047  |CF  =   0 ==> success
+-   1047          |CF   =   0 ==> success
+    1048    1048  |         1 ==> failure
+    1049    1049  |
+===================
+    1081    1081  |LSM_MAP_PAGE_EXIT:
+    1082    1082  |     REGREST <es, edx, ecx, ebx, eax>; restore regs
++           1083  |    assume  es:nothing  ; Tell the assembler about it
+-   1083          |     assume  es:nothing ; Tell the assembler about it
+    1084    1084  |
+    1085    1085  |     ret                 ; return to caller
+    1086    1086  |
++           1087  |    assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+-   1087          |     assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+    1088    1088  |
+    1089    1089  |LSM_MAP_PAGE    ENDP        ; end of LSM_MAP_PAGE procedure
+    1090    1090  |    NPPROC LSM_MERGE_FREE_LIST -- Merge the free list
++           1091  |    assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+-   1091          |     assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+    1092    1092  |COMMENT|
+    1093    1093  |
+===================
+    1136    1136  |LSM_MERGE_EXIT:
+    1137    1137  |     REGREST <es, esi, ebx, eax>         ; restore regs
++           1138  |    assume  es:nothing  ; Tell the assembler about it
+-   1138          |     assume  es:nothing ; Tell the assembler about it
+    1139    1139  |
+    1140    1140  |     ret                     ; return to caller
+    1141    1141  |
++           1142  |    assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+-   1142          |     assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+    1143    1143  |
+    1144    1144  |LSM_MERGE_FREE_LIST ENDP        ; end of LSM_MERGE_FREE_LIST procedure
++           1145  |    NPPROC  LSM_FILL_PT -- Fill Page Table entries
++           1146  |    assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+-   1145          |     NPPROC  LSM_FILL_PT -- Fill Page Table entries
+-   1146          |     assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+    1147    1147  |COMMENT|
+    1148    1148  |
+===================
+    1152    1152  |On entry:
+    1153    1153  |
++           1154  |EAX =   linear address to start at
++           1155  |EBX =   number of PTEs to set
++           1156  |ECX =   value to set them to
+-   1154          |EAX  =   linear address to start at
+-   1155          |EBX  =   number of PTEs to set
+-   1156          |ECX  =   value to set them to
+    1157    1157  |
+    1158    1158  ||
+    1159    1159  |
+    1160    1160  |     REGSAVE <eax,ecx,edi,es> ; Save registers
+    1161    1161  |
++           1162  |    mov es,ISEL_4GB3    ; Get AGROUP data selector at PL3
++           1163  |    assume  es:AGROUP   ; Tell the assembler about it
+-   1162          |     mov     es,ISEL_4GB3   ; Get AGROUP data selector at PL3
+-   1163          |     assume  es:AGROUP  ; Tell the assembler about it
+    1164    1164  |
++           1165  |    mov edi,eax     ; Copy address
+-   1165          |     mov     edi,eax    ; Copy address
+    1166    1166  |     MakePTEaddress edi ; EDI <- PTE address
++           1167  |    mov eax,ecx     ; Value to set
++           1168  |    mov ecx,ebx     ; ECX <- count
+-   1167          |     mov     eax,ecx    ; Value to set
+-   1168          |     mov     ecx,ebx    ; ECX <- count
+    1169    1169  |     cld            ; Forward
++           1170  |    rep stos    AGROUP:[edi].EDD ; Set PTEs
+-   1170          |     rep stos    AGROUP:[edi].EDD ; Set PTEs
+    1171    1171  |
+    1172    1172  |     REGREST <es,edi,ecx,eax> ; Restore registers
++           1173  |    assume  es:nothing  ; Tell the assembler about it
+-   1173          |     assume  es:nothing ; Tell the assembler about it
+    1174    1174  |
+    1175    1175  |     ret            ; Return to caller
+    1176    1176  |
++           1177  |    assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+-   1177          |     assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+    1178    1178  |
+    1179    1179  |LSM_FILL_PT endp        ; End LSM_FILL_PT procedure
+===================
+    1183    1183  |FLSM_SETN_PTES endp ; end of FLSM_SETN_PTES
+    1184    1184  |    NPPROC LSM_SETN_PTES
++           1185  |    assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+-   1185          |     assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+    1186    1186  |COMMENT| Set contiguous PTEs.
+    1187    1187  |
+===================
+    1278    1278  |    add eax, esi        ; eax <- addr of next region
+    1279    1279  |
++           1280  |    jmp LSM_SETN_NEXT_PDE ; Process next
+-   1280          |     jmp     LSM_SETN_NEXT_PDE ; Process next
+    1281    1281  |
+    1282    1282  |LSM_SETN_DONE:
+    1283    1283  |     clc            ; Success
+    1284    1284  |LSM_SETN_EXIT:
+    1285    1285  |     REGREST <es,edi,esi,edx,ecx,ebx,eax> ; Restore regs
++           1286  |    assume  es:nothing  ; Tell the assembler about it
+-   1286          |     assume  es:nothing ; Tell the assembler about it
+    1287    1287  |
+    1288    1288  |     ret            ; Return to caller
+    1289    1289  |
+    1290    1290  |LSM_SETN_FAIL:
++           1291  |    pop edx     ; Discard
+-   1291          |     pop     edx        ; Discard
+    1292    1292  |
+    1293    1293  |     stc            ; Flag error
+    1294    1294  |
++           1295  |    jmp LSM_SETN_EXIT   ; Exit
+-   1295          |     jmp     LSM_SETN_EXIT  ; Exit
+    1296    1296  |
++           1297  |    assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+-   1297          |     assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+    1298    1298  |
+    1299    1299  |LSM_SETN_PTES endp      ; End LSM_SETN_PTES procedure
+    1300    1300  |     NPPROC LSM_GET_SHARED_LIST -- Return free list for shared memory
++           1301  |    assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+-   1301          |     assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+    1302    1302  |COMMENT|
+    1303    1303  |
+===================
+    1306    1306  |On exit:
+    1307    1307  |
++           1308  |FS:EDI  ==> pointer to the shared free list structure
+-   1308          |FS:EDI   ==>    pointer to the shared free list structure
+    1309    1309  |
+    1310    1310  ||
+    1311    1311  |
++           1312  |    push    ds      ; Copy DS to FS
++           1313  |    pop fs      ; ...for return register
++           1314  |    assume  fs:IGROUP   ; Tell the assembler about it
+-   1312          |     push    ds     ; Copy DS to FS
+-   1313          |     pop     fs     ; ...for return register
+-   1314          |     assume  fs:IGROUP  ; Tell the assembler about it
+    1315    1315  |
++           1316  |    lea edi,SharedFreeList ; FS:EDI ==> list
+-   1316          |     lea     edi,SharedFreeList ; FS:EDI ==> list
+    1317    1317  |
+    1318    1318  |     ret            ; Return to caller
+    1319    1319  |
++           1320  |    assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+-   1320          |     assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+    1321    1321  |
+    1322    1322  |LSM_GET_SHARED_LIST endp    ; End LSM_GET_SHARED_LIST procedure
+===================
+    1338    1338  |LSM_GET_CLIENT_LIST ENDP        ; end of LSM_GET_CLIENT_LIST procedure
+    1339    1339  |    NPPROC LSM_RELEASE_NODE_ARRAY -- Free pages in node array
++           1340  |    assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+-   1340          |     assume  ds:IGROUP,es:nothing,fs:nothing,gs:nothing,ss:PGROUP
+    1341    1341  |COMMENT| At client termination, release the pages backing the free list
+    1342    1342  |    node array.
+===================
+    1365    1365  |LSM_RELEASE_EXIT:
+    1366    1366  |     REGREST <edi,ebx,esi,fs>        ; restore regs
++           1367  |    assume  fs:nothing  ; Tell the assembler about it
+-   1367          |     assume  fs:nothing ; Tell the assembler about it
+    1368    1368  |
+    1369    1369  |     ret                     ; return to caller
+    1370    1370  |
++           1371  |    assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+-   1371          |     assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+    1372    1372  |
+    1373    1373  |LSM_RELEASE_NODE_ARRAY  ENDP        ; end of LSM_RELEASE_NODE_ARRAY procedure
+===================
+<   1398  ( 1400) |
+<   1399  ( 1398) |LSM_EXPAND_EXIT:
++           1399  |    REGREST <ecx, ebx, eax>          ; restore regs
+-   1400          |     REGREST <ecx, ebx, eax>         ; restore regs
+> ( 1398)   1400  |
+> ( 1402)   1401  |     ret                     ; return to caller
+    1401    1402  |
++           1403  |    assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+<   1402  ( 1401) |     ret                     ; return to caller
+<   1403  ( 1418) |
+-   1404          |     assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+    1405    1404  |
+    1406    1405  |LSM_EXPAND_UNCOMPDE ENDP        ; end of LSM_EXPAND_UNCOMPDE procedure
++           1406  |    NPPROC  LSM_SET_PDE -- Set a PDE - maintaining system wide coherence
+-   1407          |    NPPROC LSM_SET_PDE -- Set a PDE - maintaining system wide coherence
+    1408    1407  |    assume  ds:IGROUP,es:AGROUP,fs:nothing,gs:nothing,ss:PGROUP
+    1409    1408  |COMMENT|
+===================
+    1416    1415  |On entry:
+    1417    1416  |
++           1417  |ES  =   AGROUP
+-   1418          |es  =   AGROUP
+> ( 1403)   1418  |
+> ( 1420)   1419  ||
+    1419    1420  |
+<   1420  ( 1419) ||
+    1421    1421  |LSM_SP_STR  struc
++           1422  |
++           1423  |    db  (size PUSHAD_STR) dup (?) ; EGPs
+    1422    1424  |            dw  ?   ; return address
+-   1423          |            dd  ?   ; saved ebp
+    1424    1425  |    LSP_value   dd  ?   ; new PDE value to set
+    1425    1426  |    LSP_addr    dd  ?   ; linear address of PDE
++           1427  |
+    1426    1428  |LSM_SP_STR  ends
+    1427    1429  |
++           1430  |    pushad          ; Prepare to address the stack
++           1431  |    mov ebp,esp     ; Hello, Mr. Stack
+-   1428          |    push    ebp
+-   1429          |    mov ebp, esp
+-   1430          |    REGSAVE <eax, ebx, cx, edx, edi>
+    1431    1432  |
+    1432    1433  |    mov edi, [ebp].LSP_addr ; get address
+===================
+    1439    1440  |    mov eax, LinearClientBottom ; get top of shared area
+    1440    1441  |    MakePDEaddress eax      ; get its PDE address
+> ( 1498)   1442  |
+    1441    1443  |    cmp eax, edi        ; is given address in shared area?
+    1442    1444  |    jbe short LSM_SP_EXIT   ; jump if not
+===================
+    1483    1483  |    cmp PGROUP:[eax].TSS_LINK,-1; link is -1 if TSS not in use
+    1484    1484  |    je  short LSM_SP_ADVANCE    ; skip next if TSS not in use
+> ( 1463)   1485  |
+    1485    1486  |    jmp LSM_SP_NEXT_TSS     ; process next
+> ( 1476)   1487  |
+    1486    1488  |
+    1487    1489  |LSM_SP_EXIT:
++           1490  |    popad           ; Restore registers
+-   1488          |     REGREST <edi, edx, cx, ebx, eax> ; restore regs
+    1489    1491  |
++           1492  |    ret 8       ; Return popping args
+-   1490          |     pop     ebp             ; restore base ptr
+    1491    1493  |
++           1494  |    assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+-   1492          |     ret     8           ; return popping args
+<   1493  ( 1498) |
+-   1494          |     assume  ds:nothing,es:nothing,fs:nothing,gs:nothing,ss:nothing
+    1495    1495  |
+    1496    1496  |LSM_SET_PDE ENDP        ; end of LSM_SET_PDE procedure
++           1497  |    align   4
+-   1497          |     align   4
+> ( 1493)   1498  |
++           1499  |ICODE   ends
+<   1498  ( 1442) |
+-   1499          |ICODE    ends
+    1500    1500  |
+    1501    1501  |endif
+===================
