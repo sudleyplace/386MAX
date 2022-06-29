@@ -1,0 +1,86 @@
+More changes to WinMaxim
+
+Fix file entry:
+
+* More changes to WinMaxim
+
+ Description:
+ 	Quite a number of feature-type changes and a few bugs
+	have been fixed.  As the previous version was fairly
+	incomplete, I won't detail the changes here.  Still
+	remaining to be fixed are 1. Check Maximize.exe for
+	brand 2. Check for Max installed in selected MBoot
+	section 3. Hook up actual help (?need contexts).
+ Who: HENRY
+ When: 25 Oct 95
+ SW/HW Environment: Windows.
+ Symptom: Varies.
+ Temporary Workaround: None.
+ Test Procedure: Retest every facet of WinMaxim.
+ QA Testing Passed:
+ Version: WinMaxim 8.0.11.002
+
+New files:
+
+WINLNCH.C
+	Windows launcher.  This 22K-overhead program is needed just
+	so we can pass the free DOS memory size up to WinMaxim.  It's
+	linked as the DOS stub for WinMaxim, so one could also use
+	it to start WinMaxim from DOS.
+
+	When I have time I'll rewrite it in assembler to take up 4-5K.
+
+Files affected:
+
+CVERSION.H
+	Bump version to 2
+
+MXDLGS.CPP
+MXDLGS.H
+	Handle existing USE= / NOROMSRCH / VGASWAP / NOVGASWAP statements.
+
+	Added new disabling checkboxes (for removing previous settings).
+
+	Weed out common and menu sections from MultiConfig selection.
+
+	Center all dialogs.
+
+	Use menu descriptions for MultiConfig (rather than section names).
+
+	Add exit confirmation dialog.
+
+	Add blue background for Maximize summary.
+
+RESOURCE.H
+	Added new controls, etc.
+
+SPLASH.CPP
+	Center dialog.
+	Resize to bitmap size.
+	Use BitBlt instead of stretch.
+
+SUMMARY.CPP
+SUMMARY.H
+	Re-did this per Vic's design.
+
+WINMXMZ.CPP
+	Added code to parse MAXIMIZE.CFG, CONFIG.SYS, and 386MAX.PRO (all
+	that just to get USE=F??? and VGASWAP).
+
+	Handle new switches for removal.
+
+WINMXMZ.DEF
+	Add WinLnch.exe as stub (starts WIN.COM c:\386max\winmaxim.exe ... nnn,
+	where nnn is free KB low DOS as if WinLnch was not running).
+
+WINMXMZ.INC
+	Update dependencies.
+
+WINMXMZ.MAK
+	Increase stack.
+
+	Build WinLnch.exe
+
+WINMXMZ.RC
+	Changes to summary (mostly) and other dialogs.
+

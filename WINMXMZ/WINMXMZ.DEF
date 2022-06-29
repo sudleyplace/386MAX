@@ -1,0 +1,16 @@
+; $Header:   P:/PVCS/MAX/WINMXMZ/WINMXMZ.DEV   1.2   25 Oct 1995 17:03:38   HENRY  $
+; Winmxmz.def : Declares the module parameters for the application.
+
+NAME         WINMAXIM
+DESCRIPTION  'Windows Startup for Maximize'
+EXETYPE      WINDOWS
+
+CODE         PRELOAD MOVEABLE DISCARDABLE
+DATA         PRELOAD MOVEABLE MULTIPLE
+
+HEAPSIZE     1024   ; initial heap size
+; Stack size is passed as argument to linker's /STACK option
+
+; Use Windows launcher to pass free low DOS on command line
+STUB		'WINLNCH.EXE'
+

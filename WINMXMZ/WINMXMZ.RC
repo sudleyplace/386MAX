@@ -1,0 +1,305 @@
+//Microsoft App Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+// $Header:   P:/PVCS/MAX/WINMXMZ/WINMXMZ.RCV   1.10   23 May 1996 13:43:56   HENRY  $
+#include "afxres.h"
+#include <statres.h>
+
+/////////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "// $Header:   P:/PVCS/MAX/WINMXMZ/WINMXMZ.RCV   1.10   23 May 1996 13:43:56   HENRY  $\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include <statres.h>\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""cversion.h""\r\n"
+    "#include <mversion.h>\r\n"
+    "#include <common.ver>\r\n"
+    "\r\n"
+    "#include ""afxres.rc""  \011// Standard components\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDR_MAINFRAME           ICON    DISCARDABLE     "WINMXMZ.ICO"
+IDI_ALTICON1            ICON    DISCARDABLE     "ALTICON1.ICO"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_WELCOME DIALOG DISCARDABLE  0, 0, 258, 149
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Welcome to Maximize!"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,29,118,50,14
+    PUSHBUTTON      "E&xit",IDCANCEL,99,118,50,14
+    PUSHBUTTON      "&Help",IDC_HELP,169,118,50,14
+    CTEXT           "Welcome to Maximize, the automatic system configuration utility for Qualitas MAX!",
+                    IDC_STATIC,44,10,161,25
+    LTEXT           "Maximize searches your system startup files for resident software, and determines the most efficient way to load them into memory.  First time users can press Help at any time for more information about Maximize.",
+                    IDC_STATIC,16,44,222,57
+    ICON            IDR_MAINFRAME,IDC_STATIC,217,9,18,20
+END
+
+IDD_SELECTMBOOT DIALOG DISCARDABLE  0, 0, 277, 176
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Multiconfig Section"
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_SELECTMB,101,60,165,72,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,41,139,50,14
+    PUSHBUTTON      "E&xit",IDCANCEL,110,139,50,14
+    PUSHBUTTON      "&Help",IDC_HELP,181,139,50,14
+    LTEXT           "Maximize has determined that your system uses Multiconfig.",
+                    IDC_STATIC,20,15,212,20
+    LTEXT           "In the box below please select the Multiconfig section which you would like to Maximize and press OK to continue.",
+                    IDC_STATIC,20,38,212,20
+    LTEXT           "&Maximize this section:",IDC_STATIC,20,63,77,13
+    ICON            IDR_MAINFRAME,IDC_STATIC,41,94,18,20
+END
+
+IDD_SELECTMODE DIALOG DISCARDABLE  0, 0, 271, 166
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Maximize Mode"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Express",IDC_EXPRESS,26,28,42,41
+    PUSHBUTTON      "&Custom",IDC_CUSTOM,26,81,42,41
+    PUSHBUTTON      "&Back",IDC_BACK,32,138,50,14
+    PUSHBUTTON      "&Help",IDC_HELP,162,138,50,14
+    PUSHBUTTON      "E&xit",IDCANCEL,97,138,50,14
+    CTEXT           "Select which mode of Maximize to run:",IDC_STATIC,6,7,
+                    257,13
+    LTEXT           "Select Express if you want Maximize to make all the decisions for you.",
+                    IDC_STATIC,80,36,155,32
+    LTEXT           "Select Custom Maximize if you want to control what features are used and which programs are loaded high by Maximize.",
+                    IDC_STATIC,80,87,155,32
+END
+
+IDD_CUSTOPTS DIALOG DISCARDABLE  0, 0, 323, 186
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Options for Custom Maximize"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Select the options to use for Custom Maximize by clicking the check boxes below:",
+                    IDC_STATIC,7,7,309,14
+    CONTROL         "&Run ROMsearch",IDC_ROMSRCH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,23,40,70,8
+    CONTROL         "Re&move ROMsearch",IDC_DISROMSRCH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,23,55,78,8
+    CONTROL         "Enable &VGASWAP",IDC_VGASWAP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,23,95,74,8
+    CONTROL         "&Disable VGASWAP",IDC_DISVGASWAP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,23,110,74,8
+    CONTROL         "Us&e ExtraDOS",IDC_EXTRADOS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,23,135,70,8
+    DEFPUSHBUTTON   "OK",IDOK,30,158,50,14
+    PUSHBUTTON      "&Back",IDC_BACK,95,158,50,14
+    PUSHBUTTON      "E&xit",IDCANCEL,165,158,50,14
+    PUSHBUTTON      "&Help",IDC_HELP,235,158,50,14
+    LTEXT           "Checks for usable high DOS in the system BIOS",
+                    IDC_STATIC,103,40,176,10
+    LTEXT           "Removes USE= statements in the F000-FFFF range from the Qualitas MAX profile",
+                    IDC_STATIC,103,55,190,17
+    LTEXT           "Runs test to check if VGA BIOS can be relocated",
+                    IDC_STATIC,103,95,180,10
+    LTEXT           "Relocates DOS subsegments (FILES, BUFFERS, COMMAND.COM, LASTDRIVE, FCBs) into high DOS.",
+                    IDC_STATIC,103,130,189,20
+    GROUPBOX        "ROMsearch",IDC_STATIC,18,25,285,49
+    GROUPBOX        "VGASWAP",IDC_STATIC,18,80,285,45
+    LTEXT           "Removes VGASWAP from the Qualitas MAX profile",
+                    IDC_STATIC,103,110,192,10
+END
+
+IDD_CUSTOPTS95 DIALOG DISCARDABLE  0, 0, 323, 205
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Options for Custom Maximize"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Select the options to use for Custom Maximize by clicking the check boxes below:",
+                    IDC_STATIC,7,7,309,14
+    CONTROL         "&Run ROMsearch",IDC_ROMSRCH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,23,40,70,8
+    CONTROL         "Re&move ROMsearch",IDC_DISROMSRCH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,23,55,78,8
+    CONTROL         "Enable &VGASWAP",IDC_VGASWAP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,23,95,74,8
+    CONTROL         "&Disable VGASWAP",IDC_DISVGASWAP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,23,110,74,8
+    CONTROL         "Us&e ExtraDOS",IDC_EXTRADOS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,23,135,70,8
+    CONTROL         "M&aximize DOSSTART",IDC_DOSSTART,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,23,154,84,11
+    DEFPUSHBUTTON   "OK",IDOK,30,180,50,14
+    PUSHBUTTON      "&Back",IDC_BACK,95,180,50,14
+    PUSHBUTTON      "E&xit",IDCANCEL,165,180,50,14
+    PUSHBUTTON      "&Help",IDC_HELP,235,180,50,14
+    LTEXT           "Checks for usable high DOS in the system BIOS",
+                    IDC_STATIC,110,40,176,10
+    LTEXT           "Removes USE= statements in the F000-FFFF range from the Qualitas MAX profile",
+                    IDC_STATIC,110,55,190,17
+    LTEXT           "Runs test to check if VGA BIOS can be relocated",
+                    IDC_STATIC,110,95,180,10
+    LTEXT           "Relocates DOS subsegments (FILES, BUFFERS, COMMAND.COM, LASTDRIVE, FCBs) into high DOS.",
+                    IDC_STATIC,110,130,189,20
+    GROUPBOX        "ROMsearch",IDC_STATIC,18,25,285,49
+    GROUPBOX        "VGASWAP",IDC_STATIC,18,80,285,45
+    LTEXT           "Removes VGASWAP from the Qualitas MAX profile",
+                    IDC_STATIC,110,110,188,10
+    LTEXT           "Identifies and Maximizes any resident software found in DOSSTART.BAT in addition to system startup files.",
+                    IDC_STATIC,110,150,189,18
+END
+
+IDD_END_PHASE1 DIALOG DISCARDABLE  0, 0, 321, 159
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Maximize Message"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,30,138,50,14
+    PUSHBUTTON      "&Back",IDC_BACK,99,138,50,14
+    PUSHBUTTON      "E&xit",IDCANCEL,168,138,50,14
+    PUSHBUTTON      "&Help",IDC_HELP,237,138,50,14
+    LTEXT           "The Maximize process causes several reboots of the computer.\n\nAfter each reboot, Maximize continues automatically.  Exit any shell programs which may load in your AUTOEXEC.BAT so that Maximize may continue.",
+                    IDC_STATIC,30,15,250,38
+    LTEXT           "When you press OK, the system will exit Windows and begin the Maximize process.  Once Maximize is completed you will be returned to Windows.\n\nPlease ensure that drive A is empty and press OK to begin.",
+                    IDC_STATIC,30,59,258,41
+    ICON            IDR_MAINFRAME,IDC_STATIC,291,13,18,20
+END
+
+IDD_STAT_SPLASH DIALOG DISCARDABLE  0, 0, 227, 157
+STYLE WS_POPUP | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_STAT_SPLASHBMP,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    0,0,240,160
+END
+
+IDD_SUMMARY DIALOG DISCARDABLE  0, 0, 325, 204
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Maximize Completed"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,62,185,50,14
+    PUSHBUTTON      "&Undo",IDC_REVERT,126,185,50,14
+    PUSHBUTTON      "&Help",IDC_HELP,194,185,50,14
+    LTEXT           "You have successfully completed Maximize!",IDC_STATIC,
+                    25,7,171,11
+    LTEXT           "Maximize has moved ???KB into high DOS",
+                    IDC_TOTALUSEDHIGH,25,20,186,10
+    GROUPBOX        "Moved into high DOS:",IDC_STATIC,20,31,125,96
+    GROUPBOX        "Left in low DOS:",IDC_STATIC,154,31,125,96
+    LTEXT           "You have ???KB of unused high DOS memory remaining.",
+                    IDC_TOTALFREEHIGH,25,132,204,11
+    LTEXT           "Total Free Conventional Memory ???KB",IDC_TOTALFREELOW,
+                    25,146,180,10
+    LTEXT           "Press OK to accept your new configuration or Undo to discard all changes and revert to your previous configuration and exit Maximize.",
+                    IDC_STATIC,25,160,278,16
+    ICON            IDR_MAINFRAME,IDC_STATIC,297,9,18,20
+    LISTBOX         IDC_HIGHLIST,24,41,116,82,NOT LBS_NOTIFY | 
+                    LBS_USETABSTOPS | WS_VSCROLL
+    LISTBOX         IDC_LOWLIST,159,42,116,82,NOT LBS_NOTIFY | 
+                    LBS_USETABSTOPS | WS_VSCROLL
+END
+
+IDD_CONFIRMEXIT DIALOG DISCARDABLE  0, 0, 185, 79
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Confirm Exit"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,23,50,14
+    LTEXT           "You have chosen to exit Maximize.  Click OK to continue and discard any selections you've made so far, or Cancel to remain in Maximize.",
+                    IDC_STATIC,9,12,105,59
+    ICON            IDR_MAINFRAME,IDC_STATIC,142,48,18,20
+END
+
+IDD_STAT_BLUESCREEN DIALOG DISCARDABLE  0, 0, 185, 93
+STYLE WS_POPUP | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS DISCARDABLE 
+BEGIN
+    VK_F1,          IDC_HELP,               VIRTKEY,NOINVERT
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_STAT_SPLASHSCRN     BITMAP  DISCARDABLE     "QMAX.BMP"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Windows Maximize Component\nWinmxmz\nWinmxmz Document\n\n\nWinmxmz.Document\nWinmxmz Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Windows Maximize"
+END
+
+
+#ifndef APSTUDIO_INVOKED
+////////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "cversion.h"
+#include <mversion.h>
+#include <common.ver>
+
+#include "afxres.rc"  	// Standard components
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

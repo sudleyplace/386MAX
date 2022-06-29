@@ -1,0 +1,81 @@
+# $Header:   P:/PVCS/MAX/XLAT/MAKEFILE.__V   1.4   30 May 1997 12:33:34   BOB  $
+#
+# Makefile for XLAT.COM
+#
+
+!include $(MAXROOT)include\maxnames.mak
+
+OEM=ret 			# Default 3-letter OEM name
+PRODNAME=xlat			# Product file basename
+
+O=$(OEM)\			# OEM-specific files
+R=				# Source directory
+
+ALLINC=$(O);$(I);$(Q)		# INCLUDE search path
+
+# if LST is defined in the environment or on the command line,
+# define a macro we can tack onto the end of each MASM line
+!IFDEF LST
+LSTMAC=,$(LST)\$(@B)
+!ELSE
+LSTMAC=
+!ENDIF
+
+AFLAGS=/mu /p /r /t /w1 /DLANG_$(LANG) # MASM options
+LFLAGS=/map /line /nod		# Linker options
+
+{$(R)}.asm{$(O)}.obj:
+	 set INCLUDE=$(ALLINC);$(INCLUDE)
+	 masm $(R)$(@B) $(AFLAGS), $(O) $(LSTMAC);
+	 @dispobj $*/w
+
+OBJS=	 $(O)XLAT.OBJ	 $(O)VERSION.OBJ
+
+ALL:	 DIR	$(O)$(PRODNAME).COM	$(BD)$(PRODNAME).COM
+
+DEL:
+	-rm $(OEM)*.*
+
+DIR:
+	vdir -c $(OEM)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\xlat\*
+VCSDIR = P:\PVCS\MAX\xlat\*
+ALIAS ALL P:\PVCS\MAX\xlat\*.*,p:\pvcs\max\xlat\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+DEPSCAN: makefile
+	depscan *.asm >xlatdep.inc
+
+makefile: xlatdep.inc
+
+!include xlatdep.inc
+
+$(O)$(PRODNAME).COM:	 $(OBJS)	makefile
+	 $(LD) @<<$(O)$(PRODNAME).arf
+		$(OBJS: =+^
+)
+		$*.exe
+		$*.map
+		$(LFLAGS)
+		NUL.def
+<<KEEP
+	 mapssf -t$* $*
+	 exe2bin $* $*.com
+	 del $*.exe
+
+$(BD)$(PRODNAME).COM: $(O)$(PRODNAME).COM
+	 xc /r	 $(**R).COM	$*.*
+	 xc /r	 $(**R).MAP	$*.*
+	 xc /r	 $(**R).SSF	$*.*
+
+$(O)XLAT.OBJ:	 XLAT.ASM	$(XLAT_ADEP)
+
+$(O)VERSION.OBJ: VERSION.ASM	$(VERSION_ADEP)
+
+

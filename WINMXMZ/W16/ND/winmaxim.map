@@ -1,0 +1,3240 @@
+Stack Allocation = 12288 bytes
+
+ WINMAXIM
+
+ Start     Length     Name                   Class
+ 0001:0000 00000H     STDAFX_TEXT            CODE
+ 0001:0000 00014H     WINMXMZ_TEXT           CODE
+ 0001:0014 000BEH     MXDLGS_TEXT            CODE
+ 0001:00D2 00028H     SUMMARY_TEXT           CODE
+ 0001:00FA 00090H     BOOTDRV_TEXT           CODE
+ 0001:018A 000F3H     DMALLOC_TEXT           CODE
+ 0001:027E 018B6H     MBPARSE_TEXT           CODE
+ 0001:1B34 001A2H     QMAXPRES_TEXT          CODE
+ 0001:1CD6 0014CH     FILECOPY_TEXT          CODE
+ 0001:1E22 00296H     SPLASH_TEXT            CODE
+ 0001:20B8 000B4H     CENTDLG_TEXT           CODE
+ 0001:216C 0028CH     BLUESCR_TEXT           CODE
+ 0001:23F8 00179H     AFX_MSVC_TEXT          CODE
+ 0001:2572 0399FH     AFX_CORE1_TEXT         CODE
+ 0001:5F12 0040FH     AFX_COLL1_TEXT         CODE
+ 0001:6322 003DEH     AFX_AUX_TEXT           CODE
+ 0001:6700 00A2AH     AFX_INIT_TEXT          CODE
+ 0001:712A 0055EH     AFX_COLL2_TEXT         CODE
+ 0001:7688 00D41H     AFX_CORE3_TEXT         CODE
+ 0001:83CA 004B4H     AFX_CORE4_TEXT         CODE
+ 0001:887E 010E1H     AFX_CORE2_TEXT         CODE
+ 0001:9960 03DE2H     _TEXT                  CODE
+ 0002:0000 04746H     COMDAT_SEG1            CODE
+ 0003:0000 00008H     WINMXMZ15_DATA         FAR_DATA
+ 0004:0000 00010H     NULL                   BEGDATA
+ 0004:0010 007EAH     _DATA                  DATA
+ 0004:07FA 00000H     XIFCB                  DATA
+ 0004:07FA 0003CH     XIFU                   DATA
+ 0004:0836 00000H     XIFL                   DATA
+ 0004:0836 00000H     XIFM                   DATA
+ 0004:0836 00000H     XIFCE                  DATA
+ 0004:0836 0000EH     CDATA                  DATA
+ 0004:0844 00000H     XIFB                   DATA
+ 0004:0844 00000H     XIF                    DATA
+ 0004:0844 00000H     XIFE                   DATA
+ 0004:0844 00000H     XIB                    DATA
+ 0004:0844 00000H     XI                     DATA
+ 0004:0844 00000H     XIE                    DATA
+ 0004:0844 00000H     XPB                    DATA
+ 0004:0844 00004H     XP                     DATA
+ 0004:0848 00000H     XPE                    DATA
+ 0004:0848 00000H     XCB                    DATA
+ 0004:0848 00000H     XC                     DATA
+ 0004:0848 00000H     XCE                    DATA
+ 0004:0848 00000H     XCFB                   DATA
+ 0004:0848 00000H     XCFCRT                 DATA
+ 0004:0848 00000H     XCF                    DATA
+ 0004:0848 00000H     XCFE                   DATA
+ 0004:0848 00000H     DBDATA                 DATA
+ 0004:0848 000E4H     IOB                    DATA
+ 0004:092C 00000H     IOBX                   DATA
+ 0004:092C 0000CH     IOBE                   DATA
+ 0004:0938 000E4H     IOB2                   DATA
+ 0004:0A1C 00000H     IOB2X                  DATA
+ 0004:0A1C 0000CH     IOB2E                  DATA
+ 0004:0A28 00002H     CONST                  CONST
+ 0004:0A2A 00008H     HDR                    MSG
+ 0004:0A32 00163H     MSG                    MSG
+ 0004:0B95 00015H     PAD                    MSG
+ 0004:0BAA 00001H     EPAD                   MSG
+ 0004:0BAC 00B38H     _BSS                   BSS
+ 0004:16E4 00000H     XOB                    BSS
+ 0004:16E4 0009CH     XO                     BSS
+ 0004:1780 00000H     XOE                    BSS
+ 0004:1780 00000H     XOFB                   BSS
+ 0004:1780 00000H     XOF                    BSS
+ 0004:1780 00000H     XOFE                   BSS
+ 0004:1780 0040CH     c_common               BSS
+
+ Origin   Group
+ 0004:0   DGROUP
+
+ Address   Export                  Alias
+
+ 0001:674E _AFX_VERSION            _AFX_VERSION
+ 0001:A066 ___ExportedStub         ___ExportedStub
+
+  Address         Publics by Name
+
+ 0001:281A       ??0AFX_CLASSINIT@@RAC@PEUCRuntimeClass@@@Z
+ 0001:636C       ??0AFX_EXCEPTION_LINK@@RAC@XZ
+ 0001:8838       ??0AFX_OLESTATE@@REC@XZ
+ 0001:6766       ??0AUX_DATA@@RAC@XZ
+ 0001:216C       ??0CBlue@@REC@PEVCWnd@@P7CPEV1@XZ@Z
+ 0000:0000  Unr  ??0CBrush@@REC@HK@Z
+ 0000:0000  Unr  ??0CBrush@@REC@K@Z
+ 0000:0000  Unr  ??0CBrush@@REC@PEVCBitmap@@@Z
+ 0000:0000  Unr  ??0CClientDC@@REC@PEVCWnd@@@Z
+ 0001:5060       ??0CCmdTarget@@REC@XZ
+ 0001:5330       ??0CCmdUI@@REC@XZ
+ 0002:01DE       ??0CConfigParse@@REC@PFD@Z
+ 0002:1D30       ??0CCustomOpts@@REC@PEVCWnd@@H@Z
+ 0001:419C       ??0CDataExchange@@RAC@PEVCWnd@@H@Z
+ 0001:8A26       ??0CDC@@REC@XZ
+ 0000:0000  Unr  ??0CDialog@@JEC@XZ
+ 0001:4A2E       ??0CDialog@@REC@IPEVCWnd@@@Z
+ 0000:0000  Unr  ??0CDialog@@REC@PFDPEVCWnd@@@Z
+ 0002:2146       ??0CEndPhase1@@REC@PEVCWnd@@@Z
+ 0002:272C       ??0CExit@@REC@PEVCWnd@@@Z
+ 0001:44B4       ??0CHandleMap@@RAC@PEUCRuntimeClass@@IH@Z
+ 0001:714E       ??0CMapWordToPtr@@REC@H@Z
+ 0001:91DE       ??0CPaintDC@@REC@PEVCWnd@@@Z
+ 0000:0000  Unr  ??0CPen@@REC@HHK@Z
+ 0001:5F32       ??0CPtrList@@REC@H@Z
+ 0002:2184       ??0CSelectMBoot@@REC@PEVCWnd@@PFD@Z
+ 0002:25AC       ??0CSelectMode@@REC@PEVCWnd@@@Z
+ 0002:3E22       ??0CSplashBtn@@REC@XZ
+ 0001:1E22       ??0CSplashDlg@@REC@PEVCWnd@@@Z
+ 0001:28DE       ??0CString@@REC@AFV0@@Z
+ 0001:29EC       ??0CString@@REC@PFD@Z
+ 0001:28C0       ??0CString@@REC@XZ
+ 0002:2EA0       ??0CSummary@@REC@HPEVCWnd@@@Z
+ 0002:263C       ??0CWelcome@@REC@PEVCWnd@@@Z
+ 0001:5632       ??0CWinApp@@REC@PFD@Z
+ 0000:0000  Unr  ??0CWindowDC@@REC@PEVCWnd@@@Z
+ 0002:0006       ??0CWinmxmzApp@@REC@XZ
+ 0001:2D42       ??0CWnd@@BEC@PBUHWND__@@@Z
+ 0001:2D04       ??0CWnd@@REC@XZ
+ 0001:686C       ??1AUX_DATA@@RAC@XZ
+ 0001:8466       ??1CButton@@VEC@XZ
+ 0001:9172       ??1CClientDC@@VEC@XZ
+ 0001:50A2       ??1CCmdTarget@@VEC@XZ
+ 0001:85D2       ??1CComboBox@@VEC@XZ
+ 0002:0398       ??1CConfigParse@@REC@XZ
+ 0002:15FC       ??1CCustomOpts@@VEC@XZ
+ 0001:8B0A       ??1CDC@@VEC@XZ
+ 0001:492A       ??1CDialog@@VEC@XZ
+ 0001:86C2       ??1CEdit@@VEC@XZ
+ 0001:936E       ??1CGdiObject@@VEC@XZ
+ 0001:84E2       ??1CListBox@@VEC@XZ
+ 0001:7252       ??1CMapWordToPtr@@VEC@XZ
+ 0001:4F8A       ??1CMenu@@VEC@XZ
+ 0001:9232       ??1CPaintDC@@VEC@XZ
+ 0001:5FCA       ??1CPtrList@@VEC@XZ
+ 0001:870C       ??1CScrollBar@@VEC@XZ
+ 0001:841C       ??1CStatic@@VEC@XZ
+ 0001:297C       ??1CString@@REC@XZ
+ 0002:1678       ??1CSummary@@VEC@XZ
+ 0001:6B40       ??1CWinApp@@VEC@XZ
+ 0001:91A8       ??1CWindowDC@@VEC@XZ
+ 0001:32C2       ??1CWnd@@VEC@XZ
+ 0001:C346       ??2@ZAPEXI@Z
+ 0001:C334       ??3@ZAXPEX@Z
+ 0001:2AA4       ??4CString@@RECAFV0@AFV0@@Z
+ 0001:2AD4       ??4CString@@RECAFV0@PFD@Z
+ 0001:7442       ??ACMapWordToPtr@@RECAEPEXG@Z
+ 0000:0000  Unr  ??H@ZC?EVCString@@AFV0@0@Z
+ 0000:0000  Unr  ??H@ZC?EVCString@@AFV0@PFD@Z
+ 0000:0000  Unr  ??H@ZC?EVCString@@PFDAFV0@@Z
+ 0000:0000  Unr  ??YCString@@RECAFV0@AFV0@@Z
+ 0000:0000  Unr  ??YCString@@RECAFV0@D@Z
+ 0001:66BE       ??YCString@@RECAFV0@PFD@Z
+ 0002:3FA6       ??_7CBitmap@@6F@
+ 0002:40CC       ??_7CBlue@@6F@
+ 0002:414C       ??_7CBrush@@6F@
+ 0002:2BB4       ??_7CButton@@6F@
+ 0002:44DA       ??_7CClientDC@@6F@
+ 0002:46A4       ??_7CCmdTarget@@6F@
+ 0002:4694       ??_7CCmdUI@@6F@
+ 0002:2CA4       ??_7CComboBox@@6F@
+ 0002:2AB4       ??_7CCustomOpts@@6F@
+ 0002:445E       ??_7CDC@@6F@
+ 0002:4248       ??_7CDialog@@6F@
+ 0002:4372       ??_7CEdit@@6F@
+ 0002:2E20       ??_7CEndPhase1@@6F@
+ 0002:4160       ??_7CException@@6F@
+ 0002:2C24       ??_7CExit@@6F@
+ 0002:1D1C       ??_7CFont@@6F@
+ 0002:1D08       ??_7CGdiObject@@6F@
+ 0002:3DA6       ??_7CListBox@@6F@
+ 0002:41B0       ??_7CMapWordToPtr@@6F@
+ 0002:4174       ??_7CMemoryException@@6F@
+ 0002:4676       ??_7CMenu@@6F@
+ 0002:4188       ??_7CNotSupportedException@@6F@
+ 0002:1CF4       ??_7CObject@@6F@
+ 0002:45D2       ??_7CPaintDC@@6F@
+ 0002:444A       ??_7CPen@@6F@
+ 0002:419C       ??_7CPtrList@@6F@
+ 0002:464E       ??_7CResourceException@@6F@
+ 0002:40B8       ??_7CRgn@@6F@
+ 0002:43DE       ??_7CScrollBar@@6F@
+ 0002:2D20       ??_7CSelectMBoot@@6F@
+ 0002:2B34       ??_7CSelectMode@@6F@
+ 0002:3F36       ??_7CSplashBtn@@6F@
+ 0002:3FBA       ??_7CSplashDlg@@6F@
+ 0002:4306       ??_7CStatic@@6F@
+ 0002:3D26       ??_7CSummary@@6F@
+ 0002:4662       ??_7CUserException@@6F@
+ 0002:2DA0       ??_7CWelcome@@6F@
+ 0002:46D4       ??_7CWinApp@@6F@
+ 0002:4556       ??_7CWindowDC@@6F@
+ 0002:1C84       ??_7CWinmxmzApp@@6F@
+ 0002:41DC       ??_7CWnd@@6F@
+ 0001:2406       ??_9@$BHI@H
+ 0001:23F8       ??_9@$BHM@H
+ 0002:17BC       ??_C@_00A@?$AA@
+ 0002:3CD0       ??_C@_01FCOA@?5?$AA@
+ 0002:3BB2       ??_C@_01KMAE@?0?$AA@
+ 0002:19FC       ??_C@_01LHO@r?$AA@
+ 0002:197E       ??_C@_01LLF@w?$AA@
+ 0002:4692       ??_C@_01PBLD@M?$AA@
+ 0002:4744       ??_C@_01PFH@A?$AA@
+ 0002:3BC4       ??_C@_02BDPP@0?0?$AA@
+ 0002:3CDA       ??_C@_02DILL@?$CFs?$AA@
+ 0002:1B28       ??_C@_02FKLM@?1I?$AA@
+ 0002:3BAA       ??_C@_02IAAH@wt?$AA@
+ 0002:193E       ??_C@_02JDLK@?$CFx?$AA@
+ 0002:1C06       ??_C@_02KEFI@?1E?$AA@
+ 0002:42CC       ??_C@_02MECO@?$CFd?$AA@
+ 0002:42C8       ??_C@_02MHMJ@?$CFu?$AA@
+ 0002:18CC       ??_C@_02MMAH@rt?$AA@
+ 0002:1C02       ??_C@_02NCI@?1U?$AA@
+ 0002:2A62       ??_C@_03BIAB@?5?7?4?$AA@
+ 0002:1980       ??_C@_03HHKO@?$CFs?6?$AA@
+ 0002:3CCC       ??_C@_03HKGO@?5?$CFs?$AA@
+ 0002:3BAE       ??_C@_03JFOM@?$CFld?$AA@
+ 0002:42D0       ??_C@_03JGAL@?$CFlu?$AA@
+ 0002:193A       ??_C@_03OAHE@USE?$AA@
+ 0002:1942       ??_C@_03OKGP@BCF?$AA@
+ 0002:2A5C       ??_C@_04FKLJ@menu?$AA@
+ 0002:3CA0       ??_C@_04FMPP@NLow?$AA@
+ 0002:42F6       ??_C@_04IGNI@EDIT?$AA@
+ 0002:192C       ??_C@_04JACD@?5?7?$AN?6?$AA@
+ 0002:3B9A       ??_C@_04JPDN@?4?$CG?$CB?$CD?$AA@
+ 0002:1B22       ??_C@_04KBDN@?4bat?$AA@
+ 0002:3BBE       ??_C@_04KGMK@Intl?$AA@
+ 0002:1C1C       ??_C@_04OKAH@?5?1O?5?$AA@
+ 0002:1926       ??_C@_04ONML@pro?$DN?$AA@
+ 0002:3CC6       ??_C@_05BFDG@?0?5?7?$AN?6?$AA@
+ 0002:1B46       ??_C@_05BHI@?1X?5?1P?$AA@
+ 0002:1900       ??_C@_05BKOM@?5?7?$DN?$AN?6?$AA@
+ 0002:3BE0       ??_C@_05GJJA@?5?7?0?$AN?6?$AA@
+ 0002:1AA0       ??_C@_05IOCF@?1c?5?$CFs?$AA@
+ 0002:1A86       ??_C@_05JGDE@?3end?6?$AA@
+ 0002:18D0       ??_C@_05LGHD@?5?7?$AN?6?$DN?$AA@
+ 0002:3C0A       ??_C@_05LIKG@Reg?$CFd?$AA@
+ 0002:3C9A       ??_C@_05OFC@NHigh?$AA@
+ 0002:1BFA       ??_C@_06CMKJ@Remove?$AA@
+ 0002:19B8       ??_C@_06EFAM@?$CFs?5?$CFs?6?$AA@
+ 0002:42DC       ??_C@_06GACA@BUTTON?$AA@
+ 0002:41C4       ??_C@_06HFGD@Afx?3?$CFx?$AA@
+ 0002:1AC0       ??_C@_06IPDH@CONFIG?$AA@
+ 0002:1AC8       ??_C@_06JLAI@Custom?$AA@
+ 0002:42D4       ??_C@_06MJBA@STATIC?$AA@
+ 0002:191E       ??_C@_06NABE@common?$AA@
+ 0002:1C14       ??_C@_06NKMH@?5?1A?5?$CFs?$AA@
+ 0002:1AEC       ??_C@_07CJDO@VGAswap?$AA@
+ 0002:3CBE       ??_C@_07CJEA@Hiseg?$CFd?$AA@
+ 0002:3B92       ??_C@_07DPJH@Summary?$AA@
+ 0002:42E4       ??_C@_07EDJC@LISTBOX?$AA@
+ 0002:1932       ??_C@_07EGBL@VGASWAP?$AA@
+ 0002:3CD2       ??_C@_07FDCG@?7?7?7?7?7?7?7?$AA@
+ 0002:1946       ??_C@_07JPIG@AUTOBCF?$AA@
+ 0002:1A8C       ??_C@_07KFDO@COMSPEC?$AA@
+ 0002:1BF2       ??_C@_07LKD@UseHigh?$AA@
+ 0002:1AE4       ??_C@_07NPEF@ROMSrch?$AA@
+ 0002:3D1E       ??_C@_07OONG@Loseg?$CFd?$AA@
+ 0002:1AD0       ??_C@_08COGH@Defaults?$AA@
+ 0002:18F6       ??_C@_08DAPH@?1dev?1nul?$AA@
+ 0002:1ADA       ??_C@_08DDHH@DOSStart?$AA@
+ 0002:1B2C       ??_C@_08FBEM@?1summary?$AA@
+ 0002:3BA0       ??_C@_08FPNN@?$CF?$CFrmln?$EA?$EA?$AA@
+ 0002:42EC       ??_C@_08HEN@COMBOBOX?$AA@
+ 0002:1AF4       ??_C@_08INLM@ExtraDOS?$AA@
+ 0002:1C0A       ??_C@_08PBKI@?1X?5?1V?5?$CFs?$AA@
+ 0002:3C10       ??_C@_09BCEH@HighParas?$AA@
+ 0002:3BB4       ??_C@_09BEPN@sThousand?$AA@
+ 0002:3CB4       ??_C@_09EBMM@?5?5?5?5Total?$AA@
+ 0002:3C00       ??_C@_09HLAO@NHighRegs?$AA@
+ 0002:1990       ??_C@_09HNGK@?$CFsBATPROC?$AA@
+ 0002:18D6       ??_C@_09KFMA@NOROMSRCH?$AA@
+ 0002:42FC       ??_C@_09LIFG@SCROLLBAR?$AA@
+ 0002:18E0       ??_C@_09PJPJ@NOVGASWAP?$AA@
+ 0002:41CC       ??_C@_0BA@GHAD@Afx?3?$CFx?3?$CFx?3?$CFx?3?$CFx?$AA@
+ 0002:1C2E       ??_C@_0BA@MDBB@Current?5Section?$AA@
+ 0002:17BE       ??_C@_0BAA@OJJ@?$EAecho?5off?6echo?5off?6echo?5?M?M?M?M?M?M?M?M@
+ 0002:1A0E       ??_C@_0BE@CEHG@?$EAecho?5off?6echo?5off?6?$AA@
+ 0002:1A22       ??_C@_0BE@CJJL@?$CFFsmaximize?4exe?5?1r?6?$AA@
+ 0002:3CDE       ??_C@_0BJ@FFDO@No?5programs?5selected?5for?$AA@
+ 0002:1A6C       ??_C@_0BJ@FGBB@copy?5?$CFFsAUTO_WMX?4$$$?5?$CFs?6?$AA@
+ 0002:3CF8       ??_C@_0BJ@LNNJ@processing?5remain?5in?5low?$AA@
+ 0002:199A       ??_C@_0BO@LJGH@?$CFs?5?$CFs?5?$CK?5386LOAD?5Maximize?4trm?6?$AA@
+ 0002:3C76       ??_C@_0CE@DDFI@Total?5Free?5Conventional?5Memory?5?$CF@
+ 0002:1AFE       ??_C@_0CE@JGGJ@You?5must?5first?5install?5Qualitas?5@
+ 0002:2A8E       ??_C@_0CG@ILJE@You?5must?5select?5a?5MultiConfig?5se@
+ 0002:3C1A       ??_C@_0CH@PKFO@Maximize?5has?5moved?5?$CFdKB?5into?5hig@
+ 0002:2A66       ??_C@_0CI@EINK@Invalid?5section?5?$FL?$CFs?$FN?5?9?5please?5tr@
+ 0002:19CE       ??_C@_0CO@CLNF@?$FLmenu?$FN?6MenuItem?$DN?$CFs?6MenuDefault?$DN?$CF@
+ 0002:3C42       ??_C@_0DD@HEAK@You?5have?5?$CFdKB?5of?5unused?5high?5DOS@
+ 0002:1A36       ??_C@_0DG@FFKG@if?5not?5errorlevel?55?5goto?5end?6cop@
+ 0002:1BB0       ??_C@_0EC@KJPH@You?5must?5first?5install?5Qualitas?5@
+ 0002:1C3E       ??_C@_0EG@BPCJ@Unable?5to?5exit?5Windows?4?5?5Please?5@
+ 0002:1B4C       ??_C@_0GD@GNDI@Unable?5to?5exit?5Windows?5to?5restor@
+ 0002:18EA       ??_C@_0L@CEFL@NOEXTRADOS?$AA@
+ 0002:1906       ??_C@_0L@FEPG@386max?4sys?$AA@
+ 0002:1C22       ??_C@_0L@HAM@StartupBat?$AA@
+ 0002:3BC8       ??_C@_0L@JMON@RemoveLine?$AA@
+ 0002:3BF4       ??_C@_0L@MICA@RemoveMenu?$AA@
+ 0002:3D12       ??_C@_0M@FKCD@DOS?5memory?4?$AA@
+ 0002:1AB4       ??_C@_0M@IMJP@MAXHELP?4HLP?$AA@
+ 0002:1A94       ??_C@_0M@IPJP@command?4com?$AA@
+ 0002:1912       ??_C@_0M@LEBH@bluemax?4sys?$AA@
+ 0002:3BD4       ??_C@_0M@MBDK@Last?5Action?$AA@
+ 0002:1984       ??_C@_0M@PJOO@copy?5?$CFs?5?$CFs?6?$AA@
+ 0002:1AA6       ??_C@_0N@NNAD@MAXIMIZE?4INI?$AA@
+ 0002:18BE       ??_C@_0N@PHAF@MAXIMIZE?4CFG?$AA@
+ 0002:3CA6       ??_C@_0O@CENE@?5Name?7?7?7bytes?$AA@
+ 0002:3BE6       ??_C@_0O@LLNK@REM?5winmaxim?$HO?$AA@
+ 0002:19C0       ??_C@_0O@MLMC@?$CFsCFG_SYS?4$$$?$AA@
+ 0002:1B36       ??_C@_0P@FOMI@?$CFsMAXIMIZE?4EXE?$AA@
+ 0002:195E       ??_C@_0P@GFPB@?$CFsAUTO_WMX?4cfg?$AA@
+ 0002:196E       ??_C@_0P@HL@?$CFsAUTO_WMX?4bat?$AA@
+ 0002:194E       ??_C@_0P@IDLD@?$CFsAUTO_WMX?4$$$?$AA@
+ 0002:19FE       ??_C@_0P@NBCF@?$CFs_MXIMIZE?4BAT?$AA@
+ 0002:3E88       ??_GCBitmap@@VECPEXI@Z
+ 0002:408E       ??_GCBlue@@VECPEXI@Z
+ 0002:403A       ??_GCBrush@@VECPEXI@Z
+ 0002:28CE       ??_GCButton@@VECPEXI@Z
+ 0001:9588       ??_GCClientDC@@VECPEXI@Z
+ 0001:6B14       ??_GCCmdTarget@@VECPEXI@Z
+ 0002:28FA       ??_GCComboBox@@VECPEXI@Z
+ 0002:2926       ??_GCCustomOpts@@VECPEXI@Z
+ 0001:955C       ??_GCDC@@VECPEXI@Z
+ 0001:4E24       ??_GCDialog@@VECPEXI@Z
+ 0001:87DC       ??_GCEdit@@VECPEXI@Z
+ 0002:2952       ??_GCEndPhase1@@VECPEXI@Z
+ 0001:65FE       ??_GCException@@VECPEXI@Z
+ 0002:2A30       ??_GCExit@@VECPEXI@Z
+ 0002:1746       ??_GCFont@@VECPEXI@Z
+ 0002:171A       ??_GCGdiObject@@VECPEXI@Z
+ 0002:3B3A       ??_GCListBox@@VECPEXI@Z
+ 0001:765C       ??_GCMapWordToPtr@@VECPEXI@Z
+ 0001:659A       ??_GCMemoryException@@VECPEXI@Z
+ 0001:501E       ??_GCMenu@@VECPEXI@Z
+ 0001:65CC       ??_GCNotSupportedException@@VECPEXI@Z
+ 0002:16E8       ??_GCObject@@VECPEXI@Z
+ 0001:95E0       ??_GCPaintDC@@VECPEXI@Z
+ 0001:9530       ??_GCPen@@VECPEXI@Z
+ 0001:6266       ??_GCPtrList@@VECPEXI@Z
+ 0001:94CC       ??_GCResourceException@@VECPEXI@Z
+ 0002:4064       ??_GCRgn@@VECPEXI@Z
+ 0001:8808       ??_GCScrollBar@@VECPEXI@Z
+ 0002:297E       ??_GCSelectMBoot@@VECPEXI@Z
+ 0002:29D8       ??_GCSelectMode@@VECPEXI@Z
+ 0002:3EFC       ??_GCSplashBtn@@VECPEXI@Z
+ 0002:3EB2       ??_GCSplashDlg@@VECPEXI@Z
+ 0001:87B0       ??_GCStatic@@VECPEXI@Z
+ 0002:3B66       ??_GCSummary@@VECPEXI@Z
+ 0001:94FE       ??_GCUserException@@VECPEXI@Z
+ 0002:2A04       ??_GCWelcome@@VECPEXI@Z
+ 0001:5D68       ??_GCWinApp@@VECPEXI@Z
+ 0001:95B4       ??_GCWindowDC@@VECPEXI@Z
+ 0002:1772       ??_GCWinmxmzApp@@VECPEXI@Z
+ 0001:4328       ??_GCWnd@@VECPEXI@Z
+ 0001:D684       ??_I@ZCXPEXIHP7CX0@Z@Z
+ 0000:0000  Unr  ?AbortDoc@CDC@@RECHXZ
+ 0000:0000  Unr  ?AddDocTemplate@CWinApp@@RECXPEVCDocTemplate@@@Z
+ 0001:6104       ?AddHead@CPtrList@@RECPEXPEX@Z
+ 0000:0000  Unr  ?AddHead@CPtrList@@RECXPEV1@@Z
+ 0001:617A       ?AddTail@CPtrList@@RECPEXPEX@Z
+ 0000:0000  Unr  ?AddTail@CPtrList@@RECXPEV1@@Z
+ 0001:7F64       ?AddToRecentFileList@CWinApp@@VECXPFD@Z
+ 0001:6630       ?AfxAbort@@ZCXXZ
+ 0001:63D8       ?AfxCatchProc@@ZCHPEUCRuntimeClass@@@Z
+ 0001:9762       ?AfxCriticalNewHandler@@ZAHI@Z
+ 0004:166E       ?afxData@@3UAUX_DATA@@A
+ 0004:058E       ?afxDlgBkBrush@@3PBUHBRUSH__@@B
+ 0004:0590       ?afxDlgTextClr@@3KA
+ 0004:0C8E       ?afxEmptyString@@3VCString@@B
+ 0000:0000  Unr  ?AfxExtractSubString@@ZCHAEVCString@@PFDHD@Z
+ 0001:8378       ?AfxFormatString1@@ZCXAEVCString@@IPFD@Z
+ 0001:8394       ?AfxFormatString2@@ZCXAEVCString@@IPFD1@Z
+ 0001:8218       ?AfxFormatStrings@@ZCXAEVCString@@IPEPFDH@Z
+ 0001:824C       ?AfxFormatStrings@@ZCXAEVCString@@PFDPEPFDH@Z
+ 0001:7ED4       ?AfxMessageBox@@ZCHIII@Z
+ 0001:7EA8       ?AfxMessageBox@@ZCHPFDII@Z
+ 0001:2842       ?AfxNewHandler@@ZAHI@Z
+ 0000:0000  Unr  ?AfxOleCanExitApp@@ZCHXZ
+ 0001:8834       ?AfxOleGetUserCtrl@@ZCHXZ
+ 0000:0000  Unr  ?AfxOleSetUserCtrl@@ZCXH@Z
+ 0000:0000  Unr  ?AfxRegisterWndClass@@ZCPFDIPBUHICON__@@PBUHBRUSH__@@0@Z
+ 0001:37FE       ?AfxResetMsgCache@@ZCXXZ
+ 0000:0000  Unr  ?AfxSetTerminate@@ZCP7CXXZP7CXXZ@Z
+ 0001:64BA       ?AfxTerminate@@ZCXXZ
+ 0001:63F4       ?AfxThrow@@ZCXPEVCException@@H@Z
+ 0000:0000  Unr  ?AfxThrowLast@@ZCXXZ
+ 0001:64FC       ?AfxThrowMemoryException@@ZCXXZ
+ 0001:6544       ?AfxThrowNotSupportedException@@ZCXXZ
+ 0001:899E       ?AfxThrowResourceException@@ZCXXZ
+ 0001:89E6       ?AfxThrowUserException@@ZCXXZ
+ 0001:6390       ?AfxTryCleanupProc@@ZCXXZ
+ 0001:4354       ?AfxUnlockTempMaps@@ZCHXZ
+ 0001:2F90       ?AfxWndProc@@ZCJPBUHWND__@@IIJ@Z
+ 0001:290C       ?AllocBuffer@CString@@JECXH@Z
+ 0001:2992       ?AllocCopy@CString@@JFCXAEV1@HHH@Z
+ 0000:0000  Unr  ?AnsiToOem@CString@@RECXXZ
+ 0001:2750       ?AssertValid@CObject@@VFCXXZ
+ 0001:2A50       ?AssignCopy@CString@@JECXHPFD@Z
+ 0001:8A7E       ?Attach@CDC@@RECHPBUHDC__@@@Z
+ 0001:92DC       ?Attach@CGdiObject@@RECHPBX@Z
+ 0000:0000  Unr  ?Attach@CMenu@@RECHPBUHMENU__@@@Z
+ 0001:2F26       ?Attach@CWnd@@RECHPBUHWND__@@@Z
+ 0001:52BC       ?BeginWaitCursor@CCmdTarget@@RECXXZ
+ 0001:3FA0       ?CalcWindowRect@CWnd@@VECXPEUtagRECT@@I@Z
+ 0002:0298       ?CBfn@CConfigParse@@RECHPEU_ConfigLine@@@Z
+ 0002:00A4       ?CBSummWnd@@ZCPEVCWnd@@XZ
+ 0002:023C       ?CConfigParse_CBfn@@ZAHPEU_ConfigLine@@@Z
+ 0001:20B8       ?CenterDialog@@ZAXPEVCWnd@@@Z
+ 0000:0000  Unr  ?CenterWindow@CWnd@@RECXPEV1@@Z
+ 0004:04E0       ?classCBitmap@CBitmap@@2UCRuntimeClass@@A
+ 0004:04B8       ?classCBrush@CBrush@@2UCRuntimeClass@@A
+ 0004:03B4       ?classCButton@CButton@@2UCRuntimeClass@@A
+ 0004:0454       ?classCClientDC@CClientDC@@2UCRuntimeClass@@A
+ 0004:0530       ?classCCmdTarget@CCmdTarget@@2UCRuntimeClass@@A
+ 0004:03DC       ?classCComboBox@CComboBox@@2UCRuntimeClass@@A
+ 0004:0440       ?classCDC@CDC@@2UCRuntimeClass@@A
+ 0004:0386       ?classCDialog@CDialog@@2UCRuntimeClass@@A
+ 0004:03F0       ?classCEdit@CEdit@@2UCRuntimeClass@@A
+ 0004:02F0       ?classCException@CException@@2UCRuntimeClass@@A
+ 0004:04CC       ?classCFont@CFont@@2UCRuntimeClass@@A
+ 0004:0490       ?classCGdiObject@CGdiObject@@2UCRuntimeClass@@A
+ 0004:03C8       ?classCListBox@CListBox@@2UCRuntimeClass@@A
+ 0004:0344       ?classCMapWordToPtr@CMapWordToPtr@@2UCRuntimeClass@@A
+ 0004:0308       ?classCMemoryException@CMemoryException@@2UCRuntimeClass@@A
+ 0004:051C       ?classCMenu@CMenu@@2UCRuntimeClass@@A
+ 0004:031C       ?classCNotSupportedException@CNotSupportedException@@2UCRuntimeClass@@A
+ 0004:02D8       ?classCObject@CObject@@2UCRuntimeClass@@A
+ 0004:047C       ?classCPaintDC@CPaintDC@@2UCRuntimeClass@@A
+ 0004:04F4       ?classCPalette@CPalette@@2UCRuntimeClass@@A
+ 0004:04A4       ?classCPen@CPen@@2UCRuntimeClass@@A
+ 0004:0330       ?classCPtrList@CPtrList@@2UCRuntimeClass@@A
+ 0004:0418       ?classCResourceException@CResourceException@@2UCRuntimeClass@@A
+ 0004:0508       ?classCRgn@CRgn@@2UCRuntimeClass@@A
+ 0004:0404       ?classCScrollBar@CScrollBar@@2UCRuntimeClass@@A
+ 0004:03A0       ?classCStatic@CStatic@@2UCRuntimeClass@@A
+ 0004:042C       ?classCUserException@CUserException@@2UCRuntimeClass@@A
+ 0004:054E       ?classCWinApp@CWinApp@@2UCRuntimeClass@@A
+ 0004:0468       ?classCWindowDC@CWindowDC@@2UCRuntimeClass@@A
+ 0004:036A       ?classCWnd@CWnd@@2UCRuntimeClass@@A
+ 0000:0000  Unr  ?CloseAllDocuments@CWinApp@@RECXH@Z
+ 0001:8606       ?CompareItem@CComboBox@@VECHPEUtagCOMPAREITEMSTRUCT@@@Z
+ 0001:8516       ?CompareItem@CListBox@@VECHPEUtagCOMPAREITEMSTRUCT@@@Z
+ 0001:2B16       ?ConcatCopy@CString@@JECXHPFDH0@Z
+ 0001:663C       ?ConcatInPlace@CString@@JECXHPFD@Z
+ 0001:89F2       ?Construct@CDC@@TCXPEX@Z
+ 0001:926C       ?Construct@CGdiObject@@TCXPEX@Z
+ 0001:4F18       ?Construct@CMenu@@TCXPEX@Z
+ 0001:378A       ?Construct@CWnd@@TCXPEX@Z
+ 0001:27F0       ?ConstructObject@CRuntimeClass@@RECHPEX@Z
+ 0000:0000  Unr  ?Create@CButton@@RECHPFDKAFUtagRECT@@PEVCWnd@@I@Z
+ 0000:0000  Unr  ?Create@CComboBox@@RECHKAFUtagRECT@@PEVCWnd@@I@Z
+ 0001:495E       ?Create@CDialog@@JECHPFDPEVCWnd@@@Z
+ 0000:0000  Unr  ?Create@CEdit@@RECHKAFUtagRECT@@PEVCWnd@@I@Z
+ 0000:0000  Unr  ?Create@CListBox@@RECHKAFUtagRECT@@PEVCWnd@@I@Z
+ 0001:6292       ?Create@CPlex@@TCPEU1@AEPEU1@II@Z
+ 0000:0000  Unr  ?Create@CScrollBar@@RECHKAFUtagRECT@@PEVCWnd@@I@Z
+ 0000:0000  Unr  ?Create@CStatic@@RECHPFDKAFUtagRECT@@PEVCWnd@@I@Z
+ 0001:324E       ?Create@CWnd@@VECHPFD0KAFUtagRECT@@PEV1@IPEUCCreateContext@@@Z
+ 0001:312C       ?CreateEx@CWnd@@JECHKPFD0KHHHHPBUHWND__@@PBUHMENU__@@PED@Z
+ 0000:0000  Unr  ?CreateIndirect@CDialog@@JECHPFXPEVCWnd@@@Z
+ 0001:2758       ?CreateObject@CRuntimeClass@@RECPEVCObject@@XZ
+ 0003:0000       ?csMaxDir@@3VCString@@E
+ 0001:7AEA       ?DDV_MaxChars@@ZCXPAVCDataExchange@@AFVCString@@H@Z
+ 0000:0000  Unr  ?DDV_MinMaxByte@@ZCXPAVCDataExchange@@EEE@Z
+ 0000:0000  Unr  ?DDV_MinMaxDWord@@ZCXPAVCDataExchange@@KKK@Z
+ 0000:0000  Unr  ?DDV_MinMaxInt@@ZCXPAVCDataExchange@@HHH@Z
+ 0000:0000  Unr  ?DDV_MinMaxLong@@ZCXPAVCDataExchange@@JJJ@Z
+ 0000:0000  Unr  ?DDV_MinMaxUInt@@ZCXPAVCDataExchange@@III@Z
+ 0000:0000  Unr  ?DDX_CBIndex@@ZCXPAVCDataExchange@@HAEH@Z
+ 0001:79A8       ?DDX_CBString@@ZCXPAVCDataExchange@@HAEVCString@@@Z
+ 0000:0000  Unr  ?DDX_CBStringExact@@ZCXPAVCDataExchange@@HAEVCString@@@Z
+ 0001:78CE       ?DDX_Check@@ZCXPAVCDataExchange@@HAEH@Z
+ 0001:7B62       ?DDX_Control@@ZCXPAVCDataExchange@@HAEVCWnd@@@Z
+ 0000:0000  Unr  ?DDX_LBIndex@@ZCXPAVCDataExchange@@HAEH@Z
+ 0001:792C       ?DDX_LBString@@ZCXPAVCDataExchange@@HAEVCString@@@Z
+ 0000:0000  Unr  ?DDX_LBStringExact@@ZCXPAVCDataExchange@@HAEVCString@@@Z
+ 0000:0000  Unr  ?DDX_Radio@@ZCXPAVCDataExchange@@HAEH@Z
+ 0000:0000  Unr  ?DDX_Text@@ZCXPAVCDataExchange@@HAEE@Z
+ 0000:0000  Unr  ?DDX_Text@@ZCXPAVCDataExchange@@HAEH@Z
+ 0000:0000  Unr  ?DDX_Text@@ZCXPAVCDataExchange@@HAEI@Z
+ 0000:0000  Unr  ?DDX_Text@@ZCXPAVCDataExchange@@HAEJ@Z
+ 0000:0000  Unr  ?DDX_Text@@ZCXPAVCDataExchange@@HAEK@Z
+ 0001:787C       ?DDX_Text@@ZCXPAVCDataExchange@@HAEVCString@@@Z
+ 0001:2EA8       ?Default@CWnd@@JECJXZ
+ 0001:3436       ?DefWindowProc@CWnd@@NECJIIJ@Z
+ 0000:0000  Unr  ?DeleteDC@CDC@@RECHXZ
+ 0001:860C       ?DeleteItem@CComboBox@@VECXPEUtagDELETEITEMSTRUCT@@@Z
+ 0001:851C       ?DeleteItem@CListBox@@VECXPEUtagDELETEITEMSTRUCT@@@Z
+ 0001:9346       ?DeleteObject@CGdiObject@@RECHXZ
+ 0001:45DC       ?DeleteTemp@CHandleMap@@RACXXZ
+ 0001:8A62       ?DeleteTempMap@CDC@@TCXXZ
+ 0001:92C0       ?DeleteTempMap@CGdiObject@@TCXXZ
+ 0001:4EFC       ?DeleteTempMap@CMenu@@TCXXZ
+ 0001:2EE4       ?DeleteTempMap@CWnd@@TCXXZ
+ 0001:4FBA       ?DestroyMenu@CMenu@@RECHXZ
+ 0001:33E8       ?DestroyWindow@CWnd@@VECHXZ
+ 0001:8AC8       ?Detach@CDC@@RECPBUHDC__@@XZ
+ 0001:9316       ?Detach@CGdiObject@@RECPBXXZ
+ 0001:4F5A       ?Detach@CMenu@@RECPBUHMENU__@@XZ
+ 0001:2F60       ?Detach@CWnd@@RECPBUHWND__@@XZ
+ 0001:2673       ?dispatchMap@CCmdTarget@@1UAFX_DISPMAP@@E
+ 0001:21DA       ?DoDataExchange@CBlue@@NECXPAVCDataExchange@@@Z
+ 0002:1E6E       ?DoDataExchange@CCustomOpts@@NECXPAVCDataExchange@@@Z
+ 0002:217A       ?DoDataExchange@CEndPhase1@@NECXPAVCDataExchange@@@Z
+ 0002:2760       ?DoDataExchange@CExit@@NECXPAVCDataExchange@@@Z
+ 0002:2408       ?DoDataExchange@CSelectMBoot@@NECXPAVCDataExchange@@@Z
+ 0002:2632       ?DoDataExchange@CSelectMode@@NECXPAVCDataExchange@@@Z
+ 0001:1E7E       ?DoDataExchange@CSplashDlg@@NECXPAVCDataExchange@@@Z
+ 0002:2F90       ?DoDataExchange@CSummary@@NECXPAVCDataExchange@@@Z
+ 0002:2670       ?DoDataExchange@CWelcome@@NECXPAVCDataExchange@@@Z
+ 0002:28CA       ?DoDataExchange@CWnd@@NECXPAVCDataExchange@@@Z
+ 0001:7DA4       ?DoMessageBox@CWinApp@@VECHPFDII@Z
+ 0001:4B06       ?DoModal@CDialog@@VECHXZ
+ 0001:559A       ?DoUpdate@CCmdUI@@RECXPEVCCmdTarget@@H@Z
+ 0001:7C84       ?DoWaitCursor@CWinApp@@VECXH@Z
+ 0000:0000  Unr  ?DPtoLP@CDC@@RFCXPEUtagSIZE@@@Z
+ 0001:8492       ?DrawItem@CButton@@VECXPEUtagDRAWITEMSTRUCT@@@Z
+ 0001:85FE       ?DrawItem@CComboBox@@VECXPEUtagDRAWITEMSTRUCT@@@Z
+ 0001:850E       ?DrawItem@CListBox@@VECXPEUtagDRAWITEMSTRUCT@@@Z
+ 0001:4FE2       ?DrawItem@CMenu@@VECXPEUtagDRAWITEMSTRUCT@@@Z
+ 0001:1EA2       ?DrawItem@CSplashBtn@@VECXPEUtagDRAWITEMSTRUCT@@@Z
+ 0001:24DE       ?DrawText@CDC@@VECHPFDHPEUtagRECT@@I@Z
+ 0001:2754       ?Dump@CObject@@VFCXAEVCDumpContext@@@Z
+ 0001:2954       ?Empty@CString@@RECXXZ
+ 0001:5382       ?Enable@CCmdUI@@VECXH@Z
+ 0001:7D46       ?EnableModeless@CWinApp@@RECXH@Z
+ 0001:3E6C       ?EnableScrollBarCtrl@CWnd@@RECXHH@Z
+ 0000:0000  Unr  ?EndDoc@CDC@@RECHXZ
+ 0000:0000  Unr  ?EndPage@CDC@@RECHXZ
+ 0001:52CE       ?EndWaitCursor@CCmdTarget@@RECXXZ
+ 0001:254C       ?Escape@CDC@@VECHHHPFDPEX@Z
+ 0000:0000  Unr  ?ExcludeClipRect@CDC@@RECHHHHH@Z
+ 0000:0000  Unr  ?ExcludeClipRect@CDC@@RECHPFUtagRECT@@@Z
+ 0001:41BE       ?ExecuteDlgInit@CWnd@@RECHPFD@Z
+ 0001:6C3A       ?ExitInstance@CWinApp@@VECHXZ
+ 0002:13D2       ?ExitInstance@CWinmxmzApp@@VECHXZ
+ 0001:246A       ?ExtTextOut@CDC@@VECHHHIPFUtagRECT@@PFDIPEH@Z
+ 0001:76DE       ?Fail@CDataExchange@@RACXXZ
+ 0000:0000  Unr  ?Find@CPtrList@@RFCPEXPEX0@Z
+ 0000:0000  Unr  ?Find@CString@@RFCHD@Z
+ 0000:0000  Unr  ?FindIndex@CPtrList@@RFCPEXH@Z
+ 0000:0000  Unr  ?FindOneOf@CString@@RFCHPFD@Z
+ 0002:31EA       ?FmtNum@@ZAXDJPED@Z
+ 0001:7354       ?FreeAssoc@CMapWordToPtr@@JECXPEUCAssoc@1@@Z
+ 0001:62E2       ?FreeDataChain@CPlex@@RECXXZ
+ 0001:60CE       ?FreeNode@CPtrList@@JECXPEUCNode@1@@Z
+ 0001:8A6C       ?FromHandle@CDC@@TCPEV1@PBUHDC__@@@Z
+ 0001:92CA       ?FromHandle@CGdiObject@@TCPEV1@PBX@Z
+ 0001:44FC       ?FromHandle@CHandleMap@@RACPEVCObject@@PBX@Z
+ 0001:4F06       ?FromHandle@CMenu@@TCPEV1@PBUHMENU__@@@Z
+ 0001:2EEE       ?FromHandle@CWnd@@TCPEV1@PBUHWND__@@@Z
+ 0001:2F00       ?FromHandlePermanent@CWnd@@TCPEV1@PBUHWND__@@@Z
+ 0001:738A       ?GetAssocAt@CMapWordToPtr@@JFCPEUCAssoc@1@GAEI@Z
+ 0001:2B78       ?GetBuffer@CString@@RECPEDH@Z
+ 0001:2C22       ?GetBufferSetLength@CString@@RECPEDH@Z
+ 0000:0000  Unr  ?GetCheckedRadioButton@CWnd@@RECHHH@Z
+ 0001:9116       ?GetClipBox@CDC@@VFCHPEUtagRECT@@@Z
+ 0000:0000  Unr  ?GetCurrentMessage@CWnd@@LCPFUtagMSG@@XZ
+ 0001:3D4E       ?GetDescendantWindow@CWnd@@TCPEV1@PBUHWND__@@HH@Z
+ 0001:52E6       ?GetDispatchMap@CCmdTarget@@NFCPEUAFX_DISPMAP@@XZ
+ 0001:532A       ?GetInterfaceHook@CCmdTarget@@VECPEUIUnknown@@PFX@Z
+ 0001:52F0       ?GetInterfaceMap@CCmdTarget@@NFCPEUAFX_INTERFACEMAP@@XZ
+ 0001:5D3C       ?GetMainWnd@CWinApp@@VECPEVCWnd@@XZ
+ 0001:21DE       ?GetMessageMap@CBlue@@NFCPAUAFX_MSGMAP@@XZ
+ 0001:52E0       ?GetMessageMap@CCmdTarget@@NFCPAUAFX_MSGMAP@@XZ
+ 0002:1F60       ?GetMessageMap@CCustomOpts@@NFCPAUAFX_MSGMAP@@XZ
+ 0001:4806       ?GetMessageMap@CDialog@@NFCPAUAFX_MSGMAP@@XZ
+ 0002:217E       ?GetMessageMap@CEndPhase1@@NFCPAUAFX_MSGMAP@@XZ
+ 0002:2764       ?GetMessageMap@CExit@@NFCPAUAFX_MSGMAP@@XZ
+ 0002:245A       ?GetMessageMap@CSelectMBoot@@NFCPAUAFX_MSGMAP@@XZ
+ 0002:2636       ?GetMessageMap@CSelectMode@@NFCPAUAFX_MSGMAP@@XZ
+ 0001:1E9C       ?GetMessageMap@CSplashDlg@@NFCPAUAFX_MSGMAP@@XZ
+ 0002:300A       ?GetMessageMap@CSummary@@NFCPAUAFX_MSGMAP@@XZ
+ 0002:2674       ?GetMessageMap@CWelcome@@NFCPAUAFX_MSGMAP@@XZ
+ 0001:97F8       ?GetMessageMap@CWinApp@@NFCPAUAFX_MSGMAP@@XZ
+ 0002:0000       ?GetMessageMap@CWinmxmzApp@@NFCPAUAFX_MSGMAP@@XZ
+ 0001:37BE       ?GetMessageMap@CWnd@@NFCPAUAFX_MSGMAP@@XZ
+ 0001:757E       ?GetNextAssoc@CMapWordToPtr@@RFCXAEPEXAEG0@Z
+ 0000:0000  Unr  ?GetOpenDocumentCount@CWinApp@@RECHXZ
+ 0001:3C26       ?GetParentFrame@CWnd@@RFCPEVCFrameWnd@@XZ
+ 0002:3042       ?GetPInt@CSummary@@RECHPFDH@Z
+ 0001:812C       ?GetProfileInt@CWinApp@@RECIPFD0H@Z
+ 0001:8192       ?GetProfileString@CWinApp@@REC?EVCString@@PFD00@Z
+ 0002:3010       ?GetPString@CSummary@@REC?EVCString@@PFD0@Z
+ 0000:0000  Unr  ?GetRoutingView@CCmdTarget@@JECPEVCView@@XZ
+ 0001:93EE       ?GetRuntimeClass@CBitmap@@VFCPEUCRuntimeClass@@XZ
+ 0001:93C2       ?GetRuntimeClass@CBrush@@VFCPEUCRuntimeClass@@XZ
+ 0001:8456       ?GetRuntimeClass@CButton@@VFCPEUCRuntimeClass@@XZ
+ 0001:913E       ?GetRuntimeClass@CClientDC@@VFCPEUCRuntimeClass@@XZ
+ 0001:5058       ?GetRuntimeClass@CCmdTarget@@VFCPEUCRuntimeClass@@XZ
+ 0001:85C2       ?GetRuntimeClass@CComboBox@@VFCPEUCRuntimeClass@@XZ
+ 0001:8A1E       ?GetRuntimeClass@CDC@@VFCPEUCRuntimeClass@@XZ
+ 0001:47FE       ?GetRuntimeClass@CDialog@@VFCPEUCRuntimeClass@@XZ
+ 0001:86B2       ?GetRuntimeClass@CEdit@@VFCPEUCRuntimeClass@@XZ
+ 0001:6364       ?GetRuntimeClass@CException@@VFCPEUCRuntimeClass@@XZ
+ 0001:93D8       ?GetRuntimeClass@CFont@@VFCPEUCRuntimeClass@@XZ
+ 0001:92A6       ?GetRuntimeClass@CGdiObject@@VFCPEUCRuntimeClass@@XZ
+ 0001:84D2       ?GetRuntimeClass@CListBox@@VFCPEUCRuntimeClass@@XZ
+ 0001:7146       ?GetRuntimeClass@CMapWordToPtr@@VFCPEUCRuntimeClass@@XZ
+ 0001:64CE       ?GetRuntimeClass@CMemoryException@@VFCPEUCRuntimeClass@@XZ
+ 0001:4F52       ?GetRuntimeClass@CMenu@@VFCPEUCRuntimeClass@@XZ
+ 0001:6516       ?GetRuntimeClass@CNotSupportedException@@VFCPEUCRuntimeClass@@XZ
+ 0001:2700       ?GetRuntimeClass@CObject@@VFCPEUCRuntimeClass@@XZ
+ 0001:916A       ?GetRuntimeClass@CPaintDC@@VFCPEUCRuntimeClass@@XZ
+ 0001:9404       ?GetRuntimeClass@CPalette@@VFCPEUCRuntimeClass@@XZ
+ 0001:93AC       ?GetRuntimeClass@CPen@@VFCPEUCRuntimeClass@@XZ
+ 0001:5F2A       ?GetRuntimeClass@CPtrList@@VFCPEUCRuntimeClass@@XZ
+ 0001:8970       ?GetRuntimeClass@CResourceException@@VFCPEUCRuntimeClass@@XZ
+ 0001:941A       ?GetRuntimeClass@CRgn@@VFCPEUCRuntimeClass@@XZ
+ 0001:86FC       ?GetRuntimeClass@CScrollBar@@VFCPEUCRuntimeClass@@XZ
+ 0001:840C       ?GetRuntimeClass@CStatic@@VFCPEUCRuntimeClass@@XZ
+ 0001:89B8       ?GetRuntimeClass@CUserException@@VFCPEUCRuntimeClass@@XZ
+ 0001:562A       ?GetRuntimeClass@CWinApp@@VFCPEUCRuntimeClass@@XZ
+ 0001:9154       ?GetRuntimeClass@CWindowDC@@VFCPEUCRuntimeClass@@XZ
+ 0001:37B6       ?GetRuntimeClass@CWnd@@VFCPEUCRuntimeClass@@XZ
+ 0001:3E66       ?GetScrollBarCtrl@CWnd@@VFCPEVCScrollBar@@H@Z
+ 0000:0000  Unr  ?GetScrollPos@CWnd@@RFCHH@Z
+ 0000:0000  Unr  ?GetScrollRange@CWnd@@RFCXHPEH0@Z
+ 0001:845E       ?GetSuperWndProcAddr@CButton@@NECPEP7CJPBUHWND__@@IIJ@ZXZ
+ 0001:85CA       ?GetSuperWndProcAddr@CComboBox@@NECPEP7CJPBUHWND__@@IIJ@ZXZ
+ 0001:4862       ?GetSuperWndProcAddr@CDialog@@VECPEP7CJPBUHWND__@@IIJ@ZXZ
+ 0001:86BA       ?GetSuperWndProcAddr@CEdit@@NECPEP7CJPBUHWND__@@IIJ@ZXZ
+ 0001:84DA       ?GetSuperWndProcAddr@CListBox@@NECPEP7CJPBUHWND__@@IIJ@ZXZ
+ 0001:8704       ?GetSuperWndProcAddr@CScrollBar@@NECPEP7CJPBUHWND__@@IIJ@ZXZ
+ 0001:8414       ?GetSuperWndProcAddr@CStatic@@NECPEP7CJPBUHWND__@@IIJ@ZXZ
+ 0001:349A       ?GetSuperWndProcAddr@CWnd@@NECPEP7CJPBUHWND__@@IIJ@ZXZ
+ 0001:3CE0       ?GetTopLevelFrame@CWnd@@RFCPEVCFrameWnd@@XZ
+ 0001:3CA2       ?GetTopLevelParent@CWnd@@RFCPEV1@XZ
+ 0001:4D3C       ?GrayCtlColor@CWnd@@TCHPBUHDC__@@PBUHWND__@@IPBUHBRUSH__@@K@Z
+ 0001:2504       ?GrayString@CDC@@VECHPEVCBrush@@P7CHPBUHDC__@@JH@ZJHHHHH@Z
+ 0000:0000  Unr  ?HideApplication@CWinApp@@RECXXZ
+ 0001:2882       ?Init@CString@@JECXXZ
+ 0001:5744       ?InitApplication@CWinApp@@VECHXZ
+ 0001:7196       ?InitHashTable@CMapWordToPtr@@RECXI@Z
+ 0001:574A       ?InitInstance@CWinApp@@VECHXZ
+ 0002:0AAC       ?InitInstance@CWinmxmzApp@@VECHXZ
+ 0000:0000  Unr  ?InitModalIndirect@CDialog@@RECHPBX@Z
+ 0000:0000  Unr  ?InsertAfter@CPtrList@@RECPEXPEX0@Z
+ 0000:0000  Unr  ?InsertBefore@CPtrList@@RECPEXPEX0@Z
+ 0001:26BB       ?interfaceMap@CCmdTarget@@1UAFX_INTERFACEMAP@@E
+ 0000:0000  Unr  ?IntersectClipRect@CDC@@RECHHHHH@Z
+ 0000:0000  Unr  ?IntersectClipRect@CDC@@RECHPFUtagRECT@@@Z
+ 0000:0000  Unr  ?IsFrameWnd@CFrameWnd@@VFCHXZ
+ 0001:429E       ?IsFrameWnd@CWnd@@VFCHXZ
+ 0001:2708       ?IsKindOf@CObject@@RFCHPFUCRuntimeClass@@@Z
+ 0000:0000  Unr  ?IsSerializable@CObject@@RFCHXZ
+ 0001:42A4       ?IsTracking@CFrameWnd@@RFCHXZ
+ 0000:0000  Unr  ?LineTo@CDC@@RECHHH@Z
+ 0001:202C       ?LoadBitmap@CSplashBtn@@RECXH@Z
+ 0000:0000  Unr  ?LoadStdProfileSettings@CWinApp@@JECXXZ
+ 0001:4E50       ?LoadString@CString@@RECHI@Z
+ 0001:7400       ?Lookup@CMapWordToPtr@@RFCHGAEPEX@Z
+ 0000:0000  Unr  ?LPtoDP@CDC@@RFCXPEUtagSIZE@@@Z
+ 0001:8602       ?MeasureItem@CComboBox@@VECXPEUtagMEASUREITEMSTRUCT@@@Z
+ 0001:8512       ?MeasureItem@CListBox@@VECXPEUtagMEASUREITEMSTRUCT@@@Z
+ 0001:4FE6       ?MeasureItem@CMenu@@VECXPEUtagMEASUREITEMSTRUCT@@@Z
+ 0000:0000  Unr  ?MessageBox@CWnd@@RECHPFD0I@Z
+ 0004:02D2       ?messageMap@CBlue@@1UAFX_MSGMAP@@A
+ 0004:0544       ?messageMap@CCmdTarget@@1UAFX_MSGMAP@@A
+ 0004:0028       ?messageMap@CCustomOpts@@1UAFX_MSGMAP@@A
+ 0004:039A       ?messageMap@CDialog@@1UAFX_MSGMAP@@A
+ 0004:002E       ?messageMap@CEndPhase1@@1UAFX_MSGMAP@@A
+ 0004:0046       ?messageMap@CExit@@1UAFX_MSGMAP@@A
+ 0004:0034       ?messageMap@CSelectMBoot@@1UAFX_MSGMAP@@A
+ 0004:003A       ?messageMap@CSelectMode@@1UAFX_MSGMAP@@A
+ 0004:02C4       ?messageMap@CSplashDlg@@1UAFX_MSGMAP@@A
+ 0004:004C       ?messageMap@CSummary@@1UAFX_MSGMAP@@A
+ 0004:0040       ?messageMap@CWelcome@@1UAFX_MSGMAP@@A
+ 0004:0572       ?messageMap@CWinApp@@1UAFX_MSGMAP@@A
+ 0004:0014       ?messageMap@CWinmxmzApp@@1UAFX_MSGMAP@@A
+ 0004:037E       ?messageMap@CWnd@@1UAFX_MSGMAP@@A
+ 0000:0000  Unr  ?MoveTo@CDC@@REC?EVCPoint@@HH@Z
+ 0001:7282       ?NewAssoc@CMapWordToPtr@@JECPEUCAssoc@1@XZ
+ 0001:5FFA       ?NewNode@CPtrList@@JECPEUCNode@1@PEU21@0@Z
+ 0000:0000  Unr  ?OemToAnsi@CString@@RECXXZ
+ 0000:0000  Unr  ?OffsetClipRgn@CDC@@RECHHH@Z
+ 0000:0000  Unr  ?OffsetClipRgn@CDC@@RECHUtagSIZE@@@Z
+ 0001:8F1E       ?OffsetViewportOrg@CDC@@VEC?EVCPoint@@HH@Z
+ 0000:0000  Unr  ?OffsetWindowOrg@CDC@@REC?EVCPoint@@HH@Z
+ 0001:97FE       ?OnAppExit@CWinApp@@JECXXZ
+ 0002:1F66       ?OnBack@CCustomOpts@@JECXXZ
+ 0002:26D4       ?OnBack@CEndPhase1@@JECXXZ
+ 0002:26BE       ?OnBack@CSelectMode@@JECXXZ
+ 0002:280C       ?OnCancel@CCustomOpts@@NECXXZ
+ 0001:4CBE       ?OnCancel@CDialog@@NECXXZ
+ 0002:2858       ?OnCancel@CEndPhase1@@NECXXZ
+ 0002:287E       ?OnCancel@CSelectMBoot@@NECXXZ
+ 0002:28A4       ?OnCancel@CSelectMode@@NECXXZ
+ 0002:2832       ?OnCancel@CWelcome@@NECXXZ
+ 0001:8496       ?OnChildNotify@CButton@@NECHIIJPEJ@Z
+ 0001:8610       ?OnChildNotify@CComboBox@@NECHIIJPEJ@Z
+ 0001:8520       ?OnChildNotify@CListBox@@NECHIIJPEJ@Z
+ 0001:4028       ?OnChildNotify@CWnd@@NECHIIJPEJ@Z
+ 0002:3B18       ?OnClose@CSummary@@JECXXZ
+ 0001:51CA       ?OnCmdMsg@CCmdTarget@@VECHIHPEXPEUAFX_CMDHANDLERINFO@@@Z
+ 0001:486A       ?OnCmdMsg@CDialog@@VECHIHPEXPEUAFX_CMDHANDLERINFO@@@Z
+ 0001:3BB0       ?OnCommand@CWnd@@NECHIJ@Z
+ 0001:4DBA       ?OnCommandHelp@CDialog@@JECJIJ@Z
+ 0001:3510       ?OnCompareItem@CWnd@@JECHHPEUtagCOMPAREITEMSTRUCT@@@Z
+ 0001:5324       ?OnCreateAggregates@CCmdTarget@@VECHXZ
+ 0001:4CD4       ?OnCtlColor@CDialog@@JECPBUHBRUSH__@@PEVCDC@@PEVCWnd@@I@Z
+ 0001:40CA       ?OnCtlColor@CWnd@@JECPBUHBRUSH__@@PEVCDC@@PEV1@I@Z
+ 0002:267A       ?OnCustom@CSelectMode@@JECXXZ
+ 0001:7B94       ?OnDDECommand@CWinApp@@VECHPED@Z
+ 0001:3552       ?OnDeleteItem@CWnd@@JECXHPEUtagDELETEITEMSTRUCT@@@Z
+ 0002:1FA6       ?OnDisromsrch@CCustomOpts@@JECXXZ
+ 0002:1FFA       ?OnDisvgaswap@CCustomOpts@@JECXXZ
+ 0001:34A8       ?OnDrawItem@CWnd@@JECXHPEUtagDRAWITEMSTRUCT@@@Z
+ 0002:269C       ?OnExpress@CSelectMode@@JECXXZ
+ 0001:52FA       ?OnFinalRelease@CCmdTarget@@VECXXZ
+ 0001:33BE       ?OnFinalRelease@CWnd@@VECXXZ
+ 0002:1F90       ?OnHelp@CCustomOpts@@JECXXZ
+ 0002:2716       ?OnHelp@CEndPhase1@@JECXXZ
+ 0002:2460       ?OnHelp@CSelectMBoot@@JECXXZ
+ 0002:2700       ?OnHelp@CSelectMode@@JECXXZ
+ 0002:3ACE       ?OnHelp@CSummary@@JECXXZ
+ 0002:26EA       ?OnHelp@CWelcome@@JECXXZ
+ 0002:1508       ?OnHelp@CWinmxmzApp@@RECXXZ
+ 0001:4E02       ?OnHelpHitTest@CDialog@@JECJIJ@Z
+ 0001:406E       ?OnHScroll@CWnd@@JECXIIPEVCScrollBar@@@Z
+ 0001:5B88       ?OnIdle@CWinApp@@VECHJ@Z
+ 0001:21E4       ?OnInitDialog@CBlue@@NECHXZ
+ 0002:2044       ?OnInitDialog@CCustomOpts@@NECHXZ
+ 0001:4C10       ?OnInitDialog@CDialog@@VECHXZ
+ 0002:27D6       ?OnInitDialog@CEndPhase1@@NECHXZ
+ 0002:27A0       ?OnInitDialog@CExit@@NECHXZ
+ 0002:223E       ?OnInitDialog@CSelectMBoot@@NECHXZ
+ 0002:25E0       ?OnInitDialog@CSelectMode@@NECHXZ
+ 0001:2068       ?OnInitDialog@CSplashDlg@@NECHXZ
+ 0002:3268       ?OnInitDialog@CSummary@@NECHXZ
+ 0002:276A       ?OnInitDialog@CWelcome@@NECHXZ
+ 0001:23AA       ?OnLButtonDown@CBlue@@JECXIVCPoint@@@Z
+ 0001:35FE       ?OnMeasureItem@CWnd@@JECXHPEUtagMEASUREITEMSTRUCT@@@Z
+ 0001:3326       ?OnNcDestroy@CWnd@@JECXXZ
+ 0001:4C94       ?OnOK@CDialog@@NECXXZ
+ 0002:2476       ?OnOK@CSelectMBoot@@NECXXZ
+ 0002:3AE4       ?OnOK@CSummary@@NECXXZ
+ 0001:7F38       ?OnOpenRecentFile@CWinApp@@JECHI@Z
+ 0001:223E       ?OnPaint@CBlue@@JECXXZ
+ 0001:402E       ?OnParentNotify@CWnd@@JECXIJ@Z
+ 0002:3AB8       ?OnRevert@CSummary@@JECXXZ
+ 0002:20E8       ?OnRomsrch@CCustomOpts@@JECXXZ
+ 0001:4C0C       ?OnSetFont@CDialog@@VECXPEVCFont@@@Z
+ 0001:7FD2       ?OnUpdateRecentFileMenu@CWinApp@@JECXPEVCCmdUI@@@Z
+ 0001:3FC4       ?OnVBXEvent@CWnd@@RECJIJ@Z
+ 0001:409C       ?OnVScroll@CWnd@@JECXIIPEVCScrollBar@@@Z
+ 0001:981E       ?OpenDocumentFile@CWinApp@@VECPEVCDocument@@PFD@Z
+ 0002:0254       ?Parse@CConfigParse@@RECHXZ
+ 0002:00B4       ?ParseCfg@@ZAXAEVCCustomOpts@@@Z
+ 0002:03BC       ?ParseCfgSys@@ZAXAEVCString@@@Z
+ 0002:0468       ?ParsePro@@ZAXAEVCCustomOpts@@@Z
+ 0004:02EC       ?pFirstClass@CRuntimeClass@@2PEU1@E
+ 0001:4AE0       ?PostModal@CDialog@@JECXXZ
+ 0001:33BA       ?PostNcDestroy@CWnd@@NECXXZ
+ 0001:322A       ?PreCreateWindow@CWnd@@VECHAEUtagCREATESTRUCT@@@Z
+ 0001:4A9C       ?PreModal@CDialog@@JECPBUHWND__@@XZ
+ 0001:76AA       ?PrepareCtrl@CDataExchange@@RACPBUHWND__@@H@Z
+ 0001:7690       ?PrepareEditCtrl@CDataExchange@@RACPBUHWND__@@H@Z
+ 0001:480C       ?PreTranslateMessage@CDialog@@VECHPEUtagMSG@@@Z
+ 0001:5876       ?PreTranslateMessage@CWinApp@@VECHPEUtagMSG@@@Z
+ 0001:34A2       ?PreTranslateMessage@CWnd@@VECHPEUtagMSG@@@Z
+ 0001:5970       ?ProcessMessageFilter@CWinApp@@VECHHPEUtagMSG@@@Z
+ 0001:5AF2       ?ProcessWndProcException@CWinApp@@VECJPEVCException@@PFUtagMSG@@@Z
+ 0004:054A       ?pRoutingView@CCmdTarget@@0PEVCView@@E
+ 0004:001A       ?pszSect@@3PEDE
+ 0001:2414       ?PtVisible@CDC@@VFCHHH@Z
+ 0001:5750       ?PumpMessage@CWinApp@@RECHXZ
+ 0001:242E       ?RectVisible@CDC@@VFCHPFUtagRECT@@@Z
+ 0001:8B6C       ?ReleaseAttribDC@CDC@@VECXXZ
+ 0001:2BEE       ?ReleaseBuffer@CString@@RECXH@Z
+ 0001:8B7C       ?ReleaseOutputDC@CDC@@VECXXZ
+ 0001:71FE       ?RemoveAll@CMapWordToPtr@@RECXXZ
+ 0001:5F7E       ?RemoveAll@CPtrList@@RECXXZ
+ 0000:0000  Unr  ?RemoveAt@CPtrList@@RECXPEX@Z
+ 0001:45C8       ?RemoveHandle@CHandleMap@@RACXPBX@Z
+ 0001:61EE       ?RemoveHead@CPtrList@@RECPEXXZ
+ 0001:74E4       ?RemoveKey@CMapWordToPtr@@RECHG@Z
+ 0002:3066       ?RemoveLineN@@ZAHPFDHHPED@Z
+ 0000:0000  Unr  ?RemoveTail@CPtrList@@RECPEXXZ
+ 0000:0000  Unr  ?RepositionBars@CWnd@@RECXIIIIPEUtagRECT@@PFU2@@Z
+ 0001:8C2E       ?RestoreDC@CDC@@VECHH@Z
+ 0000:0000  Unr  ?RestoreWaitCursor@CCmdTarget@@RECXXZ
+ 0001:57A8       ?Run@CWinApp@@VECHXZ
+ 0001:28A2       ?SafeDelete@CString@@LAXPED@Z
+ 0001:7C30       ?SaveAllModified@CWinApp@@VECHXZ
+ 0001:8BE8       ?SaveDC@CDC@@VECHXZ
+ 0001:7096       ?SaveStdProfileSettings@CWinApp@@JECXXZ
+ 0001:8FDE       ?ScaleViewportExt@CDC@@VEC?EVCSize@@HHHH@Z
+ 0001:904A       ?ScaleWindowExt@CDC@@VEC?EVCSize@@HHHH@Z
+ 0000:0000  Unr  ?SelectClipRgn@CDC@@RECHPEVCRgn@@@Z
+ 0001:8C80       ?SelectGdiObject@CDC@@LCPEVCGdiObject@@PBUHDC__@@PBX@Z
+ 0000:0000  Unr  ?SelectObject@CDC@@RECHPEVCRgn@@@Z
+ 0001:8CE8       ?SelectObject@CDC@@RECPEVCBrush@@PEV2@@Z
+ 0000:0000  Unr  ?SelectObject@CDC@@RECPEVCPen@@PEV2@@Z
+ 0001:8D5E       ?SelectObject@CDC@@VECPEVCFont@@PEV2@@Z
+ 0000:0000  Unr  ?SelectPalette@CDC@@RECPEVCPalette@@PEV2@H@Z
+ 0001:8C98       ?SelectStockObject@CDC@@VECPEVCGdiObject@@H@Z
+ 0001:3FF8       ?SendChildNotifyLastMsg@CWnd@@RECHPEJ@Z
+ 0001:3DD6       ?SendMessageToDescendants@CWnd@@TCXPBUHWND__@@IIJHH@Z
+ 0002:16E4       ?Serialize@CObject@@VECXAEVCArchive@@@Z
+ 0000:0000  Unr  ?SetAbortProc@CDC@@RECHP7CHPBUHDC__@@H@Z@Z
+ 0001:8B48       ?SetAttribDC@CDC@@VECXPBUHDC__@@@Z
+ 0002:0686       ?SetAutoWMX@@ZAHPFDPED1@Z
+ 0001:8DD4       ?SetBkColor@CDC@@VECKK@Z
+ 0000:0000  Unr  ?SetBkMode@CDC@@RECHH@Z
+ 0001:545A       ?SetCheck@CCmdUI@@VECXH@Z
+ 0001:6E2C       ?SetCurrentHandles@CWinApp@@RECXXZ
+ 0001:5E6E       ?SetDialogBkColor@CWinApp@@JECXKK@Z
+ 0001:8E78       ?SetMapMode@CDC@@VECHH@Z
+ 0000:0000  Unr  ?SetMapperFlags@CDC@@RECKK@Z
+ 0001:8B5A       ?SetOutputDC@CDC@@VECXPBUHDC__@@@Z
+ 0000:0000  Unr  ?SetPolyFillMode@CDC@@RECHH@Z
+ 0001:54D4       ?SetRadio@CCmdUI@@VECXH@Z
+ 0000:0000  Unr  ?SetROP2@CDC@@RECHH@Z
+ 0000:0000  Unr  ?SetScrollPos@CWnd@@RECHHHH@Z
+ 0000:0000  Unr  ?SetScrollRange@CWnd@@RECXHHHH@Z
+ 0002:1426       ?SetSmallFont@CWinmxmzApp@@RECXPEVCWnd@@@Z
+ 0000:0000  Unr  ?SetStretchBltMode@CDC@@RECHH@Z
+ 0001:5542       ?SetText@CCmdUI@@VECXPFD@Z
+ 0000:0000  Unr  ?SetTextAlign@CDC@@RECII@Z
+ 0000:0000  Unr  ?SetTextCharacterExtra@CDC@@RECHH@Z
+ 0001:8E26       ?SetTextColor@CDC@@VECKK@Z
+ 0000:0000  Unr  ?SetTextJustification@CDC@@RECHHH@Z
+ 0001:8F7E       ?SetViewportExt@CDC@@VEC?EVCSize@@HH@Z
+ 0001:8EBE       ?SetViewportOrg@CDC@@VEC?EVCPoint@@HH@Z
+ 0001:90B6       ?SetWindowExt@CDC@@VEC?EVCSize@@HH@Z
+ 0000:0000  Unr  ?SetWindowOrg@CDC@@REC?EVCPoint@@HH@Z
+ 0001:8B8C       ?StartDoc@CDC@@RECHPEUDOCINFO@@@Z
+ 0000:0000  Unr  ?StartDoc@CDC@@RECHPFD@Z
+ 0000:0000  Unr  ?StartPage@CDC@@RECHXZ
+ 0000:0000  Unr  ?SubclassDlgItem@CWnd@@RECHIPEV1@@Z
+ 0001:8738       ?SubclassWindow@CWnd@@RECHPBUHWND__@@@Z
+ 0001:249C       ?TabbedTextOut@CDC@@VEC?EVCSize@@HHPFDHHPEHH@Z
+ 0001:2448       ?TextOut@CDC@@VECHHHPFDH@Z
+ 0004:0BAC       ?theApp@@3VCWinmxmzApp@@A
+ 0000:0000  Unr  ?TrackPopupMenu@CMenu@@RECHIHHPEVCWnd@@PFUtagRECT@@@Z
+ 0001:40F6       ?UpdateData@CWnd@@RECHH@Z
+ 0000:0000  Unr  ?UpdateDialogControls@CWnd@@RECXPEVCCmdTarget@@H@Z
+ 0001:68DC       ?UpdateSysColors@AUX_DATA@@RACXXZ
+ 0001:3810       ?WindowProc@CWnd@@NECJIIJ@Z
+ 0001:590A       ?WinHelp@CWinApp@@VECXKI@Z
+ 0002:152A       ?WinHelp@CWinmxmzApp@@VECXKI@Z
+ 0001:369E       ?WinHelp@CWnd@@VECXKI@Z
+ 0004:0CB2       ?wndBottom@CWnd@@2V1@B
+ 0004:0CEA       ?wndNoTopMost@CWnd@@2V1@B
+ 0004:0C96       ?wndTop@CWnd@@2V1@B
+ 0004:0CCE       ?wndTopMost@CWnd@@2V1@B
+ 0001:8152       ?WriteProfileInt@CWinApp@@RECHPFD0H@Z
+ 0001:81EE       ?WriteProfileString@CWinApp@@RECHPFD00@Z
+ 0001:2DA8       ?_AfxCallWndProc@@ZCJPEVCWnd@@PBUHWND__@@IIJ@Z
+ 0000:0000  Unr  ?_AfxCancelModes@@ZCXPBUHWND__@@@Z
+ 0001:5DF0       ?_AfxCbtFilterHook@@ZCJHIJ@Z
+ 0004:0358       ?_afxChNil@@3DA
+ 0001:470C       ?_AfxDlgProc@@ZCJPBUHWND__@@IIJ@Z
+ 0001:69EC       ?_AfxExitDelete@@ZCXPBX@Z
+ 0001:37C4       ?_AfxFindMessageEntry@@ZCPEUAFX_MSGMAP_ENTRY@@PEU1@II@Z
+ 0004:0562       ?_afxFirstFrameWnd@@3PEVCFrameWnd@@E
+ 0001:960C       ?_AfxFullPath@@ZCHPEDPFD@Z
+ 0001:9708       ?_AfxGetParentOwner@@ZCPBUHWND__@@PBU1@@Z
+ 0001:7CCE       ?_AfxGetSafeOwner@@ZCPBUHWND__@@PEVCWnd@@@Z
+ 0001:5D94       ?_AfxGrayBackgroundWndProc@@ZCJPBUHWND__@@IIJ@Z
+ 0001:4B70       ?_AfxHelpEnabled@@ZCHXZ
+ 0004:056A       ?_afxHHookOldCbtFilter@@3PFUHHOOK__@@F
+ 0004:056E       ?_afxHHookOldMsgFilter@@3PFUHHOOK__@@F
+ 0001:30A0       ?_AfxHookWindowCreate@@ZCXPEVCWnd@@@Z
+ 0001:966C       ?_AfxIsComboBoxControl@@ZCHPBUHWND__@@I@Z
+ 0001:4EA4       ?_AfxIsDBCSLeadByte@@ZCHE@Z
+ 0000:0000  Unr  ?_AfxIsDescendant@@ZCHPBUHWND__@@0@Z
+ 0001:2D84       ?_AfxIsStackOK@@ZAHI@Z
+ 0004:0D06       ?_afxLastMsg@@3UtagMSG@@A
+ 0001:4E88       ?_AfxLoadString@@ZCHIPED@Z
+ 0000:0000  Unr  ?_AfxLocalAlloc@@ZCPEXIII@Z
+ 0000:0000  Unr  ?_AfxLocalFree@@ZCXPEX@Z
+ 0000:0000  Unr  ?_AfxLocalLock@@ZCPEDPEX@Z
+ 0000:0000  Unr  ?_AfxLocalUnlock@@ZCHPEX@Z
+ 0004:0D8E       ?_afxMsgCache@@3QEUAFX_MSG_CACHE@@E
+ 0001:6F7A       ?_AfxMsgFilterHook@@ZCJHIJ@Z
+ 0004:16BC       ?_afxOleState@@3UAFX_OLESTATE@@A
+ 0004:16B8       ?_afxRegisterPenAppProc@@3P7CXIH@ZE
+ 0001:3EE8       ?_AfxRepositionWindow@@ZAXPEUAFX_SIZEPARENTPARAMS@@PBUHWND__@@PFUtagRECT@@@Z
+ 0001:2FBC       ?_AfxSendMsgHook@@ZCJHIJ@Z
+ 0001:96B6       ?_AfxSmartSetWindowText@@ZCXPBUHWND__@@PFD@Z
+ 0001:2C5E       ?_AfxStrChr@@ZCPEDPFDD@Z
+ 0000:0000  Unr  ?_AfxStrCpy@@ZCXPEDPFDI@Z
+ 0004:0368       ?_afxTrackingMenu@@3PBUHMENU__@@B
+ 0001:30F2       ?_AfxUnhookWindowCreate@@ZCHXZ
+ 0001:2616       ?_afxWnd@@3QFDF
+ 0001:259A       ?_afxWndControlBar@@3QFDF
+ 0001:257F       ?_afxWndFrameOrView@@3QFDF
+ 0001:258E       ?_afxWndMDIFrame@@3QFDF
+ 0001:267B       ?_dispatchEntries@CCmdTarget@@0QEUAFX_DISPMAP_ENTRY@@E
+ 0001:26C3       ?_interfaceEntries@CCmdTarget@@0QEUAFX_INTERFACEMAP_ENTRY@@E
+ 0001:21BC       ?_messageEntries@CBlue@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:26CF       ?_messageEntries@CCmdTarget@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:0014       ?_messageEntries@CCustomOpts@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:2626       ?_messageEntries@CDialog@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:00B4       ?_messageEntries@CEndPhase1@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:0050       ?_messageEntries@CExit@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:00A0       ?_messageEntries@CSelectMBoot@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:006E       ?_messageEntries@CSelectMode@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:1E74       ?_messageEntries@CSplashDlg@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:00D2       ?_messageEntries@CSummary@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:005A       ?_messageEntries@CWelcome@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:88FE       ?_messageEntries@CWinApp@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:0000       ?_messageEntries@CWinmxmzApp@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:25A8       ?_messageEntries@CWnd@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:C356       ?_set_fnew_handler@@ZAP7AHI@ZP7AHI@Z@Z
+ 0001:C380       ?_set_new_handler@@ZAP7AHI@ZP7AHI@Z@Z
+ 0000:0000  Imp  ABORTDOC             (GDI.382)
+ 0000:0000  Imp  ADJUSTWINDOWRECT     (USER.102)
+ 0001:6CAA       AFXWININIT
+ 0001:6FF0       AFXWINTERM
+ 0000:0000  Imp  ANSILOWER            (USER.432)
+ 0000:0000  Imp  ANSINEXT             (USER.472)
+ 0000:0000  Imp  ANSITOOEM            (KEYBOARD.5)
+ 0000:0000  Imp  ANSIUPPER            (USER.431)
+ 0000:0000  Imp  BEGINDEFERWINDOWPOS  (USER.259)
+ 0000:0000  Imp  BEGINPAINT           (USER.39)
+ 0000:0000  Imp  BITBLT               (GDI.34)
+ 0000:0000  Imp  CALLNEXTHOOKEX       (USER.293)
+ 0000:0000  Imp  CALLWINDOWPROC       (USER.122)
+ 0000:0000  Imp  CATCH                (KERNEL.55)
+ 0000:0000  Imp  CHECKMENUITEM        (USER.154)
+ 0000:0000  Imp  COPYRECT             (USER.74)
+ 0000:0000  Imp  CREATEBITMAP         (GDI.48)
+ 0000:0000  Imp  CREATEBRUSHINDIRECT  (GDI.50)
+ 0000:0000  Imp  CREATECOMPATIBLEDC   (GDI.52)
+ 0000:0000  Imp  CREATEDIALOG         (USER.89)
+ 0000:0000  Imp  CREATEDIALOGINDIRECT (USER.219)
+ 0000:0000  Imp  CREATEFONTINDIRECT   (GDI.57)
+ 0000:0000  Imp  CREATEHATCHBRUSH     (GDI.58)
+ 0000:0000  Imp  CREATEPATTERNBRUSH   (GDI.60)
+ 0000:0000  Imp  CREATEPEN            (GDI.61)
+ 0000:0000  Imp  CREATERECTRGNINDIRECT (GDI.65)
+ 0000:0000  Imp  CREATESOLIDBRUSH     (GDI.66)
+ 0000:0000  Imp  CREATEWINDOWEX       (USER.452)
+ 0000:0000  Imp  CTL3DAUTOSUBCLASS    (CTL3DV2.16)
+ 0000:0000  Imp  CTL3DREGISTER        (CTL3DV2.12)
+ 0000:0000  Imp  CTL3DUNREGISTER      (CTL3DV2.13)
+ 0000:0000  Imp  DEFERWINDOWPOS       (USER.260)
+ 0000:0000  Imp  DEFHOOKPROC          (USER.235)
+ 0000:0000  Imp  DEFWINDOWPROC        (USER.107)
+ 0000:0000  Imp  DELETEDC             (GDI.68)
+ 0000:0000  Imp  DELETEMENU           (USER.413)
+ 0000:0000  Imp  DELETEOBJECT         (GDI.69)
+ 0000:0000  Imp  DESTROYMENU          (USER.152)
+ 0000:0000  Imp  DESTROYWINDOW        (USER.53)
+ 0000:0000  Imp  DIALOGBOX            (USER.87)
+ 0000:0000  Imp  DIALOGBOXINDIRECT    (USER.218)
+ 0000:0000  Imp  DISPATCHMESSAGE      (USER.114)
+ 0000:0000  Imp  DOS3CALL             (KERNEL.102)
+ 0000:0000  Imp  DRAWTEXT             (USER.85)
+ 0000:0000  Imp  ENABLEMENUITEM       (USER.155)
+ 0000:0000  Imp  ENABLEWINDOW         (USER.34)
+ 0000:0000  Imp  ENDDEFERWINDOWPOS    (USER.261)
+ 0000:0000  Imp  ENDDIALOG            (USER.88)
+ 0000:0000  Imp  ENDDOC               (GDI.378)
+ 0000:0000  Imp  ENDPAGE              (GDI.380)
+ 0000:0000  Imp  ENDPAINT             (USER.40)
+ 0000:0000  Imp  EQUALRECT            (USER.244)
+ 0000:0000  Imp  ESCAPE               (GDI.38)
+ 0000:0000  Imp  EXCLUDECLIPRECT      (GDI.21)
+ 0000:0000  Imp  EXITWINDOWSEXEC      (USER.246)
+ 0000:0000  Imp  EXTTEXTOUT           (GDI.351)
+ 0000:0000  Imp  FATALAPPEXIT         (KERNEL.137)
+ 0000:0000  Imp  FATALEXIT            (KERNEL.1)
+ 0000:0000  Imp  FINDRESOURCE         (KERNEL.60)
+ 0000:0000  Imp  FREERESOURCE         (KERNEL.63)
+ 0000:0000  Imp  GETCAPTURE           (USER.236)
+ 0000:0000  Imp  GETCLASSINFO         (USER.404)
+ 0000:0000  Imp  GETCLASSNAME         (USER.58)
+ 0000:0000  Imp  GETCLIENTRECT        (USER.33)
+ 0000:0000  Imp  GETCLIPBOX           (GDI.77)
+ 0000:0000  Imp  GETCURRENTTASK       (KERNEL.36)
+ 0000:0000  Imp  GETDC                (USER.66)
+ 0000:0000  Imp  GETDESKTOPWINDOW     (USER.286)
+ 0000:0000  Imp  GETDEVICECAPS        (GDI.80)
+ 0000:0000  Imp  GETDIALOGBASEUNITS   (USER.243)
+ 0000:0000  Imp  GETDLGCTRLID         (USER.277)
+ 0000:0000  Imp  GETDLGITEM           (USER.91)
+ 0000:0000  Imp  GETDOSENVIRONMENT    (KERNEL.131)
+ 0000:0000  Imp  GETFILETITLE         (COMMDLG.27)
+ 0000:0000  Imp  GETFOCUS             (USER.23)
+ 0000:0000  Imp  GETKEYSTATE          (USER.106)
+ 0000:0000  Imp  GETLASTACTIVEPOPUP   (USER.287)
+ 0000:0000  Imp  GETMENU              (USER.157)
+ 0000:0000  Imp  GETMENUCHECKMARKDIMENSIONS (USER.417)
+ 0000:0000  Imp  GETMENUITEMCOUNT     (USER.263)
+ 0000:0000  Imp  GETMENUITEMID        (USER.264)
+ 0000:0000  Imp  GETMESSAGE           (USER.108)
+ 0000:0000  Imp  GETMESSAGEPOS        (USER.119)
+ 0000:0000  Imp  GETMESSAGETIME       (USER.120)
+ 0000:0000  Imp  GETMODULEFILENAME    (KERNEL.49)
+ 0000:0000  Imp  GETMODULEHANDLE      (KERNEL.47)
+ 0000:0000  Imp  GETNEXTDLGGROUPITEM  (USER.227)
+ 0000:0000  Imp  GETNEXTDLGTABITEM    (USER.228)
+ 0000:0000  Imp  GETNEXTWINDOW        (USER.230)
+ 0000:0000  Imp  GETOBJECT            (GDI.82)
+ 0000:0000  Imp  GETPARENT            (USER.46)
+ 0000:0000  Imp  GETPRIVATEPROFILEINT (KERNEL.127)
+ 0000:0000  Imp  GETPRIVATEPROFILESTRING (KERNEL.128)
+ 0000:0000  Imp  GETPROCADDRESS       (KERNEL.50)
+ 0000:0000  Imp  GETPROFILESTRING     (KERNEL.58)
+ 0000:0000  Imp  GETSCROLLPOS         (USER.63)
+ 0000:0000  Imp  GETSCROLLRANGE       (USER.65)
+ 0000:0000  Imp  GETSTOCKOBJECT       (GDI.87)
+ 0000:0000  Imp  GETSUBMENU           (USER.159)
+ 0000:0000  Imp  GETSYSCOLOR          (USER.180)
+ 0000:0000  Imp  GETSYSTEMMETRICS     (USER.179)
+ 0000:0000  Imp  GETTEXTEXTENT        (GDI.91)
+ 0000:0000  Imp  GETTICKCOUNT         (USER.13)
+ 0000:0000  Imp  GETTOPWINDOW         (USER.229)
+ 0000:0000  Imp  GETVERSION           (KERNEL.3)
+ 0000:0000  Imp  GETVIEWPORTEXT       (GDI.94)
+ 0000:0000  Imp  GETWINDOW            (USER.262)
+ 0000:0000  Imp  GETWINDOWDC          (USER.67)
+ 0000:0000  Imp  GETWINDOWEXT         (GDI.96)
+ 0000:0000  Imp  GETWINDOWLONG        (USER.135)
+ 0000:0000  Imp  GETWINDOWRECT        (USER.32)
+ 0000:0000  Imp  GETWINDOWSDIRECTORY  (KERNEL.134)
+ 0000:0000  Imp  GETWINDOWTEXT        (USER.36)
+ 0000:0000  Imp  GETWINDOWTEXTLENGTH  (USER.38)
+ 0000:0000  Imp  GLOBALALLOC          (KERNEL.15)
+ 0000:0000  Imp  GLOBALDELETEATOM     (USER.269)
+ 0000:0000  Imp  GLOBALFREE           (KERNEL.17)
+ 0000:0000  Imp  GLOBALLOCK           (KERNEL.18)
+ 0000:0000  Imp  GLOBALREALLOC        (KERNEL.16)
+ 0000:0000  Imp  GLOBALSIZE           (KERNEL.20)
+ 0000:0000  Imp  GLOBALUNLOCK         (KERNEL.19)
+ 0000:0000  Imp  GRAYSTRING           (USER.185)
+ 0000:0000  Imp  INFLATERECT          (USER.78)
+ 0000:0000  Imp  INITAPP              (USER.5)
+ 0000:0000  Imp  INITTASK             (KERNEL.91)
+ 0000:0000  Imp  INSERTMENU           (USER.410)
+ 0000:0000  Imp  INTERSECTCLIPRECT    (GDI.22)
+ 0000:0000  Imp  ISDBCSLEADBYTE       (KERNEL.207)
+ 0000:0000  Imp  ISDIALOGMESSAGE      (USER.90)
+ 0000:0000  Imp  ISDLGBUTTONCHECKED   (USER.98)
+ 0000:0000  Imp  ISWINDOWENABLED      (USER.35)
+ 0000:0000  Imp  ISWINDOWVISIBLE      (USER.49)
+ 0000:0000  Imp  LINETO               (GDI.19)
+ 0000:0000  Imp  LOADBITMAP           (USER.175)
+ 0000:0000  Imp  LOADCURSOR           (USER.173)
+ 0000:0000  Imp  LOADICON             (USER.174)
+ 0000:0000  Imp  LOADRESOURCE         (KERNEL.61)
+ 0000:0000  Imp  LOADSTRING           (USER.176)
+ 0000:0000  Imp  LOCALALLOC           (KERNEL.5)
+ 0000:0000  Imp  LOCALFREE            (KERNEL.7)
+ 0000:0000  Imp  LOCALLOCK            (KERNEL.8)
+ 0000:0000  Imp  LOCALUNLOCK          (KERNEL.9)
+ 0000:0000  Imp  LOCKRESOURCE         (KERNEL.62)
+ 0000:0000  Imp  LOCKSEGMENT          (KERNEL.23)
+ 0000:0000  Imp  LSTRCAT              (KERNEL.89)
+ 0000:0000  Imp  LSTRCMP              (USER.430)
+ 0000:0000  Imp  LSTRCMPI             (USER.471)
+ 0000:0000  Imp  LSTRCPY              (KERNEL.88)
+ 0000:0000  Imp  LSTRLEN              (KERNEL.90)
+ 0000:0000  Imp  MESSAGEBOX           (USER.1)
+ 0000:0000  Imp  MODIFYMENU           (USER.414)
+ 0000:0000  Imp  MOVETO               (GDI.20)
+ 0000:0000  Imp  MOVEWINDOW           (USER.56)
+ 0000:0000  Imp  MULDIV               (GDI.128)
+ 0000:0000  Imp  OEMTOANSI            (KEYBOARD.6)
+ 0000:0000  Imp  OFFSETCLIPRGN        (GDI.32)
+ 0000:0000  Imp  OFFSETRECT           (USER.77)
+ 0000:0000  Imp  OFFSETVIEWPORTORG    (GDI.17)
+ 0000:0000  Imp  OFFSETWINDOWORG      (GDI.15)
+ 0000:0000  Imp  OPENFILE             (KERNEL.74)
+ 0000:0000  Imp  PAINTRGN             (GDI.43)
+ 0000:0008  Abs  pAtomTable
+ 0000:0000  Imp  PEEKMESSAGE          (USER.109)
+ 0000:0006  Abs  pLocalHeap
+ 0000:0000  Imp  POSTQUITMESSAGE      (USER.6)
+ 0000:000E  Abs  pStackBot
+ 0000:000C  Abs  pStackMin
+ 0000:000A  Abs  pStackTop
+ 0000:0000  Imp  PTVISIBLE            (GDI.103)
+ 0000:0000  Imp  RECTVISIBLE          (GDI.104)
+ 0000:0000  Imp  REGISTERCLASS        (USER.57)
+ 0000:0000  Imp  RELEASEDC            (USER.68)
+ 0000:0000  Imp  RESTOREDC            (GDI.39)
+ 0004:0004       rsrvptrs
+ 0000:0000  Imp  SAVEDC               (GDI.30)
+ 0000:0000  Imp  SCALEVIEWPORTEXT     (GDI.18)
+ 0000:0000  Imp  SCALEWINDOWEXT       (GDI.16)
+ 0000:0000  Imp  SCREENTOCLIENT       (USER.29)
+ 0000:0000  Imp  SELECTCLIPRGN        (GDI.44)
+ 0000:0000  Imp  SELECTOBJECT         (GDI.45)
+ 0000:0000  Imp  SELECTPALETTE        (USER.282)
+ 0000:0000  Imp  SENDDLGITEMMESSAGE   (USER.101)
+ 0000:0000  Imp  SENDMESSAGE          (USER.111)
+ 0000:0000  Imp  SETABORTPROC         (GDI.381)
+ 0000:0000  Imp  SETACTIVEWINDOW      (USER.59)
+ 0000:0000  Imp  SETBKCOLOR           (GDI.1)
+ 0000:0000  Imp  SETBKMODE            (GDI.2)
+ 0000:0000  Imp  SETCURSOR            (USER.69)
+ 0000:0000  Imp  SETERRORMODE         (KERNEL.107)
+ 0000:0000  Imp  SETFOCUS             (USER.22)
+ 0000:0000  Imp  SETMAPMODE           (GDI.3)
+ 0000:0000  Imp  SETMAPPERFLAGS       (GDI.349)
+ 0000:0000  Imp  SETMENUITEMBITMAPS   (USER.418)
+ 0000:0000  Imp  SETMESSAGEQUEUE      (USER.266)
+ 0000:0000  Imp  SETPOLYFILLMODE      (GDI.6)
+ 0000:0000  Imp  SETROP2              (GDI.4)
+ 0000:0000  Imp  SETSCROLLPOS         (USER.62)
+ 0000:0000  Imp  SETSCROLLRANGE       (USER.64)
+ 0000:0000  Imp  SETSTRETCHBLTMODE    (GDI.7)
+ 0000:0000  Imp  SETTEXTALIGN         (GDI.346)
+ 0000:0000  Imp  SETTEXTCHARACTEREXTRA (GDI.8)
+ 0000:0000  Imp  SETTEXTCOLOR         (GDI.9)
+ 0000:0000  Imp  SETTEXTJUSTIFICATION (GDI.10)
+ 0000:0000  Imp  SETVIEWPORTEXT       (GDI.14)
+ 0000:0000  Imp  SETVIEWPORTORG       (GDI.13)
+ 0000:0000  Imp  SETWINDOWEXT         (GDI.12)
+ 0000:0000  Imp  SETWINDOWLONG        (USER.136)
+ 0000:0000  Imp  SETWINDOWORG         (GDI.11)
+ 0000:0000  Imp  SETWINDOWPOS         (USER.232)
+ 0000:0000  Imp  SETWINDOWSHOOK       (USER.121)
+ 0000:0000  Imp  SETWINDOWSHOOKEX     (USER.291)
+ 0000:0000  Imp  SETWINDOWTEXT        (USER.37)
+ 0000:0000  Imp  SHOWOWNEDPOPUPS      (USER.265)
+ 0000:0000  Imp  SHOWSCROLLBAR        (USER.267)
+ 0000:0000  Imp  SHOWWINDOW           (USER.42)
+ 0000:0000  Imp  STARTDOC             (GDI.377)
+ 0000:0000  Imp  STARTPAGE            (GDI.379)
+ 0000:0000  Imp  TABBEDTEXTOUT        (USER.196)
+ 0000:0000  Imp  TEXTOUT              (GDI.33)
+ 0000:0000  Imp  THROW                (KERNEL.56)
+ 0000:0000  Imp  TRACKPOPUPMENU       (USER.416)
+ 0000:0000  Imp  TRANSLATEMESSAGE     (USER.113)
+ 0000:0000  Imp  UNHOOKWINDOWSHOOK    (USER.234)
+ 0000:0000  Imp  UNHOOKWINDOWSHOOKEX  (USER.292)
+ 0000:0000  Imp  UPDATEWINDOW         (USER.124)
+ 0000:0000  Imp  VALIDATERECT         (USER.127)
+ 0000:0000  Imp  WAITEVENT            (KERNEL.30)
+ 0000:0000  Imp  WINHELP              (USER.171)
+ 0001:4672       WINMAIN
+ 0000:0000  Imp  WRITEPRIVATEPROFILESTRING (KERNEL.129)
+ 0000:0000  Imp  WVSPRINTF            (USER.421)
+ 0001:C51C       _abort
+ 0001:CF8A       _abs
+ 0004:00F6       _ActiveOwner
+ 0004:1B8A       _added
+ 0004:0586       _afxCurrentAppName
+ 0004:0582       _afxCurrentInstanceHandle
+ 0004:0584       _afxCurrentResourceHandle
+ 0004:057E       _afxCurrentWinApp
+ 0004:058A       _afxTempMapLock
+ 0001:674E       _AFX_VERSION
+ 0004:05A2       _aseghi
+ 0004:05A0       _aseglo
+ 0001:D710       _atexit
+ 0001:C4A2       _atoi
+ 0001:C4A6       _atol
+ 0004:1780       _buff
+ 0004:1B74       _Callback
+ 0004:00FA       _Cfg
+ 0001:15EA       _check_common
+ 0001:1322       _check_include
+ 0001:0C9C       _check_reloc
+ 0004:00F7       _CommonOwner
+ 0004:00F2       _ConfigSys
+ 0001:0D3A       _config_free
+ 0001:1880       _config_parse
+ 0001:1CD6       _CopyFile
+ 0001:0B72       _create_line
+ 0004:1B6C       _CurLine
+ 0004:1B68       _CurSect
+ 0004:1B7E       _DefOwner
+ 0004:007C       _DefSect
+ 0001:0BBE       _dup_line
+ 0004:0BAC       _edata
+ 0004:1B8C       _end
+ 0004:05C4       _errno
+ 0001:9B47       _exit
+ 0001:A07A       _fclose
+ 0001:A810       _fflush
+ 0001:C61A       _fgets
+ 0001:0C3A       _find_first
+ 0001:09E4       _find_ownsect
+ 0001:0990       _find_sect
+ 0004:008A       _FirstSect
+ 0001:02F0       _fnDOS
+ 0001:0776       _fnMenuItem
+ 0001:0356       _fnShell
+ 0001:A1B6       _fopen
+ 0001:A1D6       _fprintf
+ 0001:C6A2       _fputs
+ 0001:A21A       _fwrite
+ 0001:C53E       _getenv
+ 0001:024A       _GETXMS_VEC
+ 0001:00FA       _get_bootdrive
+ 0004:1B7A       _IncLine
+ 0001:0A0E       _is_menusect
+ 0004:01D8       _Keywords
+ 0000:0000  Imp  _LCLOSE              (KERNEL.81)
+ 0000:0000  Imp  _LOPEN               (KERNEL.85)
+ 0000:0000  Imp  _LREAD               (KERNEL.82)
+ 0000:0000  Imp  _LWRITE              (KERNEL.86)
+ 0001:CCE6       _memcmp
+ 0001:CD42       _memcpy
+ 0001:CDA0       _memset
+ 0004:1B88       _MenuCount
+ 0004:1B78       _MenuOrder
+ 0001:1064       _menu_parse
+ 0004:1B80       _NextLine
+ 0001:0A6E       _order_menus
+ 0004:00F8       _Parsed4DOS
+ 0004:1B84       _PrevLine
+ 0004:1B70       _PrevSect
+ 0001:1B34       _qmaxpres
+ 0001:1BCC       _qmovpres
+ 0001:0DC4       _read_config
+ 0001:D2BA       _remove
+ 0001:D28E       _rename
+ 0004:0072       _SectCount
+ 0001:1AE0       _set_current
+ 0001:C708       _sprintf
+ 0001:C776       _sscanf
+ 0004:00E0       _StartupBat
+ 0004:0594       _STKHQQ
+ 0001:C392       _strcat
+ 0001:C9BC       _strchr
+ 0001:C3E6       _strcpy
+ 0001:C422       _strlen
+ 0001:C466       _strncmp
+ 0001:C43C       _strncpy
+ 0001:CAD2       _strpbrk
+ 0001:CB30       _strspn
+ 0001:CC34       _strstr
+ 0001:CB8C       _strtok
+ 0001:CE58       _strtol
+ 0001:CE4C       _strtoul
+ 0001:B83E       _ungetc
+ 0000:0000  Imp  _wsprintf            (USER.420)
+ 0004:061A       __aaltstkovr
+ 0001:D256       __access
+ 0004:05A8       __acfinfo
+ 0000:9876  Abs  __acrtmsg
+ 0000:9876  Abs  __acrtused
+ 0000:D6D6  Abs  __aDBdoswp
+ 0004:0616       __adbgmsg
+ 0000:D6D6  Abs  __aDBused
+ 0001:9C6C       __aFchkstk
+ 0001:D364       __aFFalmul
+ 0001:D364       __aFFaulmul
+ 0001:D386       __aFlmul
+ 0001:D386       __aFulmul
+ 0000:0000  Imp  __AHINCR             (KERNEL.114)
+ 0004:05B6       __aintdiv
+ 0004:06CC       __amblksiz
+ 0001:9F14       __amsg_exit
+ 0001:9C4C       __aNchkstk
+ 0004:06EE       __asizeC
+ 0004:06EF       __asizeD
+ 0001:997A       __astart
+ 0001:C4AA       __catox
+ 0001:9B64       __cexit
+ 0004:06CE       __cfltcvt_tab
+ 0004:063A       __cflush
+ 0000:00FF  Abs  __charmax
+ 0004:0613       __child
+ 0001:9C6C       __chkstk
+ 0001:9A64       __cinit
+ 0001:9F0A       __cintDIV
+ 0001:B8B2       __close
+ 0001:CDE8       __cltoasub
+ 0004:059E       __cmdShow
+ 0001:C7C6       __commit
+ 0004:06B6       __commode
+ 0004:05D3       __cpumode
+ 0001:9BE5       __ctermsub
+ 0004:06F0       __ctype
+ 0004:06F0       __ctype_
+ 0001:BC95       __cXENIXtoDOSmode
+ 0001:CDF5       __cxtoa
+ 0001:9B75       __c_exit
+ 0001:0218       __dfree
+ 0001:018A       __dmalloc
+ 0004:05D4       __doserrno
+ 0001:9FF8       __dosret0
+ 0001:A017       __dosretax
+ 0001:A005       __dosreturn
+ 0001:D2E0       __dos_commit
+ 0001:D304       __dos_getftime
+ 0001:D338       __dos_setftime
+ 0001:01CB       __drealloc
+ 0001:02AC       __dstrdup
+ 0004:0BAC       __edata
+ 0004:1B8C       __end
+ 0001:A3BE       __endstdio
+ 0004:060A       __environ
+ 0001:9B55       __exit
+ 0004:0615       __exitflag
+ 0004:05BA       __fac
+ 0001:027E       __farfopen
+ 0001:C5DA       __fcloseall
+ 0001:D6D6       __fexpand
+ 0001:BFEC       __ffree
+ 0001:9C22       __FF_MSGBANNER
+ 0004:06BE       __fheap
+ 0001:A3D4       __filbuf
+ 0001:C291       __findlast
+ 0001:C992       __findseg
+ 0001:A47E       __flsbuf
+ 0001:A86C       __flush
+ 0001:A8EC       __flushall
+ 0001:C00D       __fmalloc
+ 0001:D3B8       __fmemcmp
+ 0001:D414       __fmemcpy
+ 0001:D5D0       __fmemset
+ 0004:06B4       __fmode
+ 0001:D6BA       __fmsize
+ 0004:0838       __fpinit
+ 0000:9876  Abs  __fptaskdata
+ 0001:9C46       __fptrap
+ 0001:C836       __frealloc
+ 0001:A578       __freebuf
+ 0001:A17C       __fsopen
+ 0001:D57C       __fstrcat
+ 0001:D472       __fstrchr
+ 0001:D540       __fstrcpy
+ 0001:CCA0       __fstrdup
+ 0001:D4A4       __fstricmp
+ 0001:D526       __fstrlen
+ 0001:D4EA       __fstrncmp
+ 0001:D618       __fstrstr
+ 0001:A7C8       __ftbuf
+ 0001:A5B0       __getbuf
+ 0001:A056       __GetDGROUP
+ 0001:B7EA       __getstream
+ 0001:C19A       __growseg
+ 0004:0598       __hInstance
+ 0004:0596       __hPrevInstance
+ 0001:C22B       __incseg
+ 0001:C0B4       __initseg
+ 0001:A96C       __input
+ 0004:0848       __iob
+ 0004:0938       __iob2
+ 0004:06B4       __iomode
+ 0001:C500       __itoa
+ 0004:063C       __lastiob
+ 0001:C0E8       __linkseg
+ 0004:059A       __lpszCmdLine
+ 0001:B8EA       __lseek
+ 0004:06B8       __lseekchk
+ 0001:D160       __makepath
+ 0001:A029       __maperror
+ 0001:9FCA       __myalloc
+ 0001:C2B2       __newseg
+ 0004:05D6       __nfile
+ 0001:9F56       __NMSG_TEXT
+ 0001:9F8D       __NMSG_WRITE
+ 0001:9A31       __nomain
+ 0001:D718       __onexit
+ 0001:B9D6       __open
+ 0001:A5FC       __openfile
+ 0004:05D4       __oserr
+ 0004:05DC       __osfile
+ 0004:05CF       __osmajor
+ 0004:05CE       __osminor
+ 0004:05D2       __osmode
+ 0004:05CE       __osver
+ 0004:05D0       __osversion
+ 0001:B2F4       __output
+ 0004:060E       __pgmptr
+ 0004:06BA       __pnhFarHeap
+ 0004:05CA       __psp
+ 0004:05C8       __pspadr
+ 0001:D6B3       __QWINClose
+ 0001:D6B3       __QWINExit
+ 0001:D6B3       __QWINGetBuffSize
+ 0001:D6B3       __QWINGetFocus
+ 0001:D6B3       __QWINGetSize
+ 0001:D6B3       __QWINInit
+ 0001:D6B3       __QWINIsQWINin
+ 0001:D6B3       __QWINMenuClick
+ 0001:D6B3       __QWINOpen
+ 0001:D6B3       __QWINRead
+ 0001:D6B3       __QWINSetAboutString
+ 0001:D6B3       __QWINSetBuffSize
+ 0001:D6B3       __QWINSetFocus
+ 0001:D6B3       __QWINSetSize
+ 0001:D6B3       __QWINTerm
+ 0004:07F6       __qwinused
+ 0001:D6B3       __QWINWrite
+ 0001:D6B3       __QWINYield
+ 0001:BCA6       __read
+ 0001:C8CA       __resize
+ 0001:C11E       __searchseg
+ 0001:9CA6       __setargv
+ 0001:9E50       __setenvp
+ 0004:06EC       __sigintoff
+ 0004:06EA       __sigintseg
+ 0000:0001  Abs  __sizec
+ 0000:0001  Abs  __sized
+ 0001:B9BE       __sopen
+ 0001:CF9E       __splitpath
+ 0001:BFD8       __stackavail
+ 0001:A73C       __stbuf
+ 0001:C9EE       __strcmpi
+ 0001:CA34       __strdup
+ 0001:C9EE       __stricmp
+ 0001:CA7A       __strnicmp
+ 0001:9A38       __stubmain
+ 0004:05C6       __umaskval
+ 0001:D2BA       __unlink
+ 0001:D6B3       __wabout
+ 0001:D6AE       __wcexit
+ 0001:D6AE       __wcinit
+ 0001:D6B3       __wclose
+ 0004:05D8       __wfile
+ 0001:9970       __wflags
+ 0001:D6B3       __wgetfocus
+ 0001:D6B3       __wgetscreenbuf
+ 0001:D6B3       __wgetsize
+ 0000:0000  Imp  __WINFLAGS           (KERNEL.178)
+ 0004:05CD       __winmajor
+ 0004:05CC       __winminor
+ 0004:05CC       __winver
+ 0000:0000  Abs  __wiobused
+ 0001:D6B3       __wmenuclick
+ 0004:05DA       __wnfile
+ 0001:D6B3       __wopen
+ 0001:D6B3       __wread
+ 0001:BE1E       __write
+ 0001:D6B3       __wsetfocus
+ 0001:D6B3       __wsetscreenbuf
+ 0001:D6B3       __wsetsize
+ 0004:05F0       __wsfile
+ 0001:D6B3       __wterm
+ 0001:D6B3       __wwrite
+ 0004:05A6       ___aDBrterr
+ 0004:05A4       ___aDBswpflg
+ 0004:0604       ___argc
+ 0004:0606       ___argv
+ 0001:A066       ___ExportedStub
+
+  Address         Publics by Value
+
+ 0000:0000  Imp  SETWINDOWORG         (GDI.11)
+ 0000:0000  Imp  OFFSETRECT           (USER.77)
+ 0000:0000  Imp  INFLATERECT          (USER.78)
+ 0000:0000  Unr  ?InsertAfter@CPtrList@@RECPEXPEX0@Z
+ 0000:0000  Imp  GETSUBMENU           (USER.159)
+ 0000:0000  Imp  MOVETO               (GDI.20)
+ 0000:0000  Imp  INTERSECTCLIPRECT    (GDI.22)
+ 0000:0000  Imp  GETKEYSTATE          (USER.106)
+ 0000:0000  Imp  SETFOCUS             (USER.22)
+ 0000:0000  Imp  GETLASTACTIVEPOPUP   (USER.287)
+ 0000:0000  Imp  GETPROCADDRESS       (KERNEL.50)
+ 0000:0000  Imp  _LCLOSE              (KERNEL.81)
+ 0000:0000  Imp  _LREAD               (KERNEL.82)
+ 0000:0000  Imp  _LWRITE              (KERNEL.86)
+ 0000:0000  Imp  LOADBITMAP           (USER.175)
+ 0000:0000  Imp  ENDPAINT             (USER.40)
+ 0000:0000  Imp  ANSINEXT             (USER.472)
+ 0000:0000  Imp  GETCLIENTRECT        (USER.33)
+ 0000:0000  Unr  ?RemoveAt@CPtrList@@RECXPEX@Z
+ 0000:0000  Imp  CREATEHATCHBRUSH     (GDI.58)
+ 0000:0000  Imp  SETTEXTCOLOR         (GDI.9)
+ 0000:0000  Imp  MULDIV               (GDI.128)
+ 0000:0000  Imp  TRANSLATEMESSAGE     (USER.113)
+ 0000:0000  Imp  GETMENUCHECKMARKDIMENSIONS (USER.417)
+ 0000:0000  Imp  INITAPP              (USER.5)
+ 0000:0000  Imp  GETTEXTEXTENT        (GDI.91)
+ 0000:0000  Imp  DELETEOBJECT         (GDI.69)
+ 0000:0000  Imp  SETMAPPERFLAGS       (GDI.349)
+ 0000:0000  Imp  GLOBALFREE           (KERNEL.17)
+ 0000:0000  Imp  SETWINDOWSHOOK       (USER.121)
+ 0000:0000  Imp  SELECTCLIPRGN        (GDI.44)
+ 0000:0000  Imp  DESTROYWINDOW        (USER.53)
+ 0000:0000  Unr  ??0CBrush@@REC@HK@Z
+ 0000:0000  Imp  DESTROYMENU          (USER.152)
+ 0000:0000  Imp  UPDATEWINDOW         (USER.124)
+ 0000:0000  Imp  ENDDIALOG            (USER.88)
+ 0000:0000  Imp  ADJUSTWINDOWRECT     (USER.102)
+ 0000:0000  Imp  SETSCROLLRANGE       (USER.64)
+ 0000:0000  Unr  ?CenterWindow@CWnd@@RECXPEV1@@Z
+ 0000:0000  Imp  GETSCROLLRANGE       (USER.65)
+ 0000:0000  Imp  LOCKSEGMENT          (KERNEL.23)
+ 0000:0000  Unr  ?GetOpenDocumentCount@CWinApp@@RECHXZ
+ 0000:0000  Unr  ?SetROP2@CDC@@RECHH@Z
+ 0000:0000  Unr  ?IntersectClipRect@CDC@@RECHHHHH@Z
+ 0000:0000  Imp  WRITEPRIVATEPROFILESTRING (KERNEL.129)
+ 0000:0000  Imp  ENDDOC               (GDI.378)
+ 0000:0000  Unr  ?SetStretchBltMode@CDC@@RECHH@Z
+ 0000:0000  Unr  ?DDV_MinMaxUInt@@ZCXPAVCDataExchange@@III@Z
+ 0000:0000  Unr  ?SetWindowOrg@CDC@@REC?EVCPoint@@HH@Z
+ 0000:0000  Imp  DEFWINDOWPROC        (USER.107)
+ 0000:0000  Unr  ??0CBrush@@REC@PEVCBitmap@@@Z
+ 0000:0000  Imp  GETFILETITLE         (COMMDLG.27)
+ 0000:0000  Imp  GETNEXTDLGTABITEM    (USER.228)
+ 0000:0000  Unr  ?EndDoc@CDC@@RECHXZ
+ 0000:0000  Imp  DIALOGBOXINDIRECT    (USER.218)
+ 0000:0000  Unr  ?FindOneOf@CString@@RFCHPFD@Z
+ 0000:0000  Imp  GETCURRENTTASK       (KERNEL.36)
+ 0000:0000  Imp  GRAYSTRING           (USER.185)
+ 0000:0000  Imp  GETWINDOW            (USER.262)
+ 0000:0000  Imp  LOCALLOCK            (KERNEL.8)
+ 0000:0000  Unr  ?AfxExtractSubString@@ZCHAEVCString@@PFDHD@Z
+ 0000:0000  Imp  GETPARENT            (USER.46)
+ 0000:0000  Unr  ?Attach@CMenu@@RECHPBUHMENU__@@@Z
+ 0000:0000  Imp  RELEASEDC            (USER.68)
+ 0000:0000  Imp  FATALEXIT            (KERNEL.1)
+ 0000:0000  Unr  ?CreateIndirect@CDialog@@JECHPFXPEVCWnd@@@Z
+ 0000:0000  Imp  OFFSETWINDOWORG      (GDI.15)
+ 0000:0000  Unr  ?MoveTo@CDC@@REC?EVCPoint@@HH@Z
+ 0000:0000  Imp  CTL3DREGISTER        (CTL3DV2.12)
+ 0000:0000  Unr  ?OemToAnsi@CString@@RECXXZ
+ 0000:0000  Imp  EXCLUDECLIPRECT      (GDI.21)
+ 0000:0000  Imp  GETNEXTWINDOW        (USER.230)
+ 0000:0000  Imp  OEMTOANSI            (KEYBOARD.6)
+ 0000:0000  Unr  ?SetBkMode@CDC@@RECHH@Z
+ 0000:0000  Imp  MOVEWINDOW           (USER.56)
+ 0000:0000  Imp  SETABORTPROC         (GDI.381)
+ 0000:0000  Unr  ?SetTextJustification@CDC@@RECHHH@Z
+ 0000:0000  Imp  DELETEMENU           (USER.413)
+ 0000:0000  Unr  ?Create@CButton@@RECHPFDKAFUtagRECT@@PEVCWnd@@I@Z
+ 0000:0000  Imp  BEGINDEFERWINDOWPOS  (USER.259)
+ 0000:0000  Imp  OFFSETCLIPRGN        (GDI.32)
+ 0000:0000  Imp  GETCLIPBOX           (GDI.77)
+ 0000:0000  Unr  ?StartDoc@CDC@@RECHPFD@Z
+ 0000:0000  Imp  DISPATCHMESSAGE      (USER.114)
+ 0000:0000  Unr  ?Create@CEdit@@RECHKAFUtagRECT@@PEVCWnd@@I@Z
+ 0000:0000  Unr  ?DDV_MinMaxInt@@ZCXPAVCDataExchange@@HHH@Z
+ 0000:0000  Unr  ?DDX_Text@@ZCXPAVCDataExchange@@HAEJ@Z
+ 0000:0000  Imp  SCALEWINDOWEXT       (GDI.16)
+ 0000:0000  Unr  ?_AfxLocalFree@@ZCXPEX@Z
+ 0000:0000  Unr  ?Create@CScrollBar@@RECHKAFUtagRECT@@PEVCWnd@@I@Z
+ 0000:0000  Unr  ?DDX_Text@@ZCXPAVCDataExchange@@HAEK@Z
+ 0000:0000  Imp  SETWINDOWPOS         (USER.232)
+ 0000:0000  Unr  ?DDX_Text@@ZCXPAVCDataExchange@@HAEH@Z
+ 0000:0000  Imp  DOS3CALL             (KERNEL.102)
+ 0000:0000  Unr  ?DDX_Text@@ZCXPAVCDataExchange@@HAEI@Z
+ 0000:0000  Unr  ?DDX_Text@@ZCXPAVCDataExchange@@HAEE@Z
+ 0000:0000  Unr  ?SetPolyFillMode@CDC@@RECHH@Z
+ 0000:0000  Unr  ??YCString@@RECAFV0@D@Z
+ 0000:0000  Imp  GETFOCUS             (USER.23)
+ 0000:0000  Imp  FREERESOURCE         (KERNEL.63)
+ 0000:0000  Imp  CALLWINDOWPROC       (USER.122)
+ 0000:0000  Unr  ??0CClientDC@@REC@PEVCWnd@@@Z
+ 0000:0000  Imp  GETMENU              (USER.157)
+ 0000:0000  Imp  GETOBJECT            (GDI.82)
+ 0000:0000  Imp  TEXTOUT              (GDI.33)
+ 0000:0000  Imp  UNHOOKWINDOWSHOOKEX  (USER.292)
+ 0000:0000  Unr  ?SetScrollRange@CWnd@@RECXHHHH@Z
+ 0000:0000  Unr  ?TrackPopupMenu@CMenu@@RECHIHHPEVCWnd@@PFUtagRECT@@@Z
+ 0000:0000  Unr  ?SetTextCharacterExtra@CDC@@RECHH@Z
+ 0000:0000  Unr  ?DPtoLP@CDC@@RFCXPEUtagSIZE@@@Z
+ 0000:0000  Imp  GETMENUITEMCOUNT     (USER.263)
+ 0000:0000  Imp  GETSTOCKOBJECT       (GDI.87)
+ 0000:0000  Imp  __AHINCR             (KERNEL.114)
+ 0000:0000  Imp  LSTRCMP              (USER.430)
+ 0000:0000  Imp  __WINFLAGS           (KERNEL.178)
+ 0000:0000  Unr  ?SetAbortProc@CDC@@RECHP7CHPBUHDC__@@H@Z@Z
+ 0000:0000  Imp  LOADICON             (USER.174)
+ 0000:0000  Unr  ?ExcludeClipRect@CDC@@RECHHHHH@Z
+ 0000:0000  Imp  WVSPRINTF            (USER.421)
+ 0000:0000  Imp  BITBLT               (GDI.34)
+ 0000:0000  Imp  SETVIEWPORTORG       (GDI.13)
+ 0000:0000  Imp  PAINTRGN             (GDI.43)
+ 0000:0000  Unr  ?OffsetWindowOrg@CDC@@REC?EVCPoint@@HH@Z
+ 0000:0000  Imp  SCREENTOCLIENT       (USER.29)
+ 0000:0000  Imp  LSTRCAT              (KERNEL.89)
+ 0000:0000  Imp  LINETO               (GDI.19)
+ 0000:0000  Imp  RECTVISIBLE          (GDI.104)
+ 0000:0000  Imp  SETWINDOWTEXT        (USER.37)
+ 0000:0000  Unr  ?ExcludeClipRect@CDC@@RECHPFUtagRECT@@@Z
+ 0000:0000  Imp  SCALEVIEWPORTEXT     (GDI.18)
+ 0000:0000  Imp  GETMODULEHANDLE      (KERNEL.47)
+ 0000:0000  Imp  ENDDEFERWINDOWPOS    (USER.261)
+ 0000:0000  Imp  CREATEBITMAP         (GDI.48)
+ 0000:0000  Imp  GETWINDOWEXT         (GDI.96)
+ 0000:0000  Unr  ?SelectClipRgn@CDC@@RECHPEVCRgn@@@Z
+ 0000:0000  Imp  SENDDLGITEMMESSAGE   (USER.101)
+ 0000:0000  Unr  ?AfxRegisterWndClass@@ZCPFDIPBUHICON__@@PBUHBRUSH__@@0@Z
+ 0000:0000  Imp  DEFERWINDOWPOS       (USER.260)
+ 0000:0000  Unr  ?_AfxLocalAlloc@@ZCPEXIII@Z
+ 0000:0000  Imp  SETWINDOWSHOOKEX     (USER.291)
+ 0000:0000  Imp  LOCALUNLOCK          (KERNEL.9)
+ 0000:0000  Imp  SETMENUITEMBITMAPS   (USER.418)
+ 0000:0000  Unr  ??YCString@@RECAFV0@AFV0@@Z
+ 0000:0000  Unr  ??0CDialog@@JEC@XZ
+ 0000:0000  Unr  ?AfxSetTerminate@@ZCP7CXXZP7CXXZ@Z
+ 0000:0000  Imp  CREATERECTRGNINDIRECT (GDI.65)
+ 0000:0000  Imp  SETMAPMODE           (GDI.3)
+ 0000:0000  Imp  SETWINDOWEXT         (GDI.12)
+ 0000:0000  Imp  GETCLASSINFO         (USER.404)
+ 0000:0000  Unr  ?IsSerializable@CObject@@RFCHXZ
+ 0000:0000  Imp  EXTTEXTOUT           (GDI.351)
+ 0000:0000  Imp  GETPROFILESTRING     (KERNEL.58)
+ 0000:0000  Imp  THROW                (KERNEL.56)
+ 0000:0000  Imp  SETCURSOR            (USER.69)
+ 0000:0000  Imp  SETBKMODE            (GDI.2)
+ 0000:0000  Unr  ?EndPage@CDC@@RECHXZ
+ 0000:0000  Imp  SETTEXTJUSTIFICATION (GDI.10)
+ 0000:0000  Imp  LOADCURSOR           (USER.173)
+ 0000:0000  Imp  SELECTOBJECT         (GDI.45)
+ 0000:0000  Imp  CHECKMENUITEM        (USER.154)
+ 0000:0000  Imp  PTVISIBLE            (GDI.103)
+ 0000:0000  Imp  GETDOSENVIRONMENT    (KERNEL.131)
+ 0000:0000  Imp  GETMESSAGEPOS        (USER.119)
+ 0000:0000  Unr  ?RestoreWaitCursor@CCmdTarget@@RECXXZ
+ 0000:0000  Unr  ?LoadStdProfileSettings@CWinApp@@JECXXZ
+ 0000:0000  Imp  SENDMESSAGE          (USER.111)
+ 0000:0000  Imp  SETSCROLLPOS         (USER.62)
+ 0000:0000  Unr  ?_AfxStrCpy@@ZCXPEDPFDI@Z
+ 0000:0000  Imp  SHOWOWNEDPOPUPS      (USER.265)
+ 0000:0000  Imp  SETBKCOLOR           (GDI.1)
+ 0000:0000  Imp  ISDBCSLEADBYTE       (KERNEL.207)
+ 0000:0000  Unr  ?AfxOleSetUserCtrl@@ZCXH@Z
+ 0000:0000  Imp  OPENFILE             (KERNEL.74)
+ 0000:0000  Unr  ?MessageBox@CWnd@@RECHPFD0I@Z
+ 0000:0000  Unr  ?AddTail@CPtrList@@RECXPEV1@@Z
+ 0000:0000  Imp  LOCALFREE            (KERNEL.7)
+ 0000:0000  Imp  SELECTPALETTE        (USER.282)
+ 0000:0000  Unr  ?Create@CStatic@@RECHPFDKAFUtagRECT@@PEVCWnd@@I@Z
+ 0000:0000  Unr  ?AnsiToOem@CString@@RECXXZ
+ 0000:0000  Imp  LSTRCPY              (KERNEL.88)
+ 0000:0000  Unr  ?GetScrollRange@CWnd@@RFCXHPEH0@Z
+ 0000:0000  Unr  ??0CPen@@REC@HHK@Z
+ 0000:0000  Imp  GLOBALUNLOCK         (KERNEL.19)
+ 0000:0000  Unr  ?DDX_CBStringExact@@ZCXPAVCDataExchange@@HAEVCString@@@Z
+ 0000:0000  Imp  BEGINPAINT           (USER.39)
+ 0000:0000  Imp  PEEKMESSAGE          (USER.109)
+ 0000:0000  Unr  ??H@ZC?EVCString@@AFV0@PFD@Z
+ 0000:0000  Imp  SETROP2              (GDI.4)
+ 0000:0000  Imp  ISDLGBUTTONCHECKED   (USER.98)
+ 0000:0000  Unr  ?DDX_Radio@@ZCXPAVCDataExchange@@HAEH@Z
+ 0000:0000  Unr  ?AddHead@CPtrList@@RECXPEV1@@Z
+ 0000:0000  Imp  GLOBALALLOC          (KERNEL.15)
+ 0000:0000  Imp  ISWINDOWVISIBLE      (USER.49)
+ 0000:0000  Imp  GETSYSTEMMETRICS     (USER.179)
+ 0000:0000  Imp  DRAWTEXT             (USER.85)
+ 0000:0000  Unr  ?GetCurrentMessage@CWnd@@LCPFUtagMSG@@XZ
+ 0000:0000  Imp  GETTICKCOUNT         (USER.13)
+ 0000:0000  Imp  CREATEWINDOWEX       (USER.452)
+ 0000:0000  Imp  SETTEXTCHARACTEREXTRA (GDI.8)
+ 0000:0000  Imp  CATCH                (KERNEL.55)
+ 0000:0000  Imp  INSERTMENU           (USER.410)
+ 0000:0000  Imp  GETDLGCTRLID         (USER.277)
+ 0000:0000  Imp  CREATEFONTINDIRECT   (GDI.57)
+ 0000:0000  Imp  ANSIUPPER            (USER.431)
+ 0000:0000  Unr  ?StartPage@CDC@@RECHXZ
+ 0000:0000  Unr  ?DDV_MinMaxByte@@ZCXPAVCDataExchange@@EEE@Z
+ 0000:0000  Abs  __wiobused
+ 0000:0000  Imp  CREATECOMPATIBLEDC   (GDI.52)
+ 0000:0000  Unr  ??H@ZC?EVCString@@PFDAFV0@@Z
+ 0000:0000  Imp  SETACTIVEWINDOW      (USER.59)
+ 0000:0000  Imp  MESSAGEBOX           (USER.1)
+ 0000:0000  Imp  ANSITOOEM            (KEYBOARD.5)
+ 0000:0000  Imp  VALIDATERECT         (USER.127)
+ 0000:0000  Imp  GLOBALSIZE           (KERNEL.20)
+ 0000:0000  Imp  INITTASK             (KERNEL.91)
+ 0000:0000  Imp  CTL3DAUTOSUBCLASS    (CTL3DV2.16)
+ 0000:0000  Imp  ANSILOWER            (USER.432)
+ 0000:0000  Unr  ?RemoveTail@CPtrList@@RECPEXXZ
+ 0000:0000  Imp  SETVIEWPORTEXT       (GDI.14)
+ 0000:0000  Imp  GETDC                (USER.66)
+ 0000:0000  Imp  GETDESKTOPWINDOW     (USER.286)
+ 0000:0000  Unr  ?AbortDoc@CDC@@RECHXZ
+ 0000:0000  Imp  STARTPAGE            (GDI.379)
+ 0000:0000  Unr  ?SetTextAlign@CDC@@RECII@Z
+ 0000:0000  Unr  ??0CWindowDC@@REC@PEVCWnd@@@Z
+ 0000:0000  Imp  CREATEPATTERNBRUSH   (GDI.60)
+ 0000:0000  Imp  LOADRESOURCE         (KERNEL.61)
+ 0000:0000  Imp  GETDLGITEM           (USER.91)
+ 0000:0000  Unr  ?GetRoutingView@CCmdTarget@@JECPEVCView@@XZ
+ 0000:0000  Imp  GLOBALDELETEATOM     (USER.269)
+ 0000:0000  Unr  ?IntersectClipRect@CDC@@RECHPFUtagRECT@@@Z
+ 0000:0000  Imp  GETDIALOGBASEUNITS   (USER.243)
+ 0000:0000  Imp  GETVIEWPORTEXT       (GDI.94)
+ 0000:0000  Imp  GETWINDOWTEXT        (USER.36)
+ 0000:0000  Unr  ?UpdateDialogControls@CWnd@@RECXPEVCCmdTarget@@H@Z
+ 0000:0000  Unr  ?GetCheckedRadioButton@CWnd@@RECHHH@Z
+ 0000:0000  Unr  ?DDV_MinMaxDWord@@ZCXPAVCDataExchange@@KKK@Z
+ 0000:0000  Imp  RESTOREDC            (GDI.39)
+ 0000:0000  Unr  ?InsertBefore@CPtrList@@RECPEXPEX0@Z
+ 0000:0000  Unr  ?InitModalIndirect@CDialog@@RECHPBX@Z
+ 0000:0000  Imp  CTL3DUNREGISTER      (CTL3DV2.13)
+ 0000:0000  Imp  GLOBALREALLOC        (KERNEL.16)
+ 0000:0000  Imp  CREATESOLIDBRUSH     (GDI.66)
+ 0000:0000  Imp  GLOBALLOCK           (KERNEL.18)
+ 0000:0000  Unr  ?Find@CString@@RFCHD@Z
+ 0000:0000  Imp  SAVEDC               (GDI.30)
+ 0000:0000  Imp  GETSCROLLPOS         (USER.63)
+ 0000:0000  Imp  LSTRCMPI             (USER.471)
+ 0000:0000  Unr  ?SetMapperFlags@CDC@@RECKK@Z
+ 0000:0000  Imp  SETPOLYFILLMODE      (GDI.6)
+ 0000:0000  Imp  CREATEDIALOGINDIRECT (USER.219)
+ 0000:0000  Imp  CREATEDIALOG         (USER.89)
+ 0000:0000  Imp  LOCKRESOURCE         (KERNEL.62)
+ 0000:0000  Imp  _LOPEN               (KERNEL.85)
+ 0000:0000  Imp  GETDEVICECAPS        (GDI.80)
+ 0000:0000  Unr  ?DDX_LBIndex@@ZCXPAVCDataExchange@@HAEH@Z
+ 0000:0000  Imp  SETSTRETCHBLTMODE    (GDI.7)
+ 0000:0000  Imp  GETCLASSNAME         (USER.58)
+ 0000:0000  Imp  STARTDOC             (GDI.377)
+ 0000:0000  Unr  ?_AfxCancelModes@@ZCXPBUHWND__@@@Z
+ 0000:0000  Imp  GETWINDOWRECT        (USER.32)
+ 0000:0000  Imp  FINDRESOURCE         (KERNEL.60)
+ 0000:0000  Unr  ??0CBrush@@REC@K@Z
+ 0000:0000  Unr  ?SelectPalette@CDC@@RECPEVCPalette@@PEV2@H@Z
+ 0000:0000  Imp  GETNEXTDLGGROUPITEM  (USER.227)
+ 0000:0000  Imp  SETERRORMODE         (KERNEL.107)
+ 0000:0000  Unr  ?RepositionBars@CWnd@@RECXIIIIPEUtagRECT@@PFU2@@Z
+ 0000:0000  Imp  GETTOPWINDOW         (USER.229)
+ 0000:0000  Imp  UNHOOKWINDOWSHOOK    (USER.234)
+ 0000:0000  Unr  ?SelectObject@CDC@@RECHPEVCRgn@@@Z
+ 0000:0000  Unr  ?DeleteDC@CDC@@RECHXZ
+ 0000:0000  Imp  ISDIALOGMESSAGE      (USER.90)
+ 0000:0000  Unr  ?AfxThrowLast@@ZCXXZ
+ 0000:0000  Unr  ??H@ZC?EVCString@@AFV0@0@Z
+ 0000:0000  Imp  TABBEDTEXTOUT        (USER.196)
+ 0000:0000  Imp  EXITWINDOWSEXEC      (USER.246)
+ 0000:0000  Imp  GETWINDOWLONG        (USER.135)
+ 0000:0000  Imp  LOADSTRING           (USER.176)
+ 0000:0000  Imp  GETCAPTURE           (USER.236)
+ 0000:0000  Unr  ?IsFrameWnd@CFrameWnd@@VFCHXZ
+ 0000:0000  Imp  GETMESSAGE           (USER.108)
+ 0000:0000  Unr  ?AfxOleCanExitApp@@ZCHXZ
+ 0000:0000  Imp  OFFSETVIEWPORTORG    (GDI.17)
+ 0000:0000  Imp  SETWINDOWLONG        (USER.136)
+ 0000:0000  Imp  GETVERSION           (KERNEL.3)
+ 0000:0000  Unr  ?Create@CListBox@@RECHKAFUtagRECT@@PEVCWnd@@I@Z
+ 0000:0000  Imp  ENDPAGE              (GDI.380)
+ 0000:0000  Imp  _wsprintf            (USER.420)
+ 0000:0000  Imp  ISWINDOWENABLED      (USER.35)
+ 0000:0000  Imp  SETTEXTALIGN         (GDI.346)
+ 0000:0000  Unr  ?OffsetClipRgn@CDC@@RECHUtagSIZE@@@Z
+ 0000:0000  Unr  ?LPtoDP@CDC@@RFCXPEUtagSIZE@@@Z
+ 0000:0000  Unr  ?Create@CComboBox@@RECHKAFUtagRECT@@PEVCWnd@@I@Z
+ 0000:0000  Imp  DIALOGBOX            (USER.87)
+ 0000:0000  Imp  DEFHOOKPROC          (USER.235)
+ 0000:0000  Imp  LSTRLEN              (KERNEL.90)
+ 0000:0000  Unr  ?DDX_CBIndex@@ZCXPAVCDataExchange@@HAEH@Z
+ 0000:0000  Imp  CALLNEXTHOOKEX       (USER.293)
+ 0000:0000  Imp  EQUALRECT            (USER.244)
+ 0000:0000  Imp  GETMENUITEMID        (USER.264)
+ 0000:0000  Imp  ESCAPE               (GDI.38)
+ 0000:0000  Imp  ENABLEMENUITEM       (USER.155)
+ 0000:0000  Imp  GETSYSCOLOR          (USER.180)
+ 0000:0000  Unr  ?_AfxLocalLock@@ZCPEDPEX@Z
+ 0000:0000  Imp  MODIFYMENU           (USER.414)
+ 0000:0000  Imp  LOCALALLOC           (KERNEL.5)
+ 0000:0000  Imp  WAITEVENT            (KERNEL.30)
+ 0000:0000  Unr  ?Find@CPtrList@@RFCPEXPEX0@Z
+ 0000:0000  Imp  DELETEDC             (GDI.68)
+ 0000:0000  Unr  ??0CDialog@@REC@PFDPEVCWnd@@@Z
+ 0000:0000  Imp  WINHELP              (USER.171)
+ 0000:0000  Imp  ENABLEWINDOW         (USER.34)
+ 0000:0000  Unr  ?SetScrollPos@CWnd@@RECHHHH@Z
+ 0000:0000  Unr  ?HideApplication@CWinApp@@RECXXZ
+ 0000:0000  Unr  ?LineTo@CDC@@RECHHH@Z
+ 0000:0000  Imp  COPYRECT             (USER.74)
+ 0000:0000  Unr  ?CloseAllDocuments@CWinApp@@RECXH@Z
+ 0000:0000  Unr  ?_AfxLocalUnlock@@ZCHPEX@Z
+ 0000:0000  Unr  ?DDX_LBStringExact@@ZCXPAVCDataExchange@@HAEVCString@@@Z
+ 0000:0000  Unr  ?SelectObject@CDC@@RECPEVCPen@@PEV2@@Z
+ 0000:0000  Imp  CREATEBRUSHINDIRECT  (GDI.50)
+ 0000:0000  Imp  REGISTERCLASS        (USER.57)
+ 0000:0000  Imp  POSTQUITMESSAGE      (USER.6)
+ 0000:0000  Imp  GETMODULEFILENAME    (KERNEL.49)
+ 0000:0000  Unr  ?SubclassDlgItem@CWnd@@RECHIPEV1@@Z
+ 0000:0000  Unr  ?OffsetClipRgn@CDC@@RECHHH@Z
+ 0000:0000  Imp  TRACKPOPUPMENU       (USER.416)
+ 0000:0000  Imp  GETWINDOWDC          (USER.67)
+ 0000:0000  Imp  SHOWWINDOW           (USER.42)
+ 0000:0000  Unr  ?GetScrollPos@CWnd@@RFCHH@Z
+ 0000:0000  Imp  ABORTDOC             (GDI.382)
+ 0000:0000  Imp  CREATEPEN            (GDI.61)
+ 0000:0000  Unr  ?_AfxIsDescendant@@ZCHPBUHWND__@@0@Z
+ 0000:0000  Imp  GETPRIVATEPROFILESTRING (KERNEL.128)
+ 0000:0000  Imp  SETMESSAGEQUEUE      (USER.266)
+ 0000:0000  Imp  FATALAPPEXIT         (KERNEL.137)
+ 0000:0000  Imp  GETWINDOWTEXTLENGTH  (USER.38)
+ 0000:0000  Imp  GETPRIVATEPROFILEINT (KERNEL.127)
+ 0000:0000  Imp  GETWINDOWSDIRECTORY  (KERNEL.134)
+ 0000:0000  Unr  ?FindIndex@CPtrList@@RFCPEXH@Z
+ 0000:0000  Imp  GETMESSAGETIME       (USER.120)
+ 0000:0000  Unr  ?AddDocTemplate@CWinApp@@RECXPEVCDocTemplate@@@Z
+ 0000:0000  Imp  SHOWSCROLLBAR        (USER.267)
+ 0000:0000  Unr  ?DDV_MinMaxLong@@ZCXPAVCDataExchange@@JJJ@Z
+ 0000:0001  Abs  __sized
+ 0000:0001  Abs  __sizec
+ 0000:0006  Abs  pLocalHeap
+ 0000:0008  Abs  pAtomTable
+ 0000:000A  Abs  pStackTop
+ 0000:000C  Abs  pStackMin
+ 0000:000E  Abs  pStackBot
+ 0000:00FF  Abs  __charmax
+ 0000:9876  Abs  __acrtused
+ 0000:9876  Abs  __acrtmsg
+ 0000:9876  Abs  __fptaskdata
+ 0000:D6D6  Abs  __aDBused
+ 0000:D6D6  Abs  __aDBdoswp
+ 0001:0000       ?_messageEntries@CWinmxmzApp@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:0014       ?_messageEntries@CCustomOpts@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:0050       ?_messageEntries@CExit@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:005A       ?_messageEntries@CWelcome@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:006E       ?_messageEntries@CSelectMode@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:00A0       ?_messageEntries@CSelectMBoot@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:00B4       ?_messageEntries@CEndPhase1@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:00D2       ?_messageEntries@CSummary@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:00FA       _get_bootdrive
+ 0001:018A       __dmalloc
+ 0001:01CB       __drealloc
+ 0001:0218       __dfree
+ 0001:024A       _GETXMS_VEC
+ 0001:027E       __farfopen
+ 0001:02AC       __dstrdup
+ 0001:02F0       _fnDOS
+ 0001:0356       _fnShell
+ 0001:0776       _fnMenuItem
+ 0001:0990       _find_sect
+ 0001:09E4       _find_ownsect
+ 0001:0A0E       _is_menusect
+ 0001:0A6E       _order_menus
+ 0001:0B72       _create_line
+ 0001:0BBE       _dup_line
+ 0001:0C3A       _find_first
+ 0001:0C9C       _check_reloc
+ 0001:0D3A       _config_free
+ 0001:0DC4       _read_config
+ 0001:1064       _menu_parse
+ 0001:1322       _check_include
+ 0001:15EA       _check_common
+ 0001:1880       _config_parse
+ 0001:1AE0       _set_current
+ 0001:1B34       _qmaxpres
+ 0001:1BCC       _qmovpres
+ 0001:1CD6       _CopyFile
+ 0001:1E22       ??0CSplashDlg@@REC@PEVCWnd@@@Z
+ 0001:1E74       ?_messageEntries@CSplashDlg@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:1E7E       ?DoDataExchange@CSplashDlg@@NECXPAVCDataExchange@@@Z
+ 0001:1E9C       ?GetMessageMap@CSplashDlg@@NFCPAUAFX_MSGMAP@@XZ
+ 0001:1EA2       ?DrawItem@CSplashBtn@@VECXPEUtagDRAWITEMSTRUCT@@@Z
+ 0001:202C       ?LoadBitmap@CSplashBtn@@RECXH@Z
+ 0001:2068       ?OnInitDialog@CSplashDlg@@NECHXZ
+ 0001:20B8       ?CenterDialog@@ZAXPEVCWnd@@@Z
+ 0001:216C       ??0CBlue@@REC@PEVCWnd@@P7CPEV1@XZ@Z
+ 0001:21BC       ?_messageEntries@CBlue@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:21DA       ?DoDataExchange@CBlue@@NECXPAVCDataExchange@@@Z
+ 0001:21DE       ?GetMessageMap@CBlue@@NFCPAUAFX_MSGMAP@@XZ
+ 0001:21E4       ?OnInitDialog@CBlue@@NECHXZ
+ 0001:223E       ?OnPaint@CBlue@@JECXXZ
+ 0001:23AA       ?OnLButtonDown@CBlue@@JECXIVCPoint@@@Z
+ 0001:23F8       ??_9@$BHM@H
+ 0001:2406       ??_9@$BHI@H
+ 0001:2414       ?PtVisible@CDC@@VFCHHH@Z
+ 0001:242E       ?RectVisible@CDC@@VFCHPFUtagRECT@@@Z
+ 0001:2448       ?TextOut@CDC@@VECHHHPFDH@Z
+ 0001:246A       ?ExtTextOut@CDC@@VECHHHIPFUtagRECT@@PFDIPEH@Z
+ 0001:249C       ?TabbedTextOut@CDC@@VEC?EVCSize@@HHPFDHHPEHH@Z
+ 0001:24DE       ?DrawText@CDC@@VECHPFDHPEUtagRECT@@I@Z
+ 0001:2504       ?GrayString@CDC@@VECHPEVCBrush@@P7CHPBUHDC__@@JH@ZJHHHHH@Z
+ 0001:254C       ?Escape@CDC@@VECHHHPFDPEX@Z
+ 0001:257F       ?_afxWndFrameOrView@@3QFDF
+ 0001:258E       ?_afxWndMDIFrame@@3QFDF
+ 0001:259A       ?_afxWndControlBar@@3QFDF
+ 0001:25A8       ?_messageEntries@CWnd@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:2616       ?_afxWnd@@3QFDF
+ 0001:2626       ?_messageEntries@CDialog@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:2673       ?dispatchMap@CCmdTarget@@1UAFX_DISPMAP@@E
+ 0001:267B       ?_dispatchEntries@CCmdTarget@@0QEUAFX_DISPMAP_ENTRY@@E
+ 0001:26BB       ?interfaceMap@CCmdTarget@@1UAFX_INTERFACEMAP@@E
+ 0001:26C3       ?_interfaceEntries@CCmdTarget@@0QEUAFX_INTERFACEMAP_ENTRY@@E
+ 0001:26CF       ?_messageEntries@CCmdTarget@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:2700       ?GetRuntimeClass@CObject@@VFCPEUCRuntimeClass@@XZ
+ 0001:2708       ?IsKindOf@CObject@@RFCHPFUCRuntimeClass@@@Z
+ 0001:2750       ?AssertValid@CObject@@VFCXXZ
+ 0001:2754       ?Dump@CObject@@VFCXAEVCDumpContext@@@Z
+ 0001:2758       ?CreateObject@CRuntimeClass@@RECPEVCObject@@XZ
+ 0001:27F0       ?ConstructObject@CRuntimeClass@@RECHPEX@Z
+ 0001:281A       ??0AFX_CLASSINIT@@RAC@PEUCRuntimeClass@@@Z
+ 0001:2842       ?AfxNewHandler@@ZAHI@Z
+ 0001:2882       ?Init@CString@@JECXXZ
+ 0001:28A2       ?SafeDelete@CString@@LAXPED@Z
+ 0001:28C0       ??0CString@@REC@XZ
+ 0001:28DE       ??0CString@@REC@AFV0@@Z
+ 0001:290C       ?AllocBuffer@CString@@JECXH@Z
+ 0001:2954       ?Empty@CString@@RECXXZ
+ 0001:297C       ??1CString@@REC@XZ
+ 0001:2992       ?AllocCopy@CString@@JFCXAEV1@HHH@Z
+ 0001:29EC       ??0CString@@REC@PFD@Z
+ 0001:2A50       ?AssignCopy@CString@@JECXHPFD@Z
+ 0001:2AA4       ??4CString@@RECAFV0@AFV0@@Z
+ 0001:2AD4       ??4CString@@RECAFV0@PFD@Z
+ 0001:2B16       ?ConcatCopy@CString@@JECXHPFDH0@Z
+ 0001:2B78       ?GetBuffer@CString@@RECPEDH@Z
+ 0001:2BEE       ?ReleaseBuffer@CString@@RECXH@Z
+ 0001:2C22       ?GetBufferSetLength@CString@@RECPEDH@Z
+ 0001:2C5E       ?_AfxStrChr@@ZCPEDPFDD@Z
+ 0001:2D04       ??0CWnd@@REC@XZ
+ 0001:2D42       ??0CWnd@@BEC@PBUHWND__@@@Z
+ 0001:2D84       ?_AfxIsStackOK@@ZAHI@Z
+ 0001:2DA8       ?_AfxCallWndProc@@ZCJPEVCWnd@@PBUHWND__@@IIJ@Z
+ 0001:2EA8       ?Default@CWnd@@JECJXZ
+ 0001:2EE4       ?DeleteTempMap@CWnd@@TCXXZ
+ 0001:2EEE       ?FromHandle@CWnd@@TCPEV1@PBUHWND__@@@Z
+ 0001:2F00       ?FromHandlePermanent@CWnd@@TCPEV1@PBUHWND__@@@Z
+ 0001:2F26       ?Attach@CWnd@@RECHPBUHWND__@@@Z
+ 0001:2F60       ?Detach@CWnd@@RECPBUHWND__@@XZ
+ 0001:2F90       ?AfxWndProc@@ZCJPBUHWND__@@IIJ@Z
+ 0001:2FBC       ?_AfxSendMsgHook@@ZCJHIJ@Z
+ 0001:30A0       ?_AfxHookWindowCreate@@ZCXPEVCWnd@@@Z
+ 0001:30F2       ?_AfxUnhookWindowCreate@@ZCHXZ
+ 0001:312C       ?CreateEx@CWnd@@JECHKPFD0KHHHHPBUHWND__@@PBUHMENU__@@PED@Z
+ 0001:322A       ?PreCreateWindow@CWnd@@VECHAEUtagCREATESTRUCT@@@Z
+ 0001:324E       ?Create@CWnd@@VECHPFD0KAFUtagRECT@@PEV1@IPEUCCreateContext@@@Z
+ 0001:32C2       ??1CWnd@@VEC@XZ
+ 0001:3326       ?OnNcDestroy@CWnd@@JECXXZ
+ 0001:33BA       ?PostNcDestroy@CWnd@@NECXXZ
+ 0001:33BE       ?OnFinalRelease@CWnd@@VECXXZ
+ 0001:33E8       ?DestroyWindow@CWnd@@VECHXZ
+ 0001:3436       ?DefWindowProc@CWnd@@NECJIIJ@Z
+ 0001:349A       ?GetSuperWndProcAddr@CWnd@@NECPEP7CJPBUHWND__@@IIJ@ZXZ
+ 0001:34A2       ?PreTranslateMessage@CWnd@@VECHPEUtagMSG@@@Z
+ 0001:34A8       ?OnDrawItem@CWnd@@JECXHPEUtagDRAWITEMSTRUCT@@@Z
+ 0001:3510       ?OnCompareItem@CWnd@@JECHHPEUtagCOMPAREITEMSTRUCT@@@Z
+ 0001:3552       ?OnDeleteItem@CWnd@@JECXHPEUtagDELETEITEMSTRUCT@@@Z
+ 0001:35FE       ?OnMeasureItem@CWnd@@JECXHPEUtagMEASUREITEMSTRUCT@@@Z
+ 0001:369E       ?WinHelp@CWnd@@VECXKI@Z
+ 0001:378A       ?Construct@CWnd@@TCXPEX@Z
+ 0001:37B6       ?GetRuntimeClass@CWnd@@VFCPEUCRuntimeClass@@XZ
+ 0001:37BE       ?GetMessageMap@CWnd@@NFCPAUAFX_MSGMAP@@XZ
+ 0001:37C4       ?_AfxFindMessageEntry@@ZCPEUAFX_MSGMAP_ENTRY@@PEU1@II@Z
+ 0001:37FE       ?AfxResetMsgCache@@ZCXXZ
+ 0001:3810       ?WindowProc@CWnd@@NECJIIJ@Z
+ 0001:3BB0       ?OnCommand@CWnd@@NECHIJ@Z
+ 0001:3C26       ?GetParentFrame@CWnd@@RFCPEVCFrameWnd@@XZ
+ 0001:3CA2       ?GetTopLevelParent@CWnd@@RFCPEV1@XZ
+ 0001:3CE0       ?GetTopLevelFrame@CWnd@@RFCPEVCFrameWnd@@XZ
+ 0001:3D4E       ?GetDescendantWindow@CWnd@@TCPEV1@PBUHWND__@@HH@Z
+ 0001:3DD6       ?SendMessageToDescendants@CWnd@@TCXPBUHWND__@@IIJHH@Z
+ 0001:3E66       ?GetScrollBarCtrl@CWnd@@VFCPEVCScrollBar@@H@Z
+ 0001:3E6C       ?EnableScrollBarCtrl@CWnd@@RECXHH@Z
+ 0001:3EE8       ?_AfxRepositionWindow@@ZAXPEUAFX_SIZEPARENTPARAMS@@PBUHWND__@@PFUtagRECT@@@Z
+ 0001:3FA0       ?CalcWindowRect@CWnd@@VECXPEUtagRECT@@I@Z
+ 0001:3FC4       ?OnVBXEvent@CWnd@@RECJIJ@Z
+ 0001:3FF8       ?SendChildNotifyLastMsg@CWnd@@RECHPEJ@Z
+ 0001:4028       ?OnChildNotify@CWnd@@NECHIIJPEJ@Z
+ 0001:402E       ?OnParentNotify@CWnd@@JECXIJ@Z
+ 0001:406E       ?OnHScroll@CWnd@@JECXIIPEVCScrollBar@@@Z
+ 0001:409C       ?OnVScroll@CWnd@@JECXIIPEVCScrollBar@@@Z
+ 0001:40CA       ?OnCtlColor@CWnd@@JECPBUHBRUSH__@@PEVCDC@@PEV1@I@Z
+ 0001:40F6       ?UpdateData@CWnd@@RECHH@Z
+ 0001:419C       ??0CDataExchange@@RAC@PEVCWnd@@H@Z
+ 0001:41BE       ?ExecuteDlgInit@CWnd@@RECHPFD@Z
+ 0001:429E       ?IsFrameWnd@CWnd@@VFCHXZ
+ 0001:42A4       ?IsTracking@CFrameWnd@@RFCHXZ
+ 0001:4328       ??_GCWnd@@VECPEXI@Z
+ 0001:4354       ?AfxUnlockTempMaps@@ZCHXZ
+ 0001:44B4       ??0CHandleMap@@RAC@PEUCRuntimeClass@@IH@Z
+ 0001:44FC       ?FromHandle@CHandleMap@@RACPEVCObject@@PBX@Z
+ 0001:45C8       ?RemoveHandle@CHandleMap@@RACXPBX@Z
+ 0001:45DC       ?DeleteTemp@CHandleMap@@RACXXZ
+ 0001:4672       WINMAIN
+ 0001:470C       ?_AfxDlgProc@@ZCJPBUHWND__@@IIJ@Z
+ 0001:47FE       ?GetRuntimeClass@CDialog@@VFCPEUCRuntimeClass@@XZ
+ 0001:4806       ?GetMessageMap@CDialog@@NFCPAUAFX_MSGMAP@@XZ
+ 0001:480C       ?PreTranslateMessage@CDialog@@VECHPEUtagMSG@@@Z
+ 0001:4862       ?GetSuperWndProcAddr@CDialog@@VECPEP7CJPBUHWND__@@IIJ@ZXZ
+ 0001:486A       ?OnCmdMsg@CDialog@@VECHIHPEXPEUAFX_CMDHANDLERINFO@@@Z
+ 0001:492A       ??1CDialog@@VEC@XZ
+ 0001:495E       ?Create@CDialog@@JECHPFDPEVCWnd@@@Z
+ 0001:4A2E       ??0CDialog@@REC@IPEVCWnd@@@Z
+ 0001:4A9C       ?PreModal@CDialog@@JECPBUHWND__@@XZ
+ 0001:4AE0       ?PostModal@CDialog@@JECXXZ
+ 0001:4B06       ?DoModal@CDialog@@VECHXZ
+ 0001:4B70       ?_AfxHelpEnabled@@ZCHXZ
+ 0001:4C0C       ?OnSetFont@CDialog@@VECXPEVCFont@@@Z
+ 0001:4C10       ?OnInitDialog@CDialog@@VECHXZ
+ 0001:4C94       ?OnOK@CDialog@@NECXXZ
+ 0001:4CBE       ?OnCancel@CDialog@@NECXXZ
+ 0001:4CD4       ?OnCtlColor@CDialog@@JECPBUHBRUSH__@@PEVCDC@@PEVCWnd@@I@Z
+ 0001:4D3C       ?GrayCtlColor@CWnd@@TCHPBUHDC__@@PBUHWND__@@IPBUHBRUSH__@@K@Z
+ 0001:4DBA       ?OnCommandHelp@CDialog@@JECJIJ@Z
+ 0001:4E02       ?OnHelpHitTest@CDialog@@JECJIJ@Z
+ 0001:4E24       ??_GCDialog@@VECPEXI@Z
+ 0001:4E50       ?LoadString@CString@@RECHI@Z
+ 0001:4E88       ?_AfxLoadString@@ZCHIPED@Z
+ 0001:4EA4       ?_AfxIsDBCSLeadByte@@ZCHE@Z
+ 0001:4EFC       ?DeleteTempMap@CMenu@@TCXXZ
+ 0001:4F06       ?FromHandle@CMenu@@TCPEV1@PBUHMENU__@@@Z
+ 0001:4F18       ?Construct@CMenu@@TCXPEX@Z
+ 0001:4F52       ?GetRuntimeClass@CMenu@@VFCPEUCRuntimeClass@@XZ
+ 0001:4F5A       ?Detach@CMenu@@RECPBUHMENU__@@XZ
+ 0001:4F8A       ??1CMenu@@VEC@XZ
+ 0001:4FBA       ?DestroyMenu@CMenu@@RECHXZ
+ 0001:4FE2       ?DrawItem@CMenu@@VECXPEUtagDRAWITEMSTRUCT@@@Z
+ 0001:4FE6       ?MeasureItem@CMenu@@VECXPEUtagMEASUREITEMSTRUCT@@@Z
+ 0001:501E       ??_GCMenu@@VECPEXI@Z
+ 0001:5058       ?GetRuntimeClass@CCmdTarget@@VFCPEUCRuntimeClass@@XZ
+ 0001:5060       ??0CCmdTarget@@REC@XZ
+ 0001:50A2       ??1CCmdTarget@@VEC@XZ
+ 0001:51CA       ?OnCmdMsg@CCmdTarget@@VECHIHPEXPEUAFX_CMDHANDLERINFO@@@Z
+ 0001:52BC       ?BeginWaitCursor@CCmdTarget@@RECXXZ
+ 0001:52CE       ?EndWaitCursor@CCmdTarget@@RECXXZ
+ 0001:52E0       ?GetMessageMap@CCmdTarget@@NFCPAUAFX_MSGMAP@@XZ
+ 0001:52E6       ?GetDispatchMap@CCmdTarget@@NFCPEUAFX_DISPMAP@@XZ
+ 0001:52F0       ?GetInterfaceMap@CCmdTarget@@NFCPEUAFX_INTERFACEMAP@@XZ
+ 0001:52FA       ?OnFinalRelease@CCmdTarget@@VECXXZ
+ 0001:5324       ?OnCreateAggregates@CCmdTarget@@VECHXZ
+ 0001:532A       ?GetInterfaceHook@CCmdTarget@@VECPEUIUnknown@@PFX@Z
+ 0001:5330       ??0CCmdUI@@REC@XZ
+ 0001:5382       ?Enable@CCmdUI@@VECXH@Z
+ 0001:545A       ?SetCheck@CCmdUI@@VECXH@Z
+ 0001:54D4       ?SetRadio@CCmdUI@@VECXH@Z
+ 0001:5542       ?SetText@CCmdUI@@VECXPFD@Z
+ 0001:559A       ?DoUpdate@CCmdUI@@RECXPEVCCmdTarget@@H@Z
+ 0001:562A       ?GetRuntimeClass@CWinApp@@VFCPEUCRuntimeClass@@XZ
+ 0001:5632       ??0CWinApp@@REC@PFD@Z
+ 0001:5744       ?InitApplication@CWinApp@@VECHXZ
+ 0001:574A       ?InitInstance@CWinApp@@VECHXZ
+ 0001:5750       ?PumpMessage@CWinApp@@RECHXZ
+ 0001:57A8       ?Run@CWinApp@@VECHXZ
+ 0001:5876       ?PreTranslateMessage@CWinApp@@VECHPEUtagMSG@@@Z
+ 0001:590A       ?WinHelp@CWinApp@@VECXKI@Z
+ 0001:5970       ?ProcessMessageFilter@CWinApp@@VECHHPEUtagMSG@@@Z
+ 0001:5AF2       ?ProcessWndProcException@CWinApp@@VECJPEVCException@@PFUtagMSG@@@Z
+ 0001:5B88       ?OnIdle@CWinApp@@VECHJ@Z
+ 0001:5D3C       ?GetMainWnd@CWinApp@@VECPEVCWnd@@XZ
+ 0001:5D68       ??_GCWinApp@@VECPEXI@Z
+ 0001:5D94       ?_AfxGrayBackgroundWndProc@@ZCJPBUHWND__@@IIJ@Z
+ 0001:5DF0       ?_AfxCbtFilterHook@@ZCJHIJ@Z
+ 0001:5E6E       ?SetDialogBkColor@CWinApp@@JECXKK@Z
+ 0001:5F2A       ?GetRuntimeClass@CPtrList@@VFCPEUCRuntimeClass@@XZ
+ 0001:5F32       ??0CPtrList@@REC@H@Z
+ 0001:5F7E       ?RemoveAll@CPtrList@@RECXXZ
+ 0001:5FCA       ??1CPtrList@@VEC@XZ
+ 0001:5FFA       ?NewNode@CPtrList@@JECPEUCNode@1@PEU21@0@Z
+ 0001:60CE       ?FreeNode@CPtrList@@JECXPEUCNode@1@@Z
+ 0001:6104       ?AddHead@CPtrList@@RECPEXPEX@Z
+ 0001:617A       ?AddTail@CPtrList@@RECPEXPEX@Z
+ 0001:61EE       ?RemoveHead@CPtrList@@RECPEXXZ
+ 0001:6266       ??_GCPtrList@@VECPEXI@Z
+ 0001:6292       ?Create@CPlex@@TCPEU1@AEPEU1@II@Z
+ 0001:62E2       ?FreeDataChain@CPlex@@RECXXZ
+ 0001:6364       ?GetRuntimeClass@CException@@VFCPEUCRuntimeClass@@XZ
+ 0001:636C       ??0AFX_EXCEPTION_LINK@@RAC@XZ
+ 0001:6390       ?AfxTryCleanupProc@@ZCXXZ
+ 0001:63D8       ?AfxCatchProc@@ZCHPEUCRuntimeClass@@@Z
+ 0001:63F4       ?AfxThrow@@ZCXPEVCException@@H@Z
+ 0001:64BA       ?AfxTerminate@@ZCXXZ
+ 0001:64CE       ?GetRuntimeClass@CMemoryException@@VFCPEUCRuntimeClass@@XZ
+ 0001:64FC       ?AfxThrowMemoryException@@ZCXXZ
+ 0001:6516       ?GetRuntimeClass@CNotSupportedException@@VFCPEUCRuntimeClass@@XZ
+ 0001:6544       ?AfxThrowNotSupportedException@@ZCXXZ
+ 0001:659A       ??_GCMemoryException@@VECPEXI@Z
+ 0001:65CC       ??_GCNotSupportedException@@VECPEXI@Z
+ 0001:65FE       ??_GCException@@VECPEXI@Z
+ 0001:6630       ?AfxAbort@@ZCXXZ
+ 0001:663C       ?ConcatInPlace@CString@@JECXHPFD@Z
+ 0001:66BE       ??YCString@@RECAFV0@PFD@Z
+ 0001:674E       _AFX_VERSION
+ 0001:6766       ??0AUX_DATA@@RAC@XZ
+ 0001:686C       ??1AUX_DATA@@RAC@XZ
+ 0001:68DC       ?UpdateSysColors@AUX_DATA@@RACXXZ
+ 0001:69EC       ?_AfxExitDelete@@ZCXPBX@Z
+ 0001:6B14       ??_GCCmdTarget@@VECPEXI@Z
+ 0001:6B40       ??1CWinApp@@VEC@XZ
+ 0001:6C3A       ?ExitInstance@CWinApp@@VECHXZ
+ 0001:6CAA       AFXWININIT
+ 0001:6E2C       ?SetCurrentHandles@CWinApp@@RECXXZ
+ 0001:6F7A       ?_AfxMsgFilterHook@@ZCJHIJ@Z
+ 0001:6FF0       AFXWINTERM
+ 0001:7096       ?SaveStdProfileSettings@CWinApp@@JECXXZ
+ 0001:7146       ?GetRuntimeClass@CMapWordToPtr@@VFCPEUCRuntimeClass@@XZ
+ 0001:714E       ??0CMapWordToPtr@@REC@H@Z
+ 0001:7196       ?InitHashTable@CMapWordToPtr@@RECXI@Z
+ 0001:71FE       ?RemoveAll@CMapWordToPtr@@RECXXZ
+ 0001:7252       ??1CMapWordToPtr@@VEC@XZ
+ 0001:7282       ?NewAssoc@CMapWordToPtr@@JECPEUCAssoc@1@XZ
+ 0001:7354       ?FreeAssoc@CMapWordToPtr@@JECXPEUCAssoc@1@@Z
+ 0001:738A       ?GetAssocAt@CMapWordToPtr@@JFCPEUCAssoc@1@GAEI@Z
+ 0001:7400       ?Lookup@CMapWordToPtr@@RFCHGAEPEX@Z
+ 0001:7442       ??ACMapWordToPtr@@RECAEPEXG@Z
+ 0001:74E4       ?RemoveKey@CMapWordToPtr@@RECHG@Z
+ 0001:757E       ?GetNextAssoc@CMapWordToPtr@@RFCXAEPEXAEG0@Z
+ 0001:765C       ??_GCMapWordToPtr@@VECPEXI@Z
+ 0001:7690       ?PrepareEditCtrl@CDataExchange@@RACPBUHWND__@@H@Z
+ 0001:76AA       ?PrepareCtrl@CDataExchange@@RACPBUHWND__@@H@Z
+ 0001:76DE       ?Fail@CDataExchange@@RACXXZ
+ 0001:787C       ?DDX_Text@@ZCXPAVCDataExchange@@HAEVCString@@@Z
+ 0001:78CE       ?DDX_Check@@ZCXPAVCDataExchange@@HAEH@Z
+ 0001:792C       ?DDX_LBString@@ZCXPAVCDataExchange@@HAEVCString@@@Z
+ 0001:79A8       ?DDX_CBString@@ZCXPAVCDataExchange@@HAEVCString@@@Z
+ 0001:7AEA       ?DDV_MaxChars@@ZCXPAVCDataExchange@@AFVCString@@H@Z
+ 0001:7B62       ?DDX_Control@@ZCXPAVCDataExchange@@HAEVCWnd@@@Z
+ 0001:7B94       ?OnDDECommand@CWinApp@@VECHPED@Z
+ 0001:7C30       ?SaveAllModified@CWinApp@@VECHXZ
+ 0001:7C84       ?DoWaitCursor@CWinApp@@VECXH@Z
+ 0001:7CCE       ?_AfxGetSafeOwner@@ZCPBUHWND__@@PEVCWnd@@@Z
+ 0001:7D46       ?EnableModeless@CWinApp@@RECXH@Z
+ 0001:7DA4       ?DoMessageBox@CWinApp@@VECHPFDII@Z
+ 0001:7EA8       ?AfxMessageBox@@ZCHPFDII@Z
+ 0001:7ED4       ?AfxMessageBox@@ZCHIII@Z
+ 0001:7F38       ?OnOpenRecentFile@CWinApp@@JECHI@Z
+ 0001:7F64       ?AddToRecentFileList@CWinApp@@VECXPFD@Z
+ 0001:7FD2       ?OnUpdateRecentFileMenu@CWinApp@@JECXPEVCCmdUI@@@Z
+ 0001:812C       ?GetProfileInt@CWinApp@@RECIPFD0H@Z
+ 0001:8152       ?WriteProfileInt@CWinApp@@RECHPFD0H@Z
+ 0001:8192       ?GetProfileString@CWinApp@@REC?EVCString@@PFD00@Z
+ 0001:81EE       ?WriteProfileString@CWinApp@@RECHPFD00@Z
+ 0001:8218       ?AfxFormatStrings@@ZCXAEVCString@@IPEPFDH@Z
+ 0001:824C       ?AfxFormatStrings@@ZCXAEVCString@@PFDPEPFDH@Z
+ 0001:8378       ?AfxFormatString1@@ZCXAEVCString@@IPFD@Z
+ 0001:8394       ?AfxFormatString2@@ZCXAEVCString@@IPFD1@Z
+ 0001:840C       ?GetRuntimeClass@CStatic@@VFCPEUCRuntimeClass@@XZ
+ 0001:8414       ?GetSuperWndProcAddr@CStatic@@NECPEP7CJPBUHWND__@@IIJ@ZXZ
+ 0001:841C       ??1CStatic@@VEC@XZ
+ 0001:8456       ?GetRuntimeClass@CButton@@VFCPEUCRuntimeClass@@XZ
+ 0001:845E       ?GetSuperWndProcAddr@CButton@@NECPEP7CJPBUHWND__@@IIJ@ZXZ
+ 0001:8466       ??1CButton@@VEC@XZ
+ 0001:8492       ?DrawItem@CButton@@VECXPEUtagDRAWITEMSTRUCT@@@Z
+ 0001:8496       ?OnChildNotify@CButton@@NECHIIJPEJ@Z
+ 0001:84D2       ?GetRuntimeClass@CListBox@@VFCPEUCRuntimeClass@@XZ
+ 0001:84DA       ?GetSuperWndProcAddr@CListBox@@NECPEP7CJPBUHWND__@@IIJ@ZXZ
+ 0001:84E2       ??1CListBox@@VEC@XZ
+ 0001:850E       ?DrawItem@CListBox@@VECXPEUtagDRAWITEMSTRUCT@@@Z
+ 0001:8512       ?MeasureItem@CListBox@@VECXPEUtagMEASUREITEMSTRUCT@@@Z
+ 0001:8516       ?CompareItem@CListBox@@VECHPEUtagCOMPAREITEMSTRUCT@@@Z
+ 0001:851C       ?DeleteItem@CListBox@@VECXPEUtagDELETEITEMSTRUCT@@@Z
+ 0001:8520       ?OnChildNotify@CListBox@@NECHIIJPEJ@Z
+ 0001:85C2       ?GetRuntimeClass@CComboBox@@VFCPEUCRuntimeClass@@XZ
+ 0001:85CA       ?GetSuperWndProcAddr@CComboBox@@NECPEP7CJPBUHWND__@@IIJ@ZXZ
+ 0001:85D2       ??1CComboBox@@VEC@XZ
+ 0001:85FE       ?DrawItem@CComboBox@@VECXPEUtagDRAWITEMSTRUCT@@@Z
+ 0001:8602       ?MeasureItem@CComboBox@@VECXPEUtagMEASUREITEMSTRUCT@@@Z
+ 0001:8606       ?CompareItem@CComboBox@@VECHPEUtagCOMPAREITEMSTRUCT@@@Z
+ 0001:860C       ?DeleteItem@CComboBox@@VECXPEUtagDELETEITEMSTRUCT@@@Z
+ 0001:8610       ?OnChildNotify@CComboBox@@NECHIIJPEJ@Z
+ 0001:86B2       ?GetRuntimeClass@CEdit@@VFCPEUCRuntimeClass@@XZ
+ 0001:86BA       ?GetSuperWndProcAddr@CEdit@@NECPEP7CJPBUHWND__@@IIJ@ZXZ
+ 0001:86C2       ??1CEdit@@VEC@XZ
+ 0001:86FC       ?GetRuntimeClass@CScrollBar@@VFCPEUCRuntimeClass@@XZ
+ 0001:8704       ?GetSuperWndProcAddr@CScrollBar@@NECPEP7CJPBUHWND__@@IIJ@ZXZ
+ 0001:870C       ??1CScrollBar@@VEC@XZ
+ 0001:8738       ?SubclassWindow@CWnd@@RECHPBUHWND__@@@Z
+ 0001:87B0       ??_GCStatic@@VECPEXI@Z
+ 0001:87DC       ??_GCEdit@@VECPEXI@Z
+ 0001:8808       ??_GCScrollBar@@VECPEXI@Z
+ 0001:8834       ?AfxOleGetUserCtrl@@ZCHXZ
+ 0001:8838       ??0AFX_OLESTATE@@REC@XZ
+ 0001:88FE       ?_messageEntries@CWinApp@@0QEUAFX_MSGMAP_ENTRY@@E
+ 0001:8970       ?GetRuntimeClass@CResourceException@@VFCPEUCRuntimeClass@@XZ
+ 0001:899E       ?AfxThrowResourceException@@ZCXXZ
+ 0001:89B8       ?GetRuntimeClass@CUserException@@VFCPEUCRuntimeClass@@XZ
+ 0001:89E6       ?AfxThrowUserException@@ZCXXZ
+ 0001:89F2       ?Construct@CDC@@TCXPEX@Z
+ 0001:8A1E       ?GetRuntimeClass@CDC@@VFCPEUCRuntimeClass@@XZ
+ 0001:8A26       ??0CDC@@REC@XZ
+ 0001:8A62       ?DeleteTempMap@CDC@@TCXXZ
+ 0001:8A6C       ?FromHandle@CDC@@TCPEV1@PBUHDC__@@@Z
+ 0001:8A7E       ?Attach@CDC@@RECHPBUHDC__@@@Z
+ 0001:8AC8       ?Detach@CDC@@RECPBUHDC__@@XZ
+ 0001:8B0A       ??1CDC@@VEC@XZ
+ 0001:8B48       ?SetAttribDC@CDC@@VECXPBUHDC__@@@Z
+ 0001:8B5A       ?SetOutputDC@CDC@@VECXPBUHDC__@@@Z
+ 0001:8B6C       ?ReleaseAttribDC@CDC@@VECXXZ
+ 0001:8B7C       ?ReleaseOutputDC@CDC@@VECXXZ
+ 0001:8B8C       ?StartDoc@CDC@@RECHPEUDOCINFO@@@Z
+ 0001:8BE8       ?SaveDC@CDC@@VECHXZ
+ 0001:8C2E       ?RestoreDC@CDC@@VECHH@Z
+ 0001:8C80       ?SelectGdiObject@CDC@@LCPEVCGdiObject@@PBUHDC__@@PBX@Z
+ 0001:8C98       ?SelectStockObject@CDC@@VECPEVCGdiObject@@H@Z
+ 0001:8CE8       ?SelectObject@CDC@@RECPEVCBrush@@PEV2@@Z
+ 0001:8D5E       ?SelectObject@CDC@@VECPEVCFont@@PEV2@@Z
+ 0001:8DD4       ?SetBkColor@CDC@@VECKK@Z
+ 0001:8E26       ?SetTextColor@CDC@@VECKK@Z
+ 0001:8E78       ?SetMapMode@CDC@@VECHH@Z
+ 0001:8EBE       ?SetViewportOrg@CDC@@VEC?EVCPoint@@HH@Z
+ 0001:8F1E       ?OffsetViewportOrg@CDC@@VEC?EVCPoint@@HH@Z
+ 0001:8F7E       ?SetViewportExt@CDC@@VEC?EVCSize@@HH@Z
+ 0001:8FDE       ?ScaleViewportExt@CDC@@VEC?EVCSize@@HHHH@Z
+ 0001:904A       ?ScaleWindowExt@CDC@@VEC?EVCSize@@HHHH@Z
+ 0001:90B6       ?SetWindowExt@CDC@@VEC?EVCSize@@HH@Z
+ 0001:9116       ?GetClipBox@CDC@@VFCHPEUtagRECT@@@Z
+ 0001:913E       ?GetRuntimeClass@CClientDC@@VFCPEUCRuntimeClass@@XZ
+ 0001:9154       ?GetRuntimeClass@CWindowDC@@VFCPEUCRuntimeClass@@XZ
+ 0001:916A       ?GetRuntimeClass@CPaintDC@@VFCPEUCRuntimeClass@@XZ
+ 0001:9172       ??1CClientDC@@VEC@XZ
+ 0001:91A8       ??1CWindowDC@@VEC@XZ
+ 0001:91DE       ??0CPaintDC@@REC@PEVCWnd@@@Z
+ 0001:9232       ??1CPaintDC@@VEC@XZ
+ 0001:926C       ?Construct@CGdiObject@@TCXPEX@Z
+ 0001:92A6       ?GetRuntimeClass@CGdiObject@@VFCPEUCRuntimeClass@@XZ
+ 0001:92C0       ?DeleteTempMap@CGdiObject@@TCXXZ
+ 0001:92CA       ?FromHandle@CGdiObject@@TCPEV1@PBX@Z
+ 0001:92DC       ?Attach@CGdiObject@@RECHPBX@Z
+ 0001:9316       ?Detach@CGdiObject@@RECPBXXZ
+ 0001:9346       ?DeleteObject@CGdiObject@@RECHXZ
+ 0001:936E       ??1CGdiObject@@VEC@XZ
+ 0001:93AC       ?GetRuntimeClass@CPen@@VFCPEUCRuntimeClass@@XZ
+ 0001:93C2       ?GetRuntimeClass@CBrush@@VFCPEUCRuntimeClass@@XZ
+ 0001:93D8       ?GetRuntimeClass@CFont@@VFCPEUCRuntimeClass@@XZ
+ 0001:93EE       ?GetRuntimeClass@CBitmap@@VFCPEUCRuntimeClass@@XZ
+ 0001:9404       ?GetRuntimeClass@CPalette@@VFCPEUCRuntimeClass@@XZ
+ 0001:941A       ?GetRuntimeClass@CRgn@@VFCPEUCRuntimeClass@@XZ
+ 0001:94CC       ??_GCResourceException@@VECPEXI@Z
+ 0001:94FE       ??_GCUserException@@VECPEXI@Z
+ 0001:9530       ??_GCPen@@VECPEXI@Z
+ 0001:955C       ??_GCDC@@VECPEXI@Z
+ 0001:9588       ??_GCClientDC@@VECPEXI@Z
+ 0001:95B4       ??_GCWindowDC@@VECPEXI@Z
+ 0001:95E0       ??_GCPaintDC@@VECPEXI@Z
+ 0001:960C       ?_AfxFullPath@@ZCHPEDPFD@Z
+ 0001:966C       ?_AfxIsComboBoxControl@@ZCHPBUHWND__@@I@Z
+ 0001:96B6       ?_AfxSmartSetWindowText@@ZCXPBUHWND__@@PFD@Z
+ 0001:9708       ?_AfxGetParentOwner@@ZCPBUHWND__@@PBU1@@Z
+ 0001:9762       ?AfxCriticalNewHandler@@ZAHI@Z
+ 0001:97F8       ?GetMessageMap@CWinApp@@NFCPAUAFX_MSGMAP@@XZ
+ 0001:97FE       ?OnAppExit@CWinApp@@JECXXZ
+ 0001:981E       ?OpenDocumentFile@CWinApp@@VECPEVCDocument@@PFD@Z
+ 0001:9970       __wflags
+ 0001:997A       __astart
+ 0001:9A31       __nomain
+ 0001:9A38       __stubmain
+ 0001:9A64       __cinit
+ 0001:9B47       _exit
+ 0001:9B55       __exit
+ 0001:9B64       __cexit
+ 0001:9B75       __c_exit
+ 0001:9BE5       __ctermsub
+ 0001:9C22       __FF_MSGBANNER
+ 0001:9C46       __fptrap
+ 0001:9C4C       __aNchkstk
+ 0001:9C6C       __chkstk
+ 0001:9C6C       __aFchkstk
+ 0001:9CA6       __setargv
+ 0001:9E50       __setenvp
+ 0001:9F0A       __cintDIV
+ 0001:9F14       __amsg_exit
+ 0001:9F56       __NMSG_TEXT
+ 0001:9F8D       __NMSG_WRITE
+ 0001:9FCA       __myalloc
+ 0001:9FF8       __dosret0
+ 0001:A005       __dosreturn
+ 0001:A017       __dosretax
+ 0001:A029       __maperror
+ 0001:A056       __GetDGROUP
+ 0001:A066       ___ExportedStub
+ 0001:A07A       _fclose
+ 0001:A17C       __fsopen
+ 0001:A1B6       _fopen
+ 0001:A1D6       _fprintf
+ 0001:A21A       _fwrite
+ 0001:A3BE       __endstdio
+ 0001:A3D4       __filbuf
+ 0001:A47E       __flsbuf
+ 0001:A578       __freebuf
+ 0001:A5B0       __getbuf
+ 0001:A5FC       __openfile
+ 0001:A73C       __stbuf
+ 0001:A7C8       __ftbuf
+ 0001:A810       _fflush
+ 0001:A86C       __flush
+ 0001:A8EC       __flushall
+ 0001:A96C       __input
+ 0001:B2F4       __output
+ 0001:B7EA       __getstream
+ 0001:B83E       _ungetc
+ 0001:B8B2       __close
+ 0001:B8EA       __lseek
+ 0001:B9BE       __sopen
+ 0001:B9D6       __open
+ 0001:BC95       __cXENIXtoDOSmode
+ 0001:BCA6       __read
+ 0001:BE1E       __write
+ 0001:BFD8       __stackavail
+ 0001:BFEC       __ffree
+ 0001:C00D       __fmalloc
+ 0001:C0B4       __initseg
+ 0001:C0E8       __linkseg
+ 0001:C11E       __searchseg
+ 0001:C19A       __growseg
+ 0001:C22B       __incseg
+ 0001:C291       __findlast
+ 0001:C2B2       __newseg
+ 0001:C334       ??3@ZAXPEX@Z
+ 0001:C346       ??2@ZAPEXI@Z
+ 0001:C356       ?_set_fnew_handler@@ZAP7AHI@ZP7AHI@Z@Z
+ 0001:C380       ?_set_new_handler@@ZAP7AHI@ZP7AHI@Z@Z
+ 0001:C392       _strcat
+ 0001:C3E6       _strcpy
+ 0001:C422       _strlen
+ 0001:C43C       _strncpy
+ 0001:C466       _strncmp
+ 0001:C4A2       _atoi
+ 0001:C4A6       _atol
+ 0001:C4AA       __catox
+ 0001:C500       __itoa
+ 0001:C51C       _abort
+ 0001:C53E       _getenv
+ 0001:C5DA       __fcloseall
+ 0001:C61A       _fgets
+ 0001:C6A2       _fputs
+ 0001:C708       _sprintf
+ 0001:C776       _sscanf
+ 0001:C7C6       __commit
+ 0001:C836       __frealloc
+ 0001:C8CA       __resize
+ 0001:C992       __findseg
+ 0001:C9BC       _strchr
+ 0001:C9EE       __stricmp
+ 0001:C9EE       __strcmpi
+ 0001:CA34       __strdup
+ 0001:CA7A       __strnicmp
+ 0001:CAD2       _strpbrk
+ 0001:CB30       _strspn
+ 0001:CB8C       _strtok
+ 0001:CC34       _strstr
+ 0001:CCA0       __fstrdup
+ 0001:CCE6       _memcmp
+ 0001:CD42       _memcpy
+ 0001:CDA0       _memset
+ 0001:CDE8       __cltoasub
+ 0001:CDF5       __cxtoa
+ 0001:CE4C       _strtoul
+ 0001:CE58       _strtol
+ 0001:CF8A       _abs
+ 0001:CF9E       __splitpath
+ 0001:D160       __makepath
+ 0001:D256       __access
+ 0001:D28E       _rename
+ 0001:D2BA       __unlink
+ 0001:D2BA       _remove
+ 0001:D2E0       __dos_commit
+ 0001:D304       __dos_getftime
+ 0001:D338       __dos_setftime
+ 0001:D364       __aFFaulmul
+ 0001:D364       __aFFalmul
+ 0001:D386       __aFlmul
+ 0001:D386       __aFulmul
+ 0001:D3B8       __fmemcmp
+ 0001:D414       __fmemcpy
+ 0001:D472       __fstrchr
+ 0001:D4A4       __fstricmp
+ 0001:D4EA       __fstrncmp
+ 0001:D526       __fstrlen
+ 0001:D540       __fstrcpy
+ 0001:D57C       __fstrcat
+ 0001:D5D0       __fmemset
+ 0001:D618       __fstrstr
+ 0001:D684       ??_I@ZCXPEXIHP7CX0@Z@Z
+ 0001:D6AE       __wcexit
+ 0001:D6AE       __wcinit
+ 0001:D6B3       __QWINSetAboutString
+ 0001:D6B3       __wwrite
+ 0001:D6B3       __wterm
+ 0001:D6B3       __QWINMenuClick
+ 0001:D6B3       __wabout
+ 0001:D6B3       __QWINYield
+ 0001:D6B3       __QWINExit
+ 0001:D6B3       __wread
+ 0001:D6B3       __QWINGetSize
+ 0001:D6B3       __wgetscreenbuf
+ 0001:D6B3       __wsetscreenbuf
+ 0001:D6B3       __QWINRead
+ 0001:D6B3       __wmenuclick
+ 0001:D6B3       __wgetfocus
+ 0001:D6B3       __QWINGetFocus
+ 0001:D6B3       __QWINOpen
+ 0001:D6B3       __QWINSetFocus
+ 0001:D6B3       __QWINInit
+ 0001:D6B3       __QWINTerm
+ 0001:D6B3       __wsetfocus
+ 0001:D6B3       __QWINWrite
+ 0001:D6B3       __wclose
+ 0001:D6B3       __QWINGetBuffSize
+ 0001:D6B3       __QWINClose
+ 0001:D6B3       __QWINSetSize
+ 0001:D6B3       __QWINIsQWINin
+ 0001:D6B3       __QWINSetBuffSize
+ 0001:D6B3       __wgetsize
+ 0001:D6B3       __wsetsize
+ 0001:D6B3       __wopen
+ 0001:D6BA       __fmsize
+ 0001:D6D6       __fexpand
+ 0001:D710       _atexit
+ 0001:D718       __onexit
+ 0002:0000       ?GetMessageMap@CWinmxmzApp@@NFCPAUAFX_MSGMAP@@XZ
+ 0002:0006       ??0CWinmxmzApp@@REC@XZ
+ 0002:00A4       ?CBSummWnd@@ZCPEVCWnd@@XZ
+ 0002:00B4       ?ParseCfg@@ZAXAEVCCustomOpts@@@Z
+ 0002:01DE       ??0CConfigParse@@REC@PFD@Z
+ 0002:023C       ?CConfigParse_CBfn@@ZAHPEU_ConfigLine@@@Z
+ 0002:0254       ?Parse@CConfigParse@@RECHXZ
+ 0002:0298       ?CBfn@CConfigParse@@RECHPEU_ConfigLine@@@Z
+ 0002:0398       ??1CConfigParse@@REC@XZ
+ 0002:03BC       ?ParseCfgSys@@ZAXAEVCString@@@Z
+ 0002:0468       ?ParsePro@@ZAXAEVCCustomOpts@@@Z
+ 0002:0686       ?SetAutoWMX@@ZAHPFDPED1@Z
+ 0002:0AAC       ?InitInstance@CWinmxmzApp@@VECHXZ
+ 0002:13D2       ?ExitInstance@CWinmxmzApp@@VECHXZ
+ 0002:1426       ?SetSmallFont@CWinmxmzApp@@RECXPEVCWnd@@@Z
+ 0002:1508       ?OnHelp@CWinmxmzApp@@RECXXZ
+ 0002:152A       ?WinHelp@CWinmxmzApp@@VECXKI@Z
+ 0002:15FC       ??1CCustomOpts@@VEC@XZ
+ 0002:1678       ??1CSummary@@VEC@XZ
+ 0002:16E4       ?Serialize@CObject@@VECXAEVCArchive@@@Z
+ 0002:16E8       ??_GCObject@@VECPEXI@Z
+ 0002:171A       ??_GCGdiObject@@VECPEXI@Z
+ 0002:1746       ??_GCFont@@VECPEXI@Z
+ 0002:1772       ??_GCWinmxmzApp@@VECPEXI@Z
+ 0002:17BC       ??_C@_00A@?$AA@
+ 0002:17BE       ??_C@_0BAA@OJJ@?$EAecho?5off?6echo?5off?6echo?5?M?M?M?M?M?M?M?M@
+ 0002:18BE       ??_C@_0N@PHAF@MAXIMIZE?4CFG?$AA@
+ 0002:18CC       ??_C@_02MMAH@rt?$AA@
+ 0002:18D0       ??_C@_05LGHD@?5?7?$AN?6?$DN?$AA@
+ 0002:18D6       ??_C@_09KFMA@NOROMSRCH?$AA@
+ 0002:18E0       ??_C@_09PJPJ@NOVGASWAP?$AA@
+ 0002:18EA       ??_C@_0L@CEFL@NOEXTRADOS?$AA@
+ 0002:18F6       ??_C@_08DAPH@?1dev?1nul?$AA@
+ 0002:1900       ??_C@_05BKOM@?5?7?$DN?$AN?6?$AA@
+ 0002:1906       ??_C@_0L@FEPG@386max?4sys?$AA@
+ 0002:1912       ??_C@_0M@LEBH@bluemax?4sys?$AA@
+ 0002:191E       ??_C@_06NABE@common?$AA@
+ 0002:1926       ??_C@_04ONML@pro?$DN?$AA@
+ 0002:192C       ??_C@_04JACD@?5?7?$AN?6?$AA@
+ 0002:1932       ??_C@_07EGBL@VGASWAP?$AA@
+ 0002:193A       ??_C@_03OAHE@USE?$AA@
+ 0002:193E       ??_C@_02JDLK@?$CFx?$AA@
+ 0002:1942       ??_C@_03OKGP@BCF?$AA@
+ 0002:1946       ??_C@_07JPIG@AUTOBCF?$AA@
+ 0002:194E       ??_C@_0P@IDLD@?$CFsAUTO_WMX?4$$$?$AA@
+ 0002:195E       ??_C@_0P@GFPB@?$CFsAUTO_WMX?4cfg?$AA@
+ 0002:196E       ??_C@_0P@HL@?$CFsAUTO_WMX?4bat?$AA@
+ 0002:197E       ??_C@_01LLF@w?$AA@
+ 0002:1980       ??_C@_03HHKO@?$CFs?6?$AA@
+ 0002:1984       ??_C@_0M@PJOO@copy?5?$CFs?5?$CFs?6?$AA@
+ 0002:1990       ??_C@_09HNGK@?$CFsBATPROC?$AA@
+ 0002:199A       ??_C@_0BO@LJGH@?$CFs?5?$CFs?5?$CK?5386LOAD?5Maximize?4trm?6?$AA@
+ 0002:19B8       ??_C@_06EFAM@?$CFs?5?$CFs?6?$AA@
+ 0002:19C0       ??_C@_0O@MLMC@?$CFsCFG_SYS?4$$$?$AA@
+ 0002:19CE       ??_C@_0CO@CLNF@?$FLmenu?$FN?6MenuItem?$DN?$CFs?6MenuDefault?$DN?$CF@
+ 0002:19FC       ??_C@_01LHO@r?$AA@
+ 0002:19FE       ??_C@_0P@NBCF@?$CFs_MXIMIZE?4BAT?$AA@
+ 0002:1A0E       ??_C@_0BE@CEHG@?$EAecho?5off?6echo?5off?6?$AA@
+ 0002:1A22       ??_C@_0BE@CJJL@?$CFFsmaximize?4exe?5?1r?6?$AA@
+ 0002:1A36       ??_C@_0DG@FFKG@if?5not?5errorlevel?55?5goto?5end?6cop@
+ 0002:1A6C       ??_C@_0BJ@FGBB@copy?5?$CFFsAUTO_WMX?4$$$?5?$CFs?6?$AA@
+ 0002:1A86       ??_C@_05JGDE@?3end?6?$AA@
+ 0002:1A8C       ??_C@_07KFDO@COMSPEC?$AA@
+ 0002:1A94       ??_C@_0M@IPJP@command?4com?$AA@
+ 0002:1AA0       ??_C@_05IOCF@?1c?5?$CFs?$AA@
+ 0002:1AA6       ??_C@_0N@NNAD@MAXIMIZE?4INI?$AA@
+ 0002:1AB4       ??_C@_0M@IMJP@MAXHELP?4HLP?$AA@
+ 0002:1AC0       ??_C@_06IPDH@CONFIG?$AA@
+ 0002:1AC8       ??_C@_06JLAI@Custom?$AA@
+ 0002:1AD0       ??_C@_08COGH@Defaults?$AA@
+ 0002:1ADA       ??_C@_08DDHH@DOSStart?$AA@
+ 0002:1AE4       ??_C@_07NPEF@ROMSrch?$AA@
+ 0002:1AEC       ??_C@_07CJDO@VGAswap?$AA@
+ 0002:1AF4       ??_C@_08INLM@ExtraDOS?$AA@
+ 0002:1AFE       ??_C@_0CE@JGGJ@You?5must?5first?5install?5Qualitas?5@
+ 0002:1B22       ??_C@_04KBDN@?4bat?$AA@
+ 0002:1B28       ??_C@_02FKLM@?1I?$AA@
+ 0002:1B2C       ??_C@_08FBEM@?1summary?$AA@
+ 0002:1B36       ??_C@_0P@FOMI@?$CFsMAXIMIZE?4EXE?$AA@
+ 0002:1B46       ??_C@_05BHI@?1X?5?1P?$AA@
+ 0002:1B4C       ??_C@_0GD@GNDI@Unable?5to?5exit?5Windows?5to?5restor@
+ 0002:1BB0       ??_C@_0EC@KJPH@You?5must?5first?5install?5Qualitas?5@
+ 0002:1BF2       ??_C@_07LKD@UseHigh?$AA@
+ 0002:1BFA       ??_C@_06CMKJ@Remove?$AA@
+ 0002:1C02       ??_C@_02NCI@?1U?$AA@
+ 0002:1C06       ??_C@_02KEFI@?1E?$AA@
+ 0002:1C0A       ??_C@_08PBKI@?1X?5?1V?5?$CFs?$AA@
+ 0002:1C14       ??_C@_06NKMH@?5?1A?5?$CFs?$AA@
+ 0002:1C1C       ??_C@_04OKAH@?5?1O?5?$AA@
+ 0002:1C22       ??_C@_0L@HAM@StartupBat?$AA@
+ 0002:1C2E       ??_C@_0BA@MDBB@Current?5Section?$AA@
+ 0002:1C3E       ??_C@_0EG@BPCJ@Unable?5to?5exit?5Windows?4?5?5Please?5@
+ 0002:1C84       ??_7CWinmxmzApp@@6F@
+ 0002:1CF4       ??_7CObject@@6F@
+ 0002:1D08       ??_7CGdiObject@@6F@
+ 0002:1D1C       ??_7CFont@@6F@
+ 0002:1D30       ??0CCustomOpts@@REC@PEVCWnd@@H@Z
+ 0002:1E6E       ?DoDataExchange@CCustomOpts@@NECXPAVCDataExchange@@@Z
+ 0002:1F60       ?GetMessageMap@CCustomOpts@@NFCPAUAFX_MSGMAP@@XZ
+ 0002:1F66       ?OnBack@CCustomOpts@@JECXXZ
+ 0002:1F90       ?OnHelp@CCustomOpts@@JECXXZ
+ 0002:1FA6       ?OnDisromsrch@CCustomOpts@@JECXXZ
+ 0002:1FFA       ?OnDisvgaswap@CCustomOpts@@JECXXZ
+ 0002:2044       ?OnInitDialog@CCustomOpts@@NECHXZ
+ 0002:20E8       ?OnRomsrch@CCustomOpts@@JECXXZ
+ 0002:2146       ??0CEndPhase1@@REC@PEVCWnd@@@Z
+ 0002:217A       ?DoDataExchange@CEndPhase1@@NECXPAVCDataExchange@@@Z
+ 0002:217E       ?GetMessageMap@CEndPhase1@@NFCPAUAFX_MSGMAP@@XZ
+ 0002:2184       ??0CSelectMBoot@@REC@PEVCWnd@@PFD@Z
+ 0002:223E       ?OnInitDialog@CSelectMBoot@@NECHXZ
+ 0002:2408       ?DoDataExchange@CSelectMBoot@@NECXPAVCDataExchange@@@Z
+ 0002:245A       ?GetMessageMap@CSelectMBoot@@NFCPAUAFX_MSGMAP@@XZ
+ 0002:2460       ?OnHelp@CSelectMBoot@@JECXXZ
+ 0002:2476       ?OnOK@CSelectMBoot@@NECXXZ
+ 0002:25AC       ??0CSelectMode@@REC@PEVCWnd@@@Z
+ 0002:25E0       ?OnInitDialog@CSelectMode@@NECHXZ
+ 0002:2632       ?DoDataExchange@CSelectMode@@NECXPAVCDataExchange@@@Z
+ 0002:2636       ?GetMessageMap@CSelectMode@@NFCPAUAFX_MSGMAP@@XZ
+ 0002:263C       ??0CWelcome@@REC@PEVCWnd@@@Z
+ 0002:2670       ?DoDataExchange@CWelcome@@NECXPAVCDataExchange@@@Z
+ 0002:2674       ?GetMessageMap@CWelcome@@NFCPAUAFX_MSGMAP@@XZ
+ 0002:267A       ?OnCustom@CSelectMode@@JECXXZ
+ 0002:269C       ?OnExpress@CSelectMode@@JECXXZ
+ 0002:26BE       ?OnBack@CSelectMode@@JECXXZ
+ 0002:26D4       ?OnBack@CEndPhase1@@JECXXZ
+ 0002:26EA       ?OnHelp@CWelcome@@JECXXZ
+ 0002:2700       ?OnHelp@CSelectMode@@JECXXZ
+ 0002:2716       ?OnHelp@CEndPhase1@@JECXXZ
+ 0002:272C       ??0CExit@@REC@PEVCWnd@@@Z
+ 0002:2760       ?DoDataExchange@CExit@@NECXPAVCDataExchange@@@Z
+ 0002:2764       ?GetMessageMap@CExit@@NFCPAUAFX_MSGMAP@@XZ
+ 0002:276A       ?OnInitDialog@CWelcome@@NECHXZ
+ 0002:27A0       ?OnInitDialog@CExit@@NECHXZ
+ 0002:27D6       ?OnInitDialog@CEndPhase1@@NECHXZ
+ 0002:280C       ?OnCancel@CCustomOpts@@NECXXZ
+ 0002:2832       ?OnCancel@CWelcome@@NECXXZ
+ 0002:2858       ?OnCancel@CEndPhase1@@NECXXZ
+ 0002:287E       ?OnCancel@CSelectMBoot@@NECXXZ
+ 0002:28A4       ?OnCancel@CSelectMode@@NECXXZ
+ 0002:28CA       ?DoDataExchange@CWnd@@NECXPAVCDataExchange@@@Z
+ 0002:28CE       ??_GCButton@@VECPEXI@Z
+ 0002:28FA       ??_GCComboBox@@VECPEXI@Z
+ 0002:2926       ??_GCCustomOpts@@VECPEXI@Z
+ 0002:2952       ??_GCEndPhase1@@VECPEXI@Z
+ 0002:297E       ??_GCSelectMBoot@@VECPEXI@Z
+ 0002:29D8       ??_GCSelectMode@@VECPEXI@Z
+ 0002:2A04       ??_GCWelcome@@VECPEXI@Z
+ 0002:2A30       ??_GCExit@@VECPEXI@Z
+ 0002:2A5C       ??_C@_04FKLJ@menu?$AA@
+ 0002:2A62       ??_C@_03BIAB@?5?7?4?$AA@
+ 0002:2A66       ??_C@_0CI@EINK@Invalid?5section?5?$FL?$CFs?$FN?5?9?5please?5tr@
+ 0002:2A8E       ??_C@_0CG@ILJE@You?5must?5select?5a?5MultiConfig?5se@
+ 0002:2AB4       ??_7CCustomOpts@@6F@
+ 0002:2B34       ??_7CSelectMode@@6F@
+ 0002:2BB4       ??_7CButton@@6F@
+ 0002:2C24       ??_7CExit@@6F@
+ 0002:2CA4       ??_7CComboBox@@6F@
+ 0002:2D20       ??_7CSelectMBoot@@6F@
+ 0002:2DA0       ??_7CWelcome@@6F@
+ 0002:2E20       ??_7CEndPhase1@@6F@
+ 0002:2EA0       ??0CSummary@@REC@HPEVCWnd@@@Z
+ 0002:2F90       ?DoDataExchange@CSummary@@NECXPAVCDataExchange@@@Z
+ 0002:300A       ?GetMessageMap@CSummary@@NFCPAUAFX_MSGMAP@@XZ
+ 0002:3010       ?GetPString@CSummary@@REC?EVCString@@PFD0@Z
+ 0002:3042       ?GetPInt@CSummary@@RECHPFDH@Z
+ 0002:3066       ?RemoveLineN@@ZAHPFDHHPED@Z
+ 0002:31EA       ?FmtNum@@ZAXDJPED@Z
+ 0002:3268       ?OnInitDialog@CSummary@@NECHXZ
+ 0002:3AB8       ?OnRevert@CSummary@@JECXXZ
+ 0002:3ACE       ?OnHelp@CSummary@@JECXXZ
+ 0002:3AE4       ?OnOK@CSummary@@NECXXZ
+ 0002:3B18       ?OnClose@CSummary@@JECXXZ
+ 0002:3B3A       ??_GCListBox@@VECPEXI@Z
+ 0002:3B66       ??_GCSummary@@VECPEXI@Z
+ 0002:3B92       ??_C@_07DPJH@Summary?$AA@
+ 0002:3B9A       ??_C@_04JPDN@?4?$CG?$CB?$CD?$AA@
+ 0002:3BA0       ??_C@_08FPNN@?$CF?$CFrmln?$EA?$EA?$AA@
+ 0002:3BAA       ??_C@_02IAAH@wt?$AA@
+ 0002:3BAE       ??_C@_03JFOM@?$CFld?$AA@
+ 0002:3BB2       ??_C@_01KMAE@?0?$AA@
+ 0002:3BB4       ??_C@_09BEPN@sThousand?$AA@
+ 0002:3BBE       ??_C@_04KGMK@Intl?$AA@
+ 0002:3BC4       ??_C@_02BDPP@0?0?$AA@
+ 0002:3BC8       ??_C@_0L@JMON@RemoveLine?$AA@
+ 0002:3BD4       ??_C@_0M@MBDK@Last?5Action?$AA@
+ 0002:3BE0       ??_C@_05GJJA@?5?7?0?$AN?6?$AA@
+ 0002:3BE6       ??_C@_0O@LLNK@REM?5winmaxim?$HO?$AA@
+ 0002:3BF4       ??_C@_0L@MICA@RemoveMenu?$AA@
+ 0002:3C00       ??_C@_09HLAO@NHighRegs?$AA@
+ 0002:3C0A       ??_C@_05LIKG@Reg?$CFd?$AA@
+ 0002:3C10       ??_C@_09BCEH@HighParas?$AA@
+ 0002:3C1A       ??_C@_0CH@PKFO@Maximize?5has?5moved?5?$CFdKB?5into?5hig@
+ 0002:3C42       ??_C@_0DD@HEAK@You?5have?5?$CFdKB?5of?5unused?5high?5DOS@
+ 0002:3C76       ??_C@_0CE@DDFI@Total?5Free?5Conventional?5Memory?5?$CF@
+ 0002:3C9A       ??_C@_05OFC@NHigh?$AA@
+ 0002:3CA0       ??_C@_04FMPP@NLow?$AA@
+ 0002:3CA6       ??_C@_0O@CENE@?5Name?7?7?7bytes?$AA@
+ 0002:3CB4       ??_C@_09EBMM@?5?5?5?5Total?$AA@
+ 0002:3CBE       ??_C@_07CJEA@Hiseg?$CFd?$AA@
+ 0002:3CC6       ??_C@_05BFDG@?0?5?7?$AN?6?$AA@
+ 0002:3CCC       ??_C@_03HKGO@?5?$CFs?$AA@
+ 0002:3CD0       ??_C@_01FCOA@?5?$AA@
+ 0002:3CD2       ??_C@_07FDCG@?7?7?7?7?7?7?7?$AA@
+ 0002:3CDA       ??_C@_02DILL@?$CFs?$AA@
+ 0002:3CDE       ??_C@_0BJ@FFDO@No?5programs?5selected?5for?$AA@
+ 0002:3CF8       ??_C@_0BJ@LNNJ@processing?5remain?5in?5low?$AA@
+ 0002:3D12       ??_C@_0M@FKCD@DOS?5memory?4?$AA@
+ 0002:3D1E       ??_C@_07OONG@Loseg?$CFd?$AA@
+ 0002:3D26       ??_7CSummary@@6F@
+ 0002:3DA6       ??_7CListBox@@6F@
+ 0002:3E22       ??0CSplashBtn@@REC@XZ
+ 0002:3E88       ??_GCBitmap@@VECPEXI@Z
+ 0002:3EB2       ??_GCSplashDlg@@VECPEXI@Z
+ 0002:3EFC       ??_GCSplashBtn@@VECPEXI@Z
+ 0002:3F36       ??_7CSplashBtn@@6F@
+ 0002:3FA6       ??_7CBitmap@@6F@
+ 0002:3FBA       ??_7CSplashDlg@@6F@
+ 0002:403A       ??_GCBrush@@VECPEXI@Z
+ 0002:4064       ??_GCRgn@@VECPEXI@Z
+ 0002:408E       ??_GCBlue@@VECPEXI@Z
+ 0002:40B8       ??_7CRgn@@6F@
+ 0002:40CC       ??_7CBlue@@6F@
+ 0002:414C       ??_7CBrush@@6F@
+ 0002:4160       ??_7CException@@6F@
+ 0002:4174       ??_7CMemoryException@@6F@
+ 0002:4188       ??_7CNotSupportedException@@6F@
+ 0002:419C       ??_7CPtrList@@6F@
+ 0002:41B0       ??_7CMapWordToPtr@@6F@
+ 0002:41C4       ??_C@_06HFGD@Afx?3?$CFx?$AA@
+ 0002:41CC       ??_C@_0BA@GHAD@Afx?3?$CFx?3?$CFx?3?$CFx?3?$CFx?$AA@
+ 0002:41DC       ??_7CWnd@@6F@
+ 0002:4248       ??_7CDialog@@6F@
+ 0002:42C8       ??_C@_02MHMJ@?$CFu?$AA@
+ 0002:42CC       ??_C@_02MECO@?$CFd?$AA@
+ 0002:42D0       ??_C@_03JGAL@?$CFlu?$AA@
+ 0002:42D4       ??_C@_06MJBA@STATIC?$AA@
+ 0002:42DC       ??_C@_06GACA@BUTTON?$AA@
+ 0002:42E4       ??_C@_07EDJC@LISTBOX?$AA@
+ 0002:42EC       ??_C@_08HEN@COMBOBOX?$AA@
+ 0002:42F6       ??_C@_04IGNI@EDIT?$AA@
+ 0002:42FC       ??_C@_09LIFG@SCROLLBAR?$AA@
+ 0002:4306       ??_7CStatic@@6F@
+ 0002:4372       ??_7CEdit@@6F@
+ 0002:43DE       ??_7CScrollBar@@6F@
+ 0002:444A       ??_7CPen@@6F@
+ 0002:445E       ??_7CDC@@6F@
+ 0002:44DA       ??_7CClientDC@@6F@
+ 0002:4556       ??_7CWindowDC@@6F@
+ 0002:45D2       ??_7CPaintDC@@6F@
+ 0002:464E       ??_7CResourceException@@6F@
+ 0002:4662       ??_7CUserException@@6F@
+ 0002:4676       ??_7CMenu@@6F@
+ 0002:4692       ??_C@_01PBLD@M?$AA@
+ 0002:4694       ??_7CCmdUI@@6F@
+ 0002:46A4       ??_7CCmdTarget@@6F@
+ 0002:46D4       ??_7CWinApp@@6F@
+ 0002:4744       ??_C@_01PFH@A?$AA@
+ 0003:0000       ?csMaxDir@@3VCString@@E
+ 0004:0004       rsrvptrs
+ 0004:0014       ?messageMap@CWinmxmzApp@@1UAFX_MSGMAP@@A
+ 0004:001A       ?pszSect@@3PEDE
+ 0004:0028       ?messageMap@CCustomOpts@@1UAFX_MSGMAP@@A
+ 0004:002E       ?messageMap@CEndPhase1@@1UAFX_MSGMAP@@A
+ 0004:0034       ?messageMap@CSelectMBoot@@1UAFX_MSGMAP@@A
+ 0004:003A       ?messageMap@CSelectMode@@1UAFX_MSGMAP@@A
+ 0004:0040       ?messageMap@CWelcome@@1UAFX_MSGMAP@@A
+ 0004:0046       ?messageMap@CExit@@1UAFX_MSGMAP@@A
+ 0004:004C       ?messageMap@CSummary@@1UAFX_MSGMAP@@A
+ 0004:0072       _SectCount
+ 0004:007C       _DefSect
+ 0004:008A       _FirstSect
+ 0004:00E0       _StartupBat
+ 0004:00F2       _ConfigSys
+ 0004:00F6       _ActiveOwner
+ 0004:00F7       _CommonOwner
+ 0004:00F8       _Parsed4DOS
+ 0004:00FA       _Cfg
+ 0004:01D8       _Keywords
+ 0004:02C4       ?messageMap@CSplashDlg@@1UAFX_MSGMAP@@A
+ 0004:02D2       ?messageMap@CBlue@@1UAFX_MSGMAP@@A
+ 0004:02D8       ?classCObject@CObject@@2UCRuntimeClass@@A
+ 0004:02EC       ?pFirstClass@CRuntimeClass@@2PEU1@E
+ 0004:02F0       ?classCException@CException@@2UCRuntimeClass@@A
+ 0004:0308       ?classCMemoryException@CMemoryException@@2UCRuntimeClass@@A
+ 0004:031C       ?classCNotSupportedException@CNotSupportedException@@2UCRuntimeClass@@A
+ 0004:0330       ?classCPtrList@CPtrList@@2UCRuntimeClass@@A
+ 0004:0344       ?classCMapWordToPtr@CMapWordToPtr@@2UCRuntimeClass@@A
+ 0004:0358       ?_afxChNil@@3DA
+ 0004:0368       ?_afxTrackingMenu@@3PBUHMENU__@@B
+ 0004:036A       ?classCWnd@CWnd@@2UCRuntimeClass@@A
+ 0004:037E       ?messageMap@CWnd@@1UAFX_MSGMAP@@A
+ 0004:0386       ?classCDialog@CDialog@@2UCRuntimeClass@@A
+ 0004:039A       ?messageMap@CDialog@@1UAFX_MSGMAP@@A
+ 0004:03A0       ?classCStatic@CStatic@@2UCRuntimeClass@@A
+ 0004:03B4       ?classCButton@CButton@@2UCRuntimeClass@@A
+ 0004:03C8       ?classCListBox@CListBox@@2UCRuntimeClass@@A
+ 0004:03DC       ?classCComboBox@CComboBox@@2UCRuntimeClass@@A
+ 0004:03F0       ?classCEdit@CEdit@@2UCRuntimeClass@@A
+ 0004:0404       ?classCScrollBar@CScrollBar@@2UCRuntimeClass@@A
+ 0004:0418       ?classCResourceException@CResourceException@@2UCRuntimeClass@@A
+ 0004:042C       ?classCUserException@CUserException@@2UCRuntimeClass@@A
+ 0004:0440       ?classCDC@CDC@@2UCRuntimeClass@@A
+ 0004:0454       ?classCClientDC@CClientDC@@2UCRuntimeClass@@A
+ 0004:0468       ?classCWindowDC@CWindowDC@@2UCRuntimeClass@@A
+ 0004:047C       ?classCPaintDC@CPaintDC@@2UCRuntimeClass@@A
+ 0004:0490       ?classCGdiObject@CGdiObject@@2UCRuntimeClass@@A
+ 0004:04A4       ?classCPen@CPen@@2UCRuntimeClass@@A
+ 0004:04B8       ?classCBrush@CBrush@@2UCRuntimeClass@@A
+ 0004:04CC       ?classCFont@CFont@@2UCRuntimeClass@@A
+ 0004:04E0       ?classCBitmap@CBitmap@@2UCRuntimeClass@@A
+ 0004:04F4       ?classCPalette@CPalette@@2UCRuntimeClass@@A
+ 0004:0508       ?classCRgn@CRgn@@2UCRuntimeClass@@A
+ 0004:051C       ?classCMenu@CMenu@@2UCRuntimeClass@@A
+ 0004:0530       ?classCCmdTarget@CCmdTarget@@2UCRuntimeClass@@A
+ 0004:0544       ?messageMap@CCmdTarget@@1UAFX_MSGMAP@@A
+ 0004:054A       ?pRoutingView@CCmdTarget@@0PEVCView@@E
+ 0004:054E       ?classCWinApp@CWinApp@@2UCRuntimeClass@@A
+ 0004:0562       ?_afxFirstFrameWnd@@3PEVCFrameWnd@@E
+ 0004:056A       ?_afxHHookOldCbtFilter@@3PFUHHOOK__@@F
+ 0004:056E       ?_afxHHookOldMsgFilter@@3PFUHHOOK__@@F
+ 0004:0572       ?messageMap@CWinApp@@1UAFX_MSGMAP@@A
+ 0004:057E       _afxCurrentWinApp
+ 0004:0582       _afxCurrentInstanceHandle
+ 0004:0584       _afxCurrentResourceHandle
+ 0004:0586       _afxCurrentAppName
+ 0004:058A       _afxTempMapLock
+ 0004:058E       ?afxDlgBkBrush@@3PBUHBRUSH__@@B
+ 0004:0590       ?afxDlgTextClr@@3KA
+ 0004:0594       _STKHQQ
+ 0004:0596       __hPrevInstance
+ 0004:0598       __hInstance
+ 0004:059A       __lpszCmdLine
+ 0004:059E       __cmdShow
+ 0004:05A0       _aseglo
+ 0004:05A2       _aseghi
+ 0004:05A4       ___aDBswpflg
+ 0004:05A6       ___aDBrterr
+ 0004:05A8       __acfinfo
+ 0004:05B6       __aintdiv
+ 0004:05BA       __fac
+ 0004:05C4       _errno
+ 0004:05C6       __umaskval
+ 0004:05C8       __pspadr
+ 0004:05CA       __psp
+ 0004:05CC       __winminor
+ 0004:05CC       __winver
+ 0004:05CD       __winmajor
+ 0004:05CE       __osver
+ 0004:05CE       __osminor
+ 0004:05CF       __osmajor
+ 0004:05D0       __osversion
+ 0004:05D2       __osmode
+ 0004:05D3       __cpumode
+ 0004:05D4       __doserrno
+ 0004:05D4       __oserr
+ 0004:05D6       __nfile
+ 0004:05D8       __wfile
+ 0004:05DA       __wnfile
+ 0004:05DC       __osfile
+ 0004:05F0       __wsfile
+ 0004:0604       ___argc
+ 0004:0606       ___argv
+ 0004:060A       __environ
+ 0004:060E       __pgmptr
+ 0004:0613       __child
+ 0004:0615       __exitflag
+ 0004:0616       __adbgmsg
+ 0004:061A       __aaltstkovr
+ 0004:063A       __cflush
+ 0004:063C       __lastiob
+ 0004:06B4       __fmode
+ 0004:06B4       __iomode
+ 0004:06B6       __commode
+ 0004:06B8       __lseekchk
+ 0004:06BA       __pnhFarHeap
+ 0004:06BE       __fheap
+ 0004:06CC       __amblksiz
+ 0004:06CE       __cfltcvt_tab
+ 0004:06EA       __sigintseg
+ 0004:06EC       __sigintoff
+ 0004:06EE       __asizeC
+ 0004:06EF       __asizeD
+ 0004:06F0       __ctype_
+ 0004:06F0       __ctype
+ 0004:07F6       __qwinused
+ 0004:0838       __fpinit
+ 0004:0848       __iob
+ 0004:0938       __iob2
+ 0004:0BAC       ?theApp@@3VCWinmxmzApp@@A
+ 0004:0BAC       _edata
+ 0004:0BAC       __edata
+ 0004:0C8E       ?afxEmptyString@@3VCString@@B
+ 0004:0C96       ?wndTop@CWnd@@2V1@B
+ 0004:0CB2       ?wndBottom@CWnd@@2V1@B
+ 0004:0CCE       ?wndTopMost@CWnd@@2V1@B
+ 0004:0CEA       ?wndNoTopMost@CWnd@@2V1@B
+ 0004:0D06       ?_afxLastMsg@@3UtagMSG@@A
+ 0004:0D8E       ?_afxMsgCache@@3QEUAFX_MSG_CACHE@@E
+ 0004:166E       ?afxData@@3UAUX_DATA@@A
+ 0004:16B8       ?_afxRegisterPenAppProc@@3P7CXIH@ZE
+ 0004:16BC       ?_afxOleState@@3UAFX_OLESTATE@@A
+ 0004:1780       _buff
+ 0004:1B68       _CurSect
+ 0004:1B6C       _CurLine
+ 0004:1B70       _PrevSect
+ 0004:1B74       _Callback
+ 0004:1B78       _MenuOrder
+ 0004:1B7A       _IncLine
+ 0004:1B7E       _DefOwner
+ 0004:1B80       _NextLine
+ 0004:1B84       _PrevLine
+ 0004:1B88       _MenuCount
+ 0004:1B8A       _added
+ 0004:1B8C       __end
+ 0004:1B8C       _end
+
+Line numbers for w16\nd\WINMXMZ.OBJ(winmxmz.cpp) segment WINMXMZ_TEXT
+
+    44 0001:0000     0 0001:0013
+
+Line numbers for w16\nd\WINMXMZ.OBJ(winmxmz.cpp) segment COMDAT_SEG1
+
+    54 0002:0006    59 0002:0067    60 0002:006e    61 0002:007a
+    62 0002:007f    63 0002:0084     0 0002:008d    68 0002:008e
+    71 0002:0097     0 0002:00a2    78 0002:00a4     0 0002:00b2
+    88 0002:00b4    91 0002:00ba    92 0002:00ca    96 0002:00da
+    98 0002:00fe   100 0002:011c   104 0002:0120   105 0002:0139
+   110 0002:0140   111 0002:015d   112 0002:0173   114 0002:017b
+   115 0002:0193   117 0002:019b   118 0002:01b7   122 0002:01bf
+   124 0002:01c2   128 0002:01d0     0 0002:01dd   155 0002:01de
+   157 0002:01f2   158 0002:01ff   160 0002:020a   162 0002:021b
+   164 0002:0229   166 0002:0232     0 0002:023b   175 0002:023c
+   176 0002:023f   177 0002:0252     0 0002:0253   180 0002:0254
+   183 0002:025b   185 0002:0264   187 0002:026c   189 0002:0293
+     0 0002:0297   192 0002:0298   200 0002:02a1   202 0002:02ae
+   205 0002:02c1   208 0002:02d5   211 0002:02fc   213 0002:0307
+   214 0002:0329   221 0002:033d   222 0002:036d   229 0002:0390
+   231 0002:0392     0 0002:0397   234 0002:0398   235 0002:039f
+   236 0002:03a9   238 0002:03ae     0 0002:03bb   242 0002:03bc
+   245 0002:03c1   248 0002:03d2   251 0002:03f9   253 0002:0407
+   257 0002:0412   261 0002:042f   262 0002:044b   269 0002:045a
+     0 0002:0466   275 0002:0468   282 0002:0471   283 0002:0480
+   289 0002:0487   292 0002:04b3   293 0002:04bb   295 0002:04c4
+   296 0002:04cd   299 0002:04db   302 0002:04f9   305 0002:04fd
+   309 0002:0504   310 0002:051d   315 0002:0524   318 0002:0559
+   315 0002:055c   318 0002:0564   323 0002:056d   324 0002:0586
+   328 0002:058d   332 0002:05ab   333 0002:05c1   335 0002:05cb
+   336 0002:05d1   338 0002:05ff   340 0002:0604   342 0002:061d
+   343 0002:0627   347 0002:0631   348 0002:0634   349 0002:0667
+   354 0002:0671   356 0002:0674   360 0002:0682     0 0002:0685
+   367 0002:0686   389 0002:068f   390 0002:06a7   393 0002:06c7
+   394 0002:06df   398 0002:06f9   400 0002:0711   402 0002:0731
+   404 0002:0749   406 0002:0763   408 0002:0779   410 0002:0791
+   412 0002:07a9   413 0002:07c9   416 0002:07e1   418 0002:0801
+   419 0002:081f   423 0002:082b   425 0002:084a   427 0002:0867
+   428 0002:0882   431 0002:088c   435 0002:0895   438 0002:08af
+   440 0002:08cc   442 0002:08f4   444 0002:0919   446 0002:0932
+   448 0002:0937   450 0002:0949   452 0002:094b   456 0002:0959
+   459 0002:0967   467 0002:097d   469 0002:0997   471 0002:09b7
+   472 0002:09cc   475 0002:09e2   477 0002:0a00   478 0002:0a1e
+   479 0002:0a2e   481 0002:0a4a   485 0002:0a54   487 0002:0a79
+   489 0002:0a8b   493 0002:0aa5   495 0002:0aa7     0 0002:0aaa
+   498 0002:0aac   505 0002:0ab5   507 0002:0ac4   510 0002:0ad0
+   511 0002:0ad9   513 0002:0ae2   516 0002:0af5   518 0002:0b04
+   525 0002:0b0f   529 0002:0b2a   526 0002:0b36   533 0002:0b40
+   537 0002:0b55   538 0002:0b66   539 0002:0b77   543 0002:0b84
+   546 0002:0bad   547 0002:0bbd   573 0002:0bce   574 0002:0bd3
+   576 0002:0bd8   577 0002:0be6   578 0002:0bf5   579 0002:0c15
+   580 0002:0c23   581 0002:0c32   585 0002:0c3c   586 0002:0c54
+   590 0002:0c67   591 0002:0c77   593 0002:0c87   595 0002:0c98
+   597 0002:0cb1   598 0002:0cbd   599 0002:0cc5   602 0002:0cde
+   603 0002:0cf9   604 0002:0d14   608 0002:0d2f   612 0002:0d3d
+   616 0002:0d4b   617 0002:0d5b   622 0002:0d6d   625 0002:0d7b
+   626 0002:0d89   630 0002:0d8f   634 0002:0d9a   638 0002:0da8
+   640 0002:0dce   648 0002:0dde   651 0002:0df5   654 0002:0e00
+   656 0002:0e23   661 0002:0e45   662 0002:0e58   663 0002:0e80
+   665 0002:0e8d   668 0002:0e98   673 0002:0e9e   676 0002:0ec0
+   677 0002:0ed5   682 0002:0ee2   685 0002:0f03   687 0002:0f06
+   905 0002:0f09   899 0002:0f22   900 0002:0f27   901 0002:0f38
+   690 0002:0f40   691 0002:0f43   692 0002:0f59   694 0002:0f5e
+   699 0002:0f61   701 0002:0f70   703 0002:0f8a   704 0002:0f8f
+   706 0002:0f9f   739 0002:0faa   709 0002:0fb3   713 0002:0fca
+   715 0002:0fd8   716 0002:0ff5   717 0002:0ffc   718 0002:100b
+   720 0002:1010   722 0002:1012   726 0002:1020   727 0002:1027
+   732 0002:102d   736 0002:102f   741 0002:1034   745 0002:1066
+   746 0002:106f   781 0002:107a   775 0002:108f   776 0002:1091
+   758 0002:10a5   759 0002:10b3   762 0002:10b9   763 0002:10c0
+   766 0002:10c6   771 0002:10cc   772 0002:10cf   786 0002:10d2
+   788 0002:10dd   792 0002:10f8   809 0002:110d   814 0002:1124
+   822 0002:1138   823 0002:1153   824 0002:116e   825 0002:1189
+   827 0002:11a4   828 0002:11af   832 0002:11c6   833 0002:11e1
+   836 0002:11fc   840 0002:121e   842 0002:124c   844 0002:1255
+   850 0002:1281   851 0002:1299   852 0002:12ad   857 0002:12c1
+   861 0002:12e0   862 0002:12e6   868 0002:1308   869 0002:1320
+   870 0002:132d   874 0002:132f   895 0002:1331   877 0002:1340
+   883 0002:1346   884 0002:134b   907 0002:134e   909 0002:1351
+   911 0002:135a   912 0002:13cc     0 0002:13d1   917 0002:13d2
+   918 0002:13da   919 0002:13e4   922 0002:13ee   924 0002:1402
+   926 0002:140b   927 0002:1421     0 0002:1425   934 0002:1426
+   936 0002:142e   937 0002:1438   938 0002:145f   942 0002:1466
+   945 0002:147d   947 0002:1495   948 0002:149a   949 0002:14b8
+   955 0002:14c3   958 0002:14c8   959 0002:14db   958 0002:14ea
+   953 0002:14fd   960 0002:1502     0 0002:1506   965 0002:1508
+   966 0002:150f   967 0002:1524     0 0002:1528   972 0002:152a
+   975 0002:1531   977 0002:1536   979 0002:153d   980 0002:1546
+   981 0002:1551   987 0002:1563   989 0002:156a   990 0002:156d
+   994 0002:157d   995 0002:1587   997 0002:158b   999 0002:1596
+  1001 0002:159c  1003 0002:15b3     0 0002:15b7  1005 0002:15b8
+     0 0002:15de  1005 0002:15e0     0 0002:15ee  1005 0002:15f0
+     0 0002:15fa   279 0002:16e4     0 0002:16e6
+
+Line numbers for w16\nd\MXDLGS.OBJ(mxdlgs.cpp) segment COMDAT_SEG1
+
+    27 0002:1d30    30 0002:1e10    32 0002:1e1c    36 0002:1e26
+    38 0002:1e30    41 0002:1e3d    43 0002:1e4c    45 0002:1e56
+    46 0002:1e63
+
+Line numbers for w16\nd\MXDLGS.OBJ(mxdlgs.cpp) segment MXDLGS_TEXT
+
+     0 0001:00d1
+
+Line numbers for w16\nd\MXDLGS.OBJ(mxdlgs.cpp) segment COMDAT_SEG1
+
+    49 0002:1e6e    52 0002:1e7a    53 0002:1e8d    54 0002:1ea0
+    55 0002:1eb3    56 0002:1ec6    57 0002:1ed9    58 0002:1eec
+    59 0002:1eff    60 0002:1f12    63 0002:1f25    64 0002:1f30
+    65 0002:1f45    67 0002:1f59     0 0002:1f5e    69 0002:1f60
+     0 0002:1f65    83 0002:1f66    84 0002:1f6e    85 0002:1f7c
+    86 0002:1f8a     0 0002:1f8f    90 0002:1f90    91 0002:1fa3
+     0 0002:1fa5    94 0002:1fa6    96 0002:1fad   100 0002:1fb8
+   101 0002:1fc3   102 0002:1fd5   105 0002:1fe0   108 0002:1feb
+   110 0002:1ff5     0 0002:1ff9   113 0002:1ffa   115 0002:2001
+   119 0002:200c   120 0002:2017   121 0002:2029   124 0002:2034
+   126 0002:203f     0 0002:2043   129 0002:2044   130 0002:204b
+   132 0002:2054   135 0002:2064   136 0002:206f   139 0002:2080
+   140 0002:208b   142 0002:209a   144 0002:20a9   146 0002:20ba
+   148 0002:20c5   152 0002:20d4   154 0002:20e0   155 0002:20e3
+     0 0002:20e7   159 0002:20e8   161 0002:20ef   165 0002:20fa
+   167 0002:2115   171 0002:212a   175 0002:2136   177 0002:2141
+     0 0002:2145   185 0002:2146   189 0002:216f     0 0002:2178
+   197 0002:217a     0 0002:217c   199 0002:217e     0 0002:2183
+   215 0002:2184   217 0002:21f8   220 0002:2209   222 0002:221a
+   223 0002:2222   225 0002:2234     0 0002:223d   229 0002:223e
+   230 0002:2247   232 0002:2250   234 0002:2260   235 0002:2268
+   238 0002:226d   241 0002:2282   244 0002:228e   254 0002:22a3
+   257 0002:22b8   262 0002:22f1   263 0002:230b   266 0002:2318
+   270 0002:2339   271 0002:2361   272 0002:2367   276 0002:2394
+   277 0002:239a   254 0002:23b7   246 0002:23c4   284 0002:23dd
+   287 0002:23f5   289 0002:23fe   291 0002:2401     0 0002:2406
+   294 0002:2408   297 0002:2414   298 0002:242b   299 0002:2445
+   301 0002:2453     0 0002:2458   303 0002:245a     0 0002:245f
+   316 0002:2460   317 0002:2473     0 0002:2475   320 0002:2476
+   322 0002:247f   324 0002:248a   326 0002:2498   327 0002:24ae
+   329 0002:24d5   331 0002:24d8   333 0002:24f0   334 0002:24f4
+   333 0002:251b   339 0002:2521   344 0002:2526   345 0002:2542
+   346 0002:2569   348 0002:2598   354 0002:259a   355 0002:25a5
+     0 0002:25aa   363 0002:25ac   367 0002:25d5     0 0002:25de
+   370 0002:25e0   372 0002:25e8   375 0002:2606   377 0002:2615
+   379 0002:2624   380 0002:262b     0 0002:2630   388 0002:2632
+     0 0002:2634   390 0002:2636     0 0002:263b   408 0002:263c
+   412 0002:2665     0 0002:266e   420 0002:2670     0 0002:2672
+   422 0002:2674     0 0002:2679   433 0002:267a   434 0002:2681
+   435 0002:268a   436 0002:2696     0 0002:269a   439 0002:269c
+   440 0002:26a3   441 0002:26ac   442 0002:26b8     0 0002:26bc
+   445 0002:26be   446 0002:26c1   447 0002:26d0     0 0002:26d3
+   450 0002:26d4   451 0002:26d7   452 0002:26e6     0 0002:26e9
+   457 0002:26ea   458 0002:26fd     0 0002:26ff   462 0002:2700
+   463 0002:2713     0 0002:2715   467 0002:2716   468 0002:2729
+     0 0002:272b   476 0002:272c   480 0002:2755     0 0002:275e
+   488 0002:2760     0 0002:2762   490 0002:2764     0 0002:2769
+   500 0002:276a   501 0002:2772   503 0002:277e   506 0002:278d
+   508 0002:2797   509 0002:279a     0 0002:279f   513 0002:27a0
+   514 0002:27a8   516 0002:27b4   519 0002:27c3   521 0002:27cd
+   522 0002:27d0     0 0002:27d5   525 0002:27d6   526 0002:27de
+   528 0002:27ea   531 0002:27f9   533 0002:2803   534 0002:2806
+     0 0002:280b   537 0002:280c   539 0002:280f   541 0002:2822
+   542 0002:282d     0 0002:2830   545 0002:2832   547 0002:2835
+   549 0002:2848   550 0002:2853     0 0002:2856   553 0002:2858
+   555 0002:285b   557 0002:286e   558 0002:2879     0 0002:287c
+   561 0002:287e   563 0002:2881   565 0002:2894   566 0002:289f
+     0 0002:28a2   569 0002:28a4   571 0002:28a7   573 0002:28ba
+   574 0002:28c5     0 0002:28c8   279 0002:16e4     0 0002:16e6
+  1744 0002:28ca     0 0002:28cc
+
+Line numbers for w16\nd\SUMMARY.OBJ(summary.cpp) segment COMDAT_SEG1
+
+    25 0002:2ea0    27 0002:2f4d    28 0002:2f5a    29 0002:2f6b
+    32 0002:2f7c    33 0002:2f86
+
+Line numbers for w16\nd\SUMMARY.OBJ(summary.cpp) segment SUMMARY_TEXT
+
+     0 0001:00f9
+
+Line numbers for w16\nd\SUMMARY.OBJ(summary.cpp) segment COMDAT_SEG1
+
+    36 0002:2f90    39 0002:2f9c    40 0002:2fb3    41 0002:2fc7
+    42 0002:2fdb    43 0002:2fef    45 0002:3003     0 0002:3008
+    47 0002:300a     0 0002:300f    56 0002:3010    57 0002:3013
+    58 0002:303e     0 0002:3041    60 0002:3042    61 0002:3045
+    62 0002:3061     0 0002:3064    68 0002:3066    76 0002:306f
+    77 0002:308e    80 0002:30b3    81 0002:30cf    84 0002:30d5
+    85 0002:30f3    90 0002:3103    91 0002:3109    95 0002:3124
+    97 0002:3128   100 0002:3132   102 0002:3145   104 0002:3154
+   106 0002:3162   109 0002:3170   104 0002:3178   123 0002:317f
+   115 0002:3196   116 0002:3197   121 0002:319a   127 0002:31a2
+   128 0002:31b0   131 0002:31be   132 0002:31ca   138 0002:31e5
+     0 0002:31e8   145 0002:31ea   150 0002:31f0   162 0002:3209
+   163 0002:3230   164 0002:323a   166 0002:3246   162 0002:3257
+   169 0002:325c   171 0002:3263     0 0002:3266   174 0002:3268
+   180 0002:3271   182 0002:327b   184 0002:3284   187 0002:3294
+   194 0002:32a0   205 0002:32be   212 0002:32c3   213 0002:32c8
+   214 0002:32cd   215 0002:32d2   216 0002:32d7   217 0002:32dc
+   222 0002:32e1   223 0002:32f7   226 0002:330d   229 0002:333d
+   232 0002:335c   234 0002:337a   235 0002:3388   237 0002:33a0
+   242 0002:33ab   245 0002:33bf   252 0002:33de   255 0002:340e
+   258 0002:342d   260 0002:344b   261 0002:345a   263 0002:3472
+   266 0002:347f   269 0002:3494   277 0002:34b3   280 0002:34c7
+   281 0002:34c9   283 0002:34d0   285 0002:34e5   281 0002:34fa
+   287 0002:3503   289 0002:3506   290 0002:3537   292 0002:354c
+   293 0002:3569   295 0002:357e   296 0002:3599   298 0002:35ae
+   299 0002:35c2   301 0002:35d6   302 0002:35ed   305 0002:3604
+   306 0002:360c   308 0002:3611   310 0002:3616   311 0002:362d
+   312 0002:3641   315 0002:3658   317 0002:365b   318 0002:3670
+   319 0002:36a0   323 0002:36a9   326 0002:36c7   330 0002:36dd
+   332 0002:36f9   334 0002:3717   336 0002:3732   337 0002:3746
+   339 0002:3758   342 0002:375a   344 0002:3771   349 0002:377d
+   353 0002:3792   354 0002:37c5   356 0002:37de   306 0002:37f5
+   360 0002:3801   362 0002:3807   363 0002:381e   368 0002:3832
+   369 0002:3849   370 0002:3860   371 0002:3877   379 0002:388e
+   380 0002:3896   382 0002:389b   384 0002:38a0   386 0002:38b7
+   387 0002:38cb   390 0002:38e2   392 0002:38e5   393 0002:38fa
+   394 0002:392a   398 0002:3933   401 0002:3951   405 0002:3967
+   407 0002:3983   409 0002:39a1   411 0002:39bc   412 0002:39d0
+   414 0002:39e2   417 0002:39e4   419 0002:39fb   424 0002:3a07
+   428 0002:3a1c   429 0002:3a4f   431 0002:3a68   380 0002:3a7f
+   436 0002:3a8b   439 0002:3a9c   441 0002:3aa5   442 0002:3ab2
+     0 0002:3ab7   445 0002:3ab8   446 0002:3abb   447 0002:3aca
+     0 0002:3acd   451 0002:3ace   452 0002:3ae1     0 0002:3ae3
+   455 0002:3ae4   457 0002:3ae7   460 0002:3af7   462 0002:3b08
+   463 0002:3b13     0 0002:3b16   466 0002:3b18   468 0002:3b1b
+   470 0002:3b2b   471 0002:3b36     0 0002:3b39   279 0002:16e4
+     0 0002:16e6  1744 0002:28ca     0 0002:28cc
+
+Line numbers for R:\MAX\lib\Lquilibr.lib(bootdrv.c) segment BOOTDRV_TEXT
+
+    21 0001:00fa    22 0001:0101    24 0001:0105    27 0001:010c
+    28 0001:010f    29 0001:0111    30 0001:0114    33 0001:0117
+    36 0001:0119    37 0001:015a    39 0001:0171    41 0001:017d
+    44 0001:0181    45 0001:0184     0 0001:0189
+
+Line numbers for R:\MAX\lib\Lquilibr.lib(DMALLOC.asm) segment DMALLOC_TEXT
+
+    45 0001:018a    64 0001:018a    65 0001:018b    67 0001:018d
+    68 0001:0190    70 0001:0191    71 0001:0195    73 0001:0197
+    74 0001:0199    75 0001:019c    77 0001:019e    78 0001:01a0
+    84 0001:01a2    85 0001:01a5    87 0001:01a7    89 0001:01a8
+    90 0001:01aa    91 0001:01ac    92 0001:01b0    93 0001:01b1
+    95 0001:01b4    97 0001:01b5   100 0001:01b7   101 0001:01bb
+   104 0001:01bd   105 0001:01bf   106 0001:01c1   109 0001:01c3
+   112 0001:01c8   114 0001:01c9   116 0001:01ca   122 0001:01cb
+   141 0001:01cb   142 0001:01cc   144 0001:01ce   145 0001:01d1
+   146 0001:01d3   148 0001:01d5   149 0001:01d8   150 0001:01db
+   151 0001:01dd   152 0001:01df   153 0001:01e2   155 0001:01e5
+   156 0001:01e8   158 0001:01ea   159 0001:01ec   160 0001:01ee
+   161 0001:01ef   162 0001:01f3   163 0001:01f4   164 0001:01f7
+   167 0001:01f9   169 0001:01fd   170 0001:0200   171 0001:0202
+   173 0001:0204   174 0001:0206   177 0001:0208   178 0001:020b
+   179 0001:020e   180 0001:0211   183 0001:0216   185 0001:0217
+   191 0001:0218   211 0001:0218   212 0001:0219   214 0001:021b
+   215 0001:021e   216 0001:0220   218 0001:0222   219 0001:0225
+   221 0001:0227   222 0001:0229   223 0001:022b   224 0001:022f
+   225 0001:0232   228 0001:0234   229 0001:0238   232 0001:023a
+   233 0001:023d   234 0001:0240   235 0001:0245   238 0001:0248
+   240 0001:0249   246 0001:024a   256 0001:024a   258 0001:024f
+   259 0001:0252   260 0001:0256   262 0001:0258   263 0001:025b
+   264 0001:025d   265 0001:025f   267 0001:0261   268 0001:0264
+   271 0001:0266   272 0001:0268   273 0001:026a   276 0001:026c
+   277 0001:0270   280 0001:0274   283 0001:0276   285 0001:0277
+   287 0001:027c
+
+Line numbers for R:\MAX\lib\Lquilibr.lib(mbparse.c) segment MBPARSE_TEXT
+
+    53 0001:027e    56 0001:0285    57 0001:0298    59 0001:02a8
+     0 0001:02ab    64 0001:02ac    67 0001:02b7    68 0001:02d4
+    70 0001:02e4    71 0001:02e9     0 0001:02ef    79 0001:02f0
+    82 0001:02fb    83 0001:031c    88 0001:034d    90 0001:034f
+     0 0001:0355    99 0001:0356   107 0001:035f   118 0001:0367
+   119 0001:0380   121 0001:0393   123 0001:03c5   126 0001:03f3
+   129 0001:03f9   130 0001:0416   131 0001:0443   133 0001:0457
+   137 0001:0459   141 0001:045f   142 0001:0482   147 0001:049a
+   148 0001:04b4   149 0001:04bd   151 0001:04d0   152 0001:04d2
+   153 0001:04fd   157 0001:050c   158 0001:051f   165 0001:0524
+   167 0001:0544   169 0001:0560   180 0001:0565   182 0001:058a
+   185 0001:05a9   190 0001:05c2   211 0001:05ce   212 0001:05d5
+   213 0001:05e9   214 0001:0616   215 0001:062b   216 0001:0640
+   221 0001:0654   222 0001:0662   227 0001:0679   229 0001:068c
+   230 0001:06a1   231 0001:06c5   232 0001:06e6   233 0001:0700
+   234 0001:071a   235 0001:0734   236 0001:0758   238 0001:076d
+   240 0001:076f     0 0001:0775   248 0001:0776   253 0001:077e
+   256 0001:07df   258 0001:07eb   259 0001:0831   260 0001:0846
+   261 0001:0853   262 0001:085c   263 0001:0868   264 0001:087a
+   265 0001:087e   273 0001:08ae   274 0001:08d8   276 0001:08e8
+   277 0001:0932   278 0001:0963   285 0001:0987   287 0001:0989
+     0 0001:098f   318 0001:0990   321 0001:0998   322 0001:09ab
+   326 0001:09d9   328 0001:09de     0 0001:09e3   333 0001:09e4
+   336 0001:09e8   337 0001:09f2   341 0001:0a04   343 0001:0a08
+     0 0001:0a0d   347 0001:0a0e   351 0001:0a16   352 0001:0a2e
+   351 0001:0a4b   352 0001:0a61   355 0001:0a66   357 0001:0a68
+     0 0001:0a6d   361 0001:0a6e   367 0001:0a76   369 0001:0a8c
+   370 0001:0a96   371 0001:0aa9   373 0001:0ab8   374 0001:0acd
+   376 0001:0adf   377 0001:0b0e   378 0001:0b22   380 0001:0b2d
+   381 0001:0b39   382 0001:0b43   383 0001:0b48   370 0001:0b53
+   390 0001:0b6a     0 0001:0b71   395 0001:0b72   400 0001:0b79
+   401 0001:0b8c   403 0001:0b99   407 0001:0ba1   408 0001:0ba6
+   409 0001:0bab   412 0001:0bb3   414 0001:0bb8     0 0001:0bbd
+   419 0001:0bbe   424 0001:0bc6   426 0001:0bd6   427 0001:0be0
+   428 0001:0bee   429 0001:0bfc   430 0001:0c0a   431 0001:0c11
+   432 0001:0c18   433 0001:0c1f   437 0001:0c2d   439 0001:0c32
+     0 0001:0c39   444 0001:0c3a   448 0001:0c42   449 0001:0c4a
+   450 0001:0c61   451 0001:0c71   456 0001:0c90   458 0001:0c95
+     0 0001:0c9b   466 0001:0c9c   468 0001:0ca3   492 0001:0ca7
+   471 0001:0ce5   483 0001:0cf1   486 0001:0d08   489 0001:0d28
+   494 0001:0d2c   496 0001:0d33     0 0001:0d39   501 0001:0d3a
+   502 0001:0d40   503 0001:0d52   504 0001:0d65   505 0001:0d71
+   506 0001:0d84   507 0001:0d90   510 0001:0db7   512 0001:0dbf
+     0 0001:0dc3   517 0001:0dc4   525 0001:0dcc   535 0001:0dd1
+   536 0001:0de2   542 0001:0dee   546 0001:0e0f   551 0001:0e17
+   555 0001:0e1a   557 0001:0e38   559 0001:0e3d   561 0001:0e5e
+   563 0001:0e6f   564 0001:0e87   566 0001:0ea4   568 0001:0ec4
+   571 0001:0eda   572 0001:0ee9   574 0001:0efb   575 0001:0f04
+   576 0001:0f17   577 0001:0f19   579 0001:0f27   580 0001:0f2f
+   581 0001:0f39   583 0001:0f3c   584 0001:0f41   594 0001:0f62
+   596 0001:0f73   598 0001:0f8b   599 0001:0f93   604 0001:0fae
+   605 0001:0fbe   608 0001:0fc8   585 0001:0fca   586 0001:0fdf
+   587 0001:0fed   588 0001:1006   609 0001:1008   614 0001:1012
+   616 0001:1020   618 0001:103e   624 0001:1044   625 0001:104c
+   628 0001:105a   630 0001:105d     0 0001:1063   635 0001:1064
+   636 0001:106c   639 0001:106f   641 0001:1079   645 0001:1086
+   646 0001:108c   647 0001:10a1   648 0001:10ac   649 0001:10b3
+   650 0001:10b5   646 0001:10bc   653 0001:10d3   655 0001:10d5
+   658 0001:10dc   659 0001:10ee   662 0001:110d   663 0001:1112
+   664 0001:111e   668 0001:1129   669 0001:113b   670 0001:114d
+   668 0001:1158   673 0001:116e   674 0001:1180   675 0001:1192
+   676 0001:11b8   673 0001:11c4   683 0001:11db   684 0001:11ed
+   685 0001:11f9   694 0001:1218   695 0001:1244   696 0001:1253
+   697 0001:1270   698 0001:1284   699 0001:1295   700 0001:129e
+   701 0001:12ac   702 0001:12ae   703 0001:12b8   694 0001:12ba
+   706 0001:12db   709 0001:12e2   710 0001:12fd   711 0001:1308
+   712 0001:130a   715 0001:130f   716 0001:1315   719 0001:1319
+   721 0001:131b     0 0001:1321   729 0001:1322   730 0001:132a
+   732 0001:132f   734 0001:1344   737 0001:135d   739 0001:1378
+   742 0001:1390   743 0001:13a5   755 0001:13b7   758 0001:142f
+   762 0001:1434   763 0001:145b   766 0001:147a   768 0001:149a
+   770 0001:14ac   772 0001:14b1   776 0001:14cc   777 0001:14ed
+   779 0001:14f7   781 0001:150c   782 0001:151b   783 0001:152c
+   786 0001:1533   787 0001:1546   788 0001:155c   776 0001:1569
+   793 0001:1580   794 0001:1593   801 0001:15a5   803 0001:15b6
+   732 0001:15bf   780 0001:15db   809 0001:15e0   811 0001:15e2
+     0 0001:15e9   825 0001:15ea   826 0001:15f2   830 0001:15f7
+   835 0001:1611   839 0001:1638   844 0001:164d   846 0001:1666
+   847 0001:1674   853 0001:167d   855 0001:16b4   856 0001:16bb
+   858 0001:16d9   860 0001:1705   861 0001:1711   862 0001:1718
+   863 0001:1722   868 0001:172f   869 0001:1750   873 0001:1766
+   875 0001:176c   876 0001:1778   877 0001:1798   878 0001:17b8
+   879 0001:17d8   882 0001:17dd   884 0001:17df   889 0001:17f7
+   890 0001:1801   891 0001:1806   893 0001:1810   894 0001:1829
+   896 0001:1839   844 0001:1847   900 0001:1863   904 0001:1870
+   907 0001:1875   909 0001:1878     0 0001:187f   917 0001:1880
+   925 0001:1888   927 0001:188d   930 0001:189a   934 0001:18b6
+   936 0001:18bf   937 0001:18ca   938 0001:18d2   942 0001:18d8
+   945 0001:18e0   946 0001:18f5   955 0001:1915   956 0001:1932
+   955 0001:194d   972 0001:1964   974 0001:196c   976 0001:1981
+   977 0001:198e   980 0001:1997   987 0001:19c0   999 0001:19ca
+  1014 0001:19e6  1015 0001:19fb  1020 0001:1a0f  1014 0001:1a7a
+  1022 0001:1a94  1026 0001:1aa0  1030 0001:1aa5  1031 0001:1aab
+  1036 0001:1aaf  1038 0001:1ab9  1039 0001:1abf  1043 0001:1ad6
+  1045 0001:1ad9     0 0001:1adf  1051 0001:1ae0  1055 0001:1ae8
+  1058 0001:1b13  1059 0001:1b1d  1061 0001:1b27  1056 0001:1b2b
+  1063 0001:1b2e     0 0001:1b33
+
+Line numbers for R:\MAX\lib\Lquilibr.lib(qmaxpres.c) segment QMAXPRES_TEXT
+
+    25 0001:1b34    27 0001:1b3d    30 0001:1b45    33 0001:1b5b
+    34 0001:1b7a    35 0001:1b9e    36 0001:1bae    38 0001:1bbf
+    40 0001:1bc3    41 0001:1bc5     0 0001:1bcb    46 0001:1bcc
+    48 0001:1bd5    51 0001:1bdd    54 0001:1bf3    55 0001:1c12
+    56 0001:1c30    57 0001:1c40    59 0001:1c51    61 0001:1c55
+    62 0001:1c57     0 0001:1c5d    69 0001:1c5e    70 0001:1c64
+    71 0001:1c69    74 0001:1c6e    75 0001:1c83    79 0001:1c8d
+    80 0001:1c8e    81 0001:1c91    82 0001:1c93    83 0001:1c94
+    84 0001:1c96    86 0001:1c99    87 0001:1c9b    88 0001:1c9e
+    89 0001:1ca0    91 0001:1ca2    92 0001:1ca6    94 0001:1ca8
+    95 0001:1cae    96 0001:1cb1    97 0001:1cb2    98 0001:1cb3
+    99 0001:1cb6   100 0001:1cb9   101 0001:1cbb   102 0001:1cbc
+   104 0001:1cc1   105 0001:1cc4   106 0001:1cc7   107 0001:1cc9
+   108 0001:1ccc   111 0001:1cce   112 0001:1cd1     0 0001:1cd5
+
+Line numbers for R:\MAX\lib\Lstutil.lib(filecopy.c) segment FILECOPY_TEXT
+
+    22 0001:1cd6    28 0001:1cda    31 0001:1ce2    34 0001:1ce6
+    36 0001:1cf8    39 0001:1cfc    40 0001:1d04    43 0001:1d19
+   101 0001:1d33   102 0001:1d41   103 0001:1d4f   104 0001:1d56
+   105 0001:1d5f   107 0001:1d68    60 0001:1d6a    63 0001:1d6f
+    64 0001:1d83    66 0001:1d86    68 0001:1d91    73 0001:1da5
+    74 0001:1daa    76 0001:1dac    81 0001:1daf    85 0001:1dc6
+    89 0001:1dd1    91 0001:1de9    92 0001:1df2    93 0001:1dfb
+    95 0001:1e03    96 0001:1e14    98 0001:1e1c   109 0001:1e1f
+     0 0001:1e21
+
+Line numbers for R:\MAX\lib\Lstumfc.lib(splash.cpp) segment SPLASH_TEXT
+
+    23 0001:1e22    29 0001:1e58    31 0001:1e6a     0 0001:1e7d
+    34 0001:1e7e    37 0001:1e82    39 0001:1e98     0 0001:1e9b
+    41 0001:1e9c     0 0001:1ea1    51 0001:1ea2    56 0001:1ea6
+    57 0001:1eb0    60 0001:1ec2    64 0001:1ed4    65 0001:1ede
+    66 0001:1f09    70 0001:1f20    74 0001:1f38    75 0001:1f49
+    83 0001:1f6b    84 0001:1f95    91 0001:1f9f   100 0001:1ffb
+   101 0001:201a     0 0001:202b   106 0001:202c   107 0001:2030
+   108 0001:2051   109 0001:2064     0 0001:2067   112 0001:2068
+   113 0001:206c   116 0001:2077   120 0001:2089   123 0001:20a5
+   125 0001:20b0   126 0001:20b3     0 0001:20b7
+
+Line numbers for R:\MAX\lib\Lstumfc.lib(splash.cpp) segment COMDAT_SEG1
+
+   279 0002:16e4     0 0002:16e6  1744 0002:28ca     0 0002:28cc
+
+Line numbers for R:\MAX\lib\Lstumfc.lib(centdlg.cpp) segment CENTDLG_TEXT
+
+    13 0001:20b8    15 0001:20bc    21 0001:20cd    22 0001:20de
+    25 0001:20ef    26 0001:210f    29 0001:212f    30 0001:2148
+    32 0001:216a     0 0001:216b
+
+Line numbers for R:\MAX\lib\Lstumfc.lib(bluescr.cpp) segment BLUESCR_TEXT
+
+    19 0001:216c    24 0001:2192    27 0001:21a0    29 0001:21b2
+     0 0001:21d9    37 0001:21da     0 0001:21dd    39 0001:21de
+     0 0001:21e3    51 0001:21e4    52 0001:21e8    55 0001:21f3
+    60 0001:2204    63 0001:2215    65 0001:2237    66 0001:223a
+     0 0001:223d    70 0001:223e    71 0001:2242    74 0001:2252
+    76 0001:2275    80 0001:2298    85 0001:229d    86 0001:22ac
+    87 0001:22bb    89 0001:22c7   108 0001:22dd   110 0001:22ed
+   111 0001:22f7   113 0001:2301    91 0001:231a    96 0001:2333
+    98 0001:2349   103 0001:2362   105 0001:2377   116 0001:2388
+     0 0001:23a9   120 0001:23aa   122 0001:23ae   123 0001:23b6
+   124 0001:23c3   126 0001:23cd   127 0001:23d5   129 0001:23e7
+   130 0001:23e9   132 0001:23f4     0 0001:23f7
+
+Line numbers for R:\MAX\lib\Lstumfc.lib(bluescr.cpp) segment COMDAT_SEG1
+
+   279 0002:16e4     0 0002:16e6
+
+Program entry point at 0001:997a

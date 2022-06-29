@@ -1,0 +1,183 @@
+Add new Windows Maximize program
+
+Fix file entry:
+
+* Add new Windows Maximize program
+
+ Description:
+	This program is not in a finished stage but should offer all
+	the functionality to be offered in the shipping product.
+	Work is needed mostly on visual aspects and on error handling.
+ Who: HENRY
+ When: 13 Oct 95.
+ SW/HW Environment: Starting from Windows or Win95.
+ Symptom: NAB.
+ Temporary Workaround: Exit Windows and start Maximize from DOS.
+	For Win95, use F8 when booting and don't start Windows.
+ Test Procedure: Run Custom and Express Maximize from Windows.
+	Also test running Maximize from DOS.  Check Autoexec.bat
+	carefully for any apparent mishandling (we add a line so
+	we can show the summary under Windows).
+ QA Testing Passed:
+ Version: WinMaxim 8.0.3.001
+		  Maximize 8.0.005
+
+New files:
+MAXIMIZE
+  NEWNAMES.C
+	Tool to update source.	Basically just does multiple search
+	and replace operations on one or more files (no wildcards,
+	sorry).
+
+WINMXMZ
+  ALTICON1.ICO
+  WINMXMZ.ICO
+	Icons.	WINMXMZ.ICO is the default.
+
+  CVERSION.H
+	Module version data.
+
+  MXDLGS.CPP
+  MXDLGS.H
+	Declaration and implementation of MFC dialogs for most of
+	the Maximize options.
+
+  PROGDDE.CPP
+  PROGDDE.H
+	Progman DDE interface stuff for adding things to startup folder.
+	We may not need this after all.
+
+  RESOURCE.H
+	Resource constants.
+
+  SPLASH.BMP
+	A really ugly splash screen.
+
+  SPLASH.H
+  SPLASH.CPP
+	Declaration and implementation of MFC dialog to display
+	splash screen (really just a dialog with a bitmap in it).
+
+  STDAFX.H
+  STFAFX.CPP
+	Standard precompilation stuff for C8.
+
+  SUMMARY.H
+  SUMMARY.CPP
+	Declaration and implementation of MFC dialog to display
+	results of optimization by getting data from MAXIMIZE.INI.
+
+  WINMXMZ.CPP
+  WINMXMZ.H
+	Main application class.  Note that everything happens
+	via dialogs of one sort or the other.
+
+  WINMXMZ.DEF
+	Module definition file for linker.
+
+  WINMXMZ.INC
+	Header dependencies.
+
+  WINMXMZ.MAK
+	Project makefile.
+
+  WINMXMZ.RC
+	AppStudio resource file.
+
+Files affected:
+
+MAX.MAK
+	Add new target.  Fix problem with batch file echoing to %MBLDOUT%
+	when undefined (causes DOS to complain "unable to create file")
+
+INCLUDE
+  COMMDEF.H
+	Update header to recognize WINDOWS.H, which has changed since
+	the Windows 2.x days.
+
+  COMMFUNC.H
+  MBPARSE.H
+	Add extern "C" to work with C++ code.
+
+  MVERSION.H
+	Hook up _lcldefs.h.  This file defines whether beta numbering
+	will be displayed and allows you to specify a unique alpha
+	suffix as well.
+
+  TEXTNAME.MAK
+	Add new file to distribution.
+
+MAXIMIZE
+  BROWSE.C
+  COPYFILE.C
+  INS_ADF.C
+  INS_EXE.C
+  INS_MCA.C
+  PARSE.C
+  PASS2.C
+  PASS3.C
+  READCNFG.C
+  READMXMZ.C
+  REORDER.C
+  UTIL.C
+  WRFILES3.C
+	Updated to work without OLDNAMES.LIB.  This was done using a new
+	tool, NEWNAMES.C.  Still experimental and a bit rough - doesn't
+	know about comments yet - but does the job.  Backup your source
+	before trying NEWNAMES a.c b.c c.c d.c ...
+
+  MAKEFILE
+	Get rid of OLDNAMES.LIB
+
+	Tell stupid MS linker not to generate a bad .exe!  Duh!
+
+  MAXIMIZE.C
+	Updated to work without OLDNAMES.LIB.
+	Handle new /X (from windows) and /P (premaxim and reboot) options.
+	These are meant only to support WinMaxim.EXE and so are not
+	documented in the /? help.
+
+  MAXSUB.ASM
+	Save region sizes before they get blown away by the optimization
+	algorithm (actually, they get pared down to what remains).
+
+  MAXVAR.H
+	Declare some more UTIL_OPT variables.
+
+	Declare new MAXSUB variables.
+
+	Add flag for FromWindows mode (/X).
+
+  REBOOT.C
+	Updated to work without OLDNAMES.LIB.
+	Pass FromWindows switch on to next phase.
+
+  SCREENS.C
+	Updated to work without OLDNAMES.LIB.
+	Remove waits for keystrokes in Phase 3 (/X in effect).
+	Write data to Maximize.INI for display of results from Windows.
+	Add line before first shell in first startup batch file to
+	start Windows and display Maximize results if that's where
+	we started from.
+
+  VERSDATA.ASM
+	Update copyright messages.
+	Change product name to MAX.
+
+QUILIB
+  ARGSTR.C
+  COPYFILE.C
+  CRITERR.C
+  INTMSG.C
+  LOGO.C
+  MBOOTSEL.C
+  MBPARSE.C
+  QHELP.C
+  SAVEADF.C
+  TRUENAME.C
+  UI.C
+	Updated to work without OLDNAMES.LIB.  Note this will all
+	still work with programs that still link OLDNAMES.LIB.
+
+
+

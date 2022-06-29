@@ -1,0 +1,44 @@
+Disable ROMSrch if BCF or AUTOBCF is present
+
+Fix file entry:
+
+* Disable ROMSrch if BCF or AUTOBCF is present
+
+ Description:
+ 	If BCF=xxxx or AUTOBCF is present in the MAX profile, we
+	disable to "Run ROMSrch" checkbox.   Also, if running
+	WinMaxim for the very first time, Run ROMSrch should
+	be checked by default (unless USE=fxxx or NOROMSRCH already
+	exist).
+ Who:	HENRY
+ When:	6 Feb 96.
+ SW/HW Environment: BCF machines.
+ Symptom: User may elect to run ROMSrch, which will refuse to run.
+ Temporary Workaround: None.  Don't do that.
+ Test Procedure: On a BCF machine, run WinMaxim and verify that
+	in the Custom dialog, ROMSrch is completely disabled.
+	On a non-BCF machine, remove any USE= statements from
+	high DOS, remove any NOROMSRCH statements, and any ROMsrch
+	related statements in the QMAX.INI file, and run WINMAXIM.
+	Select the Custom dialog and verify that Run Romsrch is
+	checked by default.
+ QA Testing Passed:
+ Version: WinMaxim 8.01.6.010
+
+Files affected:
+
+CVERSION.H
+	Bump ver to 10.
+
+MXDLGS.CPP
+MXDLGS.H
+	Add m_bROMSrchEna switch to allow ROMsrch to be completely
+	disabled (if we have a BCF machine).
+
+WINMXMZ.CPP
+	Disable ROMSrch if BCF= or AUTOBCF found.
+
+	Make default for ROMSrch TRUE in all cases (Custom as well
+	as Express).  Note that selecting Express forces the default
+	of ROMSrch on (unless otherwise verboten).
+

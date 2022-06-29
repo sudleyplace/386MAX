@@ -1,0 +1,13 @@
+w16\nd\STDAFX.OBJ+
+w16\nd\WINMXMZ.OBJ+
+w16\nd\MXDLGS.OBJ+
++
+w16\nd\SUMMARY.OBJ +
+
+w16\nd\winmaxim.EXE
+w16\nd\winmaxim.map
+M:\lib\+
+M:\mfc\lib\+
+R:\MAX\lib\Lquilibr.lib R:\MAX\lib\Lstutil.lib R:\MAX\lib\Lstumfc.lib+
+Lafxcw  libw Llibcew commdlg shell ddeml CTL3DV2.LIB
+WINMXMZ.DEF;

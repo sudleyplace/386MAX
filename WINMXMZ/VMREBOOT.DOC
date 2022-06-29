@@ -1,0 +1,81 @@
+Handle reboot for Maximize phase I from another memory manager's VM
+
+Fix file entry:
+
+* Handle reboot for Maximize phase I from another memory manager's VM
+
+ Description:
+ 	We now handle the case where MAX is not active.  Unfortunately
+	there's no clean way to distinguish between real mode (just
+	HIMEM) and another memory manager from within Windows.  So
+	we let Maximize figure out which it is.  This TWT also fixes
+	a problem with not being able to view help on the Summary
+	dialog.
+ Who: HENRY
+ When: 11 Nov 95.
+ SW/HW Environment: Maximizing a section with MAX installed (possibly
+ 	the current one) but another memory manager is still active.
+ Symptom: Maximize bombs out.
+ Temporary Workaround: Reboot before starting Winmaxim.
+ Test Procedure: Boot under a Multiconfig section with Himem.
+ 	Run Winmaxim on a section with MAX installed.  Do the same
+	with EMM386, QEMM, and Netroom.
+ QA Testing Passed:
+ Version: Maximize 8.0.8; Winmaxim 8.0.29.006
+
+New files:
+
+FILECOPY.C
+	Ripped off from Dispatch's STATUTIL.  Copies a file.
+
+MESSAGES.H
+	Messages and other text for Winmaxim.
+
+Files affected:
+
+MAXIMIZE.C
+	Handle new /R switch which:
+	1. If system is in real mode, returns an errorlevel 5 for the
+	   batch file which invokes Maximize from Windows to recognize
+	   and proceed with normal phase 1.
+	2. If system is in V86 mode and MAX is not active, reboots.
+	   CONFIG.SYS and AUTOEXEC.BAT have already been setup by
+	   WINMAXIM at this point.
+
+	Note that all responsibility for setting up and restoring
+	system files rests with WINMAXIM and the batch file it
+	creates to run Maximize in this special case.
+
+VERSBETA.ASM
+	Bumpv er to 8.
+
+*Winmaxim
+
+CVERSION.H
+	Bump ver to 6
+
+MXDLGS.CPP
+MXDLGS.H
+SUMMARY.CPP
+SUMMARY.H
+WINMXMZ.H
+	Add code to switch active window to summary dialog.
+
+WINMXMZ.CPP
+	Move some messages into MESSAGES.H
+	Handle the case where MAX is not active (either real mode w/
+	HIMEM or another memory manager).
+	Check for errors when trying to Undo via Maximize /X /P
+
+WINMXMZ.INC
+	Updated DEPSCAN dependency list.
+
+WINMXMZ.MAK
+	Add new file copy module.
+
+WINMXMZ.RC
+	Don't make summary dialog system modal.  This forces the user to
+	look at it but causes help to not work.
+
+	Now clicking on the background brings the summary to the fore.
+

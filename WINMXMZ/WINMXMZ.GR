@@ -1,0 +1,304 @@
+//Microsoft App Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+// $Header:   P:/PVCS/MAX/WINMXMZ/WINMXMZ.GRV   1.1   27 Feb 1996 12:29:26   PETERJ  $
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "// $Header:   P:/PVCS/MAX/WINMXMZ/WINMXMZ.GRV   1.1   27 Feb 1996 12:29:26   PETERJ  $\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""cversion.h""\r\n"
+    "#include <mversion.h>\r\n"
+    "#include <common.ver>\r\n"
+    "\r\n"
+    "#include ""afxres.rc""  \011// Standard components\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDR_MAINFRAME           ICON    DISCARDABLE     "WINMXMZ.ICO"
+IDI_ALTICON1            ICON    DISCARDABLE     "ALTICON1.ICO"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_WELCOME DIALOG DISCARDABLE  0, 0, 258, 149
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Willkommen bei Maximize!"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,29,118,50,14
+    PUSHBUTTON      "&Beenden",IDCANCEL,99,118,50,14
+    PUSHBUTTON      "&Hilfe",IDC_HELP,169,118,50,14
+    CTEXT           "Wilkommen bei Maximize, dem Programm zur automatischen System-Konfiguraton f\374r Qualitas MAX!",
+                    IDC_STATIC,44,10,161,25
+    LTEXT           "Maximize durchsucht die System-Startdateien nach speicher-residenter Software und ermittelt die bestm\366gliche Speicher-Organisation. Klicken Sie auf Hilfe, wenn Sie in Maximize weitere Erl\344uterungen zu den einzelnen Schritten w\374nschen.",
+                    IDC_STATIC,16,44,222,57
+    ICON            IDR_MAINFRAME,IDC_STATIC,217,9,18,20
+END
+
+IDD_SELECTMBOOT DIALOG DISCARDABLE  0, 0, 277, 176
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Multiconfig-Block auswählen"
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_SELECTMB,101,60,165,72,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,41,139,50,14
+    PUSHBUTTON      "&Beenden",IDCANCEL,110,139,50,14
+    PUSHBUTTON      "&Hilfe",IDC_HELP,181,139,50,14
+    LTEXT           "Maximize hat erkannt, da\337 Ihr System die Multiconfig-Einrichtung benutzt.",
+                    IDC_STATIC,20,15,212,20
+    LTEXT           "W\344hlen Sie aus der Liste den Multiconfig-Block, den Sie maximieren m\366chten und best\344tigen Sie Ihre Auswahl mit OK.",
+                    IDC_STATIC,20,38,212,20
+    LTEXT           "Auswahl f\374r &Maximize:",IDC_STATIC,20,63,77,13
+    ICON            IDR_MAINFRAME,IDC_STATIC,41,94,18,20
+END
+
+IDD_SELECTMODE DIALOG DISCARDABLE  0, 0, 271, 166
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Maximize Modus wählen"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Expre\337",IDC_EXPRESS,26,28,42,41
+    PUSHBUTTON      "&Angepa\337t",IDC_CUSTOM,26,81,42,41
+    PUSHBUTTON      "&Zur\374ck",IDC_BACK,32,138,50,14
+    PUSHBUTTON      "&Hilfe",IDC_HELP,162,138,50,14
+    PUSHBUTTON      "&Beenden",IDCANCEL,97,138,50,14
+    CTEXT           "W\344hlen Sie den gew\374nschten Maximize-Modus:",
+                    IDC_STATIC,6,7,257,13
+    LTEXT           "Im Expre\337-Modus trifft Maximize alle Entscheidungen selbst\344ndig.",
+                    IDC_STATIC,80,36,155,32
+    LTEXT           "Mit Angepa\337tem Maximize w\344hlen Sie die Funktionen aus und entscheiden, welche Programme von Maximize zur Verlagerung in HiDOS-Speicher in Betracht gezogen werden.",
+                    IDC_STATIC,80,87,155,32
+END
+
+IDD_CUSTOPTS DIALOG DISCARDABLE  0, 0, 323, 186
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Optionen für angepaßtes Maximize"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "W\344hlen Sie mit Aktivieren der Kontrollk\344stchen die Optionen f\374r Angepa\337tes Maximize:",
+                    IDC_STATIC,7,7,309,14
+    CONTROL         "&ROMsearch anwenden",IDC_ROMSRCH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,23,38,86,8
+    CONTROL         "ROMsearch &entfernen",IDC_DISROMSRCH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,23,53,86,8
+    CONTROL         "&VGASWAP einschalten",IDC_VGASWAP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,23,93,86,8
+    CONTROL         "VGASWAP &ausschalten",IDC_DISVGASWAP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,23,108,86,8
+    CONTROL         "ExtraDOS &nutzen",IDC_EXTRADOS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,23,133,70,8
+    DEFPUSHBUTTON   "OK",IDOK,30,158,50,14
+    PUSHBUTTON      "&Zur\374ck",IDC_BACK,95,158,50,14
+    PUSHBUTTON      "&Beenden",IDCANCEL,165,158,50,14
+    PUSHBUTTON      "&Hilfe",IDC_HELP,235,158,50,14
+    LTEXT           "Sucht im System-BIOS nach nutzbarem HiDOS-Speicher",
+                    IDC_STATIC,113,38,186,10
+    LTEXT           "Entfernt USE= Eintr\344ge f\374r Bereiche bei F000-FFFF aus der Qualitas MAX Profildatei",
+                    IDC_STATIC,113,53,182,17
+    LTEXT           "Pr\374ft, ob das VGA BIOS verlagert werden kann",
+                    IDC_STATIC,113,93,180,10
+    LTEXT           "Verlagert DOS-Teilsegmente (FILES, BUFFERS, COMMAND.COM, LASTDRIVE, FCBs) in HiDOS-Speicher.",
+                    IDC_STATIC,113,128,189,20
+    GROUPBOX        "ROMsearch",IDC_STATIC,18,23,285,51
+    GROUPBOX        "VGASWAP",IDC_STATIC,18,78,285,45
+    LTEXT           "Entfernt VGASWAP aus der Qualitas MAX Profildatei",
+                    IDC_STATIC,113,108,180,10
+END
+
+IDD_CUSTOPTS95 DIALOG DISCARDABLE  0, 0, 323, 205
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Optionen für angepaßtes Maximize"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "W\344hlen Sie mit Aktivieren der Kontrollk\344stchen die Optionen f\374r Angepa\337tes Maximize:",
+                    IDC_STATIC,7,7,309,14
+    CONTROL         "&ROMsearch anwenden",IDC_ROMSRCH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,22,40,86,8
+    CONTROL         "ROMsearch &entfernen",IDC_DISROMSRCH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,22,55,86,8
+    CONTROL         "&VGASWAP einschalten",IDC_VGASWAP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,22,95,86,8
+    CONTROL         "VGASWAP &ausschalten",IDC_DISVGASWAP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,22,110,86,8
+    CONTROL         "ExtraDOS &nutzen",IDC_EXTRADOS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,22,135,70,8
+    CONTROL         "DOSSTART &maximieren",IDC_DOSSTART,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,22,154,86,11
+    DEFPUSHBUTTON   "OK",IDOK,30,180,50,14
+    PUSHBUTTON      "&Zur\374ck",IDC_BACK,95,180,50,14
+    PUSHBUTTON      "&Beenden",IDCANCEL,165,180,50,14
+    PUSHBUTTON      "&Hilfe",IDC_HELP,235,180,50,14
+    LTEXT           "Sucht im System-BIOS nach nutzbarem HiDOS-Speicher",
+                    IDC_STATIC,115,40,182,10
+    LTEXT           "Entfernt USE= Eintr\344ge f\374r Bereiche bei F000-FFFF aus der Qualitas MAX Profildatei",
+                    IDC_STATIC,115,55,182,17
+    LTEXT           "Pr\374ft, ob das VGA BIOS verlagert werden kann",
+                    IDC_STATIC,115,95,180,10
+    LTEXT           "Verlagert DOS-Teilsegmente (FILES, BUFFERS, COMMAND.COM, LASTDRIVE, FCBs) in HiDOS-Speicher.",
+                    IDC_STATIC,115,130,189,19
+    GROUPBOX        "ROMsearch",IDC_STATIC,17,25,285,49
+    GROUPBOX        "VGASWAP",IDC_STATIC,17,80,285,45
+    LTEXT           "Entfernt VGASWAP aus der Qualitas MAX Profildatei",
+                    IDC_STATIC,115,110,181,10
+    LTEXT           "Erkennt und maximiert die in DOSSTART.BAT (zus\344tzlich zu den Systemdateien) geladene residente Software.",
+                    IDC_STATIC,115,150,189,18
+END
+
+
+IDD_END_PHASE1 DIALOG DISCARDABLE  0, 0, 321, 159
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Maximize Meldung"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,30,138,50,14
+    PUSHBUTTON      "&Zur\374ck",IDC_BACK,99,138,50,14
+    PUSHBUTTON      "&Beenden",IDCANCEL,168,138,50,14
+    PUSHBUTTON      "&Hilfe",IDC_HELP,237,138,50,14
+    LTEXT           "W\344hrend des Maximize-Ablaufs wird Ihr Computer mehrmals neu gestartet.\n\nNach jedem Start setzt Maximize seine Arbeit automatisch fort. Sollte in AUTOEXEC.BAT ein Men\374programm geladen werden, verlassen Sie dieses bitte, soda\337 Maximize fortfahren kan.",
+                    IDC_STATIC,30,15,250,46
+    LTEXT           "Mit Klicken auf OK wird Windows beendet und der Maximize-Ablauf gestartet. Sobald Maximize seine Arbeit beendet hat, kehren Sie zu Windows zur\374ck.\n\nBitte stellen Sie sicher, da\337 keine Diskette im Laufwerk A eingelegt ist und klicken Sie auf OK.",
+                    IDC_STATIC,30,67,258,41
+    ICON            IDR_MAINFRAME,IDC_STATIC,291,13,18,20
+END
+
+IDD_SPLASH DIALOG DISCARDABLE  0, 0, 227, 157
+STYLE WS_POPUP | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_SPLASHBMP,"Button",BS_OWNERDRAW | WS_TABSTOP,0,0,
+                    240,160
+END
+
+IDD_SUMMARY DIALOG DISCARDABLE  0, 0, 325, 215
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Maximize-Ergebnis"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,62,195,50,14
+    PUSHBUTTON      "&R\374ckg\344ngig",IDC_REVERT,126,195,50,14
+    PUSHBUTTON      "&Hilfe",IDC_HELP,194,195,50,14
+    LTEXT           "Sie haben Maximize erfolgreich abgeschlossen!",
+                    IDC_STATIC,25,7,171,11
+    LTEXT           "Maximize hat ???KB in HiDOS-Speicher verlagert.",
+                    IDC_TOTALUSEDHIGH,25,20,186,10
+    GROUPBOX        "In HiDOS verlagert:",IDC_STATIC,20,31,125,96
+    GROUPBOX        "In LoDOS verblieben:",IDC_STATIC,154,31,125,96
+    LTEXT           "Sie haben noch ???KB ungenutzten HiDOS Speicher verf\374gbar.",
+                    IDC_TOTALFREEHIGH,25,132,204,11
+    LTEXT           "Insgesamt freier konventioneller Speicher: ???KB",
+                    IDC_TOTALFREELOW,25,146,180,10
+    LTEXT           "Klicken Sie auf OK zur Annahme der neuen Konfiguration oder klicken Sie auf R\374ckg\344ngig f\374r die R\374ckkehr zur vorherigen Konfiguration und Beenden des Maximize-Ablaufs.",
+                    IDC_STATIC,25,160,278,30
+    ICON            IDR_MAINFRAME,IDC_STATIC,297,9,18,20
+    LISTBOX         IDC_HIGHLIST,24,41,116,82,NOT LBS_NOTIFY | 
+                    LBS_USETABSTOPS | WS_VSCROLL
+    LISTBOX         IDC_LOWLIST,159,42,116,82,NOT LBS_NOTIFY | 
+                    LBS_USETABSTOPS | WS_VSCROLL
+END
+
+IDD_CONFIRMEXIT DIALOG DISCARDABLE  0, 0, 185, 79
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Abbruch bestätigen"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,6,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,129,23,50,14
+    LTEXT           "Sie haben sich entschlossen, Maximize abzubrechen.  Best\344tigen Sie den Abbruch mit OK, sind Ihre bisherigen Aktionen wirkungslos. W\344hlen Sie hier Abbrechen, wird Maximize fortgesetzt.",
+                    IDC_STATIC,9,12,105,59
+    ICON            IDR_MAINFRAME,IDC_STATIC,142,48,18,20
+END
+
+IDD_BLUESCREEN DIALOG DISCARDABLE  0, 0, 185, 93
+STYLE WS_POPUP | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS DISCARDABLE 
+BEGIN
+    VK_F1,          IDC_HELP,               VIRTKEY,NOINVERT
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SPLASHSCRN          BITMAP  DISCARDABLE     "QMAX.BMP"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Windows Maximize Component\nWinmxmz\nWinmxmz Document\n\n\nWinmxmz.Document\nWinmxmz Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Windows Maximize"
+END
+
+
+#ifndef APSTUDIO_INVOKED
+////////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "cversion.h"
+#include <mversion.h>
+#include <common.ver>
+
+#include "afxres.rc"  	// Standard components
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,6 @@
+		ret\XLAT.OBJ	+
+ret\VERSION.OBJ
+		ret\xlat.exe
+		ret\xlat.map
+		/map /line /nod
+		NUL.def

@@ -1,0 +1,66 @@
+More Winmaxim changes
+
+Fix file entry:
+
+* More Winmaxim changes
+
+ Description:
+ 	Some minor changes, as well as a build fix for the 386LOAD version
+	(previously only the beta version was generated).  We no longer
+	add Winmaxim before QMT without the .exe.  This also fixes the
+	problem on some systems where the DOS truename function fails
+	under Windows.
+ Who: HENRY
+ When: 11 Nov 95.
+ SW/HW Environment: All.
+ Symptom: See WINMAX4.DOC.
+ Temporary Workaround: See WINMAX4.DOC.
+ Test Procedure: See WINMAX4.DOC
+ QA Testing Passed:
+ Version: WinMxmz 8.0.31.008; Maximize 8.0.009; 386LOAD, build 31 (no delete
+ 	needed for retail)
+
+Files affected:
+
+
+386LOAD\MAKEFILE
+	Make 386LOAD version (beta vs. retail, QMax vs. Blue) dependent
+	on top-level defines from MAXNAMES.MAK.
+
+INCLUDE\MAXNAMES.MAK
+	Define COREEXBASE as REB / RET / BLB / BLU for 386LOAD (beta QMAX /
+	retail Qmax / beta BlueMax / retail BlueMax)
+
+MAXIMIZE\SCREENS.C
+	When skipping shell programs named QMT or RAMEXAM, ignore extension.
+	Previously this worked only with (for example) C:\QMAX\QMT.EXE,
+	not with C:\QMAX\QMT
+
+MAXIMIZE\VERSBETA.ASM
+	Bump ver to 9.
+
+WINMXMZ\CVERSION.H
+	Bump ver to 8.  Note it got double-incremented accidentally.
+	No big deal, but this TWT is already logged in (pending corrections
+	on review).
+
+WINMXMZ\MXDLGS.CPP
+	If no MultiConfig section selected, use a different error message
+	rather than say "Invalid section [] - try another"  The [] looks
+	funny in Windows.
+
+WINMXMZ\WINMXMZ.CPP
+	Remove all TRUENAME calls.  Under certain as-yet-not-fully-determined
+	circumstances, the buffer translation for the call is muffed (probably
+	by some VxD hooking the call, possibly a network) and the call
+	fails though no error is set.
+
+	The only down side of yanking these truename translation calls
+	is that startup batch files containing assign and  /or subst
+	calls essential to accessing crucial drives and /or directories
+	will not be processed properly (only if we need to reboot into
+	Maximize and MAX is NOT the currently running memory manager).
+
+WINMXMZ\WINMXMZ.RC
+	Add Alt-D accelerator for VGASwap Disable.
+
