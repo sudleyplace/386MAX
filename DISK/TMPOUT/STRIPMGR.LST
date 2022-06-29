@@ -1,0 +1,248 @@
+: Strip list file for STRIPMGR
+
+: Lines to always strip
+*
+	#devicehigh device
+	~loadhigh
+	~lh
+	!rapidbio.sys
+	!fastbios.sys
+	!qmt
+	!qutil
+
+: MS-DOS 5.0
+dos umb
+	#devicehigh device
+	~loadhigh
+	~lh
+
+: MS-DOS 5.0 through 7 (Win95) EMM
+emm386.exe
+	#devicehigh device
+	#buffershigh buffers
+	#fcbshigh fcbs
+	#fileshigh files
+	#lastdrivehigh lastdrive
+	#stackshigh stacks
+	~loadhigh
+	~lh
+
+: QEMM 386
+:   all switches for LOADHI begin with a /
+qemm.sys
+	~loadhi
+	!qemm
+	!noega
+	!vidram
+
+: QEMM 386 through 8.0
+:   all switches for LOADHI begin with a /
+qemm386.sys
+	~loadhi
+	!qemm
+	!noega
+	!vidram
+	!dosdata
+	!dos-up
+	!qdpmi
+	!st-dbl
+	!hookrom
+	!files
+	!buffers
+	!lastdrive
+	!fcbs
+	!lwpfix
+
+: Turbo EMS
+vem.sys
+	~tsrload
+	!tems
+	!abvdisc
+
+
+: Above DISC
+vem.sys
+	!abvdisc
+
+
+: All Charge 386
+allemm4.sys
+	!allemm4
+	!allmenu
+	!buffers
+	!device
+	!files
+	!lastdriv
+	~alload
+
+
+: HIMEM.SYS (XMS manager)
+himem.sys
+:	!smartdrv
+:	!ramdrive
+
+: HIMEM.EXE (COMPAQ XMS manager)
+: all switched for RUNHI begin with /
+himem.exe
+	~runhi
+
+: CEMM.EXE (COMPAQ EMS manager)
+: all switched for RUNHI begin with /
+cemm.exe
+	~runhi
+
+: 386LIMIT
+386limit.sys
+	!386limit
+	!386disk
+	!ultimate
+	!omtifix
+
+
+: BlueMax
+bluemax.sys
+	~386load *prog=
+	!386disk
+	!ExtraDOS
+	!ultimate
+	!omtifix
+	^QMT
+	!QCACHE
+
+: 386MAX
+386max.sys
+	~386load *prog=
+	!386disk
+	!ExtraDOS
+	!ultimate
+	!omtifix
+	^QMT
+	!QCACHE
+
+: EMM386 - includes DR DOS 6.0
+emm386.sys
+	@hidevice device
+	@hiinstall install
+	~hiload
+
+: Turbo Debugger 386
+tdh386.sys
+
+: Memory Commander
+mc.sys
+
+: V-EMM
+vemm.sys
+	!vemmconf
+	!vemmdsk
+vemmsim.sys
+	!vemm
+	!vemmconf
+	!vemmdsk
+vemmsime.sys
+	!vemm
+	!vemmconf
+	!vemmdsk
+vemmsim2.sys
+	!vemm
+	!vemmconf
+	!vemmdsk
+
+: Invisible RAM
+shadow.sys
+	!shadow
+	!vgaon
+	!vgaoff
+	~lshadow
+
+: Invisible RAM 386
+cp386.sys
+	!c386emm
+	!shadow
+	~lshadow
+	!vgaon
+	!vgaoff
+
+: Memory Miser 1.0
+mm386.sys
+	~loaddvhi
+	~loadhi
+
+: ILIM
+ilim386.sys
+
+: Olivetti
+oemm386.sys
+
+: AST
+astemm.sys
+
+: Hewlett-Packard
+hpemm.sys
+
+: Hewlett-Packard
+hpemm386.sys
+	!hpemm386.com
+
+: 3 COM
+3comemm.sys
+
+: ASEM
+asememm.sys
+
+: AST
+astemm.sys
+
+: Compuadd
+caemm.sys
+
+: Digital Equipment
+demm386.sys
+
+: Epson
+epsonemm.sys
+
+: Grid
+grid386.sys
+
+: Hewlett Packard
+hpemm386.sys
+hpemm486.sys
+
+: LHY Fortran Compiler - Weitek Support
+386wtk.sys
+
+: Mitsubishi
+mitemm.sys
+
+: NEC
+necemm.sys
+
+: Olivetti
+oemm386.sys
+
+: Omniview a.k.a. Taskview
+386mate.sys
+
+: DOS 4.0x EMS Drivers
+xmaem.sys
+	!xma2ems.sys
+xma2ems.sys
+
+: PC MAG Utility
+ems40.sys
+
+: Toshiba
+emm4.sys
+
+: Leading Technology
+emm.xf
+
+: Dell 316SX
+mm.sys
+
+: Micronics Expanded Memory Manager
+MICEMM4B.sys
+
+: Compaq Memory Manager
+EXMEM.EXE

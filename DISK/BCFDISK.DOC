@@ -1,0 +1,11 @@
+Merge BCF Files Into DISK Generation
+
+Now that we've merged BlueMAX into Qualitas MAX, we need to generate
+the disks with BCF files.  These files are put into a separate
+subdirectory called BCF\ on disk #2.
+
+DISK.MAK	Define BCF= path from which BCF files are copied.
+		Everywhere $(D2) is mentioned, also take suitable
+		  action on $(D2)\BCF.
+
+
