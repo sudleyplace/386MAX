@@ -1,0 +1,10 @@
+Fix Bug When Running On Certain VESA BIOSes
+
+Some VESA BIOSes return the VESA_Info_Modes data inside the
+@VESA_Getinfo data struc, so we need to use separate buffers for that
+and the @VESA_Getmodeinfo buffer.
+
+SVGA_INF.ASM	Use separate buffers for the @VESA_Getinfo and
+		  @VESA_Getmodeinfo calls.
+
+

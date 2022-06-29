@@ -1,0 +1,358 @@
+#
+# Makefile for all models of Qualitas Interface Library
+#
+# $Header:   P:/PVCS/MAX/QUILIB/MAKEFILE.__V   1.9   30 May 1997 12:29:36   BOB  $
+#
+
+!include $(MAXROOT)include\maxnames.mak
+
+DEBUG = 0
+MODEL=L 			# Default to large model
+U=$(MODEL)r\			# Directory for .OBJ and .LIB files
+L=$(MAXROOT)lib\		# Library output directory
+OLDINC=$(INCLUDE)		# Old INCLUDE value
+ALLINC=$(U);$(H);$(I);$(Q);$(INCLUDE) # Search path for .C and .ASM translation
+PROJ=$(MODEL)quilibr	# Basename of library to generate
+DISPOBJ=0			# Turn off dispobj
+CVER=700			# This really means "not 6.x"
+
+!IF "$(MODEL)" == "S"   # Determine MASM model flag
+AMODEL=SMALL
+!ELSE
+!IF "$(MODEL)" == "M"
+AMODEL=MEDIUM
+!ELSE
+!IF "$(MODEL)" == "C"
+AMODEL=COMPACT
+!ELSE
+!IF "$(MODEL)" == "L"
+AMODEL=LARGE
+!ELSE
+!ERROR Model must be S, M, C, or L
+!ENDIF
+!ENDIF
+!ENDIF
+!ENDIF
+
+!IF "$(LST)" == ""
+LSTMAC=
+!ELSE
+LSTMAC=,$(LST)\$(@B)
+!ENDIF
+
+CVFLAGS=/Zd
+!IF "$(CVER)" == ""
+CVER=6
+!ENDIF
+!IF "$(CVER)" == "700"
+COPT=/Oslegc
+CFLAGS_G=/A$(MODEL) /DDOS_VERSION /DLANG_$(LANG) /Z7 /Gs $(COPT) /W3 /BATCH
+!ELSE
+COPT=/Oslegc
+CFLAGS_G=/A$(MODEL) /DDOS_VERSION /DLANG_$(LANG) /Z7 /Gs $(COPT) /W3 /BATCH
+!ENDIF
+ASM=masm
+AFLAGS_G=/DMODEL=$(AMODEL) /DLANG_$(LANG) /Mx /T $(CVFLAGS) /DC$(CVER)
+LINKER=$(LD)
+LFLAGS_G=/NOI /BATCH /FAR /PACKC
+
+!IF "$(DEBUG)" == "1"
+CFLAGS_G=$(CFLAGS_G) /DCVDBG
+LFLAGS_G=/CO $(LFLAGS_G)
+AFLAGS_G=$(AFLAGS_G)
+!ELSE	# DEBUG == 0
+LFLAGS_G=/EXE $(LFLAGS_G)
+AFLAGS_G=$(AFLAGS_G)
+!ENDIF	# DEBUG == 1
+
+MAPFILE_R  = NUL
+
+NMAKEBSC1  = set
+NMAKEBSC2  = nmake
+ILINK  = ilink
+LRF  = echo > NUL
+LBF  = echo > NUL
+LLIBS_G  =  /NOD:LLIBCA LLIBCAR
+
+# Implicit translation rules
+.c{$(U)}.obj:
+	set INCLUDE=$(ALLINC)
+	$(CC) /c $(CFLAGS_G) /Fo$*.obj $<
+	set INCLUDE=$(OLDINC)
+
+.asm{$(U)}.obj:
+	set INCLUDE=$(ALLINC)
+	$(ASM) $(AFLAGS_G) $<, $*.obj $(LSTMAC);
+	set INCLUDE=$(OLDINC)
+!IF $(DISPOBJ)
+	@dispobj $*/w
+!ENDIF
+
+# Note that each letter of the alphabet starts a new line.  This
+# means less editing when inserting new targets.
+# The editor and browser OBJs are segregated for testing purposes only.
+# The editor OBJs are used only by MAX shell.  ASQ and INSTALL don't use
+# them.  This saves about 12K.
+EDITOBJS=$(U)cursor.obj  $(U)cursor1.obj	 $(U)cursor2.obj	\
+	$(U)option.obj
+
+BROWSEOBJS=$(U)editwin.obj $(U)fileedit.obj	 $(U)print.obj
+
+LIBOBJS=$(U)argstr.obj							\
+	$(U)bcd_num.obj  $(U)bioscrc.obj	 $(U)blist.obj		\
+	$(U)bootdrv.obj  $(U)box.obj		 $(U)button.obj 	\
+	$(U)c_tload.obj  $(U)chkabort.obj	 $(U)colors.obj 	\
+	$(U)copyfile.obj $(U)cpu.obj		 $(U)criterr.obj	\
+	$(U)datestr.obj  $(U)dcache.obj 	 $(U)dialog.obj 	\
+	$(U)dmalloc.obj  $(U)dpmi_crc.obj						\
+	$(U)emsinfo.obj  $(U)error.obj		 $(U)exename.obj	\
+	$(U)extsize.obj 						\
+	$(U)filediff.obj $(U)filename.obj	 $(U)fldedit.obj	\
+	$(U)gameport.obj						\
+	$(U)helpback.obj						\
+	$(U)input.obj	 $(U)inshelp.obj	 $(U)inst2324.obj	\
+	$(U)int9hook.obj $(U)intmsg.obj 				\
+	$(U)juststr.obj 						\
+	$(U)keybid.obj	 $(U)keyboard.obj				\
+	$(U)launder.obj  $(U)logo.obj					\
+	$(U)mboot.obj	 $(U)mbootsel.obj	 $(U)mbparse.obj	\
+	$(U)mca_pos.obj  $(U)menu.obj		 $(U)message.obj	\
+	$(U)mouse.obj	 $(U)myalloc.obj				\
+	$(U)nomem.obj							\
+	$(U)owner.obj							\
+	$(U)pos_test.obj $(U)prerror.obj	 \
+	$(U)qhelp.obj	 $(U)qmaxpres.obj				\
+	$(U)ramscan.obj  $(U)readprof.obj				\
+	$(U)saveadf.obj  $(U)serial.obj 	 $(U)sleep.obj		\
+	$(U)sstor.obj	 $(U)stacker.obj	 $(U)stackdlg.obj	\
+	$(U)svga_inf.obj						\
+	$(U)textcur.obj  $(U)textwin.obj	 $(U)trim.obj		\
+	$(U)trnbln.obj	 $(U)truename.obj				\
+	$(U)ui.obj							\
+	$(U)vcpi_crc.obj $(U)vendinfo.obj	 $(U)video.obj		\
+	$(U)videoid.obj 						\
+	$(U)wait.obj	 $(U)windowfn.obj	 $(U)winsvrs.obj	\
+	$(U)winver.obj	 $(U)wordset.obj	 $(U)wrapstr.obj
+
+OBJS=$(LIBOBJS) $(BROWSEOBJS)
+
+OBJS=$(OBJS) $(EDITOBJS)
+
+ALL:	DIR		$(OBJS) 	 $(U)$(PROJ).lib	$(L)$(PROJ).lib \
+		$(BD)qlogo.ovl
+
+DEL:
+	-rm $(U)*.*
+
+DIR:
+	vdir -c $(U)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\quilib\*
+VCSDIR = P:\PVCS\MAX\quilib\*
+ALIAS ALL P:\PVCS\MAX\quilib\*.*,p:\pvcs\max\quilib\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+DEPSCAN: makefile
+	depscan *.c *.cpp *.asm *.rc >quildep.inc
+
+makefile: quildep.inc $(H)makefile.inc
+
+!include quildep.inc
+!include $(H)makefile.inc
+
+SMLIB:	$(U)dmalloc.obj
+
+$(L)$(PROJ).lib: $(U)$(PROJ).lib
+	xc /r $? $@
+
+$(U)ARGSTR.obj: ARGSTR.c $(ARGSTR_DEP)
+
+$(U)BCD_NUM.obj : BCD_NUM.C $(BCD_NUM_DEP)
+
+$(U)BIOSCRC.obj: BIOSCRC.ASM	$(BIOSCRC_ADEP)
+
+$(U)BLIST.obj : BLIST.C 	$(BLIST_DEP)
+
+$(U)BOOTDRV.obj : BOOTDRV.c	$(BOOTDRV_DEP)
+
+$(U)BOX.obj : BOX.C		$(BOX_DEP)
+
+$(U)BUTTON.obj : BUTTON.C	$(BUTTON_DEP)
+
+$(U)C_TLOAD.obj : C_TLOAD.ASM	$(C_TLOAD_ADEP)
+
+$(U)CHKABORT.obj : CHKABORT.c	$(CHKABORT_DEP)
+
+$(U)COLORS.obj : COLORS.c	$(COLORS_DEP)
+
+$(U)COPYFILE.obj : COPYFILE.c	$(COPYFILE_DEP)
+
+$(U)CPU.obj : CPU.ASM		$(CPU_ADEP)
+
+$(U)CRITERR.obj : CRITERR.c	$(CRITERR_DEP)
+
+$(U)CURSOR.obj : CURSOR.C	$(CURSOR_DEP)
+
+$(U)CURSOR1.obj : CURSOR1.C	$(CURSOR1_DEP)
+
+$(U)CURSOR2.obj : CURSOR2.C	$(CURSOR2_DEP)
+
+$(U)DATESTR.obj : DATESTR.c	$(DATESTR_DEP)
+
+$(U)DCACHE.OBJ:  DCACHE.ASM	$(DCACHE_ADEP)
+
+$(U)DIALOG.obj : DIALOG.C	$(DIALOG_DEP)
+
+$(U)DMALLOC.obj : DMALLOC.ASM	$(DMALLOC_ADEP)
+
+$(U)EDITWIN.obj : EDITWIN.C	$(EDITWIN_DEP)
+
+$(U)EMSINFO.obj : EMSINFO.ASM	$(EMSINFO_ADEP)
+
+$(U)ERROR.obj	: ERROR.C	$(ERROR_DEP)
+
+$(U)EXENAME.obj : EXENAME.C	$(EXENAME_DEP)
+
+$(U)EXTSIZE.obj : EXTSIZE.asm	$(EXTSIZE_ADEP)
+
+$(U)FILEDIFF.obj: FILEDIFF.C	$(FILEDIFF_DEP)
+
+$(U)FILEEDIT.obj: FILEEDIT.C	$(FILEEDIT_DEP)
+
+$(U)FILENAME.obj: FILENAME.C	$(FILENAME_DEP)
+
+$(U)FLDEDIT.obj : FLDEDIT.C	$(FLDEDIT_DEP)
+
+$(U)GAMEPORT.obj: GAMEPORT.ASM	$(GAMEPORT_ADEP)
+
+$(U)HELPBACK.obj: HELPBACK.C	$(HELPBACK_DEP)
+
+$(U)INPUT.obj	: INPUT.C	$(INPUT_DEP)
+
+$(U)INSHELP.obj : INSHELP.c	$(INSHELP_DEP)
+
+$(U)INST2324.obj: INST2324.asm	$(INST2324_ADEP)
+
+$(U)INT9HOOK.obj: INT9HOOK.ASM	$(INT9HOOK_ADEP)
+
+$(U)INTMSG.obj	: INTMSG.C	$(INTMSG_DEP)
+
+$(U)JUSTSTR.obj : JUSTSTR.C	$(JUSTSTR_DEP)
+
+$(U)KEYBID.obj	: KEYBID.c	$(KEYBID_DEP)
+
+$(U)KEYBOARD.obj: KEYBOARD.C	$(KEYBOARD_DEP)
+
+$(U)LAUNDER.obj : LAUNDER.C	$(LAUNDER_DEP)
+
+$(U)LOGO.obj	: LOGO.c	$(LOGO_DEP)
+
+$(U)MBOOT.obj	: MBOOT.ASM	$(MBOOT_ADEP)
+
+$(U)MBOOTSEL.obj: MBOOTSEL.C	$(MBOOTSEL_DEP)
+
+$(U)MBPARSE.obj : MBPARSE.C	$(MBPARSE_DEP)
+
+$(U)MCA_POS.obj : MCA_POS.ASM	$(MCA_POS_ADEP)
+
+$(U)MENU.obj	: MENU.C	$(MENU_DEP)
+
+$(U)MESSAGE.obj : MESSAGE.C	$(MESSAGE_DEP)
+
+$(U)MOUSE.obj	: MOUSE.C	$(MOUSE_DEP)
+
+$(U)MYALLOC.obj : MYALLOC.C	$(MYALLOC_DEP)
+
+$(U)NOMEM.obj	: NOMEM.C	$(NOMEM_DEP)
+
+$(U)OPTION.obj	: OPTION.C	$(OPTION_DEP)
+
+$(U)OWNER.obj	: OWNER.C	$(OWNER_DEP)
+
+$(U)POS_TEST.obj: POS_TEST.C	$(POS_TEST_DEP)
+
+$(U)PRERROR.obj : PRERROR.C	$(PRERROR_DEP)
+
+$(U)PRINT.obj	: PRINT.C	$(PRINT_DEP)
+
+$(U)QHELP.obj	: QHELP.c	$(QHELP_DEP)
+
+$(U)QMAXPRES.obj: QMAXPRES.c	$(QMAXPRES_DEP)
+
+$(U)RAMSCAN.obj:  RAMSCAN.ASM	$(RAMSCAN_ADEP)
+
+$(U)READPROF.obj: READPROF.c	$(READPROF_DEP)
+
+$(U)SAVEADF.obj : SAVEADF.C	$(SAVEADF_DEP)
+
+$(U)SERIAL.obj	: SERIAL.C	$(SERIAL_DEP)
+
+$(U)SLEEP.obj	: SLEEP.C	$(SLEEP_DEP)
+
+$(U)SSTOR.obj	: SSTOR.ASM	$(SSTOR_ADEP)
+
+$(U)STACKER.obj : STACKER.C	$(STACKER_DEP)
+
+$(U)STACKDLG.obj: STACKDLG.C	$(STACKDLG_DEP)
+
+$(U)SVGA_INF.obj: SVGA_INF.asm	$(SVGA_INF_ADEP)
+
+$(U)TEXTCUR.obj : TEXTCUR.C	$(TEXTCUR_DEP)
+
+$(U)TEXTWIN.obj : TEXTWIN.C	$(TEXTWIN_DEP)
+
+$(U)TRIM.obj	: TRIM.C	$(TRIM_DEP)
+
+$(U)TRNBLN.obj	: TRNBLN.C	$(TRNBLN_DEP)
+
+$(U)TRUENAME.obj: TRUENAME.C	$(TRUENAME_DEP)
+
+$(U)UI.obj	: UI.C		$(UI_DEP)
+
+$(U)VCPI_CRC.obj: VCPI_CRC.ASM	$(VCPI_CRC_ADEP)
+
+$(U)VENDINFO.obj: VENDINFO.ASM	$(VENDINFO_ADEP)
+
+$(U)VIDEO.obj	: VIDEO.C	$(VIDEO_DEP)
+
+$(U)VIDEOID.obj : VIDEOID.ASM	$(VIDEOID_ADEP)
+
+$(U)WAIT.obj	: WAIT.C	$(WAIT_DEP)
+
+$(U)WINDOWFN.obj: WINDOWFN.ASM	$(WINDOWFN_ADEP)
+
+$(U)WINSVRS.obj : WINSVRS.C	$(WINSVRS_DEP)
+
+$(U)WINVER.obj	: WINVER.C	$(WINVER_DEP)
+
+$(U)WORDSET.obj : WORDSET.C	$(WORDSET_DEP)
+
+$(U)WRAPSTR.obj : WRAPSTR.C	$(WRAPSTR_DEP)
+
+$(U)$(PROJ).lib : $(OBJS)	makefile
+	$(LBF) @<<$(U)$(PROJ).lbf
+$(RT_OBJS: =&^
+) $(OBJS: =&^
+)
+;
+<<KEEP
+	if exist $(U)$(PROJ).lib del $(U)$(PROJ).lib
+	$(LIBUTIL) $(U)$(PROJ).lib @$(U)$(PROJ).lbf
+
+$(BD)qlogo.ovl: lr\qlogo.ovl
+	xc /r $** $@
+
+lr\qlogo.ovl: lr\qlogo.obj
+	$(LD) /t /m $?,$@,$*.map;
+
+lr\qlogo.obj: qlogo.asm qlogo_q.inc qlogoasq.inc
+	set INCLUDE=$(ALLINC)
+	$(ASM) $(AFLAGS_G) qlogo.asm, $@;
+	set INCLUDE=$(OLDINC)
+
+

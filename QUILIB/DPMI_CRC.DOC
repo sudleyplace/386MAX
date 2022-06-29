@@ -1,0 +1,63 @@
+Add code to get BIOS data and CRC under Windows
+
+Fix file entry:
+
+* Add code to get BIOS data and CRC under Windows
+
+ Description:
+ 	This new code allows the Windows SETUP.EXE for MAX 8
+	to determine whether the machine supports BIOS compression
+	and if so, what is the BIOS CRC.
+ Who: HENRY
+ When: 28 Dec 95.
+ SW/HW Environment: Any MicroChannel machine or IBM 386 or
+ 	higher.
+ Symptom: NAB
+ Temporary Workaround: NAB
+ Test Procedure: Run DPMICTST.EXE on various machines:
+ 	1. Non-IBM, non-MCA
+	2. Non-IBM MCA
+	3. IBM non-MCA
+	4. IBM MCA
+ QA Testing Passed:
+ Version: Max 8.01, build 2
+
+New files:
+
+QUILIB\DPMI_CRC.ASM
+	Calculation of BIOS CRC under Windows using DPMI calls.
+	Note that we rely on Windows using a magic offset number
+	for physical to linear mapping.  We can't use the 0800h
+	call for addresses under 1MB.
+
+	Duplicate some other detection code that uses segment
+	values so it will work under Windows.
+
+QUILIB\DPMICTST.CPP
+	Test program for DPMI_CRC.ASM.
+
+QUILIB\DPMICTST.DEF
+	Linker definitions for DPMICTST
+
+QUILIB\DPMICTST.MAK
+	Makefile for DPMICTST
+
+Files affected:
+
+INCLUDE\BIOSCRC.H
+	Make everything extern "C" if C++
+
+	Add prototypes for new DPMI_* functions.
+
+QUILIB\MAKEFILE
+	Add new module to library.
+
+QUILIB\TRUENAME.C
+	Add warning comments to code that sometimes doesn't work (apparently
+	due to a misbehaving VxD).
+
+WINMXMZ\MYEXECV.ASM
+	Fix (rather serious) bug in exec overlay code that didn't
+	heed the undocumented warning that the create PSP call
+	must be made from CS = PSP segment to copy.
+

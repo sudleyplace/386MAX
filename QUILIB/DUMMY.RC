@@ -1,0 +1,10 @@
+// $Header:   P:/PVCS/MAX/QUILIB/DUMMY.RCV   1.1   18 Apr 1996 08:23:48   HENRY  $
+//
+// DUMMY.RC - Fake .RC file provided for DEPSCAN
+//
+// This catches all .C, .CPP and .RC includes that might otherwise be
+// missed.
+
+#include <mversion.h>
+#include <common.ver>
+
