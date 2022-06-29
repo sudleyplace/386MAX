@@ -1,0 +1,39 @@
+
+; @OEMSYS_xxx equates
+
+@OEMSYS_RET	equ  0	; Retail system
+@OEMSYS_OEM	equ  1	; Any generic OEM
+@OEMSYS_ILIM	equ  2	; INTEL Limulator
+@OEMSYS_JET386	equ  3	; Orchid JET 386
+@OEMSYS_HPRS	equ  4	; HP Vectra RS/16, /20, /25C, or QS/16S
+@OEMSYS_AST386	equ  5	; AST Premium 386
+@OEMSYS_3COM	equ  6	; 3COM software
+@OEMSYS_GRID	equ  7	; GRiD Systems
+@OEMSYS_QUAD386 equ  8	; Quadram 386XT
+@OEMSYS_MIT	equ  9	; Mitsubishi 386
+@OEMSYS_SHS	equ 10	; Sunnyhill Software
+@OEMSYS_OLI	equ 11	; Olivetti
+@OEMSYS_TOSH	equ 12	; Toshiba 5100
+@OEMSYS_CA	equ 13	; CompuAdd
+@OEMSYS_NEC	equ 14	; NEC Home Electronics
+@OEMSYS_ASEM	equ 15	; ASEM
+@OEMSYS_OL2	equ 16	; Generic OEMM386 for Olivetti
+@OEMSYS_LHY	equ 17	; Lahey FORTRAN
+@OEMSYS_EPSON	equ 18	; Epson of America
+@OEMSYS_AM1	equ 19	; AMKLY (LIMit version)
+@OEMSYS_AM2	equ 20	; AMKLY (MAX w/o LOAD version)
+@OEMSYS_PCK	equ 21	; Multisoft memory Manager
+@OEMSYS_AM3	equ 22	; AMKLY for EISA (MAX w/o LOAD version)
+
+; Localized strings
+ifdef LANG_GR
+@OEM_SUBT	 equ <'The Intelligent Memory Manager'> ; Subtitle
+else
+@OEM_SUBT	 equ <'The Intelligent Memory Manager'> ; Subtitle
+endif			; IFDEF LANG_GR
+
+if @OEM_HARPO
+@HARPONAME	 equ <'ExtraDOS    '> ; Name for SUMMARY screen
+endif			; IF @OEM_HARPO
+
+
