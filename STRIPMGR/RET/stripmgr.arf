@@ -1,0 +1,19 @@
+		ret\parser.obj	+
+ret\cmds.obj	+
+ret\expand.obj+
+	+
+ret\filecmds.obj+
+ret\syscmds.obj+
+ret\misc.obj		+
+ret\batch.obj	+
+ret\error.obj	+
+ret\input.obj		+
+ret\output.obj						+
+ret\mbparse.obj+
++
+ret\dmalloc.obj
+		ret\stripmgr
+		ret\stripmgr /map /line /nod /noe /st:6144
+		Slibce oldnames
+
+

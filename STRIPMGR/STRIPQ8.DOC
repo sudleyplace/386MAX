@@ -1,0 +1,54 @@
+Handle missing AUTOEXEC.BAT and QEMM 8 syntax in STRIPMGR
+
+* Handle missing AUTOEXEC.BAT and QEMM 8 syntax in STRIPMGR
+
+ Description:
+ 	If there is no AUTOEXEC.BAT, or if another startup
+	batch file is specified but does not exist, STRIPMGR
+	now quietly ignores it and pretends everything's OK.
+	Also, STRIPMGR now handles some syntax new to QEMM 8
+	which we did not properly strip before.
+ Who: HENRY
+ When: 1 Feb 96
+ SW/HW Environment: 1. No AUTOEXEC.BAT (more likely in Win95).
+ 	2. QEMM 8 LOADHI (uses /switch=value /switch2=value progname)
+ Symptom: 1. STRIPMGR says "Insert disk with "" and press any key"
+ 	This may not be apparent when run from SETUP as a PIF.
+	2. Line is changed from device=loadhi /foo=bar setver.exe
+	to device==bar setver.exe
+ Temporary Workaround: 1. Create an empty AUTOEXEC.BAT.  2. None
+ 	(remove manually).
+ Test Procedure: Rename AUTOEXEC.BAT and run STRIPMGR /S.  It should
+ 	not complain about the missing AUTOEXEC.  Also verify that
+	QEMM 8, MemMaker LOADHIGH / DEVICEHIGH, and 386LOAD syntax
+	is all stripped correctly.  A simple way to do this is to
+	edit STRIPMGR.LST and add the appropriate lines under MAX.
+ QA Testing Passed:
+ Version: STRIPMGR 1.40, Max 8.01 build 004
+
+
+Files affected:
+
+MESSAGE.H
+	Update copyrights, bump ver.
+
+MISC.C
+	Add new flag to remove_switches().  If non-zero, keep our
+	old behavior of stripping all switch text until we find =.
+	If 0, strip all switch text, ignoring =.
+
+PARSER.C
+	Test for existence of AUTOEXEC.BAT.  If missing, ignore it.
+	Everything put inside the if (!_access()) { } was indented
+	so I used the vdiff -b option.
+
+	Add comments noting subtle change in behavior of ~ flag.
+	The # flag does the same as always with DEVICEHIGH, but
+	~ now causes all switches to be stripped up to the next
+	whitespace.
+
+	Change calls to remove_switches.
+
+STRIPMGR.H
+	Change declaration of remove_switches().
+

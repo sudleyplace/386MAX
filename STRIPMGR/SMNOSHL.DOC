@@ -1,0 +1,35 @@
+* Fix old STRIPMGR bug with no SHELL= statement in CONFIG.SYS
+
+Fix file entry:
+
+* Fix old STRIPMGR bug with no SHELL= statement in CONFIG.SYS
+
+ Description:
+ 	If CONFIG.SYS has no SHELL= statement (or if MultiConfig,
+	the active section has no SHELL= statement) STRIPMGR (since
+	about version 6.03) would fail to process AUTOEXEC.BAT.
+ Who: HENRY
+ When: 13 Nov 95.
+ SW/HW Environment: No SHELL= statement in CONFIG.SYS (or none
+	in active part of CONFIG.SYS).
+ Symptom: AUTOEXEC.BAT is not processed at all.
+ Temporary Workaround: Add SHELL=c:\dos\command.com /e:256 /p
+ 	to CONFIG.SYS.
+ Test Procedure: REM any SHELL= statement from CONFIG.SYS and
+ 	run STRIPMGR /S with at least one 386LOAD / LOADHI statement
+	in AUTOEXEC.BAT.  Verify that statements are properly stripped
+	from AUTOEXEC.BAT.  Try this in a MultiConfig environment
+	also where there are SHELL= statements in CONFIG.SYS but none
+	in the active section.
+ QA Testing Passed:
+ Version: STRIPMGR 1.39
+
+Files affected:
+
+MESSAGE.H
+	Bump version to 1.39.
+
+PARSER.C
+	If no SHELL= statements found, use default of d:\autoexec.bat
+	(where d: is the boot drive).
+

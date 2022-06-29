@@ -1,0 +1,145 @@
+#' $Header:   P:/PVCS/MAX/STRIPMGR/MAKEFILE.__V   1.4   30 May 1997 12:33:12   BOB  $
+#
+# Makefile for STRIPMGR.EXE
+#
+#
+
+!include $(MAXROOT)include\maxnames.mak
+
+OEM=ret 		# default OEM
+O=$(OEM)\		# define include directory for OEM-specifics
+BIN=$(OEM)\		# OEM binaries
+ERRPATH=c:\386max\	# Path for ERROUT.COM
+L=$(MAXROOT)quilib\ # Library source directory
+H=$(MAXROOT)include\ # Common include (.H) directory
+MODEL=S
+OLDINC=$(INCLUDE)
+ALLINC=.;$(O);$(H)
+
+# compiler options
+CFLAGS=/c /A$(MODEL) /J /Os /G0 /Gs /W3 /Zp1 /Zd /DLANG_$(LANG) /DSTRIPMGR=1
+AFLAGS=/mu /p /r /t /w1 /Zd
+
+# if LST has been defined either in the environment or on the command line,
+# create an LSTMAC macro to be appended to masm command lines for .LST
+# file generation...
+!IFDEF LST
+LSTMAC=,$(LST)\ 	# Stick listing in $(LST) directory
+!ELSE
+LSTMAC=
+!ENDIF
+
+# compile rules
+#.c{$(O)}.pro:
+#	@if exist \dev\ERROUT$$$$ $(ERRPATH)errout off >\dev\nul
+#	$(CC) /DPROTO /Zg /I$(O) /I. $< > __temp.pro
+#	@if exist \dev\ERROUT$$$$ $(ERRPATH)errout on >\dev\nul
+#	xc /m/r __temp.pro $(O)$(@B).pro
+
+# Rules for .c.obj -- built-in rules won't work since they are in
+# different directories
+{$(L)}.c{$(O)}.obj:
+	 set include=$(ALLINC);$(OLDINC)
+	 $(CC) $(CFLAGS) /Fo$(O)$(@B).obj $<
+	 set include=$(OLDINC)
+
+.c{$(O)}.obj:
+	 set include=$(ALLINC);$(OLDINC)
+	 $(CC) $(CFLAGS) /Fo$(O)$(@B).obj $<
+	 set include=$(OLDINC)
+
+# MASM rules
+{$(L)}.asm{$(O)}.obj:
+	@echo <<$(O)tempbat.bat
+	chdrv $(L)
+	$(MAKE) -$(MAKEFLAGS) U=$(MAKEDIR)\$(O) MODEL=$(MODEL) SMLIB
+	chdrv $(MAKEDIR)
+<<KEEP
+	call $(O)tempbat.bat
+
+.asm{$(O)}.obj:
+	 set include=$(ALLINC);$(OLDINC)
+	 masm $(@B) $(AFLAGS) /DLANG_$(LANG), $(O)$(@B) $(LSTMAC);
+	 set include=$(OLDINC)
+	 @dispobj $*/w
+
+
+ALL:	DIR		$(BIN)STRIPMGR.EXE	$(BD)STRIPMGR.EXE
+
+DEL:
+	-rm $(O)*.*
+
+DIR:
+	vdir -c $(O)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\stripmgr\*
+VCSDIR = P:\PVCS\MAX\stripmgr\*
+ALIAS ALL P:\PVCS\MAX\stripmgr\*.*,p:\pvcs\max\stripmgr\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+DEPSCAN: makefile
+	depscan -s$(L)=$$(L) *.c $(L)mbparse.c *.cpp *.rc *.asm $(L)dmalloc.asm >smdep.inc
+
+makefile: smdep.inc $(H)makefile.inc
+
+!include smdep.inc
+!include $(H)makefile.inc
+
+$(O)parser.obj: parser.c $(PARSER_DEP)
+
+$(O)cmds.obj:	cmds.c $(CMDS_DEP)
+
+$(O)expand.obj: expand.c $(EXPAND_DEP)
+
+$(O)filecmds.obj: filecmds.c $(FILECMDS_DEP)
+
+$(O)syscmds.obj: syscmds.c $(SYSCMDS_DEP)
+
+$(O)misc.obj:	misc.c $(MISC_DEP)
+
+$(O)batch.obj:	batch.c $(BATCH_DEP)
+
+$(O)error.obj:	error.c $(ERROR_DEP)
+
+$(O)input.obj:	input.c $(INPUT_DEP)
+
+$(O)output.obj: output.c $(OUTPUT_DEP)
+
+$(O)mbparse.obj: $(L)mbparse.c $(MBPARSE_DEP)
+
+$(O)dmalloc.obj: $(L)dmalloc.asm $(DMALLOC_ADEP)
+
+LOBJS=		$(O)mbparse.obj  $(O)dmalloc.obj
+
+OBJS=		$(O)parser.obj	 $(O)cmds.obj	 $(O)expand.obj 	\
+		$(O)filecmds.obj $(O)syscmds.obj $(O)misc.obj		\
+		$(O)batch.obj	 $(O)error.obj	 $(O)input.obj		\
+		$(O)output.obj						\
+		$(LOBJS)
+
+$(BIN)stripmgr.exe:		 $(OBJS)	 makefile
+	@Set LIB=$(LIB)
+	$(LD) @<<$(O)stripmgr.arf
+		$(OBJS: =+^
+)
+		$*
+		$* /map /line /nod /noe /st:6144
+		$(MODEL)libce oldnames
+
+
+<<KEEP
+# Default minimum is 0x300.  We need at least 12K (300h) paras beyond that.
+		exehdr /MIN:0x0600 $*.exe
+		mapssf -t $* $*.map
+
+$(BD)stripmgr.exe:  $(BIN)stripmgr.exe
+	 xc /r	 $(**R).EXE	$*.*
+	 xc /r	 $(**R).SSF	$*.*
+	 xc /r	 $(**R).MAP	$*.*
+
+
