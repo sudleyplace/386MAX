@@ -1,0 +1,48 @@
+//------------------------------------------------------------------
+// settext.us
+// Copyright (C) 1996 Qualitas, Inc.  All rights reserved
+// Text for setup program.
+// for conditional inclusion into setglob.h in the max\include directory.
+//------------------------------------------------------------------
+// Translators: Translate text between quotes within the DEFVAL(  ) symbol.
+// example  - EXTERN LPSTR szEMsg_Limits DEFVAL( "System limits exceeded!" );
+// translate - "System limits exceeded!".
+// In the formatted text strings the symbols following the % symbol,
+// ( examples %s %d %ld %u %x %c )
+// are placeholders for data inserted by the program, such as numbers,
+// filenames, drive letters, etc. In the case where several such
+// symbols are in one text string, the order of appearance must 
+// be maintained.
+// The symbol \n is a newline character that will force characters following
+// the symbol to the next display line.
+//------------------------------------------------------------------
+
+//------------------------------------------------------------------
+// Text
+//------------------------------------------------------------------    
+    // messages.
+EXTERN LPSTR szMsg_Extracting   DEFVAL( "Extracting files to disk..." );
+EXTERN LPSTR szMsg_Warning      DEFVAL( "Warning!" );
+
+    // error messages
+EXTERN LPSTR szEMsg_Mem        DEFVAL( "Out of Memory!" );
+EXTERN LPSTR szEMsg_Module     DEFVAL( "Cannot find module!" );
+EXTERN LPSTR szEMsg_FOpen      DEFVAL( "File Open Error!" );
+EXTERN LPSTR szEMsg_Read       DEFVAL( "File Read Error!" );
+EXTERN LPSTR szEMsg_Crash      DEFVAL( "Cannot continue!" );
+EXTERN LPSTR szEMsg_Term       DEFVAL( "Program Terminating!" );
+EXTERN LPSTR szEMsg_NullPtr    DEFVAL( "NULL pointer passed!" ); 
+EXTERN LPSTR szEMsg_Resource   DEFVAL( "Error loading Resource!" ); 
+EXTERN LPSTR szEMsg_FileWrite  DEFVAL( "Error writing to disk!" ); 
+EXTERN LPSTR szEMsg_ZipLib     DEFVAL( "Error loading DUNZIP.DLL" ); 
+EXTERN LPSTR szEMsg_ZipLib32   DEFVAL( "Error loading DUNZIP32.DLL" ); 
+EXTERN LPSTR szEMsg_AddUI      DEFVAL( "Error adding uninstall to Registry." ); 
+EXTERN LPSTR szEMsg_RemUI      DEFVAL( "Error removing uninstall from Registry." ); 
+
+EXTERN LPSTR szFmtMsg_Extract   DEFVAL( "Error extracting %s from %s" );
+EXTERN LPSTR szFmt_NoFile       DEFVAL( "The file %s does not exist!" ); 
+EXTERN LPSTR szFmt_NoDir        DEFVAL( "The directory %s does not exist.\nCreate? (Y/N)" );
+EXTERN LPSTR szFmtMsg_BadCreate DEFVAL( "Cannot create %s" );
+EXTERN LPSTR szFmtMsg_BadOpen   DEFVAL( "Cannot open %s" );
+EXTERN LPSTR szFmt_DllInUse     DEFVAL( "Setup has determined that %s is in use. This could cause errors extracting the files. Please shut down all other programs before continuing with Setup.");
+//------------------------------------------------------------------
