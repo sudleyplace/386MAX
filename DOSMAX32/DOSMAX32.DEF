@@ -1,0 +1,11 @@
+; $Header:   P:/PVCS/MAX/DOSMAX32/DOSMAX32.DEV   1.1   18 Dec 1995 16:14:48   BOB  $
+; dosmax32.def : Declares the module parameters for the DLL.
+
+LIBRARY      DOSMAX32
+DESCRIPTION  'DOSMAX Shell Extension'
+
+EXPORTS
+    DllCanUnloadNow		@2		    ;DLL unloading
+    DllGetClassObject		@3		    ;Component object model
+
+

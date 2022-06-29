@@ -1,0 +1,137 @@
+//' $Header:   P:/PVCS/MAX/DOSMAX32/DOSMAX32.RCV   1.3   26 Feb 1996 12:50:16   BOB  $
+//Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include <windows.h>
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "#include <windows.h>\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+#endif	  // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+	BLOCK "040904b0"
+	BEGIN
+	    VALUE "CompanyName", "\0"
+	    VALUE "FileDescription", "DOSMAX Shell Extension DLL\0"
+	    VALUE "FileVersion", "1, 0, 0, 1\0"
+	    VALUE "InternalName", "DOSMAX\0"
+	    VALUE "LegalCopyright", "Copyright \251 1995\0"
+	    VALUE "OriginalFilename", "DOSMAX.DLL\0"
+	    VALUE "ProductName", "DOSMAX Dynamic Link Library\0"
+	    VALUE "ProductVersion", "1, 0, 0, 1\0"
+	END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+	VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PIFPAGE DIALOG DISCARDABLE	0, 0, 255, 196
+STYLE WS_CHILD | WS_VISIBLE | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL	    "Use Default",IDC_DEFAULT,"Button",BS_AUTORADIOBUTTON,45,
+		    20,50,10
+    CONTROL	    "ON",IDC_ON,"Button",BS_AUTORADIOBUTTON,130,20,20,10
+    CONTROL	    "OFF",IDC_OFF,"Button",BS_AUTORADIOBUTTON,190,20,25,10
+    GROUPBOX	    "Qualitas DOSMAX Memory",IDC_STATIC,30,10,193,25
+    LTEXT	    "This option enables Qualitas's DOSMAX feature.",
+		    IDC_HELPTEXT,10,40,235,150,NOT WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_HELPTEXT1	    "This option enables Qualitas's DOSMAX feature.  "
+    IDS_HELPTEXT2	    "DOSMAX increases conventional memory from 640 KB to as much as 736 KB for DOS applications.  "
+    IDS_HELPTEXT3	    "The default for DOSMAX is set to OFF by the DOSMAXDefault=OFF switch in the [Qualitas] section of SYSTEM.INI.  "
+    IDS_HELPTEXT4	    "You can change the default to ON in SYSTEM.INI to enable DOSMAX for all DOS windows.  "
+    IDS_HELPTEXT5	    "\n\n"
+    IDS_HELPTEXT6	    "Click the ON radio button to enable DOSMAX for this DOS window.  "
+    IDS_HELPTEXT7	    "Be certain that your memory settings listed on the Memory tab of the Properties sheet is set to AUTO.  "
+    IDS_HELPTEXT8	    "This allows DOSMAX to provide as much memory as is possible on your system.  "
+    IDS_HELPTEXT9	    "Click OFF to disable DOSMAX for this DOS window.  "
+    IDS_HELPTEXT10	    "\n\n"
+    IDS_HELPTEXT11	    "DOSMAX is for use with text mode applications.  "
+    IDS_HELPTEXT12	    "Some DOS applications switch between graphics and text modes which can cause unpredictable results (loss of data or DOS session crash).  "
+    IDS_HELPTEXT13	    "For example, Word Perfect for DOS is primarily a text mode application although it does switch into graphics mode for certain features (ie., page preview).  "
+    IDS_HELPTEXT14	    "DOSMAX includes a warning mechanism called QPOPUP that warns you when a DOS application attempts to enter graphics mode.  "
+    IDS_INIFILENAME	    "QMAX.INI"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_INISECTNAME	    "DOSMAX - Files"
+    IDS_MENUSHORTCUT	    "Create DOS&MAX Shortcut"
+    IDS_PSPTITLE	    "DOSMAX Memory"
+    IDS_SHORTCUTTO	    "Shortcut to "
+    IDS_INICFGSECT	    "CONFIG"
+    IDS_INIMAXPATH	    "Qualitas MAX Path"
+    IDS_SETEWVNAME	    "SETEWV.EXE"
+    IDS_UNABLEFF	    "Unable to find file <%s>.  DOSMAX feature not available."
+    IDS_UNABLEREG	    "Unable to register DOSMAX16.DLL.  DOSMAX feature not available."
+END
+
+
