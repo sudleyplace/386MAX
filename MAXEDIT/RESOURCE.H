@@ -1,0 +1,54 @@
+// Used by MAXEDIT.RC
+//
+#define IDS_CANTOPEN                    1
+#define IDS_CANTREAD                    2
+#define IDS_CANTCREATE                  3
+#define IDS_CANTWRITE                   4
+#define IDS_ILLFNM                      5
+#define IDS_CLOSESAVE                   7
+#define IDS_CANTFIND                    8
+#define IDS_HELPNOTAVAIL                9
+#define IDS_CLIENTTITLE                 16
+#define IDS_UNTITLED                    17
+#define IDS_APPNAME                     18
+#define IDS_PRINTJOB                    24
+#define IDS_PRINTERROR                  25
+#define IDD_FILENAME                    201
+#define IDD_FILES                       202
+#define IDD_PATH                        203
+#define IDD_DIRS                        204
+#define IDD_SEARCH                      401
+#define IDD_PREV                        402
+#define IDD_CASE                        403
+#define IDD_SAVEFROM                    501
+#define IDD_SAVETO                      502
+#define IDD_PRINTTITLE                  603
+#define IDM_FILENEW                     1001
+#define IDM_FILEOPEN                    1002
+#define IDM_FILESAVE                    1003
+#define IDM_FILESAVEAS                  1004
+#define IDM_FILEPRINT                   1005
+#define IDM_FILEEXIT                    1006
+#define IDM_FILEABOUT                   1007
+#define IDM_FILESETUP                   1008
+#define IDM_EDITUNDO                    2001
+#define IDM_EDITCUT                     2002
+#define IDM_EDITCOPY                    2003
+#define IDM_EDITPASTE                   2004
+#define IDM_EDITCLEAR                   2005
+#define IDM_EDITSELECT                  2006
+#define IDM_EDITINI			2007
+#define IDM_SEARCHFIND                  3001
+#define IDM_SEARCHNEXT                  3002
+#define IDM_SEARCHPREV                  3003
+#define IDM_WINDOWTILE                  4001
+#define IDM_WINDOWCASCADE               4002
+#define IDM_WINDOWCLOSEALL              4003
+#define IDM_WINDOWICONS                 4004
+#define IDM_WINDOWCHILD                 4100
+#define IDM_HELPHELP                    5001
+#define IDM_HELPSEARCH			5002
+#define IDM_HELPTS			5003
+#define IDM_HELPABOUT                   5004
+
+

@@ -1,0 +1,173 @@
+// Resource file for MAXEDIT
+
+#include <windows.h>
+
+#include "resource.h"
+#include "cversion.h"
+#include <mversion.h>
+#include <common.ver>
+
+#include "maxedit.h"
+
+//
+// Icon
+//
+
+IDMAXEDIT               ICON    DISCARDABLE     "maxedit.ico"
+IDCHILDICO              ICON    DISCARDABLE     "meicon.ico"
+
+
+TBNEW      ICON  "tnew.ico"
+TBOPEN     ICON  "topen.ico"
+TBSAVE     ICON  "tsave.ico"
+TBPRINT    ICON  "tprint.ico"
+
+TBUNDO     ICON  "tundo.ico"
+TBCUT      ICON  "tcut.ico"
+TBCOPY     ICON  "tcopy.ico"
+TBPASTE    ICON  "tpaste.ico"
+
+TBCASC     ICON  "tcascade.ico"
+TBTILE     ICON  "ttile.ico"
+TBINI      ICON  "tini.ico"
+
+TBEXIT     ICON  "texit.ico"
+TBHELP     ICON  "thelp.ico"
+
+//
+// Menu
+//
+
+IDMAXEDIT MENU DISCARDABLE
+BEGIN
+    POPUP "&Datei"
+    BEGIN
+        MENUITEM "&Neu",                        IDM_FILENEW
+        MENUITEM "Ö&ffnen...",                  IDM_FILEOPEN
+        MENUITEM "&Speichern",                  IDM_FILESAVE
+        MENUITEM "Speichern &unter...",         IDM_FILESAVEAS
+        MENUITEM "QMAX.INI öffnen",             IDM_EDITINI
+        MENUITEM SEPARATOR
+        MENUITEM "&Drucken",                    IDM_FILEPRINT
+        MENUITEM "Drucker&einrichtung...",      IDM_FILESETUP
+        MENUITEM SEPARATOR
+        MENUITEM "&Beenden",                    IDM_FILEEXIT
+    END
+    POPUP "&Bearbeiten"
+    BEGIN
+        MENUITEM "&Rückgängig\tStrg+Z",         IDM_EDITUNDO
+        MENUITEM SEPARATOR
+        MENUITEM "&Ausschneiden\tStrg+X",       IDM_EDITCUT
+        MENUITEM "&Kopieren\tStrg+C",           IDM_EDITCOPY
+        MENUITEM "&Einfügen\tStrg+V",           IDM_EDITPASTE
+        MENUITEM "&Löschen\tEntf",              IDM_EDITCLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "Alles &markieren",            IDM_EDITSELECT
+    END
+    POPUP "&Suchen"
+    BEGIN
+        MENUITEM "&Suchen...",                  IDM_SEARCHFIND
+        MENUITEM "&Weitersuchen\tF3",           IDM_SEARCHNEXT
+        MENUITEM "&Vorher\tF4",                 IDM_SEARCHPREV
+    END
+    POPUP "&Fenster"
+    BEGIN
+        MENUITEM "&Nebeneinander",              IDM_WINDOWTILE
+        MENUITEM "Über&lappend",                IDM_WINDOWCASCADE
+        MENUITEM "&Symbole anordnen",           IDM_WINDOWICONS
+        MENUITEM "&Alle schließen",             IDM_WINDOWCLOSEALL
+    END
+    POPUP "&Hilfe"
+    BEGIN
+        MENUITEM "Üb&erblick",                  IDM_HELPHELP
+        MENUITEM "&Hilfethema suchen...",       IDM_HELPSEARCH
+        MENUITEM SEPARATOR
+        MENUITEM "&Technischer Kundendienst",   IDM_HELPTS
+        MENUITEM SEPARATOR
+        MENUITEM "Inf&o über MAXedit...",       IDM_HELPABOUT
+    END
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDMAXEDIT ACCELERATORS MOVEABLE PURE
+BEGIN
+    "c",      IDM_EDITCOPY,     VIRTKEY, CONTROL
+    "v",      IDM_EDITPASTE,    VIRTKEY, CONTROL
+    "x",      IDM_EDITCUT,      VIRTKEY, CONTROL
+    "z",      IDM_EDITUNDO,     VIRTKEY, CONTROL
+    VK_F3,    IDM_SEARCHNEXT,   VIRTKEY
+    VK_F4,    IDM_SEARCHPREV,   VIRTKEY
+    VK_F1,    IDM_HELPHELP,     VIRTKEY
+END
+
+
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOG DISCARDABLE  4, 4, 184, 119
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Info über Qualitas MAXedit"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",1,129,6,50,14
+    ICON            IDMAXEDIT,-1,144,56,18,20
+    LTEXT           "Qualitas MAXedit\nVersion " VER_PRODUCTVERSION_STR, -1, 12,7,112,17
+    LTEXT           VER_LEGALCOPYRIGHT2_STR,
+                    -1,12,36,125,18
+    LTEXT           "Dieses Exemplar ist lizenziert f\374r: ",101,12,68,112,8
+    LTEXT           "",102,12,84,168,24
+END
+
+
+IDD_FIND DIALOG DISCARDABLE  18, 13, 167, 69
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Suchen"
+FONT 8, "Helv"
+BEGIN
+    RTEXT           "Suchen &nach:",100,5,12,42,10,NOT WS_GROUP
+    EDITTEXT        IDD_SEARCH,50,11,107,12
+    CHECKBOX        "&Gro\337-/Kleinschreibung",IDD_CASE,19,28,137,12
+    DEFPUSHBUTTON   "&Weitersuchen",IDOK,6,48,50,14
+    PUSHBUTTON      "&Vorher",IDD_PREV,63,48,45,14
+    PUSHBUTTON      "&Abbrechen",IDCANCEL,116,48,43,14
+END
+
+
+IDD_PRINT DIALOG DISCARDABLE  56, 61, 128, 66
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Drucken"
+FONT 8, "Helv"
+BEGIN
+    RTEXT           "Datei wird gedruckt...",100,2,6,68,8,NOT WS_GROUP
+    DEFPUSHBUTTON   "Abbrechen",IDOK,75,46,47,14
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_CANTOPEN            "Kann Datei '%s' nicht \366ffnen"
+    IDS_CANTREAD            "Kann Datei '%s' nicht lesen"
+    IDS_CANTCREATE          "Kann Datei '%s' nicht erstellen"
+    IDS_CANTWRITE           "Kann nicht in Datei '%s' schreiben"
+    IDS_ILLFNM              "Ung\374ltiger Dateiname: '%s'"
+    IDS_CLOSESAVE           "%s wurde ver\344ndert. Datei vor dem Schlie\337en sichern?"
+    IDS_CANTFIND            "Kann '%s' nicht finden"
+    IDS_HELPNOTAVAIL        "Kann Windows Hilfe-Anwendung nicht laden"
+
+    IDS_CLIENTTITLE         "Qualitas MAXedit .INI Editor, Version 0.9"
+    IDS_UNTITLED            "OhneName"
+    IDS_APPNAME             "MAXedit"
+    IDS_PRINTJOB            "MAXedit - "
+    IDS_PRINTERROR          "Kann %s nicht drucken!"
+END

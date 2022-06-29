@@ -1,0 +1,10 @@
+ret\W16\maxedit.obj+
+ret\W16\toolbar.obj
+ret\W16\MAXEDIT.EXE
+ret\W16\MAXEDIT.MAP/map
+libw+
+slibcew+
+commdlg+
+toolhelp+
+shell ctl3dv2
+MAXEDIT.DEF;

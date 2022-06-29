@@ -1,0 +1,18 @@
+Fix Bug With Comments in QMAX.INI
+
+If a line in QMAX.INI immediately preceding the [MAXEdit - Files]
+section starts with one or more leading semicolons, the parsing
+algorithm in MAXEdit gets confused and miscalculates the next position
+in the file from which it should read data.  The effect is that
+MAXEdit complains about not being able to open a file.	The actual
+file name about which it complains is dependent upon the number of
+leading semicolons in the preceding line's comment, but is taken from
+the trailing characters in the section header.	For example, if the
+preceding line begins with two semicolons, the file it can't open is
+'s]', the last two characters from the section header.
+
+MAXEDIT.C	Use sizeof() instead of absolute constant.
+		Don't strip leading semicolons and then check for a
+		  leading semicolon.
+
+

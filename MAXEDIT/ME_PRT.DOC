@@ -1,0 +1,23 @@
+* Fix print function. Print more than one file. Save setup.
+
+ Description: The PrintDlg function was failing the second time because
+     the devmode and devname handles were being freed but the variables
+     were not being cleared to zero. On second thought, moved the freeing
+     to the program exit so changes made in Printer Setup are remembered
+     and you don't have to do a setup before printing each and every file.
+
+ Who: PETERJ
+ When: 27 Nov. 95
+ SW/HW Environment: Windows.
+ Symptom: Con only print one time / one file from maxedit.
+ Temporary Workaround: Exit program and restart to print next file.
+ Test Procedure: Print all files from maxedit.
+ QA Testing Passed:
+ Version: Maxedit.exe 8.1.1.003
+
+Files affected:
+
+MAXEDIT.C           Zero out handles when freed.
+                    Move GlobalFree()s to WM_DESTROY handler.
+                    
+CVERSION.H          Bump version to 3.

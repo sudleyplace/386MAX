@@ -1,0 +1,23 @@
+* MAXEdit.exe Destroy the drawing objects when closing.
+
+ Description: Delete the brush and pen objects on exit.
+ 
+ Who: PETERJ
+ When: 28 Nov 95.
+ SW/HW Environment: Windows.
+ Symptom: Resource leak. GDI decreases on multiple use.
+ Temporary Workaround: Restart Windows when out of GDI resources.
+ Test Procedure: Start MAXmeter. Open MAXEdit many times. NOTE memory changes.
+ QA Testing Passed:
+ Version: 8.0.37.004
+
+Files affected:
+
+MAXEDIT.C           Call DestroyTools() when destroying window..
+
+TOOLBAR.C           Add DestroyTools() function. 
+
+MAXEDIT.H           DestroyTools prototype.
+
+CVERSION.H          Bump version to 4.
+

@@ -1,0 +1,22 @@
+* Print button does not print on some systems.
+
+ Description: It's a wonder it printed anywhere. The buffer length was
+     not set on EM_GETLINE message. It must have been randomized. It
+     is now set as it should be.
+ Who: PETERJ
+ When: 13 Mar. 1996
+ SW/HW Environment: Windows
+ Symptom: Print button does not print on some systems.
+ Temporary Workaround: none
+ Test Procedure: Print both ways, button and menu.
+ QA Testing Passed:
+ Version: Maxedit 8.01.22.9
+
+Files affected:
+
+MAXEDIT.MAK         Removed /G3 at Bob's request.
+
+MAXEDIT.C           Added line length to buffer.
+
+CVERSION.H          Bump version to 9.
+

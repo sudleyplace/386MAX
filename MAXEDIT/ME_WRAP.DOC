@@ -1,0 +1,24 @@
+* Replace the stolen PrintFile function with one that wraps lines.
+
+ Description: Replace the stolen PrintFile function with one that wraps lines.
+     I stole the aforesaid function for CYA and made it wrap lines. I have
+     moved that code, with a bit of retrofit, back into Maxedit so it now
+     wraps lines instead of truncating them. Also fixed a bug in 
+     GetSaveFileName call where the lpszFileTitle was not nulled before
+     the call.
+ Who: PETERJ
+ When: 8 May, 1996
+ SW/HW Environment: Windows.
+ Symptom: Printed lines truncate.
+ Temporary Workaround: Live with it.
+ Test Procedure: Print from files that have line lengths > 80.
+ QA Testing Passed:
+ Version: Maxedit.exe 8.02.??.010
+
+Files affected:
+
+MAXEDIT.C               Replace PrintFile function.
+
+CVERSION.H              Bump version to 10
+
+

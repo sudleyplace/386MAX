@@ -1,0 +1,14 @@
+Fix Bug Referencing Destroyed Window Handle
+
+In WinMain, after the message loop has terminated, previously the code
+would quit WinHelp and destroy the frame window both referencing the
+frame window handle which has already been destroyed.  This change
+deletes the spurious call to DestroyWindow () and moves the call to
+quit WinHelp to the WM_CLOSE message of the frame window (just before
+it calls DestroyWindow).
+
+MAXEDIT.C	Delete spurious call to DestroyWindow ().
+		Move call to Winhelp (Quit) to WM_CLOSE of frame
+		  window procedure.
+
+
