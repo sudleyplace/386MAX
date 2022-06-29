@@ -1,0 +1,12 @@
+ reb\amain.obj		reb\ahelp.obj		reb\asqprint.obj +
+reb\ADFSPEC.obj +
+	reb\asq.obj		reb\snap.obj +
+reb\abort.obj		reb\readprof.obj	reb\asqdata.obj +
+reb\versbeta.obj	reb\versdata.obj	reb\versret.obj +
+reb\zztail.obj
+reb\asq.exe
+reb\asq
+Llibce.lib oldnames.lib  Lhelp.lib  verL.lib +
+R:\MAX\lib\Lquilibr.lib +
+R:\MAX\lib\Lenginer.lib
+NUL /NOI /STACK:9000 /SEG:300 /BATCH /NOD /M /FAR /PACKC:512 /LINE

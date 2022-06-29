@@ -1,0 +1,194 @@
+Add Plug and Play detection to ASQ
+
+Fix file entry:
+
+* Add Plug and Play detection to ASQ
+
+ Description:
+ 	ASQ now reports on Plug and Play devices (using a new text
+	file PNP.TXT to get the names) as well as PCI systems and
+	CD-ROM drives.  A bug in reporting environment in high DOS
+	has also been fixed.  If no mouse driver is installed, we
+	now report on the pointing device bit in equipment flags.
+	There's a BIOS call to check for a PS/2 mouse, but it's
+	unsafe to call as ROMSRCH has not been exercising it unless
+	a mouse driver was present.  CPU speed reporting has been
+	updated and now displays CPUID information (family, model,
+	and stepping).
+ Who: HENRY
+ When: 1 Feb 96
+ SW/HW Environment: Plug and Play machines, PCI machines, any
+ 	machine with one or more CD-ROM drives, any machine with
+	a PS/2 mouse (i.e. hooked up to the motherboard), and
+	any machine with the master environment loaded high (via
+	ExtraDOS).
+ Symptom: Most of these are not bugs.  If the master environment
+	is loaded high it may be garbage.  If no mouse driver is
+	present we say a mouse is "not installed" which is not
+	true.
+ Temporary Workaround: None.
+ Test Procedure: Run ASQ on any combination of machines mentioned
+ 	under Environment.  Verify that CPU speed is reported
+	correctly, genuine Intel processors are reported correctly,
+	CPUID family (the first number, a 4, 5, or 6) makes sense,
+	CD-ROM drives make sense (none reported unless MSCDEX is
+	loaded), PCI machines are detected, and Plug and Play
+	device information makes sense.
+ QA Testing Passed:
+ Version: ASQ 8.01.002 (MAX 8.01, build 004)
+
+New files:
+
+ASQENG\ASQENG.INC
+	Depscan-generated dependencies.
+
+ASQENG\BUSINFO.ASM
+	New file with Plug and Play and PCI detection.
+
+ASQENG\BUSINFO.H
+	Declarations for BUSINFO.ASM.
+
+INCLUDE\PNP.H
+	Plug and Play structures and prototypes.  This was originally
+	meant to be a dual-use MASM and C file, but I only partly did
+	the MASM part.
+
+TEXT\PNP.TXT
+	Plug and Play IDs for display in ASQ.
+
+Files affected:
+
+ASQ\AHELP.C
+	CPUPARM structure is now nested within ENGREPORT.
+
+ASQ\ASQTEXT.H
+	Add "Evaluating..." messages for Plug and Play and CD-ROM.
+
+ASQ\VERSBETA.ASM
+	Bump version to 2.
+
+ASQENG\ADF.H
+	Change #include quotes to angle brackets so depscan doesn't whine.
+
+ASQENG\BIOSID.H
+	Add warning comment for structure.
+
+	Add comment documenting flag reserved for PCI BIOS.
+
+ASQENG\CFG_INFO.H
+ASQENG\DEVICE.H
+ASQENG\HDW_INFO.H
+ASQENG\INFO.H
+ASQENG\MAPINFO.H
+ASQENG\MEM_INFO.H
+ASQENG\QTAS.H
+ASQENG\SYSBUF.H
+INCLUDE\LIBCOLOR.H
+INCLUDE\LISTLIST.H
+INCLUDE\MENU.H
+INCLUDE\QWINDOWS.H
+	More quotes to angle brackets.
+
+ASQENG\CPUTEXT.C
+	Pass CPUPARM pointer so we can get Intel flag.  Pentium is a
+	trademarked name (as is Pentium Pro) so we use 80586 and 80686
+	if a non-Intel processor.
+
+ASQENG\ENGINE.C
+	Copy entire CPUPARM member to ENGREPORT (as we need the Intel
+	flag and other tidbits).
+
+ASQENG\ENGTEXT.H
+	Add new strings.
+	Change non-BIOS disk message to something more sensible.
+
+ASQENG\HDW_INFO.C
+	Display Plug and Play data.
+
+	Handle Pentium Pro CPU.
+
+	Display CPUID family, model and stepping.
+
+	Display PCI version.
+
+	Display CD-ROM drives in use.
+
+	NOTE: There are some strings in here I missed moving to the .H file.
+	I'll have to get those in a later TWT.
+
+ASQENG\MAKEFILE
+	Set up to use ASQENG.INC (Depscan-generated dependencies).
+
+ASQENG\MULTIME.ASM
+	Use a prime number with a random pattern of bits set to
+	avoid any potential multiply optimizations.
+
+ASQENG\READSYS.C
+	Read snapshot PCI, Plug and Play, CD-ROM, and additional CPU info.
+	Note that we still read older snapshots.
+
+ASQENG\SYSINFO.C
+	Get Plug and Play and CD-ROM data.
+
+	Detect PCI.
+
+	If no mouse driver, check equipment flag for pointing device.
+
+	Fix bug with not reporting environment in high DOS.
+
+	Update CPU speed reporting to handle P4X, P54C, and Pentium Pro
+	devices and to round others off to reasonable values.
+
+	Read PNP device descriptions into memory.  Since PNP.TXT is easily
+	user-customizable, we save these values into the snapshot.
+
+	Add code to detect MSCDEX and CD-ROMs.
+
+ASQENG\SYSINFO.H
+	Add PCI and Plug and Play flags.
+
+	Add new members for PnP, CD-ROM, and PCI.
+
+ASQENG\SYSTEXT.H
+	Add new snapshot tokens and keywords.  These don't get translated.
+
+ASQENG\WRITSYS.C
+	Write new data to snapshot.
+
+DISK\DISK.MAK
+	Strip symbols from SETUP.EXE and SETUPDOS.OVL.
+
+	Add option to MAKEDISK.BAT to allow a directory to be specified.
+
+INC\CPUFET.INC
+	Document Pentium Pro bits.
+
+	Add bitmasks in hex.
+
+INCLUDE\CPU.H
+	Add additional data (all from CPUID) to CPUPARM structure.
+
+INCLUDE\CPUCODES.INC
+	Add new value for Pentium Pro.
+
+INCLUDE\CPUTEXT.H
+	Add new value for P6, also changed cpu_textof to take a CPUPARM *.
+
+INCLUDE\ENGINE.H
+	Change CPUPARM data in ENGREPORT to nested CPUPARM.
+
+INCLUDE\LIBTEXT.H
+	Update copyright, fix INSTALL -> SETUP.
+
+INCLUDE\MVERSION.H
+	Bump version to 8.01 (for Windows apps), update copyright year.
+
+INCLUDE\TEXTNAME.MAK
+	Add new file PNP.TXT to build.
+
+MAXHELP\MAXHELP.MAK
+	Fix problem with compiling help.
+
+QUILIB\CPU.ASM
+	Save CPUID data in CPUPARM structure.
+

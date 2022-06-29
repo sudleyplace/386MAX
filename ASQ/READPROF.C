@@ -1,0 +1,122 @@
+/*' $Header:   P:/PVCS/MAX/ASQ/READPROF.C_V   1.0   05 Sep 1995 15:04:48   HENRY  $ */
+/******************************************************************************
+ *									      *
+ * (C) Copyright 1991-92 Qualitas, Inc.  All rights reserved.		      *
+ *									      *
+ * READPROF.C								      *
+ *									      *
+ * Supplies the built-in ASQ profile					      *
+ *									      *
+ ******************************************************************************/
+
+/*
+ * This is TEMPORARY code to supply the built-in profile.
+ * It's supposed to be read from the help file.
+ */
+
+#include <stdio.h>
+#include <string.h>
+
+#include "commdef.h"
+
+/* Default profile text imported from asq.txt */
+#ifdef REVIVEBUILTINPRO
+char *ProfileText[] = {
+
+"ADAPTER=E000 \"IBM Token-Ring Network Adapter/A\"",
+"",
+"POS[2]=1100100X ROM=C800-C9FF",
+"POS[2]=1100101X ROM=CA00-CBFF",
+"POS[2]=1100110X ROM=CC00-CDFF",
+"POS[2]=1100111X ROM=CE00-CFFF",
+"POS[2]=1101000X ROM=D000-D1FF",
+"POS[2]=1101001X ROM=D200-D3FF",
+"POS[2]=1101010X ROM=D400-D5FF",
+"POS[2]=1101011X ROM=D600-D7FF",
+"POS[2]=1101100X ROM=D800-D9FF",
+"POS[2]=1101101X ROM=DA00-DBFF",
+"POS[2]=1101110X ROM=DC00-DDFF",
+"POS[2]=1101111X ROM=DE00-DFFF",
+"",
+"POS[0]=1101100X RAM=D800-DBFF",
+"POS[0]=1101110X RAM=DC00-DFFF",
+"POS[0]=1100100X RAM=C800-CBFF",
+"POS[0]=1100110X RAM=CC00-CFFF",
+"POS[0]=1101000X RAM=D000-D3FF",
+"POS[0]=1101010X RAM=D400-D7FF",
+"",
+"ADAPTER=E001 \"IBM Token-Ring Network 16/4 Adapter/A\"",
+"",
+"POS[2]=1100110X ROM=CC00-CDFF",
+"POS[2]=1100111X ROM=CE00-CFFF",
+"POS[2]=1101000X ROM=D000-D1FF",
+"POS[2]=1101001X ROM=D200-D3FF",
+"POS[2]=1101010X ROM=D400-D5FF",
+"POS[2]=1101011X ROM=D600-D7FF",
+"POS[2]=1101100X ROM=D800-D9FF",
+"POS[2]=1101101X ROM=DA00-DBFF",
+"POS[2]=1101110X ROM=DC00-DDFF",
+"POS[2]=1101111X ROM=DE00-DFFF",
+"POS[2]=1100100X ROM=C800-C9FF",
+"POS[2]=1100101X ROM=CA00-CBFF",
+"",
+"POS[0]=1101100X POS[1]=XXXX01XX RAM=D800-DBFF",
+"POS[0]=1101110X POS[1]=XXXX01XX RAM=DC00-DFFF",
+"POS[0]=1100000X POS[1]=XXXX01XX RAM=C000-C3FF",
+"POS[0]=1100010X POS[1]=XXXX01XX RAM=C400-C7FF",
+"POS[0]=1100100X POS[1]=XXXX01XX RAM=C800-CBFF",
+"POS[0]=1100110X POS[1]=XXXX01XX RAM=CC00-CFFF",
+"POS[0]=1101000X POS[1]=XXXX01XX RAM=D000-D3FF",
+"POS[0]=1101010X POS[1]=XXXX01XX RAM=D400-D7FF",
+"POS[0]=1101100X POS[1]=XXXX00XX RAM=D800-D9FF",
+"POS[0]=1101101X POS[1]=XXXX00XX RAM=DA00-DBFF",
+"POS[0]=1101110X POS[1]=XXXX00XX RAM=DC00-DDFF",
+"POS[0]=1101111X POS[1]=XXXX00XX RAM=DE00-DFFF",
+"POS[0]=1100000X POS[1]=XXXX00XX RAM=C000-C1FF",
+"POS[0]=1100001X POS[1]=XXXX00XX RAM=C200-C3FF",
+"POS[0]=1100010X POS[1]=XXXX00XX RAM=C400-C5FF",
+"POS[0]=1100011X POS[1]=XXXX00XX RAM=C600-C7FF",
+"POS[0]=1100100X POS[1]=XXXX00XX RAM=C800-C9FF",
+"POS[0]=1100101X POS[1]=XXXX00XX RAM=CA00-CBFF",
+"POS[0]=1100110X POS[1]=XXXX00XX RAM=CC00-CDFF",
+"POS[0]=1100111X POS[1]=XXXX00XX RAM=CE00-CFFF",
+"POS[0]=1101000X POS[1]=XXXX00XX RAM=D000-D1FF",
+"POS[0]=1101001X POS[1]=XXXX00XX RAM=D200-D3FF",
+"POS[0]=1101010X POS[1]=XXXX00XX RAM=D400-D5FF",
+"POS[0]=1101011X POS[1]=XXXX00XX RAM=D600-D7FF",
+"POS[0]=1101100X POS[1]=XXXX10XX RAM=D800-DFFF",
+"POS[0]=1100000X POS[1]=XXXX10XX RAM=C000-C7FF",
+"POS[0]=1100100X POS[1]=XXXX10XX RAM=C800-CFFF",
+"POS[0]=1101000X POS[1]=XXXX10XX RAM=D000-D7FF",
+"POS[0]=1101000X POS[1]=XXXX11XX RAM=D000-DFFF",
+"POS[0]=1100000X POS[1]=XXXX11XX RAM=C000-CFFF",
+NULL
+};	/* ProfileText */
+#endif
+
+/*
+ *	readProfile - read built-in ASQ profile
+ */
+
+int readProfile( int first, char *line, int nline )
+{
+#ifdef REVIVEBUILTINPRO
+	static int index = 0;
+	char *p;
+
+	if (first) {
+		index = 0;
+	}
+
+	p = ProfileText[index];
+	if (!p) return FALSE;
+
+	strncpy(line,p,nline-1);
+	line[nline-1] = '\0';
+	index++;
+	return TRUE;
+#else
+	return (FALSE);
+#endif
+}
+

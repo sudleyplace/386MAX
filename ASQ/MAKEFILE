@@ -1,0 +1,176 @@
+#
+# Makefile for ASQ
+#
+#' $Header:   P:/PVCS/MAX/ASQ/MAKEFILE.__V   1.8   02 Jun 1997 15:16:48   BOB  $
+#
+
+INCLUDE=$(MAXROOT)include;$(INCLUDE)
+
+!include <maxnames.mak>
+
+PROJ=asq			# Name of executable
+MODEL=L 			# Default to large model
+OEM=reb 			# Default version
+
+I=$(MAXROOT)inc\		# Standard MASM includes
+H=$(MAXROOT)include\	# UI include directory
+A=$(MAXROOT)lib\	# UI help engine library
+O=$(OEM)\			# Directory for .OBJ files
+U=$(A)				# Directory for quilib
+E0=$(MAXROOT)asqeng\	# Directory for ASQ engine headers
+E=$(A)				# Directory for ASQ engine .OBJ files
+Q=$(MAXROOT)386max\	# 386MAX directory
+OLDINC=$(INCLUDE)	# Save original INCLUDE value
+ALLINC=$(O);$(H);$(I);$(E0);$(OLDINC) # Search path for .C and .ASM translation
+BETA=0				# To compile in beta version, set to 1
+
+!IF "$(MODEL)" == "M"   # Determine MASM model flag
+AMODEL=MEDIUM
+!ELSE
+!IF "$(MODEL)" == "C"
+AMODEL=COMPACT
+!ELSE
+!IF "$(MODEL)" == "L"
+AMODEL=LARGE
+!ELSE
+!ERROR Model must be M, C, or L
+!ENDIF
+!ENDIF
+!ENDIF
+
+DEBUG = 0
+
+CC  = cl
+COPT=/Oslegc
+CFLAGS=/A$(MODEL) /W2 /DDOS_VERSION /DLANG_$(LANG) /BATCH /WX /Gs $(COPT)
+
+#ASM  = ml
+#AFLAGS_G  = /Cx /W2 /WX
+ASM=masm
+AFLAGS=/Zd /DMODEL=$(AMODEL) /DBETA=$(BETA) /DLANG_$(LANG) /DSNAPSHOT=0 /Mx /W2
+
+
+LFLAGS=/NOI /STACK:9000 /SEG:300 /BATCH /NOD /M /FAR /PACKC:512 /LINE
+LINKER	= link
+ILINK  = ilink
+LRF  = echo > NUL
+LIBS=$(U)$(MODEL)quilibr.lib $(E)$(MODEL)enginer.lib
+# .LIBs we don't know the path for
+GLIBS=$(MODEL)libce.lib oldnames.lib \
+      $(MODEL)help.lib \
+      ver$(MODEL).lib
+DEF_FILE=NUL
+
+!IF $(DEBUG)
+CFLAGS=$(CFLAGS) /Z7 /Od
+LFLAGS=$(LFLAGS) /CO
+!ELSE
+CFLAGS=$(CFLAGS) /Z7 $(COPT)
+!ENDIF
+
+OBJS=	$(O)amain.obj		$(O)ahelp.obj		$(O)asqprint.obj\
+	$(O)ADFSPEC.obj 	$(O)asq.obj		$(O)snap.obj\
+	$(O)abort.obj		$(O)readprof.obj	$(O)asqdata.obj\
+	$(O)versbeta.obj	$(O)versdata.obj	$(O)versret.obj\
+	$(O)zztail.obj
+
+# Define LSTMAC macro to be added to the END of MASM command lines.
+# Creates assembler listing in directory $(LST)
+!IFDEF LST
+LSTMAC=,$*,$(LST)\$(@B)
+!ELSE
+LSTMAC=
+!ENDIF
+
+.asm{$(O)}.obj:
+	set INCLUDE=$(ALLINC)
+	$(ASM) $(AFLAGS) $(@B),$* $(LSTMAC);
+	set INCLUDE=$(OLDINC)
+
+{$(Q)}.asm{$(O)}.obj:
+	 set INCLUDE=$(ALLINC)
+	 $(ASM) $(AFLAGS) %s, $(@D)\ $(LSTMAC);
+	 set INCLUDE=$(OLDINC)
+
+.c{$(O)}.obj:
+	set INCLUDE=$(ALLINC)
+	$(CC) /c $(CFLAGS) /Fo$(@R).OBJ $<
+	set INCLUDE=$(OLDINC)
+
+ALL: DIR	$(O)$(PROJ).exe 	$(BD)asq.exe
+
+DEL:
+	-rm $(O)*.*
+
+DIR:
+	vdir -c $(O)
+
+pvcs.cfg:
+	@echo <<pvcs.cfg
+REFERENCEDIR=WRITEPROTECT P:\MAX\asq\*
+VCSDIR = P:\PVCS\MAX\asq\*
+ALIAS ALL P:\PVCS\MAX\asq\*.*,p:\pvcs\max\asq\udlocal2.bav
+<<KEEP
+
+GET: pvcs.cfg
+	$(GETCMD) $(MAKEDIR)
+
+DEPSCAN: makefile
+	depscan -s$(E0)=$$(E0) *.c *.asm $(Q)versret.asm >asqdep.inc
+
+makefile: $(H)makefile.inc asqdep.inc
+
+!include asqdep.inc
+!INCLUDE $(H)makefile.inc
+
+.SUFFIXES: .obj .c
+
+$(O)ahelp.obj:		ahelp.c 	$(AHELP_DEP)
+
+$(O)amain.obj:		amain.c 	$(AMAIN_DEP)
+
+$(O)asqprint.obj:	asqprint.c	$(ASQPRINT_DEP)
+
+$(O)adfspec.obj:	adfspec.c	$(ADFSPEC_DEP)
+
+$(O)asq.obj:		asq.c		$(ASQ_DEP)
+
+$(O)snap.obj:		snap.c		$(SNAP_DEP)
+
+$(O)abort.obj:		abort.c 	$(ABORT_DEP)
+
+$(O)readprof.obj:	readprof.c	$(READPROF_DEP)
+
+$(O)asqdata.obj:	asqdata.c	$(ASQDATA_DEP)
+
+$(O)VERSBETA.OBJ:	VERSBETA.ASM	$(VERSBETA_ADEP)
+
+$(O)versdata.obj:	versdata.asm	$(VERSDATA_ADEP)
+
+$(O)versret.obj:	$(Q)versret.asm $(VERSRET_ADEP)
+
+$(O)zztail.obj: 	zztail.asm	$(ZZTAIL_ADEP)
+
+$(O)$(PROJ).exe : $(OBJS)	$(LIBS) 	makefile
+	$(LRF) @<<$(O)$(PROJ).lrf
+$(RT_OBJS: = +^
+) $(OBJS: = +^
+)
+$@
+$*
+$(GLIBS) +
+$(LIBS: = +^
+)
+$(DEF_FILE) $(LFLAGS)
+<<KEEP
+	@Set LIB=$(LIB)
+	$(LINKER) @$(O)$(PROJ).lrf
+	mapssf -t$* $*
+
+$(BD)asq.exe:	    $(O)$(PROJ).exe
+	xc /r $(**R).exe	$*.*
+	xc /r $(**R).map	$*.*
+	xc /r $(**R).ssf	$*.*
+
+
+
