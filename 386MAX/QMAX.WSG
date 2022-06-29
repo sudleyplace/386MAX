@@ -1,0 +1,35 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;;	386MAX Symbol Group file format
+;;
+;;	This file may contain comments, like this line, by preceding each
+;;	line with a semicolon (;).  Comments may also appear at the end of
+;;	each line, since all input after the group name is ignored.
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; group mode	sel	group[!segment]
+
+  3000	P	50	PGROUP		; 386MAX code
+  3001	P	18	PGROUP!EDATA	; 386MAX data
+  3001	P	18	PGROUP!VALSEG	; 386MAX data
+  3010	V	 *	PGROUP!NCODE	; 386MAX non-resident code
+  3010	V	 *	PGROUP!NDATA	; 386MAX non-resident data
+  3002	P      130	IGROUP!ICODE	; 386MAX extra code
+  3002	P      130	IGROUP!LCODE	; 386MAX extra code
+  3003	P      138	IGROUP		; 386MAX extra data
+  3010	V	 *	XGROUP		; 386MAX non-resident code/data
+  0	D	 0	PSPGRP		; PSP group (non-resident)
+  3004	P	70	PDTGRP		; OFFPDT group (uninitialized)
+  3005	P      150	JGROUP!JCODE	; 386MAX 3rd code
+  3005	P      158	JGROUP		; 386MAX 3rd data
+  3006	P      128	FGROUP		; 386MAX 4th data
+  3007	P      158	DLGROUP 	; Downloadable code/data for 4B support
+					; After loading, execute
+					; ts * 3007 p * {jgrsize.  If
+					; you want symbols in V86 mode, do a
+					; ts * 3007 v cs at the start of EMU4B.
+  3008	P      158	DL2GROUP	; Downloadable code/data for Ctrl-Break
+					; during DPMI client initialization
+
+
