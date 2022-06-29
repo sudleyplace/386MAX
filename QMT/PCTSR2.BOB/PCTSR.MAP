@@ -1,0 +1,40 @@
+
+ Start  Stop   Length Name                   Class
+ 00000H 00000H 00000H STACK                  prog                              
+ 00000H 0016FH 00170H CODE                   prog                              
+ 00170H 00245H 000D6H NCODE                  prog                              
+
+ Origin   Group
+ 0000:0   PGROUP                                                               
+
+  Address         Publics by Name
+
+ 0000:0152       INT19               
+ 0000:0126       INT2F               
+ 0000:0170       MSG_COPY            
+ 0000:01CC       MSG_PREV            
+ 0000:0108       OLDINT19_VEC        
+ 0000:0104       OLDINT2F_VEC        
+ 0000:01EB       PCTSR               
+ 0000:016D       PCTSR_API           
+ 0000:010C       PCTSR_SIG           
+ 0000:0080       PSP_PARM_COUNT      
+ 0000:0081       PSP_PARM_STRING     
+ 0000:0170       ZTAIL               
+
+  Address         Publics by Value
+
+ 0000:0080       PSP_PARM_COUNT      
+ 0000:0081       PSP_PARM_STRING     
+ 0000:0104       OLDINT2F_VEC        
+ 0000:0108       OLDINT19_VEC        
+ 0000:010C       PCTSR_SIG           
+ 0000:0126       INT2F               
+ 0000:0152       INT19               
+ 0000:016D       PCTSR_API           
+ 0000:0170       MSG_COPY            
+ 0000:0170       ZTAIL               
+ 0000:01CC       MSG_PREV            
+ 0000:01EB       PCTSR               
+
+Program entry point at 0000:0100

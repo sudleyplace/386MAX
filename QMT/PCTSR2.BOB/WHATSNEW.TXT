@@ -1,0 +1,91 @@
+New Features In Qualitas RAMexam Version 8.09
+
+* All tests are a bit faster as intermediate checking for halting
+  conditions have been removed.
+
+* New tests:
+	Data Retention Faults occur when a memory cell loses its value
+	   after a certain period of time.	The actual delay can be set
+	   from the Set Delay Dialog box which is displayed by pressing
+	   the F6 key.
+
+	Moving Inversion Test is used to catch a combination of faults
+	   including Stuck-At Faults, Unlinked Inversion Coupling Faults,
+	   most Unlinked Idempotent Coupling Faults, and Idempotent
+	   Coupling Faults linked with Inversion Coupling Faults.
+
+* The low DOS footprint is considerably reduced when used on a CPU
+  (such as Intel's Pentium chip) which supports 4MB pages.
+
+* Actual error values are more accurate as there is no re-read of the
+  incorrect value.
+
+* Spurious NMI is handled explicitly.
+
+* New APIs are checked for the amount of available extended memory.
+
+* When a memory or parity error occurs, the user is asked whether or
+  not execution should continue or if it should stop.  A third option
+  (Auto) tells RAMexam to continue testing after any memory error
+  occurs.  This latter state can be toggled via the F7 key.  The
+  current state is displayed on the screen.
+
+* The EXT=nnnnn keyword allows you to set the amount of extended
+  memory in case your BIOS uses a scheme to report extended memory not
+  known to RAMexam.  The argument nnnnn is in units of kilobytes.
+
+* The RANGE=nnnnn-nnnnn keyword allows you to set the range of
+  extended memory to test.	These values supersede all other checks
+  of how much memory is in the system and cause RAMexam to test this
+  range only.  The values are in units of bytes unless followed by a 
+  K, M, or G to indicate that the preceding number is in units of 
+  kilobytes, megabytes, or gigabytes, respectively (e.g., 64M-128M).
+
+* When run from Real Mode or under a VCPI manager, the code and data
+  for RAMexam is cached thus improving the execution times.  Of
+  course, the extended memory being tested is never cached.
+
+* The NODOS keyword allows you to skip testing low DOS memory.
+
+* The DELAY=nnn keyword allows you to specify the delay time (in
+  milliseconds) for use in the Data Retention Fault test.
+
+* The MOVI=nn keyword allows you to specify that the Moving Inversion
+  Test is to be run nn times.
+
+* The DRD=nn keyword allows you to specify that the Data Retention-13
+  Test is to be run nn times.
+
+* The TONE[=filename] keyword allows you to specify that you would
+  like RAMexam to generate tones at certain events such as a memory or
+  parity error.  If no filename is specified, default tones are used.
+  For more details, see the file TONE.TXT.
+
+* The AUTOMEM=[ON|OFF] keyword allows you to specify the initial state
+  of whether or not RAMexam automatically continues testing after
+  finding a memory error.  The default state is OFF.
+
+* The ERRCNT=nn keyword allows you to specify the maximum number of
+  errors which will be saved in memory.  When the program terminates,
+  this error information is written out to a log file.
+
+* The amount of low DOS memory needed to run RAMexam is checked
+  against the amount available to ensure there is no conflict.
+
+* The exit code from RAMexam is set to 0 for a successful run, 1 for
+  an environment or keyword error, and 2 for a memory/parity error.
+
+* When running RAMexam in continuous mode, the count of how many
+  iterations have passed appears next to the START button.
+
+* The log file contains more detailed information about errors and
+  tests run.
+
+* The Full test in the Basic screen now includes the Moving Inversion
+  test along with the Linked and Unlinked Idempotent tests and now
+  starts with the Moving Inversion test
+
+* A new tone event is defined corresponding to when a memory or parity
+  failure occurs when running with AutoMem set to ON.  See the file
+  TONE.TXT for more details.
+

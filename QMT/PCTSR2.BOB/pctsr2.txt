@@ -1,0 +1,58 @@
+PCTEST TSR API
+
+When a PCTEST-compliant program (e.g., RAMexam) starts, it broadcasts 
+that fact to any resident programs by calling:
+
+	mov si,seg VSNAME		; DS:SI ==> Vendor-specific name
+	mov ds,si				; ...
+	lea si,VSNAME			; ...
+	mov ax,168Ah			; AX = Vendor-specific API call
+	int 2Fh 				; Request multiplexor service
+
+On return, if AL == 0, then ES:DI ==> TSR's entry point for this API, 
+and where VSNAME == 'PCTEST TSR API, Version 2'.
+
+Periodically, RAMexam calls the API as follows:
+
+ES:BX = ptr to the following structure:
+
+PCTSR_STR struc
+
+PCTSR_CMD		db		?		; 00:  Command byte (see @PCTSR_xxx
+								;		 below)
+PCTSR_BANK		dw		?		; 01:  Physical memory bank (0=0-64MB,
+								;		 1=64MB-128MB etc.)
+PCTSR_MASK		dq		?		; 03:  Error mask ( 1 denotes bit
+								;		 position in error )
+PCTSR_ESUMSIZE	db		?		; 07:  Number of entries in error
+								;		 summary table
+PCTSR_ESUM		dq		?		; 08:  Pointer to error summary table
+
+PCTSR_STR ends
+
+; Command bytes for PCTSR_CMD
+								; Command description (valid fields)
+@PCTSR_AWAKE	equ 	0		; Report as awake (none)
+@PCTSR_FAIL 	equ 	1		; Failure (pass: _BANK, _MASK)
+@PCTSR_SUMMARY	equ 	2		; Get summary table size/address
+								; (ret: _ESUMSIZE, _ESUM)
+
+On Return:
+		 AL=00					Success
+		 AL=01					Failure
+
+Error Summary Table - 
+
+This table maintains the cumulative error masks for each bank.	There
+is an entry for each 64MB bank.  The table is defaults to 64 entries.
+
+Keep Alive -
+
+The command @PCTSR_AWAKE must be issued at least once every 4 minutes
+by the compliant program.
+
+Error Reporting -
+
+Multiple bit errors occurring in the same bank can be reported with a
+single failure call.
+
