@@ -1,0 +1,10 @@
+gnu/grep-2.1/djgpp/README
+gnu/grep-2.1/NEWS
+bin/grep.exe
+bin/fgrep.exe
+bin/egrep.exe
+info/grep.1
+info/fgrep.1
+info/egrep.1
+manifest/grep21b.mft
+manifest/grep21b.ver
