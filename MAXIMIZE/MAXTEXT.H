@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/MAXIMIZE/MAXTEXT.H_V   1.1   26 Oct 1995 21:53:24   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-95 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-95 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * MAXTEXT.H								      *
  *									      *

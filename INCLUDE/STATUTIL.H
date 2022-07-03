@@ -2,7 +2,7 @@
 //
 // STATUTIL.H -- Prototypes and constants for functions in {L|M}STUtil.lib
 //
-// Copyright (C) 1994-96 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1994-96 Qualitas, Inc.  GNU General Public License version 3.
 //
 
 #ifndef STATUTIL_INCLUDED

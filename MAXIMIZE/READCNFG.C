@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/MAXIMIZE/READCNFG.C_V   1.1   13 Oct 1995 12:04:10   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-94 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-94 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * READCNFG.C								      *
  *									      *

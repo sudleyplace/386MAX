@@ -2,7 +2,7 @@
 //
 // DTSTRING.H - Date and time related strings
 //
-// Copyright (C) 1995-96 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1995-96 Qualitas, Inc.  GNU General Public License version 3.
 //
 
 #ifndef DTSTRING_INCLUDED

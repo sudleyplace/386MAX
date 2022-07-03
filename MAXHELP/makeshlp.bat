@@ -1,7 +1,7 @@
 @echo off
 REM $Header:   P:/PVCS/MAX/MAXHELP/MAKESHLP.SRV   1.0   06 Sep 1995 14:22:02   HENRY  $
 REM Makeshlp.src - C preprocessor input for MAKESHLP.BAT
-REM Copyright (C) 1995 Qualitas, Inc.  All rights reserved.
+REM Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3.
 
 REM -- Ensure help output directory exists
 vdir -c hlp

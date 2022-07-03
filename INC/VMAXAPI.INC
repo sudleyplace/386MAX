@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/VMAXAPI.INV   1.0   05 Sep 1995 13:27:36   HENRY  $
 ;
-; (C) Copyright 1990-3 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1990-3 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; VMAXAPI.INC
 ;

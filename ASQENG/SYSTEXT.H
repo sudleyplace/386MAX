@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/ASQENG/SYSTEXT.H_V   1.2   30 May 1997 14:58:44   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-92 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-92 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * SYSTEXT.H								      *
  *									      *

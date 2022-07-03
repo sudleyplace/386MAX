@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/MAXIMIZE/INS_VAR.H_V   1.0   05 Sep 1995 16:33:16   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-94 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-94 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * INS_VAR.H								      *
  *									      *

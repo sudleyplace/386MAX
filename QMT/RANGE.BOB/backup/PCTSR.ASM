@@ -172,7 +172,7 @@ ZTAIL	label	byte
 	public	MSG_COPY
 MSG_COPY db	'PCTSR   -- Version 1.00 ',CR,LF
 	db	'   (C) Copyright 1999 Qualitas, Inc. '
-	db	' All rights reserved.',CR,LF,EOS
+	db	' GNU General Public License version 3.',CR,LF,EOS
 
 	public	MSG_PREV
 MSG_PREV db	'ออ> PC TSR already resident.',CR,LF,EOS

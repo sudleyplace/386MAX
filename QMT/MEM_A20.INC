@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/QMT/MEM_A20.INV   1.0   05 Sep 1995 16:56:06   HENRY  $
 ;
-; (C) Copyright 1987-93 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-93 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; MEM_A20.INC
 ;

@@ -1,6 +1,6 @@
 # $Header:   P:/PVCS/MAX/MAXHELP/MAXHELP.MAV   1.5   30 May 1997 11:43:00   BOB  $
 #
-# Copyright (C) 1995 Qualitas, Inc.  All rights reserved
+# Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3
 #
 # Makefile for MAXHELP.HLP and SETUP.HLP
 #

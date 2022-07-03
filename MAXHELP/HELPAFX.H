@@ -3,7 +3,7 @@
 // HELPAFX.H - Constants used in AFX projects
 //
 // Copyright (C) 1995 Qualitas, Inc.
-// All rights reserved.
+// GNU General Public License version 3.
 //
 // Reverse engineered AFXHELP.HM source file.  Used to generate
 // application-specific references to AFX standard definitions

@@ -5,7 +5,7 @@
 
 COMMENT|				Module Specifications
 
-Copyright: (C) Copyright 2001-2002 Qualitas, Inc.  All rights reserved.
+Copyright: (C) Copyright 2001-2002 Qualitas, Inc.  GNU General Public License version 3.
 
 |
 .386

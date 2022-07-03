@@ -2,7 +2,7 @@
 //
 // ISTEXT.CPP - Test for text / binary file
 //
-// Copyright (C) 1994-96 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1994-96 Qualitas, Inc.  GNU General Public License version 3.
 //
 
 #define	STRICT

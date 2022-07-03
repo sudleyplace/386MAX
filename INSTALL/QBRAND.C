@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/INSTALL/QBRAND.C_V   1.1   11 Nov 1995 13:14:22   BOB  $ */
 /****************************************************************************
  *																			*
- * (C) Copyright 1991-2003 Qualitas, Inc.  All rights reserved. 			*
+ * (C) Copyright 1991-2003 Qualitas, Inc.  GNU General Public License version 3. 			*
  *																			*
  * QBRAND.C 																*
  *																			*

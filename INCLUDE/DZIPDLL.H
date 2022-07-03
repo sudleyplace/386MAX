@@ -1,6 +1,6 @@
 // $Header:   P:/PVCS/MAX/INCLUDE/DZIPDLL.H_V   1.1   28 May 1996 16:10:42   HENRY  $
 //
-// Copyright (c) 1993 Inner Media, Inc., All Rights Reserved
+// Copyright (c) 1993 Inner Media, Inc., GNU General Public License version 3
 // Include file for using DZIP.DLL
 
 #undef GLOBAL

@@ -2,7 +2,7 @@
 //
 // MAXPNAMES.H -- Max 8 product names
 //
-// Copyright (C) 1995 Qualitas, Inc.  All rights reserved
+// Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3
 //
 // This file contains definitions for the MAX 8 product.
 // Try to use constants from this file for source files and resource

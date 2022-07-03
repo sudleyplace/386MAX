@@ -5,7 +5,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 1987-98 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1987-98 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Group PGROUP:
 	       Program segment CODE,  byte-aligned,  public, class 'prog'
@@ -134,7 +134,7 @@ ifdef LANG_GR
 	 db	 '≥ Alle Rechte vorbehalten.                ≥',CR,LF
 	 db	 '≥  verfÅgb. Extended Memory =    _'
 else
-	 db	 '≥ All rights reserved.                    ≥',CR,LF
+	 db	 '≥ GNU General Public License version 3.                    ≥',CR,LF
 	 db	 '≥ Available Extended Memory =    _'
 endif				; IFDEF LANG_GR
 	 public  MSG_EAVL

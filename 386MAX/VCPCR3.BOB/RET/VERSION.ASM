@@ -3,7 +3,7 @@ VERSLTR  equ	 <>
 
 ;' $Header:   P:/PVCS/MAX/386MAX/VERSRET.ASV   1.5   06 Nov 1996 15:42:26   BOB  $
 ;
-; (C) Copyright 1987-2000 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1987-2000 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; VERSRET.ASM
 ;

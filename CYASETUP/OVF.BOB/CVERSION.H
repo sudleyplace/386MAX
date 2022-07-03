@@ -3,7 +3,7 @@
 // CVERSION.H - component version info file
 //
 // ---------------------------------------------------------
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3
 // ---------------------------------------------------------
 #include <_lcldefs.h>					// Define BUILD_BETA, BUILD_ALPHA
 

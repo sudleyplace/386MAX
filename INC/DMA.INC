@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/DMA.INV   1.0   05 Sep 1995 13:26:54   HENRY  $
 ;
-; (C) Copyright 1987-92 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-92 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; DMA.INC
 ;

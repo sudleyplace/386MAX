@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/VMVSAPI.INV   1.1   30 Sep 1996 17:13:46   BOB  $
 ;
-; (C) Copyright 1993-6 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1993-6 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; VMVSAPI.INC
 ;

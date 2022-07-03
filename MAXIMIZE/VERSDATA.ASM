@@ -7,7 +7,7 @@ COMMENT|		Module Specifications
 
 Version-dependent data for MAXIMIZE.
 
-Copyright:  (C) Copyright 1990-97 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1990-97 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Ungrouped:
 	       Group DGROUP:
@@ -167,7 +167,7 @@ endif				; IF STACKER
  db	 '  /d:       Use drive letter specified for boot drive',LF
  db	 LF
  db	 'MAXIMIZE ',MIZVERSION,LF
- db	 '(C) Copyright 1987-96 Qualitas, Inc.   All rights reserved.',LF,0
+ db	 '(C) Copyright 1987-96 Qualitas, Inc.   GNU General Public License version 3.',LF,0
 endif		; ifdef LANG_GR
 
 	 end

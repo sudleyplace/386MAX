@@ -6,7 +6,7 @@
 	  comment   }
 
 	  (C) Copyright 1990 Rex Conn
-	  All Rights Reserved
+	  GNU General Public License version 3
 
 	  } end description
 	  ;

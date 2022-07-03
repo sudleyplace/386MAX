@@ -6,7 +6,7 @@
 	  comment   }
 
 	  (C) Copyright 1990 Rex Conn
-	  All Rights Reserved
+	  GNU General Public License version 3
 
 	  These BATPROC support routines provide fast screen I/O and other
 	  functions for BATPROC.

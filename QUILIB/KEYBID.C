@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/QUILIB/KEYBID.C_V   1.0   05 Sep 1995 17:02:12   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-92 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-92 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * KEYBID.C								      *
  *									      *

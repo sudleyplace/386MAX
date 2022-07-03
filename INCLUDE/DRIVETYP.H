@@ -2,7 +2,7 @@
 //
 // DRIVETYP.H - Drive identification functions
 //
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3.
 
 #ifndef _DRIVETYP_INCLUDED
 #define	_DRIVETYP_INCLUDED

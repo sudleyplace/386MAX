@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/386MAX/QMAX_CFG.INV   1.0   11 Aug 1995 10:55:38   HENRY  $
 ;
-; (C) Copyright 1992 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1992 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; QMAX_CFG.INC
 ;

@@ -1,6 +1,6 @@
 // $Header:   P:/PVCS/MAX/MAXSETUP/MAXTIME.H_V   1.0   01 Feb 1996 11:17:32   PETERJ  $
 /****************************************************************
- * (C) Copyright 1991-96 Qualitas, Inc.  All rights reserved.	*
+ * (C) Copyright 1991-96 Qualitas, Inc.  GNU General Public License version 3.	*
  * MAXTIME.H								                    *
  * Definition of TIME structures used in setup	                *
  ****************************************************************/

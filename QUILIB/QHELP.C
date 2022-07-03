@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/QUILIB/QHELP.C_V   1.2   30 May 1997 12:09:04   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-92 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-92 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * QHELP.C								      *
  *									      *

@@ -1,7 +1,7 @@
 //'$Header:   P:/PVCS/MAX/STRIPMGR/PARSER.C_V   1.4   02 Jun 1997 10:46:38   BOB  $
 
 // STRIPMGR - Strips references to memory managers from CONFIG & AUTOEXEC
-//	 (c) 1990-96  Rex C. Conn & Qualitas, Inc.	All rights reserved
+//	 (c) 1990-96  Rex C. Conn & Qualitas, Inc.	GNU General Public License version 3
 
 #include <stdio.h>
 #include <stdlib.h>

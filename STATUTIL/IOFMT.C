@@ -3,8 +3,8 @@
 // IOFMT.C - Reentrant & smaller (s)scanf() replacement for Windows 3.x
 //	  Adapted from CSCRIPT\iofmt.c
 //
-// Copyright (C) 1994-96 Qualitas, Inc.  All rights reserved
-// Copyright (c) 1994, 1995  Rex C. Conn  All rights reserved.
+// Copyright (C) 1994-96 Qualitas, Inc.  GNU General Public License version 3
+// Copyright (c) 1994, 1995  Rex C. Conn  GNU General Public License version 3.
 
 #include <windows.h>
 

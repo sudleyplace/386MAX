@@ -6,7 +6,7 @@
 
 COMMENT |
 
-Copyright (C) 1992-97 Qualitas, Inc.  All rights reserved.
+Copyright (C) 1992-97 Qualitas, Inc.  GNU General Public License version 3.
 
 Original code by: Henry Groover, October 1992
 

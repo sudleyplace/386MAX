@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/PNP.INV   1.1   21 Nov 1995 18:17:56   BOB  $
 ;
-; (C) Copyright 1995 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1995 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; PNP.INC
 ;

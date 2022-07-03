@@ -2,7 +2,7 @@
 
 /***************************  QPOPUP  *****************************************
  *									      *
- *	     (C) Copyright 1993-94 Qualitas, Inc.	All rights reserved.  *
+ *	     (C) Copyright 1993-94 Qualitas, Inc.	GNU General Public License version 3.  *
  *									      *
  *  MODULE   :	QPOPUP.VER - Version stamp resource			      *
  *									      *
@@ -25,7 +25,7 @@
 #ifdef LANG_GR
 #define VER_LEGALCOPYRIGHT_STR	    "Copyright \251 1994-95 Qualitas, Inc.  Alle Rechte vorbehalten.\0"
 #else
-#define VER_LEGALCOPYRIGHT_STR	    "Copyright \251 1994-95 Qualitas, Inc.  All Rights Reserved.\0"
+#define VER_LEGALCOPYRIGHT_STR	    "Copyright \251 1994-95 Qualitas, Inc.  GNU General Public License version 3.\0"
 #endif				/* IFDEF LANG_GR */
 
 #define VER_ORIGINALFILENAME_STR    "QPOPUP.EXE\0"

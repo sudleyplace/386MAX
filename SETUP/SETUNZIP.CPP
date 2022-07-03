@@ -4,7 +4,7 @@
 // ZOPEN.CPP - Zip access class CZopen implementation
 // ...except we dynamically link in this version to avoid
 // the missing link errors from not starting with the dll loaded.
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3.
 //------------------------------------------------------------------
 
 #define	STRICT

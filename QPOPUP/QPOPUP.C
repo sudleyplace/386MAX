@@ -1,5 +1,5 @@
 //' $Header:   P:/PVCS/MAX/QPOPUP/QPOPUP.C_V   1.3   10 Nov 1995 23:16:50   BOB  $
-/* qpopup.c - Copyright (C) 1993-5 Qualitas, Inc.  All Rights Reserved. */
+/* qpopup.c - Copyright (C) 1993-5 Qualitas, Inc.  GNU General Public License version 3. */
 
 #define STRICT
 #include <windows.h>

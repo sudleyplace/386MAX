@@ -459,7 +459,7 @@ endif ; @QMT
 	 db	 '       Version ',VTXTP,'   '
 @AAR_SROW equ	 @CPY_SROW + ($-MSG_CPY)/@CPY_NCOLS
 MSG_AAR  db	 '       (c) 1988-2001       '
-	 db	 '    All rights reserved.   '
+	 db	 '    GNU General Public License version 3.   '
 	 db	 '                           '
 ;;;;;;;; db	 '                           ' ; Added for MIF
 ;;;;;;;; db	 '                           ' ; Added for DRD
@@ -1683,7 +1683,7 @@ elseifdef @RAMDEMO
 else ; @QMT
 	 db	 VTEXT,' -- Qualitas RAMexam',CR,LF
 endif ; @QMT
-	 db	 '   (C) Copyright 1988-2001 Qualitas, Inc.  All rights reserved.',CR,LF,EOS
+	 db	 '   (C) Copyright 1988-2001 Qualitas, Inc.  GNU General Public License version 3.',CR,LF,EOS
 endif
 
 	 public  MSG_NOT386,MSG_WIN3,MSG_NOTVM,MSG_XMEM,MSG_XMEM1,MSG_XMEM2

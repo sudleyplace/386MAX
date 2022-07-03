@@ -8,7 +8,7 @@ COMMENT|		Module Specifications
 *********************************** QUALITAS ***********************************
 ********************************* CONFIDENTIAL *********************************
 
-Copyright:  (C) Copyright 1990-95 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1990-95 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Group _IGROUP:
 	       Program segment _ITEXT,	dword-aligned,	use32,	public, 'ICODE'

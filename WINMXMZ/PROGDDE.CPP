@@ -1,6 +1,6 @@
 // $Header:   P:/PVCS/MAX/WINMXMZ/PROGDDE.CPV   1.1   13 Oct 1995 11:56:34   HENRY  $
 // PROGDDE.CPP - Routines to delete group from progman.
-// Copyright (C) 1995 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3.
 
 #include <windows.h>
 #include <stdlib.h>

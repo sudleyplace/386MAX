@@ -2,7 +2,7 @@
 //
 // NEWNAMES.C - Convert all old names to new (obviating OLDNAMES.LIB)
 //
-// Copyright (C) 1995 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3.
 //
 
 #include <stdio.h>
@@ -129,7 +129,7 @@ main( int argc, char *argv[] ) {
 	char szTemp[ _MAX_PATH ], szDrive[ _MAX_DRIVE ], szDir[ _MAX_DIR ];
 	int nArg, nRes;
 
-	fprintf( stderr, "NewNames v1.0  Copyright (C) 1995 Qualitas, Inc.  All rights reserved.\n" );
+	fprintf( stderr, "NewNames v1.0  Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3.\n" );
 
 	if (argc < 2) {
 		fprintf( stderr, "No files specified.\n" );

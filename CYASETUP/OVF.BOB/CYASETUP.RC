@@ -43,7 +43,7 @@ BEGIN
     DEFPUSHBUTTON   "&OK",IDOK,88,58,50,14
     LTEXT           "Qualitas Setup Version 1.000.000.000",IDC_VERSION,38,21,
                     150,11
-    LTEXT           "Copyright (c) 1996 Qualitas, Inc.  All Rights Reserved",
+    LTEXT           "Copyright (c) 1996 Qualitas, Inc.  GNU General Public License version 3",
                     IDC_COPY,21,37,183,12
     ICON            SETICON,-1,10,6,18,20
 END

@@ -1,7 +1,7 @@
 //' $Header:   P:/PVCS/MAX/STRIPMGR/BATCH.C_V   1.1   02 Jun 1997 10:46:38   BOB  $
 
 // BATCH.C - Batch file routines for BATPROC
-//	 Copyright (c) 1990, 1991  Rex C. Conn for Qualitas  All rights reserved
+//	 Copyright (c) 1990, 1991  Rex C. Conn for Qualitas  GNU General Public License version 3
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,6 +1,6 @@
 //' $Header:   P:/PVCS/MAX/MAXEDIT/MAXEDIT.C_V   1.18   10 Jul 1996 10:58:14   BOB  $
 //  MAXEDIT.C - .INI and .PRO editor
-//  Copyright (c) 1995-6 Qualitas, Inc.  All rights reserved.
+//  Copyright (c) 1995-6 Qualitas, Inc.  GNU General Public License version 3.
 
 #include "maxedit.h"
 #include "commdlg.h"

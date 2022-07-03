@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/BIOSCONF.INV   1.1   23 May 1997 16:00:12   BOB  $
 ;
-; (C) Copyright 1987-96 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-96 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; BIOSCONF.INC
 ;

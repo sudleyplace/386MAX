@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/INSTALL/MXZ_ADF.C_V   1.1   08 Feb 1996 12:43:12   BOB  $ */
 /************************************************************************
  *																						      *
- * (C) Copyright 1993 Qualitas, Inc.  All rights reserved.			      *
+ * (C) Copyright 1993 Qualitas, Inc.  GNU General Public License version 3.			      *
  *																						      *
  * MXZ_ADF.C																		*
  *																						      *

@@ -2,7 +2,7 @@ BETAVERSION	equ	010
 
 ;' $Header:   P:/PVCS/MAX/VXD/VMAX_VER.ASV   1.12   15 Jun 1998 23:56:12   BOB  $
 ;
-; (C) Copyright 1990-96 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1990-96 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; VMAX_VER.ASM
 ;
@@ -14,7 +14,7 @@ COMMENT|		Module Specifications
 *********************************** QUALITAS ***********************************
 ********************************* CONFIDENTIAL *********************************
 
-Copyright:  (C) Copyright 1990-97 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1990-97 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Group _IGROUP:
 	       Program segment _ITEXT,	dword-aligned,	use32,	public, 'ICODE'
@@ -70,7 +70,7 @@ MSG_RMI  db	 BEL, CR, LF, @OEM_TEXT, ' VxD -- Version '
 ifdef LANG_GR
 	 db	 '    (C) Copyright 1990-97 Qualitas, Inc.  Alle Rechte vorbehalten.', CR, LF
 else
-	 db	 '    (C) Copyright 1990-97 Qualitas, Inc.  All rights reserved.', CR, LF
+	 db	 '    (C) Copyright 1990-97 Qualitas, Inc.  GNU General Public License version 3.', CR, LF
 endif					; IFDEF LANG_GR
 	 db	 CR, LF, EOS
 

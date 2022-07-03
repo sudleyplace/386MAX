@@ -1,7 +1,7 @@
 /***
 *_file.c - preprocess file and buffer data declarations
 *
-*   Copyright (c) 1985-1990, Microsoft Corporation.  All rights reserved.
+*   Copyright (c) 1985-1990, Microsoft Corporation.  GNU General Public License version 3.
 *
 *Purpose:
 *   file and buffer data declarations

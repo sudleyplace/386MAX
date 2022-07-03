@@ -2,9 +2,9 @@
 //------------------------------------------------------------------
 // multi.c
 // created by Peter Johnson (PETERJ) 1/19/96
-// Copyright (C) 1994-96 Qualitas, Inc. All rights reserved.
+// Copyright (C) 1994-96 Qualitas, Inc. GNU General Public License version 3.
 // created by stealing it from Henry's DOS version for 386Max install.
-// Copyright (C) 1992-96 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1992-96 Qualitas, Inc.  GNU General Public License version 3.
 //------------------------------------------------------------------
 // Install program Multi-config routines.
 //------------------------------------------------------------------

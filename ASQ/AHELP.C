@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/ASQ/AHELP.C_V   1.1   01 Feb 1996 10:20:32   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-92 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-92 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * AHELP.C								      *
  *									      *

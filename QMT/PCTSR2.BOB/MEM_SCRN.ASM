@@ -314,7 +314,7 @@ This routine runs in protected mode.
 	 push	 offset ds:W_CPY ; Pass address of window descriptor
 	 call	 WPUT_CSA	; Output the characters, smear attribute
 
-; Display the All Rights Reserved screen's attributes
+; Display the GNU General Public License version 3 screen's attributes
 
 	 mov	 al,AARATTR	; Get AAR screen attribute
 	 push	 ax		; Pass as attribute to smear

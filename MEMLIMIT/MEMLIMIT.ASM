@@ -5,7 +5,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 1991-97 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1991-97 Qualitas, Inc.  GNU General Public License version 3.
 
 Original code by:  Bob Depelteau
 
@@ -1476,7 +1476,7 @@ else
 MSG_C3F     db	'MemLimit successfully remove from memory.',CR,LF,EOS
 MSG_C4F     db	'MemLimit is not resident in the system.',CR,LF,EOS
 MSG_SIGNON  db	'MEMLIMIT  -- Version ',VERS_H,'.',VERS_T,VERS_U,' -- A Memory Limiting Utility',CR,LF
-	    db	'   (C) Copyright 1991-96 Qualitas, Inc.  All rights reserved.',CR,LF,EOS
+	    db	'   (C) Copyright 1991-96 Qualitas, Inc.  GNU General Public License version 3.',CR,LF,EOS
 endif				; IFDEF LANG_GR
 
 	public MSG_NOTPRES, MSG_SYNTAX, MSG_NOXMS, MSG_WIN1, MSG_WINDOWS_NFG

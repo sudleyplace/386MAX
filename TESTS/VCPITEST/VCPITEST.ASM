@@ -107,7 +107,7 @@ VCPIVER  dw	 ?		; VCPI version #
 MSG_COPY db	 'VCPITEST -- Version '
 	 db	 VERS_H,'.',VERS_T,VERS_U
 	 db	 ' -- VCPI Test Program',CR,LF
-	 db	 '   (C) Copyright 1988-94 Qualitas, Inc.  All rights reserved.',CR,LF,EOS
+	 db	 '   (C) Copyright 1988-94 Qualitas, Inc.  GNU General Public License version 3.',CR,LF,EOS
 
 	 public  MSG_VER
 MSG_VER  db	 'VCPI version '

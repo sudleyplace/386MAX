@@ -38,7 +38,7 @@ Indent2;}{\s19 \f11\fs16\cf2 \sbasedon0\snext19 Comment;}}{\info{\title install 
 \par 
 \par Other restrictions apply, as specified in the license agreement in the front of your {\b User Guide.
 \par }
-\par      (C) Copyright 1987-96 Qualitas, Inc.  All rights reserved.
+\par      (C) Copyright 1987-96 Qualitas, Inc.  GNU General Public License version 3.
 \par \pard\plain \s16 \f11\fs28\cf6 >>L.NoFreeDisk
 \par \pard\plain \f11 There is not enough available disk space on drive #ARG3# to store the #FLENME# programs.
 \par 

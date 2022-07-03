@@ -1,4 +1,4 @@
-/* qpopup.h - Copyright (C) 1993-5 Qualitas, Inc.  All Rights Reserved. */
+/* qpopup.h - Copyright (C) 1993-5 Qualitas, Inc.  GNU General Public License version 3. */
 
 #define STR_APPNAME	"QPOPUP"        // Application name
 #define STR_PROFILE	"QMAX.INI"      // Profile filename

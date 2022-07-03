@@ -4,7 +4,7 @@
 // SetExt.cpp - Routines to spawn a dos copy out of Windows.
 // Stolen from Dispatch uninstall.
 // EXTFILE.C - Routines to extract data (files) from a resource.
-// Copyright (C) 1995 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3.
 //------------------------------------------------------------------
 #include <windows.h>
 #include <stdlib.h>

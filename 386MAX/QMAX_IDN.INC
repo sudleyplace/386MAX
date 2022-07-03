@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/386MAX/QMAX_IDN.INV   1.1   26 Jan 1996 10:07:00   PETERJ  $
 ;
-; (C) Copyright 1987-92 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-92 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; QMAX_IDN.INC
 ;

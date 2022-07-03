@@ -1,6 +1,6 @@
 /****************************************************************/
 /* SFTTABS2.H - Tabbed Dialog Support for Windows               */
-/* Copyright (C) 1994  Softel vdm. All Rights Reserved.         */
+/* Copyright (C) 1994  Softel vdm. GNU General Public License version 3.         */
 /****************************************************************/
 
 #ifndef _INC_SFTTABS2

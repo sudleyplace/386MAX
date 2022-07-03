@@ -1,6 +1,6 @@
 // $Header:   P:/PVCS/MAX/MAXEDIT/MESSAGES.H_V   1.2   27 Feb 1996 12:34:58   PETERJ  $
 // Messages for MAX 8 maxedit.exe
-// Copyright (C) 1995 Qualitas, Inc. All Rights Reserved.
+// Copyright (C) 1995 Qualitas, Inc. GNU General Public License version 3.
 
 #ifdef EXTERN
     #undef EXTERN

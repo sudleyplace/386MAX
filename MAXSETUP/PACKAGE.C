@@ -10,7 +10,7 @@ Desc:	 Qualitas 386MAX packaging utility
 Author:  Bob Depelteau
 
 
-  (c) Copyright 1991-92, Qualitas, Inc. All rights reserved
+  (c) Copyright 1991-92, Qualitas, Inc. GNU General Public License version 3
 
 
 ***********************************************************/

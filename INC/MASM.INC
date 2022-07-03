@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/MASM.INV   1.0   05 Sep 1995 13:26:40   HENRY  $
 ;
-; (C) Copyright 1987-94 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-94 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; MASM.INC
 ;

@@ -1,4 +1,4 @@
-/* qpifedit.h - (C) Copyright 1992-93 Qualitas, Inc.  All Rights Reserved. */
+/* qpifedit.h - (C) Copyright 1992-93 Qualitas, Inc.  GNU General Public License version 3. */
 
 #include <commdlg.h>
 #include <cderr.h>

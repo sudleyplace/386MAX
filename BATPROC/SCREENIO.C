@@ -1,5 +1,5 @@
 // SCREENIO.C - Hardware dependent video i/o routines for 4DOS & 4OS2
-//   (c) 1988, 1989, 1990  Rex C. Conn  All rights reserved
+//   (c) 1988, 1989, 1990  Rex C. Conn  GNU General Public License version 3
 
 //   This file contains various screen I/O functions for 4DOS & 4OS2.
 //   If you are porting 4DOS to other than standard IBM PC hardware, you will

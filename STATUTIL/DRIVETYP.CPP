@@ -2,7 +2,7 @@
 //
 // DRIVETYP.CPP - Drive info functions
 //
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3.
 //
 
 

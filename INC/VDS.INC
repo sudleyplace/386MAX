@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/VDS.INV   1.0   05 Sep 1995 13:26:44   HENRY  $
 ;
-; (C) Copyright 1987-93 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-93 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; VDS.INC
 ;

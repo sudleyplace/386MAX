@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/MAXIMIZE/COMM_OEM.INV   1.0   05 Sep 1995 16:33:44   HENRY  $
 ;
-; (C) Copyright 1991-92 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1991-92 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; COMM_OEM.INC
 ;

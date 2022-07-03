@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/TSRINFO.INV   1.0   31 Jan 1996 12:31:52   BOB  $
 ;
-; (C) Copyright 1995-6 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1995-6 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; TSRINFO.INC
 ;

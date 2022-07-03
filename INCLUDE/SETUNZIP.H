@@ -2,7 +2,7 @@
 //------------------------------------------------------------------
 // SETUNZIP.H...A class for setup...stolen from...
 // ZOPEN.H - Zip access class CZopen
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3.
 //------------------------------------------------------------------
 #ifndef _SETUNZIP_INCLUDED
 #define	_SETUNZIP_INCLUDED

@@ -1,4 +1,4 @@
-/* qpopup.rc - Copyright (C) 1993-5 Qualitas, Inc.  All Rights Reserved. */
+/* qpopup.rc - Copyright (C) 1993-5 Qualitas, Inc.  GNU General Public License version 3. */
 
 #include <windows.h>
 

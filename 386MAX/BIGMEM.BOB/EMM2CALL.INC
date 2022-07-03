@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/386MAX/EMM2CALL.INV   1.1   28 Sep 1995 10:12:56   BOB  $
 ;
-; (C) Copyright 1987-95 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-95 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; EMM2CALL.INC
 ;

@@ -1,7 +1,7 @@
 //' $Header:   P:/PVCS/MAX/STRIPMGR/STRIPMGR.H_V   1.3   02 Jun 1997 10:46:38   BOB  $
 
 // STRIPMGR.H - Include file for STRIPMGR
-//	 Copyright (c) 1990  Rex C. Conn   All rights reserved
+//	 Copyright (c) 1990  Rex C. Conn   GNU General Public License version 3
 
 
 #define ARGMAX 128		// maximum number of arguments in line

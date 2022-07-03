@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/INSTALL/DEFN.H_V   1.1   25 Oct 1995 18:49:58   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-92 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-92 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * DEFN.H								      *
  *									      *

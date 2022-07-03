@@ -7,7 +7,7 @@ COMMENT|		Module Specifications
 
 Version-dependent data for ASQ.
 
-Copyright:  (C) Copyright 1992-97 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1992-97 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Ungrouped:
 	       Group DGROUP:
@@ -137,7 +137,7 @@ else
  db	 '  /X                           Automatic exit to DOS, use after /G or /S only',LF
  db	 LF
  db	 '%s ',ASQVERTEXT,', '
- db	 '(C) Copyright 1987-96 Qualitas, Inc.   All rights reserved.',LF,0
+ db	 '(C) Copyright 1987-96 Qualitas, Inc.   GNU General Public License version 3.',LF,0
 endif			; IFDEF LANG_??
 endif			; IFE SNAPSHOT
 	 end

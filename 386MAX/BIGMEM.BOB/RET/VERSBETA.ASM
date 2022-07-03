@@ -2,7 +2,7 @@ VERSION  equ	 004
 
 ;' $Header:   P:/PVCS/MAX/386MAX/VERSBETA.ASV   1.30   08 Oct 1996 13:46:24   BOB  $
 ;
-; (C) Copyright 1987-96 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-96 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; VERSBETA.ASM
 ;

@@ -1,5 +1,5 @@
 //  Drawline - overlay a horizontal or vertical line
-//   Copyright (c) 1990  Rex C. Conn   All rights reserved
+//   Copyright (c) 1990  Rex C. Conn   GNU General Public License version 3
 //
 //  Draws a horizontal or vertical line of the specified width (single or 
 //  double) using line drawing characters, starting at the specified row

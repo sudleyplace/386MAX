@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/VXD/VMAX_UPD.INV   1.0   05 Sep 1995 17:20:56   HENRY  $
 ;
-; (C) Copyright 1990-92 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1990-92 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; VMAX_UPD.INC
 ;

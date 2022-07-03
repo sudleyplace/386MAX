@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/DPMI.INV   1.1   15 Jun 1998 16:02:14   BOB  $
 ;
-; (C) Copyright 1987-93 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-93 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; DPMI.INC
 ;

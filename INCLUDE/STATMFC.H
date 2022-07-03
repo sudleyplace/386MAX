@@ -2,7 +2,7 @@
 //
 // STATMFC.H - Non-class MFC components of statutil
 //
-// Copygright (C) 1996 Qualitas, Inc.  All rights reserved.
+// Copygright (C) 1996 Qualitas, Inc.  GNU General Public License version 3.
 //
 // Any complete class added to statutil should have its own
 // .H file.  Modules containing utility functions that require

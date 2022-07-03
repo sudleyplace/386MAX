@@ -5,7 +5,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 1987-97 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1987-97 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Group PGROUP:
 	       Stack   segment STACK, word-aligned,  stack,  class 'prog'
@@ -154,7 +154,7 @@ ifdef DEBUG
 	 db	 'ignorieren Sie ALLE angebotenen Empfehlungen.',CR,LF
 endif					; ifdef DEBUG
 else
-	 db	 ' All rights reserved.',CR,LF
+	 db	 ' GNU General Public License version 3.',CR,LF
 ifdef DEBUG
 	 db	 BEL,'This is a special debugging version, '
 	 db	 'Disregard any suggestions it may offer.',CR,LF

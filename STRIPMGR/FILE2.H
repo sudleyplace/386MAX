@@ -1,7 +1,7 @@
 /***
 *file2.h - auxiliary file structure used internally by file run-time routines
 *
-*   Copyright (c) 1985-1990, Microsoft Corporation.  All rights reserved.
+*   Copyright (c) 1985-1990, Microsoft Corporation.  GNU General Public License version 3.
 *
 *Purpose:
 *   This file defines the auxiliary file structure used internally by

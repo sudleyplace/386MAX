@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/WIN3PAGE.INV   1.1   31 Jan 1996 12:33:50   BOB  $
 ;
-; (C) Copyright 1987-95 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-95 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; WIN3PAGE.INC
 ;

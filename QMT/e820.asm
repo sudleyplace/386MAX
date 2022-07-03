@@ -87,7 +87,7 @@ MSG_NVS db	'ACPI NVS Memory',CR,LF,EOS
 
 	public	MSG_COPY,MSG_UNSUP
 MSG_COPY db	'E820     -- Display E820 Memory Values -- Version 1.00',CR,LF
-	db	'  (C) Copyright 1999 Qualitas, Inc.  All Rights Reserved.',CR,LF,EOS
+	db	'  (C) Copyright 1999 Qualitas, Inc.  GNU General Public License version 3.',CR,LF,EOS
 MSG_UNSUP db	'*** E820 not supported byt this BIOS.',CR,LF,EOS
 
 	public	NUMBERS_HI

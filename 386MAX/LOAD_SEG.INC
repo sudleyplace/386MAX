@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/386MAX/LOAD_SEG.INV   1.0   11 Aug 1995 10:56:04   HENRY  $
 ;
-; (C) Copyright 1987-93 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-93 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; LOAD_SEG.INC
 ;

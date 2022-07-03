@@ -265,7 +265,7 @@ AMAC ERR, @ATMrev,	@ATBWrev,	<@ATCFFyellow+@ATCBBred> ; Attr for errors
 AMAC BRD, @ATMnorm,	@ATBWnorm,	<@ATCFFmagenta+@ATCBBcyan> ; Attr for border
 AMAC TTL, @ATMrev,	@ATBWrev,	<@ATCFFblue+@ATCBBwhite> ; Attr for titles
 AMAC CPY, @ATMrev,	@ATBWrev,	<@ATCFFwhite+@ATCBBblue> ; Attr for copyright
-AMAC AAR, @ATMrev,	@ATBWrev,	<@ATCFFltgray+@ATCBBblue> ; Attr for "All Rights Reserved."
+AMAC AAR, @ATMrev,	@ATBWrev,	<@ATCFFltgray+@ATCBBblue> ; Attr for "GNU General Public License version 3."
 AMAC KEY, @ATMrev,	@ATBWrev,	<@ATCFFyellow+@ATCBBblue> ; Attr for key
 AMAC KEY2,@ATMnorm,	@ATBWnorm,	<@ATCFFyellow+@ATCBBdkgray> ; Attr for keys at bottom of screen
 AMAC SHD1,@ATMnorm,	@ATBWnorm,	<@ATCFFblack+@ATCBBdkgray> ; Attr for type 1 shadow

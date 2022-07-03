@@ -5,7 +5,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  Copyright (C) 1996-7 Qualitas, Inc.  All rights reserved.
+Copyright:  Copyright (C) 1996-7 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Microsoft conventions using .MODEL, .DATA, and .CODE.
 

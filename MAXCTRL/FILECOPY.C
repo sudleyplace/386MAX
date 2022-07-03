@@ -1,5 +1,5 @@
 // FILECOPY.C - File copying routine for SETUP.EXE
-//   Copyright (c) 1995  Rex C. Conn   All rights reserved
+//   Copyright (c) 1995  Rex C. Conn   GNU General Public License version 3
 
 #include <stdio.h>
 #include <stdlib.h>

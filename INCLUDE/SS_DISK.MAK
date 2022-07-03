@@ -2,7 +2,7 @@
 #
 # SS_DISK.MAK - Files to go in SysSaver archive and on the disk
 #
-# Copyright (C) 1996 Qualitas, Inc.  All rights reserved.
+# Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3.
 #
 # This file contains the complete list of files to go in the .ZIP
 # file and files to be copied directly onto the distribution disk.

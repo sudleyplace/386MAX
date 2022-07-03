@@ -2,7 +2,7 @@ BVERSION  equ	 006
 
 ;' $Header:   P:/PVCS/MAX/ROMSRCH/VERSION.ASV   1.7   30 Jan 1996 16:23:20   BOB  $
 ;
-; (C) Copyright 1987-95 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-95 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; VERSION.ASM
 ;

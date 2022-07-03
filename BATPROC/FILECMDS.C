@@ -1,5 +1,5 @@
 // FILECMDS.C - File maintenance routines for BATPROC
-//   Copyright (c) 1988, 1989, 1990  Rex C. Conn   All rights reserved
+//   Copyright (c) 1988, 1989, 1990  Rex C. Conn   GNU General Public License version 3
 
 #include <stdio.h>
 #include <stdlib.h>

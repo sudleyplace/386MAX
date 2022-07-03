@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/VLSI.INV   1.0   05 Sep 1995 13:27:44   HENRY  $
 ;
-; (C) Copyright 1993 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1993 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; VLSI.INC
 ;

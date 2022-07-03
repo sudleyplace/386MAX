@@ -8,7 +8,7 @@ COMMENT|		Module Specifications
 *********************************** QUALITAS ***********************************
 ********************************* CONFIDENTIAL *********************************
 
-Copyright:  (C) Copyright 1990-94 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1990-94 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Group _IGROUP:
 	       Program segment _ITEXT,	dword-aligned,	use32,	public, 'ICODE'
@@ -157,7 +157,7 @@ VxD_LOCKED_DATA_SEG		; Begin _LDATA segment
 	 public  DBG_FLAG
 DBG_FLAG dw	 0		; Flags to control the debugging system
 
-	 db	 '(C) Copyright 1990-94 Qualitas, Inc.  All rights reserved.'
+	 db	 '(C) Copyright 1990-94 Qualitas, Inc.  GNU General Public License version 3.'
 
 VxD_LOCKED_DATA_ENDS		; End _LDATA segment
 	 page

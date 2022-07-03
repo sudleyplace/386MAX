@@ -5,7 +5,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 1985-97 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1985-97 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  C run-time library definitions contained in llibca!c0.asm
 

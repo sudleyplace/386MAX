@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/QUILIB/TRUENAME.C_V   1.3   30 May 1997 12:09:06   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-92 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-92 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * TRUENAME.C								      *
  *									      *

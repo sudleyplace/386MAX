@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/QUILIB/TRNBLN.C_V   1.1   30 May 1997 12:09:06   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-97 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-97 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * TRNBLN.C								      *
  *									      *

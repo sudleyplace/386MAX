@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/ASQ/ASQTEXT.H_V   1.2   26 Feb 1996 15:16:02   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-93 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-93 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * ASQTEXT.H								      *
  *									      *

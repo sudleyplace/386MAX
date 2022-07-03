@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/ROMSRCH/PROBE.INV   1.2   02 Jan 1996 17:36:04   BOB  $
 ;
-; (C) Copyright 1987-95 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-95 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; PROBE.INC
 ;

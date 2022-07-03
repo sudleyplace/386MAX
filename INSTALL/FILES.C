@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/INSTALL/FILES.C_V   1.1   25 Oct 1995 18:50:04   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-95 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-95 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * FILES.C								      *
  *									      *

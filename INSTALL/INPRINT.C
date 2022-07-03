@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/INSTALL/INPRINT.C_V   1.1   05 Sep 1995 16:26:18   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-93 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-93 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * INPRINT.C								      *
  *									      *

@@ -1,7 +1,7 @@
 // $Header:   P:/PVCS/MAX/MAXSETUP/EXTFILE.C_V   1.0   15 Dec 1995 11:02:54   PETERJ  $
 // EXTFILE.C - Routines to extract data (files) from a resource.
 // Stolen from Dispatch uninstall.
-// Copyright (C) 1995 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3.
 
 #include <windows.h>
 #include <stdlib.h>

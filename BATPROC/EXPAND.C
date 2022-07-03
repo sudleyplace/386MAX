@@ -1,5 +1,5 @@
 // EXPAND.C
-//   Copyright (c) 1990  Rex C. Conn  All rights reserved.
+//   Copyright (c) 1990  Rex C. Conn  GNU General Public License version 3.
 //
 //   expand command aliases (if 4DOS)
 //   expand variables from the environment

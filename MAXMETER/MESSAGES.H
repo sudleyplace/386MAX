@@ -1,6 +1,6 @@
 // $Header:   P:/PVCS/MAX/MAXMETER/MESSAGES.H_V   1.2   27 Feb 1996 12:37:06   PETERJ  $
 // Messages for MAX 8 MAXmeter.exe
-// Copyright (C) 1995 Qualitas, Inc. All Rights Reserved.
+// Copyright (C) 1995 Qualitas, Inc. GNU General Public License version 3.
 
 #ifdef EXTERN
     #undef EXTERN

@@ -105,7 +105,7 @@
 22	"warning"
 23	"Stop.\n"
 24	"Microsoft (R) Program Maintenance Utility   Version %s"
-25	"Copyright (C) Microsoft Corp %s. All rights reserved.\n"
+25	"Copyright (C) Microsoft Corp %s. GNU General Public License version 3.\n"
 100	"Usage:	%s @commandfile"
 101	"\t%s [options] [/f makefile] [/x stderrfile] [macrodefs] [targets]\n"
 102	"Options:\n"

@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/DOSCALL.INV   1.1   24 Jul 1997 16:23:38   BOB  $
 ;
-; (C) Copyright 1987-93 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-93 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; DOSCALL.INC
 ;

@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/ASQENG/HDW_INFO.C_V   1.3   30 May 1997 14:58:40   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-96 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-96 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * HDW_INFO.C								      *
  *									      *

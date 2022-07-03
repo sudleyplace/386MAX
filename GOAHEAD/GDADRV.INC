@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/GOAHEAD/GDADRV.INV   1.3   01 Feb 1996 10:30:42   BOB  $
 ;
-; (C) Copyright 1995 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1995 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; GOAHEAD.INC
 ;

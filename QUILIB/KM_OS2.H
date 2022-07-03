@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/QUILIB/KM_OS2.H_V   1.0   05 Sep 1995 17:03:12   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-92 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-92 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * KM_OS2.C								      *
  *									      *

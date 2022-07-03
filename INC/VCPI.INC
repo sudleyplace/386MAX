@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/VCPI.INV   1.1   11 Oct 1995 16:21:30   BOB  $
 ;
-; (C) Copyright 1987-95 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-95 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; VCPI.INC
 ;

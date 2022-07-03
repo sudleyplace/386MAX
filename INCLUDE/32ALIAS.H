@@ -1,6 +1,6 @@
 // $Header:   P:/PVCS/MAX/INCLUDE/32ALIAS.H_V   1.4   05 Jul 1996 14:42:46   PETERJ  $
 // Aliases for Win16 to Win32 conversion. 
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3
 
 #ifndef _INC_32ALIAS
 //--------------------------------------------------------------

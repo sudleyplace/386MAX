@@ -2,7 +2,7 @@
 #
 # WINMXMZ.MAK - External makefile for WINMXMZ.EXE
 #
-# Copyright (C) 1995 Qualitas, Inc.  All rights reserved
+# Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3
 #
 
 # Default definitions overridden from the command line for builds

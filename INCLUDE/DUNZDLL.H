@@ -1,6 +1,6 @@
 // $Header:   P:/PVCS/MAX/INCLUDE/DUNZDLL.H_V   1.0   02 Apr 1996 15:11:54   HENRY  $
 //
-// Copyright (c) 1993 Inner Media, Inc., All Rights Reserved
+// Copyright (c) 1993 Inner Media, Inc., GNU General Public License version 3
 // Function prototypes and structures for DynaZIP unzip DLL.
 // Message Callback Return Codes not part of standard Windows Message Box
 

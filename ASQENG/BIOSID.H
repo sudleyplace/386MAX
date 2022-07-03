@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/ASQENG/BIOSID.H_V   1.1   01 Feb 1996 10:22:04   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-92 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-92 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * BIOSID.H								      *
  *									      *

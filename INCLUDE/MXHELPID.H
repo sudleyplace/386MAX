@@ -2,7 +2,7 @@
 //
 // MXHELPID.H - Max 8 application-specific help ID prefixes
 //
-// Copyright (C) 1995 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3.
 //
 
 // MAKEHELP uses bits 16-19 to ensure uniqueness across different types

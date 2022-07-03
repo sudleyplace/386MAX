@@ -1,7 +1,7 @@
 /* $Header:   P:/PVCS/MAX/ASQENG/BUSINFO.H_V   1.1   01 Feb 1996 10:21:54   HENRY  $ */
 /******************************************************************************
  *									      *
- * Copyright (C) 1996 Qualitas, Inc.  All rights reserved.		      *
+ * Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * BUSINFO.H								      *
  *									      *

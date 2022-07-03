@@ -1,4 +1,4 @@
-/* qpifedit.rc - (C) Copyright 1993 Qualitas, Inc.  All Rights Reserved. */
+/* qpifedit.rc - (C) Copyright 1993 Qualitas, Inc.  GNU General Public License version 3. */
 
 // Due to the fiddly nature of the dialog panes, always edit these dialog
 // resources by hand.  Don't use a dialog editor or resource workshop unless

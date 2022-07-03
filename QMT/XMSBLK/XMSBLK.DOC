@@ -1,5 +1,5 @@
 XMSBLK	 -- Version 1.00 -- An XMS Block Allocator
-   (C) Copyright 2000 Qualitas, Inc.  All rights reserved.
+   (C) Copyright 2000 Qualitas, Inc.  GNU General Public License version 3.
    
 This program allocates XMS memory such that the specified memory range
 is the only XMS memory available.

@@ -1,6 +1,6 @@
 ;/* $Header:   P:/PVCS/MAX/INCLUDE/PNP.H_V   1.1   01 Feb 1996 10:23:08   HENRY  $
 ; *
-; * (C) Copyright 1995-96 Qualitas, Inc.  All rights reserved.
+; * (C) Copyright 1995-96 Qualitas, Inc.  GNU General Public License version 3.
 ; *
 ; * PNP.H
 ; *

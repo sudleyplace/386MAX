@@ -3,7 +3,7 @@
 // setup32.h
 // Version 1.0
 // 20 August, 1996
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3
 //------------------------------------------------------------------
 
 #ifdef EXTERN

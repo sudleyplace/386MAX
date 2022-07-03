@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/MAXDEV.INV   1.1   30 Sep 1996 17:09:18   BOB  $
 ;
-; (C) Copyright 1987-96 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-96 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; MAXDEV.INC
 ;

@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/386MAX/QMAX_CM4.INV   1.1   05 Mar 1996 13:26:36   BOB  $
 ;
-; (C) Copyright 1994-6 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1994-6 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; QMAX_CM4.INC
 ;

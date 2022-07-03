@@ -4,7 +4,7 @@
 // Version Functions for Setup
 // Version 1.0
 // 19 Aug, 1996
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3
 //------------------------------------------------------------------
 
 #include <windows.h>

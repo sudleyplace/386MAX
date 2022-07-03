@@ -2,7 +2,7 @@
 
 // MESSAGE.H - Various text messages for BATPROC
 //   (put here to simplify language conversions)
-//   Copyright (c) 1990-96  Rex C. Conn and Qualitas, Inc.  All rights reserved
+//   Copyright (c) 1990-96  Rex C. Conn and Qualitas, Inc.  GNU General Public License version 3
 //ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
 //³  modified for GERMAN users, pls check completely,  ³
 //³  change YES-switches to Ja (J),		       ³
@@ -248,7 +248,7 @@
 #else
 
 #define COPYRIGHT "BATPROC " PROGVER "\n" \
-		  "   (C) Copyright 1990-96 Rex Conn & Qualitas, Inc.  All rights reserved."
+		  "   (C) Copyright 1990-96 Rex Conn & Qualitas, Inc.  GNU General Public License version 3."
 #define CANCEL_BATCH_JOB "\nCancel batch job ? (Y/N/A) : "
 #define INSERT_DISK "\nInsert disk with \"%s\"\n"
 #define CMDLINE "CMDLINE="

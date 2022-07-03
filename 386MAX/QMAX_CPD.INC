@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/386MAX/QMAX_CPD.INV   1.1   04 Dec 1995 13:28:34   BOB  $
 ;
-; (C) Copyright 1992-5 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1992-5 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; QMAX_CPD.INC
 ;

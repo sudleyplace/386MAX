@@ -112,7 +112,7 @@ ifdef LANG_GR
 else
 	 db	 ' -- A Memory Manager for 386 Systems',CR,LF
 	 db	 '   (C) Copyright 1987-95 Qualitas, Inc.'
-	 db	 '  All rights reserved.',CR,LF
+	 db	 '  GNU General Public License version 3.',CR,LF
 	 db	 EOS
 endif				; IFDEF LANG_GR
 

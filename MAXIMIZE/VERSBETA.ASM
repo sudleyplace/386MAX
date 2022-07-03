@@ -2,7 +2,7 @@ BETAVERSION	equ	010
 
 ;' $Header:   P:/PVCS/MAX/MAXIMIZE/VERSBETA.ASV   1.7   23 Jan 1996 14:57:02   HENRY  $
 ;
-; (C) Copyright 1992-6 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1992-6 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; VERSBETA.ASM
 ;

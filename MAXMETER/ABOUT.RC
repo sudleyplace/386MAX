@@ -29,7 +29,7 @@ BEGIN
     ICON            2,6015,144,56,18,20
     LTEXT           "Qualitas Dispatch Address Book\nVersion 1.0.056.045",-1,
                     12,7,112,17
-    LTEXT           "Copyright \251 1994-95 Qualitas, Inc.\nAll rights reserved.",
+    LTEXT           "Copyright \251 1994-95 Qualitas, Inc.\nGNU General Public License version 3.",
                     -1,12,38,112,18
     LTEXT           "This product is licensed to: ",6016,12,68,112,8
     LTEXT           "",6017,12,88,168,24

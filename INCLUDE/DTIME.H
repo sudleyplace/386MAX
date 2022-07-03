@@ -2,7 +2,7 @@
 //
 // DTIME.H - DTIME definitions from CATSYM.H
 //
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3.
 //
 
 #ifndef _DTIME_INCLUDED

@@ -1,6 +1,6 @@
 ;'$Header:   P:/PVCS/MAX/VXD/VMAX_PMI.INV   1.1   11 Oct 1995 17:43:14   BOB  $
 ;
-; (C) Copyright 1990-95 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1990-95 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; VMAX_PMI.INC
 ;

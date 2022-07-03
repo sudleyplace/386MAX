@@ -5,7 +5,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 1992-97 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1992-97 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Group PGROUP:
 	       Program segment CODE,  byte-aligned, public, class 'prog'
@@ -70,7 +70,7 @@ ifdef LANG_GR
 else
 	 db	 ' -- A DOS Memory Reorganizer',CR,LF
 	 db	 '   (C) Copyright 1993-96 Qualitas, Inc.'
-	 db	 '  All rights reserved.',CR,LF
+	 db	 '  GNU General Public License version 3.',CR,LF
 if @MAX6
 	 db	 '   Special version for Bank of America.',CR,LF
 endif					; IF @MAX6

@@ -1,5 +1,5 @@
 TEST24	 -- Version 2.00 -- A DPMI Critical Error Test Program
-   (C) Copyright 1992 Qualitas, Inc.  All rights reserved.
+   (C) Copyright 1992 Qualitas, Inc.  GNU General Public License version 3.
 
 This program tests Critical Errror under a DPMI host.  The program
 syntax is as follows:

@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/ASQENG/QTAS.H_V   1.1   01 Feb 1996 10:32:42   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-96 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-96 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * QTAS.H								      *
  *									      *

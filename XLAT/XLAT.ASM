@@ -5,7 +5,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 1991-97 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1991-97 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Group PGROUP:
 	       Stack   segment STACK, word-aligned,  stack,  class 'prog'
@@ -162,7 +162,7 @@ endif					; if BETA_VER
 ifdef LANG_GR
 	 db	 ' (C) Copyright 1991-96 Qualitas, Inc.  Alle Rechte vorbehalten.'
 else
-	 db	 ' (C) Copyright 1991-96 Qualitas, Inc.  All rights reserved.'
+	 db	 ' (C) Copyright 1991-96 Qualitas, Inc.  GNU General Public License version 3.'
 endif				; IFDEF LANG_GR
 	 db	 CR,LF,EOS
 @MSG_COPYLEN	 equ	($-MSG_COPY)-1

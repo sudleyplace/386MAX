@@ -2,7 +2,7 @@
 //
 // DOSDEFS.H - Definitions for non-Windows source modules
 //
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3.
 //
 // This is useful for .C programs that use statutil.h.
 //

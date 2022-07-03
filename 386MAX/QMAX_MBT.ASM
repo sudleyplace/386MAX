@@ -5,7 +5,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 1993-7 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1993-7 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Group XGROUP:
 	       Program segment XCODE, byte-aligned,  public, class 'xcode'

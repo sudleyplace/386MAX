@@ -5,7 +5,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 1986-98 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1986-98 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Group PGROUP:
 	       Program segment CODE,	byte-aligned,  public, class 'prog'

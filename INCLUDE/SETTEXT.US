@@ -1,6 +1,6 @@
 //------------------------------------------------------------------
 // settext.us
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3
 // Text for setup program.
 // for conditional inclusion into setglob.h in the max\include directory.
 //------------------------------------------------------------------

@@ -1,6 +1,6 @@
 // OUTPUT.C
 // Reentrant & smaller sprintf() replacement for 4DOS
-// Copyright (c) 1990, 1991  Rex C. Conn  All rights reserved.
+// Copyright (c) 1990, 1991  Rex C. Conn  GNU General Public License version 3.
 //
 //  %[flags][width][.precision][size]type
 //    flags:
