@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/QUILIB/FILEDIFF.C_V   1.1   30 May 1997 12:09:00   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-93 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-93 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * FILEDIFF.C								      *
  *									      *

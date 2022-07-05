@@ -2,7 +2,7 @@
 //
 // MESSAGES.H - Strings used in WINMAXIM.EXE
 //
-// Copyright (C) 1995-96 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1995-96 Qualitas, Inc.  GNU General Public License version 3.
 //
 
 #ifndef _MESSAGES_INCLUDED

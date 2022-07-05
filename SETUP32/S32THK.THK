@@ -1,7 +1,7 @@
 // $Header:   P:/PVCS/MAX/SETUP32/S32THK.THV   1.1   25 Sep 1996 09:19:04   PETERJ  $
 //------------------------------------------------------------------
 // 16 to 32 thunk source for setup32.dll
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3
 //------------------------------------------------------------------
 
 enablemapdirect1632 = true;

@@ -7,7 +7,7 @@ COMMENT|		Module Specifications
 
 Version-dependent data for INSTALL.
 
-Copyright:  (C) Copyright 1992-97 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1992-97 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Ungrouped:
 	       Group DGROUP:
@@ -170,7 +170,7 @@ endif
  db	 '  /d: Use drive letter specified for boot drive',LF
  db	 LF
  db	 PROGNAME,' ',PROGVERSION,LF
- db	 '(C) Copyright 1987-96 Qualitas, Inc.   All rights reserved.',LF,0
+ db	 '(C) Copyright 1987-96 Qualitas, Inc.   GNU General Public License version 3.',LF,0
 endif				; IFDEF LANG_GR
 
 	 end

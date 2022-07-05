@@ -2,7 +2,7 @@
 //
 // GSTRING.CPP - GString class implementation.
 //
-// Copyright (C) 1995 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3.
 //
 
 #define STRICT

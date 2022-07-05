@@ -2,7 +2,7 @@
 //
 // ACCESS.CPP - Windows version of C runtime _access() function
 //
-// Copyright (C) 1995 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3.
 //
 
 #define	STRICT

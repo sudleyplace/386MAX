@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/INCLUDE/LIBTEXT.H_V   1.9   30 May 1997 11:19:42   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-96 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-96 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * LIBTEXT.H								      *
  *									      *
@@ -93,7 +93,7 @@ GLOBAL char *LogoAddress[10]
 	"Alle Rechte ",
 	"vorbehalten.",
 #else
-	"All rights reserved",
+	"GNU General Public License version 3",
 #endif
 	"",
 	"Qualitas, Inc.",

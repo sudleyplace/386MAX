@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/SWATVXD.INV   1.2   15 Jun 1998 16:06:06   BOB  $
 ;
-; Copyright (C) 1990-7 Qualitas, Inc.  All rights reserved.
+; Copyright (C) 1990-7 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; SWATVXD.INC
 ;

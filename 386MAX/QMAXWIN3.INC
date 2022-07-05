@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/386MAX/QMAXWIN3.INV   1.1   28 Sep 1995 10:13:04   BOB  $
 ;
-; (C) Copyright 1987-95 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-95 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; QMAXWIN3.INC
 ;

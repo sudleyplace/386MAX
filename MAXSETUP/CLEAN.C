@@ -4,7 +4,7 @@
 // copyfile.bat and the directory it is in. Used in MAX 8.01 install
 // to get around the windows file sharing violation.
 // created by Peter Johnson (PETERJ) 12/4/95
-// Copyright (C) 1995 Qualitas, Inc.  All rights reserved
+// Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3
 //
 // pass in:
 // name of batch file with path.
@@ -21,7 +21,7 @@
     // Executes another program, overlaying current space
 extern int MyExecv( char __far *lpCmd, char __far *lpCmdTail );
 
-char *cw = "clean.com  Copyright (C) 1995 Qualitas, Inc.  All rights reserved";
+char *cw = "clean.com  Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3";
         
 char *szSetup = "setup.exe /C";
 char *szWin = "win.com";

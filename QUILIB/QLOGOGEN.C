@@ -2,7 +2,7 @@
 //
 // QLogoGen.C -- Program to convert QLOGO.OVL to translatable formats
 //
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3.
 //
 // This program will generate a .INC file from a binary QLOGO.OVL file
 

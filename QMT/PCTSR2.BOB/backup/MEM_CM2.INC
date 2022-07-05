@@ -1,6 +1,6 @@
 ;' $Header$
 ;
-; (C) Copyright 1988-99 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1988-99 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; MEM_CM2.INC
 ;

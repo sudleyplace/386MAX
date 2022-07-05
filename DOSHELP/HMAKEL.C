@@ -268,7 +268,7 @@ int cdecl main (int argc, char *argv[])
  unsigned ftime, fdate;
 
  fprintf (stderr, "HelpMake Laundry version 1.00\n"
-                "Copyright (c) 1992-96 Qualitas, Inc.  All rights reserved.\n");
+                "Copyright (c) 1992-96 Qualitas, Inc.  GNU General Public License version 3.\n");
 
  if (argc < 2)  error ("No files specified.", NULL);
 

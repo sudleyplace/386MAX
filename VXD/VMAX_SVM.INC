@@ -1,6 +1,6 @@
 ;'$Header:   P:/PVCS/MAX/VXD/VMAX_SVM.INV   1.2   03 Nov 1995 14:56:46   BOB  $
 ;
-; (C) Copyright 1992-5 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1992-5 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; VMAX_SVM.INC
 ;

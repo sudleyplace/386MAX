@@ -1,7 +1,7 @@
 //' $Header:   P:/PVCS/MAX/QPIFEDIT/QPIFEDIT.C_V   1.10   02 Feb 1996 14:44:26   BOB  $
 /************************  The Qualitas PIF Editor  ***************************
  *									      *
- *	     (C) Copyright 1992, 1993 Qualitas, Inc.  All rights reserved.    *
+ *	     (C) Copyright 1992, 1993 Qualitas, Inc.  GNU General Public License version 3.    *
  *									      *
  *  MODULE   :	QPIFEDIT.C - Main source module for QPIFEDIT.EXE	      *
  *									      *

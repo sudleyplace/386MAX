@@ -1,6 +1,6 @@
 /*
 PKWARE Data Compression Library
-Copyright 1990,1991 by PKWARE Inc.  All Rights Reserved.
+Copyright 1990,1991 by PKWARE Inc.  GNU General Public License version 3.
 */
 
 #ifdef __cplusplus

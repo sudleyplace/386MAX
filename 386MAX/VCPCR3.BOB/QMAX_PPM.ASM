@@ -5,7 +5,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 1987-2000 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1987-2000 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Group PGROUP:
 	       Program segment ECODE, dword-aligned, public, class 'ecode'

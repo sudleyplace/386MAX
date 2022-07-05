@@ -2,7 +2,7 @@
 //
 // DDX-DDV.CPP - DDX and DDV functions for use with MFC
 //
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3.
 //
 
 #include <afxwin.h>

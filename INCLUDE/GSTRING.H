@@ -2,7 +2,7 @@
 //
 // GSTRING.H - String allocation class
 //
-// Copyright (C) 1995-96 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1995-96 Qualitas, Inc.  GNU General Public License version 3.
 //
 // This is a CString-like class for low-level string operations.
 // It doesn't have any overloaded operators or any fancy stuff yet.

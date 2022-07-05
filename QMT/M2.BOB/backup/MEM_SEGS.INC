@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/QMT/MEM_SEGS.INV   1.0   29 Jun 1998 13:04:58   BOB  $
 ;
-; (C) Copyright 1998-1999 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1998-1999 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; MEM_SEGS.INC
 ;

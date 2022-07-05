@@ -2,7 +2,7 @@
 //
 // GETDIR.CPP - Functions to build temporary filename.
 //
-// Copyright (C) 1995-96 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1995-96 Qualitas, Inc.  GNU General Public License version 3.
 //
 
 #define STRICT

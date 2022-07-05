@@ -2,7 +2,7 @@
 //
 // BLUESCR.H - Bluescreen dialog class
 //
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3.
 //
 // This is a do-nothing dialog.  Its constructor takes an optional
 // callback function to return a CWnd (if any) we should make the

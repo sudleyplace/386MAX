@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/INCLUDE/INTHELP.H_V   1.1   09 Oct 1995 14:21:18   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-92 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-92 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * INTHELP.H								      *
  *									      *

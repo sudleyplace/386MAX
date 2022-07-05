@@ -8,7 +8,7 @@
 *									      *
 *		The API is unchanged for LIB and DLL versions.		      *
 *									      *
-*		Copyright (c) 1992, Microsoft Corp.  All rights reserved      *
+*		Copyright (c) 1992, Microsoft Corp.  GNU General Public License version 3      *
 *									      *
 *******************************************************************************
 *

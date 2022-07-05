@@ -2,7 +2,7 @@
 //
 // IOFMT.H - Replacement sprintf() routines for DLLs
 //
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3.
 //
 // You must link explicitly with $(L)iofmt.obj - it is not included
 // in STATUTIL.LIB.

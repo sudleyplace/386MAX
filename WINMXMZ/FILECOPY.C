@@ -2,7 +2,7 @@
 //
 // FILECOPY.C - Copy file, preserving attributes
 //
-// Copyright (C) 1994 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1994 Qualitas, Inc.  GNU General Public License version 3.
 //
 
 #define STRICT

@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/INCLUDE/CPUTEXT.H_V   1.2   02 Jun 1997 14:37:28   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-96 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-96 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * CPUCODES.H								      *
  *									      *

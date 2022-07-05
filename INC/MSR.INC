@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/MSR.INV   1.1   28 Jun 1996 17:56:20   BOB  $
 ;
-; (C) Copyright 1992-6 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1992-6 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; MSR.INC
 ;

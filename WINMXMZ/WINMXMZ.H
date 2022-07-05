@@ -2,7 +2,7 @@
 //
 // WINMXMZ.H - Main header file for the WINMXMZ application
 //
-// Copyright (C) 1995 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3.
 //
 
 #ifndef __AFXWIN_H__

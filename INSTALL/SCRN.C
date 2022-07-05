@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/INSTALL/SCRN.C_V   1.4   31 Oct 1995 13:18:46   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-95 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-95 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * SCRN.C								      *
  *									      *

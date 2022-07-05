@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/INCLUDE/CONSTANT.H_V   1.1   30 May 1997 11:24:48   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-92 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-92 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * CONSTANT.H								      *
  *									      *

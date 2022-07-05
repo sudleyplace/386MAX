@@ -3,7 +3,7 @@
 // CYAVER.H - component version info file
 //
 // ---------------------------------------------------------
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3
 // ---------------------------------------------------------
 #include <maxnames.h>
 #include <_lcldefs.h>					// Define BUILD_BETA, BUILD_ALPHA
@@ -57,9 +57,9 @@
 #ifdef LANG_GR
 #define VER_COPYRIGHT2_STR			"Alle Rechte vorbehalten."
 #elif LANG_FR
-#define VER_COPYRIGHT2_STR			"All rights reserved."
+#define VER_COPYRIGHT2_STR			"GNU General Public License version 3."
 #else
-#define VER_COPYRIGHT2_STR			"All rights reserved."
+#define VER_COPYRIGHT2_STR			"GNU General Public License version 3."
 #endif
 
 #define VER_LEGALCOPYRIGHT_STR		VER_COPYRIGHT1_STR " " VER_COPYRIGHT2_STR

@@ -2,7 +2,7 @@
 //
 // STATRES.H - Resource IDs used by STATUTIL
 //
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3.
 //
 // The range 29500-29999 is reserved for use by resource-using
 // code in the STATUTIL project.  No resources are defined; that

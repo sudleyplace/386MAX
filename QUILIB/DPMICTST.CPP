@@ -2,7 +2,7 @@
 //
 // DPMICTST.CPP - Test program for DPMI_CRC.ASM
 //
-// Copyright (C) 1995 Qualitas, Inc.  All rights reserved
+// Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3
 //
 
 #include <windows.h>

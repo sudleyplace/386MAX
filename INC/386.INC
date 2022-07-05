@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/386.INV   1.2   31 Jan 1996 12:12:46   BOB  $
 ;
-; (C) Copyright 1987-96 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-96 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; 386.INC
 ;

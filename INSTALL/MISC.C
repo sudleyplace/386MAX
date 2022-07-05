@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/INSTALL/MISC.C_V   1.5   30 Jan 1996 12:30:56   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-95 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-95 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * MISC.C								      *
  *									      *

@@ -1,7 +1,7 @@
 //' $Header:   P:/PVCS/MAX/STRIPMGR/SYSCMDS.C_V   1.0   05 Sep 1995 17:13:30   HENRY  $
 
 // SYSCMDS.C - System commands for STRIPMGR
-//   Copyright (c) 1990  Rex C. Conn  All rights reserved
+//   Copyright (c) 1990  Rex C. Conn  GNU General Public License version 3
 
 #include <stdio.h>
 #include <stdlib.h>

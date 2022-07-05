@@ -286,7 +286,7 @@ ERRCODE db	0		; Return code
 
 	public	MSG_COPY
 MSG_COPY db	"TESTPnP  -- Version 1.01 -- A Plug 'n Play Test Program",CR,LF
-	db	"   (C) Copyright 1995-7 Qualitas, Inc.  All rights reserved.",CR,LF,EOS
+	db	"   (C) Copyright 1995-7 Qualitas, Inc.  GNU General Public License version 3.",CR,LF,EOS
 
 	public	MSG_HELP
 MSG_HELP db	'Syntax:  TESTPNP [args]',CR,LF

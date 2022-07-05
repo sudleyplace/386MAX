@@ -2,7 +2,7 @@
 //
 // summary.h - Maximize complete summary dialog class
 //
-// Copyright (C) 1995 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3.
 //
 
 /////////////////////////////////////////////////////////////////////////////

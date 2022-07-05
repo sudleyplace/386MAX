@@ -2,7 +2,7 @@
 //------------------------------------------------------------------
 // setup16.c
 // 16 bit dll to thunk to 32 bit setup32.dll
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3
 //------------------------------------------------------------------
 #include <windows.h>
 typedef unsigned long HKEY;

@@ -1,5 +1,5 @@
 //' $Header:   P:/PVCS/MAX/INC/VMAXAPI.H_V   1.1   03 Nov 1995 15:05:48   BOB  $
-/* vmaxapi.h - (C) Copyright 1992, 1993 Qualitas, Inc.	All Rights Reserved. */
+/* vmaxapi.h - (C) Copyright 1992, 1993 Qualitas, Inc.	GNU General Public License version 3. */
 
 #define LoadHi_Device_ID	0x001C
 #define DOSMAX_Device_ID	0x2402

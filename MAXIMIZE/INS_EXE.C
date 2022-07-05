@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/MAXIMIZE/INS_EXE.C_V   1.1   13 Oct 1995 12:03:12   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-92 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-92 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * INS_EXE.C								      *
  *									      *

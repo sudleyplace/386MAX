@@ -3,7 +3,7 @@
 // Included by component resource scripts.
 //
 // ------------------------------------------------------
-// Copyright (C) 1995 Qualitas, Inc.  All rights reserved
+// Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3
 // ------------------------------------------------------
 
 #include <maxnames.h>
@@ -52,7 +52,7 @@
 #ifdef LANG_GR
 #define VER_COPYRIGHT2_STR			"Alle Rechte vorbehalten."
 #else
-#define VER_COPYRIGHT2_STR			"All rights reserved."
+#define VER_COPYRIGHT2_STR			"GNU General Public License version 3."
 #endif
 
 #define VER_LEGALCOPYRIGHT_STR		VER_COPYRIGHT1_STR " " VER_COPYRIGHT2_STR

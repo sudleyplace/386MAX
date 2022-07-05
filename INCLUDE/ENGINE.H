@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/INCLUDE/ENGINE.H_V   1.1   01 Feb 1996 10:24:22   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-96 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-96 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * ENGINE.H								      *
  *									      *

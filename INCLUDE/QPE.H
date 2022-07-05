@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/INCLUDE/QPE.H_V   1.0   07 Sep 1995 11:51:14   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1993 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1993 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * QPE.H								      *
  *									      *

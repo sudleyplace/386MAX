@@ -3,7 +3,7 @@
 // CVERSION.H - Example component version info file
 //
 // ---------------------------------------------------------
-// Copyright (C) 1995 Qualitas, Inc.  All rights reserved
+// Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3
 // ---------------------------------------------------------
 
 #include <ver.h>			// Version resource definitions from DDK

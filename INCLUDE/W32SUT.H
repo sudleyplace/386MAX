@@ -1,7 +1,7 @@
 /***
 *w32sut.h -
 *
-*       Copyright (c) 1987-1992, Microsoft Corporation.  All rights reserved.
+*       Copyright (c) 1987-1992, Microsoft Corporation.  GNU General Public License version 3.
 *
 *Purpose:
 *       This file declares the constants, structures, and functions

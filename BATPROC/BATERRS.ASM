@@ -4,7 +4,7 @@
 
           comment   }
 
-          (C) Copyright 1990, Rex Conn for Qualitas  All Rights Reserved
+          (C) Copyright 1990, Rex Conn for Qualitas  GNU General Public License version 3
 
           This module includes error message tables and routines to access
           them.  The two routines are accessible from assembler (ERRMSGA)

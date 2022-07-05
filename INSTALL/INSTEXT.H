@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/INSTALL/INSTEXT.H_V   1.6   27 Feb 1996 12:05:58   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-95 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-95 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * INSTEXT.H								      *
  *									      *

@@ -2,7 +2,7 @@
 //
 // FCOPYVER.CPP - Copy file with version and date comparisons
 //
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3.
 //
 
 #define STRICT

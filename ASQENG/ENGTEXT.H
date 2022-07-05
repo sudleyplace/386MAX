@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/ASQENG/ENGTEXT.H_V   1.3   29 Feb 1996 10:54:08   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-93 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-93 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * ENGTEXT.H								      *
  *									      *

@@ -1,7 +1,7 @@
 //' $Header:   P:/PVCS/MAX/BATPROC/PARSER.C_V   1.3   02 Jun 1997 12:19:04   BOB  $
 
 // BATPROC - batch file processor for MS-DOS 3+
-//   (c) 1990-96  Rex C. Conn & Qualitas, Inc.	All rights reserved
+//   (c) 1990-96  Rex C. Conn & Qualitas, Inc.	GNU General Public License version 3
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/VXD/BREAK.INV   1.0   05 Sep 1995 17:20:58   HENRY  $
 ;
-; (C) Copyright 1990-93 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1990-93 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; BREAK.INC
 ;

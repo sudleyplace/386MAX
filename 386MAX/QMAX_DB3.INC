@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/386MAX/QMAX_DB3.INV   1.1   05 Nov 1995 21:00:58   BOB  $
 ;
-; (C) Copyright 1987-95 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-95 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; QMAX_DB3.INC
 ;

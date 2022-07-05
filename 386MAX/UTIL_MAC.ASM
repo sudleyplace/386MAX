@@ -5,7 +5,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 1987-97 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1987-97 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Group PGROUP:
 	       Data    segment DATA,	dword-aligned, public, class 'data'

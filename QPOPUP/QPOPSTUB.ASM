@@ -4,7 +4,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 1992-7 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1992-7 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:	Small model using simplified directives
 		Assembled using MASM 6.0b or 6.1.

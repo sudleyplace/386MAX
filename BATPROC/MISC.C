@@ -1,5 +1,5 @@
 // MISC.C - Miscellaneous support routines for BATPROC
-//   (c) 1990  Rex C. Conn  All rights reserved
+//   (c) 1990  Rex C. Conn  GNU General Public License version 3
 
 #include <stdio.h>
 #include <stdlib.h>

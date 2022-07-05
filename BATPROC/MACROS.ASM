@@ -2,7 +2,7 @@
           ;
           ; MASM macros by Tom Rawson, J.P. Software
           ;
-          ; Copyright 1988, 1989, 1990, J.P. Software.  All Rights Reserved.
+          ; Copyright 1988, 1989, 1990, J.P. Software.  GNU General Public License version 3.
           ;
           ; (Contents of macro file not listed)
           ;

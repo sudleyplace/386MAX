@@ -1,6 +1,6 @@
 ;' $Header$
 ;
-; (C) Copyright 1998-2001 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1998-2001 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; MEM_TSR.INC
 ;

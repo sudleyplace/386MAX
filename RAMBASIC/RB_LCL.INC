@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/RAMBASIC/RB_LCL.INV   1.0   05 Sep 1995 17:11:52   HENRY  $
 ;
-; (C) Copyright 1987-92 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-92 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; RB_LCL.INC
 ;

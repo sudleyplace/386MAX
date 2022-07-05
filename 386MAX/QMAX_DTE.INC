@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/386MAX/QMAX_DTE.INV   1.3   08 Jul 1998 12:06:18   BOB  $
 ;
-; (C) Copyright 1987-98 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-98 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; QMAX_DTE.INC
 ;

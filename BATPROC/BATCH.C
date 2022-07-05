@@ -1,7 +1,7 @@
 //' $Header:   P:/PVCS/MAX/BATPROC/BATCH.C_V   1.1   02 Jun 1997 12:19:02   BOB  $
 //
 // BATCH.C - Batch file routines for BATPROC
-//   Copyright (c) 1990-93  Rex C. Conn & Qualitas   All rights reserved
+//   Copyright (c) 1990-93  Rex C. Conn & Qualitas   GNU General Public License version 3
 
 #include <stdio.h>
 #include <stdlib.h>

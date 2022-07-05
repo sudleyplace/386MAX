@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/QMT/VERSBETA.INV   1.0   05 Sep 1995 16:56:06   HENRY  $
 ;
-; (C) Copyright 1987-92 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-92 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; VERSBETA.INC
 ;

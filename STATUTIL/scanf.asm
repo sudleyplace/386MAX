@@ -6,7 +6,7 @@
 COMMENT|		Module Specifications
 
 Copyright:  (C) Copyright 1994-1995 Rex C. Conn
-			  1994-1996 Qualitas, Inc.  All rights reserved.
+			  1994-1996 Qualitas, Inc.  GNU General Public License version 3.
 
 Program derived from:  None.
 

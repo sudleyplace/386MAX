@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/QUILIB/LOGO.C_V   1.3   11 Nov 1995 14:02:56   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-95 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-95 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * LOGO.C								      *
  *									      *

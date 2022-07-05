@@ -2,7 +2,7 @@ BETAVERSION	equ	001
 
 ;' $Header:   P:/PVCS/MAX/QMT/VERSBETA.ASV   1.2   21 Feb 1996 09:36:52   BOB  $
 ;
-; (C) Copyright 1992-4 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1992-4 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; VERSBETA.ASM
 ;

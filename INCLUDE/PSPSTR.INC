@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INCLUDE/PSPSTR.INV   1.0   05 Sep 1995 13:30:18   HENRY  $
 ;
-; (C) Copyright 1992 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1992 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; PSPSTR.INC
 ;

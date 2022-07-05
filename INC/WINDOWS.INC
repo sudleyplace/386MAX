@@ -5,7 +5,7 @@
 ; IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR     *
 ; PURPOSE.                                                                  *
 ;                                                                           *
-; Copyright (C) 1993-95  Microsoft Corporation.  All Rights Reserved.       *
+; Copyright (C) 1993-95  Microsoft Corporation.  GNU General Public License version 3.       *
 ;                                                                           *
 ;****************************************************************************
 

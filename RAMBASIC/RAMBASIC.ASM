@@ -5,7 +5,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 1991-97 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1991-97 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Group PGROUP:
 	       Stack   segment STACK, byte-aligned,  stack,  class 'prog'
@@ -383,7 +383,7 @@ MSG_COPY db	 'RAMBASIC -- Version 8.02 -- RAM-residenter BASIC-Handler fÅr PC-DO
 	 db	 '  (C) Copyright 1991-96 Qualitas, Inc.  Alle Rechte vorbehalten.',CR,LF,EOS
 else
 MSG_COPY db	 'RAMBASIC -- Version 8.02 -- RAM-resident BASIC Handler for PC-DOS 5.x',CR,LF
-	 db	 '  (C) Copyright 1991-96 Qualitas, Inc.  All rights reserved.',CR,LF,EOS
+	 db	 '  (C) Copyright 1991-96 Qualitas, Inc.  GNU General Public License version 3.',CR,LF,EOS
 endif				; IFDEF LANG_GR
 
 	 public MSG_HELP

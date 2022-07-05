@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/QUILIB/BUTTON.C_V   1.1   30 May 1997 12:08:58   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-93 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-93 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * BUTTON.C								      *
  *									      *

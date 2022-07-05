@@ -1,6 +1,6 @@
 // $Header:   P:/PVCS/MAX/MAXSETUP/MESSAGES.H_V   1.11   06 Mar 1996 11:24:46   PETERJ  $
 // Messages for MAX 8 Setup.exe
-// Copyright (C) 1995 Qualitas, Inc. All Rights Reserved.
+// Copyright (C) 1995 Qualitas, Inc. GNU General Public License version 3.
 
 #ifdef EXTERN
     #undef EXTERN

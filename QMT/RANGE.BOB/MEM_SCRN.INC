@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/QMT/MEM_SCRN.INV   1.0   05 Sep 1995 16:55:58   HENRY  $
 ;
-; (C) Copyright 1988-1999 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1988-1999 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; MEM_SCRN.INC
 ;

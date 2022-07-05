@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/CPUFET.INV   1.2   30 May 1997 11:15:56   BOB  $
 ;
-; (C) Copyright 1992-7 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1992-7 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; CPUFET.INC
 ;

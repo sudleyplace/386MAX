@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/MAXIMIZE/PROCCFG1.C_V   1.1   26 Oct 1995 21:54:24   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-93 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-93 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * PROCCFG1.C								      *
  *									      *

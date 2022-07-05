@@ -62,7 +62,7 @@ STACKARR dw	?		; Offset of top of stack array
 	public	MSG_COPY
 MSG_COPY db	'XMSLIST  -- Version 1.02 -- An XMS Memory Lister',CR,LF
 	db	'   (C) Copyright 2000-2003 Qualitas, Inc. '
-	db	' All rights reserved.',CR,LF
+	db	' GNU General Public License version 3.',CR,LF
 	db	EOS
 
 	public	MSG_NOXMS

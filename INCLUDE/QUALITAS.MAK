@@ -2,7 +2,7 @@
 #
 # QUALITAS.MAK - Product names for Qualitas, Inc.
 #
-# Copyright (C) 1996 Qualitas, Inc.  All rights reserved
+# Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3
 #
 # While we don't change the names of product directories, product
 # executable names can and often do change - sometimes several times

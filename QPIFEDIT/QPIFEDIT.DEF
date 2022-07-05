@@ -1,6 +1,6 @@
 NAME		QPIFEDIT
 
-DESCRIPTION 'QPIFEDIT 7.95 -- The Qualitas PIF Editor -- (C) Copyright 1993-95 Qualitas, Inc.  All Rights Reserved.'
+DESCRIPTION 'QPIFEDIT 7.95 -- The Qualitas PIF Editor -- (C) Copyright 1993-95 Qualitas, Inc.  GNU General Public License version 3.'
 
 EXETYPE 	WINDOWS
 

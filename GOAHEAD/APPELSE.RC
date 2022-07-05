@@ -87,7 +87,7 @@ BEGIN
     ICON            IDI_ICONGO,IDI_ICONGO,145,55,18,20
     LTEXT           "Qualitas Go Ahead\nVersion nn.nn.nn.nn",IDC_VERSION,10,
                     5,115,17,NOT WS_GROUP
-    LTEXT           "Copyright \251 1995-96 Qualitas, Inc.\nAll rights reserved.",
+    LTEXT           "Copyright \251 1995-96 Qualitas, Inc.\nGNU General Public License version 3.",
                     IDC_STATIC,10,35,125,18,NOT WS_GROUP
     LTEXT           "This product is licensed to: ",IDC_STATIC,10,70,115,8
     LTEXT           "",IDC_REGISTRATION,10,85,170,25,NOT WS_GROUP

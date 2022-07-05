@@ -1,5 +1,5 @@
 // $Header:   P:/PVCS/MAX/INCLUDE/DUNZIP32.H_V   1.0   16 Apr 1996 11:33:24   PETERJ  $
-// Copyright (c) 1993 Inner Media, Inc., All Rights Reserved
+// Copyright (c) 1993 Inner Media, Inc., GNU General Public License version 3
 // Function prototypes and structures for DynaZIP unzip DLL.
 
 #ifdef _DUNZ_OWNER

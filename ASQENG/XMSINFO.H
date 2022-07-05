@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/ASQENG/XMSINFO.H_V   1.0   05 Sep 1995 15:05:58   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-93 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-93 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * XMSINFO.H								      *
  *									      *

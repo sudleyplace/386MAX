@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/VERSION.INV   1.1   15 Jun 1998 15:55:50   BOB  $
 ;
-; (C) Copyright 1987-97 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-97 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; VERSION.INC
 ;

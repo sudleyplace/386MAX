@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/386MAX/QMAX_EMM.INV   1.1   08 Oct 1996 13:45:58   BOB  $
 ;
-; (C) Copyright 1987-92 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-92 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; QMAX_EMM.INC
 ;

@@ -2,7 +2,7 @@
 ;
 ; QLOGOASQ.INC - Data to build QLOGO.OVL
 ;
-; Copyright (C) 1991-96 Qualitas, Inc.  All rights reserved.
+; Copyright (C) 1991-96 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; This file originally created by QLogoGen.C
 ;

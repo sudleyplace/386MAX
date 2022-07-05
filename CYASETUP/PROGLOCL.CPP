@@ -4,7 +4,7 @@
 // by Peter Johnson
 // Version 1.0
 // 14 June, 1996
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3
 // This module should contain all program local functions for
 // linking with the generic setup functions. 
 //------------------------------------------------------------------

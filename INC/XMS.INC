@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/XMS.INV   1.0   05 Sep 1995 13:26:50   HENRY  $
 ;
-; (C) Copyright 1987-93 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-93 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; XMS.INC
 ;

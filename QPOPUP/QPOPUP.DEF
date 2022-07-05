@@ -1,6 +1,6 @@
 NAME	     QPOPUP
 
-DESCRIPTION 'QPOPUP 7.0 -- Qualitas SuperVM Popup -- (C) Copyright 1993-94 Qualitas, Inc.  All Rights Reserved.'
+DESCRIPTION 'QPOPUP 7.0 -- Qualitas SuperVM Popup -- (C) Copyright 1993-94 Qualitas, Inc.  GNU General Public License version 3.'
 
 EXETYPE      WINDOWS
 PROTMODE

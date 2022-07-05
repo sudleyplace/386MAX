@@ -7,7 +7,7 @@ COMMENT|		Module Specifications
 
 int pascal far get_flexroms(void far *stuff);
 
-Copyright:  (C) Copyright 1991-97 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1991-97 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Microsoft conventions using .MODEL, .DATA, and .CODE.
 

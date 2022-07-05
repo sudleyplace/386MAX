@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/OPCODES.INV   1.2   30 Sep 1996 17:11:40   BOB  $
 ;
-; (C) Copyright 1987-96 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-96 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; OPCODES.INC
 ;

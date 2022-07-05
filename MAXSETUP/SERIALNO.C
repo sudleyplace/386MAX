@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/MAXSETUP/SERIALNO.C_V   1.3   03 Nov 1995 12:01:34   PETERJ  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-92 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-92 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * SERIALNO.C								      *
  *									      *

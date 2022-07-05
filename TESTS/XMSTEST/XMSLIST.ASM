@@ -96,7 +96,7 @@ LCL_FLAG db	 0		; Local flags
 
 	 public  MSG_HDR
 MSG_HDR  db	 'XMSLIST  -- Version 2.00 -- XMS Memory DIsplay',CR,LF
-	 db	 '  (C) Copyright 1988-91 Qualitas, Inc.  All rights reserved.',CR,LF
+	 db	 '  (C) Copyright 1988-91 Qualitas, Inc.  GNU General Public License version 3.',CR,LF
 	 db	 'Base       Base+Len   Length   NextFree  PrevFree Owner  Lock',CR,LF
 MSG_LINE db	 '컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴�',CR,LF,EOS
 MSG_FXMS  label  byte

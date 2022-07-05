@@ -1,6 +1,6 @@
 // $Header:   P:/PVCS/MAX/MAXSETUP/MULTICOM.H_V   1.1   26 Jan 1996 12:31:04   PETERJ  $
 /****************************************************************
- * (C) Copyright 1991-96 Qualitas, Inc.  All rights reserved.	*
+ * (C) Copyright 1991-96 Qualitas, Inc.  GNU General Public License version 3.	*
  * MULTICOM.H								                        *
  * Definitions and structures used multi.h module	            *
  ****************************************************************/

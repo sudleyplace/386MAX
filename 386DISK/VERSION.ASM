@@ -2,7 +2,7 @@ VERSION  equ	 800
 
 ;' $Header:   P:/PVCS/MAX/386DISK/VERSION.ASV   1.1   03 Oct 1995 10:33:52   BOB  $
 ;
-; (C) Copyright 1987-95 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-95 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; VERSION.ASM
 ;

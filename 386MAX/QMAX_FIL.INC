@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/386MAX/QMAX_FIL.INV   1.1   01 Jul 1997 18:22:14   BOB  $
 ;
-; (C) Copyright 1987-97 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-97 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; QMAX_FIL.INC
 ;

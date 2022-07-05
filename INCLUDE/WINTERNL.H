@@ -4,7 +4,7 @@
 //
 // This file covers undocumented stuff not covered in WINDOWS.H
 //
-// Copyright (C) 1995-6 Qualitas, Inc.	All rights reserved.
+// Copyright (C) 1995-6 Qualitas, Inc.	GNU General Public License version 3.
 //
 
 #ifndef WINTERNL_INCLUDED

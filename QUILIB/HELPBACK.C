@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/QUILIB/HELPBACK.C_V   1.2   02 Jun 1997 11:12:04   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-92 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-92 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * HELPBACK.C								      *
  *									      *

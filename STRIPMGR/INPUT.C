@@ -1,5 +1,5 @@
 // INPUT.C
-// Copyright (c) 1990, 1991  Rex C. Conn  All rights reserved.
+// Copyright (c) 1990, 1991  Rex C. Conn  GNU General Public License version 3.
 //
 //    %[*][width][size]type
 //	  *:

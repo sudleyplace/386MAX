@@ -5,7 +5,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 1988-97 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1988-97 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Group PGROUP:
 	       Program segment NDATA,	dword-aligned, public, class 'ndata'
@@ -102,7 +102,7 @@ endif				; IFDEF LANG_GR
 ifdef LANG_GR
 	 db	 '  Alle Rechte vorbehalten.',CR,LF,EOS
 else
-	 db	 '  All rights reserved.',CR,LF,EOS
+	 db	 '  GNU General Public License version 3.',CR,LF,EOS
 endif				; IFDEF LANG_GR
 
 	 public  AZS_XVER,AZS_NOTPRES
@@ -133,7 +133,7 @@ endif				; IFDEF LANG_GR
 ifdef LANG_GR
 	 db	 '  Alle Rechte vorbehalten.',CR,LF,EOS
 else
-	 db	 '  All rights reserved.',CR,LF,EOS
+	 db	 '  GNU General Public License version 3.',CR,LF,EOS
 endif				; IFDEF LANG_GR
 
 	 public  AZS_XVER,AZS_NOTPRES
@@ -164,7 +164,7 @@ endif				; IFDEF LANG_GR
 ifdef LANG_GR
 	 db	 '  Alle Rechte vorbehalten.',CR,LF,EOS
 else
-	 db	 '  All rights reserved.',CR,LF,EOS
+	 db	 '  GNU General Public License version 3.',CR,LF,EOS
 endif				; IFDEF LANG_GR
 
 	 public  AZS_XVER,AZS_NOTPRES

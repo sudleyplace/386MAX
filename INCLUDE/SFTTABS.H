@@ -1,6 +1,6 @@
 /****************************************************************/
 /* SftTabs 1.0 - Tabbed Dialog Toolkit for Windows              */
-/* Copyright (C) 1994  Softel vdm. All Rights Reserved.         */
+/* Copyright (C) 1994  Softel vdm. GNU General Public License version 3.         */
 /****************************************************************/
 
 #if !defined(_INC_SFTTABS)

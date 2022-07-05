@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/QUILIB/UI.C_V   1.1   13 Oct 1995 12:13:20   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-93 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-93 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * UI.C 								      *
  *									      *

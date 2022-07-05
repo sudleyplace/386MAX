@@ -9,7 +9,7 @@
  *  01 Oct., 1990   :   KB, began adding GWW defs and messages.
  *  10 Oct., 1990   :   KB, total revision after real design work was done.
  *
- * Copyright (c) 1990, 1991 Microsoft Corporation. All rights reserved.
+ * Copyright (c) 1990, 1991 Microsoft Corporation. GNU General Public License version 3.
  */
 
 

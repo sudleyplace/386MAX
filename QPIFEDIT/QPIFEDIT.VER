@@ -1,7 +1,7 @@
 
 /************************  The Qualitas PIF Editor  ***************************
  *									      *
- *	     (C) Copyright 1992-94 Qualitas, Inc.  All rights reserved.       *
+ *	     (C) Copyright 1992-94 Qualitas, Inc.  GNU General Public License version 3.       *
  *									      *
  *  MODULE   :	QPIFEDIT.VER - Version stamp resource			      *
  *									      *
@@ -26,7 +26,7 @@
 #ifdef LANG_GR
 #define VER_LEGALCOPYRIGHT_STR	    "Copyright \251 1994, 1995 Qualitas, Inc.  Alle Rechte vorbehalten.\0"
 #else
-#define VER_LEGALCOPYRIGHT_STR	    "Copyright \251 1994, 1995 Qualitas, Inc.  All Rights Reserved.\0"
+#define VER_LEGALCOPYRIGHT_STR	    "Copyright \251 1994, 1995 Qualitas, Inc.  GNU General Public License version 3.\0"
 #endif
 
 #define VER_FILEDESCRIPTION_STR     APPTITLETHE "\0"

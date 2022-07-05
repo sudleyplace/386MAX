@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/QMT/MAKEBOOT.C_V   1.1   15 May 1997 12:47:18   BOB  $ */
 /************************************************************************
  *																						*
- * (C) Copyright 1993 Qualitas, Inc.  All rights reserved.			*
+ * (C) Copyright 1993 Qualitas, Inc.  GNU General Public License version 3.			*
  *																						*
  * MAKEBOOT.C																		*
  *																						*
@@ -97,7 +97,7 @@ void main(int argc , char *argv[] )
 #else
 
 	puts("\nMAKEBOOT -- Version 1.05 -- Make A Boot Disk");
-	puts("   (C) Copyright 1993 Qualitas, Inc.  All rights reserved.");
+	puts("   (C) Copyright 1993 Qualitas, Inc.  GNU General Public License version 3.");
 
 #endif
 

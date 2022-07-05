@@ -2,7 +2,7 @@
 ;
 ; SWAT_I3.INC - 386SWAT interface via Int 3 sequence
 ;
-; Copyright (C) 1996 Qualitas, Inc.  All rights reserved.
+; Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; This is an alternative interface to 386SWAT which requires no
 ; setup and should work identically in all environments.

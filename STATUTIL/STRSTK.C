@@ -3,7 +3,7 @@
 // STRSTK.C
 // created by Peter Johnson (PETERJ) 3/22/95
 // (C) Copyright Qualitas, Inc. 1995
-// All rights reserved
+// GNU General Public License version 3
 // for statutil.lib
 //------------------------------------------------------------------
 

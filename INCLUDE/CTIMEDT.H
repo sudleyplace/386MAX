@@ -2,7 +2,7 @@
 //
 // CTIMEDT.H -- Class declaration for time / date manipulation
 //
-// Copyright (C) 1995-96 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1995-96 Qualitas, Inc.  GNU General Public License version 3.
 //
 // Implementation is in LSTUTIL.LIB.
 //

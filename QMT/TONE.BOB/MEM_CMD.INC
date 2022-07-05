@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/QMT/MEM_CMD.INV   1.1   05 Jun 1998 14:04:34   BOB  $
 ;
-; (C) Copyright 1988-98 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1988-98 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; MEM_CMD.INC
 ;

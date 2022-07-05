@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/INSTALL/COMMON.H_V   1.5   02 Jan 1996 17:45:28   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-95 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-95 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * COMMON.H								      *
  *									      *

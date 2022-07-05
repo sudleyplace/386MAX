@@ -5,7 +5,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 1987-97 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1987-97 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Group PGROUP:
 	       Stack   segment STACK, word-aligned,  stack,  class 'prog'
@@ -82,7 +82,7 @@ DWPTR	 TEXTEQU	<dword ptr>	;...
 	 public  MSG_COPY
 MSG_COPY db	 'ZEPPO  -- Version 1.03 '
 	 db	 '  A Test program for HARPO',CR,LF
-	 db	 '  (C) Copyright 1992 Qualitas, Inc.  All Rights reserved.'
+	 db	 '  (C) Copyright 1992 Qualitas, Inc.  GNU General Public License version 3.'
 	 db	 CR,LF
 MSG_CRLF db	 CR,LF,EOS
 

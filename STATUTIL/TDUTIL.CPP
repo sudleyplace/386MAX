@@ -2,7 +2,7 @@
 //
 // TDUTIL.CPP - Time / date utilities, low-level
 //
-// Copyright (C) 1995 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3.
 //
 // These utilities are used by QDServer for getting the current
 // time / date as a DTIME value and for formatting DTIME values

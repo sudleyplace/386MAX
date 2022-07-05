@@ -1,7 +1,7 @@
 //' $Header:   P:/PVCS/MAX/BATPROC/BATPROC.H_V   1.1   02 Jun 1997 12:19:04   BOB  $
 
 // BATPROC.H - Include file for BATPROC
-//   Copyright (c) 1990  Rex C. Conn   All rights reserved
+//   Copyright (c) 1990  Rex C. Conn   GNU General Public License version 3
 
 
 #ifdef COMPAT_4DOS

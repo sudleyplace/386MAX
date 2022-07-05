@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/MAXIMIZE/MAXIMIZE.C_V   1.4   23 Jan 1996 14:56:44   HENRY  $ */
 /******************************************************************************
  *									      *
- * Copyright (C) 1991-96 Qualitas, Inc.  All rights reserved.		      *
+ * Copyright (C) 1991-96 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * MAXIMIZE.C								      *
  *									      *

@@ -5,7 +5,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 1987-98 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1987-98 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Group FGROUP:
 	       Data    segment FDATA, dword-aligned, public, class 'fixup'
@@ -674,10 +674,10 @@ endif				; IF @OEM_BETA
 ifdef LANG_GR
 	 db	 '  Alle Rechte vorbehalten.',CR,LF
 else
-	 db	 '  All rights reserved.',CR,LF
+	 db	 '  GNU General Public License version 3.',CR,LF
 endif				; IFDEF LANG_GR
 if @OEM_SYS eq @OEMSYS_OLI
-	 db	 '   Copyright (C) Olivetti Inc., 1989-98  All Rights Reserved',CR,LF
+	 db	 '   Copyright (C) Olivetti Inc., 1989-98  GNU General Public License version 3',CR,LF
 endif				; IF @OEM_SYS eq @OEMSYS_OLI
 	 db	 EOS
 MSG_COPYRIGHT_LEN equ $-MSG_COPYRIGHT

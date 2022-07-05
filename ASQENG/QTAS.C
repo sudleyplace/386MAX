@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/ASQENG/QTAS.C_V   1.2   02 Jun 1997 14:40:06   BOB  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-93 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-93 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * QTAS.C								      *
  *									      *

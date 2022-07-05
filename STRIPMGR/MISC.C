@@ -1,7 +1,7 @@
 //' $Header:   P:/PVCS/MAX/STRIPMGR/MISC.C_V   1.2   30 May 1997 12:21:20   BOB  $
 
 // MISC.C - Miscellaneous support routines for STRIPMGR
-//   Copyright (c) 1990-93  Rex C. Conn & Qualitas, Inc.  All rights reserved
+//   Copyright (c) 1990-93  Rex C. Conn & Qualitas, Inc.  GNU General Public License version 3
 
 #include <stdio.h>
 #include <stdlib.h>

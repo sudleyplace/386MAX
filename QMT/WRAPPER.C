@@ -2,7 +2,7 @@
 //
 // WRAPPER.C
 //
-// Copyright (C) 1993-94 Qualitas Inc.	All rights reserved.
+// Copyright (C) 1993-94 Qualitas Inc.	GNU General Public License version 3.
 //
 // Program to take binary input (a .COM file) and produce MASM 5.1
 // source.	Symbolic records are compiled in the .COM file to specify

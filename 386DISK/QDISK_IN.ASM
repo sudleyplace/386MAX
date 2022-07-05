@@ -5,7 +5,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 1984, 1988, 1992-97 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1984, 1988, 1992-97 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Group PGROUP:
 	       Program segment CODE,  word-aligned,  public, class 'prog'
@@ -242,7 +242,7 @@ endif				; IFDEF LANG_GR
 ifdef LANG_GR
 	 db	 '  Alle Rechte vorbehalten.',CR,LF,EOS
 else
-	 db	 '  All rights reserved.',CR,LF,EOS
+	 db	 '  GNU General Public License version 3.',CR,LF,EOS
 endif				; IFDEF LANG_GR
 
 	 public  MSG_NOT386,MSG_NOTDOS3,MSG_NOTPRES,MSG_INSUF

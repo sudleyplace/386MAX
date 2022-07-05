@@ -3,7 +3,7 @@
 // SS_DDE.CPP
 // DDE Functions for SysSaver
 // April 8, 1996
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3
 //------------------------------------------------------------------
 // Uses the DDE execute facility in ProgMan.  Each call to
 // an API here causes a DDE conversation to be set up, the execute

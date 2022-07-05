@@ -3,7 +3,7 @@ BVERSION  equ	 005
 
 ;' $Header:   P:/PVCS/MAX/XLAT/VERSION.ASV   1.1   25 Oct 1995 13:14:08   PETERJ  $
 ;
-; (C) Copyright 1991-93 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1991-93 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; VERSION.ASM
 ;

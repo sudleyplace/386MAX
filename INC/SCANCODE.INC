@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/SCANCODE.INV   1.1   18 Jul 1997 12:31:18   BOB  $
 ;
-; (C) Copyright 1987-97 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-97 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; SCANCODE.INC
 ;

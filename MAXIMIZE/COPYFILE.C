@@ -1,7 +1,7 @@
 /*' $Header:   P:/PVCS/MAX/MAXIMIZE/COPYFILE.C_V   1.1   13 Oct 1995 12:00:48   HENRY  $ */
 /******************************************************************************
  *									      *
- * (C) Copyright 1991-93 Qualitas, Inc.  All rights reserved.		      *
+ * (C) Copyright 1991-93 Qualitas, Inc.  GNU General Public License version 3.		      *
  *									      *
  * COPYFILE.C								      *
  *									      *

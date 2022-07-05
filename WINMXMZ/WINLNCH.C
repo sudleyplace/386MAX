@@ -2,7 +2,7 @@
 //
 // WINLNCH.C - Windows launcher for Winmaxim
 //
-// Copyright (C) 1995 Qualitas, Inc.  All rights reserved.
+// Copyright (C) 1995 Qualitas, Inc.  GNU General Public License version 3.
 //
 // This program is a DOS executable stub for Winmaxim.exe.
 //

@@ -8,7 +8,7 @@ COMMENT|		Module Specifications
 *********************************** QUALITAS ***********************************
 ********************************* CONFIDENTIAL *********************************
 
-Copyright:  (C) Copyright 1992, 1993 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1992, 1993 Qualitas, Inc.  GNU General Public License version 3.
 
 Environment:  IBM PC, tested under DOS 5.00, 6.00á.
 

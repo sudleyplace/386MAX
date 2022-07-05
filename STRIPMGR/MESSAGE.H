@@ -2,7 +2,7 @@
 
 // MESSAGE.H - Various text messages for STRIPMGR
 //   (put here to simplify language conversions)
-//   Copyright (c) 1990-96  Rex C. Conn and Qualitas, Inc.   All rights reserved
+//   Copyright (c) 1990-96  Rex C. Conn and Qualitas, Inc.   GNU General Public License version 3
 
 
 // USAGE messages
@@ -120,7 +120,7 @@
 
 #define COPYRIGHT "\n"                  \
 		  PROGNAME " " PROGVER "\n"    \
-		  "   (C) Copyright 1990-96  Rex Conn & Qualitas, Inc.  All rights reserved.\n"
+		  "   (C) Copyright 1990-96  Rex Conn & Qualitas, Inc.  GNU General Public License version 3.\n"
 #define CANT_OPEN "Can't open \"%s\"\n"
 #define INSERT_DISK "\nInsert disk with \"%s\"\n"
 #define SCANNING "\nScanning %s for memory managers ...\n"

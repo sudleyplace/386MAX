@@ -1,5 +1,5 @@
 // EVAL.C - Expression analyzer for BATPROC batch language
-//  Copyright (c) 1990 Rex C. Conn  All rights reserved
+//  Copyright (c) 1990 Rex C. Conn  GNU General Public License version 3
 //  This routine supports the standard arithmetic functions: +, -, *, /,
 //    %, and the unary operators + and -
 

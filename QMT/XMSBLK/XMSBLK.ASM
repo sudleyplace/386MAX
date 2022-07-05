@@ -89,7 +89,7 @@ XMS_MODXMB db	@XMS_MODXMB	; ...		   modify ...
 	public	MSG_COPY
 MSG_COPY db	'XMSBLK   -- Version 1.01 -- An XMS Block Allocator',CR,LF
 	db	'   (C) Copyright 2000-2003 Qualitas, Inc. '
-	db	' All rights reserved.',CR,LF
+	db	' GNU General Public License version 3.',CR,LF
 	db	'Evaluation copy -- For testing purposes only.',CR,LF
 	db	EOS
 

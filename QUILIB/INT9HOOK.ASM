@@ -4,7 +4,7 @@
 	 name	 INT9HOOK
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 1991-97 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 1991-97 Qualitas, Inc.  GNU General Public License version 3.
 
 |
 	.MODEL	LARGE,PASCAL

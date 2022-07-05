@@ -1,7 +1,7 @@
 // $Header:   P:/PVCS/MAX/CYASETUP/CSETTEXT.USV   1.2   05 May 1997 11:07:56   PETERJ  $
 //------------------------------------------------------------------
 // csettext.us
-// Copyright (C) 1996 Qualitas, Inc.  All rights reserved
+// Copyright (C) 1996 Qualitas, Inc.  GNU General Public License version 3
 // Text for cyasetup program.
 // for conditional inclusion into progspec.h in the cyasetup directory.
 //------------------------------------------------------------------

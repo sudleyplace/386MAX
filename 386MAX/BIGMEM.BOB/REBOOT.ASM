@@ -5,7 +5,7 @@
 
 COMMENT|		Module Specifications
 
-Copyright:  (C) Copyright 2003 Qualitas, Inc.  All rights reserved.
+Copyright:  (C) Copyright 2003 Qualitas, Inc.  GNU General Public License version 3.
 
 Segmentation:  Group PGROUP:
 	       Stack   segment STACK, byte-aligned, stack,  class 'prog'
@@ -57,7 +57,7 @@ IDT_REBOOT df	0		; IDT with zero limit to reboot the system
 	public	MSG_COPY
 MSG_COPY db	'REBOOT   -- Version 1.00 ',CR,LF
 	db	'   (C) Copyright 2003 Qualitas, Inc. '
-	db	' All rights reserved.',CR,LF,EOS
+	db	' GNU General Public License version 3.',CR,LF,EOS
 
 	NPPROC	REBOOT -- Shell to Create a .COM File
 	assume	ds:PGROUP,es:PGROUP,fs:nothing,gs:nothing,ss:nothing

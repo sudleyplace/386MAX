@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/386MAX/QMAX_MAP.INV   1.1   12 Oct 1995 12:08:54   BOB  $
 ;
-; (C) Copyright 1987-95 Qualitas, Inc.	All rights reserved.
+; (C) Copyright 1987-95 Qualitas, Inc.	GNU General Public License version 3.
 ;
 ; QMAX_MAP.INC
 ;

@@ -6,7 +6,7 @@
 
 	  comment   }
 
-	  (C) Copyright 1990, Rex Conn, All Rights Reserved
+	  (C) Copyright 1990, Rex Conn, GNU General Public License version 3
 
 	  These support routines replaces DOS function 4B, to execute
 	  another program.  They also provide critical error handling.

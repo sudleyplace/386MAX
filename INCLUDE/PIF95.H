@@ -1,7 +1,7 @@
 /*
  *  Microsoft Confidential
  *  Copyright (C) Microsoft Corporation 1991-1995
- *  All Rights Reserved.
+ *  GNU General Public License version 3.
  *
  *
  *  PIF.H

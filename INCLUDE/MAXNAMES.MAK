@@ -2,7 +2,7 @@
 #
 # MAXNAMES.MAK - Product names and global definitions for MAX 8
 #
-# Copyright (C) 1995-98 Qualitas, Inc.	All rights reserved
+# Copyright (C) 1995-98 Qualitas, Inc.	GNU General Public License version 3
 #
 
 # Global Win16 / Win32 definitions

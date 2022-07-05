@@ -1,6 +1,6 @@
 ;' $Header:   P:/PVCS/MAX/INC/DOSOEM.INV   1.0   15 Dec 1995 17:27:22   BOB  $
 ;
-; (C) Copyright 1995 Qualitas, Inc.  All rights reserved.
+; (C) Copyright 1995 Qualitas, Inc.  GNU General Public License version 3.
 ;
 ; DOSOEM.INC
 ;

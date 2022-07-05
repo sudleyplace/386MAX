@@ -1,4 +1,4 @@
-/* tdb.h - (C) Copyright 1992-93 Qualitas, Inc.  All Rights Reserved. */
+/* tdb.h - (C) Copyright 1992-93 Qualitas, Inc.  GNU General Public License version 3. */
 
 /* Windows 3.1 task database structure */
 
